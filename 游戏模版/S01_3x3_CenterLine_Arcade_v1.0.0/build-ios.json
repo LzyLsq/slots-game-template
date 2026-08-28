@@ -1,0 +1,41 @@
+{
+  "name": "CocosSlotFactory",
+  "platform": "ios",
+  "taskName": "ios",
+  "debug": true,
+  "outputName": "ios",
+  "buildPath": "project://build",
+  "mainBundleCompressionType": "merge_dep",
+  "packages": {
+    "ios": {
+      "packageName": "com.xzkj.cocosslotfactory",
+      "targetVersion": "12.0",
+      "orientation": {
+        "portrait": true,
+        "landscapeLeft": false,
+        "landscapeRight": false
+      },
+      "osTarget": {
+        "iphoneos": true,
+        "simulator": true
+      },
+      "renderBackEnd": {
+        "metal": true,
+        "gles3": false
+      },
+      "developerTeam": "",
+      "skipUpdateXcodeProject": false
+    },
+    "native": {
+      "remoteServerAddress": "",
+      "polyfills": {
+        "asyncFunctions": true
+      },
+      "encrypted": false,
+      "xxteaKey": "slotfactorydemo1",
+      "compressZip": false,
+      "makeAfterBuild": false,
+      "JobSystem": "tbb"
+    }
+  }
+}

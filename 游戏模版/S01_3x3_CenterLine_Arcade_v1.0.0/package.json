@@ -1,0 +1,21 @@
+{
+  "name": "slot-s01-3x3-centerline-arcade",
+  "version": "1.0.0",
+  "description": "S01 v1.0 - production-ready data-driven 3x3 single center-line arcade Slot master template",
+  "scripts": {
+    "theme:new": "node scripts/create-theme.mjs",
+    "theme:validate": "node scripts/validate-themes.mjs"
+  },
+  "creator": {
+    "version": "3.8.8"
+  },
+  "templateProfile": {
+    "code": "S01",
+    "baselineVersion": "1.0.0",
+    "status": "GOLD_MASTER",
+    "name": "3x3 Center-Line Arcade Slot",
+    "nameZh": "3x3 单线街机 Slot",
+    "mechanic": "3 reels, 3 rows, one center payline"
+  },
+  "uuid": "23d980cc-a8c2-4f8d-8a3c-8e5609206dbc"
+}
