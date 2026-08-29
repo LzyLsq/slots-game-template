@@ -6,6 +6,7 @@ import {
     Button,
     Color,
     Component,
+    Font,
     Graphics,
     Label,
     LabelOutline,
@@ -188,6 +189,8 @@ export class SlotGame extends Component {
     private readonly bets = [10, 20, 50, 100];
     private frameMap = new Map<string, SpriteFrame>();
     private audioMap = new Map<string, AudioClip>();
+    private bodyFont: Font | null = null;
+    private displayFont: Font | null = null;
     private audioSource!: AudioSource;
     private grid: string[][] = [];
     private cellNodes: Node[][] = [];
@@ -208,6 +211,7 @@ export class SlotGame extends Component {
     private soundLabel!: Label;
     private autoButton!: Node;
     private autoLabel!: Label;
+    private footerLabel!: Label;
     private rulesOverlay: Node | null = null;
     private rechargeOverlay: Node | null = null;
     private balance = 2500;
@@ -216,10 +220,49 @@ export class SlotGame extends Component {
     private autoPlay = false;
     private soundEnabled = true;
     private spinCount = 0;
+    private lossStreak = 0;
     private reducedMotion = false;
+    private resizeQueued = false;
+    private readonly browserResizeHandler = (): void => {
+        if (this.resizeQueued) return;
+        this.resizeQueued = true;
+        this.scheduleOnce(() => {
+            this.resizeQueued = false;
+            this.configureResolution();
+            this.resizeSceneLayers();
+            this.applyResponsiveLayout();
+        }, 0.08);
+    };
 
     protected async start(): Promise<void> {
         view.resizeWithBrowserSize(true);
+        this.configureResolution();
+        this.reducedMotion = sys.isBrowser
+            && typeof window !== 'undefined'
+            && typeof window.matchMedia === 'function'
+            && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        this.ensureTransform(this.node, this.sceneWidth, this.sceneHeight);
+        this.audioSource = this.node.getComponent(AudioSource) ?? this.node.addComponent(AudioSource);
+        this.clearCanvas();
+        this.createPanel('PreloadBackdrop', this.node, this.sceneWidth, this.sceneHeight, new Color(5, 8, 30), 0, 0, 0);
+        await this.loadAssets();
+        await this.playLoadingScreen();
+        this.buildInterface();
+        this.grid = this.createRandomGrid();
+        this.renderGrid(false);
+        this.refreshHud();
+        this.startAmbientMotion();
+        this.bindResponsiveResize();
+    }
+
+    protected onDestroy(): void {
+        if (sys.isBrowser && typeof window !== 'undefined') {
+            window.removeEventListener('resize', this.browserResizeHandler);
+            window.removeEventListener('orientationchange', this.browserResizeHandler);
+        }
+    }
+
+    private configureResolution(): void {
         const frame = screen.windowSize;
         const frameAspect = frame.height > 0 ? frame.width / frame.height : this.designWidth / this.designHeight;
         const designAspect = this.designWidth / this.designHeight;
@@ -228,38 +271,32 @@ export class SlotGame extends Component {
         const visible = view.getVisibleSize();
         this.sceneWidth = Math.max(this.designWidth, visible.width);
         this.sceneHeight = Math.max(this.designHeight, visible.height);
-        this.reducedMotion = sys.isBrowser
-            && typeof window !== 'undefined'
-            && typeof window.matchMedia === 'function'
-            && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         this.ensureTransform(this.node, this.sceneWidth, this.sceneHeight);
-        this.audioSource = this.node.getComponent(AudioSource) ?? this.node.addComponent(AudioSource);
-        this.buildBootScreen();
-        await this.loadAssets();
-        await this.playLoadingScreen();
-        this.buildInterface();
-        this.grid = this.createRandomGrid();
-        this.renderGrid(false);
-        this.refreshHud();
-        this.startAmbientMotion();
     }
 
-    private buildBootScreen(): void {
-        this.clearCanvas();
-        this.createPanel('BootBackdrop', this.node, this.sceneWidth, this.sceneHeight, new Color(13, 18, 52), 0, 0, 0);
-        const label = this.createLabel('OPENING THE ARCANE VAULT', this.node, 24, new Color(200, 225, 255), 0, 0, 610, 48, true);
-        this.styleLabel(label, new Color(18, 16, 46), 3, new Color(0, 0, 0, 120), 2, -3);
+    private bindResponsiveResize(): void {
+        if (!sys.isBrowser || typeof window === 'undefined') return;
+        window.addEventListener('resize', this.browserResizeHandler);
+        window.addEventListener('orientationchange', this.browserResizeHandler);
     }
 
     private async loadAssets(): Promise<void> {
-        await Promise.all(Object.entries(FRAMES).map(async ([key, path]) => {
-            const frame = await this.loadResource(`${path}/spriteFrame`, SpriteFrame);
-            if (frame) this.frameMap.set(key, frame);
-        }));
-        await Promise.all(Object.entries(AUDIO).map(async ([key, path]) => {
-            const clip = await this.loadResource(path, AudioClip);
-            if (clip) this.audioMap.set(key, clip);
-        }));
+        const [bodyFont, displayFont] = await Promise.all([
+            this.loadResource('fantasy/fonts/Fredoka-Variable', Font),
+            this.loadResource('fantasy/fonts/LilitaOne-Regular', Font),
+        ]);
+        this.bodyFont = bodyFont;
+        this.displayFont = displayFont;
+        await Promise.all([
+            ...Object.entries(FRAMES).map(async ([key, path]) => {
+                const frame = await this.loadResource(`${path}/spriteFrame`, SpriteFrame);
+                if (frame) this.frameMap.set(key, frame);
+            }),
+            ...Object.entries(AUDIO).map(async ([key, path]) => {
+                const clip = await this.loadResource(path, AudioClip);
+                if (clip) this.audioMap.set(key, clip);
+            }),
+        ]);
     }
 
     private loadResource<T extends { isValid?: boolean }>(path: string, type: new (...args: never[]) => T): Promise<T | null> {
@@ -284,11 +321,49 @@ export class SlotGame extends Component {
         const logo = this.createImage('LoadingLogo', this.node, 'generatedLogo', 590, 340, 0, 294);
         logo.setScale(0.88, 0.88, 1);
         tween(logo).to(0.62, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
+
+        const portal = this.createImage('LoadingPortal', this.node, 'commercialClusterBurst', 390, 390, 0, -24);
+        const portalOpacity = portal.addComponent(UIOpacity);
+        portalOpacity.opacity = 118;
+        if (!this.reducedMotion) {
+            tween(portal).repeatForever(tween().by(4.6, { angle: 360 }, { easing: 'linear' })).start();
+            tween(portalOpacity)
+                .repeatForever(tween().to(0.95, { opacity: 188 }, { easing: 'sineInOut' }).to(0.95, { opacity: 96 }, { easing: 'sineInOut' }))
+                .start();
+        }
+
+        const orbit = new Node('LoadingCoinOrbit');
+        this.node.addChild(orbit);
+        orbit.setPosition(0, -24);
+        this.ensureTransform(orbit, 430, 360);
+        for (let index = 0; index < 10; index += 1) {
+            const angle = (Math.PI * 2 * index) / 10;
+            const radiusX = 214;
+            const radiusY = 158;
+            const coin = this.createImage(
+                `LoadingOrbitCoin_${index}`,
+                orbit,
+                index % 3 === 0 ? 'jewel' : 'coin',
+                index % 3 === 0 ? 20 : 28,
+                index % 3 === 0 ? 20 : 28,
+                Math.cos(angle) * radiusX,
+                Math.sin(angle) * radiusY,
+            );
+            coin.angle = index * 29;
+            if (!this.reducedMotion) {
+                tween(coin)
+                    .delay(index * 0.045)
+                    .repeatForever(tween().to(0.65, { scale: new Vec3(1.22, 1.22, 1), angle: coin.angle + 80 }, { easing: 'sineInOut' }).to(0.65, { scale: Vec3.ONE, angle: coin.angle + 160 }, { easing: 'sineInOut' }))
+                    .start();
+            }
+        }
+        if (!this.reducedMotion) tween(orbit).repeatForever(tween().by(5.8, { angle: -360 }, { easing: 'linear' })).start();
+
         const treasure = this.createImage('LoadingTreasure', this.node, 'generatedCoinPile', 500, 334, 0, -20);
         tween(treasure)
-            .repeatForever(tween().to(1.3, { position: new Vec3(0, -10, 0) }, { easing: 'sineInOut' }).to(1.3, { position: new Vec3(0, -20, 0) }, { easing: 'sineInOut' }))
+            .repeatForever(tween().to(1.15, { position: new Vec3(0, -7, 0), scale: new Vec3(1.025, 1.025, 1), angle: 1.2 }, { easing: 'sineInOut' }).to(1.15, { position: new Vec3(0, -23, 0), scale: Vec3.ONE, angle: -1.2 }, { easing: 'sineInOut' }))
             .start();
-        const loadingCopy = this.createLabel('OPENING THE ARCANE VAULT', this.node, 18, new Color(211, 232, 255), 0, -235, 520, 36, true);
+        const loadingCopy = this.createLabel('SUMMONING THE ARCANE VAULT', this.node, 18, new Color(211, 232, 255), 0, -235, 520, 36, true);
         this.styleLabel(loadingCopy, new Color(35, 25, 77), 3, new Color(0, 0, 0, 120), 2, -2);
 
         const progressRoot = new Node('ProgressRoot');
@@ -301,16 +376,34 @@ export class SlotGame extends Component {
         fill.getComponent(UITransform)!.setContentSize(1, 24);
         const progressText = this.createLabel('0%', progressRoot, 17, Color.WHITE, 0, -35, 200, 28, true);
         this.styleLabel(progressText, new Color(25, 24, 70), 2);
+        const progressGlow = this.createImage('ProgressGlow', progressRoot, 'jewel', 34, 34, -226, 4);
+        const glowOpacity = progressGlow.addComponent(UIOpacity);
+        glowOpacity.opacity = 0;
+        if (!this.reducedMotion) {
+            tween(progressGlow)
+                .repeatForever(tween().set({ position: new Vec3(-226, 4, 0), scale: new Vec3(0.55, 0.55, 1) }).to(1.05, { position: new Vec3(226, 4, 0), scale: new Vec3(1.18, 1.18, 1), angle: 150 }, { easing: 'quadInOut' }).delay(0.24))
+                .start();
+            tween(glowOpacity)
+                .repeatForever(tween().to(0.18, { opacity: 220 }).delay(0.62).to(0.24, { opacity: 0 }).delay(0.25))
+                .start();
+        }
 
         const holder = { value: 0 };
         await new Promise<void>((resolve) => {
             tween(holder)
-                .to(this.reducedMotion ? 0.45 : 1.65, { value: 1 }, {
+                .to(this.reducedMotion ? 0.65 : 2.35, { value: 1 }, {
                     easing: 'quadOut',
                     onUpdate: () => {
                         const progress = Math.max(0.01, holder.value);
                         fill.getComponent(UITransform)!.setContentSize(470 * progress, 24);
                         progressText.string = `${Math.floor(progress * 100)}%`;
+                        loadingCopy.string = progress < 0.3
+                            ? 'SUMMONING THE ARCANE VAULT'
+                            : progress < 0.68
+                                ? 'AWAKENING TREASURE RUNES'
+                                : progress < 0.94
+                                    ? 'CHARGING CASCADE ENERGY'
+                                    : 'THE VAULT IS READY';
                     },
                 })
                 .call(resolve)
@@ -330,12 +423,17 @@ export class SlotGame extends Component {
         this.createPanel('BottomVignette', this.node, this.sceneWidth, 440, new Color(6, 8, 30, 116), 0, -447, 0);
         this.createAmbientSparkles();
 
+        const landscapePanel = this.createImage('LandscapeSidePanel', this.node, 'generatedRulesFrame', 720, 1230, 0, 0);
+        landscapePanel.active = false;
+
         this.createHomeButton();
         this.createTitleBlock();
         this.createBalanceBar();
         this.createBoard();
         this.createMultiplierTrack();
         this.createBottomControls();
+        this.createDynamicSceneAccents();
+        this.applyResponsiveLayout();
 
         this.effectLayer = new Node('GlobalEffects');
         this.node.addChild(this.effectLayer);
@@ -343,7 +441,7 @@ export class SlotGame extends Component {
     }
 
     private createHomeButton(): void {
-        const button = this.createImage('HomeButton', this.node, 'commercialHome', 116, 116, -310, 571);
+        const button = this.createImage('HomeButton', this.node, 'commercialHome', 108, 108, -292, 565);
         this.addButton(button, () => this.onHome());
         if (!this.reducedMotion) {
             tween(button)
@@ -385,8 +483,8 @@ export class SlotGame extends Component {
         this.ensureTransform(this.boardInner, 620, 420);
         this.boardInner.setPosition(0, -1);
 
-        const xs = [-250, -150, -50, 50, 150, 250];
-        const ys = [168, 84, 0, -84, -168];
+        const xs = [-230, -138, -46, 46, 138, 230];
+        const ys = [152, 76, 0, -76, -152];
         for (let row = 0; row < ROWS; row += 1) {
             const nodeRow: Node[] = [];
             const spriteRow: Sprite[] = [];
@@ -394,12 +492,14 @@ export class SlotGame extends Component {
                 const cell = new Node(`Cell_${row}_${col}`);
                 this.boardInner.addChild(cell);
                 cell.setPosition(xs[col], ys[row]);
-                this.ensureTransform(cell, 94, 80);
-                this.createPanel('CellDepth', cell, 91, 77, new Color(5, 14, 44, 226), 0, -1, 13);
-                this.createImage('CellFrame', cell, 'panelBorder', 93, 79, 0, 0, true, new Color(112, 171, 224, 158));
-                const halo = this.createPanel('CellHalo', cell, 72, 64, new Color(46, 103, 174, 38), 0, 0, 22);
+                this.ensureTransform(cell, 86, 72);
+                this.createPanel('CellDepth', cell, 84, 69, new Color(5, 14, 44, 226), 0, -1, 12);
+                this.createImage('CellFrame', cell, 'panelBorder', 86, 71, 0, 0, true, new Color(112, 171, 224, 158));
+                const halo = this.createPanel('CellHalo', cell, 68, 58, new Color(46, 103, 174, 116), 0, 0, 20);
                 halo.setSiblingIndex(1);
-                const symbolNode = this.createImage('Symbol', cell, 'gemBlue', 72, 72, 0, 1);
+                const haloOpacity = halo.addComponent(UIOpacity);
+                haloOpacity.opacity = 34;
+                const symbolNode = this.createImage('Symbol', cell, 'gemBlue', 66, 66, 0, 1);
                 const sprite = symbolNode.getComponent(Sprite)!;
                 this.addButton(cell, () => this.inspectSymbol(row, col));
                 nodeRow.push(cell);
@@ -409,6 +509,17 @@ export class SlotGame extends Component {
             this.cellSprites.push(spriteRow);
         }
         this.createImage('GeneratedBoardFrame', board, 'generatedBoardFrame', 704, 520, 0, 0);
+        const frameSpark = this.createImage('BoardFrameSpark', board, 'jewel', 22, 22, -272, 226);
+        const frameSparkOpacity = frameSpark.addComponent(UIOpacity);
+        frameSparkOpacity.opacity = 0;
+        if (!this.reducedMotion) {
+            tween(frameSpark)
+                .repeatForever(tween().set({ position: new Vec3(-272, 226, 0), scale: new Vec3(0.55, 0.55, 1) }).to(2.1, { position: new Vec3(272, 226, 0), scale: new Vec3(1.2, 1.2, 1), angle: 180 }, { easing: 'sineInOut' }).delay(1.2))
+                .start();
+            tween(frameSparkOpacity)
+                .repeatForever(tween().to(0.25, { opacity: 225 }).delay(1.35).to(0.34, { opacity: 0 }).delay(1.36))
+                .start();
+        }
     }
 
     private createMultiplierTrack(): void {
@@ -418,15 +529,29 @@ export class SlotGame extends Component {
             tween(rune).repeatForever(tween().to(1.5, { angle: 16, scale: new Vec3(1.06, 1.06, 1) }, { easing: 'sineInOut' }).to(1.5, { angle: -16, scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
         }
         const values = ['1×', '2×', '3×', '5×'];
+        const guide = this.createLabel('CASCADE WIN MULTIPLIER', track, 11, new Color(203, 226, 255), 0, 39, 390, 22, true);
+        this.styleLabel(guide, new Color(45, 25, 77), 2);
         values.forEach((text, index) => {
             const x = -154 + index * 103;
             const medallion = this.createImage(`Multiplier_${index}`, track, index === 0 ? 'buttonRound' : 'buttonRoundDark', 54, 54, x, -1, true);
-            this.addButton(medallion, () => this.previewMultiplier(index));
             const label = this.createLabel(text, medallion, 19, index === 0 ? Color.WHITE : new Color(174, 191, 223), 0, 0, 48, 38, true);
             this.styleLabel(label, new Color(52, 24, 80), 3);
         });
-        this.multiplierLabel = this.createLabel('CASCADE 1×', track, 13, new Color(255, 226, 131), 250, -1, 128, 36, true);
+        const progressionCopy = this.createLabel('ADVANCES AFTER EVERY CONSECUTIVE WIN', track, 9, new Color(171, 201, 236), 20, -39, 420, 18, true);
+        this.styleLabel(progressionCopy, new Color(38, 24, 70), 1);
+        this.multiplierLabel = this.createLabel('ACTIVE 1×', track, 13, new Color(255, 226, 131), 250, -1, 128, 36, true);
         this.styleLabel(this.multiplierLabel, new Color(54, 25, 82), 3);
+        const railSpark = this.createImage('MultiplierRailSpark', track, 'star', 20, 20, -205, 0);
+        const railSparkOpacity = railSpark.addComponent(UIOpacity);
+        railSparkOpacity.opacity = 0;
+        if (!this.reducedMotion) {
+            tween(railSpark)
+                .repeatForever(tween().set({ position: new Vec3(-205, 0, 0), scale: new Vec3(0.6, 0.6, 1) }).to(1.6, { position: new Vec3(196, 0, 0), scale: new Vec3(1.35, 1.35, 1), angle: 160 }, { easing: 'quadInOut' }).delay(0.9))
+                .start();
+            tween(railSparkOpacity)
+                .repeatForever(tween().to(0.22, { opacity: 230 }).delay(0.95).to(0.24, { opacity: 0 }).delay(1.09))
+                .start();
+        }
     }
 
     private createBottomControls(): void {
@@ -436,9 +561,9 @@ export class SlotGame extends Component {
         this.styleLabel(this.resultLabel, new Color(31, 22, 69), 3, new Color(0, 0, 0, 110), 2, -2);
 
         const betPanel = this.createImage('BetPanel', this.node, 'commercialBet', 286, 124, -205, -420);
-        const betCopy = this.createLabel('TOTAL BET', betPanel, 9, new Color(191, 224, 255), 0, 17, 96, 20, true);
+        const betCopy = this.createLabel('TOTAL BET', betPanel, 11, new Color(206, 232, 255), 0, 20, 108, 22, true);
         this.styleLabel(betCopy, new Color(51, 25, 79), 2);
-        this.betLabel = this.createLabel('20', betPanel, 29, new Color(255, 238, 174), 0, -14, 100, 40, true);
+        this.betLabel = this.createLabel('20', betPanel, 31, new Color(255, 238, 174), 0, -14, 104, 42, true);
         this.styleLabel(this.betLabel, new Color(65, 28, 83), 4);
         const minus = this.createImage('BetMinus', betPanel, 'commercialMinus', 68, 68, -86, 0);
         const plus = this.createImage('BetPlus', betPanel, 'commercialPlus', 68, 68, 86, 0);
@@ -464,18 +589,136 @@ export class SlotGame extends Component {
         this.createUtilityButton(utility, 0, 'RULES', 'commercialRules', () => this.showRules());
         this.autoButton = this.createUtilityButton(utility, 204, 'AUTO', 'commercialAuto', () => this.toggleAuto());
         this.autoLabel = this.autoButton.getComponentInChildren(Label)!;
-        const footer = this.createLabel('CLUSTER PAYS  •  NO PAYLINES  •  WINNING SYMBOLS CASCADE', this.node, 11, new Color(169, 197, 235), 0, -606, 700, 26, true);
-        this.styleLabel(footer, new Color(19, 18, 49), 1);
+        this.footerLabel = this.createLabel('CLUSTER PAYS  •  NO PAYLINES  •  WINNING SYMBOLS CASCADE', this.node, 12, new Color(181, 209, 242), 0, -606, 700, 28, true);
+        this.styleLabel(this.footerLabel, new Color(19, 18, 49), 1);
         this.animateSpinAura(false);
     }
 
     private createUtilityButton(parent: Node, x: number, text: string, iconKey: string, action: () => void): Node {
         const button = this.createImage(`${text}Button`, parent, 'commercialUtility', 180, 78, x, 0);
         this.addButton(button, action);
-        this.createImage(`${text}Icon`, button, iconKey, 54, 54, -48, 1);
-        const label = this.createLabel(text, button, 13, Color.WHITE, 27, -2, 94, 32, true);
+        this.createImage(`${text}Icon`, button, iconKey, 48, 48, -45, 0);
+        const label = this.createLabel(text, button, 14, Color.WHITE, 29, 0, 92, 34, true);
         this.styleLabel(label, new Color(48, 24, 78), 3);
         return button;
+    }
+
+    private createDynamicSceneAccents(): void {
+        const balanceShine = this.createImage('BalanceShine', this.balanceBar, 'star', 20, 20, -116, -4);
+        const balanceShineOpacity = balanceShine.addComponent(UIOpacity);
+        balanceShineOpacity.opacity = 0;
+        if (!this.reducedMotion) {
+            tween(balanceShine)
+                .repeatForever(tween().set({ position: new Vec3(-116, -4, 0), scale: new Vec3(0.55, 0.55, 1) }).to(1.25, { position: new Vec3(118, -4, 0), scale: new Vec3(1.25, 1.25, 1), angle: 150 }, { easing: 'quadInOut' }).delay(1.45))
+                .start();
+            tween(balanceShineOpacity)
+                .repeatForever(tween().to(0.2, { opacity: 235 }).delay(0.72).to(0.26, { opacity: 0 }).delay(1.52))
+                .start();
+        }
+
+        const driftLayer = new Node('DriftingArcaneDust');
+        this.node.addChild(driftLayer);
+        this.ensureTransform(driftLayer, this.sceneWidth, this.sceneHeight);
+        driftLayer.setSiblingIndex(3);
+        for (let index = 0; index < 12; index += 1) {
+            const lane = (index + 0.5) / 12;
+            const startX = -this.sceneWidth / 2 + this.sceneWidth * lane;
+            const startY = -this.sceneHeight / 2 - 28 - (index % 4) * 54;
+            const endX = startX + ((index % 3) - 1) * 74;
+            const endY = this.sceneHeight / 2 + 34;
+            const particle = this.createImage(
+                `DriftingParticle_${index}`,
+                driftLayer,
+                index % 3 === 0 ? 'jewel' : (index % 2 === 0 ? 'star' : 'coin'),
+                10 + (index % 4) * 3,
+                10 + (index % 4) * 3,
+                startX,
+                startY,
+            );
+            const opacity = particle.addComponent(UIOpacity);
+            opacity.opacity = this.reducedMotion ? 36 : 0;
+            if (this.reducedMotion) continue;
+            const duration = 5.2 + (index % 5) * 0.65;
+            tween(particle)
+                .delay(index * 0.24)
+                .repeatForever(tween()
+                    .set({ position: new Vec3(startX, startY, 0), scale: new Vec3(0.65, 0.65, 1), angle: index * 21 })
+                    .to(duration, { position: new Vec3(endX, endY, 0), scale: new Vec3(1.18, 1.18, 1), angle: 220 + index * 27 }, { easing: 'sineInOut' })
+                    .delay(0.4))
+                .start();
+            tween(opacity)
+                .delay(index * 0.24)
+                .repeatForever(tween().to(0.55, { opacity: 105 }).delay(Math.max(1.5, duration - 1.25)).to(0.7, { opacity: 0 }).delay(0.4))
+                .start();
+        }
+    }
+
+    private applyResponsiveLayout(): void {
+        const landscape = this.sceneWidth / this.sceneHeight >= 1.08;
+        const place = (name: string, x: number, y: number): Node | null => {
+            const target = this.node.getChildByName(name);
+            if (target) target.setPosition(x, y);
+            return target;
+        };
+
+        if (!landscape) {
+            const sidePanel = place('LandscapeSidePanel', 0, 0);
+            if (sidePanel) sidePanel.active = false;
+            place('HomeButton', -292, 565);
+            place('TitleLogo', 0, 559);
+            place('BalanceBar', 0, 446);
+            const board = place('BoardPanel', 0, 116);
+            if (board) board.setScale(1, 1, 1);
+            place('MultiplierTrack', 0, -226);
+            place('ResultPlate', 0, -310);
+            place('GeneratedControlConsole', 0, -436);
+            place('BetPanel', -205, -420);
+            place('SpinAura', 151, -420);
+            place('SpinButton', 151, -420);
+            place('UtilityBar', 0, -538);
+            if (this.footerLabel) this.footerLabel.node.setPosition(0, -606);
+            return;
+        }
+
+        const columnOffset = Math.min(470, Math.max(350, this.sceneWidth * 0.205));
+        const boardScale = Math.min(1.28, Math.max(1.08, (this.sceneWidth / 2 - 100) / 704));
+        const sidePanel = place('LandscapeSidePanel', columnOffset, 0);
+        if (sidePanel) sidePanel.active = true;
+        place('HomeButton', -this.sceneWidth / 2 + 82, 560);
+        place('TitleLogo', columnOffset, 526);
+        place('BalanceBar', columnOffset, 388);
+        const board = place('BoardPanel', -columnOffset, 42);
+        if (board) board.setScale(boardScale, boardScale, 1);
+        place('MultiplierTrack', columnOffset, 202);
+        place('ResultPlate', columnOffset, 64);
+        place('GeneratedControlConsole', columnOffset, -232);
+        place('BetPanel', columnOffset - 205, -222);
+        place('SpinAura', columnOffset + 151, -222);
+        place('SpinButton', columnOffset + 151, -222);
+        place('UtilityBar', columnOffset, -420);
+        if (this.footerLabel) this.footerLabel.node.setPosition(columnOffset, -500);
+    }
+
+    private resizeSceneLayers(): void {
+        const background = this.node.getChildByName('Background');
+        if (background) {
+            const sourceAspect = 890 / 1334;
+            const targetAspect = this.sceneWidth / this.sceneHeight;
+            const width = targetAspect > sourceAspect ? this.sceneWidth : this.sceneHeight * sourceAspect;
+            const height = targetAspect > sourceAspect ? this.sceneWidth / sourceAspect : this.sceneHeight;
+            background.getComponent(UITransform)?.setContentSize(width, height);
+        }
+        ['SkyTint', 'BottomVignette'].forEach((name) => {
+            const layer = this.node.getChildByName(name);
+            const transform = layer?.getComponent(UITransform);
+            if (layer && transform && transform.width > 0) layer.setScale(this.sceneWidth / transform.width, 1, 1);
+        });
+        const dust = this.node.getChildByName('DriftingArcaneDust');
+        if (dust) this.ensureTransform(dust, this.sceneWidth, this.sceneHeight);
+        if (this.effectLayer) this.ensureTransform(this.effectLayer, this.sceneWidth, this.sceneHeight);
+        [this.rulesOverlay, this.rechargeOverlay].forEach((overlay) => {
+            if (overlay) this.ensureTransform(overlay, this.sceneWidth, this.sceneHeight);
+        });
     }
 
     private createRandomGrid(): string[][] {
@@ -499,17 +742,51 @@ export class SlotGame extends Component {
                 sprite.color = Color.WHITE;
                 symbolNode.angle = 0;
                 symbolNode.setScale(1, 1, 1);
-                symbolNode.setPosition(0, animateDrop ? 260 + row * 28 : 1);
+                const dropStartY = 102 + row * 76 + col * 8;
+                symbolNode.setPosition(0, animateDrop ? dropStartY : 1);
                 const opacity = symbolNode.getComponent(UIOpacity) ?? symbolNode.addComponent(UIOpacity);
-                opacity.opacity = 255;
+                opacity.opacity = animateDrop ? 0 : 255;
                 if (animateDrop) {
+                    const direction = col % 2 === 0 ? -1 : 1;
+                    const delay = col * 0.04 + row * 0.045;
+                    const fallDuration = 0.32 + row * 0.03;
+                    symbolNode.setPosition(direction * 7, dropStartY);
+                    symbolNode.setScale(0.84, 1.18, 1);
+                    symbolNode.angle = direction * 5;
+                    tween(opacity).delay(delay).to(0.12, { opacity: 255 }, { easing: 'quadOut' }).start();
                     tween(symbolNode)
-                        .delay(col * 0.035 + row * 0.018)
-                        .to(0.42, { position: new Vec3(0, 1, 0) }, { easing: 'backOut' })
+                        .delay(delay)
+                        .to(fallDuration, {
+                            position: new Vec3(direction * -2, -10, 0),
+                            scale: new Vec3(0.96, 1.08, 1),
+                            angle: direction * -2,
+                        }, { easing: 'quadIn' })
+                        .to(0.1, {
+                            position: new Vec3(0, 7, 0),
+                            scale: new Vec3(1.1, 0.88, 1),
+                            angle: direction * 1.4,
+                        }, { easing: 'quadOut' })
+                        .to(0.18, { position: new Vec3(0, 1, 0), scale: Vec3.ONE, angle: 0 }, { easing: 'backOut' })
+                        .call(() => this.playLandingPulse(row, col))
                         .start();
                 }
             }
         }
+    }
+
+    private playLandingPulse(row: number, col: number): void {
+        const halo = this.cellNodes[row]?.[col]?.getChildByName('CellHalo');
+        if (!halo) return;
+        const opacity = halo.getComponent(UIOpacity) ?? halo.addComponent(UIOpacity);
+        Tween.stopAllByTarget(halo);
+        Tween.stopAllByTarget(opacity);
+        halo.setScale(0.74, 0.74, 1);
+        opacity.opacity = this.reducedMotion ? 72 : 148;
+        tween(halo)
+            .to(this.reducedMotion ? 0.1 : 0.2, { scale: new Vec3(1.12, 1.12, 1) }, { easing: 'quadOut' })
+            .to(0.16, { scale: Vec3.ONE }, { easing: 'sineOut' })
+            .start();
+        tween(opacity).to(this.reducedMotion ? 0.16 : 0.34, { opacity: 34 }, { easing: 'quadOut' }).start();
     }
 
     private async spin(): Promise<void> {
@@ -525,7 +802,7 @@ export class SlotGame extends Component {
         this.refreshHud();
         this.setSpinEnabled(false);
         this.resultLabel.string = 'TREASURES ARE FALLING…';
-        this.multiplierLabel.string = 'CASCADE 1×';
+        this.multiplierLabel.string = 'ACTIVE 1×';
         this.setSpinStatus('SPINNING', 'OPENING THE VAULT');
         this.animateSpinAura(true);
         this.haptic([18, 24, 28]);
@@ -533,11 +810,12 @@ export class SlotGame extends Component {
         tween(this.spinButton).to(0.12, { scale: new Vec3(0.95, 0.95, 1) }).to(0.22, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
 
         this.grid = this.createRandomGrid();
-        this.forceShowcaseCluster();
+        this.maybeSeedShowcaseCluster();
         this.renderGrid(true);
-        await this.wait(0.56);
+        await this.wait(1.2);
         this.playSound('drop', 0.7);
         await this.runCascades(bet);
+        this.startSymbolIdleMotion();
         this.spinning = false;
         this.setSpinEnabled(true);
         this.setSpinStatus(this.autoPlay ? 'AUTO' : 'SPIN', this.autoPlay ? 'NEXT DROP' : 'READY');
@@ -545,13 +823,20 @@ export class SlotGame extends Component {
         if (this.autoPlay) this.scheduleOnce(() => void this.spin(), 0.85);
     }
 
-    private forceShowcaseCluster(): void {
-        const premium = ['gemRed', 'potionRed', 'tome', 'shield'][this.spinCount % 4];
+    private maybeSeedShowcaseCluster(): boolean {
+        const recoveryDrop = this.lossStreak >= 3;
+        if (!recoveryDrop && Math.random() >= 0.36) return false;
+        const weightedTreasures = [
+            'gemBlue', 'gemBlue', 'gemGreen', 'gemGreen', 'gemRed',
+            'potionBlue', 'potionGreen', 'potionRed', 'tome', 'shield',
+        ];
+        const premium = weightedTreasures[Math.floor(Math.random() * weightedTreasures.length)];
         const shape: Cell[] = [
             { row: 1, col: 1 }, { row: 1, col: 2 }, { row: 2, col: 1 },
             { row: 2, col: 2 }, { row: 3, col: 1 }, { row: 3, col: 2 },
         ];
         shape.forEach(({ row, col }) => { this.grid[row][col] = premium; });
+        return true;
     }
 
     private async runCascades(bet: number): Promise<void> {
@@ -567,7 +852,7 @@ export class SlotGame extends Component {
             const cascadeWin = clusters.reduce((sum, cluster) => {
                 const base = SYMBOL_VALUES[cluster.symbol] ?? 5;
                 const sizeFactor = 1 + Math.max(0, cluster.cells.length - MIN_CLUSTER) * 0.32;
-                return sum + Math.floor(base * sizeFactor * bet * multiplier * 0.55);
+                return sum + Math.max(1, Math.floor(base * sizeFactor * bet * multiplier * 0.21));
             }, 0);
             totalWin += cascadeWin;
             this.resultLabel.string = `${winningCells.length} TREASURES  •  +${this.formatNumber(cascadeWin)}  •  ${multiplier}×`;
@@ -578,10 +863,12 @@ export class SlotGame extends Component {
         }
 
         if (totalWin > 0) {
+            this.lossStreak = 0;
             await this.showWinCelebration(totalWin, cascade);
         } else {
-            this.resultLabel.string = 'NO CLUSTER — TRY ANOTHER DROP';
-            this.multiplierLabel.string = 'CASCADE 1×';
+            this.lossStreak += 1;
+            this.resultLabel.string = 'NO CLUSTER  •  BET SPENT  •  NEXT DROP IS INDEPENDENT';
+            this.multiplierLabel.string = 'ACTIVE 1×';
         }
     }
 
@@ -712,20 +999,21 @@ export class SlotGame extends Component {
             for (let row = 0; row < ROWS; row += 1) this.grid[row][col] = survivors[row];
         }
 
-        if (cascade === 1 && this.spinCount % 2 === 1) {
-            const symbol = ['gemBlue', 'potionGreen', 'shield'][this.spinCount % 3];
+        if (cascade === 1 && Math.random() < 0.18) {
+            const followUpTreasures = ['gemBlue', 'gemGreen', 'potionBlue', 'potionGreen', 'gemRed', 'shield'];
+            const symbol = followUpTreasures[Math.floor(Math.random() * followUpTreasures.length)];
             [{ row: 0, col: 3 }, { row: 0, col: 4 }, { row: 1, col: 3 }, { row: 1, col: 4 }, { row: 2, col: 4 }]
                 .forEach((cell) => { this.grid[cell.row][cell.col] = symbol; });
         }
 
         this.renderGrid(true);
-        await this.wait(0.5);
+        await this.wait(1.2);
         this.playSound('drop', 0.58);
     }
 
     private setMultiplierState(index: number): void {
         const multiplier = MULTIPLIERS[Math.min(index, MULTIPLIERS.length - 1)];
-        this.multiplierLabel.string = `CASCADE ${multiplier}×`;
+        this.multiplierLabel.string = `ACTIVE ${multiplier}×`;
         const track = this.node.getChildByName('MultiplierTrack');
         if (!track) return;
         track.getChildByName('MultiplierEnergy')?.destroy();
@@ -1099,22 +1387,6 @@ export class SlotGame extends Component {
         }
     }
 
-    private previewMultiplier(index: number): void {
-        if (this.spinning) return;
-        const multiplier = MULTIPLIERS[index];
-        const copy = index === 0
-            ? 'FIRST CLUSTER STARTS AT 1×'
-            : `CASCADE ${index + 1} BOOSTS EVERY CLUSTER TO ${multiplier}×`;
-        this.resultLabel.string = copy;
-        this.showPremiumTooltip(`${multiplier}× CASCADE POWER`, copy);
-        this.playSound('click', 0.4);
-        this.haptic(10 + index * 4);
-        const medal = this.node.getChildByName('MultiplierTrack')?.getChildByName(`Multiplier_${index}`);
-        if (!medal) return;
-        Tween.stopAllByTarget(medal);
-        tween(medal).to(0.14, { scale: new Vec3(1.18, 1.18, 1) }, { easing: 'backOut' }).to(0.2, { scale: Vec3.ONE }).start();
-    }
-
     private showPremiumTooltip(titleText: string, detailText: string): void {
         const existing = this.effectLayer.getChildByName('PremiumTooltip');
         if (existing) existing.destroy();
@@ -1152,15 +1424,30 @@ export class SlotGame extends Component {
 
     private startAmbientMotion(): void {
         if (this.reducedMotion) return;
-        this.cellSprites.flat().forEach((sprite, index) => {
-            tween(sprite.node)
-                .delay((index % 7) * 0.12)
-                .repeatForever(tween().to(1.25, { scale: new Vec3(1.035, 1.035, 1) }, { easing: 'sineInOut' }).to(1.25, { scale: Vec3.ONE }, { easing: 'sineInOut' }))
-                .start();
-        });
+        this.startSymbolIdleMotion();
         tween(this.spinButton)
             .repeatForever(tween().to(0.9, { scale: new Vec3(1.025, 1.025, 1) }, { easing: 'sineInOut' }).to(0.9, { scale: Vec3.ONE }, { easing: 'sineInOut' }))
             .start();
+    }
+
+    private startSymbolIdleMotion(): void {
+        if (this.reducedMotion) return;
+        this.cellSprites.flat().forEach((sprite, index) => {
+            const node = sprite.node;
+            Tween.stopAllByTarget(node);
+            node.setPosition(0, 1);
+            node.setScale(1, 1, 1);
+            node.angle = 0;
+            const lift = 2.2 + (index % 4) * 0.65;
+            const tilt = index % 2 === 0 ? 1.4 : -1.4;
+            const duration = 1.05 + (index % 5) * 0.08;
+            tween(node)
+                .delay((index % 7) * 0.095)
+                .repeatForever(tween()
+                    .to(duration, { position: new Vec3(0, 1 + lift, 0), scale: new Vec3(1.045, 1.045, 1), angle: tilt }, { easing: 'sineInOut' })
+                    .to(duration, { position: new Vec3(0, 1, 0), scale: Vec3.ONE, angle: -tilt * 0.55 }, { easing: 'sineInOut' }))
+                .start();
+        });
     }
 
     private playSound(key: string, volume = 1): void {
@@ -1253,7 +1540,12 @@ export class SlotGame extends Component {
         const label = node.addComponent(Label);
         label.string = text;
         label.fontSize = size;
-        label.lineHeight = Math.round(size * 1.25);
+        const displayCopy = size >= 24 && text === text.toUpperCase() && text.length <= 18 && !text.includes('\n');
+        const selectedFont = displayCopy ? this.displayFont : this.bodyFont;
+        if (selectedFont) label.font = selectedFont;
+        label.lineHeight = Math.round(size * (displayCopy ? 1.12 : 1.28));
+        label.spacingX = displayCopy ? Math.min(1.6, size * 0.04) : Math.min(0.7, size * 0.015);
+        label.enableWrapText = text.includes('\n');
         label.color = color;
         label.horizontalAlign = Label.HorizontalAlign.CENTER;
         label.verticalAlign = Label.VerticalAlign.CENTER;

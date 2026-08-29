@@ -17,11 +17,24 @@ High-polish Cocos Creator 3.8.8 master template for a Cluster Pays slot. It is a
   optical alignment for their destination frames
 - Interactive spin states (`READY`, `SPINNING`, `CASCADE`, `WIN`), animated
   arcane aura, multiplier energy advance, touch feedback and premium tooltips
+- A read-only cascade multiplier rail that advances automatically from
+  `1× → 2× → 3× → 5×`; it is no longer presented as a set of
+  player-selectable wager buttons
+- Layered symbol drops with column timing, squash-and-stretch landings and
+  restrained cell-light impacts instead of uniform linear falls
+- Variable independent outcomes with loss rounds, a capped dry-spell recovery
+  drop and reduced cascade payouts for a sustainable demo economy. A 100,000
+  spin Monte Carlo pass measured about a 47% hit rate and 92% aggregate RTP.
+- Bundled Fredoka and Lilita One fonts for readable rounded body copy and
+  intentional display typography on every supported device
 - Generated `TREASURE BURST!` and `LEGENDARY CASCADE!` artwork with restrained
   crystal effects, a dense coin stream and linear balance growth
 - CC API-generated transparent UI and special-symbol artwork with packaged legacy fallbacks
 - Responsive composition at a 750×1334 design resolution, including covered
-  ultrawide backgrounds and safe narrow/tall viewport scaling
+  ultrawide backgrounds, safe narrow/tall viewport scaling and a dedicated
+  landscape two-column layout that responds to resize and orientation changes
+- Animated portal loading, orbiting image coins, drifting scene particles,
+  moving frame highlights and gently floating symbol art
 
 ## Run
 

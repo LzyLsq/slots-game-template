@@ -60,6 +60,17 @@ The runtime `FRAMES` map keeps the original licensed UI/rune artwork as a
 fallback if a generated resource is unavailable. No API key or credential is
 stored in this project.
 
+## Bundled typography
+
+The interface uses two OFL-licensed Google Fonts stored in
+`assets/resources/fantasy/fonts/`:
+
+- Fredoka variable font for body copy and longer status messages
+- Lilita One for short display labels, balance numerals and controls
+
+Their OFL license files are packaged beside the font resources. Runtime labels
+still fall back to the Cocos system font if either resource is unavailable.
+
 ## Regeneration checklist
 
 1. Generate replacements through the local CC Switch image endpoint.
