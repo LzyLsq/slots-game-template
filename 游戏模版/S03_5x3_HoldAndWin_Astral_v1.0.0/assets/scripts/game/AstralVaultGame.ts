@@ -158,13 +158,13 @@ export class GameBootstrap extends Component {
         this.clearCanvas();
         this.createPanel('PreloadBackdrop', this.node, this.sceneWidth, this.sceneHeight, new Color(3, 7, 24), 0, 0);
         await this.loadAssets();
-        await this.playCompactLoading();
         this.buildInterface();
         this.currentGrid = this.generator.generate(this.bet).grid;
         this.renderGrid(this.currentGrid);
         this.refreshHud();
         this.startAmbientMotion();
         this.bindResponsiveResize();
+        this.signalBrowserReady();
     }
 
     protected onDestroy(): void {
@@ -190,6 +190,11 @@ export class GameBootstrap extends Component {
         if (!sys.isBrowser || typeof window === 'undefined') return;
         window.addEventListener('resize', this.browserResizeHandler);
         window.addEventListener('orientationchange', this.browserResizeHandler);
+    }
+
+    private signalBrowserReady(): void {
+        if (!sys.isBrowser || typeof window === 'undefined') return;
+        window.dispatchEvent(new Event('astral-ready'));
     }
 
     private async loadAssets(): Promise<void> {
@@ -268,11 +273,17 @@ export class GameBootstrap extends Component {
         this.createPanel('GlobalTint', this.node, this.sceneWidth, this.sceneHeight, new Color(4, 8, 29, 35), 0, 0);
         this.createPanel('BottomShade', this.node, this.sceneWidth, 430, new Color(2, 6, 24, 122), 0, -472);
 
-        const guardianDisplay = this.createGlassPanel('GuardianDisplay', this.node, 278, 452, -272, 310, 32, new Color(3, 9, 31, 246), new Color(193, 149, 65, 190));
-        const keeperCopy = this.createLabel('VAULT KEEPER', guardianDisplay, 12, new Color(172, 220, 255), 0, -196, 210, 24, true);
+        const guardianDisplay = this.createGlassPanel('GuardianDisplay', this.node, 278, 452, -272, 310, 32, new Color(3, 9, 31, 142), new Color(193, 149, 65, 150));
+        const keeperCopy = this.createLabel('TAP KEEPER FOR TIPS', guardianDisplay, 12, new Color(172, 220, 255), 0, -196, 210, 24, true);
         this.styleLabel(keeperCopy, new Color(30, 25, 72), 2);
         const guardian = this.createImage('Guardian', this.node, 'guardian', 230, 345, -272, 330);
         guardian.getComponent(Sprite)!.color = new Color(255, 255, 255, 212);
+        this.addButton(guardian, () => this.showKeeperTip());
+        const keeperHint = this.createImage('KeeperHint', this.node, 'utilityButton', 80, 80, -272, 116);
+        const keeperHintCopy = this.createLabel('TIP', keeperHint, 17, Color.WHITE, 0, 3, 48, 28, true);
+        this.styleLabel(keeperHintCopy, new Color(45, 25, 78), 3);
+        this.addButton(keeperHint, () => this.showKeeperTip());
+        keeperHint.active = false;
 
         this.createHomeButton();
         this.createTitle();
@@ -308,7 +319,12 @@ export class GameBootstrap extends Component {
 
     private createBalance(): void {
         this.balancePanel = this.createGlassPanel('BalancePanel', this.node, 430, 82, 0, 458, 35);
-        this.createImage('BalanceCoin', this.balancePanel, 'bonus', 68, 68, -160, 0);
+        const coinHalo = this.createImage('BalanceCoinHalo', this.balancePanel, 'shockwave', 82, 82, -160, 0);
+        const haloOpacity = coinHalo.addComponent(UIOpacity);
+        haloOpacity.opacity = 92;
+        if (!this.reducedMotion) tween(coinHalo).repeatForever(tween().by(5.5, { angle: 360 }, { easing: 'linear' })).start();
+        const balanceCoin = this.createImage('BalanceCoin', this.balancePanel, 'bonus', 72, 72, -160, 0);
+        balanceCoin.setSiblingIndex(coinHalo.getSiblingIndex() + 1);
         const label = this.createLabel('VAULT BALANCE', this.balancePanel, 10, new Color(171, 221, 255), -18, 17, 220, 22, true);
         this.styleLabel(label, new Color(23, 23, 68), 2);
         this.balanceLabel = this.createLabel('10,000', this.balancePanel, 28, new Color(255, 235, 163), -18, -13, 230, 40, true);
@@ -427,8 +443,16 @@ export class GameBootstrap extends Component {
             place('HomeButton', -312, 580);
             const guardianPanel = place('GuardianDisplay', -272, 310);
             if (guardianPanel) guardianPanel.active = false;
-            const guardian = place('Guardian', -272, 330);
-            if (guardian) guardian.active = false;
+            const guardian = place('Guardian', 274, 444);
+            if (guardian) {
+                guardian.active = true;
+                guardian.setScale(0.46, 0.46, 1);
+            }
+            const keeperHint = place('KeeperHint', 294, 468);
+            if (keeperHint) {
+                keeperHint.active = true;
+                keeperHint.setScale(0.82, 0.82, 1);
+            }
             place('TitleCrest', 0, 530)?.setScale(0.9, 0.9, 1);
             place('BalancePanel', 0, 385);
             place('JackpotHeader', 0, 255)?.setScale(0.95, 0.95, 1);
@@ -442,8 +466,11 @@ export class GameBootstrap extends Component {
             if (footer) footer.setPosition(0, -625);
             return;
         }
-        const left = -Math.min(500, Math.max(390, this.sceneWidth * 0.22));
-        const right = Math.min(500, Math.max(390, this.sceneWidth * 0.22));
+        const aspect = this.sceneWidth / this.sceneHeight;
+        const ultraWide = aspect >= 1.9;
+        const spread = Math.min(720, Math.max(390, this.sceneWidth * (ultraWide ? 0.23 : 0.22)));
+        const left = -spread;
+        const right = spread;
         place('HomeButton', -this.sceneWidth / 2 + 92, 565);
         const guardianPanel = place('GuardianDisplay', this.sceneWidth / 2 - 174, 124);
         if (guardianPanel) {
@@ -455,15 +482,17 @@ export class GameBootstrap extends Component {
             guardian.active = true;
             guardian.setScale(1.12, 1.12, 1);
         }
-        place('TitleCrest', right, 530)?.setScale(1.04, 1.04, 1);
-        place('BalancePanel', right, 365);
-        place('JackpotHeader', right, 220)?.setScale(0.98, 0.98, 1);
-        place('BoardRoot', left, 76)?.setScale(1.16, 1.16, 1);
-        place('ControlConsole', right, -190);
-        place('ResultPanel', right, 54);
-        place('BetPanel', right - 184, -92);
-        place('SpinButton', right + 154, -94);
-        place('UtilityBar', right, -270);
+        const keeperHint = place('KeeperHint', this.sceneWidth / 2 - 174, -95);
+        if (keeperHint) keeperHint.active = false;
+        place('TitleCrest', right, ultraWide ? 520 : 530)?.setScale(ultraWide ? 1.12 : 1.04, ultraWide ? 1.12 : 1.04, 1);
+        place('BalancePanel', right, 365)?.setScale(ultraWide ? 1.08 : 1, ultraWide ? 1.08 : 1, 1);
+        place('JackpotHeader', right, 220)?.setScale(ultraWide ? 1.08 : 0.98, ultraWide ? 1.08 : 0.98, 1);
+        place('BoardRoot', left, 76)?.setScale(ultraWide ? 1.38 : 1.16, ultraWide ? 1.38 : 1.16, 1);
+        place('ControlConsole', right, ultraWide ? -176 : -190)?.setScale(ultraWide ? 1.16 : 1, ultraWide ? 1.16 : 1, 1);
+        place('ResultPanel', right, 54)?.setScale(ultraWide ? 1.12 : 1, ultraWide ? 1.12 : 1, 1);
+        place('BetPanel', right - (ultraWide ? 205 : 184), -92)?.setScale(ultraWide ? 1.08 : 1, ultraWide ? 1.08 : 1, 1);
+        place('SpinButton', right + (ultraWide ? 174 : 154), -94)?.setScale(ultraWide ? 1.12 : 1, ultraWide ? 1.12 : 1, 1);
+        place('UtilityBar', right, ultraWide ? -282 : -270)?.setScale(ultraWide ? 1.1 : 1, ultraWide ? 1.1 : 1, 1);
         const footer = this.node.children.find((child) => child.name.startsWith('Label_20 FIXED'));
         if (footer) footer.setPosition(right, -362);
     }
@@ -861,6 +890,17 @@ export class GameBootstrap extends Component {
         const node = this.cells[row][column].symbolNode;
         tween(node).to(0.12, { scale: new Vec3(1.1, 1.1, 1) }, { easing: 'backOut' }).to(0.18, { scale: Vec3.ONE }, { easing: 'sineIn' }).start();
         this.playSound('click', 0.22);
+    }
+
+    private showKeeperTip(): void {
+        if (this.busy || this.rulesOverlay || this.rechargeOverlay) return;
+        this.resultLabel.string = 'VAULT KEEPER TIP · 6 STAR COINS START 3 RESPINS';
+        const guardian = this.node.getChildByName('Guardian');
+        if (guardian) {
+            const base = guardian.scale.clone();
+            tween(guardian).to(0.12, { scale: new Vec3(base.x * 1.06, base.y * 1.06, 1) }, { easing: 'backOut' }).to(0.2, { scale: base }, { easing: 'sineInOut' }).start();
+        }
+        this.playSound('click', 0.3);
     }
 
     private showRules(): void {
