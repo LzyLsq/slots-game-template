@@ -13,6 +13,7 @@ import {
     Node,
     ResolutionPolicy,
     resources,
+    screen,
     Sprite,
     SpriteFrame,
     sys,
@@ -82,6 +83,24 @@ const FRAME_FALLBACKS: Record<string, string> = {
     scatter: 'legacyScatter',
     multiplier: 'legacyMultiplier',
     coin: 'legacyCoin',
+    commercialHud: 'panel',
+    commercialSpin: 'buttonPrimary',
+    commercialUtility: 'buttonSecondary',
+    commercialBet: 'panel',
+    commercialMultiplierTrack: 'panelDark',
+    commercialResultRibbon: 'banner',
+    commercialCollect: 'buttonPrimary',
+    commercialTooltip: 'panelDark',
+    commercialClusterBurst: 'multiplier',
+    commercialSpinAura: 'multiplier',
+    commercialTreasureWordmark: 'generatedLogo',
+    commercialLegendaryWordmark: 'generatedLogo',
+    commercialHome: 'home',
+    commercialSound: 'jewel',
+    commercialRules: 'tome',
+    commercialAuto: 'multiplier',
+    commercialPlus: 'buttonRound',
+    commercialMinus: 'buttonRoundDark',
 };
 
 const FRAMES: Record<string, string> = {
@@ -92,6 +111,24 @@ const FRAMES: Record<string, string> = {
     generatedCoinPile: 'fantasy/generated/arcane-coin-pile',
     generatedControlConsole: 'fantasy/generated/arcane-control-console',
     generatedRulesFrame: 'fantasy/generated/arcane-rules-frame',
+    commercialHud: 'fantasy/generated/arcane-hud-bar-v2',
+    commercialSpin: 'fantasy/generated/arcane-spin-button-v2',
+    commercialUtility: 'fantasy/generated/arcane-utility-button-v2',
+    commercialBet: 'fantasy/generated/arcane-bet-panel-v2',
+    commercialMultiplierTrack: 'fantasy/generated/arcane-multiplier-track-v2',
+    commercialResultRibbon: 'fantasy/generated/arcane-result-ribbon-v2',
+    commercialCollect: 'fantasy/generated/arcane-collect-button-v2',
+    commercialTooltip: 'fantasy/generated/arcane-tooltip-frame-v2',
+    commercialClusterBurst: 'fantasy/generated/arcane-cluster-burst-v2',
+    commercialSpinAura: 'fantasy/generated/arcane-spin-aura-v2',
+    commercialTreasureWordmark: 'fantasy/generated/arcane-treasure-burst-wordmark-v2',
+    commercialLegendaryWordmark: 'fantasy/generated/arcane-legendary-cascade-wordmark-v2',
+    commercialHome: 'fantasy/generated/arcane-home-icon-v2',
+    commercialSound: 'fantasy/generated/arcane-sound-icon-v2',
+    commercialRules: 'fantasy/generated/arcane-rules-icon-v2',
+    commercialAuto: 'fantasy/generated/arcane-auto-icon-v2',
+    commercialPlus: 'fantasy/generated/arcane-plus-icon-v2',
+    commercialMinus: 'fantasy/generated/arcane-minus-icon-v2',
     castles: 'fantasy/background/castles',
     forest: 'fantasy/background/forest',
     mountain: 'fantasy/background/mountain',
@@ -146,6 +183,8 @@ const AUDIO: Record<string, string> = {
 export class SlotGame extends Component {
     private readonly designWidth = 750;
     private readonly designHeight = 1334;
+    private sceneWidth = 750;
+    private sceneHeight = 1334;
     private readonly bets = [10, 20, 50, 100];
     private frameMap = new Map<string, SpriteFrame>();
     private audioMap = new Map<string, AudioClip>();
@@ -160,6 +199,14 @@ export class SlotGame extends Component {
     private resultLabel!: Label;
     private multiplierLabel!: Label;
     private spinButton!: Node;
+    private spinAura!: Node;
+    private spinLabel!: Label;
+    private spinSubLabel!: Label;
+    private balanceBar!: Node;
+    private balanceCoin!: Node;
+    private soundButton!: Node;
+    private soundLabel!: Label;
+    private autoButton!: Node;
     private autoLabel!: Label;
     private rulesOverlay: Node | null = null;
     private rechargeOverlay: Node | null = null;
@@ -173,12 +220,19 @@ export class SlotGame extends Component {
 
     protected async start(): Promise<void> {
         view.resizeWithBrowserSize(true);
-        view.setDesignResolutionSize(this.designWidth, this.designHeight, ResolutionPolicy.SHOW_ALL);
+        const frame = screen.windowSize;
+        const frameAspect = frame.height > 0 ? frame.width / frame.height : this.designWidth / this.designHeight;
+        const designAspect = this.designWidth / this.designHeight;
+        const policy = frameAspect < designAspect ? ResolutionPolicy.FIXED_WIDTH : ResolutionPolicy.FIXED_HEIGHT;
+        view.setDesignResolutionSize(this.designWidth, this.designHeight, policy);
+        const visible = view.getVisibleSize();
+        this.sceneWidth = Math.max(this.designWidth, visible.width);
+        this.sceneHeight = Math.max(this.designHeight, visible.height);
         this.reducedMotion = sys.isBrowser
             && typeof window !== 'undefined'
             && typeof window.matchMedia === 'function'
             && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        this.ensureTransform(this.node, this.designWidth, this.designHeight);
+        this.ensureTransform(this.node, this.sceneWidth, this.sceneHeight);
         this.audioSource = this.node.getComponent(AudioSource) ?? this.node.addComponent(AudioSource);
         this.buildBootScreen();
         await this.loadAssets();
@@ -192,7 +246,7 @@ export class SlotGame extends Component {
 
     private buildBootScreen(): void {
         this.clearCanvas();
-        this.createPanel('BootBackdrop', this.node, 750, 1334, new Color(13, 18, 52), 0, 0, 0);
+        this.createPanel('BootBackdrop', this.node, this.sceneWidth, this.sceneHeight, new Color(13, 18, 52), 0, 0, 0);
         const label = this.createLabel('OPENING THE ARCANE VAULT', this.node, 24, new Color(200, 225, 255), 0, 0, 610, 48, true);
         this.styleLabel(label, new Color(18, 16, 46), 3, new Color(0, 0, 0, 120), 2, -3);
     }
@@ -223,9 +277,9 @@ export class SlotGame extends Component {
 
     private async playLoadingScreen(): Promise<void> {
         this.clearCanvas();
-        this.createImage('LoadingBackground', this.node, 'generatedBackground', 890, 1334, 0, 0);
-        this.createPanel('LoadingTopShade', this.node, 750, 380, new Color(8, 10, 37, 76), 0, 475, 0);
-        this.createPanel('LoadingBottomShade', this.node, 750, 440, new Color(6, 8, 30, 128), 0, -472, 0);
+        this.createAdaptiveBackground('LoadingBackground', this.node);
+        this.createPanel('LoadingTopShade', this.node, this.sceneWidth, 380, new Color(8, 10, 37, 76), 0, 475, 0);
+        this.createPanel('LoadingBottomShade', this.node, this.sceneWidth, 440, new Color(6, 8, 30, 128), 0, -472, 0);
 
         const logo = this.createImage('LoadingLogo', this.node, 'generatedLogo', 590, 340, 0, 294);
         logo.setScale(0.88, 0.88, 1);
@@ -270,10 +324,10 @@ export class SlotGame extends Component {
         this.cellNodes = [];
         this.cellSprites = [];
 
-        const background = this.createImage('Background', this.node, 'generatedBackground', 890, 1334, 0, 0);
+        const background = this.createAdaptiveBackground('Background', this.node);
         background.setSiblingIndex(0);
-        this.createPanel('SkyTint', this.node, 750, 1334, new Color(9, 12, 43, 26), 0, 0, 0);
-        this.createPanel('BottomVignette', this.node, 750, 440, new Color(6, 8, 30, 116), 0, -447, 0);
+        this.createPanel('SkyTint', this.node, this.sceneWidth, this.sceneHeight, new Color(9, 12, 43, 26), 0, 0, 0);
+        this.createPanel('BottomVignette', this.node, this.sceneWidth, 440, new Color(6, 8, 30, 116), 0, -447, 0);
         this.createAmbientSparkles();
 
         this.createHomeButton();
@@ -285,34 +339,39 @@ export class SlotGame extends Component {
 
         this.effectLayer = new Node('GlobalEffects');
         this.node.addChild(this.effectLayer);
-        this.ensureTransform(this.effectLayer, 750, 1334);
+        this.ensureTransform(this.effectLayer, this.sceneWidth, this.sceneHeight);
     }
 
     private createHomeButton(): void {
-        const button = this.createImage('HomeButton', this.node, 'buttonRoundDark', 82, 82, -320, 586, true);
+        const button = this.createImage('HomeButton', this.node, 'commercialHome', 116, 116, -310, 571);
         this.addButton(button, () => this.onHome());
-        this.createImage('HomeArt', button, 'home', 57, 57, 0, 3);
-        this.createImage('HomeStar', button, 'star', 14, 14, 23, 25);
+        if (!this.reducedMotion) {
+            tween(button)
+                .repeatForever(tween().to(1.45, { scale: new Vec3(1.035, 1.035, 1) }, { easing: 'sineInOut' }).to(1.45, { scale: Vec3.ONE }, { easing: 'sineInOut' }))
+                .start();
+        }
     }
 
     private createTitleBlock(): void {
         const logo = this.createImage('TitleLogo', this.node, 'generatedLogo', 402, 210, 0, 559);
-        const subtitle = this.createLabel('6×5  •  CLUSTER PAYS  •  CASCADE', this.node, 12, new Color(202, 230, 255), 0, 466, 370, 24, true);
-        this.styleLabel(subtitle, new Color(38, 24, 75), 2, new Color(0, 0, 0, 110), 1, -2);
         tween(logo).repeatForever(tween().to(1.8, { scale: new Vec3(1.018, 1.018, 1) }, { easing: 'sineInOut' }).to(1.8, { scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
     }
 
     private createBalanceBar(): void {
-        const bar = this.createImage('BalanceBar', this.node, 'panel', 430, 74, 0, 449, true, new Color(225, 197, 157));
-        this.createImage('BalanceBorder', bar, 'panelBorder', 422, 72, 0, 0, true, new Color(255, 223, 125));
-        this.createImage('CoinIcon', bar, 'coin', 60, 60, -166, 1);
-        this.createLabel('BALANCE', bar, 11, new Color(255, 226, 140), -44, 18, 200, 22, true);
-        this.balanceLabel = this.createLabel('2,500', bar, 28, Color.WHITE, -44, -10, 230, 42, true);
-        this.styleLabel(this.balanceLabel, new Color(68, 31, 75), 3, new Color(0, 0, 0, 125), 2, -2);
-        const plus = this.createImage('RechargeButton', bar, 'buttonRound', 58, 58, 171, 0, true);
+        const bar = this.createImage('BalanceBar', this.node, 'commercialHud', 462, 104, 0, 446);
+        this.balanceBar = bar;
+        this.balanceCoin = this.createImage('CoinIcon', bar, 'coin', 72, 72, -150, -1);
+        const balanceCopy = this.createLabel('VAULT BALANCE', bar, 10, new Color(195, 231, 255), 0, 15, 214, 20, true);
+        this.styleLabel(balanceCopy, new Color(31, 23, 71), 2);
+        this.balanceLabel = this.createLabel('2,500', bar, 30, new Color(255, 240, 173), 0, -15, 244, 42, true);
+        this.styleLabel(this.balanceLabel, new Color(61, 26, 91), 4, new Color(0, 0, 0, 125), 2, -2);
+        const plus = this.createImage('RechargeButton', bar, 'commercialPlus', 70, 70, 165, 0);
         this.addButton(plus, () => this.showRecharge());
-        const plusText = this.createLabel('+', plus, 32, Color.WHITE, 0, 1, 50, 46, true);
-        this.styleLabel(plusText, new Color(96, 45, 26), 3);
+        if (!this.reducedMotion) {
+            tween(this.balanceCoin)
+                .repeatForever(tween().to(1.2, { scale: new Vec3(1.055, 1.055, 1), angle: 4 }, { easing: 'sineInOut' }).to(1.2, { scale: Vec3.ONE, angle: -4 }, { easing: 'sineInOut' }))
+                .start();
+        }
     }
 
     private createBoard(): void {
@@ -353,61 +412,69 @@ export class SlotGame extends Component {
     }
 
     private createMultiplierTrack(): void {
-        const track = this.createImage('MultiplierTrack', this.node, 'panelDark', 610, 66, 0, -226, true, new Color(215, 218, 250));
-        this.createImage('TrackBorder', track, 'panelBorder', 604, 62, 0, 0, true, new Color(255, 210, 102));
-        this.createImage('MultiplierRune', track, 'multiplier', 47, 47, -266, 0);
+        const track = this.createImage('MultiplierTrack', this.node, 'commercialMultiplierTrack', 646, 154, 0, -226);
+        const rune = this.createImage('MultiplierRune', track, 'multiplier', 65, 65, -267, 0);
+        if (!this.reducedMotion) {
+            tween(rune).repeatForever(tween().to(1.5, { angle: 16, scale: new Vec3(1.06, 1.06, 1) }, { easing: 'sineInOut' }).to(1.5, { angle: -16, scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
+        }
         const values = ['1×', '2×', '3×', '5×'];
         values.forEach((text, index) => {
-            const x = -154 + index * 104;
-            const medallion = this.createImage(`Multiplier_${index}`, track, index === 0 ? 'buttonRound' : 'buttonRoundDark', 48, 48, x, 0, true);
+            const x = -154 + index * 103;
+            const medallion = this.createImage(`Multiplier_${index}`, track, index === 0 ? 'buttonRound' : 'buttonRoundDark', 54, 54, x, -1, true);
             this.addButton(medallion, () => this.previewMultiplier(index));
-            const label = this.createLabel(text, medallion, 18, index === 0 ? Color.WHITE : new Color(174, 191, 223), 0, 0, 44, 36, true);
-            this.styleLabel(label, new Color(67, 31, 83), 2);
+            const label = this.createLabel(text, medallion, 19, index === 0 ? Color.WHITE : new Color(174, 191, 223), 0, 0, 48, 38, true);
+            this.styleLabel(label, new Color(52, 24, 80), 3);
         });
-        this.multiplierLabel = this.createLabel('CASCADE 1×', track, 14, new Color(255, 224, 123), 247, 0, 126, 34, true);
-        this.styleLabel(this.multiplierLabel, new Color(63, 29, 76), 2);
+        this.multiplierLabel = this.createLabel('CASCADE 1×', track, 13, new Color(255, 226, 131), 250, -1, 128, 36, true);
+        this.styleLabel(this.multiplierLabel, new Color(54, 25, 82), 3);
     }
 
     private createBottomControls(): void {
         this.createImage('GeneratedControlConsole', this.node, 'generatedControlConsole', 720, 340, 0, -436);
-        const resultPlate = this.createImage('ResultPlate', this.node, 'panelDark', 568, 72, 0, -308, true, new Color(210, 214, 245));
-        this.createImage('ResultBorder', resultPlate, 'panelBorder', 562, 68, 0, 0, true, new Color(255, 210, 100));
-        this.resultLabel = this.createLabel('GROUP 5+ MATCHING TREASURES TO WIN', resultPlate, 16, new Color(211, 231, 255), 0, 0, 530, 40, true);
-        this.styleLabel(this.resultLabel, new Color(35, 26, 74), 2);
+        const resultPlate = this.createImage('ResultPlate', this.node, 'commercialResultRibbon', 606, 104, 0, -310);
+        this.resultLabel = this.createLabel('GROUP 5+ MATCHING TREASURES TO WIN', resultPlate, 15, new Color(218, 237, 255), 0, -1, 510, 40, true);
+        this.styleLabel(this.resultLabel, new Color(31, 22, 69), 3, new Color(0, 0, 0, 110), 2, -2);
 
-        const betPanel = this.createImage('BetPanel', this.node, 'panel', 270, 86, -205, -418, true, new Color(231, 202, 147));
-        this.createLabel('BET', betPanel, 11, new Color(255, 224, 132), 0, 24, 90, 22, true);
-        this.betLabel = this.createLabel('20', betPanel, 28, Color.WHITE, 0, -8, 100, 38, true);
-        this.styleLabel(this.betLabel, new Color(73, 32, 74), 3);
-        const minus = this.createImage('BetMinus', betPanel, 'buttonRoundDark', 58, 58, -91, 0, true);
-        const plus = this.createImage('BetPlus', betPanel, 'buttonRoundDark', 58, 58, 91, 0, true);
+        const betPanel = this.createImage('BetPanel', this.node, 'commercialBet', 286, 124, -205, -420);
+        const betCopy = this.createLabel('TOTAL BET', betPanel, 9, new Color(191, 224, 255), 0, 17, 96, 20, true);
+        this.styleLabel(betCopy, new Color(51, 25, 79), 2);
+        this.betLabel = this.createLabel('20', betPanel, 29, new Color(255, 238, 174), 0, -14, 100, 40, true);
+        this.styleLabel(this.betLabel, new Color(65, 28, 83), 4);
+        const minus = this.createImage('BetMinus', betPanel, 'commercialMinus', 68, 68, -86, 0);
+        const plus = this.createImage('BetPlus', betPanel, 'commercialPlus', 68, 68, 86, 0);
         this.addButton(minus, () => this.changeBet(-1));
         this.addButton(plus, () => this.changeBet(1));
-        this.createLabel('−', minus, 27, Color.WHITE, 0, 1, 45, 40, true);
-        this.createLabel('+', plus, 27, Color.WHITE, 0, 1, 45, 40, true);
 
-        this.spinButton = this.createImage('SpinButton', this.node, 'buttonPrimary', 262, 110, 148, -418, true);
+        this.spinAura = this.createImage('SpinAura', this.node, 'commercialSpinAura', 190, 190, 151, -420);
+        const auraOpacity = this.spinAura.addComponent(UIOpacity);
+        auraOpacity.opacity = 205;
+        this.spinButton = this.createImage('SpinButton', this.node, 'commercialSpin', 284, 150, 151, -420);
         this.addButton(this.spinButton, () => void this.spin());
-        this.createImage('SpinWand', this.spinButton, 'wand', 70, 70, -82, 4);
-        const spinLabel = this.createLabel('SPIN', this.spinButton, 34, Color.WHITE, 32, 9, 145, 48, true);
-        this.styleLabel(spinLabel, new Color(111, 32, 33), 4, new Color(0, 0, 0, 130), 2, -3);
-        const spinSub = this.createLabel('DROP & CASCADE', this.spinButton, 10, new Color(255, 226, 187), 32, -27, 150, 20, true);
-        this.styleLabel(spinSub, new Color(111, 32, 33), 1);
+        this.spinLabel = this.createLabel('SPIN', this.spinButton, 34, Color.WHITE, 0, 8, 176, 48, true);
+        this.styleLabel(this.spinLabel, new Color(86, 20, 42), 5, new Color(0, 0, 0, 140), 2, -3);
+        this.spinSubLabel = this.createLabel('READY', this.spinButton, 9, new Color(255, 230, 184), 0, -27, 170, 18, true);
+        this.styleLabel(this.spinSubLabel, new Color(87, 24, 45), 2);
 
-        const utility = this.createImage('UtilityBar', this.node, 'panelDark', 610, 72, 0, -535, true, new Color(205, 212, 245));
-        this.createUtilityButton(utility, -200, 'SOUND', () => this.toggleSound());
-        this.createUtilityButton(utility, 0, 'RULES', () => this.showRules());
-        const auto = this.createUtilityButton(utility, 200, 'AUTO', () => this.toggleAuto());
-        this.autoLabel = auto.getComponentInChildren(Label)!;
+        const utility = new Node('UtilityBar');
+        this.node.addChild(utility);
+        utility.setPosition(0, -538);
+        this.ensureTransform(utility, 620, 82);
+        this.soundButton = this.createUtilityButton(utility, -204, 'SOUND', 'commercialSound', () => this.toggleSound());
+        this.soundLabel = this.soundButton.getComponentInChildren(Label)!;
+        this.createUtilityButton(utility, 0, 'RULES', 'commercialRules', () => this.showRules());
+        this.autoButton = this.createUtilityButton(utility, 204, 'AUTO', 'commercialAuto', () => this.toggleAuto());
+        this.autoLabel = this.autoButton.getComponentInChildren(Label)!;
         const footer = this.createLabel('CLUSTER PAYS  •  NO PAYLINES  •  WINNING SYMBOLS CASCADE', this.node, 11, new Color(169, 197, 235), 0, -606, 700, 26, true);
         this.styleLabel(footer, new Color(19, 18, 49), 1);
+        this.animateSpinAura(false);
     }
 
-    private createUtilityButton(parent: Node, x: number, text: string, action: () => void): Node {
-        const button = this.createImage(`${text}Button`, parent, 'buttonSecondary', 174, 52, x, 0, true);
+    private createUtilityButton(parent: Node, x: number, text: string, iconKey: string, action: () => void): Node {
+        const button = this.createImage(`${text}Button`, parent, 'commercialUtility', 180, 78, x, 0);
         this.addButton(button, action);
-        const label = this.createLabel(text, button, 16, Color.WHITE, 0, 0, 160, 34, true);
-        this.styleLabel(label, new Color(80, 39, 29), 2);
+        this.createImage(`${text}Icon`, button, iconKey, 54, 54, -48, 1);
+        const label = this.createLabel(text, button, 13, Color.WHITE, 27, -2, 94, 32, true);
+        this.styleLabel(label, new Color(48, 24, 78), 3);
         return button;
     }
 
@@ -459,6 +526,9 @@ export class SlotGame extends Component {
         this.setSpinEnabled(false);
         this.resultLabel.string = 'TREASURES ARE FALLING…';
         this.multiplierLabel.string = 'CASCADE 1×';
+        this.setSpinStatus('SPINNING', 'OPENING THE VAULT');
+        this.animateSpinAura(true);
+        this.haptic([18, 24, 28]);
         this.playSound('spin', 0.7);
         tween(this.spinButton).to(0.12, { scale: new Vec3(0.95, 0.95, 1) }).to(0.22, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
 
@@ -470,6 +540,8 @@ export class SlotGame extends Component {
         await this.runCascades(bet);
         this.spinning = false;
         this.setSpinEnabled(true);
+        this.setSpinStatus(this.autoPlay ? 'AUTO' : 'SPIN', this.autoPlay ? 'NEXT DROP' : 'READY');
+        this.animateSpinAura(false);
         if (this.autoPlay) this.scheduleOnce(() => void this.spin(), 0.85);
     }
 
@@ -490,6 +562,7 @@ export class SlotGame extends Component {
             if (clusters.length === 0) break;
             const multiplier = MULTIPLIERS[cascade];
             this.setMultiplierState(cascade);
+            this.setSpinStatus('CASCADE', `${multiplier}× POWER`);
             const winningCells = this.uniqueCells(clusters.flatMap((cluster) => cluster.cells));
             const cascadeWin = clusters.reduce((sum, cluster) => {
                 const base = SYMBOL_VALUES[cluster.symbol] ?? 5;
@@ -564,6 +637,7 @@ export class SlotGame extends Component {
 
     private async highlightClusters(cells: Cell[], multiplier: number): Promise<void> {
         this.playSound('burst', 0.68);
+        this.haptic(multiplier >= 3 ? [20, 16, 30] : 18);
         cells.forEach((cell, index) => {
             const node = this.cellSprites[cell.row][cell.col].node;
             tween(node)
@@ -571,12 +645,13 @@ export class SlotGame extends Component {
                 .to(0.16, { scale: new Vec3(1.24, 1.24, 1) }, { easing: 'backOut' })
                 .to(0.18, { scale: new Vec3(1.08, 1.08, 1) })
                 .start();
-            const rune = this.createImage('ClusterRune', this.cellNodes[cell.row][cell.col], 'multiplier', 54, 54, 0, 0, false, new Color(120, 211, 255, 145));
+            const rune = this.createImage('ClusterRune', this.cellNodes[cell.row][cell.col], 'commercialClusterBurst', 102, 102, 0, 0);
             rune.setSiblingIndex(2);
             const opacity = rune.addComponent(UIOpacity);
-            opacity.opacity = 150;
-            rune.setScale(0.3, 0.3, 1);
-            tween(rune).to(0.3, { scale: new Vec3(1.65, 1.65, 1), angle: 35 }).to(0.2, { scale: new Vec3(2.1, 2.1, 1) }).call(() => rune.destroy()).start();
+            opacity.opacity = 220;
+            rune.setScale(0.24, 0.24, 1);
+            tween(rune).delay(index * 0.012).to(0.26, { scale: new Vec3(1.12, 1.12, 1), angle: 34 }, { easing: 'backOut' }).to(0.22, { scale: new Vec3(1.55, 1.55, 1), angle: 82 }).call(() => rune.destroy()).start();
+            tween(opacity).delay(0.24 + index * 0.012).to(0.22, { opacity: 0 }).start();
         });
         const callout = this.createCallout(`${cells.length} SYMBOL CLUSTER`, `${multiplier}× CASCADE`);
         await this.wait(0.68);
@@ -588,12 +663,12 @@ export class SlotGame extends Component {
         this.effectLayer.addChild(root);
         root.setPosition(0, 130);
         root.setScale(0.35, 0.35, 1);
-        this.ensureTransform(root, 430, 125);
-        this.createImage('CalloutBanner', root, 'banner', 430, 104, 0, 0, true);
-        const title = this.createLabel(titleText, root, 25, Color.WHITE, 0, 13, 390, 42, true);
-        this.styleLabel(title, new Color(117, 32, 49), 4, new Color(0, 0, 0, 120), 2, -2);
-        const subtitle = this.createLabel(subtitleText, root, 13, new Color(255, 232, 159), 0, -25, 360, 25, true);
-        this.styleLabel(subtitle, new Color(111, 31, 45), 2);
+        this.ensureTransform(root, 500, 170);
+        this.createImage('CalloutBanner', root, 'commercialTooltip', 500, 170, 0, 0);
+        const title = this.createLabel(titleText, root, 25, new Color(255, 226, 115), 0, 18, 410, 42, true);
+        this.styleLabel(title, new Color(65, 27, 88), 4, new Color(0, 0, 0, 120), 2, -2);
+        const subtitle = this.createLabel(subtitleText, root, 13, new Color(211, 231, 255), 0, -27, 380, 25, true);
+        this.styleLabel(subtitle, new Color(42, 25, 79), 2);
         tween(root).to(0.3, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
         return root;
     }
@@ -653,45 +728,64 @@ export class SlotGame extends Component {
         this.multiplierLabel.string = `CASCADE ${multiplier}×`;
         const track = this.node.getChildByName('MultiplierTrack');
         if (!track) return;
+        track.getChildByName('MultiplierEnergy')?.destroy();
+        const energy = this.createImage('MultiplierEnergy', track, 'commercialClusterBurst', 86, 86, -154 + Math.min(index, 3) * 103, -1);
+        energy.setSiblingIndex(1);
+        const energyOpacity = energy.addComponent(UIOpacity);
+        energyOpacity.opacity = 190;
+        energy.setScale(0.35, 0.35, 1);
+        tween(energy).to(0.28, { scale: new Vec3(1.12, 1.12, 1), angle: 42 }, { easing: 'backOut' }).to(0.2, { scale: Vec3.ONE, angle: 86 }).start();
         MULTIPLIERS.forEach((_, itemIndex) => {
             const medal = track.getChildByName(`Multiplier_${itemIndex}`);
             if (!medal) return;
             medal.getComponent(Sprite)!.spriteFrame = this.frameMap.get(itemIndex <= index ? 'buttonRound' : 'buttonRoundDark') ?? null;
+            const label = medal.getComponentInChildren(Label);
+            if (label) label.color = itemIndex <= index ? Color.WHITE : new Color(174, 191, 223);
             tween(medal).to(0.18, { scale: itemIndex === index ? new Vec3(1.16, 1.16, 1) : Vec3.ONE }, { easing: 'backOut' }).start();
         });
     }
 
     private async showWinCelebration(amount: number, cascades: number): Promise<void> {
         this.playSound('win', 0.76);
+        this.haptic([32, 28, 48, 32, 72]);
+        this.setSpinStatus('WIN', `${cascades} CASCADE${cascades === 1 ? '' : 'S'}`);
         const overlay = new Node('WinOverlay');
         this.node.addChild(overlay);
-        this.ensureTransform(overlay, 750, 1334);
+        this.ensureTransform(overlay, this.sceneWidth, this.sceneHeight);
         overlay.addComponent(BlockInputEvents);
-        this.createPanel('WinShade', overlay, 750, 1334, new Color(5, 7, 27, 198), 0, 0, 0);
+        this.createPanel('WinShade', overlay, this.sceneWidth, this.sceneHeight, new Color(5, 7, 27, 224), 0, 0, 0);
 
         const stage = new Node('PremiumWinStage');
         overlay.addChild(stage);
         this.ensureTransform(stage, 750, 1000);
         stage.setPosition(0, 10);
-        const banner = this.createImage('GeneratedWinBanner', stage, 'generatedWinBanner', 700, 466, 0, 160);
-        const title = this.createLabel(cascades > 2 ? 'LEGENDARY CASCADE!' : 'TREASURE BURST!', banner, 39, Color.WHITE, 0, 86, 570, 64, true);
-        this.styleLabel(title, new Color(96, 30, 114), 5, new Color(0, 0, 0, 150), 3, -4);
-        const chainCopy = this.createLabel(`${cascades} CASCADE${cascades === 1 ? '' : 'S'} COMPLETED`, banner, 14, new Color(200, 229, 255), 0, 37, 500, 28, true);
+        const burstHalo = this.createImage('WinCrystalBurst', stage, 'commercialClusterBurst', 590, 590, 0, 78);
+        const haloOpacity = burstHalo.addComponent(UIOpacity);
+        haloOpacity.opacity = 160;
+        if (!this.reducedMotion) tween(burstHalo).repeatForever(tween().to(3.6, { angle: 90 }).to(3.6, { angle: 180 })).start();
+        this.createImage('GeneratedWinBanner', stage, 'generatedWinBanner', 700, 466, 0, 92);
+        const wordmarkKey = cascades > 2 ? 'commercialLegendaryWordmark' : 'commercialTreasureWordmark';
+        const wordmark = this.createImage('PremiumWinWordmark', stage, wordmarkKey, 650, 238, 0, 335);
+        wordmark.setScale(0.65, 0.65, 1);
+        tween(wordmark).delay(0.08).to(0.38, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
+
+        const ribbon = this.createImage('WinResultRibbon', stage, 'commercialResultRibbon', 610, 180, 0, 116);
+        const chainCopy = this.createLabel(`${cascades} CASCADE${cascades === 1 ? '' : 'S'} COMPLETED`, ribbon, 14, new Color(205, 232, 255), 0, 48, 500, 28, true);
         this.styleLabel(chainCopy, new Color(43, 25, 79), 2);
-        const winLabel = this.createLabel(`+${this.formatNumber(amount)}`, banner, 56, new Color(255, 223, 93), 0, -26, 560, 82, true);
+        const winLabel = this.createLabel(`+${this.formatNumber(amount)}`, ribbon, 58, new Color(255, 226, 100), 0, 0, 540, 78, true);
         this.styleLabel(winLabel, new Color(80, 27, 100), 6, new Color(0, 0, 0, 155), 3, -4);
-        const wonCopy = this.createLabel('COINS WON', banner, 16, new Color(202, 229, 255), 0, -83, 320, 32, true);
+        const wonCopy = this.createLabel('COINS WON', ribbon, 14, new Color(202, 229, 255), 0, -53, 320, 28, true);
         this.styleLabel(wonCopy, new Color(42, 25, 78), 2);
 
         const treasure = this.createImage('GeneratedTreasurePile', stage, 'generatedCoinPile', 700, 466, 0, -215);
         const heroKey = this.grid.flat().find((id) => SYMBOLS.includes(id)) ?? 'gemRed';
         const hero = this.createImage('WinningTreasure', stage, heroKey, 142, 142, 0, -64);
         tween(hero).repeatForever(tween().to(0.72, { scale: new Vec3(1.08, 1.08, 1) }, { easing: 'sineInOut' }).to(0.72, { scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
-        for (let i = 0; i < 14; i += 1) {
+        for (let i = 0; i < 10; i += 1) {
             const sparkle = this.createImage(`WinSparkle_${i}`, stage, i % 3 === 0 ? 'jewel' : 'star', 18 + (i % 3) * 5, 18 + (i % 3) * 5, -292 + (i % 7) * 97, -120 + Math.floor(i / 7) * 360);
             const opacity = sparkle.addComponent(UIOpacity);
-            opacity.opacity = 70 + (i % 4) * 36;
-            tween(sparkle).delay(i * 0.06).repeatForever(tween().to(0.48, { scale: new Vec3(1.35, 1.35, 1), angle: 45 }).to(0.48, { scale: new Vec3(0.72, 0.72, 1), angle: 90 })).start();
+            opacity.opacity = 54 + (i % 4) * 28;
+            if (!this.reducedMotion) tween(sparkle).delay(i * 0.08).repeatForever(tween().to(0.72, { scale: new Vec3(1.28, 1.28, 1), angle: 38 }).to(0.72, { scale: new Vec3(0.76, 0.76, 1), angle: 76 })).start();
         }
 
         stage.setScale(0.55, 0.55, 1);
@@ -703,6 +797,7 @@ export class SlotGame extends Component {
         ]);
         this.balance += amount;
         this.refreshHud();
+        this.pulseBalance();
         await this.waitForCollect(stage);
         tween(stage).to(0.22, { scale: new Vec3(0.84, 0.84, 1) }, { easing: 'backIn' }).start();
         const fade = overlay.addComponent(UIOpacity);
@@ -712,11 +807,11 @@ export class SlotGame extends Component {
     }
 
     private waitForCollect(parent: Node): Promise<void> {
-        const collect = this.createImage('CollectButton', parent, 'buttonPrimary', 280, 78, 0, -472, true);
-        const label = this.createLabel('COLLECT', collect, 25, Color.WHITE, 0, 7, 240, 40, true);
-        this.styleLabel(label, new Color(104, 31, 45), 3, new Color(0, 0, 0, 120), 2, -2);
-        const hint = this.createLabel('TAP TO CONTINUE', collect, 9, new Color(255, 226, 184), 0, -22, 220, 18, true);
-        this.styleLabel(hint, new Color(104, 31, 45), 1);
+        const collect = this.createImage('CollectButton', parent, 'commercialCollect', 320, 110, 0, -456);
+        const label = this.createLabel('COLLECT', collect, 25, Color.WHITE, 0, 8, 250, 40, true);
+        this.styleLabel(label, new Color(34, 91, 61), 4, new Color(0, 0, 0, 120), 2, -2);
+        const hint = this.createLabel('TAP TO CONTINUE', collect, 9, new Color(226, 255, 215), 0, -23, 220, 18, true);
+        this.styleLabel(hint, new Color(27, 79, 53), 2);
         if (!this.reducedMotion) {
             tween(collect).repeatForever(tween().to(0.72, { scale: new Vec3(1.035, 1.035, 1) }, { easing: 'sineInOut' }).to(0.72, { scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
         }
@@ -772,45 +867,47 @@ export class SlotGame extends Component {
         this.playSound('click', 0.65);
         const overlay = new Node('RulesOverlay');
         this.node.addChild(overlay);
-        this.ensureTransform(overlay, 750, 1334);
+        this.ensureTransform(overlay, this.sceneWidth, this.sceneHeight);
         overlay.addComponent(BlockInputEvents);
-        this.createPanel('RulesShade', overlay, 750, 1334, new Color(4, 7, 27, 228), 0, 0, 0);
+        this.createPanel('RulesShade', overlay, this.sceneWidth, this.sceneHeight, new Color(4, 7, 27, 228), 0, 0, 0);
         const panel = this.createImage('RulesPanel', overlay, 'generatedRulesFrame', 690, 1140, 0, -2);
-        const title = this.createLabel('HOW TO PLAY', panel, 36, Color.WHITE, 0, 447, 500, 58, true);
+        this.createImage('RulesArt', panel, 'commercialRules', 78, 78, -255, 368);
+        const title = this.createLabel('HOW TO PLAY', panel, 32, Color.WHITE, 0, 368, 430, 54, true);
         this.styleLabel(title, new Color(84, 28, 105), 5, new Color(0, 0, 0, 140), 2, -3);
-        const rulesSubtitle = this.createLabel('ARCANE TREASURES  •  CLUSTER PAYS', panel, 12, new Color(194, 226, 255), 0, 406, 480, 24, true);
+        const rulesSubtitle = this.createLabel('ARCANE TREASURES  •  CLUSTER PAYS', panel, 11, new Color(194, 226, 255), 0, 330, 440, 22, true);
         this.styleLabel(rulesSubtitle, new Color(35, 24, 72), 2);
 
-        const close = this.createImage('CloseRules', panel, 'close', 58, 58, 278, 486, true);
+        const close = this.createImage('CloseRules', panel, 'commercialPlus', 68, 68, 270, 466);
+        close.angle = 45;
         this.addButton(close, () => this.closeRules());
 
-        this.createSectionTitle(panel, '1  FORM A CLUSTER', 346);
-        const intro = this.createLabel('Connect 5 or more matching treasures vertically or horizontally.\nThere are no paylines — every connected symbol counts.', panel, 16, new Color(221, 232, 255), 0, 294, 548, 76, true);
+        this.createSectionTitle(panel, '1  FORM A CLUSTER', 270);
+        const intro = this.createLabel('Connect 5 or more matching treasures vertically or horizontally.\nThere are no paylines — every connected symbol counts.', panel, 16, new Color(221, 232, 255), 0, 218, 548, 76, true);
         intro.enableWrapText = true;
         this.styleLabel(intro, new Color(28, 25, 68), 2);
 
-        this.createSectionTitle(panel, '2  SPECIAL TREASURES', 216);
+        this.createSectionTitle(panel, '2  SPECIAL TREASURES', 140);
         const specials = [
-            { key: 'wild', title: 'WILD RUNE', copy: 'Joins any regular treasure' },
-            { key: 'scatter', title: 'SCATTER RUNE', copy: 'Feature-ready special symbol' },
-            { key: 'multiplier', title: 'CASCADE RUNE', copy: 'Raises each consecutive win' },
+            { key: 'wild', title: 'WILD RUNE', copy: 'Joins any\nregular treasure' },
+            { key: 'scatter', title: 'SCATTER RUNE', copy: 'Feature-ready\nspecial symbol' },
+            { key: 'multiplier', title: 'CASCADE RUNE', copy: 'Raises every\nconsecutive win' },
         ];
         specials.forEach((item, index) => {
-            const x = -200 + index * 200;
-            this.createImage(`Special_${index}`, panel, item.key, 72, 72, x, 142);
-            const name = this.createLabel(item.title, panel, 12, new Color(255, 220, 118), x, 92, 184, 26, true);
+            const x = -184 + index * 184;
+            this.createImage(`Special_${index}`, panel, item.key, 72, 72, x, 66);
+            const name = this.createLabel(item.title, panel, 11, new Color(255, 220, 118), x, 15, 168, 25, true);
             this.styleLabel(name, new Color(53, 28, 79), 2);
-            const copy = this.createLabel(item.copy, panel, 11, new Color(188, 210, 239), x, 59, 176, 40, true);
+            const copy = this.createLabel(item.copy, panel, 11, new Color(188, 210, 239), x, -34, 154, 42, false);
             copy.enableWrapText = true;
         });
 
-        this.createSectionTitle(panel, '3  CLUSTER REWARDS', -8);
+        this.createSectionTitle(panel, '3  CLUSTER REWARDS', -84);
         const tableSymbols = ['shield', 'tome', 'potionRed', 'potionBlue', 'gemRed', 'gemBlue'];
         tableSymbols.forEach((symbol, index) => {
             const column = index % 2;
             const row = Math.floor(index / 2);
             const x = column === 0 ? -164 : 164;
-            const y = -82 - row * 88;
+            const y = -158 - row * 88;
             const rowPanel = this.createImage(`PayRow_${index}`, panel, 'panel', 276, 74, x, y, true, new Color(215, 196, 167));
             this.createImage('PaySymbol', rowPanel, symbol, 56, 56, -92, 0);
             const base = SYMBOL_VALUES[symbol];
@@ -818,14 +915,14 @@ export class SlotGame extends Component {
             this.styleLabel(pay, new Color(68, 33, 71), 2);
         });
 
-        this.createSectionTitle(panel, '4  CASCADE MULTIPLIER', -357);
-        const trackCopy = this.createLabel('Winning symbols burst, new symbols fall, and the multiplier grows:', panel, 13, new Color(198, 217, 244), 0, -400, 550, 30, true);
+        this.createSectionTitle(panel, '4  CASCADE MULTIPLIER', -409);
+        const trackCopy = this.createLabel('Winning symbols burst, new symbols fall, and the multiplier grows:', panel, 13, new Color(198, 217, 244), 0, -450, 550, 30, true);
         this.styleLabel(trackCopy, new Color(31, 26, 70), 1);
         ['1×', '2×', '3×', '5×'].forEach((text, index) => {
-            const medal = this.createImage(`RuleMultiplier_${index}`, panel, index === 3 ? 'buttonRound' : 'buttonRoundDark', 54, 54, -174 + index * 116, -453, true);
+            const medal = this.createImage(`RuleMultiplier_${index}`, panel, index === 3 ? 'buttonRound' : 'buttonRoundDark', 54, 54, -174 + index * 116, -503, true);
             const label = this.createLabel(text, medal, 19, Color.WHITE, 0, 0, 50, 40, true);
             this.styleLabel(label, new Color(74, 32, 77), 2);
-            if (index < 3) this.createLabel('›', panel, 25, new Color(255, 218, 104), -116 + index * 116, -453, 30, 40, true);
+            if (index < 3) this.createLabel('›', panel, 25, new Color(255, 218, 104), -116 + index * 116, -503, 30, 40, true);
         });
 
         this.rulesOverlay = overlay;
@@ -852,9 +949,9 @@ export class SlotGame extends Component {
         if (this.rechargeOverlay) return;
         const overlay = new Node('RechargeOverlay');
         this.node.addChild(overlay);
-        this.ensureTransform(overlay, 750, 1334);
+        this.ensureTransform(overlay, this.sceneWidth, this.sceneHeight);
         overlay.addComponent(BlockInputEvents);
-        this.createPanel('RechargeShade', overlay, 750, 1334, new Color(7, 8, 30, 214), 0, 0, 0);
+        this.createPanel('RechargeShade', overlay, this.sceneWidth, this.sceneHeight, new Color(7, 8, 30, 214), 0, 0, 0);
         const panel = this.createImage('RechargePanel', overlay, 'generatedWinBanner', 660, 500, 0, 20);
         this.createImage('CoinHero', panel, 'generatedCoinPile', 310, 206, 0, 146);
         const title = this.createLabel('REFILL YOUR VAULT', panel, 29, new Color(255, 221, 105), 0, 52, 520, 50, true);
@@ -863,13 +960,13 @@ export class SlotGame extends Component {
         copy.enableWrapText = true;
         this.styleLabel(copy, new Color(29, 25, 67), 1);
         [500, 2000, 5000].forEach((value, index) => {
-            const pack = this.createImage(`CoinPack_${value}`, panel, index === 1 ? 'buttonPrimary' : 'buttonSecondary', 178, 82, -194 + index * 194, -72, true);
+            const pack = this.createImage(`CoinPack_${value}`, panel, index === 1 ? 'commercialCollect' : 'commercialUtility', 184, 92, -194 + index * 194, -72);
             this.addButton(pack, () => this.addCoinPack(value));
             this.createImage('PackCoin', pack, 'coin', 38, 38, -57, 0);
             const packLabel = this.createLabel(`+${this.formatNumber(value)}`, pack, 17, Color.WHITE, 20, 0, 105, 34, true);
             this.styleLabel(packLabel, new Color(83, 34, 65), 2);
         });
-        const cancel = this.createImage('CancelRecharge', panel, 'buttonSecondary', 250, 60, 0, -166, true);
+        const cancel = this.createImage('CancelRecharge', panel, 'commercialUtility', 250, 78, 0, -166);
         this.addButton(cancel, () => this.closeRecharge());
         const cancelLabel = this.createLabel('NOT NOW', cancel, 16, Color.WHITE, 0, 0, 240, 36, true);
         this.styleLabel(cancelLabel, new Color(77, 38, 31), 2);
@@ -882,8 +979,9 @@ export class SlotGame extends Component {
         const from = this.balance;
         const to = this.balance + value;
         this.balance = to;
-        void this.animateBalance(from, to, this.reducedMotion ? 0.25 : 0.72);
+        void this.animateBalance(from, to, this.reducedMotion ? 0.25 : 0.72).then(() => this.pulseBalance());
         this.playSound('coins', 0.62);
+        this.haptic([18, 18, 34]);
         this.closeRecharge();
     }
 
@@ -898,13 +996,22 @@ export class SlotGame extends Component {
     private toggleAuto(): void {
         this.autoPlay = !this.autoPlay;
         this.autoLabel.string = this.autoPlay ? 'AUTO ON' : 'AUTO';
+        this.autoButton.getComponent(Sprite)!.color = this.autoPlay ? new Color(220, 255, 226) : Color.WHITE;
+        Tween.stopAllByTarget(this.autoButton);
+        tween(this.autoButton).to(0.16, { scale: new Vec3(1.08, 1.08, 1) }, { easing: 'backOut' }).to(0.18, { scale: Vec3.ONE }).start();
         this.playSound('click', 0.5);
+        this.haptic(this.autoPlay ? [12, 18, 18] : 10);
         if (this.autoPlay && !this.spinning) void this.spin();
     }
 
     private toggleSound(): void {
         this.soundEnabled = !this.soundEnabled;
+        this.soundLabel.string = this.soundEnabled ? 'SOUND' : 'MUTED';
+        this.soundButton.getComponent(Sprite)!.color = this.soundEnabled ? Color.WHITE : new Color(158, 166, 196);
         this.resultLabel.string = this.soundEnabled ? 'SOUND ON' : 'SOUND MUTED';
+        Tween.stopAllByTarget(this.soundButton);
+        tween(this.soundButton).to(0.14, { scale: new Vec3(1.07, 1.07, 1) }, { easing: 'backOut' }).to(0.18, { scale: Vec3.ONE }).start();
+        this.haptic(10);
         if (this.soundEnabled) this.playSound('click', 0.5);
     }
 
@@ -912,7 +1019,11 @@ export class SlotGame extends Component {
         if (this.spinning) return;
         this.betIndex = (this.betIndex + direction + this.bets.length) % this.bets.length;
         this.refreshHud();
+        Tween.stopAllByTarget(this.betLabel.node);
+        this.betLabel.node.setScale(0.82, 0.82, 1);
+        tween(this.betLabel.node).to(0.24, { scale: new Vec3(1.12, 1.12, 1) }, { easing: 'backOut' }).to(0.14, { scale: Vec3.ONE }).start();
         this.playSound('click', 0.45);
+        this.haptic(9);
     }
 
     private onHome(): void {
@@ -925,6 +1036,7 @@ export class SlotGame extends Component {
     private setSpinEnabled(enabled: boolean): void {
         const button = this.spinButton.getComponent(Button);
         if (button) button.interactable = enabled;
+        this.spinButton.getComponent(Sprite)!.color = enabled ? Color.WHITE : new Color(190, 195, 220);
     }
 
     private refreshHud(): void {
@@ -932,17 +1044,46 @@ export class SlotGame extends Component {
         if (this.betLabel) this.betLabel.string = this.formatNumber(this.bets[this.betIndex]);
     }
 
+    private setSpinStatus(title: string, detail: string): void {
+        if (this.spinLabel) this.spinLabel.string = title;
+        if (this.spinSubLabel) this.spinSubLabel.string = detail;
+    }
+
+    private animateSpinAura(active: boolean): void {
+        if (!this.spinAura || this.reducedMotion) return;
+        Tween.stopAllByTarget(this.spinAura);
+        this.spinAura.setScale(active ? 1.08 : 1, active ? 1.08 : 1, 1);
+        tween(this.spinAura)
+            .repeatForever(tween().by(active ? 0.85 : 5.6, { angle: 360 }, { easing: 'linear' }))
+            .start();
+    }
+
+    private pulseBalance(): void {
+        if (!this.balanceBar || !this.balanceCoin) return;
+        Tween.stopAllByTarget(this.balanceBar);
+        tween(this.balanceBar).to(0.16, { scale: new Vec3(1.035, 1.035, 1) }, { easing: 'backOut' }).to(0.22, { scale: Vec3.ONE }).start();
+        Tween.stopAllByTarget(this.balanceCoin);
+        tween(this.balanceCoin).to(0.16, { scale: new Vec3(1.2, 1.2, 1), angle: 14 }, { easing: 'backOut' }).to(0.24, { scale: Vec3.ONE, angle: 0 }).start();
+    }
+
+    private haptic(pattern: number | number[]): void {
+        if (this.reducedMotion || !sys.isBrowser || typeof navigator === 'undefined' || typeof navigator.vibrate !== 'function') return;
+        navigator.vibrate(pattern);
+    }
+
     private inspectSymbol(row: number, col: number): void {
         if (this.spinning || !this.grid[row]?.[col]) return;
         const symbol = this.grid[row][col];
         const name = SYMBOL_NAMES[symbol] ?? symbol.toUpperCase();
-        const copy = symbol === 'wild'
-            ? `${name}  •  JOINS ANY REGULAR TREASURE`
+        const detail = symbol === 'wild'
+            ? 'JOINS ANY REGULAR TREASURE'
             : symbol === 'scatter'
-                ? `${name}  •  SPECIAL FEATURE SYMBOL`
-                : `${name}  •  5+ CLUSTER  •  BASE ${SYMBOL_VALUES[symbol] ?? 0}×`;
-        this.resultLabel.string = copy;
+                ? 'SPECIAL FEATURE SYMBOL'
+                : `5+ CLUSTER  •  BASE ${SYMBOL_VALUES[symbol] ?? 0}×`;
+        this.resultLabel.string = `${name}  •  ${detail}`;
+        this.showPremiumTooltip(name, detail);
         this.playSound('click', 0.38);
+        this.haptic(12);
         const cell = this.cellNodes[row][col];
         Tween.stopAllByTarget(cell);
         tween(cell).to(0.12, { scale: new Vec3(1.08, 1.08, 1) }, { easing: 'backOut' }).to(0.18, { scale: Vec3.ONE }).start();
@@ -961,14 +1102,32 @@ export class SlotGame extends Component {
     private previewMultiplier(index: number): void {
         if (this.spinning) return;
         const multiplier = MULTIPLIERS[index];
-        this.resultLabel.string = index === 0
+        const copy = index === 0
             ? 'FIRST CLUSTER STARTS AT 1×'
             : `CASCADE ${index + 1} BOOSTS EVERY CLUSTER TO ${multiplier}×`;
+        this.resultLabel.string = copy;
+        this.showPremiumTooltip(`${multiplier}× CASCADE POWER`, copy);
         this.playSound('click', 0.4);
+        this.haptic(10 + index * 4);
         const medal = this.node.getChildByName('MultiplierTrack')?.getChildByName(`Multiplier_${index}`);
         if (!medal) return;
         Tween.stopAllByTarget(medal);
         tween(medal).to(0.14, { scale: new Vec3(1.18, 1.18, 1) }, { easing: 'backOut' }).to(0.2, { scale: Vec3.ONE }).start();
+    }
+
+    private showPremiumTooltip(titleText: string, detailText: string): void {
+        const existing = this.effectLayer.getChildByName('PremiumTooltip');
+        if (existing) existing.destroy();
+        const root = this.createImage('PremiumTooltip', this.effectLayer, 'commercialTooltip', 510, 176, 0, 86);
+        root.setScale(0.72, 0.72, 1);
+        const title = this.createLabel(titleText, root, 20, new Color(255, 226, 118), 0, 24, 420, 34, true);
+        this.styleLabel(title, new Color(56, 26, 83), 3, new Color(0, 0, 0, 110), 2, -2);
+        const detail = this.createLabel(detailText, root, 12, new Color(213, 231, 255), 0, -18, 410, 34, true);
+        this.styleLabel(detail, new Color(35, 25, 74), 2);
+        const opacity = root.addComponent(UIOpacity);
+        opacity.opacity = 0;
+        tween(root).to(0.22, { scale: Vec3.ONE }, { easing: 'backOut' }).delay(1.18).to(0.18, { scale: new Vec3(0.9, 0.9, 1) }).call(() => root.destroy()).start();
+        tween(opacity).to(0.16, { opacity: 255 }).delay(1.12).to(0.18, { opacity: 0 }).start();
     }
 
     private createAmbientSparkles(): void {
@@ -1024,6 +1183,14 @@ export class SlotGame extends Component {
             Tween.stopAllByTarget(child);
             child.destroy();
         }
+    }
+
+    private createAdaptiveBackground(name: string, parent: Node): Node {
+        const sourceAspect = 890 / 1334;
+        const targetAspect = this.sceneWidth / this.sceneHeight;
+        const width = targetAspect > sourceAspect ? this.sceneWidth : this.sceneHeight * sourceAspect;
+        const height = targetAspect > sourceAspect ? this.sceneWidth / sourceAspect : this.sceneHeight;
+        return this.createImage(name, parent, 'generatedBackground', width, height, 0, 0);
     }
 
     private createImage(

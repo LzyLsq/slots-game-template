@@ -11,8 +11,17 @@ High-polish Cocos Creator 3.8.8 master template for a Cluster Pays slot. It is a
 - Animated balance counting and an image-based coin stream into the balance bar
 - Rules, recharge, sound, auto-play and home controls
 - Dedicated loading, rules, recharge and premium win presentations
+- Commercial image-based HUD, bet console, spin control, result ribbon,
+  utility controls and cascade multiplier rail
+- Generated illustrated home, sound, rules, auto, plus and minus controls with
+  optical alignment for their destination frames
+- Interactive spin states (`READY`, `SPINNING`, `CASCADE`, `WIN`), animated
+  arcane aura, multiplier energy advance, touch feedback and premium tooltips
+- Generated `TREASURE BURST!` and `LEGENDARY CASCADE!` artwork with restrained
+  crystal effects, a dense coin stream and linear balance growth
 - CC API-generated transparent UI and special-symbol artwork with packaged legacy fallbacks
-- Responsive portrait composition at a 750×1334 design resolution, including safe ultrawide and tall-screen letterboxing
+- Responsive composition at a 750×1334 design resolution, including covered
+  ultrawide backgrounds and safe narrow/tall viewport scaling
 
 ## Run
 

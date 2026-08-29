@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "a2b890ed-c53a-4b7b-9c01-1eeb9ee4d25e",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "a2b890ed-c53a-4b7b-9c01-1eeb9ee4d25e@6c48a",
+      "displayName": "arcane-treasure-burst-wordmark-v2",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "a2b890ed-c53a-4b7b-9c01-1eeb9ee4d25e",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "a2b890ed-c53a-4b7b-9c01-1eeb9ee4d25e@f9941",
+      "displayName": "arcane-treasure-burst-wordmark-v2",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 7,
+        "offsetY": -8,
+        "trimX": 35,
+        "trimY": 226,
+        "width": 1927,
+        "height": 357,
+        "rawWidth": 1983,
+        "rawHeight": 793,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -963.5,
+            -178.5,
+            0,
+            963.5,
+            -178.5,
+            0,
+            -963.5,
+            178.5,
+            0,
+            963.5,
+            178.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            35,
+            567,
+            1962,
+            567,
+            35,
+            210,
+            1962,
+            210
+          ],
+          "nuv": [
+            0.017650025214321734,
+            0.2648171500630517,
+            0.989409984871407,
+            0.2648171500630517,
+            0.017650025214321734,
+            0.7150063051702396,
+            0.989409984871407,
+            0.7150063051702396
+          ],
+          "minPos": [
+            -963.5,
+            -178.5,
+            0
+          ],
+          "maxPos": [
+            963.5,
+            178.5,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a2b890ed-c53a-4b7b-9c01-1eeb9ee4d25e@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "a2b890ed-c53a-4b7b-9c01-1eeb9ee4d25e@6c48a"
+  }
+}

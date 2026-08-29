@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d5edf671-ce3b-4f5f-aec3-284d9541babc",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d5edf671-ce3b-4f5f-aec3-284d9541babc@6c48a",
+      "displayName": "arcane-bet-panel-v2",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "d5edf671-ce3b-4f5f-aec3-284d9541babc",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "d5edf671-ce3b-4f5f-aec3-284d9541babc@f9941",
+      "displayName": "arcane-bet-panel-v2",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 31,
+        "trimX": 38,
+        "trimY": 162,
+        "width": 1698,
+        "height": 501,
+        "rawWidth": 1774,
+        "rawHeight": 887,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -849,
+            -250.5,
+            0,
+            849,
+            -250.5,
+            0,
+            -849,
+            250.5,
+            0,
+            849,
+            250.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            38,
+            725,
+            1736,
+            725,
+            38,
+            224,
+            1736,
+            224
+          ],
+          "nuv": [
+            0.02142051860202931,
+            0.2525366403607666,
+            0.9785794813979707,
+            0.2525366403607666,
+            0.02142051860202931,
+            0.8173618940248027,
+            0.9785794813979707,
+            0.8173618940248027
+          ],
+          "minPos": [
+            -849,
+            -250.5,
+            0
+          ],
+          "maxPos": [
+            849,
+            250.5,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d5edf671-ce3b-4f5f-aec3-284d9541babc@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "d5edf671-ce3b-4f5f-aec3-284d9541babc@6c48a"
+  }
+}
