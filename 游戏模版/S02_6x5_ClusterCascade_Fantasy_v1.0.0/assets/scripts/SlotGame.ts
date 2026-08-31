@@ -459,7 +459,7 @@ export class SlotGame extends Component {
         const bar = this.createImage('BalanceBar', this.node, 'commercialHud', 462, 104, 0, 446);
         this.balanceBar = bar;
         this.balanceCoin = this.createImage('CoinIcon', bar, 'coin', 72, 72, -150, -1);
-        const balanceCopy = this.createLabel('VAULT BALANCE', bar, 10, new Color(195, 231, 255), 0, 15, 214, 20, true);
+        const balanceCopy = this.createLabel('VAULT BALANCE', bar, 14, new Color(224, 243, 255), 0, 16, 224, 26, true);
         this.styleLabel(balanceCopy, new Color(31, 23, 71), 2);
         this.balanceLabel = this.createLabel('2,500', bar, 30, new Color(255, 240, 173), 0, -15, 244, 42, true);
         this.styleLabel(this.balanceLabel, new Color(61, 26, 91), 4, new Color(0, 0, 0, 125), 2, -2);
@@ -529,7 +529,7 @@ export class SlotGame extends Component {
             tween(rune).repeatForever(tween().to(1.5, { angle: 16, scale: new Vec3(1.06, 1.06, 1) }, { easing: 'sineInOut' }).to(1.5, { angle: -16, scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
         }
         const values = ['1×', '2×', '3×', '5×'];
-        const guide = this.createLabel('CASCADE WIN MULTIPLIER', track, 11, new Color(203, 226, 255), 0, 39, 390, 22, true);
+        const guide = this.createLabel('CASCADE WIN MULTIPLIER', track, 15, new Color(225, 240, 255), 0, 39, 420, 28, true);
         this.styleLabel(guide, new Color(45, 25, 77), 2);
         values.forEach((text, index) => {
             const x = -154 + index * 103;
@@ -537,9 +537,9 @@ export class SlotGame extends Component {
             const label = this.createLabel(text, medallion, 19, index === 0 ? Color.WHITE : new Color(174, 191, 223), 0, 0, 48, 38, true);
             this.styleLabel(label, new Color(52, 24, 80), 3);
         });
-        const progressionCopy = this.createLabel('ADVANCES AFTER EVERY CONSECUTIVE WIN', track, 9, new Color(171, 201, 236), 20, -39, 420, 18, true);
+        const progressionCopy = this.createLabel('ADVANCES AFTER EVERY CONSECUTIVE WIN', track, 13, new Color(204, 226, 250), 20, -39, 450, 24, true);
         this.styleLabel(progressionCopy, new Color(38, 24, 70), 1);
-        this.multiplierLabel = this.createLabel('ACTIVE 1×', track, 13, new Color(255, 226, 131), 250, -1, 128, 36, true);
+        this.multiplierLabel = this.createLabel('ACTIVE 1×', track, 16, new Color(255, 235, 166), 250, -1, 134, 38, true);
         this.styleLabel(this.multiplierLabel, new Color(54, 25, 82), 3);
         const railSpark = this.createImage('MultiplierRailSpark', track, 'star', 20, 20, -205, 0);
         const railSparkOpacity = railSpark.addComponent(UIOpacity);
@@ -557,11 +557,11 @@ export class SlotGame extends Component {
     private createBottomControls(): void {
         this.createImage('GeneratedControlConsole', this.node, 'generatedControlConsole', 720, 340, 0, -436);
         const resultPlate = this.createImage('ResultPlate', this.node, 'commercialResultRibbon', 606, 104, 0, -310);
-        this.resultLabel = this.createLabel('GROUP 5+ MATCHING TREASURES TO WIN', resultPlate, 15, new Color(218, 237, 255), 0, -1, 510, 40, true);
+        this.resultLabel = this.createLabel('GROUP 5+ MATCHING TREASURES TO WIN', resultPlate, 18, new Color(240, 248, 255), 0, -1, 540, 46, true);
         this.styleLabel(this.resultLabel, new Color(31, 22, 69), 3, new Color(0, 0, 0, 110), 2, -2);
 
         const betPanel = this.createImage('BetPanel', this.node, 'commercialBet', 286, 124, -205, -420);
-        const betCopy = this.createLabel('TOTAL BET', betPanel, 11, new Color(206, 232, 255), 0, 20, 108, 22, true);
+        const betCopy = this.createLabel('TOTAL BET', betPanel, 15, new Color(231, 245, 255), 0, 21, 120, 26, true);
         this.styleLabel(betCopy, new Color(51, 25, 79), 2);
         this.betLabel = this.createLabel('20', betPanel, 31, new Color(255, 238, 174), 0, -14, 104, 42, true);
         this.styleLabel(this.betLabel, new Color(65, 28, 83), 4);
@@ -577,7 +577,7 @@ export class SlotGame extends Component {
         this.addButton(this.spinButton, () => void this.spin());
         this.spinLabel = this.createLabel('SPIN', this.spinButton, 34, Color.WHITE, 0, 8, 176, 48, true);
         this.styleLabel(this.spinLabel, new Color(86, 20, 42), 5, new Color(0, 0, 0, 140), 2, -3);
-        this.spinSubLabel = this.createLabel('READY', this.spinButton, 9, new Color(255, 230, 184), 0, -27, 170, 18, true);
+        this.spinSubLabel = this.createLabel('READY', this.spinButton, 13, new Color(255, 241, 211), 0, -27, 170, 24, true);
         this.styleLabel(this.spinSubLabel, new Color(87, 24, 45), 2);
 
         const utility = new Node('UtilityBar');
@@ -589,7 +589,7 @@ export class SlotGame extends Component {
         this.createUtilityButton(utility, 0, 'RULES', 'commercialRules', () => this.showRules());
         this.autoButton = this.createUtilityButton(utility, 204, 'AUTO', 'commercialAuto', () => this.toggleAuto());
         this.autoLabel = this.autoButton.getComponentInChildren(Label)!;
-        this.footerLabel = this.createLabel('CLUSTER PAYS  •  NO PAYLINES  •  WINNING SYMBOLS CASCADE', this.node, 12, new Color(181, 209, 242), 0, -606, 700, 28, true);
+        this.footerLabel = this.createLabel('CLUSTER PAYS  •  NO PAYLINES  •  WINNING SYMBOLS CASCADE', this.node, 14, new Color(216, 233, 252), 0, -606, 700, 30, true);
         this.styleLabel(this.footerLabel, new Color(19, 18, 49), 1);
         this.animateSpinAura(false);
     }
@@ -1162,7 +1162,7 @@ export class SlotGame extends Component {
         this.createImage('RulesArt', panel, 'commercialRules', 78, 78, -255, 368);
         const title = this.createLabel('HOW TO PLAY', panel, 32, Color.WHITE, 0, 368, 430, 54, true);
         this.styleLabel(title, new Color(84, 28, 105), 5, new Color(0, 0, 0, 140), 2, -3);
-        const rulesSubtitle = this.createLabel('ARCANE TREASURES  •  CLUSTER PAYS', panel, 11, new Color(194, 226, 255), 0, 330, 440, 22, true);
+        const rulesSubtitle = this.createLabel('ARCANE TREASURES  •  CLUSTER PAYS', panel, 15, new Color(224, 241, 255), 0, 330, 470, 28, true);
         this.styleLabel(rulesSubtitle, new Color(35, 24, 72), 2);
 
         const close = this.createImage('CloseRules', panel, 'commercialPlus', 68, 68, 270, 466);
@@ -1170,7 +1170,7 @@ export class SlotGame extends Component {
         this.addButton(close, () => this.closeRules());
 
         this.createSectionTitle(panel, '1  FORM A CLUSTER', 270);
-        const intro = this.createLabel('Connect 5 or more matching treasures vertically or horizontally.\nThere are no paylines — every connected symbol counts.', panel, 16, new Color(221, 232, 255), 0, 218, 548, 76, true);
+        const intro = this.createLabel('Connect 5+ matching treasures vertically or horizontally.\nThere are no paylines — every connected symbol counts.', panel, 18, new Color(239, 245, 255), 0, 218, 560, 82, true);
         intro.enableWrapText = true;
         this.styleLabel(intro, new Color(28, 25, 68), 2);
 
@@ -1183,9 +1183,9 @@ export class SlotGame extends Component {
         specials.forEach((item, index) => {
             const x = -184 + index * 184;
             this.createImage(`Special_${index}`, panel, item.key, 72, 72, x, 66);
-            const name = this.createLabel(item.title, panel, 11, new Color(255, 220, 118), x, 15, 168, 25, true);
+            const name = this.createLabel(item.title, panel, 14, new Color(255, 231, 153), x, 15, 174, 28, true);
             this.styleLabel(name, new Color(53, 28, 79), 2);
-            const copy = this.createLabel(item.copy, panel, 11, new Color(188, 210, 239), x, -34, 154, 42, false);
+            const copy = this.createLabel(item.copy, panel, 14, new Color(220, 233, 250), x, -34, 164, 50, true);
             copy.enableWrapText = true;
         });
 
@@ -1199,12 +1199,12 @@ export class SlotGame extends Component {
             const rowPanel = this.createImage(`PayRow_${index}`, panel, 'panel', 276, 74, x, y, true, new Color(215, 196, 167));
             this.createImage('PaySymbol', rowPanel, symbol, 56, 56, -92, 0);
             const base = SYMBOL_VALUES[symbol];
-            const pay = this.createLabel(`5+  ${base}×\n8+  ${base * 2}×`, rowPanel, 14, Color.WHITE, 34, 0, 146, 54, true);
+            const pay = this.createLabel(`5+  ${base}×\n8+  ${base * 2}×`, rowPanel, 16, Color.WHITE, 34, 0, 146, 58, true);
             this.styleLabel(pay, new Color(68, 33, 71), 2);
         });
 
         this.createSectionTitle(panel, '4  CASCADE MULTIPLIER', -409);
-        const trackCopy = this.createLabel('Winning symbols burst, new symbols fall, and the multiplier grows:', panel, 13, new Color(198, 217, 244), 0, -450, 550, 30, true);
+        const trackCopy = this.createLabel('Winning symbols burst, new symbols fall, and the multiplier grows:', panel, 16, new Color(226, 237, 251), 0, -450, 570, 36, true);
         this.styleLabel(trackCopy, new Color(31, 26, 70), 1);
         ['1×', '2×', '3×', '5×'].forEach((text, index) => {
             const medal = this.createImage(`RuleMultiplier_${index}`, panel, index === 3 ? 'buttonRound' : 'buttonRoundDark', 54, 54, -174 + index * 116, -503, true);
@@ -1220,7 +1220,7 @@ export class SlotGame extends Component {
 
     private createSectionTitle(parent: Node, text: string, y: number): void {
         this.createPanel(`${text}Line`, parent, 560, 2, new Color(255, 207, 96, 105), 0, y - 24, 1);
-        const label = this.createLabel(text, parent, 18, new Color(255, 219, 112), 0, y, 560, 36, true);
+        const label = this.createLabel(text, parent, 21, new Color(255, 231, 151), 0, y, 570, 42, true);
         this.styleLabel(label, new Color(56, 27, 77), 2);
     }
 

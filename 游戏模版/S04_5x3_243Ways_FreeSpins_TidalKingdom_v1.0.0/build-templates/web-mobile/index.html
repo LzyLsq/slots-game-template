@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tidal Kingdom · 243 Ways</title>
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="360-fullscreen" content="true">
+  <meta name="x5-page-mode" content="app">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="tidal-loader" role="status" aria-live="polite" aria-label="Loading Tidal Kingdom">
+    <div class="loader-backdrop" aria-hidden="true"></div>
+    <div class="loader-stars" aria-hidden="true"></div>
+    <main class="loader-stage">
+      <section class="loader-crest-wrap">
+        <div class="loader-orbit orbit-a" aria-hidden="true"></div>
+        <div class="loader-orbit orbit-b" aria-hidden="true"></div>
+        <img class="loader-crest" src="loading-assets/tidal-crest.png" alt="">
+        <div class="loader-title">
+          <span class="loader-kicker">5×3 · 243 WAYS</span>
+          <h1>TIDAL KINGDOM</h1>
+          <p>OPEN THE PORTALS · RAISE THE TIDE</p>
+        </div>
+      </section>
+      <section class="loader-progress-shell">
+        <div class="loader-progress-copy">
+          <span id="tidal-loader-copy">OPENING THE TIDE GATES</span>
+          <strong id="tidal-loader-percent">0%</strong>
+        </div>
+        <div class="loader-track"><i id="tidal-loader-fill"></i></div>
+        <small>PREPARING 243 WAYS · FREE SPIN MULTIPLIERS</small>
+      </section>
+    </main>
+  </div>
+
+  <div id="GameDiv" cc_exact_fit_screen="true">
+    <div id="Cocos3dGameContainer">
+      <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var loader = document.getElementById('tidal-loader');
+      var fill = document.getElementById('tidal-loader-fill');
+      var percent = document.getElementById('tidal-loader-percent');
+      var copy = document.getElementById('tidal-loader-copy');
+      var value = 0;
+      var complete = false;
+      var revealRequested = false;
+      var startedAt = Date.now();
+      var minimumVisibleMs = 1500;
+      var phrases = ['OPENING THE TIDE GATES', 'POLISHING THE PEARLS', 'CHARGING FREE SPINS'];
+      var timer = window.setInterval(function () {
+        if (complete) return;
+        value = Math.min(92, value + Math.max(1, Math.round((94 - value) * 0.055)));
+        fill.style.width = value + '%';
+        percent.textContent = value + '%';
+        copy.textContent = phrases[Math.min(2, Math.floor(value / 34))];
+      }, 90);
+      function finishReveal() {
+        if (complete) return;
+        complete = true;
+        window.clearInterval(timer);
+        fill.style.width = '100%';
+        percent.textContent = '100%';
+        copy.textContent = 'KINGDOM READY';
+        window.setTimeout(function () { loader.classList.add('is-complete'); }, 260);
+        window.setTimeout(function () { loader.remove(); }, 980);
+      }
+      function revealGame() {
+        if (complete || revealRequested) return;
+        revealRequested = true;
+        window.setTimeout(finishReveal, Math.max(0, minimumVisibleMs - (Date.now() - startedAt)));
+      }
+      window.addEventListener('tidal-ready', revealGame, { once: true });
+      window.setTimeout(revealGame, 15000);
+    }());
+  </script>
+  <script src="src/polyfills.bundle.js" charset="utf-8"></script>
+  <script src="src/system.bundle.js" charset="utf-8"></script>
+  <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"></script>
+  <script>System.import('./index.js').catch(function (err) { console.error(err); });</script>
+</body>
+</html>

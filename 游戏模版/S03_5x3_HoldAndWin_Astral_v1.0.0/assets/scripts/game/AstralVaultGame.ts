@@ -248,7 +248,7 @@ export class GameBootstrap extends Component {
         const fill = this.createPanel('LoadingFill', progressRoot, 430, 16, new Color(49, 198, 245), -215, 0, 8);
         fill.getComponent(UITransform)!.setAnchorPoint(new Vec2(0, 0.5));
         fill.getComponent(UITransform)!.setContentSize(1, 16);
-        const copy = this.createLabel('ALIGNING STARCORE · 0%', this.node, 15, new Color(213, 235, 255), 0, -320, 450, 32, true);
+        const copy = this.createLabel('ALIGNING STARCORE · 0%', this.node, 18, new Color(235, 247, 255), 0, -320, 500, 38, true);
         this.styleLabel(copy, new Color(23, 22, 69), 2);
         const holder = { value: 0 };
         await new Promise<void>((resolve) => {
@@ -274,13 +274,13 @@ export class GameBootstrap extends Component {
         this.createPanel('BottomShade', this.node, this.sceneWidth, 430, new Color(2, 6, 24, 122), 0, -472);
 
         const guardianDisplay = this.createGlassPanel('GuardianDisplay', this.node, 278, 452, -272, 310, 32, new Color(3, 9, 31, 142), new Color(193, 149, 65, 150));
-        const keeperCopy = this.createLabel('TAP KEEPER FOR TIPS', guardianDisplay, 12, new Color(172, 220, 255), 0, -196, 210, 24, true);
+        const keeperCopy = this.createLabel('TAP KEEPER FOR FEATURE GUIDE', guardianDisplay, 15, new Color(216, 240, 255), 0, -196, 242, 32, true);
         this.styleLabel(keeperCopy, new Color(30, 25, 72), 2);
         const guardian = this.createImage('Guardian', this.node, 'guardian', 230, 345, -272, 330);
         guardian.getComponent(Sprite)!.color = new Color(255, 255, 255, 212);
         this.addButton(guardian, () => this.showKeeperTip());
         const keeperHint = this.createImage('KeeperHint', this.node, 'utilityButton', 80, 80, -272, 116);
-        const keeperHintCopy = this.createLabel('TIP', keeperHint, 17, Color.WHITE, 0, 3, 48, 28, true);
+        const keeperHintCopy = this.createLabel('GUIDE', keeperHint, 15, Color.WHITE, 0, 3, 64, 30, true);
         this.styleLabel(keeperHintCopy, new Color(45, 25, 78), 3);
         this.addButton(keeperHint, () => this.showKeeperTip());
         keeperHint.active = false;
@@ -302,7 +302,7 @@ export class GameBootstrap extends Component {
     private createHomeButton(): void {
         const bezel = this.createImage('HomeButton', this.node, 'utilityButton', 112, 112, -312, 580);
         const icon = this.createImage('HomeIcon', bezel, 'home', 60, 60, 0, 8);
-        const homeCopy = this.createLabel('HOME', bezel, 11, Color.WHITE, 0, -37, 72, 20, true);
+        const homeCopy = this.createLabel('HOME', bezel, 15, Color.WHITE, 0, -37, 82, 24, true);
         this.styleLabel(homeCopy, new Color(45, 25, 78), 2);
         this.addButton(bezel, () => this.onHome());
         if (!this.reducedMotion) tween(icon).repeatForever(tween().to(1.4, { scale: new Vec3(1.04, 1.04, 1) }, { easing: 'sineInOut' }).to(1.4, { scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
@@ -312,7 +312,7 @@ export class GameBootstrap extends Component {
         const crest = this.createImage('TitleCrest', this.node, 'titleCrest', 420, 280, 0, 565);
         const title = this.createLabel('ASTRAL VAULT', crest, 38, new Color(255, 237, 174), 0, 18, 360, 54, true);
         this.styleLabel(title, new Color(52, 25, 83), 5, new Color(0, 0, 0, 140), 2, -3);
-        const subtitle = this.createLabel('HOLD & WIN', crest, 15, new Color(163, 229, 255), 0, -25, 270, 28, true);
+        const subtitle = this.createLabel('HOLD & WIN', crest, 18, new Color(199, 239, 255), 0, -26, 290, 32, true);
         this.styleLabel(subtitle, new Color(34, 28, 86), 3);
         if (!this.reducedMotion) tween(crest).repeatForever(tween().to(1.8, { scale: new Vec3(1.012, 1.012, 1) }, { easing: 'sineInOut' }).to(1.8, { scale: Vec3.ONE }, { easing: 'sineInOut' })).start();
     }
@@ -325,7 +325,7 @@ export class GameBootstrap extends Component {
         if (!this.reducedMotion) tween(coinHalo).repeatForever(tween().by(5.5, { angle: 360 }, { easing: 'linear' })).start();
         const balanceCoin = this.createImage('BalanceCoin', this.balancePanel, 'bonus', 72, 72, -160, 0);
         balanceCoin.setSiblingIndex(coinHalo.getSiblingIndex() + 1);
-        const label = this.createLabel('VAULT BALANCE', this.balancePanel, 10, new Color(171, 221, 255), -18, 17, 220, 22, true);
+        const label = this.createLabel('VAULT BALANCE', this.balancePanel, 14, new Color(215, 241, 255), -18, 18, 230, 26, true);
         this.styleLabel(label, new Color(23, 23, 68), 2);
         this.balanceLabel = this.createLabel('10,000', this.balancePanel, 28, new Color(255, 235, 163), -18, -13, 230, 40, true);
         this.styleLabel(this.balanceLabel, new Color(58, 25, 80), 4, new Color(0, 0, 0, 130), 2, -2);
@@ -339,7 +339,7 @@ export class GameBootstrap extends Component {
         const colors = [new Color(151, 232, 255), new Color(199, 166, 255), new Color(255, 213, 123), new Color(255, 239, 181)];
         names.forEach((name, index) => {
             const x = -243 + index * 162;
-            const copy = this.createLabel(name, header, 13, colors[index], x, 17, 126, 24, true);
+            const copy = this.createLabel(name, header, 16, colors[index], x, 18, 136, 28, true);
             this.styleLabel(copy, new Color(41, 22, 74), 2);
             const value = this.createLabel('0', header, 25, new Color(255, 239, 184), x, -22, 128, 38, true);
             this.styleLabel(value, new Color(47, 25, 78), 3);
@@ -389,11 +389,11 @@ export class GameBootstrap extends Component {
     private createControls(): void {
         this.createGlassPanel('ControlConsole', this.node, 704, 410, 0, -430, 38, new Color(2, 8, 29, 244), new Color(173, 127, 61, 180));
         const resultPanel = this.createGlassPanel('ResultPanel', this.node, 620, 80, 0, -229, 28);
-        this.resultLabel = this.createLabel('LAND 6 STAR COINS TO UNLOCK HOLD & WIN', resultPanel, 15, new Color(218, 238, 255), 0, 0, 548, 42, true);
+        this.resultLabel = this.createLabel('LAND 6 STAR COINS TO UNLOCK HOLD & WIN', resultPanel, 18, new Color(239, 248, 255), 0, 0, 576, 48, true);
         this.styleLabel(this.resultLabel, new Color(29, 24, 73), 3, new Color(0, 0, 0, 110), 2, -2);
 
         const betPanel = this.createGlassPanel('BetPanel', this.node, 280, 112, -202, -350, 42);
-        const betCopy = this.createLabel('TOTAL BET · 20 LINES', betPanel, 10, new Color(177, 220, 255), 0, 25, 150, 22, true);
+        const betCopy = this.createLabel('TOTAL BET · 20 LINES', betPanel, 14, new Color(218, 239, 255), 0, 26, 180, 26, true);
         this.styleLabel(betCopy, new Color(31, 24, 72), 2);
         this.betLabel = this.createLabel('20', betPanel, 30, new Color(255, 238, 174), 0, -12, 100, 42, true);
         this.styleLabel(this.betLabel, new Color(57, 25, 80), 4);
@@ -406,7 +406,7 @@ export class GameBootstrap extends Component {
         this.addButton(this.spinButton, () => void this.onSpinPressed());
         this.spinLabel = this.createLabel('SPIN', this.spinButton, 31, Color.WHITE, 0, 8, 126, 45, true);
         this.styleLabel(this.spinLabel, new Color(31, 52, 108), 5, new Color(0, 0, 0, 130), 2, -3);
-        this.spinSubLabel = this.createLabel('READY', this.spinButton, 10, new Color(255, 238, 187), 0, -27, 108, 20, true);
+        this.spinSubLabel = this.createLabel('READY', this.spinButton, 13, new Color(255, 244, 207), 0, -27, 116, 24, true);
         this.styleLabel(this.spinSubLabel, new Color(47, 32, 92), 2);
 
         const utility = new Node('UtilityBar');
@@ -417,14 +417,14 @@ export class GameBootstrap extends Component {
         this.createUtilityButton(utility, -76, 'RULES', 'rules', () => this.showRules());
         this.createUtilityButton(utility, 76, 'AUTO', 'auto', () => this.toggleAuto());
         this.createUtilityButton(utility, 228, 'TURBO', 'shockwave', () => this.toggleTurbo());
-        this.createLabel('20 FIXED LINES  ·  VIRTUAL CREDITS  ·  NO CASH VALUE', this.node, 11, new Color(171, 207, 239), 0, -596, 700, 26, true);
+        this.createLabel('20 FIXED LINES  ·  VIRTUAL CREDITS  ·  NO CASH VALUE', this.node, 14, new Color(214, 235, 250), 0, -596, 700, 30, true);
         this.animateSpinButton();
     }
 
     private createUtilityButton(parent: Node, x: number, text: string, icon: string, action: () => void): Node {
         const button = this.createImage(`${text}Button`, parent, 'utilityButton', 124, 94, x, 0);
         this.createImage(`${text}Icon`, button, icon, 43, 43, 0, 10);
-        const label = this.createLabel(text, button, 11, Color.WHITE, 0, -29, 92, 20, true);
+        const label = this.createLabel(text, button, 15, Color.WHITE, 0, -29, 102, 26, true);
         this.styleLabel(label, new Color(42, 25, 78), 2);
         if (text === 'AUTO') this.autoLabel = label;
         if (text === 'SOUND') this.soundLabel = label;
@@ -472,18 +472,19 @@ export class GameBootstrap extends Component {
         const left = -spread;
         const right = spread;
         place('HomeButton', -this.sceneWidth / 2 + 92, 565);
-        const guardianPanel = place('GuardianDisplay', this.sceneWidth / 2 - 174, 124);
-        if (guardianPanel) {
-            guardianPanel.active = true;
-            guardianPanel.setScale(1.15, 1.15, 1);
-        }
-        const guardian = place('Guardian', this.sceneWidth / 2 - 174, 148);
+        const sideGuideX = right + (ultraWide ? 420 : 430);
+        const guardianPanel = place('GuardianDisplay', sideGuideX, 124);
+        if (guardianPanel) guardianPanel.active = false;
+        const guardian = place('Guardian', sideGuideX, 148);
         if (guardian) {
             guardian.active = true;
             guardian.setScale(1.12, 1.12, 1);
         }
-        const keeperHint = place('KeeperHint', this.sceneWidth / 2 - 174, -95);
-        if (keeperHint) keeperHint.active = false;
+        const keeperHint = place('KeeperHint', sideGuideX, -88);
+        if (keeperHint) {
+            keeperHint.active = true;
+            keeperHint.setScale(0.82, 0.82, 1);
+        }
         place('TitleCrest', right, ultraWide ? 520 : 530)?.setScale(ultraWide ? 1.12 : 1.04, ultraWide ? 1.12 : 1.04, 1);
         place('BalancePanel', right, 365)?.setScale(ultraWide ? 1.08 : 1, ultraWide ? 1.08 : 1, 1);
         place('JackpotHeader', right, 220)?.setScale(ultraWide ? 1.08 : 0.98, ultraWide ? 1.08 : 0.98, 1);
@@ -894,13 +895,14 @@ export class GameBootstrap extends Component {
 
     private showKeeperTip(): void {
         if (this.busy || this.rulesOverlay || this.rechargeOverlay) return;
-        this.resultLabel.string = 'VAULT KEEPER TIP · 6 STAR COINS START 3 RESPINS';
+        this.resultLabel.string = 'OPENING HOLD & WIN FEATURE GUIDE';
         const guardian = this.node.getChildByName('Guardian');
         if (guardian) {
             const base = guardian.scale.clone();
             tween(guardian).to(0.12, { scale: new Vec3(base.x * 1.06, base.y * 1.06, 1) }, { easing: 'backOut' }).to(0.2, { scale: base }, { easing: 'sineInOut' }).start();
         }
         this.playSound('click', 0.3);
+        this.scheduleOnce(() => this.showRules(), 0.12);
     }
 
     private showRules(): void {
@@ -925,7 +927,7 @@ export class GameBootstrap extends Component {
         this.createRuleSection(panel, -324, 'JACKPOTS', 'MINI, MINOR, MAJOR and GRAND can land on locked coins.\nFill all 15 positions to collect the full-board GRAND award.', 'jackpotHeader');
 
         const demo = this.createGlassPanel('FeatureDemoButton', panel, 360, 74, 0, -460, 34, new Color(18, 91, 155, 248), new Color(255, 206, 94));
-        const demoLabel = this.createLabel('TRY FEATURE DEMO', demo, 19, Color.WHITE, 0, 0, 310, 36, true);
+        const demoLabel = this.createLabel('TRY HOLD & WIN DEMO', demo, 22, Color.WHITE, 0, 0, 330, 42, true);
         this.styleLabel(demoLabel, new Color(38, 31, 91), 4);
         this.addButton(demo, () => {
             this.closeRules();
@@ -938,15 +940,15 @@ export class GameBootstrap extends Component {
 
     private createRuleSection(parent: Node, y: number, titleText: string, body: string, iconKey: string): void {
         const card = this.createGlassPanel(`Rule_${titleText}`, parent, 570, 170, 0, y, 24, new Color(8, 19, 57, 238), new Color(71, 151, 211, 150));
-        this.createImage(`${titleText}Icon`, card, iconKey, iconKey === 'jackpotHeader' ? 114 : 92, 92, -220, 0);
-        const heading = this.createLabel(titleText, card, 19, new Color(255, 226, 147), 58, 47, 400, 32, true);
+        this.createImage(`${titleText}Icon`, card, iconKey, iconKey === 'jackpotHeader' ? 104 : 82, 82, -226, 0);
+        const heading = this.createLabel(titleText, card, 22, new Color(255, 235, 174), 70, 47, 380, 36, true);
         heading.horizontalAlign = Label.HorizontalAlign.LEFT;
         this.styleLabel(heading, new Color(52, 24, 79), 3);
-        const copy = this.createLabel(body, card, 14, new Color(207, 229, 249), 58, -22, 400, 94, true);
+        const copy = this.createLabel(body, card, 18, new Color(235, 248, 255), 70, -22, 380, 98, true);
         copy.horizontalAlign = Label.HorizontalAlign.LEFT;
         copy.enableWrapText = true;
-        copy.lineHeight = 22;
-        this.styleLabel(copy, new Color(22, 22, 62), 1);
+        copy.lineHeight = 27;
+        this.styleLabel(copy, new Color(12, 25, 58), 2);
     }
 
     private closeRules(): void {
@@ -1022,7 +1024,7 @@ export class GameBootstrap extends Component {
     private startAmbientMotion(): void {
         const guardian = this.node.getChildByName('Guardian');
         if (guardian && !this.reducedMotion) {
-            tween(guardian).repeatForever(tween().to(2.2, { position: new Vec3(guardian.position.x, guardian.position.y + 8, 0), angle: 0.6 }, { easing: 'sineInOut' }).to(2.2, { position: new Vec3(guardian.position.x, guardian.position.y - 5, 0), angle: -0.6 }, { easing: 'sineInOut' })).start();
+            tween(guardian).repeatForever(tween().to(2.2, { angle: 0.6 }, { easing: 'sineInOut' }).to(2.2, { angle: -0.6 }, { easing: 'sineInOut' })).start();
         }
         this.schedule(() => {
             if (this.busy || this.reducedMotion) return;

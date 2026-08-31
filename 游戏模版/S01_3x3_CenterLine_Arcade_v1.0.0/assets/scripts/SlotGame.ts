@@ -1452,7 +1452,7 @@ export class SlotGame extends Component {
             0,
             10,
         );
-        this.createLabel('★  SLOT GUIDE  ★', guideBadgeFace, 12, this.color(visual.accentSecondary), 0, 0, 208, 20, true);
+        this.createLabel('★  SLOT GUIDE  ★', guideBadgeFace, 14, this.color(visual.accentSecondary), 0, 0, 208, 24, true);
         const rulesTitleLabel = this.createLabel(
             this.copyText('rulesTitle', 'PAYTABLE & RULES'),
             headerFace, 32, Color.WHITE, 0, 12, 570, 48, true,
@@ -1464,7 +1464,7 @@ export class SlotGame extends Component {
         });
         const rulesInstruction = this.createLabel(
             this.copyText('rulesMatch', 'MATCH 3 IDENTICAL SYMBOLS ON THE CENTER LINE'),
-            headerFace, 13, new Color(255, 239, 195, 235), 0, -39, 570, 28, true,
+            headerFace, 16, new Color(255, 246, 218, 245), 0, -39, 590, 34, true,
         );
         this.styleArtLabel(rulesInstruction, new Color(84, 15, 3, 210), 1, new Color(30, 2, 0, 120), 1, -1, 0);
         [-284, 284].forEach((x, index) => {
@@ -1494,7 +1494,7 @@ export class SlotGame extends Component {
             0,
             17,
         );
-        const payoutTitleLabel = this.createLabel('SYMBOL PAYOUTS', payoutTitleFace, 15, Color.WHITE, 0, 0, 246, 30, true);
+        const payoutTitleLabel = this.createLabel('SYMBOL PAYOUTS', payoutTitleFace, 18, Color.WHITE, 0, 0, 246, 34, true);
         this.styleArtLabel(payoutTitleLabel, new Color(84, 14, 3, 230), 2, new Color(30, 2, 0, 150), 1, -2, 1);
         [-154, 154].forEach((x, index) => {
             const sparkle = this.createSparkle(`PayoutTitleSparkle_${index}`, card, x, 356, 17);
@@ -1531,7 +1531,7 @@ export class SlotGame extends Component {
             const frame = this.symbolFrames.get(symbol.id);
             if (frame) icon.getComponent(Sprite)!.spriteFrame = frame;
             const symbolName = symbol.id.replace(/[-_]/g, ' ').toUpperCase();
-            this.createLabel(symbolName, item, 12, new Color(255, 247, 220, 235), 0, -14, 178, 24, true);
+            this.createLabel(symbolName, item, 15, new Color(255, 250, 230, 245), 0, -14, 180, 28, true);
             const multiplierBadge = this.createPanel('MultiplierBadge', item, 106, 30, this.color(visual.accentSecondary), 0, -41, 15);
             this.createLabel(`${symbol.multiplier}x`, multiplierBadge, 17, this.color(visual.panel), 0, 0, 100, 28, true);
         });
@@ -1553,9 +1553,9 @@ export class SlotGame extends Component {
         this.styleArtLabel(formulaLabel, new Color(83, 14, 3, 225), 2, new Color(28, 2, 0, 145), 1, -2, 1);
         const bigWinBadge = this.createPanel('BigWinBadge', summary, 236, 42, this.color(visual.accent, 230), -132, 5, 21);
         const jackpotBadge = this.createPanel('JackpotBadge', summary, 236, 42, this.color(visual.accentSecondary), 132, 5, 21);
-        this.createLabel(`BIG WIN  ${this.bigWinMultiplier}x+`, bigWinBadge, 14, Color.WHITE, 0, 0, 224, 38, true);
-        this.createLabel(`JACKPOT  ${this.jackpotMultiplier}x+`, jackpotBadge, 14, this.color(visual.panel), 0, 0, 224, 38, true);
-        this.createLabel(`CENTER-LINE WIN RATE  ${winRate}`, summary, 14, new Color(255, 255, 255, 205), 0, -49, 580, 32, true);
+        this.createLabel(`BIG WIN  ${this.bigWinMultiplier}x+`, bigWinBadge, 16, Color.WHITE, 0, 0, 224, 40, true);
+        this.createLabel(`JACKPOT  ${this.jackpotMultiplier}x+`, jackpotBadge, 16, this.color(visual.panel), 0, 0, 224, 40, true);
+        this.createLabel(`CENTER-LINE WIN RATE  ${winRate}`, summary, 16, new Color(255, 255, 255, 225), 0, -49, 590, 36, true);
 
         this.createTextButton(
             'CLOSE',

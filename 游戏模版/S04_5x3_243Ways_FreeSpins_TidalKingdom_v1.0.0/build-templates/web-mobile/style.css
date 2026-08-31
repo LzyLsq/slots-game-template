@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Tidal Display";
+  src: url("loading-assets/tidal-display.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tidal Body";
+  src: url("loading-assets/tidal-body.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --safe-top: env(safe-area-inset-top);
+  --safe-right: env(safe-area-inset-right);
+  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-left: env(safe-area-inset-left);
+}
+
+html, body, canvas, div { display: block; outline: none; -webkit-tap-highlight-color: transparent; }
+html { width: 100%; height: 100%; -ms-touch-action: none; }
+body {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #d9efff;
+  background: #01323b url("loading-assets/tidal-bg.jpg") center / cover no-repeat fixed;
+  text-align: center;
+  font-family: "Tidal Body", system-ui, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+canvas { background-color: transparent; }
+#GameDiv, #Cocos3dGameContainer, #GameCanvas { width: 100%; height: 100%; }
+
+#tidal-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: #01323b;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity .62s ease, transform .82s cubic-bezier(.2,.75,.2,1);
+}
+
+#tidal-loader.is-complete { opacity: 0; transform: scale(1.025); pointer-events: none; }
+
+.loader-backdrop {
+  position: absolute;
+  inset: -5%;
+  background:
+    linear-gradient(180deg, rgba(1,4,17,.08), rgba(2,5,24,.48)),
+    url("loading-assets/tidal-bg.jpg") center 38% / cover no-repeat;
+  filter: saturate(1.08) contrast(1.04);
+  animation: loader-drift 9s ease-in-out infinite alternate;
+}
+
+.loader-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 41%, rgba(27,151,255,.18), transparent 34%), linear-gradient(90deg, rgba(1,3,15,.42), transparent 22%, transparent 78%, rgba(1,3,15,.42));
+}
+
+.loader-stars {
+  position: absolute;
+  inset: 0;
+  opacity: .48;
+  background-image:
+    radial-gradient(circle at 12% 18%, #fff 0 1px, transparent 2px),
+    radial-gradient(circle at 73% 15%, #8be8ff 0 1px, transparent 2px),
+    radial-gradient(circle at 83% 67%, #fff0bf 0 1px, transparent 2px),
+    radial-gradient(circle at 31% 78%, #fff 0 1px, transparent 2px);
+  background-size: 260px 230px, 310px 270px, 340px 290px, 370px 330px;
+  animation: loader-stars 3.8s ease-in-out infinite alternate;
+}
+
+.loader-stage {
+  position: relative;
+  z-index: 2;
+  width: min(720px, 92vw);
+  display: grid;
+  justify-items: center;
+  gap: clamp(12px, 2.4vh, 26px);
+  padding: max(22px, var(--safe-top)) max(18px, var(--safe-right)) max(24px, var(--safe-bottom)) max(18px, var(--safe-left));
+}
+
+.loader-crest-wrap { position: relative; width: min(660px, 90vw); aspect-ratio: 1.5; display: grid; place-items: center; }
+.loader-crest { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 16px 26px rgba(0,0,0,.28)); animation: loader-crest-in .8s cubic-bezier(.18,.86,.24,1.2) both; }
+.loader-title { position: relative; z-index: 2; width: 70%; margin-top: 7%; text-shadow: 0 2px 0 #352052, 0 0 18px rgba(53,203,255,.28); }
+.loader-kicker { display: inline-block; margin-bottom: clamp(3px, .6vh, 8px); color: #b9f5f0; font-size: clamp(13px, 1.4vw, 17px); font-weight: 700; letter-spacing: .18em; }
+.loader-title h1 { margin: 0; color: #fff5cf; font-family: "Tidal Display", Impact, sans-serif; font-size: clamp(34px, 6.2vw, 67px); font-weight: 400; letter-spacing: .025em; line-height: .95; -webkit-text-stroke: 1px #075b64; }
+.loader-title p { margin: clamp(7px, 1.1vh, 12px) 0 0; color: #d7f8f5; font-size: clamp(12px, 1.35vw, 16px); font-weight: 700; letter-spacing: .08em; }
+
+.loader-orbit { position: absolute; z-index: 0; width: 42%; aspect-ratio: 1; border: 1px solid rgba(96,211,255,.26); border-radius: 50%; box-shadow: inset 0 0 24px rgba(64,126,255,.12), 0 0 24px rgba(36,167,255,.1); }
+.orbit-a { animation: loader-orbit 8s linear infinite; }
+.orbit-b { width: 33%; border-color: rgba(255,215,126,.28); animation: loader-orbit 6s linear infinite reverse; }
+.loader-orbit::after { content: ""; position: absolute; top: -5px; left: 50%; width: 9px; height: 9px; border-radius: 50%; background: #7fe8ff; box-shadow: 0 0 14px #32c8ff; }
+
+.loader-progress-shell {
+  width: min(500px, 80vw);
+  padding: 15px 20px 14px;
+  border: 1px solid rgba(214,169,73,.55);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(9,22,59,.82), rgba(3,9,31,.76));
+  box-shadow: inset 0 0 0 1px rgba(84,186,255,.16), 0 18px 48px rgba(0,0,0,.25);
+  backdrop-filter: blur(10px);
+}
+.loader-progress-copy { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: #effffc; font-size: clamp(14px, 1.4vw, 17px); font-weight: 700; letter-spacing: .07em; }
+.loader-progress-copy strong { color: #ffe6a0; font-family: "Tidal Display", sans-serif; font-size: 18px; font-weight: 400; }
+.loader-track { position: relative; height: 12px; margin: 10px 0 9px; overflow: hidden; border: 1px solid rgba(117,196,255,.36); border-radius: 99px; background: rgba(1,5,22,.82); box-shadow: inset 0 2px 5px rgba(0,0,0,.55); }
+.loader-track i { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #6554ff, #22c8ff 56%, #ffe88b); box-shadow: 0 0 14px rgba(46,203,255,.75); transition: width .18s ease-out; }
+.loader-track i::after { content: ""; display: block; width: 28%; height: 100%; margin-left: auto; background: linear-gradient(90deg, transparent, rgba(255,255,255,.78)); transform: skewX(-18deg); }
+.loader-progress-shell small { color: rgba(220,247,243,.9); font-size: clamp(12px, 1.15vw, 14px); font-weight: 700; letter-spacing: .06em; }
+
+@keyframes loader-drift { from { transform: scale(1.02) translate3d(-.4%,0,0); } to { transform: scale(1.06) translate3d(.4%,-.5%,0); } }
+@keyframes loader-stars { from { opacity: .32; transform: translateY(0); } to { opacity: .66; transform: translateY(-5px); } }
+@keyframes loader-crest-in { from { opacity: 0; transform: translateY(24px) scale(.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes loader-orbit { to { transform: rotate(360deg); } }
+
+@media (max-aspect-ratio: 3/4) {
+  .loader-stage { width: 96vw; gap: 1vh; }
+  .loader-crest-wrap { width: 96vw; }
+  .loader-title { width: 68%; margin-top: 8%; }
+  .loader-title h1 { font-size: clamp(34px, 10vw, 58px); }
+  .loader-title p { font-size: clamp(12px, 3vw, 16px); }
+  .loader-progress-shell { width: min(480px, 82vw); }
+}
+
+@media (max-height: 560px) {
+  .loader-stage { grid-template-columns: minmax(350px, 1.2fr) minmax(280px, .8fr); width: min(1100px, 94vw); gap: 20px; }
+  .loader-crest-wrap { width: min(620px, 58vw); }
+  .loader-progress-shell { width: min(390px, 32vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-backdrop, .loader-stars, .loader-crest, .loader-orbit { animation: none; }
+}
