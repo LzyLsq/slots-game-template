@@ -871,7 +871,9 @@ export class SlotGame extends Component {
             this.node,
             this.designWidth,
             this.sceneHeight,
-            new Color(226, 54, 11, 255),
+            // A warm neutral safety fill prevents a red frame from flashing
+            // if the loading artwork and the gameplay scene exchange frames.
+            new Color(255, 244, 218, 255),
             0,
             0,
             0,
@@ -1183,12 +1185,13 @@ export class SlotGame extends Component {
         viewState.foodIcons.forEach((icon, index) => {
             this.scheduleOnce(() => this.pulse(icon, 1.22), index * 0.045);
         });
-        this.burstAt(0, 70, 34, 310, viewState.root);
-        await this.delay(260);
+        await this.delay(180);
         const opacity = viewState.root.getComponent(UIOpacity)!;
-        tween(opacity).to(0.42, { opacity: 0 }, { easing: 'quadOut' }).start();
-        tween(viewState.root).to(0.42, { scale: new Vec3(1.08, 1.08, 1) }, { easing: 'quadOut' }).start();
-        await this.delay(440);
+        // Hand the fully loaded gameplay scene over with one clean opacity
+        // crossfade. The old red particle burst and zoom-out produced a stray
+        // red flash immediately after the loader reached 100%.
+        tween(opacity).to(0.34, { opacity: 0 }, { easing: 'quadOut' }).start();
+        await this.delay(360);
         if (viewState.root.isValid) viewState.root.destroy();
     }
 
@@ -3385,16 +3388,18 @@ export class SlotGame extends Component {
             winTitle,
             stage,
             isJackpot ? 54 : isBig ? 50 : 45,
-            new Color(255, 249, 219),
+            new Color(170, 12, 48),
             0,
             116,
             620,
             76,
             true,
         );
+        // Keep the award copy crisp without the dark red/black halo that read
+        // as a rectangular shadow when the whole stage scaled on mobile.
         title.enableOutline = true;
-        title.outlineColor = new Color(121, 7, 33, 255);
-        title.outlineWidth = 4;
+        title.outlineColor = new Color(255, 190, 45, 255);
+        title.outlineWidth = 3;
         title.node.setScale(0.2, 0.2, 1);
         tween(title.node)
             .delay(0.18)
@@ -3406,7 +3411,7 @@ export class SlotGame extends Component {
             `+${payout.toLocaleString('en-US')}`,
             stage,
             isJackpot ? 58 : 52,
-            new Color(255, 220, 92),
+            new Color(205, 45, 45),
             0,
             17,
             500,
@@ -3414,8 +3419,8 @@ export class SlotGame extends Component {
             true,
         );
         payoutText.enableOutline = true;
-        payoutText.outlineColor = new Color(123, 8, 28, 255);
-        payoutText.outlineWidth = 4;
+        payoutText.outlineColor = new Color(255, 252, 220, 255);
+        payoutText.outlineWidth = 3;
         payoutText.node.setScale(0.24, 0.24, 1);
         tween(payoutText.node)
             .delay(0.28)
@@ -3427,7 +3432,7 @@ export class SlotGame extends Component {
             `${multiplier}×  CENTER-LINE PAYOUT`,
             stage,
             19,
-            Color.WHITE,
+            new Color(139, 14, 42),
             0,
             -58,
             420,
@@ -3435,7 +3440,7 @@ export class SlotGame extends Component {
             true,
         );
         multiplierLabel.enableOutline = true;
-        multiplierLabel.outlineColor = new Color(115, 10, 30, 255);
+        multiplierLabel.outlineColor = new Color(255, 196, 52, 255);
         multiplierLabel.outlineWidth = 2;
 
         for (let index = 0; index < (isJackpot ? 16 : 10); index += 1) {
