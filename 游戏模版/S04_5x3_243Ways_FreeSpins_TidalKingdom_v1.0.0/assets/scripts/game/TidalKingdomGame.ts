@@ -47,6 +47,9 @@ const FRAMES: Record<string, string> = {
     bonusHeader: 'generated/ui/ui_bonus_header_v01',
     titleCrest: 'generated/ui/ui_title_crest_v01',
     utilityButton: 'generated/ui/ui_utility_button_v01',
+    infoPlaque: 'generated/ui/ui_info_plaque_v01',
+    controlDock: 'generated/ui/ui_control_dock_v01',
+    tideGauge: 'generated/ui/ui_tide_gauge_v01',
     home: 'shared/icons/arcane-home-icon-v2',
     sound: 'shared/icons/arcane-sound-icon-v2',
     rules: 'shared/icons/arcane-rules-icon-v2',
@@ -310,7 +313,7 @@ export class GameBootstrap extends Component {
     }
 
     private createBalance(): void {
-        this.balancePanel = this.createGlassPanel('BalancePanel', this.node, 368, 76, 0, 458, 35);
+        this.balancePanel = this.createImage('BalancePanel', this.node, 'infoPlaque', 388, 90, 0, 458);
         const coinHalo = this.createImage('BalanceCoinHalo', this.balancePanel, 'shockwave', 76, 76, -134, 0);
         const haloOpacity = coinHalo.addComponent(UIOpacity);
         haloOpacity.opacity = 92;
@@ -326,18 +329,18 @@ export class GameBootstrap extends Component {
     }
 
     private createFeatureDashboard(): void {
-        const header = this.createGlassPanel('WaysRibbon', this.node, 654, 116, 0, 342, 32, new Color(2, 49, 58, 232), new Color(229, 187, 88, 215));
+        const header = this.createImage('WaysRibbon', this.node, 'infoPlaque', 672, 132, 0, 342);
         const names = ['NO PAYLINES', 'PORTAL SCATTERS', 'FREE-SPIN TIDE'];
         const colors = [new Color(151, 244, 239), new Color(255, 210, 171), new Color(255, 237, 179)];
         names.forEach((name, index) => {
             const x = -218 + index * 218;
-            const copy = this.createLabel(name, header, 14, colors[index], x, 30, 190, 26, true);
+            const copy = this.createLabel(name, header, 15, colors[index], x, 24, 190, 24, true);
             this.styleLabel(copy, new Color(3, 61, 69), 2);
-            const value = this.createLabel(index === 0 ? '243 WAYS' : index === 1 ? '3+ = FREE SPINS' : '1× → 5×', header, index === 1 ? 18 : 23, new Color(255, 244, 202), x, -4, 194, 36, true);
+            const value = this.createLabel(index === 0 ? '243 WAYS' : index === 1 ? '3+ = FREE SPINS' : '1× → 5×', header, index === 1 ? 18 : 22, new Color(255, 244, 202), x, -8, 194, 32, true);
             this.styleLabel(value, new Color(4, 71, 78), 3);
             this.dashboardLabels.push(value);
         });
-        this.waysPathLabel = this.createLabel('3  →  9  →  27  →  81  →  243', header, 15, new Color(178, 246, 239), 0, -39, 566, 26, true);
+        this.waysPathLabel = this.createLabel('3  →  9  →  27  →  81  →  243', header, 14, new Color(178, 246, 239), 0, -41, 566, 22, true);
         this.styleLabel(this.waysPathLabel, new Color(2, 62, 69), 2);
     }
 
@@ -391,7 +394,7 @@ export class GameBootstrap extends Component {
 
     private createTideInstrument(): void {
         // The tide is attached to the cabinet edge but does not sit on top of the ornate reel frame.
-        const tideMeter = this.createGlassPanel('TideMeter', this.node, 76, 330, 310, 66, 34, new Color(2, 45, 53, 238), new Color(231, 190, 91, 225));
+        const tideMeter = this.createImage('TideMeter', this.node, 'tideGauge', 88, 344, 310, 66);
         const tideTitle = this.createLabel('TIDE', tideMeter, 15, new Color(221, 255, 250), 0, 132, 62, 26, true);
         this.styleLabel(tideTitle, new Color(3, 67, 73), 3);
         const tideArt = this.createImage('TideArtifact', tideMeter, 'tideMeter', 92, 214, 0, 8);
@@ -402,12 +405,12 @@ export class GameBootstrap extends Component {
     }
 
     private createControls(): void {
-        this.createGlassPanel('ControlDock', this.node, 704, 328, 0, -496, 42, new Color(2, 38, 47, 244), new Color(207, 164, 74, 190));
-        const resultPanel = this.createGlassPanel('ResultPanel', this.node, 640, 76, 0, -258, 30);
+        this.createImage('ControlDock', this.node, 'controlDock', 720, 350, 0, -496);
+        const resultPanel = this.createImage('ResultPanel', this.node, 'infoPlaque', 660, 90, 0, -258);
         this.resultLabel = this.createLabel('MATCH SYMBOLS ON ADJACENT REELS · 243 WAYS', resultPanel, 18, new Color(239, 255, 253), 0, 0, 576, 48, true);
         this.styleLabel(this.resultLabel, new Color(3, 65, 73), 3, new Color(0, 0, 0, 105), 2, -2);
 
-        const betPanel = this.createGlassPanel('BetPanel', this.node, 242, 104, -226, -405, 42);
+        const betPanel = this.createImage('BetPanel', this.node, 'controlDock', 252, 116, -226, -405);
         const betCopy = this.createLabel('TOTAL BET', betPanel, 14, new Color(218, 255, 252), 0, 25, 160, 26, true);
         this.styleLabel(betCopy, new Color(3, 63, 71), 2);
         this.betLabel = this.createLabel('20', betPanel, 30, new Color(255, 238, 174), 0, -12, 100, 42, true);
@@ -437,7 +440,7 @@ export class GameBootstrap extends Component {
         this.createUtilityButton(utility, -150, 'SOUND', 'sound', () => this.toggleSound());
         this.createUtilityButton(utility, 0, 'RULES', 'rules', () => this.showRules());
         this.createUtilityButton(utility, 150, 'TURBO', 'shockwave', () => this.toggleTurbo());
-        this.createLabel('243 WAYS  ·  VIRTUAL CREDITS  ·  NO CASH VALUE', this.node, 14, new Color(214, 248, 245), 0, -622, 700, 30, true);
+        this.createLabel('243 WAYS  ·  VIRTUAL CREDITS  ·  NO CASH VALUE', this.node, 14, new Color(214, 248, 245), 0, -604, 700, 30, true);
         this.animateSpinButton();
     }
 

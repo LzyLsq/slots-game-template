@@ -2,7 +2,7 @@
   "endpoint": "http://127.0.0.1:15721/v1/responses",
   "model": "gpt-5.6-sol",
   "tool": "image_generation",
-  "generated_at": "2026-08-31T10:00:00+08:00",
+  "generated_at": "2026-08-31T12:00:00+08:00",
   "items": [
     {"filename": "ui_reel_frame_v01.png", "use": "5x3 coral-and-pearl reel cabinet with open high-contrast center"},
     {"filename": "ui_jackpot_header_v01.png", "use": "three-chamber 243 Ways / Free Spins / Tide dashboard"},
@@ -10,9 +10,12 @@
     {"filename": "ui_coin_cell_v01.png", "use": "tide-value socket and feature ornament"},
     {"filename": "ui_bonus_header_v01.png", "use": "free-spin intro and win celebration banner"},
     {"filename": "ui_title_crest_v01.png", "use": "shell-and-seahorse Tidal Kingdom title crest"},
-    {"filename": "ui_utility_button_v01.png", "use": "secondary control bezel for image icons"}
+    {"filename": "ui_utility_button_v01.png", "use": "secondary control bezel for image icons"},
+    {"filename": "ui_info_plaque_v01.png", "use": "textured mother-of-pearl HUD ribbon replacing flat information panels"},
+    {"filename": "ui_control_dock_v01.png", "use": "natural aquamarine shellstone control-console background replacing the flat dock"},
+    {"filename": "ui_tide_gauge_v01.png", "use": "vertical derivative of the control-console art for the TIDE instrument"}
   ],
-  "prompt_policy": "Original commercial mobile-game UI, aquamarine/pearl/antique-gold material system, controlled highlights, quiet centers for runtime labels, no baked text, no brands and no watermark.",
-  "response_ids": "not persisted in the project; local CC Switch session metadata only",
+  "prompt_policy": "Original commercial mobile-game UI, aquamarine mother-of-pearl and natural water-caustic texture, carved ivory shell rims, restrained antique-gold/coral/pearl accents, quiet dark-teal centers for runtime labels, isolated on removable magenta matte, no baked text, no brands, no black rectangle and no watermark.",
+  "response_ids": ["resp_07b8ae5183c96564016a94fbb7485c87d0a95826488c699ec7", "resp_08dd9b503e6c7a2b016a94fbe853d487d0987595dc9e191a68"],
   "credentials_included": false
 }
