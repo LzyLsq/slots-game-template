@@ -59,6 +59,9 @@
       var copy = document.getElementById('astral-loader-copy');
       var value = 0;
       var complete = false;
+      var revealRequested = false;
+      var startedAt = Date.now();
+      var minimumVisibleMs = 1500;
       var phrases = ['ALIGNING THE STARCORE', 'POLISHING THE REELS', 'CHARGING HOLD & WIN'];
       var timer = window.setInterval(function () {
         if (complete) return;
@@ -67,7 +70,7 @@
         percent.textContent = value + '%';
         copy.textContent = phrases[Math.min(2, Math.floor(value / 34))];
       }, 90);
-      function revealGame() {
+      function finishReveal() {
         if (complete) return;
         complete = true;
         window.clearInterval(timer);
@@ -76,6 +79,11 @@
         copy.textContent = 'VAULT READY';
         window.setTimeout(function () { loader.classList.add('is-complete'); }, 260);
         window.setTimeout(function () { loader.remove(); }, 980);
+      }
+      function revealGame() {
+        if (complete || revealRequested) return;
+        revealRequested = true;
+        window.setTimeout(finishReveal, Math.max(0, minimumVisibleMs - (Date.now() - startedAt)));
       }
       window.addEventListener('astral-ready', revealGame, { once: true });
       window.setTimeout(revealGame, 15000);

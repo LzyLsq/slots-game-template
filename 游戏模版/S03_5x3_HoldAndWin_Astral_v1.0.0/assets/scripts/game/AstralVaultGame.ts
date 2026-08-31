@@ -1207,10 +1207,44 @@ export class GameBootstrap extends Component {
         return transform;
     }
 
+    private playButtonPulse(node: Node): void {
+        if (this.reducedMotion) return;
+        const transform = node.getComponent(UITransform);
+        if (!transform) return;
+        const size = Math.min(180, Math.max(54, Math.max(transform.width, transform.height) * 1.12));
+        const pulse = this.createImage('ButtonPulse', node, 'shockwave', size, size, 0, 0);
+        pulse.setSiblingIndex(0);
+        pulse.setScale(0.5, 0.5, 1);
+        const sprite = pulse.getComponent(Sprite);
+        if (sprite) sprite.color = new Color(194, 236, 255, 210);
+        const opacity = pulse.addComponent(UIOpacity);
+        opacity.opacity = 175;
+        tween(pulse)
+            .to(0.28, { scale: new Vec3(1.12, 1.12, 1), angle: 18 }, { easing: 'quadOut' })
+            .call(() => pulse.destroy())
+            .start();
+        tween(opacity).to(0.28, { opacity: 0 }, { easing: 'quadOut' }).start();
+    }
+
     private addButton(node: Node, action: () => void): void {
         const button = node.getComponent(Button) ?? node.addComponent(Button);
         button.transition = Button.Transition.SCALE;
-        button.zoomScale = 0.94;
-        node.on(Button.EventType.CLICK, action, this);
+        button.zoomScale = 0.9;
+        button.duration = 0.06;
+        const opacity = node.getComponent(UIOpacity) ?? node.addComponent(UIOpacity);
+        node.on(Node.EventType.TOUCH_START, () => {
+            Tween.stopAllByTarget(opacity);
+            tween(opacity).to(0.05, { opacity: 215 }, { easing: 'quadOut' }).start();
+        });
+        const release = () => {
+            Tween.stopAllByTarget(opacity);
+            tween(opacity).to(0.14, { opacity: 255 }, { easing: 'sineOut' }).start();
+        };
+        node.on(Node.EventType.TOUCH_END, release);
+        node.on(Node.EventType.TOUCH_CANCEL, release);
+        node.on(Button.EventType.CLICK, () => {
+            this.playButtonPulse(node);
+            action();
+        }, this);
     }
 }
