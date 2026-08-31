@@ -1,0 +1,30 @@
+{
+  "id": "candy",
+  "title": "SWEET SPINS",
+  "subtitle": "CANDY SHOP SLOT",
+  "initialCoins": 1000,
+  "defaultBet": 10,
+  "betOptions": [10, 20, 50, 100],
+  "winRate": 0.09,
+  "nearMissRate": 0.14,
+  "minSpinDuration": 0.72,
+  "reelStopDelay": 0.22,
+  "visual": {
+    "background": "theme/candy/background/spriteFrame",
+    "topCoin": "theme/classic/top-coin/spriteFrame",
+    "accent": "#FF7A1A",
+    "accentSecondary": "#FFD84A",
+    "panel": "#6B1B20",
+    "reelPanel": "#8E2D16",
+    "cell": "#FFF0C8",
+    "text": "#FFF3B0"
+  },
+  "symbols": [
+    { "id": "cookies", "texture": "theme/candy/cookies/spriteFrame", "weight": 29, "multiplier": 3 },
+    { "id": "ice-cream", "texture": "theme/candy/ice-cream/spriteFrame", "weight": 24, "multiplier": 4 },
+    { "id": "popcorn", "texture": "theme/candy/popcorn/spriteFrame", "weight": 19, "multiplier": 6 },
+    { "id": "pastry", "texture": "theme/candy/pastry/spriteFrame", "weight": 14, "multiplier": 9 },
+    { "id": "cake", "texture": "theme/candy/cake/spriteFrame", "weight": 9, "multiplier": 15 },
+    { "id": "candied-haws", "texture": "theme/candy/candied-haws/spriteFrame", "weight": 5, "multiplier": 30 }
+  ]
+}
