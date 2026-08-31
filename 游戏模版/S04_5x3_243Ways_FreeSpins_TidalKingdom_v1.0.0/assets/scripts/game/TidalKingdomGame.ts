@@ -281,6 +281,7 @@ export class GameBootstrap extends Component {
         this.createBalance();
         this.createFeatureDashboard();
         this.createBoard();
+        this.createTideInstrument();
         this.createControls();
         this.createAmbientSparkles();
 
@@ -343,18 +344,17 @@ export class GameBootstrap extends Component {
     private createBoard(): void {
         this.boardRoot = new Node('BoardRoot');
         this.node.addChild(this.boardRoot);
-        this.boardRoot.setPosition(0, 66);
-        this.ensureTransform(this.boardRoot, 744, 500);
-        const reelCabinet = this.createImage('ReelCabinet', this.boardRoot, 'reelFrame', 740, 470, 0, 6);
-        const reelOffsetX = -20;
-        const inner = this.createPanel('ReelInterior', this.boardRoot, 596, 338, new Color(2, 37, 45, 248), reelOffsetX, 2, 20);
+        this.boardRoot.setPosition(-28, 66);
+        this.ensureTransform(this.boardRoot, 670, 500);
+        const reelCabinet = this.createImage('ReelCabinet', this.boardRoot, 'reelFrame', 660, 456, 0, 6);
+        const inner = this.createPanel('ReelInterior', this.boardRoot, 504, 288, new Color(2, 37, 45, 220), 0, -8, 20);
         inner.setSiblingIndex(1);
-        const xs = [-256, -138, -20, 98, 216];
-        const ys = [106, 0, -106];
+        const xs = [-204, -102, 0, 102, 204];
+        const ys = [88, 0, -88];
         xs.forEach((x, column) => {
-            const lane = this.createGlassPanel(`ReelLane_${column}`, this.boardRoot, 112, 330, x, 2, 18, new Color(3, 57, 64, 220), new Color(105, 220, 207, 105));
+            const lane = this.createGlassPanel(`ReelLane_${column}`, this.boardRoot, 96, 282, x, -8, 16, new Color(3, 57, 64, 220), new Color(105, 220, 207, 105));
             lane.setSiblingIndex(2 + column);
-            const marker = this.createLabel(`${column + 1}`, lane, 13, new Color(201, 251, 246), 0, 143, 36, 22, true);
+            const marker = this.createLabel(`${column + 1}`, lane, 12, new Color(201, 251, 246), 0, 119, 34, 20, true);
             this.styleLabel(marker, new Color(3, 64, 70), 2);
         });
         for (let row = 0; row < ROWS; row += 1) {
@@ -362,14 +362,14 @@ export class GameBootstrap extends Component {
             for (let column = 0; column < COLS; column += 1) {
                 const cell = new Node(`Cell_${row}_${column}`);
                 this.boardRoot.addChild(cell);
-                cell.setPosition(xs[column], ys[row] + 4);
-                this.ensureTransform(cell, 112, 104);
-                this.createPanel('SymbolShelf', cell, 104, 98, new Color(2, 35, 43, 205), 0, 0, 16);
-                const coinFrame = this.createImage('CoinCell', cell, 'coinCell', 109, 109, 0, 0);
+                cell.setPosition(xs[column], ys[row] - 8);
+                this.ensureTransform(cell, 98, 88);
+                this.createPanel('SymbolShelf', cell, 92, 82, new Color(2, 35, 43, 205), 0, 0, 14);
+                const coinFrame = this.createImage('CoinCell', cell, 'coinCell', 94, 94, 0, 0);
                 coinFrame.active = false;
-                const symbolNode = this.createImage('Symbol', cell, 'pearl', 101, 101, 0, 0);
+                const symbolNode = this.createImage('Symbol', cell, 'pearl', 88, 88, 0, 0);
                 const sprite = symbolNode.getComponent(Sprite)!;
-                const valueLabel = this.createLabel('', cell, 21, new Color(255, 241, 181), 0, -28, 88, 30, true);
+                const valueLabel = this.createLabel('', cell, 18, new Color(255, 241, 181), 0, -23, 78, 27, true);
                 this.styleLabel(valueLabel, new Color(49, 24, 76), 4, new Color(0, 0, 0, 150), 2, -2);
                 valueLabel.node.active = false;
                 this.addButton(cell, () => this.inspectSymbol(row, column));
@@ -378,38 +378,27 @@ export class GameBootstrap extends Component {
             this.cells.push(rowViews);
         }
 
-        // Keep the functional multiplier inside the same cabinet boundary as the reels.
-        const tideMeter = this.createGlassPanel('TideMeter', this.boardRoot, 92, 390, 320, 2, 40, new Color(2, 45, 53, 238), new Color(231, 190, 91, 225));
-        const tideTitle = this.createLabel('TIDE', tideMeter, 17, new Color(221, 255, 250), 0, 159, 74, 28, true);
-        this.styleLabel(tideTitle, new Color(3, 67, 73), 3);
-        const tideArt = this.createImage('TideArtifact', tideMeter, 'tideMeter', 108, 258, 0, 10);
-        this.tideMultiplierLabel = this.createLabel('1×', tideMeter, 29, new Color(255, 244, 197), 0, -112, 72, 42, true);
-        this.styleLabel(this.tideMultiplierLabel, new Color(5, 74, 81), 4);
-        this.addButton(tideMeter, () => this.showKeeperTip());
-        if (!this.reducedMotion) tween(tideArt).repeatForever(tween().to(1.6, { position: new Vec3(0, 16, 0) }, { easing: 'sineInOut' }).to(1.6, { position: new Vec3(0, 4, 0) }, { easing: 'sineInOut' })).start();
-
-        // The generated frame has an opaque centre, so keep its artwork behind the reels and add a
-        // transparent foreground lip that visibly closes around every child without covering symbols.
+        // The ornate image stays behind the symbols; its central opening now fully contains the reel grid.
         reelCabinet.setSiblingIndex(0);
-        const cabinetLip = new Node('CabinetForegroundLip');
-        this.boardRoot.addChild(cabinetLip);
-        this.ensureTransform(cabinetLip, 732, 462);
-        const lipGraphics = cabinetLip.addComponent(Graphics);
-        lipGraphics.strokeColor = new Color(242, 203, 112, 235);
-        lipGraphics.lineWidth = 5;
-        lipGraphics.roundRect(-366, -231, 732, 462, 38);
-        lipGraphics.stroke();
-        lipGraphics.strokeColor = new Color(80, 211, 205, 150);
-        lipGraphics.lineWidth = 2;
-        lipGraphics.roundRect(-358, -223, 716, 446, 32);
-        lipGraphics.stroke();
-        const glint = this.createImage('BoardGlint', this.boardRoot, 'shockwave', 38, 38, -322, 208);
+        const glint = this.createImage('BoardGlint', this.boardRoot, 'shockwave', 38, 38, -286, 196);
         const glintOpacity = glint.addComponent(UIOpacity);
         glintOpacity.opacity = 0;
         if (!this.reducedMotion) {
-            tween(glint).repeatForever(tween().set({ position: new Vec3(-322, 208, 0), scale: new Vec3(0.5, 0.5, 1) }).to(2.2, { position: new Vec3(322, 208, 0), scale: new Vec3(1.2, 1.2, 1), angle: 180 }, { easing: 'sineInOut' }).delay(1.5)).start();
+            tween(glint).repeatForever(tween().set({ position: new Vec3(-286, 196, 0), scale: new Vec3(0.5, 0.5, 1) }).to(2.2, { position: new Vec3(286, 196, 0), scale: new Vec3(1.2, 1.2, 1), angle: 180 }, { easing: 'sineInOut' }).delay(1.5)).start();
             tween(glintOpacity).repeatForever(tween().to(0.22, { opacity: 170 }).delay(1.55).to(0.32, { opacity: 0 }).delay(1.61)).start();
         }
+    }
+
+    private createTideInstrument(): void {
+        // The tide is attached to the cabinet edge but does not sit on top of the ornate reel frame.
+        const tideMeter = this.createGlassPanel('TideMeter', this.node, 76, 330, 310, 66, 34, new Color(2, 45, 53, 238), new Color(231, 190, 91, 225));
+        const tideTitle = this.createLabel('TIDE', tideMeter, 15, new Color(221, 255, 250), 0, 132, 62, 26, true);
+        this.styleLabel(tideTitle, new Color(3, 67, 73), 3);
+        const tideArt = this.createImage('TideArtifact', tideMeter, 'tideMeter', 92, 214, 0, 8);
+        this.tideMultiplierLabel = this.createLabel('1×', tideMeter, 25, new Color(255, 244, 197), 0, -92, 62, 38, true);
+        this.styleLabel(this.tideMultiplierLabel, new Color(5, 74, 81), 4);
+        this.addButton(tideMeter, () => this.showKeeperTip());
+        if (!this.reducedMotion) tween(tideArt).repeatForever(tween().to(1.6, { position: new Vec3(0, 14, 0) }, { easing: 'sineInOut' }).to(1.6, { position: new Vec3(0, 3, 0) }, { easing: 'sineInOut' })).start();
     }
 
     private createControls(): void {
@@ -472,10 +461,11 @@ export class GameBootstrap extends Component {
         };
         if (!landscape) {
             place('HomeButton', -312, 590);
+            place('TideMeter', 310, 66)?.setScale(0.9, 0.9, 1);
             place('TitleCrest', 0, 548)?.setScale(0.88, 0.88, 1);
             place('BalancePanel', 0, 446);
             place('WaysRibbon', 0, 344)?.setScale(1, 1, 1);
-            place('BoardRoot', 0, 68)?.setScale(0.98, 0.98, 1);
+            place('BoardRoot', -28, 68)?.setScale(0.98, 0.98, 1);
             place('ControlDock', 0, -496);
             place('ResultPanel', 0, -258);
             place('BetPanel', -226, -405);
@@ -492,10 +482,11 @@ export class GameBootstrap extends Component {
         const left = -spread;
         const right = spread;
         place('HomeButton', -this.sceneWidth / 2 + 92, 565);
+        place('TideMeter', left + (ultraWide ? 420 : 372), 92)?.setScale(ultraWide ? 1.08 : 0.94, ultraWide ? 1.08 : 0.94, 1);
         place('TitleCrest', right, ultraWide ? 520 : 522)?.setScale(ultraWide ? 1.1 : 1.02, ultraWide ? 1.1 : 1.02, 1);
         place('BalancePanel', right, 372)?.setScale(ultraWide ? 1.08 : 1, ultraWide ? 1.08 : 1, 1);
         place('WaysRibbon', left, 386)?.setScale(ultraWide ? 1.15 : 1.03, ultraWide ? 1.15 : 1.03, 1);
-        place('BoardRoot', left, 92)?.setScale(ultraWide ? 1.32 : 1.13, ultraWide ? 1.32 : 1.13, 1);
+        place('BoardRoot', left - 28, 92)?.setScale(ultraWide ? 1.32 : 1.13, ultraWide ? 1.32 : 1.13, 1);
         place('ControlDock', right, ultraWide ? -170 : -184)?.setScale(ultraWide ? 1.14 : 1, ultraWide ? 1.14 : 1, 1);
         place('ResultPanel', right, 122)?.setScale(ultraWide ? 1.12 : 1, ultraWide ? 1.12 : 1, 1);
         place('BetPanel', right - (ultraWide ? 226 : 210), -70)?.setScale(ultraWide ? 1.08 : 1, ultraWide ? 1.08 : 1, 1);
@@ -733,7 +724,7 @@ export class GameBootstrap extends Component {
     }
 
     private pulseTideMeter(): void {
-        const meter = this.boardRoot.getChildByName('TideMeter');
+        const meter = this.node.getChildByName('TideMeter');
         if (!meter) return;
         const base = meter.scale.clone();
         tween(meter).to(0.16, { scale: new Vec3(base.x * 1.08, base.y * 1.08, 1) }, { easing: 'backOut' }).to(0.25, { scale: base }, { easing: 'sineInOut' }).start();

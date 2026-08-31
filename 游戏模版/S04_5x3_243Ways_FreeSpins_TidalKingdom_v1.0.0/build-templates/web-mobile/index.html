@@ -61,7 +61,8 @@
       var complete = false;
       var revealRequested = false;
       var startedAt = Date.now();
-      var minimumVisibleMs = 1500;
+      // Keep the loader visible long enough to read and perceive the animation even from a warm cache.
+      var minimumVisibleMs = 2800;
       var phrases = ['OPENING THE TIDE GATES', 'POLISHING THE PEARLS', 'CHARGING FREE SPINS'];
       var timer = window.setInterval(function () {
         if (complete) return;
@@ -77,8 +78,8 @@
         fill.style.width = '100%';
         percent.textContent = '100%';
         copy.textContent = 'KINGDOM READY';
-        window.setTimeout(function () { loader.classList.add('is-complete'); }, 260);
-        window.setTimeout(function () { loader.remove(); }, 980);
+        window.setTimeout(function () { loader.classList.add('is-complete'); }, 360);
+        window.setTimeout(function () { loader.remove(); }, 1180);
       }
       function revealGame() {
         if (complete || revealRequested) return;
