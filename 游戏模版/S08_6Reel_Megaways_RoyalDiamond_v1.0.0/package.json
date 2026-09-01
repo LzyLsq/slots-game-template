@@ -1,0 +1,20 @@
+{
+  "name": "slot-s08-royal-diamond-megaways",
+  "version": "1.0.0",
+  "description": "S08 v1.0 - premium Royal Diamond 6-reel Megaways cascade slot template",
+  "scripts": {
+    "theme:new": "node scripts/create-theme.mjs",
+    "theme:validate": "node scripts/validate-themes.mjs",
+    "build:web": "\"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\" --project . --build \"platform=web-mobile;debug=false;buildPath=./build;outputName=web-mobile;md5Cache=false\"; node scripts/patch-web-build.mjs ./build/web-mobile"
+  },
+  "creator": {"version": "3.8.8"},
+  "templateProfile": {
+    "code": "S08",
+    "baselineVersion": "1.0.0",
+    "status": "GOLD_MASTER",
+    "name": "Royal Diamond 6-Reel Megaways Cascade Slot",
+    "nameZh": "皇家钻石 6 转轴 Megaways 连消 Slot",
+    "mechanic": "6 reels, 2-7 active rows per reel, up to 117649 ways, cascading wins, rising cascade multiplier and diamond vault bonus"
+  },
+  "uuid": "9200fd02-f67c-40de-a90a-c86ac18be86e"
+}
