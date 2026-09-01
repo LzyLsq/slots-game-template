@@ -1,0 +1,115 @@
+html { -ms-touch-action: none; }
+
+body, canvas, div {
+  display: block;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+body {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #e0b397;
+  background: #300613;
+  text-align: center;
+  font-family: Inter, Avenir, Helvetica, Verdana, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cocos 3.8 renders Web Mobile EditBox fields as <textarea>, even for
+ * password inputs. Keep the native editing overlay masked while focused;
+ * the in-game SHOW/HIDE button still controls the canvas label after blur. */
+textarea.cocosEditBox[maxlength="72"] {
+  -webkit-text-security: disc;
+}
+
+canvas { background-color: rgba(0, 0, 0, 0); }
+#GameDiv, #Cocos3dGameContainer, #GameCanvas { width: 100%; height: 100%; }
+
+#csw-preloader {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: env(safe-area-inset-top) 28px env(safe-area-inset-bottom);
+  background:
+    radial-gradient(circle at 50% 34%, rgba(255, 192, 113, .42), transparent 34%),
+    radial-gradient(circle at 18% 78%, rgba(228, 73, 96, .28), transparent 33%),
+    radial-gradient(circle at 84% 72%, rgba(70, 184, 126, .18), transparent 30%),
+    linear-gradient(180deg, #a73445 0%, #70172e 58%, #2f0614 100%);
+  opacity: 1;
+  transition: opacity .55s ease, transform .65s cubic-bezier(.2,.8,.2,1);
+}
+
+#csw-preloader.is-ready { opacity: 0; transform: scale(1.035); pointer-events: none; }
+
+.csw-nebula {
+  position: absolute;
+  width: 58vmax;
+  height: 58vmax;
+  border-radius: 50%;
+  filter: blur(1px);
+  opacity: .18;
+  animation: csw-drift 8s ease-in-out infinite alternate;
+}
+
+.csw-nebula-a { left: -35vmax; top: 8%; background: radial-gradient(circle, #ffb46f, transparent 67%); }
+.csw-nebula-b { right: -38vmax; bottom: -8%; background: radial-gradient(circle, #e54869, transparent 67%); animation-delay: -3.5s; }
+
+.csw-loader-mark { position: relative; width: 184px; height: 184px; margin-bottom: 32px; }
+.csw-core {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffe59b;
+  font-size: 78px;
+  text-shadow: 0 0 16px rgba(255, 220, 126, .72), 0 0 44px rgba(231, 76, 101, .38);
+  animation: csw-breathe 1.5s ease-in-out infinite;
+}
+
+.csw-orbit { position: absolute; inset: 9px; border: 2px solid rgba(255, 155, 115, .36); border-right-color: #ff9b73; border-radius: 50%; animation: csw-spin 2.15s linear infinite; }
+.csw-orbit-b { inset: 31px; border-color: rgba(255, 229, 155, .18); border-left-color: #ffe59b; animation-duration: 1.45s; animation-direction: reverse; }
+.csw-orbit i { position: absolute; right: 7px; top: 25px; width: 10px; height: 10px; border-radius: 50%; background: #ffd4b8; box-shadow: 0 0 13px 4px rgba(255, 139, 103, .7); }
+.csw-orbit-b i { right: auto; left: 0; top: 50%; width: 7px; height: 7px; background: #ffe59b; box-shadow: 0 0 10px 3px rgba(255, 229, 155, .55); }
+
+.csw-loader-title { color: #fff5df; font-size: clamp(24px, 6vw, 38px); font-weight: 800; letter-spacing: .055em; text-shadow: 0 2px 20px rgba(255, 162, 112, .3); }
+.csw-loader-copy { margin-top: 15px; color: #ffe0bd; font-size: 13px; font-weight: 800; letter-spacing: .17em; text-shadow: 0 2px 8px rgba(48, 4, 18, .9); }
+.csw-loader-track { position: relative; width: min(68vw, 430px); height: 9px; margin-top: 34px; overflow: hidden; border: 1px solid rgba(255, 229, 166, .62); border-radius: 99px; background: rgba(51, 5, 18, .9); box-shadow: inset 0 0 0 1px rgba(50, 3, 16, .65), 0 0 16px rgba(255, 146, 101, .18); }
+.csw-loader-track span { position: absolute; inset: 0; border-radius: inherit; transform: scaleX(.04); transform-origin: 0 50%; background: linear-gradient(90deg, #e84f69 0%, #ff9d70 56%, #ffe59b 100%); box-shadow: 0 0 14px rgba(255, 137, 99, .72); transition: transform .16s linear; }
+.csw-loader-percent { margin-top: 12px; color: #fff5df; font-size: 14px; font-weight: 800; letter-spacing: .08em; text-shadow: 0 2px 9px rgba(48, 4, 18, .95); }
+
+@keyframes csw-spin { to { transform: rotate(360deg); } }
+@keyframes csw-breathe { 0%,100% { transform: scale(.92); opacity: .78; } 50% { transform: scale(1.08); opacity: 1; } }
+@keyframes csw-drift { from { transform: translate3d(-3%, -2%, 0) scale(.94); } to { transform: translate3d(7%, 5%, 0) scale(1.08); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .csw-orbit, .csw-core, .csw-nebula { animation-duration: 3s; }
+}
+
+:root {
+  --safe-top: env(safe-area-inset-top);
+  --safe-right: env(safe-area-inset-right);
+  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-left: env(safe-area-inset-left);
+}
