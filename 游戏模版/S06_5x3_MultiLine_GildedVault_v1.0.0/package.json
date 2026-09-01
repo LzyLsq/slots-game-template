@@ -1,0 +1,22 @@
+{
+  "name": "slot-s06-gilded-vault",
+  "version": "1.0.0",
+  "description": "S06 v1.0 - premium Gilded Vault 5x3 ten-line slot template",
+  "scripts": {
+    "theme:new": "node scripts/create-theme.mjs",
+    "theme:validate": "node scripts/validate-themes.mjs",
+    "build:web": "\"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\" --project . --build \"platform=web-mobile;debug=false;buildPath=./build;outputName=web-mobile;md5Cache=false\"; node scripts/patch-web-build.mjs ./build/web-mobile"
+  },
+  "creator": {
+    "version": "3.8.8"
+  },
+  "templateProfile": {
+    "code": "S06",
+    "baselineVersion": "1.0.0",
+    "status": "GOLD_MASTER",
+    "name": "Gilded Vault 5x3 Multi-Line Slot",
+    "nameZh": "镏金私库 5x3 十线 Slot",
+    "mechanic": "5 reels, 3 rows, 10 fixed paylines, scatter free spins and treasure bonus"
+  },
+  "uuid": "aa00927d-2183-4058-a1fb-0c5dee5d542e"
+}
