@@ -1,0 +1,20 @@
+{
+  "name": "slot-s09-royal-ascension-wild-respins",
+  "version": "1.0.0",
+  "description": "S09 v1.0 - premium Royal Ascension 5x4 expanding wild respin slot template",
+  "scripts": {
+    "theme:new": "node scripts/create-theme.mjs",
+    "theme:validate": "node scripts/validate-themes.mjs",
+    "build:web": "\"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\" --project . --build \"platform=web-mobile;debug=false;buildPath=./build;outputName=web-mobile;md5Cache=false\"; node scripts/patch-web-build.mjs ./build/web-mobile"
+  },
+  "creator": {"version": "3.8.8"},
+  "templateProfile": {
+    "code": "S09",
+    "baselineVersion": "1.0.0",
+    "status": "GOLD_MASTER",
+    "name": "Royal Ascension 5x4 Expanding Wild Respins Slot",
+    "nameZh": "皇家飞升 5x4 扩展百搭重转 Slot",
+    "mechanic": "5 reels, 4 rows, 1024 ways, full-reel expanding wilds, one locked respin, scatter free spins and royal chest bonus"
+  },
+  "uuid": "7ccf1481-b64a-4ea3-9ec6-e22b87dc1d07"
+}
