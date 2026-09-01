@@ -1,0 +1,13 @@
+{
+  "model": "gpt-5.6-sol",
+  "input": "Use case: stylized-concept\nAsset type: production prize-wheel game UI centerpiece for a premium portrait mobile casino game\nPrimary request: create one luxurious physical lucky prize wheel, perfectly front-facing and circular, with eight clearly separated blank prize segments, a substantial champagne-gold metal rim, pearl bulb lights, inset rubies and emeralds, a faceted diamond hub, and one integrated mechanical pointer at the exact top\nScene/backdrop: one perfectly flat, uniform electric blue #0000FF chroma-key background across the entire image, with no gradient, no texture, no floor, no horizon, no cast shadow and no blue rim light\nStyle/medium: photorealistic premium 3D mobile game prop render, believable brushed metal, polished enamel, crystal, pearl and gemstone materials, commercial slot-game quality, clean readable silhouette\nComposition/framing: centered orthographic front view, full wheel and pointer visible, generous blue padding, exact radial symmetry, eight equal wedge segments alternating soft wine red, ivory enamel, muted emerald and champagne gold, no perspective distortion\nLighting/mood: warm soft casino studio light, realistic metal edge highlights, pearl glow and restrained gemstone sparkle, festive and wealthy but gentle\nConstraints: no text, no letters, no numerals, no logos, no watermark, no currency symbols; blank segments reserved for runtime labels; hard clean subject edges against the blue key; do not use blue anywhere on the wheel\nAvoid: flat vector wheel, carnival toy plastic, thin yellow outlines, roulette table markings, tiny unreadable ornaments, dark severe mood, extra objects, people, busy background",
+  "tools": [
+    {
+      "type": "image_generation",
+      "size": "1024x1024",
+      "quality": "high",
+      "background": "opaque",
+      "output_format": "png"
+    }
+  ]
+}

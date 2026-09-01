@@ -4,11 +4,13 @@ import {
     Color,
     Component,
     EditBox,
+    Font,
     Graphics,
     Label,
     Node,
     ResolutionPolicy,
     resources,
+    screen,
     Sprite,
     SpriteFrame,
     sys,
@@ -23,6 +25,8 @@ import {
 const { ccclass } = _decorator;
 
 type LobbyPage = 'home' | 'store' | 'rank' | 'rewards' | 'account';
+type GameCategory = 'all' | 'line' | 'ways' | 'megaways';
+type RankPeriod = 'daily' | 'weekly' | 'all';
 
 interface LobbyAccount {
     username: string;
@@ -46,79 +50,94 @@ export class SlotGame extends Component {
     private readonly accountsKey = 'slot-lobby-template-accounts-v1';
     private readonly sessionKey = 'slot-lobby-template-session-v1';
     private readonly rewardKey = 'slot-lobby-template-daily-reward-v1';
+    private viewportWidth = 750;
+    private viewportHeight = 1334;
 
     private frames = new Map<string, SpriteFrame>();
+    private uiFont: Font | null = null;
+    private uiFontBold: Font | null = null;
+    private uiDisplayFont: Font | null = null;
     private currentUser: LobbyAccount | null = null;
     private pageRoot!: Node;
     private navigationRoot: Node | null = null;
     private navigationSelector: Node | null = null;
     private navigationIcons = new Map<LobbyPage, Sprite>();
     private navigationLabels = new Map<LobbyPage, Label>();
+    private entranceNodes = new WeakSet<Node>();
     private currentPage: LobbyPage = 'home';
     private isTransitioning = false;
-    private fxVersion = 0;
+    private isAuthTransitioning = false;
     private registerAvatar = 0;
+    private selectedCategory: GameCategory = 'all';
+    private selectedRankPeriod: RankPeriod = 'daily';
 
     protected async start(): Promise<void> {
-        view.setDesignResolutionSize(this.designWidth, this.designHeight, ResolutionPolicy.SHOW_ALL);
-        this.ensureTransform(this.node, this.designWidth, this.designHeight);
+        const frame = screen.windowSize;
+        const screenRatio = frame.width / Math.max(1, frame.height);
+        const designRatio = this.designWidth / this.designHeight;
+        const policy = screenRatio >= designRatio ? ResolutionPolicy.FIXED_HEIGHT : ResolutionPolicy.FIXED_WIDTH;
+        view.setDesignResolutionSize(this.designWidth, this.designHeight, policy);
+        const visible = view.getVisibleSize();
+        this.viewportWidth = visible.width;
+        this.viewportHeight = visible.height;
+        this.ensureTransform(this.node, visible.width, visible.height);
         await this.loadArtwork();
         this.currentUser = this.restoreSession();
-        if (this.currentUser) this.buildApp('home');
+        const authPreview = this.authPreviewFromUrl();
+        if (authPreview !== null) this.buildAuth(authPreview);
+        else if (this.currentUser) this.buildApp(this.initialPageFromUrl());
         else this.buildAuth(false);
+    }
+
+    private authPreviewFromUrl(): boolean | null {
+        if (typeof window === 'undefined') return null;
+        const requested = new URLSearchParams(window.location.search).get('auth');
+        if (requested === 'login') return false;
+        if (requested === 'register') return true;
+        return null;
+    }
+
+    private initialPageFromUrl(): LobbyPage {
+        if (typeof window === 'undefined') return 'home';
+        const requested = new URLSearchParams(window.location.search).get('page');
+        return (['home', 'store', 'rank', 'rewards', 'account'] as string[]).includes(requested ?? '')
+            ? requested as LobbyPage
+            : 'home';
     }
 
     private async loadArtwork(): Promise<void> {
         const entries: Array<[string, string]> = [
-            ['background', 'lobby/home/background/spriteFrame'],
-            ['banner', 'lobby/home/banner/spriteFrame'],
-            ['top-header', 'lobby/home/top-header/spriteFrame'],
-            ['coin-bar', 'lobby/home/coin-bar/spriteFrame'],
-            ['category-button', 'lobby/home/category-button/spriteFrame'],
-            ['category-line', 'lobby/home/category-line/spriteFrame'],
-            ['category-way', 'lobby/home/category-way/spriteFrame'],
-            ['category-megaways', 'lobby/home/category-megaways/spriteFrame'],
-            ['game-elf', 'lobby/home/game-elf/spriteFrame'],
-            ['game-pharaoh', 'lobby/home/game-pharaoh/spriteFrame'],
-            ['game-mermaid', 'lobby/home/game-mermaid/spriteFrame'],
-            ['game-sweet', 'lobby/home/game-sweet/spriteFrame'],
-            ['login-background', 'lobby/login/background/spriteFrame'],
-            ['login-input', 'lobby/login/input-box/spriteFrame'],
+            ['background', 'lobby/v5/lobby-background-v5/spriteFrame'],
+            ['banner', 'lobby/v5/lobby-banner-v5/spriteFrame'],
+            ['game-golden-chest', 'lobby/v5/game-golden-chest-v5/spriteFrame'],
+            ['game-ruby-vault', 'lobby/v5/game-ruby-vault-v5/spriteFrame'],
+            ['game-emerald-fortune', 'lobby/v5/game-emerald-fortune-v5/spriteFrame'],
+            ['game-coin-fountain', 'lobby/v5/game-coin-fountain-v5/spriteFrame'],
+            ['treasure-chest-emblem', 'lobby/v7/treasure-chest-emblem-soft-v7/spriteFrame'],
+            ['coin-emblem', 'lobby/v7/coin-emblem-soft-v7/spriteFrame'],
+            ['store-page-background', 'lobby/v6/store-background-v6/spriteFrame'],
+            ['rank-page-background', 'lobby/v6/rank-background-v6/spriteFrame'],
+            ['rewards-page-background', 'lobby/v6/rewards-background-v6/spriteFrame'],
+            ['account-page-background', 'lobby/v6/account-background-v6/spriteFrame'],
+            ['button-primary-soft', 'lobby/v4/button-primary-soft/spriteFrame'],
+            ['button-accent-soft', 'lobby/v4/button-accent-soft/spriteFrame'],
+            ['button-gold-fortune', 'lobby/v7/button-gold-fortune-v7/spriteFrame'],
+            ['button-ruby-fortune', 'lobby/v7/button-ruby-fortune-v7/spriteFrame'],
+            ['card-fortune-portrait', 'lobby/v7/card-fortune-portrait-v7/spriteFrame'],
+            ['rank-podium-fortune', 'lobby/v7/rank-podium-fortune-v7/spriteFrame'],
+            ['panel-fortune-wide', 'lobby/v7/panel-fortune-wide-v7/spriteFrame'],
+            ['panel-fortune-row', 'lobby/v7/panel-fortune-row-v7/spriteFrame'],
+            ['panel-fortune-square', 'lobby/v7/panel-fortune-square-v7/spriteFrame'],
+            ['nav-selector-soft', 'lobby/v4/nav-selector-soft/spriteFrame'],
+            ['login-background', 'lobby/v6/auth-background-v6/spriteFrame'],
             ['login-user', 'lobby/login/user-icon/spriteFrame'],
             ['login-password', 'lobby/login/password-icon/spriteFrame'],
             ['login-guest', 'lobby/login/guest-icon/spriteFrame'],
-            ['button-primary', 'lobby/buttons/primary/spriteFrame'],
-            ['button-secondary', 'lobby/buttons/secondary/spriteFrame'],
-            ['button-small', 'lobby/buttons/small/spriteFrame'],
-            ['button-wide', 'lobby/buttons/wide/spriteFrame'],
-            ['button-collect', 'lobby/buttons/collect/spriteFrame'],
-            ['tabbar', 'lobby/navigation/tabbar-bg/spriteFrame'],
-            ['rank-background', 'lobby/rank/background/spriteFrame'],
-            ['rank-content', 'lobby/rank/content/spriteFrame'],
-            ['rank-badge-1', 'lobby/rank/badge-1/spriteFrame'],
-            ['rank-badge-2', 'lobby/rank/badge-2/spriteFrame'],
-            ['rank-badge-3', 'lobby/rank/badge-3/spriteFrame'],
-            ['rank-star', 'lobby/rank/star/spriteFrame'],
-            ['rewards-background', 'lobby/rewards/background/spriteFrame'],
-            ['account-background', 'lobby/account/background/spriteFrame'],
-            ['account-profile', 'lobby/account/profile-panel/spriteFrame'],
-            ['account-coin', 'lobby/account/coin-icon/spriteFrame'],
             ['account-inbox', 'lobby/account/details/inbox/spriteFrame'],
-            ['account-inbox-title', 'lobby/account/details/inbox-title/spriteFrame'],
-            ['account-achievement-title', 'lobby/account/details/achievement-title/spriteFrame'],
-            ['account-money', 'lobby/account/details/money/spriteFrame'],
-            ['account-id', 'lobby/account/details/id/spriteFrame'],
             ...Array.from({ length: 8 }, (_, index): [string, string] => [
                 `account-info-${index + 1}`,
                 `lobby/account/details/info-${index + 1}/spriteFrame`,
             ]),
-            ['store-background', 'lobby/store/background/spriteFrame'],
-            ['store-item-bg', 'lobby/store/item-bg/spriteFrame'],
-            ['store-item-sbg', 'lobby/store/item-sbg/spriteFrame'],
-            ['store-panel-name', 'lobby/store/panel-name/spriteFrame'],
-            ['store-name-bar', 'lobby/store/name-bar/spriteFrame'],
-            ['store-price-bar', 'lobby/store/price-bar/spriteFrame'],
-            ['store-coin-icon', 'lobby/store/coin-icon/spriteFrame'],
             ...Array.from({ length: 6 }, (_, index): [string, string] => [
                 `store-coin-${index + 1}`,
                 `lobby/store/coin-${index + 1}/spriteFrame`,
@@ -137,6 +156,11 @@ export class SlotGame extends Component {
             const frame = await this.loadResource(path, SpriteFrame);
             if (frame) this.frames.set(key, frame);
         }));
+        [this.uiFont, this.uiFontBold, this.uiDisplayFont] = await Promise.all([
+            this.loadResource('lobby/fonts/Nunito-SemiBold', Font),
+            this.loadResource('lobby/fonts/Nunito-ExtraBold', Font),
+            this.loadResource('lobby/fonts/Cinzel-Bold', Font),
+        ]);
     }
 
     private loadResource<T>(path: string, type: new (...args: never[]) => T): Promise<T | null> {
@@ -153,12 +177,12 @@ export class SlotGame extends Component {
     }
 
     private clearCanvas(): void {
-        this.fxVersion += 1;
         this.navigationRoot = null;
         this.navigationSelector = null;
         this.navigationIcons.clear();
         this.navigationLabels.clear();
         this.isTransitioning = false;
+        this.isAuthTransitioning = false;
         for (const child of [...this.node.children]) {
             if (child.name === 'Camera') continue;
             Tween.stopAllByTarget(child);
@@ -167,15 +191,19 @@ export class SlotGame extends Component {
     }
 
     private buildBackground(): void {
-        const background = this.createSpriteNode('LobbyBackground', this.node, 750, 1334, 0, 0, this.frames.get('background'));
-        background.getComponent(Sprite)!.color = new Color(255, 246, 236, 255);
-        this.createPanel('LobbyShade', this.node, 750, 1334, new Color(26, 4, 22, 62), 0, 0, 0);
+        const [width, height] = this.coverViewportSize(2 / 3);
+        const background = this.createSpriteNode('LobbyBackground', this.node, width * 1.06, height * 1.06, 0, 0, this.frames.get('background'));
+        background.setScale(1.015, 1.015, 1);
         tween(background)
-            .to(4.2, { scale: new Vec3(1.035, 1.035, 1) }, { easing: 'quadInOut' })
-            .to(4.2, { scale: Vec3.ONE }, { easing: 'quadInOut' })
-            .union()
-            .repeatForever()
+            .repeatForever(
+                tween()
+                    .to(10.5, { position: new Vec3(-5, 6, 0), scale: new Vec3(1.035, 1.035, 1) }, { easing: 'sineInOut' })
+                    .to(10.5, { position: new Vec3(5, -5, 0), scale: new Vec3(1.015, 1.015, 1) }, { easing: 'sineInOut' }),
+            )
             .start();
+        this.createPanel('LobbyWarmWash', this.node, this.viewportWidth, this.viewportHeight, new Color(123, 42, 24, 18), 0, 0, 0);
+        this.createPanel('LobbyShade', this.node, this.viewportWidth, this.viewportHeight, new Color(59, 13, 13, 28), 0, 0, 0);
+        this.createAmbientGoldDust(this.node, 12);
     }
 
     private buildApp(page: LobbyPage): void {
@@ -189,31 +217,37 @@ export class SlotGame extends Component {
         this.buildHeader();
         this.createPage(page, true);
         this.buildNavigation(page);
-        const version = this.fxVersion;
-        void this.animateAmbientGold(version);
     }
 
     private createPage(page: LobbyPage, animateEntrance: boolean): void {
         this.pageRoot = new Node('PageRoot');
         this.node.addChild(this.pageRoot);
         this.ensureTransform(this.pageRoot, 750, 1040);
-        this.pageRoot.setPosition(animateEntrance ? 58 : 0, -28);
+        this.pageRoot.setPosition(animateEntrance ? 42 : 0, -28);
         const opacity = this.pageRoot.addComponent(UIOpacity);
         opacity.opacity = animateEntrance ? 0 : 255;
 
-        const pageBackgroundKey = page === 'rank'
-            ? 'rank-background'
-            : page === 'store'
-                ? 'store-background'
-            : page === 'rewards'
-                ? 'rewards-background'
-                : page === 'account'
-                    ? 'account-background'
-                    : null;
-        if (pageBackgroundKey) {
-            const art = this.createSpriteNode('PageArtwork', this.pageRoot, 750, 1040, 0, 0, this.frames.get(pageBackgroundKey));
-            art.getComponent(Sprite)!.color = new Color(255, 255, 255, page === 'store' ? 218 : page === 'account' ? 172 : 128);
-            this.createPanel('PageArtworkShade', this.pageRoot, 750, 1040, new Color(28, 3, 23, page === 'store' ? 42 : 74), 0, 0, 0);
+        if (page !== 'home') {
+            const pageBackgroundKey = page === 'store'
+                ? 'store-page-background'
+                : page === 'rank'
+                    ? 'rank-page-background'
+                    : page === 'rewards'
+                        ? 'rewards-page-background'
+                        : 'account-page-background';
+            const pageBackdrop = this.createSpriteNode('PageBackdrop', this.pageRoot, 724, 1086, 0, 0, this.frames.get(pageBackgroundKey));
+            const backdropOpacity = pageBackdrop.addComponent(UIOpacity);
+            backdropOpacity.opacity = 182;
+            pageBackdrop.setScale(1.015, 1.015, 1);
+            tween(pageBackdrop)
+                .repeatForever(
+                    tween()
+                        .to(9.5, { position: new Vec3(0, 4, 0), scale: new Vec3(1.03, 1.03, 1) }, { easing: 'sineInOut' })
+                        .to(9.5, { position: new Vec3(0, -4, 0), scale: new Vec3(1.015, 1.015, 1) }, { easing: 'sineInOut' }),
+                )
+                .start();
+            this.createPanel('PageSurface', this.pageRoot, 724, 1030, new Color(73, 17, 17, page === 'rank' ? 108 : 92), 0, 0, 34);
+            this.createOutlinePanel('PageSurfaceOutline', this.pageRoot, 722, 1028, new Color(231, 191, 104, 100), 0, 0, 34, 1);
         }
 
         if (page === 'home') this.buildHomePage();
@@ -226,9 +260,9 @@ export class SlotGame extends Component {
 
         if (animateEntrance) {
             tween(this.pageRoot)
-                .to(0.36, { position: new Vec3(0, -28, 0) }, { easing: 'quartOut' })
+                .to(0.32, { position: new Vec3(0, -28, 0) }, { easing: 'quartOut' })
                 .start();
-            tween(opacity).to(0.24, { opacity: 255 }, { easing: 'quadOut' }).start();
+            tween(opacity).to(0.22, { opacity: 255 }, { easing: 'quadOut' }).start();
         }
     }
 
@@ -241,23 +275,23 @@ export class SlotGame extends Component {
         this.currentPage = page;
         this.updateNavigation(page);
         tween(oldRoot)
-            .to(0.2, { position: new Vec3(direction * 48, -28, 0), scale: new Vec3(0.985, 0.985, 1) }, { easing: 'quadIn' })
+            .to(0.18, { position: new Vec3(direction * 34, -28, 0), scale: new Vec3(0.992, 0.992, 1) }, { easing: 'quadIn' })
             .call(() => {
                 if (oldRoot.isValid) oldRoot.destroy();
                 this.createPage(page, false);
                 const newRoot = this.pageRoot;
                 const newOpacity = newRoot.getComponent(UIOpacity)!;
-                newRoot.setPosition(-direction * 66, -28);
-                newRoot.setScale(0.985, 0.985, 1);
+                newRoot.setPosition(-direction * 44, -28);
+                newRoot.setScale(0.992, 0.992, 1);
                 newOpacity.opacity = 0;
                 tween(newRoot)
-                    .to(0.38, { position: new Vec3(0, -28, 0), scale: Vec3.ONE }, { easing: 'quartOut' })
+                    .to(0.32, { position: new Vec3(0, -28, 0), scale: Vec3.ONE }, { easing: 'quartOut' })
                     .call(() => { this.isTransitioning = false; })
                     .start();
-                tween(newOpacity).to(0.25, { opacity: 255 }, { easing: 'quadOut' }).start();
+                tween(newOpacity).to(0.22, { opacity: 255 }, { easing: 'quadOut' }).start();
             })
             .start();
-        tween(oldOpacity).to(0.16, { opacity: 0 }, { easing: 'quadIn' }).start();
+        tween(oldOpacity).to(0.14, { opacity: 0 }, { easing: 'quadIn' }).start();
     }
 
     private pageIndex(page: LobbyPage): number {
@@ -270,206 +304,200 @@ export class SlotGame extends Component {
 
     private buildHeader(): void {
         const user = this.currentUser!;
-        const shadow = this.createPanel('HeaderShadow', this.node, 718, 120, new Color(25, 4, 18, 92), 0, 566, 48);
-        shadow.setPosition(0, 558);
-        const rim = this.createPanel('HeaderRim', this.node, 718, 120, new Color(255, 207, 65, 248), 0, 566, 48);
-        const header = this.createSpriteNode('HeaderArtwork', rim, 706, 108, 0, 0, this.frames.get('top-header'));
-        this.createPanel('HeaderGloss', header, 610, 10, new Color(255, 255, 255, 34), 20, 35, 5);
+        const headerWidth = Math.max(this.designWidth, this.viewportWidth);
+        this.createPanel('HeaderShadow', this.node, headerWidth, 118, new Color(67, 16, 13, 72), 0, 558, 0);
+        const header = this.createPanel('Header', this.node, headerWidth, 112, new Color(83, 24, 22, 226), 0, 568, 0);
+        this.createPanel('HeaderWarmGlow', header, headerWidth, 52, new Color(192, 72, 38, 24), 0, 24, 0);
+        this.createPanel('HeaderTopLine', header, headerWidth, 2, new Color(255, 225, 142, 98), 0, 54, 0);
+        this.createPanel('HeaderBottomLine', header, headerWidth, 3, new Color(255, 199, 64, 176), 0, -54, 0);
 
-        const avatarButton = this.createCirclePanel('HeaderAvatarRim', header, 86, new Color(255, 210, 63, 255), -292, 0);
-        this.createCirclePanel('HeaderAvatarInset', avatarButton, 74, new Color(123, 30, 33, 255), 0, 0);
-        this.createSpriteNode('HeaderAvatar', avatarButton, 68, 68, 0, 0, this.avatarFrame(user.avatar));
+        const avatarButton = this.createCirclePanel('HeaderAvatarRim', header, 76, new Color(202, 162, 91, 255), -294, 0);
+        this.createCirclePanel('HeaderAvatarInset', avatarButton, 70, new Color(255, 239, 207, 255), 0, 0);
+        this.createSpriteNode('HeaderAvatar', avatarButton, 64, 64, 0, 0, this.avatarFrame(user.avatar));
         avatarButton.addComponent(Button);
         avatarButton.on(Button.EventType.CLICK, () => this.transitionTo('account'), this);
         this.bindPressMotion(avatarButton);
 
-        this.createLabel(`HI, ${user.username.toUpperCase()}`, header, 22, Color.WHITE, -175, 14, 210, 34, true);
-        this.createLabel('FORTUNE MEMBER', header, 12, new Color(255, 214, 100, 220), -175, -17, 210, 24, true);
+        this.createLabel(user.username.toUpperCase(), header, 20, new Color(244, 240, 228), -178, 13, 210, 34, true);
+        this.createLabel('HIGH ROLLER MEMBER', header, 10, new Color(255, 220, 154, 230), -178, -18, 210, 22, true);
 
-        const coinPill = this.createSpriteNode('CoinBarArtwork', header, 254, 70, 194, 0, this.frames.get('coin-bar'));
-        const headerCoin = this.createSpriteNode('HeaderCoin', coinPill, 44, 44, -96, 0, this.frames.get('account-coin'));
-        tween(headerCoin)
-            .to(0.55, { scale: new Vec3(1.12, 1.12, 1), angle: 10 }, { easing: 'quadOut' })
-            .to(0.65, { scale: Vec3.ONE, angle: -7 }, { easing: 'quadInOut' })
-            .delay(1.1)
-            .union()
-            .repeatForever()
-            .start();
-        this.createLabel(user.coins.toLocaleString('en-US'), coinPill, 25, Color.WHITE, 12, 0, 144, 44, true);
-        this.createTextButton('+', coinPill, 98, 0, 42, 42, () => this.showToast('COIN STORE READY TO CONNECT'), new Color(245, 130, 17), 28);
+        const coinPill = this.createPanel('CoinBar', header, 248, 60, new Color(112, 37, 24, 244), 198, 0, 22);
+        this.createOutlinePanel('CoinBarOutline', coinPill, 246, 58, new Color(202, 162, 91, 82), 0, 0, 22, 1);
+        const headerCoin = this.createSpriteNode('HeaderCoin', coinPill, 42, 42, -98, 0, this.frames.get('coin-emblem'));
+        this.animateSoftImage(headerCoin, 0.35);
+        this.createLabel(user.coins.toLocaleString('en-US'), coinPill, 22, new Color(244, 240, 228), -2, 0, 130, 40, true);
+        this.createTextButton('ADD', coinPill, 92, 0, 52, 36, () => this.transitionTo('store'), new Color(193, 144, 64), 11);
     }
 
     private buildHomePage(): void {
-        const bannerRim = this.createPanel('BannerRim', this.pageRoot, 716, 304, new Color(255, 213, 61), 0, 332, 25);
-        const banner = this.createSpriteNode('PromoBanner', bannerRim, 704, 292, 0, 0, this.frames.get('banner'));
+        const bannerRim = this.createPanel('BannerRim', this.pageRoot, 716, 268, new Color(100, 32, 21, 255), 0, 350, 26);
+        this.createOutlinePanel('BannerOutline', bannerRim, 714, 266, new Color(231, 191, 104, 170), 0, 0, 26, 2);
+        const banner = this.createSpriteNode('PromoBanner', bannerRim, 704, 256, 0, 0, this.frames.get('banner'));
+        this.createPanel('BannerCopyShade', banner, 390, 256, new Color(91, 20, 20, 132), -157, 0, 0);
+        this.createLabel('FEATURED JACKPOT', banner, 11, new Color(255, 222, 150), -202, 66, 230, 24, true);
+        this.createDisplayLabel('TREASURE RUSH', banner, 28, new Color(255, 249, 233), -151, 27, 330, 44);
+        this.createLabel('Coins, chests & lucky reels', banner, 13, new Color(255, 227, 190), -152, -13, 330, 26);
+        const explore = new Node('BannerExplore');
+        banner.addChild(explore);
+        explore.setPosition(-205, -66);
+        this.ensureTransform(explore, 154, 42);
+        const exploreFace = this.createSpriteNode('BannerExploreImage', explore, 154, 42, 0, 0, this.frames.get('button-gold-fortune'));
+        this.createLabel('EXPLORE', explore, 12, new Color(91, 38, 21), 0, 0, 130, 28, true);
+        explore.addComponent(Button);
+        explore.on(Button.EventType.CLICK, () => this.showToast('FEATURED COLLECTION SELECTED'), this);
+        this.bindPressMotion(explore);
+        this.animateSoftImage(exploreFace, 0.25);
         const bannerOpacity = banner.addComponent(UIOpacity);
         bannerOpacity.opacity = 0;
-        banner.setScale(0.92, 0.92, 1);
-        tween(banner)
-            .to(0.38, { scale: Vec3.ONE }, { easing: 'backOut' })
-            .call(() => {
-                if (!banner.isValid) return;
-                tween(banner)
-                    .to(1.35, { position: new Vec3(0, 3, 0), angle: 0.28 }, { easing: 'quadInOut' })
-                    .to(1.35, { position: new Vec3(0, -3, 0), angle: -0.22 }, { easing: 'quadInOut' })
-                    .union()
-                    .repeatForever()
-                    .start();
-            })
-            .start();
-        tween(bannerOpacity).to(0.26, { opacity: 255 }).start();
-        const live = this.createPanel('LiveBadge', bannerRim, 118, 38, new Color(218, 39, 42, 244), -270, -112, 19);
-        const liveDot = this.createCirclePanel('LiveDot', live, 10, Color.WHITE, -40, 0);
-        tween(liveDot)
-            .to(0.42, { scale: new Vec3(1.45, 1.45, 1) }, { easing: 'quadOut' })
-            .to(0.42, { scale: new Vec3(0.82, 0.82, 1) }, { easing: 'quadIn' })
-            .union()
-            .repeatForever()
-            .start();
-        this.createLabel('LIVE', live, 14, Color.WHITE, 10, 0, 72, 30, true);
-        const bannerCoinLeft = this.createSpriteNode('BannerCoinLeft', bannerRim, 54, 54, -315, 116, this.frames.get('account-coin'));
-        const bannerCoinRight = this.createSpriteNode('BannerCoinRight', bannerRim, 42, 42, 320, 104, this.frames.get('account-coin'));
-        tween(bannerCoinLeft).to(1.5, { position: new Vec3(-315, 124, 0), angle: 12 }).to(1.5, { position: new Vec3(-315, 116, 0), angle: -8 }).union().repeatForever().start();
-        tween(bannerCoinRight).delay(0.35).to(1.25, { position: new Vec3(320, 112, 0), angle: -12 }).to(1.25, { position: new Vec3(320, 104, 0), angle: 10 }).union().repeatForever().start();
-
-        [
-            { x: -338, y: 220, size: 28, delay: 0.1, angle: -18 },
-            { x: 340, y: 12, size: 34, delay: 0.55, angle: 16 },
-            { x: -338, y: -226, size: 24, delay: 1.05, angle: 22 },
-            { x: 340, y: -472, size: 27, delay: 1.5, angle: -12 },
-        ].forEach((ornament, index) => {
-            const coin = this.createSpriteNode(
-                `HomeFloatingCoin_${index}`,
-                this.pageRoot,
-                ornament.size,
-                ornament.size,
-                ornament.x,
-                ornament.y,
-                this.frames.get('account-coin'),
-            );
-            coin.angle = ornament.angle;
-            tween(coin)
-                .delay(ornament.delay)
-                .to(1.15, {
-                    position: new Vec3(ornament.x, ornament.y + 16, 0),
-                    angle: ornament.angle + 28,
-                    scale: new Vec3(1.16, 1.16, 1),
-                }, { easing: 'quadInOut' })
-                .to(1.15, {
-                    position: new Vec3(ornament.x, ornament.y, 0),
-                    angle: ornament.angle,
-                    scale: Vec3.ONE,
-                }, { easing: 'quadInOut' })
-                .union()
-                .repeatForever()
+        banner.setScale(0.985, 0.985, 1);
+        tween(banner).to(0.3, { scale: Vec3.ONE }, { easing: 'quartOut' }).start();
+        tween(bannerOpacity).to(0.2, { opacity: 255 }, { easing: 'quadOut' }).start();
+        this.scheduleOnce(() => {
+            if (!banner.isValid) return;
+            tween(banner)
+                .repeatForever(
+                    tween()
+                        .to(6.4, { position: new Vec3(-3, 1, 0), scale: new Vec3(1.008, 1.008, 1) }, { easing: 'sineInOut' })
+                        .to(6.4, { position: new Vec3(3, -1, 0), scale: Vec3.ONE }, { easing: 'sineInOut' }),
+                )
                 .start();
-        });
+        }, 0.45);
+        const bannerSheen = this.createPanel('BannerGoldSheen', banner, 54, 256, new Color(255, 230, 154, 28), -325, 0, 8);
+        bannerSheen.setRotationFromEuler(0, 0, -12);
+        bannerSheen.setSiblingIndex(1);
+        tween(bannerSheen)
+            .repeatForever(tween().delay(1.8).to(2.2, { position: new Vec3(330, 0, 0) }, { easing: 'sineInOut' }).delay(3.4).call(() => bannerSheen.setPosition(-325, 0)))
+            .start();
 
-        this.createLabel('CHOOSE YOUR FORTUNE', this.pageRoot, 24, Color.WHITE, -170, 145, 350, 44, true);
-        const allChip = this.createPanel('AllGamesChip', this.pageRoot, 92, 38, new Color(255, 202, 51), 267, 145, 19);
-        this.createLabel('ALL 4', allChip, 13, new Color(100, 25, 24), 0, 0, 82, 30, true);
+        this.createDisplayLabel('TREASURE GAMES', this.pageRoot, 20, new Color(255, 225, 142), -210, 183, 300, 40);
 
-        const categories = [
-            ['LINE', 'category-line', -220],
-            ['WAYS', 'category-way', 0],
-            ['MEGAWAYS', 'category-megaways', 220],
-        ] as Array<[string, string, number]>;
-        categories.forEach(([text, artKey, x], index) => {
-            const chip = this.createSpriteNode(`Category_${text}`, this.pageRoot, index === 2 ? 190 : 164, 50, x, 88, this.frames.get('category-button'));
-            const markWidth = text === 'MEGAWAYS' ? 118 : 82;
-            const mark = this.createSpriteNode(`CategoryMark_${text}`, chip, markWidth, 32, 0, 0, this.frames.get(artKey));
-            if (index !== 0) mark.getComponent(Sprite)!.color = new Color(255, 255, 255, 200);
-            tween(mark)
-                .delay(0.35 + index * 0.3)
-                .to(0.28, { scale: new Vec3(1.09, 1.09, 1) }, { easing: 'backOut' })
-                .to(0.34, { scale: Vec3.ONE }, { easing: 'quadOut' })
-                .delay(1.35)
-                .union()
-                .repeatForever()
-                .start();
+        const categories: Array<[GameCategory, string, number, number]> = [
+            ['all', 'ALL', -248, 112],
+            ['line', 'LINES', -88, 138],
+            ['ways', 'WAYS', 88, 138],
+            ['megaways', 'MEGAWAYS', 260, 172],
+        ];
+        categories.forEach(([category, text, x, width]) => {
+            const selected = category === this.selectedCategory;
+            const chip = new Node(`Category_${category}`);
+            this.pageRoot.addChild(chip);
+            chip.setPosition(x, 137);
+            this.ensureTransform(chip, width, 48);
+            const chipFace = this.createSpriteNode('CategoryImage', chip, width, 48, 0, 0, this.frames.get(selected ? 'button-gold-fortune' : 'button-ruby-fortune'));
+            const chipOpacity = chipFace.addComponent(UIOpacity);
+            chipOpacity.opacity = selected ? 255 : 205;
+            this.createLabel(text, chip, 12, selected ? new Color(91, 38, 21) : new Color(255, 246, 225), 0, 0, width - 18, 30, true);
             chip.addComponent(Button);
-            chip.on(Button.EventType.CLICK, () => this.showToast(`${text} GAMES SELECTED`), this);
+            chip.on(Button.EventType.CLICK, () => this.selectCategory(category), this);
             this.bindPressMotion(chip);
+            if (selected) this.animateSoftImage(chipFace, 0.1);
         });
 
         const games = [
-            { key: 'game-pharaoh', x: -118, y: -80, tag: 'HOT', color: new Color(238, 68, 29) },
-            { key: 'game-elf', x: 118, y: -80, tag: 'NEW', color: new Color(39, 189, 240) },
-            { key: 'game-mermaid', x: -118, y: -362, tag: 'WAYS', color: new Color(137, 91, 229) },
-            { key: 'game-sweet', x: 118, y: -362, tag: 'S01', color: new Color(255, 135, 23) },
+            { key: 'game-golden-chest', category: 'line' as GameCategory, tag: 'COINS', color: new Color(193, 113, 28) },
+            { key: 'game-ruby-vault', category: 'megaways' as GameCategory, tag: 'JACKPOT', color: new Color(172, 48, 55) },
+            { key: 'game-emerald-fortune', category: 'ways' as GameCategory, tag: 'WAYS', color: new Color(35, 137, 91) },
+            { key: 'game-coin-fountain', category: 'line' as GameCategory, tag: 'HOT', color: new Color(208, 91, 45) },
         ];
-        games.forEach((game, index) => this.createGameCard(game.key, game.x, game.y, game.tag, game.color, index));
+        const visibleGames = this.selectedCategory === 'all' ? games : games.filter((game) => game.category === this.selectedCategory);
+        const positions = visibleGames.length === 1
+            ? [{ x: 0, y: -185 }]
+            : visibleGames.length === 2
+                ? [{ x: -128, y: -185 }, { x: 128, y: -185 }]
+                : [{ x: -128, y: -45 }, { x: 128, y: -45 }, { x: -128, y: -351 }, { x: 128, y: -351 }];
+        visibleGames.forEach((game, index) => this.createGameCard(game.key, positions[index].x, positions[index].y, game.tag, game.color, index));
+    }
+
+    private selectCategory(category: GameCategory): void {
+        if (category === this.selectedCategory || this.currentPage !== 'home' || this.isTransitioning) return;
+        this.selectedCategory = category;
+        this.refreshCurrentPage('home');
+    }
+
+    private refreshCurrentPage(page: LobbyPage): void {
+        if (!this.pageRoot?.isValid || this.isTransitioning) return;
+        this.isTransitioning = true;
+        const oldRoot = this.pageRoot;
+        const oldOpacity = oldRoot.getComponent(UIOpacity) ?? oldRoot.addComponent(UIOpacity);
+        tween(oldRoot)
+            .to(0.14, { position: new Vec3(0, -34, 0), scale: new Vec3(0.995, 0.995, 1) }, { easing: 'quadIn' })
+            .call(() => {
+                if (oldRoot.isValid) oldRoot.destroy();
+                this.createPage(page, false);
+                const newRoot = this.pageRoot;
+                const newOpacity = newRoot.getComponent(UIOpacity)!;
+                newRoot.setPosition(0, -20);
+                newRoot.setScale(0.995, 0.995, 1);
+                newOpacity.opacity = 0;
+                tween(newRoot)
+                    .to(0.24, { position: new Vec3(0, -28, 0), scale: Vec3.ONE }, { easing: 'quartOut' })
+                    .call(() => { this.isTransitioning = false; })
+                    .start();
+                tween(newOpacity).to(0.18, { opacity: 255 }, { easing: 'quadOut' }).start();
+            })
+            .start();
+        tween(oldOpacity).to(0.12, { opacity: 0 }, { easing: 'quadIn' }).start();
     }
 
     private createGameCard(key: string, x: number, y: number, tag: string, tagColor: Color, index: number): void {
         const sourceRatios: Record<string, number> = {
-            'game-pharaoh': 462 / 623,
-            'game-elf': 513 / 671,
-            'game-mermaid': 491 / 661,
-            'game-sweet': 469 / 650,
+            'game-golden-chest': 3 / 4,
+            'game-ruby-vault': 3 / 4,
+            'game-emerald-fortune': 3 / 4,
+            'game-coin-fountain': 3 / 4,
         };
-        const artWidth = 196;
-        const artHeight = Math.round(artWidth / (sourceRatios[key] ?? 0.74));
-        const rimWidth = 208;
+        const titles: Record<string, string> = {
+            'game-golden-chest': 'GOLDEN CHEST',
+            'game-ruby-vault': 'RUBY JACKPOT',
+            'game-emerald-fortune': 'EMERALD FORTUNE',
+            'game-coin-fountain': 'COIN FOUNTAIN',
+        };
+        const artWidth = 228;
+        const naturalArtHeight = Math.round(artWidth / (sourceRatios[key] ?? 0.74));
+        const artHeight = Math.min(286, naturalArtHeight);
+        const rimWidth = 240;
         const rimHeight = artHeight + 12;
-        const shadow = this.createPanel(`GameShadow_${key}`, this.pageRoot, rimWidth + 2, rimHeight + 2, new Color(26, 3, 18, 110), x, y - 8, 24);
-        shadow.angle = index % 2 === 0 ? -1 : 1;
-        const rim = this.createPanel(`GameRim_${key}`, this.pageRoot, rimWidth, rimHeight, new Color(255, 211, 61), x, y, 24);
+        this.createPanel(`GameShadow_${key}`, this.pageRoot, rimWidth + 6, rimHeight + 6, new Color(0, 0, 0, 110), x, y - 8, 22);
+        const rim = this.createPanel(`GameRim_${key}`, this.pageRoot, rimWidth, rimHeight, new Color(112, 39, 24), x, y, 22);
+        this.createOutlinePanel('GameOutline', rim, rimWidth - 2, rimHeight - 2, new Color(255, 222, 145, 200), 0, 0, 22, 2);
         const card = this.createSpriteNode(`GameCard_${key}`, rim, artWidth, artHeight, 0, 0, this.frames.get(key));
+        const titleShade = this.createPanel('GameTitleShade', card, artWidth, 50, new Color(102, 22, 20, 230), 0, -artHeight / 2 + 25, 0);
+        this.createDisplayLabel(titles[key] ?? key, titleShade, 12, new Color(245, 241, 229), 0, 0, artWidth - 20, 30);
         card.addComponent(Button);
-        card.on(Button.EventType.CLICK, () => this.showToast(`${key.replace('game-', '').toUpperCase()} · GAME ENTRY READY`), this);
+        card.on(Button.EventType.CLICK, () => {
+            this.node.emit('lobby:game-selected', key);
+            this.showToast(`${key.replace('game-', '').toUpperCase()} · GAME SELECTED`);
+        }, this);
         this.bindPressMotion(rim);
-        const badge = this.createPanel(`GameBadge_${key}`, rim, 70, 32, tagColor, -64, rimHeight / 2 - 14, 16);
-        this.createLabel(tag, badge, 13, Color.WHITE, 0, 0, 66, 28, true);
-        const opacity = rim.addComponent(UIOpacity);
-        opacity.opacity = 0;
-        rim.setScale(0.7, 0.7, 1);
-        tween(rim)
-            .delay(0.08 + index * 0.08)
-            .to(0.34, { scale: Vec3.ONE }, { easing: 'backOut' })
-            .call(() => {
-                if (!rim.isValid) return;
-                tween(rim)
-                    .delay(index * 0.12)
-                    .to(1.55, { position: new Vec3(x, y + 6, 0) }, { easing: 'quadInOut' })
-                    .to(1.55, { position: new Vec3(x, y, 0) }, { easing: 'quadInOut' })
-                    .union()
-                    .repeatForever()
-                    .start();
-            })
-            .start();
-        // Match the reference lobby: start after 0.5 s, then spotlight one image every 0.8 s.
-        tween(card)
-            .delay(0.5 + index * 0.8)
-            .to(0.3, { scale: new Vec3(1.1, 1.1, 1) }, { easing: 'quadOut' })
-            .to(0.3, { scale: Vec3.ONE }, { easing: 'quadInOut' })
-            .delay(2.6)
-            .union()
-            .repeatForever()
-            .start();
-        tween(badge)
-            .delay(0.62 + index * 0.8)
-            .to(0.18, { scale: new Vec3(1.16, 1.16, 1), angle: index % 2 === 0 ? -4 : 4 }, { easing: 'backOut' })
-            .to(0.24, { scale: Vec3.ONE, angle: 0 }, { easing: 'quadOut' })
-            .delay(2.78)
-            .union()
-            .repeatForever()
-            .start();
-        tween(opacity).delay(index * 0.07).to(0.25, { opacity: 255 }).start();
+        const badge = this.createPanel(`GameBadge_${key}`, rim, 76, 34, tagColor, -74, rimHeight / 2 - 15, 16);
+        this.createLabel(tag, badge, 13, Color.WHITE, 0, 0, 72, 30, true);
+        this.animateEntrance(rim, index, 0, -10, 0.96);
+        this.scheduleOnce(() => {
+            if (!card.isValid) return;
+            const lift = index % 2 === 0 ? 2 : -2;
+            tween(card)
+                .repeatForever(
+                    tween()
+                        .to(4.4 + index * 0.25, { position: new Vec3(0, lift, 0), scale: new Vec3(1.006, 1.006, 1) }, { easing: 'sineInOut' })
+                        .to(4.4 + index * 0.25, { position: new Vec3(0, -lift, 0), scale: Vec3.ONE }, { easing: 'sineInOut' }),
+                )
+                .start();
+        }, 0.45 + index * 0.12);
     }
 
     private buildStorePage(): void {
-        const user = this.currentUser!;
-        this.createPageTitle('FORTUNE STORE', 'COIN PACKS · SAFE DEMO CHECKOUT');
+        this.createPageTitle('CASINO CASHIER', 'BUY-IN COINS · BONUS PACKS');
 
-        const wallet = this.createSpriteNode('StoreWalletBar', this.pageRoot, 548, 155, 0, 330, this.frames.get('store-name-bar'));
-        const avatarRim = this.createCirclePanel('StoreAvatarRim', wallet, 84, new Color(255, 211, 61), -202, 2);
-        this.createSpriteNode('StoreAvatar', avatarRim, 74, 74, 0, 0, this.avatarFrame(user.avatar));
-        this.createLabel(user.username.toUpperCase(), wallet, 18, Color.WHITE, -68, 27, 210, 30, true);
-        this.createLabel('CURRENT BALANCE', wallet, 11, new Color(255, 221, 117), -68, -4, 210, 24, true);
-        this.createSpriteNode('StoreWalletCoin', wallet, 36, 36, 84, 1, this.frames.get('store-coin-icon'));
-        this.createLabel(user.coins.toLocaleString('en-US'), wallet, 22, Color.WHITE, 172, 1, 130, 34, true);
-        tween(avatarRim).to(1.2, { scale: new Vec3(1.06, 1.06, 1) }).to(1.2, { scale: Vec3.ONE }).union().repeatForever().start();
+        const offer = this.createPanel('StoreVipOffer', this.pageRoot, 600, 128, new Color(111, 36, 27, 220), 0, 330, 28);
+        const offerArt = this.createSpriteNode('StoreVipOfferArt', offer, 600, 128, 0, 0, this.frames.get('button-ruby-fortune'));
+        const offerOpacity = offerArt.addComponent(UIOpacity);
+        offerOpacity.opacity = 218;
+        this.createCirclePanel('StoreOfferGlow', offer, 92, new Color(255, 184, 55, 52), -238, 0);
+        const offerChest = this.createSpriteNode('StoreOfferChest', offer, 104, 104, -238, -2, this.frames.get('treasure-chest-emblem'));
+        this.animateSoftImage(offerChest, 0.14);
+        this.createLabel('VIP FORTUNE WEEK', offer, 18, Color.WHITE, -56, 24, 260, 30, true);
+        this.createLabel('EXTRA COINS ON SELECTED JACKPOT PACKS', offer, 10, new Color(255, 225, 142), -42, -14, 300, 24, true);
+        this.createArtworkButton('VIEW +20%', offer, 212, 0, 142, 44, () => this.showToast('VIP FORTUNE WEEK · SELECT A BONUS PACK'), 'button-primary', 11);
 
         const packs = [
             { amount: '1,000', price: '$0.99', bonus: 'STARTER', coin: 1 },
@@ -485,9 +513,10 @@ export class SlotGame extends Component {
             this.createStoreProduct(pack.amount, pack.price, pack.bonus, pack.coin, x, y, index);
         });
 
-        const secure = this.createPanel('StoreSecureBar', this.pageRoot, 650, 58, new Color(50, 9, 30, 222), 0, -366, 26);
-        this.createLabel('◆', secure, 18, new Color(255, 210, 68), -280, 0, 30, 30, true);
-        this.createLabel('DEMO STORE · CONNECT APP STORE / GOOGLE PLAY BILLING BEFORE RELEASE', secure, 11, new Color(255, 255, 255, 190), 12, 0, 570, 30, true);
+        const secure = this.createPanel('StoreSecureBar', this.pageRoot, 650, 58, new Color(89, 23, 21, 236), 0, -366, 26);
+        this.createOutlinePanel('StoreSecureOutline', secure, 648, 56, new Color(202, 162, 91, 54), 0, 0, 26, 1);
+        this.createSpriteNode('StoreSecureIcon', secure, 28, 28, -280, 0, this.frames.get('coin-emblem'));
+        this.createLabel('VIRTUAL COINS · DEMO CHECKOUT · NO REAL-MONEY WAGERING', secure, 11, new Color(255, 239, 209, 210), 12, 0, 570, 30, true);
     }
 
     private createStoreProduct(
@@ -499,10 +528,11 @@ export class SlotGame extends Component {
         y: number,
         index: number,
     ): void {
-        const card = this.createSpriteNode(`StorePack_${coinIndex}`, this.pageRoot, 198, 276, x, y, this.frames.get('store-item-bg'));
-        this.createOutlinePanel('StorePackOutline', card, 188, 266, index === 5 ? new Color(255, 232, 118) : new Color(255, 200, 52, 150), 0, 0, 22, index === 5 ? 4 : 2);
-        const titleBar = this.createSpriteNode('StorePackTitle', card, 166, 42, 0, 103, this.frames.get('store-price-bar'));
-        this.createLabel(amount, titleBar, 18, new Color(91, 25, 20), 0, 0, 132, 30, true);
+        const card = this.createPanel(`StorePack_${coinIndex}`, this.pageRoot, 198, 276, index === 5 ? new Color(146, 52, 27, 250) : new Color(101, 32, 27, 246), x, y, 24);
+        this.decorateCasinoCard(card, 198, 276, index, false);
+        this.createOutlinePanel('StorePackOutline', card, 196, 274, index === 5 ? new Color(229, 192, 113) : new Color(202, 162, 91, 76), 0, 0, 24, index === 5 ? 2 : 1);
+        const titleBar = this.createPanel('StorePackTitle', card, 150, 38, new Color(202, 162, 91), 0, 103, 14);
+        this.createLabel(amount, titleBar, 17, new Color(5, 25, 29), 0, 0, 132, 28, true);
 
         const sourceSizes = [[110, 87], [126, 102], [141, 129], [168, 144], [157, 178], [231, 155]];
         const [sourceWidth, sourceHeight] = sourceSizes[coinIndex - 1];
@@ -511,35 +541,74 @@ export class SlotGame extends Component {
         const coin = this.createSpriteNode('StorePackCoins', card, maxWidth, coinHeight, 0, 21, this.frames.get(`store-coin-${coinIndex}`));
         tween(coin)
             .delay(index * 0.12)
-            .to(1.05, { position: new Vec3(0, 28, 0), scale: new Vec3(1.05, 1.05, 1) }, { easing: 'quadInOut' })
-            .to(1.05, { position: new Vec3(0, 21, 0), scale: Vec3.ONE }, { easing: 'quadInOut' })
-            .union()
-            .repeatForever()
+            .repeatForever(
+                tween()
+                    .to(4.2 + index * 0.16, { position: new Vec3(0, 24, 0), scale: new Vec3(1.01, 1.01, 1) }, { easing: 'sineInOut' })
+                    .to(4.2 + index * 0.16, { position: new Vec3(0, 18, 0), scale: Vec3.ONE }, { easing: 'sineInOut' }),
+            )
             .start();
 
         const bonusColor = index === 5 ? new Color(255, 230, 92) : new Color(255, 255, 255, 205);
         this.createLabel(bonus, card, 11, bonusColor, 0, -52, 160, 24, true);
-        const priceButton = this.createSpriteNode('StorePriceButton', card, 166, 42, 0, -103, this.frames.get('store-price-bar'));
-        this.createLabel(price, priceButton, 15, new Color(91, 25, 20), 0, 0, 120, 28, true);
+        const priceButton = new Node('StorePriceButton');
+        card.addChild(priceButton);
+        priceButton.setPosition(0, -103);
+        this.ensureTransform(priceButton, 150, 40);
+        const priceFace = this.createSpriteNode('StorePriceImage', priceButton, 150, 40, 0, 0, this.frames.get('button-gold-fortune'));
+        this.createLabel(price, priceButton, 14, new Color(91, 38, 21), 0, 0, 120, 28, true);
         priceButton.addComponent(Button);
         priceButton.on(Button.EventType.CLICK, () => this.showToast(`${amount} COINS · BILLING CONNECTION REQUIRED`), this);
         this.bindPressMotion(priceButton);
-
-        const opacity = card.addComponent(UIOpacity);
-        opacity.opacity = 0;
-        card.setScale(0.72, 0.72, 1);
-        tween(card).delay(index * 0.07).to(0.34, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
-        tween(opacity).delay(index * 0.07).to(0.24, { opacity: 255 }).start();
+        this.animateSoftImage(priceFace, (index % 3) * 0.12);
+        this.animateEntrance(card, index, 0, -10, 0.97);
     }
 
     private buildRankPage(): void {
-        const contentArt = this.createSpriteNode('RankContentArtwork', this.pageRoot, 700, 890, 0, -74, this.frames.get('rank-content'));
-        contentArt.getComponent(Sprite)!.color = new Color(255, 255, 255, 212);
-        this.createPageTitle('LEADERBOARD', 'TOP PLAYERS · LIVE COIN RANKING');
-        const tabs = this.createPanel('RankTabs', this.pageRoot, 520, 58, new Color(77, 17, 39, 240), 0, 380, 29);
-        this.createPanel('RankTabActive', tabs, 168, 46, new Color(255, 196, 38), -168, 0, 23);
-        ['DAILY', 'WEEKLY', 'ALL TIME'].forEach((text, index) => {
-            this.createLabel(text, tabs, 14, index === 0 ? new Color(94, 22, 27) : Color.WHITE, -168 + index * 168, 0, 150, 36, true);
+        const periods: Array<{ key: RankPeriod; label: string; pool: string }> = [
+            { key: 'daily', label: 'DAILY', pool: '888,888' },
+            { key: 'weekly', label: 'WEEKLY', pool: '5,888,888' },
+            { key: 'all', label: 'ALL TIME', pool: '88,888,888' },
+        ];
+        const activePeriod = periods.find((period) => period.key === this.selectedRankPeriod) ?? periods[0];
+        this.createPageTitle('HIGH ROLLERS', `${activePeriod.label} JACKPOT LEADERS · LIVE COIN RANKING`);
+
+        const prizePill = new Node('RankPrizePool');
+        this.pageRoot.addChild(prizePill);
+        prizePill.setPosition(0, 414);
+        this.ensureTransform(prizePill, 360, 48);
+        const prizeFace = this.createSpriteNode('RankPrizePoolImage', prizePill, 360, 48, 0, 0, this.frames.get('button-gold-fortune'));
+        this.createSpriteNode('RankPrizePoolCoin', prizePill, 34, 34, -142, 0, this.frames.get('coin-emblem'));
+        this.createLabel('JACKPOT POOL', prizePill, 11, new Color(91, 48, 24), -66, 0, 118, 28, true);
+        this.createDisplayLabel(activePeriod.pool, prizePill, 17, new Color(73, 31, 18), 77, 0, 150, 30);
+        prizePill.addComponent(Button);
+        prizePill.on(Button.EventType.CLICK, () => this.showToast(`${activePeriod.pool} COINS · ${activePeriod.label} PRIZE POOL`), this);
+        this.bindPressMotion(prizePill);
+        this.animateSoftImage(prizeFace, 0.18);
+
+        const tabs = this.createPanel('RankTabs', this.pageRoot, 600, 62, new Color(89, 25, 22, 246), 0, 350, 31);
+        this.createOutlinePanel('RankTabsOutline', tabs, 598, 60, new Color(238, 195, 109, 86), 0, 0, 30, 1);
+        periods.forEach((period, index) => {
+            const selected = period.key === this.selectedRankPeriod;
+            const tab = new Node(`RankTab_${period.key}`);
+            tabs.addChild(tab);
+            tab.setPosition(-190 + index * 190, 0);
+            this.ensureTransform(tab, 184, 50);
+            const face = this.createSpriteNode(
+                'RankTabImage',
+                tab,
+                184,
+                50,
+                0,
+                0,
+                this.frames.get(selected ? 'button-gold-fortune' : 'button-ruby-fortune'),
+            );
+            const faceOpacity = face.addComponent(UIOpacity);
+            faceOpacity.opacity = selected ? 255 : 208;
+            this.createLabel(period.label, tab, 13, selected ? new Color(74, 34, 19) : new Color(255, 239, 211), 0, 0, 160, 32, true);
+            tab.addComponent(Button);
+            tab.on(Button.EventType.CLICK, () => this.selectRankPeriod(period.key), this);
+            this.bindPressMotion(tab);
+            if (selected) this.animateSoftImage(face, 0.08);
         });
 
         const ranking = this.rankEntries();
@@ -555,22 +624,33 @@ export class SlotGame extends Component {
                 this.pageRoot,
                 174,
                 height,
-                rank === 1 ? new Color(151, 50, 24, 248) : new Color(78, 19, 40, 242),
+                rank === 1 ? new Color(146, 51, 27, 242) : new Color(101, 32, 28, 238),
                 podiumX[index],
                 podiumY[index],
                 30,
             );
-            this.createOutlinePanel('PodiumOutline', card, 164, height - 10, rank === 1 ? new Color(255, 217, 72) : new Color(255, 196, 56, 160), 0, 0, 26, rank === 1 ? 4 : 2);
-            const badge = this.createSpriteNode(`RankBadge_${rank}`, card, rank === 1 ? 104 : 92, rank === 1 ? 44 : 38, 0, height / 2 - 27, this.frames.get(`rank-badge-${rank}`));
-            if (rank === 1) tween(badge).to(0.7, { scale: new Vec3(1.15, 1.15, 1) }).to(0.7, { scale: Vec3.ONE }).union().repeatForever().start();
-            const avatar = this.createCirclePanel('PodiumAvatarRim', card, rank === 1 ? 82 : 70, new Color(255, 203, 52), 0, 22);
+            this.decorateCasinoCard(card, 174, height, rank - 1, false);
+            this.createOutlinePanel('PodiumOutline', card, 164, height - 10, rank === 1 ? new Color(225, 190, 117) : new Color(202, 162, 91, 98), 0, 0, 26, rank === 1 ? 2 : 1);
+            const badge = this.createSpriteNode(`RankBadge_${rank}`, card, rank === 1 ? 50 : 44, rank === 1 ? 50 : 44, 0, height / 2 - 25, this.frames.get('coin-emblem'));
+            const rankCore = this.createCirclePanel('RankNumberCore', badge, rank === 1 ? 29 : 25, new Color(104, 31, 24, 238), 0, 0);
+            this.createLabel(`${rank}`, rankCore, rank === 1 ? 18 : 15, Color.WHITE, 0, 0, 24, 24, true);
+            this.createSpriteNode('PodiumCoinFlareLeft', card, rank === 1 ? 24 : 20, rank === 1 ? 24 : 20, -62, 56, this.frames.get('coin-emblem'));
+            this.createSpriteNode('PodiumCoinFlareRight', card, rank === 1 ? 20 : 17, rank === 1 ? 20 : 17, 62, 48, this.frames.get('coin-emblem'));
+            const avatar = this.createCirclePanel('PodiumAvatarRim', card, rank === 1 ? 82 : 70, new Color(202, 162, 91), 0, 22);
             this.createSpriteNode('PodiumAvatar', avatar, rank === 1 ? 70 : 60, rank === 1 ? 70 : 60, 0, 0, this.avatarFrame(entry.avatar));
             this.createLabel(entry.name.toUpperCase(), card, 14, Color.WHITE, 0, -40, 150, 26, true);
-            this.createLabel(entry.coins.toLocaleString('en-US'), card, 17, new Color(255, 216, 86), 0, -70, 150, 30, true);
+            this.createSpriteNode('PodiumPrizePlate', card, 142, 36, 0, -72, this.frames.get('button-gold-fortune'));
+            this.createSpriteNode('PodiumPrizeCoin', card, 22, 22, -48, -72, this.frames.get('coin-emblem'));
+            this.createLabel(entry.coins.toLocaleString('en-US'), card, 15, new Color(75, 33, 19), 19, -72, 102, 28, true);
+            card.addComponent(Button);
+            card.on(Button.EventType.CLICK, () => this.showToast(`#${rank} ${entry.name.toUpperCase()} · ${entry.coins.toLocaleString('en-US')} COINS`), this);
+            this.bindPressMotion(card);
+            this.animateEntrance(card, index, 0, -12, 0.97);
         });
 
-        const list = this.createPanel('RankList', this.pageRoot, 680, 472, new Color(51, 10, 31, 215), 0, -252, 36);
-        this.createOutlinePanel('RankListOutline', list, 668, 460, new Color(255, 204, 62, 145), 0, 0, 31, 2);
+        const list = this.createPanel('RankList', this.pageRoot, 680, 472, new Color(88, 28, 24, 228), 0, -252, 36);
+        this.decorateCasinoCard(list, 680, 472, 0, true);
+        this.createOutlinePanel('RankListOutline', list, 668, 460, new Color(202, 162, 91, 70), 0, 0, 31, 1);
         ranking.slice(3, 9).forEach((entry, index) => {
             const y = 195 - index * 75;
             const row = this.createPanel(
@@ -578,45 +658,55 @@ export class SlotGame extends Component {
                 list,
                 628,
                 66,
-                entry.current ? new Color(158, 54, 25, 246) : new Color(255, 255, 255, index % 2 === 0 ? 16 : 8),
+                entry.current ? new Color(146, 48, 29, 188) : new Color(78, 20, 22, index % 2 === 0 ? 116 : 82),
                 0,
                 y,
                 22,
             );
-            this.createLabel(`#${index + 4}`, row, 17, new Color(255, 209, 66), -273, 0, 54, 34, true);
-            const avatar = this.createCirclePanel('RankAvatarRim', row, 48, new Color(255, 190, 41), -214, 0);
+            this.decorateCasinoCard(row, 628, 66, index, false);
+            this.createLabel(`#${index + 4}`, row, 17, new Color(225, 190, 117), -273, 0, 54, 34, true);
+            const avatar = this.createCirclePanel('RankAvatarRim', row, 48, new Color(202, 162, 91), -214, 0);
             this.createSpriteNode('RankAvatar', avatar, 42, 42, 0, 0, this.avatarFrame(entry.avatar));
             this.createLabel(entry.current ? `${entry.name}  ·  YOU` : entry.name, row, 16, Color.WHITE, -76, 0, 220, 34, true);
-            this.createSpriteNode('RankCoin', row, 26, 26, 152, 0, this.frames.get('rank-star'));
-            this.createLabel(entry.coins.toLocaleString('en-US'), row, 17, new Color(255, 220, 98), 218, 0, 150, 34, true);
-            const rowOpacity = row.addComponent(UIOpacity);
-            rowOpacity.opacity = 0;
-            row.setPosition(-34, y);
-            tween(row).delay(0.06 * index).to(0.3, { position: new Vec3(0, y, 0) }, { easing: 'quartOut' }).start();
-            tween(rowOpacity).delay(0.06 * index).to(0.22, { opacity: 255 }).start();
+            this.createSpriteNode('RankCoin', row, 28, 28, 152, 0, this.frames.get('coin-emblem'));
+            this.createLabel(entry.coins.toLocaleString('en-US'), row, 17, new Color(225, 190, 117), 218, 0, 150, 34, true);
+            row.addComponent(Button);
+            row.on(Button.EventType.CLICK, () => this.showToast(`${entry.name.toUpperCase()} · ${entry.coins.toLocaleString('en-US')} COINS`), this);
+            this.bindPressMotion(row);
+            this.animateEntrance(row, index + 2, -16, 0, 0.99);
         });
     }
 
-    private buildRewardsPage(): void {
-        this.createPageTitle('DAILY REWARDS', 'RETURN EVERY DAY · BUILD YOUR STREAK');
-        const chest = this.createCirclePanel('RewardChestGlow', this.pageRoot, 264, new Color(255, 194, 38, 46), 0, 288);
-        this.createCircleOutline('RewardRing1', chest, 228, new Color(255, 210, 65, 170), 0, 0, 4);
-        this.createCircleOutline('RewardRing2', chest, 184, new Color(255, 255, 255, 72), 0, 0, 2);
-        const gift = this.createPanel('GiftBox', chest, 120, 96, new Color(219, 55, 38), 0, -8, 18);
-        this.createPanel('GiftRibbonV', gift, 22, 96, new Color(255, 211, 57), 0, 0, 5);
-        this.createPanel('GiftRibbonH', gift, 120, 22, new Color(255, 211, 57), 0, 12, 5);
-        this.createLabel('★', gift, 34, Color.WHITE, 0, 8, 48, 48, true);
-        tween(chest).to(0.9, { scale: new Vec3(1.08, 1.08, 1), angle: 5 }).to(0.9, { scale: Vec3.ONE, angle: -5 }).union().repeatForever().start();
-        [[-145, 330, 54, -12], [150, 345, 48, 10], [-116, 240, 38, 8], [126, 220, 44, -10]].forEach(([x, y, size, angle], index) => {
-            const coin = this.createSpriteNode(`RewardCoin_${index}`, this.pageRoot, size, size, x, y, this.frames.get('account-coin'));
-            coin.angle = angle;
-            tween(coin).delay(index * 0.16).to(1.25, { position: new Vec3(x, y + 12, 0), angle: angle + 18 }).to(1.25, { position: new Vec3(x, y, 0), angle }).union().repeatForever().start();
-        });
+    private selectRankPeriod(period: RankPeriod): void {
+        if (period === this.selectedRankPeriod || this.currentPage !== 'rank' || this.isTransitioning) return;
+        this.selectedRankPeriod = period;
+        this.refreshCurrentPage('rank');
+    }
 
-        this.createLabel('7-DAY FORTUNE STREAK', this.pageRoot, 24, Color.WHITE, 0, 112, 500, 44, true);
+    private buildRewardsPage(): void {
+        this.createPageTitle('LUCKY REWARDS', 'DAILY BONUS · BUILD YOUR WIN STREAK');
+        const chest = this.createCirclePanel('RewardChestGlow', this.pageRoot, 264, new Color(171, 62, 30, 110), 0, 288);
+        this.createCircleOutline('RewardRing1', chest, 228, new Color(202, 162, 91, 150), 0, 0, 3);
+        this.createCircleOutline('RewardRing2', chest, 184, new Color(255, 255, 255, 72), 0, 0, 2);
+        const gift = this.createSpriteNode('RewardGiftImage', chest, 216, 216, 0, -4, this.frames.get('treasure-chest-emblem'));
+        const giftOpacity = gift.addComponent(UIOpacity);
+        giftOpacity.opacity = 248;
+        chest.addComponent(Button);
+        chest.on(Button.EventType.CLICK, () => this.showToast('TREASURE CHEST · DAILY JACKPOT REWARDS'), this);
+        this.bindPressMotion(chest);
+        this.animateEntrance(chest, 0, 0, -12, 0.96);
+        tween(gift)
+            .repeatForever(
+                tween()
+                    .to(4.4, { position: new Vec3(0, 2, 0), scale: new Vec3(1.012, 1.012, 1) }, { easing: 'sineInOut' })
+                    .to(4.4, { position: new Vec3(0, -2, 0), scale: Vec3.ONE }, { easing: 'sineInOut' }),
+            )
+            .start();
+
+        this.createLabel('7-DAY JACKPOT STREAK', this.pageRoot, 24, Color.WHITE, 0, 112, 500, 44, true);
         const rewards = [100, 150, 200, 250, 300, 400, 800];
         rewards.forEach((amount, index) => {
-            const x = -270 + (index % 4) * 180;
+            const x = index < 4 ? -270 + index * 180 : -180 + (index - 4) * 180;
             const y = index < 4 ? 5 : -125;
             const claimed = index < 2;
             const cell = this.createPanel(
@@ -624,20 +714,34 @@ export class SlotGame extends Component {
                 this.pageRoot,
                 index === 6 ? 170 : 150,
                 108,
-                claimed ? new Color(76, 27, 42, 215) : index === 2 ? new Color(174, 60, 24, 248) : new Color(91, 23, 42, 238),
+                claimed ? new Color(78, 23, 23, 222) : index === 2 ? new Color(139, 44, 27, 250) : new Color(91, 25, 24, 242),
                 x,
                 y,
                 24,
             );
-            this.createOutlinePanel('RewardOutline', cell, (index === 6 ? 170 : 150) - 8, 100, index === 2 ? new Color(255, 222, 79) : new Color(255, 199, 51, 120), 0, 0, 20, index === 2 ? 3 : 2);
-            this.createLabel(`DAY ${index + 1}`, cell, 12, new Color(255, 226, 125), 0, 29, 120, 24, true);
-            this.createLabel(claimed ? '✓' : '★', cell, 25, claimed ? new Color(129, 230, 163) : new Color(255, 199, 36), -34, -10, 40, 40, true);
+            this.decorateCasinoCard(cell, index === 6 ? 170 : 150, 108, index, false);
+            this.createOutlinePanel('RewardOutline', cell, (index === 6 ? 170 : 150) - 8, 100, index === 2 ? new Color(225, 190, 117) : new Color(202, 162, 91, 70), 0, 0, 20, index === 2 ? 2 : 1);
+            this.createLabel(`DAY ${index + 1}`, cell, 12, new Color(225, 190, 117), 0, 29, 120, 24, true);
+            const statusIcon = this.createSpriteNode(
+                'RewardStatusImage',
+                cell,
+                claimed ? 34 : 28,
+                claimed ? 34 : 28,
+                -34,
+                -10,
+                this.frames.get('coin-emblem'),
+            );
+            if (index === 2) this.animateSoftImage(statusIcon, 0.2);
             this.createLabel(`${amount}`, cell, 18, Color.WHITE, 24, -10, 70, 34, true);
+            cell.addComponent(Button);
+            cell.on(Button.EventType.CLICK, () => this.showToast(`DAY ${index + 1} · ${amount} COINS`), this);
+            this.bindPressMotion(cell);
+            this.animateEntrance(cell, index + 1, 0, -8, 0.975);
         });
 
-        const claimedToday = sys.localStorage.getItem(this.rewardKey) === this.todayKey();
+        const claimedToday = this.isRewardClaimedToday();
         const rewardButton = this.createArtworkButton(
-            claimedToday ? 'CLAIMED TODAY' : '',
+            claimedToday ? 'CLAIMED TODAY' : 'CLAIM +200',
             this.pageRoot,
             0,
             -245,
@@ -649,74 +753,75 @@ export class SlotGame extends Component {
             claimedToday ? new Color(150, 150, 150) : Color.WHITE,
             claimedToday ? Color.WHITE : new Color(75, 12, 16),
         );
-        if (!claimedToday) {
-            const amountBadge = this.createPanel('RewardAmountBadge', rewardButton, 86, 30, new Color(91, 18, 30, 242), 92, 36, 15);
-            this.createLabel('+200', amountBadge, 13, new Color(255, 226, 112), 0, 0, 76, 24, true);
-        }
+        if (!claimedToday) this.createLabel('TODAY', rewardButton, 10, new Color(4, 24, 28, 180), 0, 29, 90, 20, true);
         this.createLabel('NEXT REWARD REFRESHES AT MIDNIGHT', this.pageRoot, 12, new Color(255, 255, 255, 170), 0, -312, 500, 26, true);
 
-        const quests = this.createPanel('QuestPanel', this.pageRoot, 650, 160, new Color(53, 12, 32, 225), 0, -410, 30);
-        this.createLabel('FORTUNE MISSIONS', quests, 17, Color.WHITE, -170, 58, 270, 32, true);
+        const quests = this.createPanel('QuestPanel', this.pageRoot, 650, 160, new Color(96, 30, 25, 230), 0, -410, 30);
+        this.decorateCasinoCard(quests, 650, 160, 1, true);
+        this.createOutlinePanel('QuestPanelOutline', quests, 648, 158, new Color(202, 162, 91, 50), 0, 0, 30, 1);
+        this.createLabel('CASINO MISSIONS', quests, 17, Color.WHITE, -170, 58, 270, 32, true);
         [['PLAY 3 GAMES', '1 / 3', 0.34], ['WIN ANY SLOT', 'READY', 1]].forEach((item, index) => {
             const y = 8 - index * 62;
             this.createLabel(item[0] as string, quests, 13, Color.WHITE, -170, y + 16, 260, 26, true);
-            const track = this.createPanel(`QuestTrack_${index}`, quests, 360, 18, new Color(24, 5, 19, 200), -45, y - 18, 9);
+            const track = this.createPanel(`QuestTrack_${index}`, quests, 360, 18, new Color(50, 12, 15, 230), -45, y - 18, 9);
             const progressWidth = 346 * (item[2] as number);
             const progress = this.createPanel(`QuestProgress_${index}`, track, progressWidth, 12, new Color(255, 193, 38), -173 + progressWidth / 2, 0, 6);
             progress.setScale(0.06, 1, 1);
-            tween(progress).delay(0.18 + index * 0.1).to(0.48, { scale: Vec3.ONE }, { easing: 'quartOut' }).start();
+            tween(progress).delay(0.18 + index * 0.08).to(0.42, { scale: Vec3.ONE }, { easing: 'quartOut' }).start();
             this.createLabel(item[1] as string, quests, 14, new Color(255, 218, 83), 245, y, 100, 30, true);
         });
     }
 
     private buildAccountPage(): void {
         const user = this.currentUser!;
-        this.createPageTitle('MY ACCOUNT', 'PROFILE · ACHIEVEMENTS · SECURITY');
-        const profile = this.createSpriteNode('ProfileArtwork', this.pageRoot, 650, 404, 0, 222, this.frames.get('account-profile'));
-        this.createPanel('ProfileShade', profile, 610, 342, new Color(55, 10, 29, 78), 0, -5, 32);
-        this.createOutlinePanel('ProfileOutline', profile, 638, 392, new Color(255, 215, 77, 185), 0, 0, 38, 2);
-        const avatar = this.createCirclePanel('ProfileAvatarRim', profile, 144, new Color(255, 209, 57), -218, 58);
-        this.createCirclePanel('ProfileAvatarInset', avatar, 132, new Color(120, 29, 34), 0, 0);
-        const avatarImage = this.createSpriteNode('ProfileAvatar', avatar, 124, 124, 0, 0, this.avatarFrame(user.avatar));
-        tween(avatarImage).to(1.35, { scale: new Vec3(1.045, 1.045, 1) }).to(1.35, { scale: Vec3.ONE }).union().repeatForever().start();
+        this.createPageTitle('PLAYER PROFILE', 'VIP LEVEL · JACKPOT STATS · SECURITY');
+        const profile = this.createPanel('ProfileCard', this.pageRoot, 650, 372, new Color(105, 33, 27, 232), 0, 238, 36);
+        this.decorateCasinoCard(profile, 650, 372, 0, true);
+        this.createOutlinePanel('ProfileOutline', profile, 648, 370, new Color(202, 162, 91, 82), 0, 0, 36, 1);
+        this.createPanel('ProfileAccent', profile, 4, 166, new Color(202, 162, 91), -308, 62, 2);
+        const avatar = this.createCirclePanel('ProfileAvatarRim', profile, 144, new Color(202, 162, 91), -218, 58);
+        this.createCirclePanel('ProfileAvatarInset', avatar, 132, new Color(255, 235, 199), 0, 0);
+        this.createSpriteNode('ProfileAvatar', avatar, 124, 124, 0, 0, this.avatarFrame(user.avatar));
         this.createLabel(user.username.toUpperCase(), profile, 27, Color.WHITE, 72, 103, 350, 44, true);
-        this.createLabel('GOLD FORTUNE MEMBER', profile, 13, new Color(255, 218, 92), 72, 66, 350, 27, true);
-        this.createSpriteNode('ProfileIdIcon', profile, 31, 20, -60, 30, this.frames.get('account-id'));
-        this.createLabel(`FC-${Math.abs(this.hashName(user.username)).toString().padStart(6, '0').slice(0, 6)}`, profile, 13, new Color(255, 255, 255, 178), 82, 30, 225, 25);
+        this.createLabel('GOLD HIGH ROLLER', profile, 13, new Color(225, 190, 117), 72, 66, 350, 27, true);
+        this.createLabel(`VIP-${Math.abs(this.hashName(user.username)).toString().padStart(6, '0').slice(0, 6)}`, profile, 13, new Color(255, 255, 255, 178), 82, 30, 225, 25);
         this.createArtworkButton('CHANGE AVATAR', profile, 73, -24, 220, 55, () => this.rotateAvatar(), 'button-small', 12);
 
         const stats = [
-            { label: 'BALANCE', value: user.coins.toLocaleString('en-US'), frame: 'account-money' },
+            { label: 'BALANCE', value: user.coins.toLocaleString('en-US'), frame: 'coin-emblem' },
             { label: 'GAMES PLAYED', value: '24', frame: 'account-info-3' },
-            { label: 'BEST WIN', value: '3,500', frame: 'account-info-4' },
+            { label: 'BEST JACKPOT', value: '3,500', frame: 'account-info-4' },
         ];
         stats.forEach((stat, index) => {
-            const statCard = this.createPanel('ProfileStat', profile, 184, 92, new Color(55, 11, 31, 220), -202 + index * 202, -132, 22);
+            const statCard = this.createPanel('ProfileStat', profile, 184, 92, new Color(117, 45, 35, 118), -202 + index * 202, -118, 22);
+            this.decorateCasinoCard(statCard, 184, 92, index, false);
             this.createSpriteNode('ProfileStatIcon', statCard, 34, 34, -60, 12, this.frames.get(stat.frame));
-            this.createLabel(stat.value, statCard, 20, new Color(255, 216, 78), 24, 13, 112, 30, true);
+            this.createLabel(stat.value, statCard, 20, new Color(225, 190, 117), 24, 13, 112, 30, true);
             this.createLabel(stat.label, statCard, 10, new Color(255, 255, 255, 165), 0, -24, 155, 22, true);
         });
+        this.animateEntrance(profile, 0, 0, -10, 0.975);
 
         const accountActions = [
             { name: 'INBOX', subtitle: '3 NEW MESSAGES', icon: 'account-inbox', title: 'account-inbox-title', x: -165 },
             { name: 'ACHIEVEMENTS', subtitle: '12 / 36 UNLOCKED', icon: 'account-info-7', title: 'account-achievement-title', x: 165 },
         ];
         accountActions.forEach((action, index) => {
-            const actionCard = this.createPanel(`AccountAction_${action.name}`, this.pageRoot, 310, 142, new Color(67, 15, 38, 238), action.x, -74, 30);
-            this.createOutlinePanel('AccountActionOutline', actionCard, 300, 132, new Color(255, 203, 56, 125), 0, 0, 26, 2);
+            const actionCard = this.createPanel(`AccountAction_${action.name}`, this.pageRoot, 310, 142, new Color(108, 34, 28, 232), action.x, -68, 30);
+            this.decorateCasinoCard(actionCard, 310, 142, index + 1, false);
+            this.createOutlinePanel('AccountActionOutline', actionCard, 300, 132, new Color(202, 162, 91, 62), 0, 0, 26, 1);
             const icon = this.createSpriteNode('AccountActionIcon', actionCard, index === 0 ? 72 : 62, index === 0 ? 68 : 62, -98, 8, this.frames.get(action.icon));
-            const titleWidth = index === 0 ? 104 : 158;
-            this.createSpriteNode('AccountActionTitle', actionCard, titleWidth, index === 0 ? 46 : 31, 45, 23, this.frames.get(action.title));
-            this.createLabel(action.subtitle, actionCard, 10, new Color(255, 228, 133), 45, -27, 180, 22, true);
-            this.createLabel('›', actionCard, 28, Color.WHITE, 130, 0, 28, 42, true);
+            this.createLabel(action.name, actionCard, 17, Color.WHITE, 45, 23, 180, 30, true);
+            this.createLabel(action.subtitle, actionCard, 10, new Color(225, 190, 117), 45, -27, 180, 22, true);
             actionCard.addComponent(Button);
             actionCard.on(Button.EventType.CLICK, () => this.showToast(`${action.name} PANEL READY TO CONNECT`), this);
             this.bindPressMotion(actionCard);
-            tween(icon).delay(index * 0.3).to(1.1, { position: new Vec3(-98, 14, 0) }).to(1.1, { position: new Vec3(-98, 8, 0) }).union().repeatForever().start();
+            this.animateEntrance(actionCard, index + 1, 0, -10, 0.975);
         });
 
-        const settings = this.createPanel('AccountSettings', this.pageRoot, 650, 264, new Color(48, 9, 29, 232), 0, -292, 34);
-        this.createLabel('ACCOUNT CENTER', settings, 15, new Color(255, 218, 94), -213, 106, 190, 28, true);
+        const settings = this.createPanel('AccountSettings', this.pageRoot, 650, 264, new Color(94, 29, 25, 232), 0, -288, 34);
+        this.decorateCasinoCard(settings, 650, 264, 2, true);
+        this.createOutlinePanel('AccountSettingsOutline', settings, 648, 262, new Color(202, 162, 91, 46), 0, 0, 34, 1);
+        this.createLabel('VIP PLAYER CENTER', settings, 15, new Color(225, 190, 117), -213, 106, 190, 28, true);
         const menuItems = [
             { label: 'SOUND', value: 'ON', icon: 'account-info-1' },
             { label: 'NOTIFICATIONS', value: 'ON', icon: 'account-info-2' },
@@ -726,27 +831,31 @@ export class SlotGame extends Component {
         menuItems.forEach((item, index) => {
             const x = index % 2 === 0 ? -158 : 158;
             const y = index < 2 ? 42 : -70;
-            const menu = this.createPanel(`AccountMenu_${item.label}`, settings, 292, 96, new Color(255, 255, 255, 13), x, y, 24);
+            const menu = this.createPanel(`AccountMenu_${item.label}`, settings, 292, 96, new Color(121, 49, 38, 98), x, y, 24);
+            this.decorateCasinoCard(menu, 292, 96, index, false);
             this.createSpriteNode('AccountMenuIcon', menu, 48, 48, -104, 0, this.frames.get(item.icon));
             this.createLabel(item.label, menu, 13, Color.WHITE, 0, 13, 150, 26, true);
-            this.createLabel(item.value, menu, 10, new Color(255, 214, 86), 0, -18, 150, 22, true);
-            this.createLabel('›', menu, 24, new Color(255, 255, 255, 180), 116, 0, 24, 34, true);
+            this.createLabel(item.value, menu, 10, new Color(225, 190, 117), 0, -18, 150, 22, true);
             menu.addComponent(Button);
             menu.on(Button.EventType.CLICK, () => this.showToast(`${item.label} SETTINGS READY`), this);
             this.bindPressMotion(menu);
         });
+        this.animateEntrance(settings, 3, 0, -10, 0.98);
 
-        this.createArtworkButton('LOG OUT', this.pageRoot, 0, -468, 230, 52, () => this.logout(), 'button-wide', 13, new Color(255, 178, 178), Color.WHITE);
+        this.createArtworkButton('LOG OUT', this.pageRoot, 0, -468, 230, 52, () => this.logout(), 'auth-secondary', 13, new Color(255, 178, 178), Color.WHITE);
     }
 
     private buildNavigation(active: LobbyPage): void {
-        const shadow = this.createPanel('NavigationShadow', this.node, 750, 150, new Color(15, 2, 13, 130), 0, -603, 0);
-        shadow.setPosition(0, -610);
-        const nav = this.createSpriteNode('Navigation', this.node, 750, 150, 0, -603, this.frames.get('tabbar'));
+        this.createPanel('NavigationShadow', this.node, this.viewportWidth, 146, new Color(70, 16, 12, 112), 0, -610, 0);
+        const nav = this.createPanel('Navigation', this.node, this.viewportWidth, 138, new Color(95, 28, 20, 248), 0, -603, 0);
         this.navigationRoot = nav;
-        this.createPanel('NavigationGoldLine', nav, 750, 3, new Color(255, 205, 56), 0, 73, 2);
-        this.navigationSelector = this.createPanel('NavigationSelector', nav, 126, 104, new Color(255, 194, 35, 30), this.navigationX(active), -4, 32);
-        this.createPanel('NavigationSelectorGlow', this.navigationSelector, 72, 5, new Color(255, 214, 74), 0, 49, 3);
+        this.createPanel('NavigationGoldLine', nav, this.viewportWidth, 1, new Color(202, 162, 91, 96), 0, 68, 0);
+        this.navigationSelector = this.createSpriteNode('NavigationSelector', nav, 116, 94, this.navigationX(active), -2, this.frames.get('nav-selector-soft'));
+        const selectorOpacity = this.navigationSelector.addComponent(UIOpacity);
+        selectorOpacity.opacity = 232;
+        tween(selectorOpacity)
+            .repeatForever(tween().to(3.2, { opacity: 255 }, { easing: 'sineInOut' }).to(3.2, { opacity: 224 }, { easing: 'sineInOut' }))
+            .start();
         const items: Array<[LobbyPage, string]> = [
             ['home', 'HOME'],
             ['store', 'STORE'],
@@ -779,13 +888,6 @@ export class SlotGame extends Component {
             );
             const iconSprite = iconNode.getComponent(Sprite)!;
             this.navigationIcons.set(page, iconSprite);
-            tween(iconNode)
-                .delay(index * 0.24)
-                .to(1.1, { position: new Vec3(0, 4, 0), angle: index % 2 === 0 ? 1.5 : -1.5 }, { easing: 'quadInOut' })
-                .to(1.1, { position: new Vec3(0, -1, 0), angle: 0 }, { easing: 'quadInOut' })
-                .union()
-                .repeatForever()
-                .start();
             button.addComponent(Button);
             button.on(Button.EventType.CLICK, () => this.transitionTo(page), this);
             this.bindPressMotion(button);
@@ -795,7 +897,7 @@ export class SlotGame extends Component {
     private updateNavigation(active: LobbyPage): void {
         if (this.navigationSelector?.isValid) {
             const x = this.navigationX(active);
-            tween(this.navigationSelector).to(0.34, { position: new Vec3(x, -4, 0) }, { easing: 'backOut' }).start();
+            tween(this.navigationSelector).to(0.26, { position: new Vec3(x, -4, 0) }, { easing: 'quartOut' }).start();
         }
         (['home', 'store', 'rank', 'rewards', 'account'] as LobbyPage[]).forEach((page) => {
             const selected = page === active;
@@ -804,7 +906,7 @@ export class SlotGame extends Component {
                 icon.spriteFrame = this.frames.get(`nav-${page}-${selected ? 'selected' : 'normal'}`) ?? null;
                 const [width, height] = this.navigationIconSize(page, selected);
                 icon.node.getComponent(UITransform)?.setContentSize(width, height);
-                tween(icon.node).to(0.22, { scale: selected ? new Vec3(1.12, 1.12, 1) : Vec3.ONE }, { easing: 'backOut' }).start();
+                tween(icon.node).to(0.22, { scale: selected ? new Vec3(1.04, 1.04, 1) : Vec3.ONE }, { easing: 'quartOut' }).start();
             }
             const label = this.navigationLabels.get(page);
             if (label?.node.isValid) label.color = selected ? Color.WHITE : new Color(255, 255, 255, 150);
@@ -820,41 +922,49 @@ export class SlotGame extends Component {
 
     private buildAuth(registerMode: boolean): void {
         this.clearCanvas();
-        const authBackground = this.createSpriteNode('AuthBackground', this.node, 750, 1334, 0, 0, this.frames.get('login-background'));
-        authBackground.setScale(1.025, 1.025, 1);
-        tween(authBackground).to(6, { scale: Vec3.ONE }, { easing: 'quadInOut' }).to(6, { scale: new Vec3(1.025, 1.025, 1) }, { easing: 'quadInOut' }).union().repeatForever().start();
-        this.createPanel('AuthDimmer', this.node, 750, 1334, new Color(26, 2, 22, 48), 0, 0, 0);
-        const logoGlow = this.createCirclePanel('AuthLogoGlow', this.node, 330, new Color(255, 192, 38, 34), 0, 438);
-        this.createCircleOutline('AuthLogoRing', logoGlow, 280, new Color(255, 207, 59, 118), 0, 0, 3);
-        const crown = this.createLabel('♛', logoGlow, 72, new Color(255, 211, 58), 0, 36, 130, 100, true);
-        this.createLabel('FORTUNE CLUB', this.node, 46, Color.WHITE, 0, 392, 620, 70, true);
-        this.createLabel('YOUR PREMIUM SLOT DESTINATION', this.node, 14, new Color(255, 221, 119), 0, 346, 580, 30, true);
-        tween(crown.node).to(0.9, { scale: new Vec3(1.12, 1.12, 1), angle: 4 }).to(0.9, { scale: Vec3.ONE, angle: -4 }).union().repeatForever().start();
+        const [backgroundWidth, backgroundHeight] = this.coverViewportSize(2 / 3);
+        const authBackground = this.createSpriteNode('AuthBackground', this.node, backgroundWidth * 1.04, backgroundHeight * 1.04, 0, 0, this.frames.get('login-background'));
+        authBackground.setScale(1.01, 1.01, 1);
+        tween(authBackground)
+            .repeatForever(
+                tween()
+                    .to(10.5, { position: new Vec3(-4, 5, 0), scale: new Vec3(1.025, 1.025, 1) }, { easing: 'sineInOut' })
+                    .to(10.5, { position: new Vec3(4, -4, 0), scale: new Vec3(1.01, 1.01, 1) }, { easing: 'sineInOut' }),
+            )
+            .start();
+        this.createPanel('AuthDimmer', this.node, this.viewportWidth, this.viewportHeight, new Color(91, 23, 19, 42), 0, 0, 0);
+        this.createAmbientGoldDust(this.node, 8);
+        this.createDisplayLabel('FORTUNE CLUB', this.node, 38, new Color(255, 245, 220), 0, 402, 620, 60);
+        this.createLabel('TREASURE MEMBER ACCESS', this.node, 12, new Color(139, 70, 48), 0, 360, 580, 28, true);
 
-        const cardHeight = registerMode ? 790 : 690;
+        const cardHeight = registerMode ? 880 : 690;
         const cardY = registerMode ? -105 : -60;
-        const shadow = this.createPanel('AuthCardShadow', this.node, 642, cardHeight, new Color(20, 2, 16, 118), 0, cardY - 12, 48);
-        shadow.setScale(0.96, 0.96, 1);
-        const rim = this.createPanel('AuthCardRim', this.node, 642, cardHeight, new Color(255, 207, 59), 0, cardY, 48);
-        const card = this.createPanel('AuthCard', rim, 628, cardHeight - 14, new Color(63, 13, 38, 250), 0, 0, 42);
-        card.setScale(0.78, 0.78, 1);
-        tween(card).to(0.34, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
+        this.createPanel('AuthCardShadow', this.node, 626, cardHeight, new Color(0, 0, 0, 52), 0, cardY - 10, 48);
+        const card = this.createPanel('AuthCard', this.node, 626, cardHeight, new Color(72, 18, 21, 124), 0, cardY, 48);
+        this.decorateCasinoCard(card, 626, cardHeight, registerMode ? 1 : 0, true);
+        this.createOutlinePanel('AuthCardOutline', card, 624, cardHeight - 2, new Color(255, 225, 142, 46), 0, 0, 48, 1);
+        const cardOpacity = card.addComponent(UIOpacity);
+        cardOpacity.opacity = 0;
+        card.setPosition(0, cardY - 18);
+        tween(card).to(0.38, { position: new Vec3(0, cardY, 0) }, { easing: 'quartOut' }).start();
+        tween(cardOpacity).to(0.24, { opacity: 255 }, { easing: 'quadOut' }).start();
 
-        const tabs = this.createPanel('AuthTabs', card, 520, 62, new Color(32, 5, 25, 215), 0, cardHeight / 2 - 68, 31);
+        const tabsY = registerMode ? 327 : cardHeight / 2 - 68;
+        const tabs = this.createPanel('AuthTabs', card, 520, 58, new Color(56, 14, 16, 52), 0, tabsY, 20);
         const tabX = registerMode ? 130 : -130;
-        this.createPanel('AuthTabActive', tabs, 248, 50, new Color(255, 190, 35), tabX, 0, 25);
-        const loginTab = this.createLabel('LOGIN', tabs, 16, registerMode ? new Color(255, 255, 255, 180) : new Color(96, 22, 27), -130, 0, 230, 36, true).node;
-        const registerTab = this.createLabel('REGISTER', tabs, 16, registerMode ? new Color(96, 22, 27) : new Color(255, 255, 255, 180), 130, 0, 230, 36, true).node;
+        this.createPanel('AuthTabUnderline', tabs, 128, 3, new Color(255, 210, 86), tabX, -23, 2);
+        const loginTab = this.createLabel('LOGIN', tabs, 14, registerMode ? new Color(255, 255, 255, 156) : new Color(255, 225, 142), -130, 0, 230, 34, true).node;
+        const registerTab = this.createLabel('REGISTER', tabs, 14, registerMode ? new Color(255, 225, 142) : new Color(255, 255, 255, 156), 130, 0, 230, 34, true).node;
         this.makeLabelClickable(loginTab, () => this.switchAuth(false));
         this.makeLabelClickable(registerTab, () => this.switchAuth(true));
 
-        const titleY = cardHeight / 2 - 142;
-        this.createLabel(registerMode ? 'CREATE YOUR ACCOUNT' : 'WELCOME BACK', card, 28, Color.WHITE, 0, titleY, 520, 46, true);
+        const titleY = registerMode ? 253 : cardHeight / 2 - 142;
+        this.createDisplayLabel(registerMode ? 'CREATE YOUR ACCOUNT' : 'WELCOME BACK', card, 25, new Color(247, 243, 232), 0, titleY, 520, 46);
         this.createLabel(
             registerMode ? 'START YOUR FORTUNE JOURNEY' : 'SIGN IN TO CONTINUE PLAYING',
             card,
             13,
-            new Color(255, 218, 112),
+            new Color(255, 221, 188),
             0,
             titleY - 38,
             500,
@@ -867,18 +977,18 @@ export class SlotGame extends Component {
         const confirm = registerMode ? this.createInput(card, 'CONFIRM PASSWORD', -64, true) : null;
 
         if (registerMode) {
-            this.createLabel('CHOOSE AVATAR', card, 13, new Color(255, 225, 133), -200, -132, 170, 28, true);
-            for (let index = 0; index < 4; index += 1) {
+            this.createLabel('CHOOSE AVATAR', card, 12, new Color(255, 220, 180), -200, -132, 170, 28, true);
+            for (let index = 0; index < 6; index += 1) {
                 const selected = this.registerAvatar === index;
                 const avatar = this.createCirclePanel(
                     `RegisterAvatar_${index}`,
                     card,
-                    selected ? 78 : 70,
-                    selected ? new Color(255, 209, 57) : new Color(138, 44, 48),
-                    -180 + index * 120,
-                    -192,
+                    selected ? 60 : 54,
+                    selected ? new Color(202, 162, 91) : new Color(110, 35, 27),
+                    -225 + index * 90,
+                    -190,
                 );
-                this.createSpriteNode('RegisterAvatarImage', avatar, selected ? 68 : 60, selected ? 68 : 60, 0, 0, this.avatarFrame(index));
+                this.createSpriteNode('RegisterAvatarImage', avatar, selected ? 52 : 46, selected ? 52 : 46, 0, 0, this.avatarFrame(index));
                 avatar.addComponent(Button);
                 avatar.on(Button.EventType.CLICK, () => {
                     this.registerAvatar = index;
@@ -887,10 +997,10 @@ export class SlotGame extends Component {
                 this.bindPressMotion(avatar);
             }
         } else {
-            this.createLabel('Demo account:  player  /  123456', card, 13, new Color(255, 255, 255, 150), 0, -82, 480, 28);
+            this.createLabel('Demo: player  /  123456', card, 12, new Color(255, 219, 188), 0, -82, 480, 28);
         }
 
-        const message = this.createLabel('', card, 13, new Color(255, 125, 125), 0, registerMode ? -258 : -135, 520, 30, true);
+        const message = this.createLabel('', card, 13, new Color(236, 128, 128), 0, registerMode ? -252 : -135, 520, 30, true);
         const buttonY = registerMode ? -316 : -204;
         this.createArtworkButton(
             registerMode ? 'CREATE ACCOUNT' : 'LOGIN',
@@ -903,7 +1013,7 @@ export class SlotGame extends Component {
                 if (registerMode && confirm) this.register(username.string, password.string, confirm.string, message);
                 else this.login(username.string, password.string, message);
             },
-            'button-primary',
+            'auth-primary',
             21,
         );
         const secondaryButton = this.createArtworkButton(
@@ -914,7 +1024,7 @@ export class SlotGame extends Component {
             380,
             68,
             () => registerMode ? this.switchAuth(false) : this.guestLogin(),
-            'button-wide',
+            'auth-secondary',
             16,
             new Color(155, 90, 112),
             Color.WHITE,
@@ -927,17 +1037,20 @@ export class SlotGame extends Component {
     }
 
     private switchAuth(registerMode: boolean): void {
-        const curtain = this.createPanel('AuthTransitionCurtain', this.node, 750, 1334, new Color(22, 2, 18), 0, 0, 0);
+        if (this.isAuthTransitioning) return;
+        this.isAuthTransitioning = true;
+        const curtain = this.createPanel('AuthTransitionCurtain', this.node, this.viewportWidth, this.viewportHeight, new Color(61, 13, 15), 0, 0, 0);
         const opacity = curtain.addComponent(UIOpacity);
         opacity.opacity = 0;
         tween(opacity)
-            .to(0.16, { opacity: 230 }, { easing: 'quadIn' })
+            .to(0.18, { opacity: 236 }, { easing: 'quadIn' })
             .call(() => this.buildAuth(registerMode))
             .start();
     }
 
     private createInput(parent: Node, placeholder: string, y: number, password: boolean): EditBox {
-        const face = this.createSpriteNode(`Input_${placeholder}`, parent, 520, 78, 0, y, this.frames.get('login-input'));
+        const face = this.createPanel(`Input_${placeholder}`, parent, 520, 78, new Color(56, 13, 16, 158), 0, y, 20);
+        this.createOutlinePanel('InputOutline', face, 518, 76, new Color(255, 225, 142, 38), 0, 0, 20, 1);
         const icon = this.createSpriteNode('InputIcon', face, password ? 29 : 27, password ? 25 : 31, -218, 0, this.frames.get(password ? 'login-password' : 'login-user'));
         const editNode = new Node(`Edit_${placeholder}`);
         editNode.active = false;
@@ -957,11 +1070,13 @@ export class SlotGame extends Component {
         placeholderLabel.node.getComponent(UITransform)!.setAnchorPoint(0, 1);
         placeholderLabel.node.getComponent(UITransform)!.setContentSize(400, 58);
         textLabel.fontSize = 18;
+        textLabel.font = this.uiFont;
         textLabel.lineHeight = 22;
         textLabel.color = Color.WHITE;
         textLabel.horizontalAlign = Label.HorizontalAlign.LEFT;
         textLabel.verticalAlign = Label.VerticalAlign.CENTER;
         placeholderLabel.fontSize = 15;
+        placeholderLabel.font = this.uiFont;
         placeholderLabel.lineHeight = 20;
         placeholderLabel.color = new Color(255, 244, 220, 118);
         placeholderLabel.horizontalAlign = Label.HorizontalAlign.LEFT;
@@ -976,10 +1091,14 @@ export class SlotGame extends Component {
         placeholderLabel.node.setPosition(-198, 29);
         editNode.on(EditBox.EventType.EDITING_DID_BEGAN, () => {
             this.centerNativeInputText();
-            tween(face).to(0.15, { scale: new Vec3(1.018, 1.018, 1) }, { easing: 'quadOut' }).start();
-            tween(icon).to(0.15, { scale: new Vec3(1.12, 1.12, 1) }, { easing: 'backOut' }).start();
+            Tween.stopAllByTarget(face);
+            Tween.stopAllByTarget(icon);
+            tween(face).to(0.16, { scale: new Vec3(1.01, 1.01, 1) }, { easing: 'quadOut' }).start();
+            tween(icon).to(0.16, { scale: new Vec3(1.06, 1.06, 1) }, { easing: 'quartOut' }).start();
         });
         editNode.on(EditBox.EventType.EDITING_DID_ENDED, () => {
+            Tween.stopAllByTarget(face);
+            Tween.stopAllByTarget(icon);
             tween(face).to(0.18, { scale: Vec3.ONE }, { easing: 'quadOut' }).start();
             tween(icon).to(0.18, { scale: Vec3.ONE }, { easing: 'quadOut' }).start();
         });
@@ -1093,7 +1212,7 @@ export class SlotGame extends Component {
 
     private claimDailyReward(): void {
         if (!this.currentUser) return;
-        if (sys.localStorage.getItem(this.rewardKey) === this.todayKey()) {
+        if (this.isRewardClaimedToday()) {
             this.showToast('TODAY\'S REWARD IS ALREADY CLAIMED');
             return;
         }
@@ -1101,7 +1220,7 @@ export class SlotGame extends Component {
         const accounts = this.readAccounts();
         accounts[this.currentUser.username] = this.currentUser;
         this.persistAccounts(accounts);
-        sys.localStorage.setItem(this.rewardKey, this.todayKey());
+        sys.localStorage.setItem(this.rewardStorageKey(), this.todayKey());
         this.buildApp('rewards');
         this.showToast('+200 COINS · DAILY REWARD CLAIMED');
     }
@@ -1130,19 +1249,42 @@ export class SlotGame extends Component {
     }
 
     private rankEntries(): RankEntry[] {
-        const samples: RankEntry[] = [
-            { name: 'LunaGold', coins: 128500, avatar: 2 },
-            { name: 'TigerMax', coins: 110800, avatar: 4 },
-            { name: 'RubySpin', coins: 98600, avatar: 3 },
-            { name: 'OceanAce', coins: 76400, avatar: 1 },
-            { name: 'LuckyMia', coins: 65350, avatar: 5 },
-            { name: 'Pharaoh7', coins: 52200, avatar: 0 },
-            { name: 'CandyKing', coins: 41900, avatar: 4 },
-            { name: 'NovaWays', coins: 33800, avatar: 2 },
-        ];
+        const samplesByPeriod: Record<RankPeriod, RankEntry[]> = {
+            daily: [
+                { name: 'LunaGold', coins: 128500, avatar: 2 },
+                { name: 'TigerMax', coins: 110800, avatar: 4 },
+                { name: 'RubySpin', coins: 98600, avatar: 3 },
+                { name: 'JackpotJoe', coins: 76400, avatar: 1 },
+                { name: 'LuckyMia', coins: 65350, avatar: 5 },
+                { name: 'ChipMaster', coins: 52200, avatar: 0 },
+                { name: 'GoldenAce', coins: 41900, avatar: 4 },
+                { name: 'MegaBetty', coins: 33800, avatar: 2 },
+            ],
+            weekly: [
+                { name: 'RubySpin', coins: 742800, avatar: 3 },
+                { name: 'JackpotJoe', coins: 698400, avatar: 1 },
+                { name: 'LunaGold', coins: 655900, avatar: 2 },
+                { name: 'GoldenAce', coins: 604200, avatar: 4 },
+                { name: 'TigerMax', coins: 572600, avatar: 4 },
+                { name: 'LuckyMia', coins: 526300, avatar: 5 },
+                { name: 'MegaBetty', coins: 481700, avatar: 2 },
+                { name: 'ChipMaster', coins: 438900, avatar: 0 },
+            ],
+            all: [
+                { name: 'JackpotJoe', coins: 12888600, avatar: 1 },
+                { name: 'GoldenAce', coins: 9864200, avatar: 4 },
+                { name: 'LunaGold', coins: 8755900, avatar: 2 },
+                { name: 'RubySpin', coins: 7642800, avatar: 3 },
+                { name: 'MegaBetty', coins: 6537100, avatar: 2 },
+                { name: 'TigerMax', coins: 5942600, avatar: 4 },
+                { name: 'LuckyMia', coins: 4825300, avatar: 5 },
+                { name: 'ChipMaster', coins: 3768900, avatar: 0 },
+            ],
+        };
+        const samples = samplesByPeriod[this.selectedRankPeriod].map((entry) => ({ ...entry }));
         if (this.currentUser) samples.push({
             name: this.currentUser.username,
-            coins: this.currentUser.coins,
+            coins: this.currentUser.coins * (this.selectedRankPeriod === 'daily' ? 1 : this.selectedRankPeriod === 'weekly' ? 7 : 30),
             avatar: this.currentUser.avatar,
             current: true,
         });
@@ -1150,52 +1292,31 @@ export class SlotGame extends Component {
     }
 
     private createPageTitle(title: string, subtitle: string): void {
-        this.createLabel(title, this.pageRoot, 38, new Color(255, 214, 69), 0, 500, 650, 58, true);
+        this.createDisplayLabel(title, this.pageRoot, 34, new Color(255, 225, 142), 0, 500, 650, 58);
         this.createLabel(subtitle, this.pageRoot, 13, new Color(255, 255, 255, 180), 0, 458, 620, 28, true);
         const line = this.createPanel('PageTitleLine', this.pageRoot, 220, 4, new Color(255, 198, 39), 0, 432, 2);
         line.setScale(0.1, 1, 1);
-        tween(line).to(0.38, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
+        tween(line).to(0.34, { scale: Vec3.ONE }, { easing: 'quartOut' }).start();
     }
 
     private showToast(text: string): void {
         const old = this.node.getChildByName('Toast');
         if (old) old.destroy();
-        const toast = this.createPanel('Toast', this.node, 580, 74, new Color(47, 8, 32, 248), 0, -450, 30);
-        this.createOutlinePanel('ToastOutline', toast, 570, 64, new Color(255, 205, 56, 180), 0, 0, 26, 2);
-        this.createCirclePanel('ToastDot', toast, 12, new Color(255, 201, 45), -248, 0);
+        const toast = this.createPanel('Toast', this.node, 580, 74, new Color(92, 24, 22, 250), 0, -450, 30);
+        this.decorateCasinoCard(toast, 580, 74, 2, false);
+        this.createOutlinePanel('ToastOutline', toast, 570, 64, new Color(202, 162, 91, 120), 0, 0, 26, 1);
+        this.createCirclePanel('ToastDot', toast, 12, new Color(202, 162, 91), -248, 0);
         this.createLabel(text, toast, 14, Color.WHITE, 18, 0, 500, 44, true);
         const opacity = toast.addComponent(UIOpacity);
         opacity.opacity = 0;
-        toast.setScale(0.82, 0.82, 1);
+        toast.setScale(0.95, 0.95, 1);
         tween(toast)
-            .to(0.2, { scale: Vec3.ONE, position: new Vec3(0, -430, 0) }, { easing: 'backOut' })
+            .to(0.2, { scale: Vec3.ONE, position: new Vec3(0, -430, 0) }, { easing: 'quartOut' })
             .delay(1.6)
-            .to(0.22, { scale: new Vec3(0.88, 0.88, 1), position: new Vec3(0, -458, 0) })
+            .to(0.2, { scale: new Vec3(0.96, 0.96, 1), position: new Vec3(0, -446, 0) }, { easing: 'quadIn' })
             .call(() => toast.destroy())
             .start();
-        tween(opacity).to(0.14, { opacity: 255 }).delay(1.65).to(0.22, { opacity: 0 }).start();
-    }
-
-    private async animateAmbientGold(version: number): Promise<void> {
-        while (this.node.isValid && version === this.fxVersion) {
-            const sparkle = this.createSparkle(
-                `AmbientGold_${Date.now()}`,
-                this.node,
-                -330 + Math.random() * 660,
-                -430 + Math.random() * 960,
-                12 + Math.random() * 15,
-            );
-            const opacity = sparkle.addComponent(UIOpacity);
-            opacity.opacity = 0;
-            sparkle.setScale(0.12, 0.12, 1);
-            tween(sparkle)
-                .to(0.22, { scale: Vec3.ONE, angle: 38 })
-                .to(0.42, { scale: new Vec3(0.08, 0.08, 1), angle: 95 })
-                .call(() => sparkle.destroy())
-                .start();
-            tween(opacity).to(0.12, { opacity: 235 }).delay(0.2).to(0.3, { opacity: 0 }).start();
-            await this.delay(260 + Math.random() * 230);
-        }
+        tween(opacity).to(0.14, { opacity: 255 }, { easing: 'quadOut' }).delay(1.65).to(0.2, { opacity: 0 }, { easing: 'quadIn' }).start();
     }
 
     private avatarFrame(index: number): SpriteFrame | undefined {
@@ -1205,6 +1326,14 @@ export class SlotGame extends Component {
     private todayKey(): string {
         const now = new Date();
         return `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+    }
+
+    private rewardStorageKey(): string {
+        return `${this.rewardKey}:${this.currentUser?.username ?? 'anonymous'}`;
+    }
+
+    private isRewardClaimedToday(): boolean {
+        return sys.localStorage.getItem(this.rewardStorageKey()) === this.todayKey();
     }
 
     private hashName(name: string): number {
@@ -1227,6 +1356,71 @@ export class SlotGame extends Component {
         graphics.roundRect(-width / 2, -height / 2, width, height, radius);
         graphics.fill();
         return node;
+    }
+
+    private decorateCasinoCard(card: Node, width: number, height: number, variant = 0, watermark = false): void {
+        const ratio = width / Math.max(1, height);
+        const useRichArtwork = card.name.startsWith('StorePack_')
+            || card.name.startsWith('Podium_')
+            || card.name === 'RankList'
+            || card.name === 'ProfileCard';
+        if (!useRichArtwork) {
+            const washHeight = Math.max(18, Math.round(height * 0.32));
+            this.createPanel(
+                'CardSoftLight',
+                card,
+                Math.max(24, width - 12),
+                washHeight,
+                new Color(255, 225, 155, watermark ? 18 : 12),
+                0,
+                height / 2 - washHeight / 2 - 6,
+                Math.min(20, Math.round(Math.min(width, height) * 0.14)),
+            );
+            this.createPanel('CardGoldBaseline', card, Math.max(28, width - 34), 1, new Color(255, 214, 104, 64), 0, -height / 2 + 10, 1);
+            return;
+        }
+        const storePackArtwork = Math.abs(variant) % 3 === 0
+            ? 'card-fortune-portrait'
+            : Math.abs(variant) % 3 === 1
+                ? 'panel-fortune-square'
+                : 'rank-podium-fortune';
+        const artworkKey = card.name.startsWith('StorePack_')
+            ? storePackArtwork
+            : card.name.startsWith('Podium_')
+                ? 'rank-podium-fortune'
+                : ratio <= 0.9
+                ? 'card-fortune-portrait'
+                : ratio >= 3.15
+                    ? 'panel-fortune-row'
+                    : ratio <= 1.28
+                        ? 'panel-fortune-square'
+                        : 'panel-fortune-wide';
+        const fallbackKey = ratio >= 3.15 ? 'panel-fortune-row' : 'panel-fortune-wide';
+        const frame = this.frames.get(artworkKey) ?? this.frames.get(fallbackKey);
+        if (!frame) return;
+        const artwork = this.createSpriteNode(`FortuneSurface_${artworkKey}`, card, width, height, 0, 0, frame);
+        artwork.setSiblingIndex(0);
+        const opacity = artwork.addComponent(UIOpacity);
+        const denseContent = card.name.startsWith('RankRow_')
+            || card.name.startsWith('RewardDay_')
+            || card.name.startsWith('AccountMenu_')
+            || card.name === 'ProfileStat';
+        opacity.opacity = denseContent ? 224 : watermark ? 242 : 246;
+        const insetX = ratio >= 3.15 ? 52 : ratio <= 0.9 ? 30 : 38;
+        const insetY = ratio >= 3.15 ? 14 : ratio <= 0.9 ? 38 : 28;
+        this.createPanel(
+            'FortuneContentQuietZone',
+            card,
+            Math.max(24, width - insetX),
+            Math.max(20, height - insetY),
+            new Color(63, 10, 14, denseContent ? 64 : 28),
+            0,
+            0,
+            Math.min(22, Math.round(Math.min(width, height) * 0.16)),
+        );
+        if (watermark || card.name.startsWith('Podium_') || card.name.startsWith('StorePack_')) {
+            this.animateSoftImage(artwork, (Math.abs(variant) % 4) * 0.15);
+        }
     }
 
     private createOutlinePanel(
@@ -1302,6 +1496,14 @@ export class SlotGame extends Component {
         label.verticalAlign = Label.VerticalAlign.CENTER;
         label.enableWrapText = false;
         label.isBold = bold;
+        label.font = bold ? (this.uiFontBold ?? this.uiFont) : this.uiFont;
+        return label;
+    }
+
+    private createDisplayLabel(text: string, parent: Node, fontSize: number, color: Color, x: number, y: number, width: number, height: number): Label {
+        const label = this.createLabel(text, parent, fontSize, color, x, y, width, height, true);
+        label.font = this.uiDisplayFont ?? this.uiFontBold ?? this.uiFont;
+        label.spacingX = Math.max(0, Math.round(fontSize * 0.04));
         return label;
     }
 
@@ -1322,11 +1524,83 @@ export class SlotGame extends Component {
         parent.addChild(button);
         button.setPosition(x, y);
         this.ensureTransform(button, width, height);
-        const shadow = this.createSpriteNode('ArtworkButtonShadow', button, width, height, 0, -4, this.frames.get(artworkKey));
-        shadow.getComponent(Sprite)!.color = new Color(42, 8, 22, 120);
-        const artwork = this.createSpriteNode('ArtworkButtonFace', button, width, height, 0, 0, this.frames.get(artworkKey));
-        artwork.getComponent(Sprite)!.color = tint;
-        if (text) this.createLabel(text, button, fontSize, textColor, 0, 1, Math.max(80, width - 70), height - 16, true);
+        const isSoftAuth = artworkKey === 'auth-primary' || artworkKey === 'auth-secondary';
+        const isPrimary = artworkKey === 'button-primary' || artworkKey === 'button-collect' || artworkKey === 'auth-primary';
+        const isDisabled = text === 'CLAIMED TODAY';
+        if (isSoftAuth) {
+            this.createPanel('AuthButtonShadow', button, width, height, new Color(24, 8, 10, 86), 0, -4, height / 2);
+            const face = this.createPanel(
+                'AuthButtonFace',
+                button,
+                width,
+                height,
+                isPrimary ? new Color(218, 169, 82, 242) : new Color(118, 36, 48, 236),
+                0,
+                0,
+                height / 2,
+            );
+            this.createPanel(
+                'AuthButtonHighlight',
+                face,
+                width - 18,
+                Math.max(12, Math.round(height * 0.34)),
+                isPrimary ? new Color(255, 245, 210, 48) : new Color(255, 185, 178, 30),
+                0,
+                height * 0.2,
+                Math.round(height * 0.2),
+            );
+            this.createOutlinePanel(
+                'AuthButtonOutline',
+                face,
+                width - 2,
+                height - 2,
+                isPrimary ? new Color(255, 231, 157, 154) : new Color(255, 196, 158, 98),
+                0,
+                0,
+                height / 2,
+                1,
+            );
+            this.createLabel(
+                text,
+                button,
+                fontSize,
+                isPrimary ? new Color(75, 35, 21) : Color.WHITE,
+                0,
+                1,
+                width - 42,
+                height - 12,
+                true,
+            );
+            this.animateSoftImage(face, (text.length % 3) * 0.12);
+            button.addComponent(Button);
+            button.on(Button.EventType.CLICK, handler, this);
+            this.bindPressMotion(button);
+            return button;
+        }
+        const skinKey = isSoftAuth
+            ? isPrimary ? 'button-primary-soft' : 'button-accent-soft'
+            : isPrimary ? 'button-gold-fortune' : 'button-ruby-fortune';
+        const fallbackKey = isPrimary ? 'button-primary-soft' : 'button-accent-soft';
+        const skinFrame = this.frames.get(skinKey) ?? this.frames.get(fallbackKey);
+        const shadow = this.createSpriteNode('ArtworkButtonImageShadow', button, width, height, 0, -4, skinFrame);
+        shadow.getComponent(Sprite)!.color = new Color(35, 20, 16, 170);
+        const shadowOpacity = shadow.addComponent(UIOpacity);
+        shadowOpacity.opacity = 82;
+        const face = this.createSpriteNode('ArtworkButtonImage', button, width, height, 0, 0, skinFrame);
+        const faceOpacity = face.addComponent(UIOpacity);
+        faceOpacity.opacity = isDisabled ? 145 : 248;
+        if (!isDisabled) this.animateSoftImage(face, (text.length % 4) * 0.18);
+        if (text) this.createLabel(
+            text,
+            button,
+            fontSize,
+            isPrimary ? new Color(63, 37, 20) : new Color(255, 249, 231),
+            0,
+            1,
+            Math.max(80, width - 48),
+            height - 12,
+            true,
+        );
         button.addComponent(Button);
         button.on(Button.EventType.CLICK, handler, this);
         this.bindPressMotion(button);
@@ -1344,43 +1618,115 @@ export class SlotGame extends Component {
         color: Color,
         fontSize: number,
     ): Node {
-        const rim = this.createPanel(`ButtonRim_${text}`, parent, width, height, new Color(255, 207, 58), x, y, height / 2);
-        const face = this.createPanel(`ButtonFace_${text}`, rim, width - 10, height - 10, color, 0, 0, height / 2 - 5);
-        this.createPanel('ButtonGloss', face, Math.max(30, width - 44), 8, new Color(255, 255, 255, 54), 0, height * 0.2, 4);
-        this.createLabel(text, face, fontSize, Color.WHITE, 0, 0, width - 20, height - 12, true);
+        const rim = new Node(`ImageButton_${text}`);
+        parent.addChild(rim);
+        rim.setPosition(x, y);
+        this.ensureTransform(rim, width, height);
+        const face = this.createSpriteNode(`ButtonImage_${text}`, rim, width, height, 0, 0, this.frames.get('button-gold-fortune') ?? this.frames.get('button-primary-soft'));
+        this.createLabel(text, rim, fontSize, new Color(91, 38, 21), 0, 0, width - 10, height - 8, true);
+        this.animateSoftImage(face, 0.1);
         rim.addComponent(Button);
         rim.on(Button.EventType.CLICK, handler, this);
         this.bindPressMotion(rim);
         return rim;
     }
 
-    private createSparkle(name: string, parent: Node, x: number, y: number, size: number): Node {
-        const sparkle = new Node(name);
-        parent.addChild(sparkle);
-        sparkle.setPosition(x, y);
-        this.ensureTransform(sparkle, size, size);
-        this.createPanel('SparkleVertical', sparkle, Math.max(3, size * 0.14), size, Color.WHITE, 0, 0, 2);
-        this.createPanel('SparkleHorizontal', sparkle, size, Math.max(3, size * 0.14), Color.WHITE, 0, 0, 2);
-        this.createCirclePanel('SparkleCore', sparkle, Math.max(5, size * 0.28), new Color(255, 204, 55), 0, 0);
-        return sparkle;
+    private animateEntrance(
+        node: Node,
+        index = 0,
+        xOffset = 0,
+        yOffset = -10,
+        startScale = 0.97,
+    ): void {
+        const finalPosition = node.position.clone();
+        const delay = Math.min(0.32, index * 0.055);
+        const opacity = node.getComponent(UIOpacity) ?? node.addComponent(UIOpacity);
+        this.entranceNodes.add(node);
+        opacity.opacity = 0;
+        node.setPosition(finalPosition.x + xOffset, finalPosition.y + yOffset, finalPosition.z);
+        node.setScale(startScale, startScale, 1);
+        tween(node)
+            .delay(delay)
+            .to(0.32, { position: finalPosition, scale: Vec3.ONE }, { easing: 'quartOut' })
+            .call(() => this.entranceNodes.delete(node))
+            .start();
+        tween(opacity)
+            .delay(delay)
+            .to(0.22, { opacity: 255 }, { easing: 'quadOut' })
+            .start();
+    }
+
+    private animateSoftImage(node: Node, delay: number): void {
+        const opacity = node.getComponent(UIOpacity) ?? node.addComponent(UIOpacity);
+        tween(node)
+            .delay(delay)
+            .repeatForever(
+                tween()
+                    .to(3.4, { scale: new Vec3(1.006, 1.006, 1) }, { easing: 'sineInOut' })
+                    .to(3.4, { scale: Vec3.ONE }, { easing: 'sineInOut' }),
+            )
+            .start();
+        tween(opacity)
+            .delay(delay)
+            .repeatForever(
+                tween()
+                    .to(3.1, { opacity: 255 }, { easing: 'sineInOut' })
+                    .to(3.1, { opacity: 247 }, { easing: 'sineInOut' }),
+            )
+            .start();
+    }
+
+    private createAmbientGoldDust(parent: Node, count: number): void {
+        const spots = [
+            [-318, 420], [292, 352], [-276, 188], [326, 78], [-330, -86], [300, -228],
+            [-258, -404], [236, -478], [-132, 510], [146, 438], [-78, -318], [92, 236],
+        ];
+        for (let index = 0; index < Math.min(count, spots.length); index += 1) {
+            const [x, y] = spots[index];
+            const size = 5 + (index % 4) * 2;
+            const dust = this.createCirclePanel(`AmbientGoldDust_${index}`, parent, size, new Color(255, 220, 137, 180), x, y);
+            const opacity = dust.addComponent(UIOpacity);
+            opacity.opacity = 32 + (index % 3) * 18;
+            const duration = 5 + (index % 5) * 0.7;
+            const travel = 12 + (index % 4) * 4;
+            dust.setScale(0.7, 0.7, 1);
+            tween(dust)
+                .delay(index * 0.22)
+                .repeatForever(
+                    tween()
+                        .to(duration, { position: new Vec3(x + (index % 2 === 0 ? 5 : -5), y + travel, 0), scale: new Vec3(1.05, 1.05, 1) }, { easing: 'sineInOut' })
+                        .to(duration, { position: new Vec3(x, y, 0), scale: new Vec3(0.7, 0.7, 1) }, { easing: 'sineInOut' }),
+                )
+                .start();
+            tween(opacity)
+                .delay(index * 0.18)
+                .repeatForever(
+                    tween()
+                        .to(duration * 0.8, { opacity: 112 }, { easing: 'sineInOut' })
+                        .to(duration * 0.8, { opacity: 28 }, { easing: 'sineInOut' }),
+                )
+                .start();
+        }
     }
 
     private bindPressMotion(node: Node): void {
         node.on(Node.EventType.TOUCH_START, () => {
+            if (this.entranceNodes.has(node)) return;
             Tween.stopAllByTarget(node);
-            tween(node).to(0.07, { scale: new Vec3(0.94, 0.94, 1) }, { easing: 'quadOut' }).start();
+            tween(node).to(0.09, { scale: new Vec3(0.97, 0.97, 1) }, { easing: 'quadOut' }).start();
         });
         const release = () => {
+            if (this.entranceNodes.has(node)) return;
             Tween.stopAllByTarget(node);
-            tween(node).to(0.18, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
+            tween(node).to(0.2, { scale: Vec3.ONE }, { easing: 'quartOut' }).start();
         };
         node.on(Node.EventType.TOUCH_END, release);
         node.on(Node.EventType.TOUCH_CANCEL, release);
     }
 
-    private pulse(node: Node, scale = 1.12): void {
+    private pulse(node: Node, scale = 1.06): void {
         Tween.stopAllByTarget(node);
-        tween(node).to(0.1, { scale: new Vec3(scale, scale, 1) }).to(0.2, { scale: Vec3.ONE }, { easing: 'backOut' }).start();
+        tween(node).to(0.1, { scale: new Vec3(scale, scale, 1) }, { easing: 'quadOut' }).to(0.2, { scale: Vec3.ONE }, { easing: 'quartOut' }).start();
     }
 
     private ensureTransform(node: Node, width: number, height: number): UITransform {
@@ -1389,7 +1735,10 @@ export class SlotGame extends Component {
         return transform;
     }
 
-    private delay(milliseconds: number): Promise<void> {
-        return new Promise((resolve) => setTimeout(resolve, milliseconds));
+    private coverViewportSize(sourceRatio: number): [number, number] {
+        const targetRatio = this.viewportWidth / Math.max(1, this.viewportHeight);
+        if (targetRatio >= sourceRatio) return [this.viewportWidth, this.viewportWidth / sourceRatio];
+        return [this.viewportHeight * sourceRatio, this.viewportHeight];
     }
+
 }

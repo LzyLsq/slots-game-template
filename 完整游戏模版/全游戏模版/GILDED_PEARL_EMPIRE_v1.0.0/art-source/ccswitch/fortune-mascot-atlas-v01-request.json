@@ -1,0 +1,13 @@
+{
+  "model": "gpt-5.6-sol",
+  "input": "Use case: stylized-concept\nAsset type: production 2x2 interactive mascot atlas for a premium portrait mobile slot game\nPrimary request: create exactly four original, friendly, high-end fortune mascots in one precise 2-column by 2-row atlas; joyful, soft and inviting, with strong wealth and casino celebration energy but not solemn\nScene/backdrop: one perfectly flat, uniform electric blue #0000FF chroma-key background across the entire image, with no gradient, no texture, no floor, no horizon, no cast shadow and no blue rim light\nSubject/order: top left: a tiny pearl fortune fairy in a cream-and-champagne outfit holding one luminous pearl; top right: a cheerful chibi Chinese God of Wealth inspired mascot in a soft wine-red and champagne-gold festive robe holding a blank gold ingot, respectful and original; bottom left: a playful ruby lion-dance cub mascot with pearl trim and a tiny blank casino chip; bottom right: a smiling emerald lucky cat mascot beside a faceted diamond and a few blank gold coins\nStyle/medium: premium polished 3D mobile game character renders, luxury casino game production art, tactile satin cloth, realistic pearls, precious metals and gemstones, cute proportions with refined details, cohesive with cream enamel, champagne gold and burgundy slot cabinets\nComposition/framing: exact uniform 2x2 grid, one complete mascot centered per cell, full body visible, equal visual scale, minimum 10 percent clear blue padding around each character, no overlap, no crop, clean silhouette at small UI size\nLighting/mood: soft champagne studio key light, pearl-white fill, restrained gemstone sparkle, upbeat lucky celebration, warm and gentle rather than royal or severe\nColor palette: cream, champagne gold, pearl white, soft wine red, ruby and emerald accents; do not use blue in any mascot\nConstraints: exactly four distinct fictional mascots; consistent camera, lighting and proportions; hard clean subject edges against the uniform blue key; no text, no letters, no numerals, no logos, no watermark, no currency symbols, no recognizable IP\nAvoid: transparent or checkerboard background, blue costume parts, blue gemstones, photoreal adult humans, frightening deity imagery, armor, weapons, dark temple, excessive neon, childish flat vector art, plastic toy look, extra characters, detached body parts, busy background",
+  "tools": [
+    {
+      "type": "image_generation",
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque",
+      "output_format": "png"
+    }
+  ]
+}
