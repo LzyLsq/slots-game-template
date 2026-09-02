@@ -52,6 +52,7 @@ type SurfaceInsets = {
   readonly bottom: number;
 };
 type CabinetLayout = {
+  readonly artScale: number;
   readonly titleX: number;
   readonly titleY: number;
   readonly titleWidth: number;
@@ -86,6 +87,18 @@ type CabinetLayout = {
   readonly turboX: number;
   readonly turboY: number;
 };
+type CabinetImageLayout = Readonly<{
+  apertureLeft: number; apertureTop: number; apertureRight: number; apertureBottom: number; reelRadius: number;
+  titleX: number; titleY: number; titleWidth: number; titleHeight: number;
+  mascotX: number; mascotY: number; mascotWidth: number; mascotHeight: number;
+  balanceCoinX: number; balanceLabelX: number; balanceY: number; balanceCoinSize: number;
+  winCoinX: number; winLabelX: number; winY: number; winCoinSize: number;
+  minusX: number; minusY: number; plusX: number; plusY: number; controlWidth: number; controlHeight: number;
+  spinX: number; spinY: number; spinWidth: number; spinHeight: number;
+  autoX: number; autoY: number; autoWidth: number; autoHeight: number;
+  betCoinX: number; betLabelX: number; betReadoutY: number; betCoinSize: number;
+  payoutsX: number; payoutsY: number; turboX: number; turboY: number; utilityWidth: number; utilityHeight: number;
+}>;
 const CARD_HERO_SYMBOLS = ['crown', 'guardian', 'seven', 'core'] as const;
 const CHARACTER_PATHS = [
   'generated/common/character_astral_v01', 'generated/common/character_golden_v01',
@@ -122,34 +135,130 @@ const GAME_TITLE_PATHS: Readonly<Record<GameId, string>> = {
 };
 const CABINET_LAYOUTS: Readonly<Record<GameId, CabinetLayout>> = {
   'astral-vault': {
+    artScale: 1,
     titleX: 0, titleY: 676, titleWidth: 710, titleHeight: 126, mascotX: 412, mascotY: 676,
     balanceCoinX: -128, balanceLabelX: 34, balanceY: 494,
-    reelY: 136, reelWidth: 804, reelHeight: 526, reelRadius: 52, reelFaceted: false, reelGlassColor: new Color(255, 247, 236, 42), winCoinX: -126, winLabelX: 0, winY: -211,
+    reelY: 136, reelWidth: 804, reelHeight: 526, reelRadius: 52, reelFaceted: false, reelGlassColor: new Color(255, 247, 236, 0), winCoinX: -126, winLabelX: 0, winY: -211,
     minusX: -436, minusY: -336, plusX: -282, plusY: -336, spinX: 0, spinY: -362, autoX: 370, autoY: -345,
     betCoinX: -150, betLabelX: 38, betReadoutY: -500, payoutsX: -405, payoutsY: -820, turboX: 405, turboY: -820,
   },
   'golden-dynasty': {
+    artScale: 1,
     titleX: 0, titleY: 624, titleWidth: 720, titleHeight: 142, mascotX: -412, mascotY: 612,
     balanceCoinX: -128, balanceLabelX: 34, balanceY: 444,
-    reelY: 174, reelWidth: 816, reelHeight: 448, reelRadius: 42, reelFaceted: false, reelGlassColor: new Color(255, 239, 203, 48), winCoinX: -126, winLabelX: 0, winY: -93,
+    reelY: 174, reelWidth: 816, reelHeight: 448, reelRadius: 42, reelFaceted: false, reelGlassColor: new Color(255, 239, 203, 0), winCoinX: -126, winLabelX: 0, winY: -93,
     minusX: -448, minusY: -259, plusX: -270, plusY: -259, spinX: 0, spinY: -259, autoX: 360, autoY: -259,
     betCoinX: -168, betLabelX: 20, betReadoutY: -438, payoutsX: -405, payoutsY: -820, turboX: 405, turboY: -820,
   },
   'neon-classic': {
+    artScale: 1,
     titleX: 0, titleY: 670, titleWidth: 720, titleHeight: 150, mascotX: 412, mascotY: 682,
     balanceCoinX: -128, balanceLabelX: 34, balanceY: 446,
-    reelY: 135, reelWidth: 800, reelHeight: 470, reelRadius: 48, reelFaceted: false, reelGlassColor: new Color(255, 239, 231, 38), winCoinX: -126, winLabelX: 0, winY: -198,
+    reelY: 135, reelWidth: 800, reelHeight: 470, reelRadius: 48, reelFaceted: false, reelGlassColor: new Color(255, 239, 231, 0), winCoinX: -126, winLabelX: 0, winY: -198,
     minusX: -360, minusY: -387, plusX: -211, plusY: -387, spinX: 0, spinY: -367, autoX: 292, autoY: -371,
     betCoinX: -150, betLabelX: 38, betReadoutY: -495, payoutsX: -405, payoutsY: -820, turboX: 405, turboY: -820,
   },
   'cosmic-coins': {
+    artScale: 1,
     titleX: 0, titleY: 580, titleWidth: 680, titleHeight: 128, mascotX: -412, mascotY: 562,
     balanceCoinX: -128, balanceLabelX: 34, balanceY: 400,
-    reelY: 112, reelWidth: 696, reelHeight: 438, reelRadius: 22, reelFaceted: true, reelGlassColor: new Color(235, 255, 244, 42), winCoinX: -126, winLabelX: 0, winY: -199,
+    reelY: 96, reelWidth: 632, reelHeight: 320, reelRadius: 26, reelFaceted: true, reelGlassColor: new Color(235, 255, 244, 0), winCoinX: -126, winLabelX: 0, winY: -199,
     minusX: -360, minusY: -343, plusX: -205, plusY: -343, spinX: 0, spinY: -353, autoX: 300, autoY: -353,
     betCoinX: -150, betLabelX: 38, betReadoutY: -488, payoutsX: -405, payoutsY: -820, turboX: 405, turboY: -820,
   },
 };
+// The cabinet art is the source of truth. Store every interactive target in
+// the 1024x1536 source-image space, then map it through the same transform as
+// the generated cabinet backdrop. This keeps reels locked into their apertures
+// and buttons on their physical controls on every portrait phone/tablet size.
+const CABINET_BACKDROP_WIDTH = 1024;
+const CABINET_BACKDROP_HEIGHT = 1536;
+// The painted cabinets occupy roughly this rectangle inside the source image.
+// Fitting this (instead of the full texture) leaves useful breathing room while
+// preventing cabinet sides from being cropped on 20:9 devices.
+const CABINET_ART_WIDTH = 940;
+const CABINET_ART_HEIGHT = 1480;
+const CABINET_IMAGE_LAYOUTS: Readonly<Record<GameId, CabinetImageLayout>> = {
+  'astral-vault': {
+    apertureLeft: 221, apertureTop: 484, apertureRight: 802, apertureBottom: 840, reelRadius: 42,
+    titleX: 512, titleY: 230, titleWidth: 494, titleHeight: 84,
+    mascotX: 842, mascotY: 227, mascotWidth: 116, mascotHeight: 147,
+    balanceCoinX: 350, balanceLabelX: 505, balanceY: 428, balanceCoinSize: 32,
+    winCoinX: 385, winLabelX: 495, winY: 903, winCoinSize: 29,
+    minusX: 213, minusY: 1012, plusX: 338, plusY: 1012, controlWidth: 78, controlHeight: 72,
+    spinX: 541, spinY: 1024, spinWidth: 218, spinHeight: 136,
+    autoX: 745, autoY: 1012, autoWidth: 112, autoHeight: 76,
+    betCoinX: 392, betLabelX: 512, betReadoutY: 1168, betCoinSize: 27,
+    payoutsX: 188, payoutsY: 1424, turboX: 836, turboY: 1424, utilityWidth: 176, utilityHeight: 58,
+  },
+  'golden-dynasty': {
+    apertureLeft: 232, apertureTop: 485, apertureRight: 793, apertureBottom: 777, reelRadius: 34,
+    titleX: 512, titleY: 265, titleWidth: 620, titleHeight: 90,
+    mascotX: 182, mascotY: 278, mascotWidth: 116, mascotHeight: 147,
+    balanceCoinX: 405, balanceLabelX: 545, balanceY: 452, balanceCoinSize: 32,
+    winCoinX: 458, winLabelX: 600, winY: 817, winCoinSize: 29,
+    minusX: 192, minusY: 927, plusX: 320, plusY: 927, controlWidth: 92, controlHeight: 80,
+    spinX: 520, spinY: 931, spinWidth: 220, spinHeight: 218,
+    autoX: 775, autoY: 930, autoWidth: 178, autoHeight: 76,
+    betCoinX: 378, betLabelX: 512, betReadoutY: 1125, betCoinSize: 27,
+    payoutsX: 188, payoutsY: 1424, turboX: 836, turboY: 1424, utilityWidth: 176, utilityHeight: 58,
+  },
+  'neon-classic': {
+    apertureLeft: 243, apertureTop: 525, apertureRight: 782, apertureBottom: 826, reelRadius: 32,
+    titleX: 512, titleY: 222, titleWidth: 618, titleHeight: 96,
+    mascotX: 842, mascotY: 222, mascotWidth: 116, mascotHeight: 147,
+    balanceCoinX: 365, balanceLabelX: 520, balanceY: 429, balanceCoinSize: 32,
+    winCoinX: 390, winLabelX: 490, winY: 896, winCoinSize: 29,
+    minusX: 225, minusY: 1005, plusX: 335, plusY: 1005, controlWidth: 98, controlHeight: 80,
+    spinX: 500, spinY: 1029, spinWidth: 220, spinHeight: 216,
+    autoX: 700, autoY: 1005, autoWidth: 110, autoHeight: 80,
+    betCoinX: 392, betLabelX: 512, betReadoutY: 1164, betCoinSize: 27,
+    payoutsX: 188, payoutsY: 1424, turboX: 836, turboY: 1424, utilityWidth: 176, utilityHeight: 58,
+  },
+  'cosmic-coins': {
+    apertureLeft: 264, apertureTop: 563, apertureRight: 761, apertureBottom: 819, reelRadius: 22,
+    titleX: 512, titleY: 307, titleWidth: 500, titleHeight: 92,
+    mascotX: 182, mascotY: 318, mascotWidth: 116, mascotHeight: 147,
+    balanceCoinX: 410, balanceLabelX: 562, balanceY: 470, balanceCoinSize: 32,
+    winCoinX: 405, winLabelX: 565, winY: 885, winCoinSize: 29,
+    minusX: 257, minusY: 1008, plusX: 330, plusY: 1008, controlWidth: 84, controlHeight: 78,
+    spinX: 540, spinY: 975, spinWidth: 200, spinHeight: 145,
+    autoX: 665, autoY: 985, autoWidth: 100, autoHeight: 80,
+    betCoinX: 392, betLabelX: 512, betReadoutY: 1158, betCoinSize: 27,
+    payoutsX: 188, payoutsY: 1424, turboX: 836, turboY: 1424, utilityWidth: 176, utilityHeight: 58,
+  },
+};
+
+function cabinetBackdropGeometry(): { readonly scale: number; readonly centerX: number; readonly centerY: number } {
+  const usableWidth = Math.max(760, SafeAreaAdapter.visibleWidth - SafeAreaAdapter.safeLeft - SafeAreaAdapter.safeRight);
+  const usableHeight = Math.max(1240, SafeAreaAdapter.visibleHeight - SafeAreaAdapter.safeTop - SafeAreaAdapter.safeBottom);
+  const scale = Math.min(usableWidth / CABINET_ART_WIDTH, usableHeight / CABINET_ART_HEIGHT);
+  return {
+    scale,
+    centerX: (SafeAreaAdapter.safeLeft - SafeAreaAdapter.safeRight) / 2,
+    centerY: (SafeAreaAdapter.safeBottom - SafeAreaAdapter.safeTop) / 2,
+  };
+}
+
+function responsiveCabinetLayout(id: GameId): CabinetLayout {
+  const art = CABINET_IMAGE_LAYOUTS[id];
+  const geometry = cabinetBackdropGeometry();
+  const x = (imageX: number): number => geometry.centerX + (imageX - CABINET_BACKDROP_WIDTH / 2) * geometry.scale;
+  const y = (imageY: number): number => geometry.centerY + (CABINET_BACKDROP_HEIGHT / 2 - imageY) * geometry.scale;
+  const size = (imageSize: number): number => imageSize * geometry.scale;
+  return {
+    artScale: geometry.scale / 1.25,
+    titleX: x(art.titleX), titleY: y(art.titleY), titleWidth: size(art.titleWidth), titleHeight: size(art.titleHeight),
+    mascotX: x(art.mascotX), mascotY: y(art.mascotY), balanceCoinX: x(art.balanceCoinX), balanceLabelX: x(art.balanceLabelX), balanceY: y(art.balanceY),
+    reelY: y((art.apertureTop + art.apertureBottom) / 2), reelWidth: size(art.apertureRight - art.apertureLeft), reelHeight: size(art.apertureBottom - art.apertureTop),
+    reelRadius: Math.max(18, size(art.reelRadius)), reelFaceted: CABINET_LAYOUTS[id].reelFaceted, reelGlassColor: CABINET_LAYOUTS[id].reelGlassColor,
+    winCoinX: x(art.winCoinX), winLabelX: x(art.winLabelX), winY: y(art.winY),
+    minusX: x(art.minusX), minusY: y(art.minusY), plusX: x(art.plusX), plusY: y(art.plusY),
+    spinX: x(art.spinX), spinY: y(art.spinY), autoX: x(art.autoX), autoY: y(art.autoY),
+    betCoinX: x(art.betCoinX), betLabelX: x(art.betLabelX), betReadoutY: y(art.betReadoutY),
+    payoutsX: x(art.payoutsX), payoutsY: y(art.payoutsY), turboX: x(art.turboX), turboY: y(art.turboY),
+  };
+}
 const FRAME_TEXTURE_SIZES = [
   { width: 556, height: 254 }, { width: 560, height: 248 },
   { width: 550, height: 279 }, { width: 562, height: 284 },
@@ -630,30 +739,34 @@ export class CelestialApp extends Component {
 
   private showGame(): void {
     this.ensurePlayer();
-    const color = this.themeColor(this.selectedGame.id); const layout = CABINET_LAYOUTS[this.selectedGame.id]; this.paintBackdrop(`game_${this.selectedGame.id}`, new Color(68, 17, 18), color); this.addStarField(this.page, 10);
+    const color = this.themeColor(this.selectedGame.id); const layout = responsiveCabinetLayout(this.selectedGame.id); this.paintBackdrop(`game_${this.selectedGame.id}`, new Color(68, 17, 18), color); this.addStarField(this.page, 10);
     const featureIcon = this.selectedGame.scatterId ?? this.selectedGame.bonusId ?? this.selectedGame.wildId; const highIcon = this.selectedGame.symbols.find((symbol) => symbol.tier === 'high')?.id ?? this.selectedGame.wildId;
     const cornerButtonY = this.topY(812); const leftCornerX = -SafeAreaAdapter.visibleWidth / 2 + SafeAreaAdapter.safeLeft + 105; const rightCornerX = SafeAreaAdapter.visibleWidth / 2 - SafeAreaAdapter.safeRight - 150;
     this.cabinetUtilityHotspot(this.page, 'HOME', highIcon, leftCornerX, cornerButtonY, 180, 84, () => this.router.go('home'), 23, true);
     this.cabinetUtilityHotspot(this.page, 'HOW TO PLAY', featureIcon, rightCornerX, cornerButtonY, 270, 84, () => this.showRulesAndPayouts(), 21, true);
     const jackpotTiers = this.outlineLabel(this.label(this.page, 'MINI  88,888   •   MAJOR  888,888   •   GRAND  8,888,888', 0, this.topY(742), 19, new Color(255, 231, 176), true, 760), new Color(77, 13, 22), 2);
     tween(jackpotTiers.node).to(1.1, { scale: new Vec3(1.018, 1.018, 1) }, { easing: 'sineInOut' }).to(1.25, { scale: Vec3.ONE }, { easing: 'sineInOut' }).union().repeatForever().start();
+    const artScale = layout.artScale;
     const title = this.addGeneratedImage(this.page, GAME_TITLE_PATHS[this.selectedGame.id], layout.titleX, layout.titleY, layout.titleWidth, layout.titleHeight, 255, 0.04);
     tween(title).to(1.4, { scale: new Vec3(1.025, 1.025, 1) }, { easing: 'sineInOut' }).to(1.5, { scale: Vec3.ONE }, { easing: 'sineInOut' }).union().repeatForever().start();
-    const mascotIndex = Math.max(0, GAME_CONFIGS.indexOf(this.selectedGame)); let gameMascot!: Node; gameMascot = this.addMascot(this.page, mascotIndex, layout.mascotX, layout.mascotY, 145, 184, 232, 0.12, () => { const mascotPosition = gameMascot.position.clone(); this.vfx.celebrateWin(mascotPosition, color); this.vfx.flyCredits(mascotPosition, new Vec3(-115, layout.balanceY, 0)); this.toast(`${this.selectedGame.name} LUCK IS READY`, color); }, true);
-    const balanceCoin = this.addCurrencyIcon(this.page, layout.balanceCoinX, layout.balanceY, 40, 0.08); this.makeCurrencyInteractive(balanceCoin, () => this.toast(`BALANCE  ${this.format(this.bootstrap.economy.balance())} DEMO CREDITS`, C.gold)); this.balanceLabel = this.outlineLabel(this.label(this.page, `BALANCE  ${this.format(this.bootstrap.economy.balance())}`, layout.balanceLabelX, layout.balanceY, 21, new Color(103, 28, 32), true, 310), new Color(255, 247, 218), 2);
+    const mascotIndex = Math.max(0, GAME_CONFIGS.indexOf(this.selectedGame)); let gameMascot!: Node; gameMascot = this.addMascot(this.page, mascotIndex, layout.mascotX, layout.mascotY, 145 * artScale, 184 * artScale, 232, 0.12, () => { const mascotPosition = gameMascot.position.clone(); this.vfx.celebrateWin(mascotPosition, color); this.vfx.flyCredits(mascotPosition, new Vec3(-115, layout.balanceY, 0)); this.toast(`${this.selectedGame.name} LUCK IS READY`, color); }, true);
+    const balanceCoin = this.addCurrencyIcon(this.page, layout.balanceCoinX, layout.balanceY, 40 * artScale, 0.08); this.makeCurrencyInteractive(balanceCoin, () => this.toast(`BALANCE  ${this.format(this.bootstrap.economy.balance())} DEMO CREDITS`, C.gold)); this.balanceLabel = this.outlineLabel(this.label(this.page, `BALANCE  ${this.format(this.bootstrap.economy.balance())}`, layout.balanceLabelX, layout.balanceY, Math.max(17, Math.round(21 * artScale)), new Color(103, 28, 32), true, Math.max(230, 310 * artScale)), new Color(255, 247, 218), 2);
     const reelFrame = this.panel(this.page, 0, layout.reelY, layout.reelWidth, layout.reelHeight, layout.reelRadius, new Color(0, 0, 0, 0), undefined, 0, false);
     this.reelEngine = reelFrame.addComponent(ReelEngine); this.reelEngine.configure(this.selectedGame, layout.reelWidth, layout.reelHeight, layout.reelRadius, layout.reelFaceted);
-    const reelClip = reelFrame.getChildByName('ReelClip') ?? reelFrame; const reelSurface = this.panel(reelClip, 0, 0, layout.reelWidth, layout.reelHeight, layout.reelRadius, layout.reelGlassColor, undefined, 0, false); reelSurface.name = 'ReelBackgroundSurface'; reelSurface.setSiblingIndex(0); this.addCardShine(reelClip, layout.reelWidth - 4, layout.reelHeight - 4, C.paleGold, 0.9); this.addCardMotes(reelClip, 8, color, layout.reelWidth - 10, layout.reelHeight - 10); this.addReelEnergy(reelClip, new Color(224, 160, 62), layout.reelWidth, layout.reelHeight); this.addReelInsetShadow(reelClip, layout.reelWidth, layout.reelHeight, layout.reelRadius);
-    this.winCurrencyIcon = this.addCurrencyIcon(this.page, layout.winCoinX, layout.winY, 36, 0.16); this.winCurrencyIcon.active = false; this.winLabel = this.outlineLabel(this.label(this.page, 'PLACE YOUR BET', layout.winLabelX, layout.winY, 27, new Color(108, 27, 33), true, 500), new Color(255, 244, 211), 2);
+    const reelClip = reelFrame.getChildByName('ReelClip') ?? reelFrame; const reelSurface = this.panel(reelClip, 0, 0, layout.reelWidth, layout.reelHeight, layout.reelRadius, layout.reelGlassColor, undefined, 0, false); reelSurface.name = 'ReelBackgroundSurface'; reelSurface.setSiblingIndex(0);
+    // The painted cabinet already owns the aperture edge. Keep motes, but do
+    // not add runtime glass shine, lens reflections, or an inset bevel.
+    this.addCardMotes(reelClip, 8, color, layout.reelWidth - 10, layout.reelHeight - 10);
+    this.winCurrencyIcon = this.addCurrencyIcon(this.page, layout.winCoinX, layout.winY, 36 * artScale, 0.16); this.winCurrencyIcon.active = false; this.winLabel = this.outlineLabel(this.label(this.page, 'PLACE YOUR BET', layout.winLabelX, layout.winY, Math.max(21, Math.round(27 * artScale)), new Color(108, 27, 33), true, Math.max(380, 500 * artScale)), new Color(255, 244, 211), 2);
     const classicSigns = this.selectedGame.id === 'neon-classic';
-    this.cabinetHotspot(this.page, classicSigns ? '' : '−', layout.minusX, layout.minusY, 104, 92, () => { this.betIndex = Math.max(0, this.betIndex - 1); this.refreshBet(); }, 39, new Color(101, 26, 31));
-    this.cabinetHotspot(this.page, classicSigns ? '' : '+', layout.plusX, layout.plusY, 104, 92, () => { this.betIndex = Math.min(this.selectedGame.bets.length - 1, this.betIndex + 1); this.refreshBet(); }, 39, new Color(101, 26, 31));
-    const betCoin = this.addCurrencyIcon(this.page, layout.betCoinX, layout.betReadoutY, 34, 0.22); this.betCurrencyIcon = betCoin; this.makeCurrencyInteractive(betCoin, () => this.toast(`CURRENT BET  ${this.format(this.bet())} • ${this.lineReadout()}`, C.gold)); this.betLabel = this.outlineLabel(this.label(this.page, `BET  ${this.format(this.bet())}   •   ${this.lineReadout()}`, layout.betLabelX, layout.betReadoutY, 22, C.paleGold, true, 350), new Color(78, 13, 22), 3);
-    const spin = this.cabinetHotspot(this.page, 'SPIN', layout.spinX, layout.spinY, 190, 128, () => void this.onSpin(), 31, new Color(104, 25, 31)); this.spinButtonLabel = spin.getChildByName('Text')?.getComponent(Label) ?? undefined;
-    const auto = this.cabinetHotspot(this.page, 'AUTO', layout.autoX, layout.autoY, 150, 108, () => void this.startAuto(), 23, new Color(104, 25, 31)); this.autoButtonLabel = auto.getChildByName('Text')?.getComponent(Label) ?? undefined;
-    this.cabinetUtilityHotspot(this.page, 'PAYOUTS', highIcon, layout.payoutsX, layout.payoutsY, 220, 72, () => this.showPaytable(), 21);
-    let turboControl!: Node; turboControl = this.cabinetUtilityHotspot(this.page, `TURBO ${this.turbo ? 'ON' : 'OFF'}`, this.selectedGame.wildId, layout.turboX, layout.turboY, 220, 72, () => { this.turbo = !this.turbo; const turboLabel = turboControl.getChildByName('Text')?.getComponent(Label); if (turboLabel) turboLabel.string = `TURBO ${this.turbo ? 'ON' : 'OFF'}`; this.vfx.pulse(turboControl); this.toast(`Turbo mode ${this.turbo ? 'enabled' : 'disabled'}`, this.turbo ? C.gold : C.muted); }, 20);
-    if (this.selectedGame.id === 'neon-classic') this.outlineLabel(this.label(this.page, 'HOLD 1       HOLD 2       HOLD 3       NUDGE READY', 0, 548, 17, new Color(255, 229, 182), true, 720), new Color(91, 19, 28), 3);
+    this.cabinetHotspot(this.page, classicSigns ? '' : '−', layout.minusX, layout.minusY, Math.max(88, 104 * artScale), Math.max(78, 92 * artScale), () => { this.betIndex = Math.max(0, this.betIndex - 1); this.refreshBet(); }, Math.max(30, Math.round(39 * artScale)), new Color(101, 26, 31));
+    this.cabinetHotspot(this.page, classicSigns ? '' : '+', layout.plusX, layout.plusY, Math.max(88, 104 * artScale), Math.max(78, 92 * artScale), () => { this.betIndex = Math.min(this.selectedGame.bets.length - 1, this.betIndex + 1); this.refreshBet(); }, Math.max(30, Math.round(39 * artScale)), new Color(101, 26, 31));
+    const betCoin = this.addCurrencyIcon(this.page, layout.betCoinX, layout.betReadoutY, 34 * artScale, 0.22); this.betCurrencyIcon = betCoin; this.makeCurrencyInteractive(betCoin, () => this.toast(`CURRENT BET  ${this.format(this.bet())} • ${this.lineReadout()}`, C.gold)); this.betLabel = this.outlineLabel(this.label(this.page, `BET  ${this.format(this.bet())}   •   ${this.lineReadout()}`, layout.betLabelX, layout.betReadoutY, Math.max(18, Math.round(22 * artScale)), C.paleGold, true, Math.max(270, 350 * artScale)), new Color(78, 13, 22), 3);
+    const spin = this.cabinetHotspot(this.page, 'SPIN', layout.spinX, layout.spinY, Math.max(152, 190 * artScale), Math.max(108, 128 * artScale), () => void this.onSpin(), Math.max(24, Math.round(31 * artScale)), new Color(104, 25, 31)); this.spinButtonLabel = spin.getChildByName('Text')?.getComponent(Label) ?? undefined;
+    const auto = this.cabinetHotspot(this.page, 'AUTO', layout.autoX, layout.autoY, Math.max(122, 150 * artScale), Math.max(92, 108 * artScale), () => void this.startAuto(), Math.max(19, Math.round(23 * artScale)), new Color(104, 25, 31)); this.autoButtonLabel = auto.getChildByName('Text')?.getComponent(Label) ?? undefined;
+    this.cabinetUtilityHotspot(this.page, 'PAYOUTS', highIcon, layout.payoutsX, layout.payoutsY, Math.max(170, 220 * artScale), Math.max(60, 72 * artScale), () => this.showPaytable(), Math.max(16, Math.round(21 * artScale)));
+    let turboControl!: Node; turboControl = this.cabinetUtilityHotspot(this.page, `TURBO ${this.turbo ? 'ON' : 'OFF'}`, this.selectedGame.wildId, layout.turboX, layout.turboY, Math.max(170, 220 * artScale), Math.max(60, 72 * artScale), () => { this.turbo = !this.turbo; const turboLabel = turboControl.getChildByName('Text')?.getComponent(Label); if (turboLabel) turboLabel.string = `TURBO ${this.turbo ? 'ON' : 'OFF'}`; this.vfx.pulse(turboControl); this.toast(`Turbo mode ${this.turbo ? 'enabled' : 'disabled'}`, this.turbo ? C.gold : C.muted); }, Math.max(16, Math.round(21 * artScale)));
+    if (this.selectedGame.id === 'neon-classic') this.outlineLabel(this.label(this.page, 'HOLD 1       HOLD 2       HOLD 3       NUDGE READY', layout.titleX, layout.titleY - layout.titleHeight * 0.72, Math.max(14, Math.round(17 * artScale)), new Color(255, 229, 182), true, Math.max(560, 720 * artScale)), new Color(91, 19, 28), 3);
     if (this.forcedResult && !this.spinning) this.scheduleOnce(() => void this.onSpin(), 0.3);
     if (this.debugMode && typeof window !== 'undefined') { const modal = new URLSearchParams(window.location.search).get('modal'); if (modal === 'rules') this.scheduleOnce(() => this.showRulesAndPayouts(), 0.2); else if (modal === 'payouts') this.scheduleOnce(() => this.showPaytable(), 0.2); }
   }
@@ -664,7 +777,7 @@ export class CelestialApp extends Component {
     const result = this.resultGenerator.generate(this.selectedGame, this.bet(), rng, this.forcedResult); this.forcedResult = undefined;
     if (!this.bootstrap.economy.reserveSpin(result.spinId, this.bet())) { this.toast('Not enough demo credits or spin already active', C.red); return false; }
     this.spinning = result; this.stateMachine.reset(); this.stateMachine.move('reserving-bet'); this.stateMachine.move('result-ready'); this.stateMachine.move('spinning');
-    if (this.spinButtonLabel) this.spinButtonLabel.string = 'STOP'; if (this.winLabel) this.winLabel.string = 'GOOD LUCK'; if (this.winCurrencyIcon) this.winCurrencyIcon.active = false; const layout = CABINET_LAYOUTS[this.selectedGame.id]; this.vfx.spinCharge(new Vec3(layout.spinX, layout.spinY, 0), this.themeColor(this.selectedGame.id)); this.refreshBalance();
+    if (this.spinButtonLabel) this.spinButtonLabel.string = 'STOP'; if (this.winLabel) this.winLabel.string = 'GOOD LUCK'; if (this.winCurrencyIcon) this.winCurrencyIcon.active = false; const layout = responsiveCabinetLayout(this.selectedGame.id); this.vfx.spinCharge(new Vec3(layout.spinX, layout.spinY, 0), this.themeColor(this.selectedGame.id)); this.refreshBalance();
     this.audio.play('spin'); this.audio.vibrate(22);
     await this.reelEngine?.spin(result, this.selectedGame, this.turbo);
     this.stateMachine.move('stopping'); this.stateMachine.move('evaluating');
@@ -936,8 +1049,40 @@ export class CelestialApp extends Component {
   private loadBackdrop(parent: Node, asset: string, width: number, height: number): void {
     const paths: Record<string, string> = { boot: 'generated/common/start_bg_v01', 'loading_astral-vault': 'generated/common/loading_fortune_stage_v01', 'loading_golden-dynasty': 'generated/common/loading_coin_garden_v01', 'loading_neon-classic': 'generated/common/loading_gem_classic_v01', 'loading_cosmic-coins': 'generated/common/loading_diamond_vault_v01', login: 'generated/login/login_bg_v01', home: 'generated/home/home_bg_v01', store: 'generated/common/common_bg_v01', rewards: 'generated/common/common_bg_v01', rank: 'generated/common/common_bg_v01', profile: 'generated/common/common_bg_v01', wheel: 'generated/common/common_bg_v01' };
     const gamePaths: Record<string, string> = { 'game_astral-vault': 'generated/game01/base_bg_v01', 'game_golden-dynasty': 'generated/game02/base_bg_v01', 'game_neon-classic': 'generated/game03/base_bg_v01', 'game_cosmic-coins': 'generated/game04/base_bg_v01' };
+    const edgePaths: Record<string, string> = { 'game_astral-vault': 'generated/game01/edge_bg_v01', 'game_golden-dynasty': 'generated/game02/edge_bg_v01', 'game_neon-classic': 'generated/game03/edge_bg_v01', 'game_cosmic-coins': 'generated/game04/edge_bg_v01' };
     const path = paths[asset] ?? gamePaths[asset]; if (!path) return;
-    resources.load(`${path}/texture`, Texture2D, (error, texture) => { if (error || !texture || !parent.isValid) return; const cabinet = asset.startsWith('game_'); const frame = new SpriteFrame(); frame.texture = texture; const node = new Node('GeneratedBackdrop'); node.layer = Layers.Enum.UI_2D; const sprite = node.addComponent(Sprite); sprite.spriteFrame = frame; sprite.sizeMode = Sprite.SizeMode.RAW; const transform = node.getComponent(UITransform) as UITransform; const scale = Math.max(width / texture.width, height / texture.height) * (cabinet ? 1 : 1.025); node.setScale(new Vec3(scale, scale, 1)); parent.addChild(node); node.setSiblingIndex(0); transform.setContentSize(texture.width, texture.height); const opacity = node.addComponent(UIOpacity); const baseOpacity = asset === 'home' ? 226 : 210; opacity.opacity = cabinet ? 255 : baseOpacity; if (cabinet) return; tween(node).to(7, { position: new Vec3(12, 8, 0), scale: new Vec3(scale * 1.018, scale * 1.018, 1) }, { easing: 'sineInOut' }).to(7, { position: new Vec3(-12, -8, 0), scale: new Vec3(scale, scale, 1) }, { easing: 'sineInOut' }).union().repeatForever().start(); tween(opacity).to(3.8, { opacity: Math.min(238, baseOpacity + 14) }, { easing: 'sineInOut' }).to(4.2, { opacity: Math.max(188, baseOpacity - 12) }, { easing: 'sineInOut' }).union().repeatForever().start(); });
+    const edgePath = edgePaths[asset];
+    if (edgePath) resources.load(`${edgePath}/texture`, Texture2D, (edgeError, edgeTexture) => {
+      if (edgeError || !edgeTexture || !parent.isValid) return;
+      const edgeFrame = new SpriteFrame(); edgeFrame.texture = edgeTexture;
+      const edgeNode = new Node('ExtendedBackdrop'); edgeNode.layer = Layers.Enum.UI_2D;
+      const edgeSprite = edgeNode.addComponent(Sprite); edgeSprite.spriteFrame = edgeFrame; edgeSprite.sizeMode = Sprite.SizeMode.RAW;
+      const edgeTransform = edgeNode.getComponent(UITransform) as UITransform;
+      const coverScale = Math.max(width / edgeTexture.width, height / edgeTexture.height) * 1.015;
+      edgeNode.setScale(new Vec3(coverScale, coverScale, 1)); edgeTransform.setContentSize(edgeTexture.width, edgeTexture.height);
+      // Cocos renders a node's own Graphics before its children, so placing the
+      // extended backdrop inside Backdrop hides the fallback gradient while
+      // keeping the generated cabinet art above it.
+      parent.addChild(edgeNode); edgeNode.setPosition(0, 0);
+      edgeNode.setSiblingIndex(0); edgeNode.addComponent(UIOpacity).opacity = 255;
+    });
+    resources.load(`${path}/texture`, Texture2D, (error, texture) => {
+      if (error || !texture || !parent.isValid) return;
+      const cabinet = asset.startsWith('game_');
+      const frame = new SpriteFrame(); frame.texture = texture;
+      const node = new Node('GeneratedBackdrop'); node.layer = Layers.Enum.UI_2D;
+      const sprite = node.addComponent(Sprite); sprite.spriteFrame = frame; sprite.sizeMode = Sprite.SizeMode.RAW;
+      const transform = node.getComponent(UITransform) as UITransform;
+      const cabinetGeometry = cabinet ? cabinetBackdropGeometry() : undefined;
+      const scale = cabinetGeometry ? cabinetGeometry.scale : Math.max(width / texture.width, height / texture.height) * 1.025;
+      node.setScale(new Vec3(scale, scale, 1));
+      if (cabinetGeometry) node.setPosition(cabinetGeometry.centerX, cabinetGeometry.centerY);
+      parent.addChild(node); node.setSiblingIndex(cabinet ? 1 : 0); transform.setContentSize(texture.width, texture.height);
+      const opacity = node.addComponent(UIOpacity); const baseOpacity = asset === 'home' ? 226 : 210; opacity.opacity = cabinet ? 255 : baseOpacity;
+      if (cabinet) return;
+      tween(node).to(7, { position: new Vec3(12, 8, 0), scale: new Vec3(scale * 1.018, scale * 1.018, 1) }, { easing: 'sineInOut' }).to(7, { position: new Vec3(-12, -8, 0), scale: new Vec3(scale, scale, 1) }, { easing: 'sineInOut' }).union().repeatForever().start();
+      tween(opacity).to(3.8, { opacity: Math.min(238, baseOpacity + 14) }, { easing: 'sineInOut' }).to(4.2, { opacity: Math.max(188, baseOpacity - 12) }, { easing: 'sineInOut' }).union().repeatForever().start();
+    });
   }
 
   private addStarField(parent: Node, count: number): void {

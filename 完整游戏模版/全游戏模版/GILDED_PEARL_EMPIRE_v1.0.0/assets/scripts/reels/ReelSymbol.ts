@@ -47,13 +47,15 @@ export class ReelSymbol extends Component {
     const graphics = this.graphics; graphics.clear();
     const special = symbolId === 'wild' || symbolId === 'scatter' || symbolId === 'bonus';
     const high = special || ['crown', 'chalice', 'orrery', 'guardian', 'seal', 'seven', 'double-bar', 'reactor', 'core'].includes(symbolId);
-    const base = special ? new Color(255, 232, 193, 224) : high ? new Color(255, 241, 216, 212) : new Color(255, 249, 235, 202);
+    // Reel cells are intentionally transparent: the cabinet aperture and its
+    // extended backdrop remain visible behind every symbol.
+    const base = special ? new Color(255, 232, 193, 0) : high ? new Color(255, 241, 216, 0) : new Color(255, 249, 235, 0);
     const halfWidth = this.cellWidth / 2; const halfHeight = this.cellHeight / 2; const haloRadius = Math.min(this.iconSize * 0.39, Math.min(halfWidth, halfHeight) - 8);
     graphics.fillColor = base; graphics.rect(-halfWidth - 0.5, -halfHeight - 0.5, this.cellWidth + 1, this.cellHeight + 1); graphics.fill(); graphics.strokeColor = special ? new Color(205, 137, 32, 125) : new Color(166, 102, 37, 42); graphics.lineWidth = special ? 2 : 1; graphics.rect(-halfWidth + 1, -halfHeight + 1, this.cellWidth - 2, this.cellHeight - 2); graphics.stroke();
-    graphics.fillColor = new Color(255, 255, 255, high ? 58 : 38); graphics.rect(-halfWidth + 4, halfHeight - 20, this.cellWidth - 8, 14); graphics.fill();
+    graphics.fillColor = new Color(255, 255, 255, high ? 18 : 12); graphics.rect(-halfWidth + 4, halfHeight - 20, this.cellWidth - 8, 14); graphics.fill();
     graphics.strokeColor = new Color(255, 255, 255, special ? 190 : 125); graphics.lineWidth = 2; graphics.moveTo(-halfWidth + 12, halfHeight - 9); graphics.lineTo(halfWidth - 22, halfHeight - 9); graphics.stroke();
     graphics.strokeColor = new Color(142, 76, 31, 68); graphics.lineWidth = 2; graphics.moveTo(halfWidth - 8, -halfHeight + 18); graphics.lineTo(-halfWidth + 18, -halfHeight + 18); graphics.stroke();
-    graphics.fillColor = new Color(color.r, color.g, color.b, 22); graphics.circle(0, 7, haloRadius); graphics.fill(); graphics.strokeColor = new Color(219, 166, 58, special ? 205 : 88); graphics.lineWidth = 1.5; graphics.circle(0, 7, haloRadius * 0.78); graphics.stroke();
+    graphics.fillColor = new Color(color.r, color.g, color.b, 9); graphics.circle(0, 7, haloRadius); graphics.fill(); graphics.strokeColor = new Color(219, 166, 58, special ? 205 : 88); graphics.lineWidth = 1.5; graphics.circle(0, 7, haloRadius * 0.78); graphics.stroke();
     if (!this.applyAtlasFrame()) this.drawEmblem(graphics, symbolId, color);
     if (this.label) { this.label.string = display.replace('\n', ' '); this.label.color = special ? new Color(126, 35, 35) : new Color(92, 51, 29); }
     this.energyRing.active = special;

@@ -1,0 +1,25 @@
+{
+  "name": "pharaoh-kemet-treasury",
+  "uuid": "55238d1c-dad4-4f59-b43f-68719767f794",
+  "version": "1.0.0",
+  "description": "Original Egyptian-temple virtual-credit slots collection built with Cocos Creator 3.8.8",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "start": "python3 tools/preview_server.py",
+    "preview": "python3 tools/preview_server.py",
+    "test": "node --import tsx tools/math-test.ts",
+    "test:math": "node --import tsx tools/math-test.ts",
+    "test:rtp": "node --import tsx tools/rtp-simulation.ts 100000",
+    "typecheck:math": "tsc -p tsconfig.math.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
+    "server:dev": "node --import tsx server/ProductionServer.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  }
+}

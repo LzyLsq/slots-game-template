@@ -1,0 +1,13 @@
+{
+  "model": "gpt-5.6-sol",
+  "input": "Use case: stylized-concept\nAsset type: premium mobile slot-game currency icon\nPrimary request: create one independent luxury gold coin currency icon for balance, bet, and win amount indicators\nScene/backdrop: perfectly flat solid chroma-key magenta #FF00FF background, edge to edge\nSubject: one centered round gold coin medallion, front-facing with a very slight three-quarter depth, embossed pearl in the center, small diamond accents, subtle burgundy enamel rim\nStyle/medium: polished high-end 3D casino game UI render, soft wealthy gold, refined rather than solemn\nComposition/framing: square canvas, icon fills about 78% of the canvas, complete silhouette with generous clean separation from the background\nLighting/mood: warm studio highlights, crisp metallic reflections, luminous pearl, premium and inviting\nColor palette: champagne gold, ivory pearl, tiny ruby-burgundy details, clear neutral diamonds\nMaterials/textures: realistic polished gold, nacre pearl, faceted gemstones\nConstraints: exactly one coin; symmetrical readable silhouette at 32-64 px; no text; no letters; no numbers; no extra objects; no cast shadow touching the canvas edge; no watermark\nAvoid: slot reel symbol tile, cartoon flat icon, crown, wings, treasure chest, scattered coins, gradients or texture in the magenta background",
+  "tools": [
+    {
+      "type": "image_generation",
+      "size": "1024x1024",
+      "quality": "high",
+      "background": "opaque",
+      "output_format": "png"
+    }
+  ]
+}

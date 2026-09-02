@@ -1,0 +1,13 @@
+{
+  "model": "gpt-5.6-sol",
+  "input": "Use case: stylized-concept\nAsset type: production rotating prize-wheel disc for a premium portrait mobile casino game\nPrimary request: create one luxurious physical lucky-wheel rotating disc with exactly eight equal clearly separated blank prize wedges; this asset is the rotating disc only\nSubject: perfectly circular champagne-gold wheel, thick believable brushed-metal rim with pearl bulb lights and restrained inset rubies and emeralds, faceted diamond hub, eight equal wedges alternating soft wine red, ivory enamel, muted emerald and champagne gold\nStyle/medium: photorealistic high-end 3D mobile game prop render, realistic metal, enamel, crystal, pearl and gemstone materials, commercial slot-machine quality\nComposition/framing: perfectly centered orthographic front view, exact radial symmetry, full circular disc visible with generous padding, no perspective distortion\nScene/backdrop: one perfectly flat uniform electric blue #0000FF chroma-key background edge to edge, no texture, no gradient, no shadow, no horizon\nLighting/mood: warm soft casino studio light, crisp metal edge highlights, restrained gemstone sparkle, festive and wealthy but gentle\nConstraints: absolutely no pointer, no arrow, no needle, no top crown, no protruding ornament, no text, no letters, no numerals, no logos, no watermark, no currency symbols; all eight segments blank for runtime labels; do not use blue anywhere on the wheel; clean hard circular silhouette\nAvoid: integrated pointer, roulette markings, flat vector art, carnival toy plastic, thin yellow outlines, dark severe mood, extra objects, people, background scenery",
+  "tools": [
+    {
+      "type": "image_generation",
+      "size": "1024x1024",
+      "quality": "high",
+      "background": "opaque",
+      "output_format": "png"
+    }
+  ]
+}

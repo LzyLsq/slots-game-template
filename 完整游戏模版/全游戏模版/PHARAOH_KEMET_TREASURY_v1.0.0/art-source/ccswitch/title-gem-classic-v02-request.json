@@ -1,0 +1,5 @@
+{
+  "model": "gpt-5.6-sol",
+  "input": "Use case: stylized-concept\nAsset type: isolated production title artwork for a premium mobile slot game\nPrimary request: render the exact text GEM CLASSIC in one centered horizontal line\nStyle/medium: bold vintage casino uppercase lettering, cream enamel faces, rose-gold and polished pale-chrome bevels, burgundy depth, small ruby and emerald pin lights\nComposition/framing: wide centered title, highly legible at mobile size, generous margin, no surrounding plaque or frame\nLighting/mood: warm classic slot marquee glow, lively nostalgic gambling-floor excitement\nText (verbatim): \"GEM CLASSIC\"\nConstraints: exact spelling once; title is the only subject; perfectly flat uniform #FF00FF magenta background for chroma extraction; no magenta in the lettering; no extra text; no logo; no watermark; no cast shadow or glow touching the background\nAvoid: neon cyberpunk, fruit, candy, illegible script, thin letters, black background",
+  "tools": [{"type": "image_generation", "size": "1536x1024", "quality": "high", "background": "opaque", "output_format": "png"}]
+}
