@@ -7,7 +7,9 @@
     "theme:validate": "node scripts/validate-themes.mjs",
     "build:web": "\"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\" --project . --build \"platform=web-mobile;debug=false;buildPath=./build;outputName=web-mobile;md5Cache=false\"; node scripts/patch-web-build.mjs ./build/web-mobile"
   },
-  "creator": {"version": "3.8.8"},
+  "creator": {
+    "version": "3.8.8"
+  },
   "templateProfile": {
     "code": "S07",
     "baselineVersion": "1.0.0",

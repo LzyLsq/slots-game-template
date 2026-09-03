@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "24c79496-4e8d-481a-b6be-71054598e91f",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "24c79496-4e8d-481a-b6be-71054598e91f@6c48a",
+      "displayName": "casino_bezel_large_frame_v02",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "24c79496-4e8d-481a-b6be-71054598e91f",
+        "visible": false
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "24c79496-4e8d-481a-b6be-71054598e91f@f9941",
+      "displayName": "casino_bezel_large_frame_v02",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 2,
+        "trimY": 2,
+        "width": 764,
+        "height": 478,
+        "rawWidth": 768,
+        "rawHeight": 482,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -382,
+            -239,
+            0,
+            382,
+            -239,
+            0,
+            -382,
+            239,
+            0,
+            382,
+            239,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            2,
+            480,
+            766,
+            480,
+            2,
+            2,
+            766,
+            2
+          ],
+          "nuv": [
+            0.0026041666666666665,
+            0.004149377593360996,
+            0.9973958333333334,
+            0.004149377593360996,
+            0.0026041666666666665,
+            0.995850622406639,
+            0.9973958333333334,
+            0.995850622406639
+          ],
+          "minPos": [
+            -382,
+            -239,
+            0
+          ],
+          "maxPos": [
+            382,
+            239,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "24c79496-4e8d-481a-b6be-71054598e91f@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "24c79496-4e8d-481a-b6be-71054598e91f@6c48a"
+  }
+}
