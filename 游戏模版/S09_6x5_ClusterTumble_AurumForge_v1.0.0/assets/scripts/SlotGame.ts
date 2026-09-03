@@ -43,6 +43,8 @@ export class SlotGame extends Component {
     private readonly cellHeight = 96;
     private readonly soundKey = 's09-aurum-forge-sound';
     private readonly balanceKey = 's09-aurum-forge-balance';
+    private readonly f1AccountsKey = 'l02-royal-wealth-accounts-v1';
+    private readonly f1SessionKey = 'l02-royal-wealth-session-v1';
     private config: GameConfig = FALLBACK_CONFIG;
     private sceneWidth = 750;
     private sceneHeight = 1624;
@@ -682,6 +684,8 @@ export class SlotGame extends Component {
     }
 
     private readBalance(): number {
+        const sharedBalance = this.readF1Balance();
+        if (sharedBalance !== null) return sharedBalance;
         const stored = sys.localStorage.getItem(this.balanceKey);
         if (stored === null || stored.trim() === '') return this.config.initialCoins;
         const value = Number(stored);
@@ -689,7 +693,46 @@ export class SlotGame extends Component {
     }
 
     private saveBalance(): void {
+        if (this.writeF1Balance(this.balance)) return;
         sys.localStorage.setItem(this.balanceKey, String(Math.floor(this.balance)));
+    }
+
+    private f1WalletUser(): string | null {
+        if (typeof window === 'undefined') return null;
+        if (new URLSearchParams(window.location.search).get('suite') !== 'f1') return null;
+        const username = sys.localStorage.getItem(this.f1SessionKey)?.trim();
+        return username || null;
+    }
+
+    private readF1Balance(): number | null {
+        const username = this.f1WalletUser();
+        if (!username) return null;
+        try {
+            const raw = sys.localStorage.getItem(this.f1AccountsKey);
+            if (!raw) return null;
+            const accounts = JSON.parse(raw) as Record<string, { coins?: number }>;
+            const balance = Number(accounts[username]?.coins);
+            return Number.isFinite(balance) && balance >= 0 ? balance : null;
+        } catch {
+            return null;
+        }
+    }
+
+    private writeF1Balance(value: number): boolean {
+        const username = this.f1WalletUser();
+        if (!username) return false;
+        try {
+            const raw = sys.localStorage.getItem(this.f1AccountsKey);
+            if (!raw) return false;
+            const accounts = JSON.parse(raw) as Record<string, { coins?: number }>;
+            const account = accounts[username];
+            if (!account) return false;
+            account.coins = Math.max(0, Math.floor(value));
+            sys.localStorage.setItem(this.f1AccountsKey, JSON.stringify(accounts));
+            return true;
+        } catch {
+            return false;
+        }
     }
 
     private startAmbientLoops(): void {

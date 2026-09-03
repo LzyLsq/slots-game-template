@@ -50,6 +50,8 @@ interface LoadingView {
 @ccclass('SlotGame')
 export class SlotGame extends Component {
     private readonly soundStorageKey = 'slot-s08-royal-diamond-sound';
+    private readonly f1AccountsKey = 'l02-royal-wealth-accounts-v1';
+    private readonly f1SessionKey = 'l02-royal-wealth-session-v1';
     private readonly useRuntimeSpriteFx = true;
     private readonly designWidth = 750;
     private readonly designHeight = 1624;
@@ -2553,6 +2555,8 @@ export class SlotGame extends Component {
     }
 
     private readCoins(): number {
+        const sharedBalance = this.readF1Balance();
+        if (sharedBalance !== null) return sharedBalance;
         const raw = sys.localStorage.getItem(this.coinStorageKey);
         if (raw === null || raw === '') return this.config.initialCoins;
         const stored = Number(raw);
@@ -2560,7 +2564,46 @@ export class SlotGame extends Component {
     }
 
     private writeCoins(): void {
+        if (this.writeF1Balance(this.coins)) return;
         sys.localStorage.setItem(this.coinStorageKey, String(this.coins));
+    }
+
+    private f1WalletUser(): string | null {
+        if (typeof window === 'undefined') return null;
+        if (new URLSearchParams(window.location.search).get('suite') !== 'f1') return null;
+        const username = sys.localStorage.getItem(this.f1SessionKey)?.trim();
+        return username || null;
+    }
+
+    private readF1Balance(): number | null {
+        const username = this.f1WalletUser();
+        if (!username) return null;
+        try {
+            const raw = sys.localStorage.getItem(this.f1AccountsKey);
+            if (!raw) return null;
+            const accounts = JSON.parse(raw) as Record<string, { coins?: number }>;
+            const balance = Number(accounts[username]?.coins);
+            return Number.isFinite(balance) && balance >= 0 ? balance : null;
+        } catch {
+            return null;
+        }
+    }
+
+    private writeF1Balance(value: number): boolean {
+        const username = this.f1WalletUser();
+        if (!username) return false;
+        try {
+            const raw = sys.localStorage.getItem(this.f1AccountsKey);
+            if (!raw) return false;
+            const accounts = JSON.parse(raw) as Record<string, { coins?: number }>;
+            const account = accounts[username];
+            if (!account) return false;
+            account.coins = Math.max(0, Math.floor(value));
+            sys.localStorage.setItem(this.f1AccountsKey, JSON.stringify(accounts));
+            return true;
+        } catch {
+            return false;
+        }
     }
 
     private createPanel(name: string, parent: Node, width: number, height: number, color: Color, x: number, y: number, radius: number): Node {
