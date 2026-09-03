@@ -1,0 +1,43 @@
+{
+  "id": "sovereign-treasury",
+  "title": "SOVEREIGN TREASURY",
+  "subtitle": "CASH COLLECT",
+  "initialCoins": 5000,
+  "defaultBet": 50,
+  "betOptions": [20, 50, 100, 200, 500],
+  "winRate": 0.23,
+  "collectRate": 0.105,
+  "minSpinDuration": 0.72,
+  "reelStopDelay": 0.105,
+  "columns": 5,
+  "rows": 4,
+  "cashMultipliers": [1, 2, 3, 5, 8, 10, 15, 20],
+  "visual": {
+    "cabinet": "theme/sovereign-treasury/cabinet-portrait-v3/spriteFrame",
+    "winStage": "theme/sovereign-treasury/fx/win-stage-v1/spriteFrame",
+    "homeIcon": "theme/sovereign-treasury/controls/home/spriteFrame",
+    "rulesIcon": "theme/sovereign-treasury/controls/rules/spriteFrame",
+    "soundIcon": "theme/sovereign-treasury/controls/sound/spriteFrame",
+    "addIcon": "theme/sovereign-treasury/controls/add/spriteFrame",
+    "minusIcon": "theme/sovereign-treasury/controls/minus/spriteFrame",
+    "plusIcon": "theme/sovereign-treasury/controls/plus/spriteFrame",
+    "autoIcon": "theme/sovereign-treasury/controls/auto/spriteFrame",
+    "spinIcon": "theme/sovereign-treasury/controls/spin/spriteFrame",
+    "accent": "#8C1833",
+    "accentSecondary": "#F6D275",
+    "reelPanel": "#07362A",
+    "cell": "#0B4B3A",
+    "text": "#FFF3C4"
+  },
+  "symbols": [
+    {"id":"gold-ingots","label":"GOLD INGOTS","texture":"theme/sovereign-treasury/symbols/gold-ingots/spriteFrame","weight":24,"kind":"regular","payouts":{"three":0.7,"four":1.5,"five":3.5}},
+    {"id":"ruby-signet","label":"RUBY SIGNET","texture":"theme/sovereign-treasury/symbols/ruby-signet/spriteFrame","weight":21,"kind":"regular","payouts":{"three":0.9,"four":2,"five":4.5}},
+    {"id":"sapphire-watch","label":"SAPPHIRE WATCH","texture":"theme/sovereign-treasury/symbols/sapphire-watch/spriteFrame","weight":18,"kind":"regular","payouts":{"three":1.1,"four":2.5,"five":6}},
+    {"id":"emerald-lockbox","label":"EMERALD LOCKBOX","texture":"theme/sovereign-treasury/symbols/emerald-lockbox/spriteFrame","weight":15,"kind":"regular","payouts":{"three":1.5,"four":3.5,"five":8}},
+    {"id":"diamond-key","label":"DIAMOND KEY","texture":"theme/sovereign-treasury/symbols/diamond-key/spriteFrame","weight":12,"kind":"regular","payouts":{"three":2,"four":5,"five":12}},
+    {"id":"platinum-lion","label":"PLATINUM LION","texture":"theme/sovereign-treasury/symbols/platinum-lion/spriteFrame","weight":9,"kind":"regular","payouts":{"three":3,"four":8,"five":20}},
+    {"id":"vault-wild","label":"VAULT WILD","texture":"theme/sovereign-treasury/symbols/vault-wild/spriteFrame","weight":5,"kind":"wild"},
+    {"id":"sovereign-coin","label":"CASH COIN","texture":"theme/sovereign-treasury/symbols/sovereign-coin/spriteFrame","weight":6,"kind":"coin"},
+    {"id":"collector-chest","label":"COLLECTOR","texture":"theme/sovereign-treasury/symbols/collector-chest/spriteFrame","weight":2,"kind":"collector"}
+  ]
+}

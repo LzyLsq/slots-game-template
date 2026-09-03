@@ -1,0 +1,21 @@
+{
+  "name": "slot-s10-sovereign-treasury-cash-collect",
+  "version": "1.0.0",
+  "description": "S10 premium Sovereign Treasury 5x4 Cash Collect slot template",
+  "scripts": {
+    "theme:validate": "node scripts/validate-themes.mjs",
+    "build:web": "\"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\" --project . --build \"platform=web-mobile;debug=false;buildPath=./build;outputName=web-mobile;md5Cache=false\"; node scripts/patch-web-build.mjs ./build/web-mobile"
+  },
+  "creator": {
+    "version": "3.8.8"
+  },
+  "templateProfile": {
+    "code": "S10",
+    "baselineVersion": "1.0.0",
+    "status": "DEVELOPMENT",
+    "name": "Sovereign Treasury 5x4 Cash Collect Slot",
+    "nameZh": "至尊金库 5x4 金币收集 Slot",
+    "mechanic": "5 reels, 4 rows, 1024 ways, cash coins on reels 1-4 and collector chests on reel 5"
+  },
+  "uuid": "93131d9e-f148-4845-831e-fbc0c8f7a4aa"
+}

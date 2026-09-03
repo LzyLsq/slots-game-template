@@ -1,0 +1,20 @@
+{
+  "name": "slot-s09-aurum-forge-cluster-tumble",
+  "version": "1.0.0",
+  "description": "S09 v1.0 - premium Aurum Forge 6x5 cluster-tumble slot template",
+  "scripts": {
+    "theme:new": "node scripts/create-theme.mjs",
+    "theme:validate": "node scripts/validate-themes.mjs",
+    "build:web": "\"/Applications/Cocos/Creator/3.8.8/CocosCreator.app/Contents/MacOS/CocosCreator\" --project . --build \"platform=web-mobile;debug=false;buildPath=./build;outputName=web-mobile;md5Cache=false\"; node scripts/patch-web-build.mjs ./build/web-mobile"
+  },
+  "creator": {"version": "3.8.8"},
+  "templateProfile": {
+    "code": "S09",
+    "baselineVersion": "1.0.0",
+    "status": "GOLD_MASTER",
+    "name": "Aurum Forge 6x5 Cluster Tumble Slot",
+    "nameZh": "铸金熔炉 6x5 连消掉落 Slot",
+    "mechanic": "6 columns, 5 rows, orthogonal clusters of 5+, cascading tumbles, escalating chain multipliers, forge-energy feature, scatter free spins and furnace bonus"
+  },
+  "uuid": "7ccf1481-b64a-4ea3-9ec6-e22b87dc1d07"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "aurum-forge",
+  "title": "AURUM FORGE",
+  "subtitle": "CLUSTER TUMBLE",
+  "initialCoins": 5000,
+  "defaultBet": 50,
+  "betOptions": [20, 50, 100, 200, 500],
+  "winRate": 0.27,
+  "minSpinDuration": 0.68,
+  "reelStopDelay": 0.09,
+  "columns": 6,
+  "rows": 5,
+  "minimumCluster": 5,
+  "cascadeMultipliers": [1, 2, 3, 5, 8],
+  "forgeTarget": 40,
+  "freeSpinsAward": 6,
+  "visual": {
+    "cabinet": "theme/aurum-forge/cabinet-v1/spriteFrame",
+    "winStage": "theme/aurum-forge/fx/win-stage-v1/spriteFrame",
+    "homeIcon": "theme/aurum-forge/controls/home/spriteFrame",
+    "rulesIcon": "theme/aurum-forge/controls/rules/spriteFrame",
+    "soundIcon": "theme/aurum-forge/controls/sound/spriteFrame",
+    "addIcon": "theme/aurum-forge/controls/add/spriteFrame",
+    "autoIcon": "theme/aurum-forge/controls/auto/spriteFrame",
+    "spinIcon": "theme/aurum-forge/controls/spin/spriteFrame",
+    "accent": "#16A879",
+    "accentSecondary": "#FFD76A",
+    "reelPanel": "#063E31",
+    "cell": "#0C624A",
+    "text": "#FFF4C7"
+  },
+  "symbols": [
+    {"id":"gold-ingots","label":"GOLD INGOTS","texture":"theme/aurum-forge/symbols/gold-ingots/spriteFrame","weight":23,"clusterValue":0.8,"kind":"regular"},
+    {"id":"emerald-crucible","label":"EMERALD CRUCIBLE","texture":"theme/aurum-forge/symbols/emerald-crucible/spriteFrame","weight":20,"clusterValue":1,"kind":"regular"},
+    {"id":"ruby-gear","label":"RUBY GEAR","texture":"theme/aurum-forge/symbols/ruby-gear/spriteFrame","weight":18,"clusterValue":1.2,"kind":"regular"},
+    {"id":"sapphire-anvil","label":"SAPPHIRE ANVIL","texture":"theme/aurum-forge/symbols/sapphire-anvil/spriteFrame","weight":16,"clusterValue":1.45,"kind":"regular"},
+    {"id":"diamond-tongs","label":"DIAMOND TONGS","texture":"theme/aurum-forge/symbols/diamond-tongs/spriteFrame","weight":14,"clusterValue":1.8,"kind":"regular"},
+    {"id":"liquid-coin","label":"LIQUID GOLD","texture":"theme/aurum-forge/symbols/liquid-coin/spriteFrame","weight":11,"clusterValue":2.2,"kind":"regular"},
+    {"id":"molten-wild","label":"MOLTEN WILD","texture":"theme/aurum-forge/symbols/molten-wild/spriteFrame","weight":5,"clusterValue":2.8,"kind":"wild"},
+    {"id":"mint-press-scatter","label":"FORGE SCATTER","texture":"theme/aurum-forge/symbols/mint-press-scatter/spriteFrame","weight":4,"clusterValue":0,"kind":"scatter"},
+    {"id":"furnace-bonus","label":"FURNACE BONUS","texture":"theme/aurum-forge/symbols/furnace-bonus/spriteFrame","weight":3,"clusterValue":0,"kind":"bonus"}
+  ]
+}

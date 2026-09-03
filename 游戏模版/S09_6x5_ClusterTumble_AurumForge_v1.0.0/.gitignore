@@ -1,0 +1,37 @@
+
+#///////////////////////////
+# Cocos Creator Project
+#///////////////////////////
+
+/library/
+/temp/
+/local/
+/build/
+/profiles/
+/native/engine/android/**/*/assets
+
+#//////////////////////////
+# NPM
+#//////////////////////////
+node_modules/
+vendor/
+.creator/asset-template/
+Creator3.0粒子特效(23个).zip
+
+# Unused migration sources from the earlier Royal Ascension prototype
+/assets/resources/config/royal-ascension.json
+/assets/resources/config/royal-ascension.json.meta
+/assets/resources/theme/classic.meta
+/assets/resources/theme/classic/
+/assets/resources/theme/royal-ascension.meta
+/assets/resources/theme/royal-ascension/
+
+#//////////////////////////
+# VSCode
+#//////////////////////////
+.vscode/
+
+#//////////////////////////
+# WebStorm
+#//////////////////////////
+.idea/

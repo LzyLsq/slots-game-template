@@ -233,15 +233,10 @@ export class SlotGame extends Component {
     }
 
     private hideWebBootOverlay(): void {
-        if (typeof document === 'undefined') return;
-        const bootOverlay = document.getElementById('rfBootLoader');
-        if (!bootOverlay) return;
-        // Wait one browser frame so the Cocos loading scene is already under
-        // the DOM cover, then crossfade without exposing a black canvas frame.
-        requestAnimationFrame(() => {
-            bootOverlay.style.opacity = '0';
-            window.setTimeout(() => bootOverlay.remove(), 260);
-        });
+        if (typeof window === 'undefined') return;
+        const browserWindow = window as typeof window & { __ROYAL_FORTUNE_READY__?: boolean };
+        browserWindow.__ROYAL_FORTUNE_READY__ = true;
+        window.dispatchEvent(new CustomEvent('royal-fortune-ready'));
     }
 
     private buildInterface(): void {
