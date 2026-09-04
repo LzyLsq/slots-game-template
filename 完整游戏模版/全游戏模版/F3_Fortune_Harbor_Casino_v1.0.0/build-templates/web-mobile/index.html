@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Fortune Harbor Casino</title>
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="360-fullscreen" content="true">
+  <meta name="x5-page-mode" content="app">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="csw-preloader" role="status" aria-label="Loading Fortune Harbor Casino">
+    <div class="csw-loader-photo"></div>
+    <div class="csw-loader-light csw-loader-light-a"></div>
+    <div class="csw-loader-light csw-loader-light-b"></div>
+    <div class="csw-loader-shell">
+      <div class="csw-loader-crown"><i></i><b></b><i></i></div>
+      <div class="csw-loader-kicker">WELCOME TO</div>
+      <div class="csw-loader-title">FORTUNE HARBOR</div>
+      <div class="csw-loader-stage">
+        <div class="csw-orbit csw-orbit-a"><i></i></div>
+        <div class="csw-orbit csw-orbit-b"><i></i></div>
+        <div class="csw-orbit csw-orbit-c"><i></i></div>
+        <img class="csw-core" src="fortune-harbor-loader-emblem.png" alt="">
+        <div class="csw-stage-sheen"></div>
+      </div>
+      <div class="csw-loader-copy">OPENING THE HARBOR</div>
+      <div class="csw-loader-track"><span><b></b></span><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="csw-loader-percent">0%</div>
+      <div class="csw-loader-foot">FOUR GAMES&nbsp;&nbsp;•&nbsp;&nbsp;ONE SUNNY CASINO PORT</div>
+    </div>
+  </div>
+  <div id="GameDiv" cc_exact_fit_screen="true">
+    <div id="Cocos3dGameContainer">
+      <canvas id="GameCanvas" tabindex="99"></canvas>
+    </div>
+  </div>
+  <script src="src/polyfills.bundle.js" charset="utf-8"></script>
+  <script src="src/system.bundle.js" charset="utf-8"></script>
+  <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"></script>
+  <script src="bootstrap.js" charset="utf-8"></script>
+</body>
+</html>
