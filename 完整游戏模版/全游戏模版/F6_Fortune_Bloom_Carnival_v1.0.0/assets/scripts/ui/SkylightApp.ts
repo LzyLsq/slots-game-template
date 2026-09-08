@@ -106,39 +106,46 @@ const FRAME_STYLES: readonly { textureIndex: number; angle?: number; tint?: Colo
 ];
 const CABINET_LAYOUTS: Readonly<Record<GameId, CabinetLayout>> = {
   'golden-parade': {
-    reelX: 0, reelY: 278, reelWidth: 744, reelHeight: 482,
-    titleY: 816, titleWidth: 610, titleSize: 46, paylineY: 584, darkMarquee: false,
-    jackpotY: 670, jackpotWidth: 610, featureY: -820, featureWidth: 690,
+    // Source aperture: x 210..815, y 397..738 in the 1024x1536 cabinet.
+    // The cabinet is presented at 1.25x, so every live element lands in the
+    // photographed metal opening instead of following an approximate grid.
+    reelX: 0, reelY: 251, reelWidth: 744, reelHeight: 418,
+    titleY: 714, titleWidth: 650, titleSize: 46, paylineY: 525, darkMarquee: false,
+    jackpotY: 596, jackpotWidth: 570, featureY: -650, featureWidth: 610,
     readoutY: -40, readoutX: 0, readoutWidth: 330, readoutHeight: 64, readoutFontSize: 21,
-    turbo: { x: 326, y: -190, width: 92, height: 96 }, spin: { x: 0, y: -188, width: 144, height: 144 }, auto: { x: 198, y: -190, width: 92, height: 96 },
-    minus: { x: -332, y: -190, width: 92, height: 96 }, plus: { x: -202, y: -190, width: 92, height: 96 },
+    turbo: { x: 379, y: -162, width: 88, height: 90 }, spin: { x: 0, y: -162, width: 146, height: 146 }, auto: { x: 229, y: -162, width: 88, height: 90 },
+    minus: { x: -376, y: -162, width: 88, height: 90 }, plus: { x: -224, y: -162, width: 88, height: 90 },
     sound: { x: 486, y: 866, width: 94, height: 94 }, rules: { x: 486, y: 744, width: 94, height: 94 }, home: { x: -486, y: 866, width: 94, height: 94 },
   },
   'blossom-fortune': {
-    reelX: 0, reelY: 230, reelWidth: 680, reelHeight: 590,
-    titleY: 820, titleWidth: 600, titleSize: 45, paylineY: 568, darkMarquee: false,
-    jackpotY: 680, jackpotWidth: 610, featureY: -824, featureWidth: 690,
+    // Tall conservatory glass and a four-petal control deck. The staggered
+    // controls are intentional—the machine no longer shares the five-key bar.
+    reelX: 0, reelY: 176, reelWidth: 616, reelHeight: 424,
+    titleY: 610, titleWidth: 650, titleSize: 45, paylineY: 444, darkMarquee: false,
+    jackpotY: 518, jackpotWidth: 560, featureY: -615, featureWidth: 610,
     readoutY: -102, readoutX: 0, readoutWidth: 332, readoutHeight: 64, readoutFontSize: 21,
-    turbo: { x: 302, y: -246, width: 90, height: 94 }, spin: { x: 0, y: -244, width: 142, height: 142 }, auto: { x: 178, y: -246, width: 90, height: 94 },
-    minus: { x: -308, y: -246, width: 90, height: 94 }, plus: { x: -182, y: -246, width: 90, height: 94 },
+    turbo: { x: 255, y: -350, width: 88, height: 88 }, spin: { x: 0, y: -296, width: 154, height: 154 }, auto: { x: 255, y: -238, width: 88, height: 88 },
+    minus: { x: -257, y: -238, width: 88, height: 88 }, plus: { x: -257, y: -350, width: 88, height: 88 },
     sound: { x: 486, y: 870, width: 94, height: 94 }, rules: { x: 486, y: 748, width: 94, height: 94 }, home: { x: -486, y: 870, width: 94, height: 94 },
   },
   'lantern-treasure': {
-    reelX: 0, reelY: 286, reelWidth: 760, reelHeight: 402,
-    titleY: 820, titleWidth: 620, titleSize: 45, paylineY: 590, darkMarquee: false,
-    jackpotY: 686, jackpotWidth: 620, featureY: -826, featureWidth: 690,
+    reelX: 0, reelY: 151, reelWidth: 748, reelHeight: 406,
+    titleY: 568, titleWidth: 720, titleSize: 45, paylineY: 405, darkMarquee: false,
+    jackpotY: 482, jackpotWidth: 610, featureY: -650, featureWidth: 650,
     readoutY: 0, readoutX: 0, readoutWidth: 326, readoutHeight: 64, readoutFontSize: 21,
-    turbo: { x: 330, y: -152, width: 92, height: 96 }, spin: { x: 0, y: -150, width: 142, height: 142 }, auto: { x: 198, y: -152, width: 92, height: 96 },
-    minus: { x: -336, y: -152, width: 92, height: 96 }, plus: { x: -204, y: -152, width: 92, height: 96 },
+    turbo: { x: 423, y: -281, width: 88, height: 90 }, spin: { x: 0, y: -281, width: 148, height: 148 }, auto: { x: 255, y: -281, width: 88, height: 90 },
+    minus: { x: -417, y: -281, width: 88, height: 90 }, plus: { x: -251, y: -281, width: 88, height: 90 },
     sound: { x: 486, y: 866, width: 94, height: 94 }, rules: { x: 486, y: 744, width: 94, height: 94 }, home: { x: -486, y: 866, width: 94, height: 94 },
   },
   'treasure-wheel': {
-    reelX: 0, reelY: 316, reelWidth: 604, reelHeight: 420,
-    titleY: 822, titleWidth: 590, titleSize: 46, paylineY: 610, darkMarquee: false,
-    jackpotY: 692, jackpotWidth: 590, featureY: -824, featureWidth: 670,
+    // Compact classic reels sit above a separate, physical prize wheel. This
+    // intentionally uses a different vertical hierarchy from the video slots.
+    reelX: 0, reelY: 189, reelWidth: 472, reelHeight: 374,
+    titleY: 706, titleWidth: 690, titleSize: 46, paylineY: 439, darkMarquee: false,
+    jackpotY: 566, jackpotWidth: 560, featureY: -765, featureWidth: 560,
     readoutY: 36, readoutX: 0, readoutWidth: 312, readoutHeight: 64, readoutFontSize: 21,
-    turbo: { x: 306, y: -106, width: 90, height: 94 }, spin: { x: 0, y: -104, width: 142, height: 142 }, auto: { x: 184, y: -106, width: 90, height: 94 },
-    minus: { x: -312, y: -106, width: 90, height: 94 }, plus: { x: -188, y: -106, width: 90, height: 94 },
+    turbo: { x: 311, y: -170, width: 82, height: 86 }, spin: { x: 0, y: -170, width: 142, height: 142 }, auto: { x: 181, y: -170, width: 82, height: 86 },
+    minus: { x: -304, y: -170, width: 82, height: 86 }, plus: { x: -178, y: -170, width: 82, height: 86 },
     sound: { x: 486, y: 858, width: 94, height: 94 }, rules: { x: 486, y: 736, width: 94, height: 94 }, home: { x: -486, y: 858, width: 94, height: 94 },
   },
 };
@@ -147,10 +154,10 @@ const CABINET_READOUT_LAYOUTS: Readonly<Record<GameId, CabinetReadoutLayout>> = 
   // illuminated rail above the reels, TOP WIN sits directly under the logo,
   // while WIN and BET retain their own lower readouts. Each machine keeps an
   // independently measured baseline because the generated metalwork differs.
-  'golden-parade': { topWinY: 670, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(255, 221, 124), topWinGlowTone: new Color(255, 161, 106), topWinValueTone: new Color(255, 249, 221), creditsY: 584, creditsWidth: 520, creditsSurface: 'light', winX: 0, winY: -40, winWidth: 320, betX: -272, betY: -292, betWidth: 190, betTone: new Color(144, 73, 44) },
-  'blossom-fortune': { topWinY: 680, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(162, 247, 196), topWinGlowTone: new Color(73, 180, 128), topWinValueTone: new Color(255, 245, 188), creditsY: 568, creditsWidth: 500, creditsSurface: 'light', winX: 0, winY: -102, winWidth: 352, betX: -244, betY: -344, betWidth: 190, betTone: new Color(43, 124, 86) },
-  'lantern-treasure': { topWinY: 686, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(255, 192, 136), topWinGlowTone: new Color(224, 92, 74), topWinValueTone: new Color(255, 247, 209), creditsY: 590, creditsWidth: 520, creditsSurface: 'light', winX: 0, winY: 0, winWidth: 340, betX: -274, betY: -258, betWidth: 190, betTone: new Color(151, 55, 48) },
-  'treasure-wheel': { topWinY: 692, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(151, 224, 255), topWinGlowTone: new Color(245, 180, 74), topWinValueTone: new Color(255, 247, 211), creditsY: 610, creditsWidth: 450, creditsSurface: 'light', winX: 0, winY: 36, winWidth: 290, betX: -248, betY: -212, betWidth: 184, betTone: new Color(57, 117, 145) },
+  'golden-parade': { topWinY: 596, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(255, 221, 124), topWinGlowTone: new Color(255, 161, 106), topWinValueTone: new Color(255, 249, 221), creditsY: 525, creditsWidth: 550, creditsSurface: 'light', winX: 0, winY: -43, winWidth: 286, betX: 0, betY: -274, betWidth: 274, betTone: new Color(144, 73, 44) },
+  'blossom-fortune': { topWinY: 518, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(162, 247, 196), topWinGlowTone: new Color(73, 180, 128), topWinValueTone: new Color(255, 245, 188), creditsY: 444, creditsWidth: 610, creditsSurface: 'light', winX: 0, winY: -116, winWidth: 452, betX: 0, betY: -430, betWidth: 200, betTone: new Color(43, 124, 86) },
+  'lantern-treasure': { topWinY: 482, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(255, 192, 136), topWinGlowTone: new Color(224, 92, 74), topWinValueTone: new Color(255, 247, 209), creditsY: 405, creditsWidth: 690, creditsSurface: 'light', winX: 0, winY: -140, winWidth: 332, betX: 0, betY: -410, betWidth: 210, betTone: new Color(151, 55, 48) },
+  'treasure-wheel': { topWinY: 566, topWinSurface: 'dark', topWinHeight: 50, topWinTitleTone: new Color(151, 224, 255), topWinGlowTone: new Color(245, 180, 74), topWinValueTone: new Color(255, 247, 211), creditsY: 439, creditsWidth: 540, creditsSurface: 'light', winX: -236, winY: -66, winWidth: 176, betX: 236, betY: -66, betWidth: 176, betTone: new Color(57, 117, 145) },
 };
 // The four generated trims do not share the same inner window. Treating them
 // as symmetric nine-slices stretches the crest into the panel, so each trim
@@ -1103,7 +1110,7 @@ export class SkylightApp extends Component {
     this.addGameStage(layout, color);
     this.cabinetTitle(this.selectedGame.name, layout.titleY, layout.titleSize, layout.darkMarquee, layout.titleWidth);
     this.addJackpotStrip(layout, readout);
-    this.addFeatureMeter(layout);
+    this.addMachineFeatureConsole(layout, color);
     const reelFrame = new Node('CasinoTableReelAperture'); reelFrame.layer = Layers.Enum.UI_2D; reelFrame.addComponent(UITransform).setContentSize(layout.reelWidth, layout.reelHeight);
     // The generated cabinet windows have rounded glass corners. A rectangular
     // mask lets the first/last reel briefly show through the metal shoulders
@@ -1116,9 +1123,9 @@ export class SkylightApp extends Component {
     reelFrame.setPosition(layout.reelX, layout.reelY); this.page.addChild(reelFrame);
     const reelEngine = reelFrame.addComponent(ReelEngine); reelEngine.configure(this.selectedGame, layout.reelWidth, layout.reelHeight); this.reelEngine = reelEngine;
     this.addControlDeckIdle(layout, color);
-    // The primary money ledger belongs in the narrow information rail above
-    // the reels. Keeping it off the lower control deck prevents the labels and
-    // values from fighting the physical buttons baked into each cabinet.
+    // Each readout is measured against the corresponding photographed socket.
+    // In particular, the wheel cabinet uses two separate side meters while the
+    // conservatory owns a wide lower cascade window.
     this.balanceLabel = this.machineBalanceReadout(this.format(this.bootstrap.economy.balance()), readout.creditsY, readout.creditsWidth, layout.readoutHeight, layout.readoutFontSize, readout.creditsSurface);
     const winWindow = this.machineReadout('WIN', '0', readout.winX, readout.winY, readout.winWidth, layout.readoutHeight, layout.readoutFontSize, true); this.winLabel = winWindow;
     this.betLabel = this.machineBetReadout(this.format(this.bet()), readout.betX, readout.betY, readout.betWidth, layout.readoutFontSize, readout.betTone);
@@ -1128,9 +1135,8 @@ export class SkylightApp extends Component {
     const autoActive = this.autoSpin.active || this.autoStartPending; const auto = this.machineButton('AUTO', layout.auto.x, layout.auto.y, layout.auto.width, layout.auto.height, () => void this.startAuto(), autoActive ? 'switch-on' : 'switch', 'auto'); this.autoStatusLamp = auto.getChildByName('MachineStatusLamp') ?? undefined; this.setAutoIndicator(autoActive);
     const turbo = this.machineButton('TURBO', layout.turbo.x, layout.turbo.y, layout.turbo.width, layout.turbo.height, () => this.toggleTurbo(), this.turbo ? 'switch-on' : 'switch', 'turbo'); this.turboStatusLamp = turbo.getChildByName('MachineStatusLamp') ?? undefined;
     const soundOn = this.ensurePlayer().settings.sound;
-    // These utility keys are viewport-corner controls, not artwork-relative
-    // props. Applying the safe top offset keeps them in the true upper corners
-    // on tall phones instead of letting them drift down beside the marquee.
+    // Utility keys remain attached to the cabinet shoulders. Safe-area clamps
+    // only prevent clipping; they never rescale the photographed machine.
     const utilityPosition = (slot: CabinetControlSlot): Vec3 => {
       const halfWidth = slot.width * cabinetScale / 2; const sideInset = slot.x < 0 ? SafeAreaAdapter.safeLeft : SafeAreaAdapter.safeRight;
       const worldX = Math.sign(slot.x) * Math.min(Math.abs(slot.x), Math.max(0, SafeAreaAdapter.visibleWidth / 2 - sideInset - halfWidth - 6));
@@ -1268,10 +1274,22 @@ export class SkylightApp extends Component {
   }
 
   private presentOrbitPickStage(result: SpinResult): void {
-    const feature = result.featureResult; const modal = this.modal(900, 940); this.addFeatureStageChrome(modal, C.gold, 'orbit', 820, 860); this.addCardMotes(modal, 26, C.gold, 820, 830); this.artTitle(modal, 'TREASURE WHEEL', 0, 365, 45, C.gold, 760); this.label(modal, 'ONE WHEEL • ONE INSTANT MULTIPLIER', 0, 316, 19, C.white, true, 680);
-    const orbit = new Node('OrbitPickWheel'); orbit.layer = Layers.Enum.UI_2D; orbit.addComponent(UITransform).setContentSize(650, 470); orbit.setPosition(0, 72); modal.addChild(orbit); const g = orbit.addComponent(Graphics); g.strokeColor = new Color(255, 224, 136, 190); g.lineWidth = 5; g.ellipse(0, 0, 270, 170); g.stroke(); g.strokeColor = new Color(126, 200, 200, 180); g.lineWidth = 2; g.ellipse(0, 0, 220, 128); g.stroke();
-    const choices: readonly [string, number, number][] = [['gold-coin', -220, 0], ['wheel-ticket', 0, 145], ['prize-wheel', 220, 0]]; choices.forEach(([symbol, x, y], index) => { const choice = this.panel(orbit, x, y, 150, 150, 75, new Color(61, 26, 43, 244), index === 2 ? C.gold : C.cyan, 3, false); this.addPremiumSymbol(choice, GAME_CONFIGS[3], symbol, 0, 6, 104, index === 1 ? 'orbit' : 'pulse', 250, index * 0.14); const tag = this.label(choice, index === 2 ? 'LANDED' : 'WHEEL', 0, -56, 16, index === 2 ? C.paleGold : C.muted, true, 130); this.addLabelOutline(tag, C.outline, 2); });
-    this.addBrandEmblem(orbit, 0, -20, 132); const detail = this.label(modal, feature?.detail.toUpperCase() ?? 'TREASURE WHEEL COMPLETE', 0, -157, 23, C.white, true, 720); this.addLabelOutline(detail, C.outline, 3); this.featureCollectButton(modal, feature?.totalCredits ?? 0, C.gold, -357);
+    const feature = result.featureResult; const modal = this.modal(900, 940); this.addFeatureStageChrome(modal, C.gold, 'orbit', 820, 860); this.addCardMotes(modal, 26, C.gold, 820, 830); this.artTitle(modal, 'TREASURE WHEEL', 0, 365, 45, C.gold, 760); this.label(modal, 'ONE PHYSICAL WHEEL  •  ONE VERIFIED MULTIPLIER', 0, 316, 19, C.white, true, 700);
+    const stage = new Node('TreasureWheelFeatureStage'); stage.layer = Layers.Enum.UI_2D; stage.addComponent(UITransform).setContentSize(600, 520); stage.setPosition(0, 45); modal.addChild(stage);
+    const wheel = new Node('TreasureWheelRotor'); wheel.layer = Layers.Enum.UI_2D; wheel.addComponent(UITransform).setContentSize(470, 470); stage.addChild(wheel); const g = wheel.addComponent(Graphics); const radius = 214; const segments = [0, 0.5, 1, 1, 2, 3, 5, 10] as const;
+    segments.forEach((multiplier, index) => {
+      const start = -Math.PI / 2 + Math.PI * 2 * index / segments.length; const end = -Math.PI / 2 + Math.PI * 2 * (index + 1) / segments.length;
+      g.fillColor = index % 2 ? new Color(73, 150, 168, 246) : new Color(232, 153, 93, 246); g.moveTo(0, 0); g.lineTo(Math.cos(start) * radius, Math.sin(start) * radius); for (let step = 1; step <= 7; step += 1) { const angle = start + (end - start) * step / 7; g.lineTo(Math.cos(angle) * radius, Math.sin(angle) * radius); } g.close(); g.fill();
+      g.strokeColor = new Color(255, 235, 164, 218); g.lineWidth = 2.5; g.moveTo(0, 0); g.lineTo(Math.cos(start) * radius, Math.sin(start) * radius); g.stroke();
+      const middle = (start + end) / 2; const copy = multiplier === 0 ? 'TRY' : `${multiplier}×`; const label = this.label(wheel, copy, Math.cos(middle) * 139, Math.sin(middle) * 139, 24, C.white, true, 82); label.node.angle = middle * 180 / Math.PI + 90; this.addLabelOutline(label, C.outline, 4);
+    });
+    g.fillColor = new Color(47, 24, 32, 248); g.circle(0, 0, 70); g.fill(); g.strokeColor = new Color(255, 224, 132, 250); g.lineWidth = 9; g.circle(0, 0, 66); g.stroke(); g.strokeColor = new Color(255, 251, 224, 190); g.lineWidth = 2; g.circle(0, 0, radius - 5); g.stroke();
+    this.addPremiumSymbol(wheel, GAME_CONFIGS[3], 'prize-wheel', 0, 0, 108, 'pulse', 255);
+    const rotorOpacity = wheel.addComponent(UIOpacity); rotorOpacity.opacity = 230; tween(rotorOpacity).to(0.38, { opacity: 255 }, { easing: 'sineOut' }).start();
+    const multiplier = Math.max(0, (feature?.totalCredits ?? 0) / Math.max(1, this.bet())); const landedIndex = Math.max(0, segments.findIndex((value) => Math.abs(value - multiplier) < 0.001)); const landingAngle = 90 - (landedIndex + 0.5) * 360 / segments.length;
+    tween(wheel).to(2.25, { angle: -1080 + landingAngle }, { easing: 'cubicOut' }).to(0.16, { angle: -1080 + landingAngle + 4 }, { easing: 'sineInOut' }).to(0.2, { angle: -1080 + landingAngle }, { easing: 'backOut' }).start();
+    const pointer = new Node('TreasureWheelFeaturePointer'); pointer.layer = Layers.Enum.UI_2D; pointer.addComponent(UITransform).setContentSize(86, 80); pointer.setPosition(0, 238); stage.addChild(pointer); const pointerGraphics = pointer.addComponent(Graphics); pointerGraphics.fillColor = new Color(255, 226, 133, 255); pointerGraphics.moveTo(0, -38); pointerGraphics.lineTo(-22, 23); pointerGraphics.lineTo(22, 23); pointerGraphics.close(); pointerGraphics.fill(); pointerGraphics.strokeColor = new Color(87, 38, 28, 255); pointerGraphics.lineWidth = 5; pointerGraphics.moveTo(0, -34); pointerGraphics.lineTo(-18, 20); pointerGraphics.lineTo(18, 20); pointerGraphics.close(); pointerGraphics.stroke(); tween(pointer).delay(1.45).to(0.11, { angle: -13 }).to(0.11, { angle: 12 }).union().repeat(7).to(0.18, { angle: 0 }, { easing: 'backOut' }).start();
+    const detail = this.label(modal, feature?.detail.toUpperCase() ?? 'TREASURE WHEEL COMPLETE', 0, -216, 23, C.white, true, 720); this.addLabelOutline(detail, C.outline, 3); this.featureCollectButton(modal, feature?.totalCredits ?? 0, C.gold, -357);
   }
 
   private presentCashRespinStage(result: SpinResult): void {
@@ -1576,17 +1594,68 @@ export class SkylightApp extends Component {
     const glint = new Node('TopWinLightSweep'); glint.layer = Layers.Enum.UI_2D; glint.addComponent(UITransform).setContentSize(54, displayHeight - 12); glint.setPosition(-displayWidth * 0.42, 0); glint.angle = -14; node.addChild(glint); const glintGraphics = glint.addComponent(Graphics); glintGraphics.fillColor = new Color(255, 253, 224, 48); glintGraphics.roundRect(-16, -displayHeight / 2, 32, displayHeight, 12); glintGraphics.fill(); glintGraphics.fillColor = new Color(accent.r, accent.g, accent.b, 28); glintGraphics.roundRect(-27, -displayHeight / 2, 54, displayHeight, 16); glintGraphics.fill(); const glintOpacity = glint.addComponent(UIOpacity); glintOpacity.opacity = 0; tween(glint).delay(0.65).to(1.25, { position: new Vec3(displayWidth * 0.42, 0, 0) }, { easing: 'sineInOut' }).call(() => glint.setPosition(-displayWidth * 0.42, 0)).delay(2.25).union().repeatForever().start(); tween(glintOpacity).delay(0.65).to(0.18, { opacity: 190 }, { easing: 'sineOut' }).delay(0.64).to(0.28, { opacity: 0 }, { easing: 'sineInOut' }).delay(3.05).union().repeatForever().start();
   }
 
-  private addFeatureMeter(layout: CabinetLayout): void {
-    const meters: Readonly<Record<GameId, { name: string; mode: string; suffix: string }>> = {
-      'golden-parade': { name: 'ROAMING PARADE', mode: '1024 WAYS', suffix: '3 PARADE TICKETS' },
-      'blossom-fortune': { name: 'BLOOM CASCADE', mode: 'CLUSTER PAYS', suffix: 'RISING MULTIPLIER' },
-      'lantern-treasure': { name: 'LANTERN RESPIN', mode: '20 LINES', suffix: '6 LOCKED COINS' },
-      'treasure-wheel': { name: 'TREASURE WHEEL', mode: 'CENTER LINE', suffix: '3 WHEEL TICKETS' },
-    };
-    const meter = meters[this.selectedGame.id]; const node = new Node('FeatureMeter'); node.layer = Layers.Enum.UI_2D; node.addComponent(UITransform).setContentSize(layout.featureWidth, 66); node.setPosition(0, layout.featureY); this.page.addChild(node);
-    const g = node.addComponent(Graphics); g.fillColor = new Color(51, 13, 21, 176); g.roundRect(-layout.featureWidth / 2, -30, layout.featureWidth, 60, 22); g.fill(); g.strokeColor = new Color(226, 174, 78, 215); g.lineWidth = 2; g.roundRect(-layout.featureWidth / 2 + 2, -28, layout.featureWidth - 4, 56, 20); g.stroke();
-    const primary = this.label(node, `${meter.name}      ${meter.mode}`, 0, 12, 25, new Color(255, 230, 146), true, layout.featureWidth - 28); primary.enableWrapText = false; this.addLabelOutline(primary, new Color(46, 8, 16, 255), 4);
-    const detail = this.label(node, meter.suffix, 0, -15, 23, new Color(255, 250, 225), true, layout.featureWidth - 34); detail.enableWrapText = false; this.addLabelOutline(detail, new Color(46, 8, 16, 255), 3);
+  private addMachineFeatureConsole(layout: CabinetLayout, accent: Color): void {
+    if (this.selectedGame.id === 'golden-parade') { this.addParadeTrackConsole(layout, accent); return; }
+    if (this.selectedGame.id === 'blossom-fortune') { this.addBloomMultiplierConsole(layout, accent); return; }
+    if (this.selectedGame.id === 'lantern-treasure') { this.addLanternRespinConsole(layout, accent); return; }
+    this.addTreasureWheelConsole(layout, accent);
+  }
+
+  private featureConsoleBase(name: string, x: number, y: number, width: number, height: number, accent: Color): Node {
+    const node = new Node(name); node.layer = Layers.Enum.UI_2D; node.addComponent(UITransform).setContentSize(width, height); node.setPosition(x, y); this.page.addChild(node);
+    const g = node.addComponent(Graphics); g.fillColor = new Color(42, 14, 24, 220); g.roundRect(-width / 2, -height / 2, width, height, Math.min(24, height * 0.32)); g.fill();
+    g.fillColor = new Color(accent.r, accent.g, accent.b, 25); g.roundRect(-width / 2 + 8, 1, width - 16, height / 2 - 9, Math.min(15, height * 0.2)); g.fill();
+    g.strokeColor = new Color(117, 64, 34, 248); g.lineWidth = 5; g.roundRect(-width / 2 + 2, -height / 2 + 2, width - 4, height - 4, Math.min(22, height * 0.29)); g.stroke();
+    g.strokeColor = new Color(255, 224, 139, 224); g.lineWidth = 1.5; g.roundRect(-width / 2 + 8, -height / 2 + 8, width - 16, height - 16, Math.min(16, height * 0.22)); g.stroke();
+    return node;
+  }
+
+  private addParadeTrackConsole(layout: CabinetLayout, accent: Color): void {
+    const node = this.featureConsoleBase('ParadeCoinConveyorConsole', 0, layout.featureY, layout.featureWidth, 96, accent);
+    const title = this.label(node, 'ROAMING PARADE', -178, 21, 22, new Color(255, 233, 162), true, 230); this.addLabelOutline(title, C.outline, 3);
+    const mode = this.label(node, '1024 WAYS', 192, 21, 21, C.white, true, 180); this.addLabelOutline(mode, C.outline, 3);
+    for (let index = 0; index < 3; index += 1) {
+      const lamp = new Node(`ParadeTicketLamp-${index}`); lamp.layer = Layers.Enum.UI_2D; lamp.addComponent(UITransform).setContentSize(92, 30); lamp.setPosition(-112 + index * 112, -22); node.addChild(lamp); const g = lamp.addComponent(Graphics);
+      g.fillColor = new Color(111, 52, 31, 242); g.roundRect(-43, -12, 86, 24, 12); g.fill(); g.strokeColor = new Color(255, 205, 105, 220); g.lineWidth = 2; g.roundRect(-40, -9, 80, 18, 9); g.stroke();
+      g.fillColor = index === 0 ? new Color(255, 221, 112, 220) : new Color(accent.r, accent.g, accent.b, 92); g.circle(-27, 0, 5); g.fill();
+      const label = this.label(lamp, index === 0 ? 'READY' : `TICKET ${index + 1}`, 8, 0, 14, C.white, true, 60); this.addLabelOutline(label, C.outline, 2);
+      const opacity = lamp.addComponent(UIOpacity); opacity.opacity = 115 + index * 25; tween(opacity).delay(index * 0.32).to(0.85, { opacity: 245 }, { easing: 'sineInOut' }).to(1.15, { opacity: 118 }, { easing: 'sineInOut' }).union().repeatForever().start();
+    }
+  }
+
+  private addBloomMultiplierConsole(layout: CabinetLayout, accent: Color): void {
+    const rail = this.featureConsoleBase('BloomCascadeMultiplierRail', 388, 120, 118, 530, accent);
+    const heading = this.label(rail, 'BLOOM\nCHAIN', 0, 205, 19, C.white, true, 94); heading.lineHeight = 23; this.addLabelOutline(heading, C.outline, 3);
+    const multipliers = ['1×', '2×', '3×', '5×', '10×'];
+    multipliers.forEach((copy, index) => {
+      const y = 125 - index * 72; const bud = new Node(`BloomMultiplierBud-${index}`); bud.layer = Layers.Enum.UI_2D; bud.addComponent(UITransform).setContentSize(72, 56); bud.setPosition(0, y); rail.addChild(bud); const g = bud.addComponent(Graphics);
+      const active = index === 0; g.fillColor = active ? new Color(71, 159, 105, 238) : new Color(54, 47, 40, 232); g.ellipse(0, 0, 34, 25); g.fill();
+      g.strokeColor = active ? new Color(255, 235, 155, 250) : new Color(accent.r, accent.g, accent.b, 155); g.lineWidth = active ? 4 : 2; g.ellipse(0, 0, 31, 22); g.stroke();
+      const label = this.label(bud, copy, 0, 0, 21, active ? C.white : C.muted, true, 62); this.addLabelOutline(label, C.outline, 3);
+      if (active) { const opacity = bud.addComponent(UIOpacity); tween(opacity).to(0.9, { opacity: 220 }, { easing: 'sineInOut' }).to(1.1, { opacity: 255 }, { easing: 'sineInOut' }).union().repeatForever().start(); }
+    });
+    const footer = this.featureConsoleBase('BloomCascadeStatus', 0, layout.featureY, 440, 70, accent); const status = this.label(footer, 'CLUSTER PAYS  •  CASCADE READY', 0, 0, 21, new Color(233, 255, 227), true, 408); this.addLabelOutline(status, C.outline, 3);
+  }
+
+  private addLanternRespinConsole(layout: CabinetLayout, accent: Color): void {
+    const node = this.featureConsoleBase('LanternHoldAndRespinConsole', 0, layout.featureY, layout.featureWidth, 112, accent);
+    const title = this.label(node, 'LANTERN LOCK & RESPIN', 0, 33, 23, new Color(255, 220, 137), true, layout.featureWidth - 40); this.addLabelOutline(title, C.outline, 4);
+    this.label(node, 'LOCK 6 COINS', -198, -22, 18, C.white, true, 170);
+    for (let index = 0; index < 6; index += 1) {
+      const coin = new Node(`LockedCoinMeter-${index}`); coin.layer = Layers.Enum.UI_2D; coin.addComponent(UITransform).setContentSize(44, 44); coin.setPosition(-91 + index * 42, -22); node.addChild(coin); const g = coin.addComponent(Graphics);
+      g.fillColor = new Color(255, 179, 50, index === 0 ? 215 : 78); g.circle(0, 0, 14); g.fill(); g.strokeColor = new Color(255, 238, 164, 230); g.lineWidth = 2; g.circle(0, 0, 11); g.stroke();
+      if (index === 0) { const opacity = coin.addComponent(UIOpacity); tween(opacity).to(0.75, { opacity: 150 }).to(0.95, { opacity: 255 }).union().repeatForever().start(); }
+    }
+    const life = this.label(node, 'RESPINS  ● ● ●', 214, -22, 18, new Color(255, 240, 187), true, 180); this.addLabelOutline(life, C.outline, 3);
+  }
+
+  private addTreasureWheelConsole(layout: CabinetLayout, accent: Color): void {
+    const wheel = new Node('PhysicalTreasureWheelLiveOverlay'); wheel.layer = Layers.Enum.UI_2D; wheel.addComponent(UITransform).setContentSize(560, 560); wheel.setPosition(0, -520); this.page.addChild(wheel);
+    const ring = new Node('TreasureWheelLightRing'); ring.layer = Layers.Enum.UI_2D; ring.addComponent(UITransform).setContentSize(520, 520); wheel.addChild(ring); const g = ring.addComponent(Graphics);
+    for (let index = 0; index < 16; index += 1) { const angle = Math.PI * 2 * index / 16; const x = Math.cos(angle) * 226; const y = Math.sin(angle) * 226; g.fillColor = index % 2 ? new Color(accent.r, accent.g, accent.b, 154) : new Color(255, 234, 154, 210); g.circle(x, y, index % 2 ? 5 : 7); g.fill(); }
+    g.strokeColor = new Color(255, 232, 155, 138); g.lineWidth = 3; g.circle(0, 0, 238); g.stroke(); const opacity = ring.addComponent(UIOpacity); opacity.opacity = 74; tween(ring).by(18, { angle: 360 }).repeatForever().start(); tween(opacity).to(1.1, { opacity: 188 }).to(1.35, { opacity: 62 }).union().repeatForever().start();
+    const pointer = new Node('WheelPointer'); pointer.layer = Layers.Enum.UI_2D; pointer.addComponent(UITransform).setContentSize(70, 70); pointer.setPosition(0, 256); wheel.addChild(pointer); const pg = pointer.addComponent(Graphics); pg.fillColor = new Color(255, 228, 142, 248); pg.moveTo(0, -30); pg.lineTo(-18, 18); pg.lineTo(18, 18); pg.close(); pg.fill(); pg.strokeColor = new Color(108, 53, 29, 255); pg.lineWidth = 4; pg.moveTo(0, -27); pg.lineTo(-15, 16); pg.lineTo(15, 16); pg.close(); pg.stroke(); tween(pointer).to(0.45, { angle: -5 }, { easing: 'sineInOut' }).to(0.52, { angle: 5 }, { easing: 'sineInOut' }).union().repeatForever().start();
+    const meter = this.featureConsoleBase('TreasureWheelTicketMeter', 0, layout.featureY, layout.featureWidth, 74, accent); const label = this.label(meter, '3 TICKETS  →  SPIN THE PHYSICAL WHEEL', 0, 0, 21, C.white, true, layout.featureWidth - 28); this.addLabelOutline(label, C.outline, 3);
   }
 
   private machineReadout(title: string, value: string, x: number, y: number, width: number, height: number, fontSize: number, prominent = false): Label {
@@ -1816,7 +1885,10 @@ export class SkylightApp extends Component {
     // former late-arriving borders while removing the abrupt clear-and-swap
     // between lobby destinations. The warm veil also hides asynchronous image
     // decoding without ever presenting a black frame.
-    const pageScale = this.router?.route === 'game' ? this.cabinetViewportScale() : 1;
+    // Cocos already maps the 1080x1920 design space to the visible viewport.
+    // Scaling the game page a second time made the live reels drift away from
+    // the photographic apertures on tall phones and wide preview windows.
+    const pageScale = 1;
     const reducedMotion = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     this.page.setScale(new Vec3(pageScale, pageScale, 1)); this.page.setPosition(reducedMotion ? Vec3.ZERO : new Vec3(0, -12, 0));
     if (reducedMotion) { pageOpacity.opacity = 255; navOpacity.opacity = 255; backdropOpacity.opacity = 255; return; }
@@ -1885,13 +1957,23 @@ export class SkylightApp extends Component {
     const dedicatedRouteScene = asset === 'store' || asset === 'rewards' || asset === 'rank' || asset === 'profile';
     const path = dedicatedRouteScene ? undefined : paths[asset] ?? gamePaths[asset]; if (!path) return;
     const gameBackground = asset.startsWith('game_');
+    if (gameBackground) {
+      // The scenic layer fills non-portrait margins. The cabinet itself is
+      // fitted to the 1920-high design stage below, never cover-cropped.
+      resources.load('generated/common/fortune_bloom_lobby/texture', Texture2D, (error, texture) => {
+        if (error || !texture || !parent.isValid) return;
+        const frame = new SpriteFrame(); frame.texture = texture; const environment = new Node('CabinetEnvironmentBackdrop'); environment.layer = Layers.Enum.UI_2D; const sprite = environment.addComponent(Sprite); sprite.spriteFrame = frame; sprite.sizeMode = Sprite.SizeMode.RAW; const transform = environment.getComponent(UITransform) as UITransform; transform.setContentSize(texture.width, texture.height);
+        const scale = Math.max(width / texture.width, height / texture.height) * 1.02; environment.setScale(new Vec3(scale, scale, 1)); parent.addChild(environment); environment.setSiblingIndex(0); const opacity = environment.addComponent(UIOpacity); opacity.opacity = 210;
+        tween(environment).to(8.5, { position: new Vec3(12, 7, 0), scale: new Vec3(scale * 1.012, scale * 1.012, 1) }, { easing: 'sineInOut' }).to(8.5, { position: new Vec3(-12, -7, 0), scale: new Vec3(scale, scale, 1) }, { easing: 'sineInOut' }).union().repeatForever().start();
+      });
+    }
     resources.load(`${path}/texture`, Texture2D, (error, texture) => {
       if (error || !texture || !parent.isValid) return;
       const frame = new SpriteFrame(); frame.texture = texture; const node = new Node('GeneratedBackdrop'); node.layer = Layers.Enum.UI_2D; const sprite = node.addComponent(Sprite); sprite.spriteFrame = frame; sprite.sizeMode = Sprite.SizeMode.RAW; const transform = node.getComponent(UITransform) as UITransform;
       const scale = gameBackground
-        ? Math.max(width / texture.width, height / texture.height) * 1.008
+        ? H / texture.height
         : Math.max(width / texture.width, height / texture.height) * 1.025;
-      node.setScale(new Vec3(scale, scale, 1)); parent.addChild(node); node.setSiblingIndex(0); transform.setContentSize(texture.width, texture.height); const opacity = node.addComponent(UIOpacity); opacity.opacity = gameBackground ? 255 : 246;
+      node.setScale(new Vec3(scale, scale, 1)); parent.addChild(node); node.setSiblingIndex(gameBackground ? Math.min(1, parent.children.length - 1) : 0); transform.setContentSize(texture.width, texture.height); const opacity = node.addComponent(UIOpacity); opacity.opacity = gameBackground ? 255 : 246;
       if (!gameBackground) {
         tween(node).to(7, { position: new Vec3(10, 7, 0), scale: new Vec3(scale * 1.015, scale * 1.015, 1) }, { easing: 'sineInOut' }).to(7, { position: new Vec3(-10, -7, 0), scale: new Vec3(scale, scale, 1) }, { easing: 'sineInOut' }).union().repeatForever().start();
         tween(opacity).to(3.8, { opacity: 255 }, { easing: 'sineInOut' }).to(4.2, { opacity: 242 }, { easing: 'sineInOut' }).union().repeatForever().start();
@@ -2332,11 +2414,10 @@ export class SkylightApp extends Component {
   private topY(designY: number): number { return designY + (SafeAreaAdapter.visibleHeight - H) / 2 - SafeAreaAdapter.safeTop; }
 
   private cabinetViewportScale(): number {
-    // Game cabinet photographs are cover-fitted to the viewport. On modern
-    // tall phones that makes the physical machine up to ~22% larger than the
-    // 1080×1920 reference. Scale the complete functional foreground by the
-    // same ratio so reels, readouts and controls stay locked to their sockets.
-    return Math.max(1, Math.min(1.23, SafeAreaAdapter.visibleHeight / H));
+    // The cabinet photograph and its controls share the same fixed 1080x1920
+    // design plane. Responsive adaptation is handled once by Cocos' resolution
+    // policy; a second content scale would break the physical registration.
+    return 1;
   }
 
   private cabinetWorldPoint(x: number, y: number): Vec3 {
