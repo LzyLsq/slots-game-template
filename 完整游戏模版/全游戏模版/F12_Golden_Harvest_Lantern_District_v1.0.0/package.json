@@ -1,0 +1,32 @@
+{
+  "name": "golden-harvest-lantern-district-f12",
+  "uuid": "8dc31491-2507-4af3-92b6-7b946192aac7",
+  "version": "1.0.0",
+  "description": "Golden Harvest Lantern District: four distinct fortune games in a cohesive lantern, jade, lacquer and warm-gold world. Cocos Creator 3.8.8.",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank",
+    "test:rank": "node --import tsx tools/rank-test.ts",
+    "test:math": "node --import tsx tools/math-test.ts",
+    "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
+    "test:rtp": "node --import tsx tools/rtp-simulation.ts 100000",
+    "build:finalize": "node tools/finalize-web-build.mjs",
+    "release:audit": "node --import tsx tools/release-audit.ts",
+    "typecheck:math": "tsc -p tsconfig.math.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
+    "server:dev": "node --import tsx server/ProductionServer.ts",
+    "server:production": "NODE_ENV=production node --import tsx server/PostgresProductionServer.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "8.15.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}

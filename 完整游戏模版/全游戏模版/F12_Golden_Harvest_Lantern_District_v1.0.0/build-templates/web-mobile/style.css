@@ -1,0 +1,49 @@
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html,body { width:100%; height:100%; margin:0; overflow:hidden; background:#153e36; color:#fff4d8; font-family:Arial,sans-serif; }
+body,canvas { touch-action:none; }
+#GameDiv,#Cocos3dGameContainer,#GameCanvas { width:100%; height:100%; }
+canvas { display:block; }
+/* Cocos supplies design-space font sizes and scales its DOM editing overlay.
+   A forced 16px here became ~6px after the mobile transform. */
+input,textarea { touch-action:manipulation; }
+input:not(.cocosEditBox),textarea:not(.cocosEditBox) { font-size:18px; }
+.cocosEditBox { font-weight:700; caret-color:#fff4d8; }
+#csw-preloader { position:fixed; inset:0; z-index:9999; display:grid; place-items:center; padding:24px; isolation:isolate; overflow:hidden; background:#153e36; transition:opacity .4s ease; }
+.loading-backdrop { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; pointer-events:none; }
+#csw-preloader::before { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,#153e3620,#153e3610 35%,#153e3680); }
+#csw-preloader.is-ready { opacity:0; pointer-events:none; transition-duration:.65s; }
+.harvest-glow { position:absolute; inset:0; pointer-events:none; z-index:-1; background:radial-gradient(ellipse at 22% 28%,#ffd68540,transparent 36%),radial-gradient(ellipse at 78% 65%,#eebc7530,transparent 40%); animation:harvest-glow 5s ease-in-out infinite alternate; }
+.loading-sign { position:relative; animation:sign-arrive .65s cubic-bezier(.2,.7,.2,1) both; }
+.loading-sign::after { content:''; position:absolute; inset:7px; border:1px solid #f8d59370; border-radius:inherit; pointer-events:none; }
+.loading-hint { font-size:14px; line-height:1.4; color:#f0dfbe; margin:8px 0 0; }
+.loading-track { position:relative; box-shadow:0 0 0 1px #e5bf7560,inset 0 2px 5px #071b17; }
+#loading-progress::after { content:''; position:absolute; inset:0; background:linear-gradient(100deg,transparent,#fff9df,transparent); animation:progress-shine 1.8s ease-in-out infinite; }
+.loading-track.is-indeterminate #loading-progress { width:36%; transform:none; animation:progress-travel 2s ease-in-out infinite; }
+.has-error .loading-track { opacity:.35; }
+.has-error #loading-progress,.has-error #loading-progress::after { animation-play-state:paused; }
+.has-error .loading-hint { display:none; }
+@keyframes progress-travel { 0% { transform:translateX(-105%); } 100% { transform:translateX(290%); } }
+@keyframes progress-shine { from { transform:translateX(-100%); } to { transform:translateX(100%); } }
+@keyframes harvest-glow { from { opacity:.35; } to { opacity:.9; } }
+@keyframes sign-arrive { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+.loading-sign { width:min(92vw,460px); padding:22px 24px 28px; text-align:center; border:1px solid #f3dda3; border-radius:96px 96px 22px 22px; background:linear-gradient(120deg,#183f36ec,#244d3de0); box-shadow:inset 0 0 0 5px #b87a3a45,inset 0 0 42px #f7d98724,0 5px 0 #dca95470,0 18px 70px #102d284f; }
+.brand-lockup { display:flex; align-items:center; justify-content:center; gap:12px; min-height:112px; margin:-3px auto 2px; }
+.brand-emblem { width:94px; height:94px; flex:0 0 94px; object-fit:contain; filter:drop-shadow(0 8px 15px #071b1766); animation:emblem-breathe 3.4s ease-in-out infinite; }
+.brand-copy { min-width:0; text-align:left; text-shadow:0 3px 8px #071b17; }
+.brand-copy p { margin:0; }
+.brand-kicker { color:#fff3c9; font:900 24px/1.05 Georgia,serif; letter-spacing:.08em; }
+.brand-name { margin-top:8px!important; color:#efbd6f; font:800 15px/1.1 Arial,sans-serif; letter-spacing:.22em; }
+.invitation { margin:8px 0 28px; color:#fff4d8; font:bold 19px/1.4 Georgia,serif; text-shadow:0 2px 7px #081d18; }
+.loading-track { height:7px; border-radius:9px; background:#fff4d832; overflow:hidden; }
+#loading-progress { display:block; height:100%; transform:scaleX(0); transform-origin:left; background:linear-gradient(90deg,#dca954,#fff4d8,#edab97); transition:transform .2s linear; }
+#loading-copy { min-height:42px; margin:18px 0 0; font-size:16px; font-weight:700; line-height:1.45; }
+#loading-retry { padding:12px 28px; margin-top:12px; min-height:48px; font:bold 17px Arial; color:#153e36; background:#fff4d8; border:2px solid #dca954; border-radius:12px; cursor:pointer; }
+#loading-retry:focus-visible { outline:3px solid white; outline-offset:4px; }
+.virtual-notice { position:absolute; bottom:max(20px,env(safe-area-inset-bottom)); left:20px; right:20px; margin:0; text-align:center; font-size:13px; font-weight:700; text-shadow:0 2px 6px #153e36; }
+.salon-light { position:absolute; pointer-events:none; inset:-30%; z-index:-1; background:linear-gradient(115deg,transparent 35%,#fff4d84d 49%,transparent 63%); animation:salon-light 9s ease-in-out infinite; }
+@keyframes salon-light { 0%,100% { transform:translateX(-20%) rotate(-8deg); opacity:.3; } 50% { transform:translateX(20%) rotate(8deg); opacity:.7; } }
+@keyframes emblem-breathe { 0%,100% { transform:translateY(0) scale(1); filter:drop-shadow(0 8px 15px #071b1766); } 50% { transform:translateY(-3px) scale(1.025); filter:drop-shadow(0 8px 21px #f3d48a52); } }
+@media(max-width:380px) { .loading-sign { padding-inline:18px; } .brand-lockup { gap:8px; } .brand-emblem { width:80px; height:80px; flex-basis:80px; } .brand-kicker { font-size:20px; } .brand-name { font-size:13px; letter-spacing:.16em; } }
+@media(max-height:600px) { .loading-sign { padding:12px 22px 18px; width:340px; } .brand-lockup { min-height:82px; } .brand-emblem { width:72px; height:72px; flex-basis:72px; } .brand-kicker { font-size:20px; } .brand-name { font-size:12px; } .invitation { margin:4px 0 14px; font-size:17px; } }
+@media(max-width:380px) { .loading-sign { width:100%; max-width:340px; } }
+@media(prefers-reduced-motion:reduce) { .salon-light,.brand-emblem,.harvest-glow,.loading-sign,.loading-track.is-indeterminate #loading-progress,#loading-progress::after { animation:none; } .loading-track.is-indeterminate #loading-progress { transform:none; opacity:.8; } #csw-preloader { transition:opacity .01s; } }

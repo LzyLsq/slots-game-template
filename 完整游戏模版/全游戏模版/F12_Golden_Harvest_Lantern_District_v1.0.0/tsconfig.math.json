@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "types": ["node"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "work/math-dist"
+  },
+  "include": [
+    "assets/scripts/math/**/*.ts",
+    "assets/scripts/core/SeededRNG.ts",
+    "assets/scripts/core/SecureRNG.ts",
+    "assets/scripts/services/**/*.ts",
+    "assets/scripts/core/GameBootstrap.ts",
+    "tools/math-test.ts",
+    "tools/rtp-simulation.ts"
+  ]
+}
