@@ -18,6 +18,8 @@ export class SalonReels extends Component {
   private maskRoot!:Node;private reflection!:Node;private reflectionAlpha!:UIOpacity;
   private locks:Locked[]=[];private locked:Readonly<Record<number,number>>={};
   private lights:ReelLight[]=[];
+  private sparks:{node:Node;alpha:UIOpacity;x:number;y:number;vx:number;vy:number;age:number;life:number}[]=[];
+  private sparkCursor=0;
   public setup(art:SalonArt,config:GameConfig,rect:Box):void {
     this.art=art;this.config=config;this.width=rect[2];this.height=rect[3];
     this.cellW=this.width/config.columns;this.cellH=this.height/config.rows;
@@ -45,6 +47,11 @@ export class SalonReels extends Component {
       const glint=art.light(this.maskRoot,3,this.x(c),0,this.cellW*.68,this.cellW*.68,0);
       const trail=art.light(this.maskRoot,2,this.x(c),0,this.cellW*.65,this.cellW*.65,0);trail.setScale(.48,3.6,1);
       this.lights.push({glow,glowAlpha:glow.getComponent(UIOpacity)!,glint,glintAlpha:glint.getComponent(UIOpacity)!,trail,trailAlpha:trail.getComponent(UIOpacity)!});
+    }
+    // A fixed particle pool keeps repeated wins from allocating nodes per frame.
+    for(let i=0;i<32;i++){
+      const node=art.light(this.maskRoot,3,0,0,30,30,0);
+      this.sparks.push({node,alpha:node.getComponent(UIOpacity)!,x:0,y:0,vx:0,vy:0,age:1,life:.7});
     }
     this.reflection=art.light(this.maskRoot,2,-this.width,0,this.height*1.8,this.height*1.8,0);
     this.reflectionAlpha=this.reflection.getComponent(UIOpacity)!;
@@ -77,6 +84,14 @@ export class SalonReels extends Component {
     return new Promise(resolve=>{this.resolve=resolve;});
   }
   public highlight(positions:readonly number[]):void{
+    if(!this.reducedMotion)for(const position of positions.slice(0,12)){
+      for(let i=0;i<4;i++){
+        const spark=this.sparks[this.sparkCursor++%this.sparks.length],angle=i*Math.PI/2+position*.7;
+        spark.x=this.x(Math.floor(position/this.config.rows));spark.y=this.y(position%this.config.rows);
+        spark.vx=Math.cos(angle)*this.cellW*.65;spark.vy=Math.sin(angle)*this.cellH*.65+40;
+        spark.age=0;spark.alpha.opacity=220;spark.node.setPosition(spark.x,spark.y);
+      }
+    }
     for(let c=0;c<this.cols.length;c++)for(let j=0;j<this.config.rows;j++)this.cols[c].cells[j+2].emphasis=positions.includes(c*this.config.rows+j)?1:0;
   }
   public lockCoins(values:Readonly<Record<number,number>>):void{
@@ -91,17 +106,24 @@ export class SalonReels extends Component {
   public async collapseTo(grid:readonly string[],removed:readonly number[]):Promise<void>{
     const total=this.config.columns*this.config.rows;
     if(grid.length!==total||removed.some(p=>!Number.isInteger(p)||p<0||p>=total))throw new Error('Invalid cascade cell indices');
-    this.transitioning=true;const old=this.target;const cleared=new Set(removed);
+    const old=this.target,cleared=new Set(removed);
+    // Validate before changing any visible cells, including in reduced motion.
+    const sources=this.cols.map((_,c)=>Array.from({length:this.config.rows},(_,r)=>r).filter(r=>!cleared.has(c*this.config.rows+r)));
+    for(let c=0;c<this.cols.length;c++){
+      const refill=this.config.rows-sources[c].length;
+      for(let r=refill;r<this.config.rows;r++)if(old[c*this.config.rows+sources[c][r-refill]]!==grid[c*this.config.rows+r])throw new Error('Invalid cascade survivor');
+    }
+    if(this.reducedMotion){this.show(grid);return;}
+    this.transitioning=true;
+    this.highlight(removed);
     for(const position of removed){const cell=this.cols[Math.floor(position/this.config.rows)].cells[position%this.config.rows+2];tween(cell.node).to(.2,{scale:new Vec3(.2,.2,1)},{easing:'backIn'}).start();tween(cell.alpha).to(.18,{opacity:0}).start();}
     await this.wait(this.reducedMotion?.01:.22);if(!this.isValid)return;
     this.show(grid);this.transitioning=true;
     for(let c=0;c<this.cols.length;c++){
-      const survivors:number[]=[];for(let r=0;r<this.config.rows;r++)if(!cleared.has(c*this.config.rows+r))survivors.push(r);
+      const survivors=sources[c];
       const refill=this.config.rows-survivors.length;
       for(let r=0;r<this.config.rows;r++){
         const cell=this.cols[c].cells[r+2];const source=r<refill?r-refill:survivors[r-refill];
-        // Server/grid validation also verifies the survivor identity.
-        if(r>=refill&&old[c*this.config.rows+source]!==grid[c*this.config.rows+r])throw new Error('Invalid cascade survivor');
         cell.node.setPosition(this.x(c),this.y(source));
         tween(cell.node).delay(c*.035).to(this.reducedMotion?.01:.35,{position:new Vec3(this.x(c),this.y(r),0)},{easing:'bounceOut'}).start();
       }
@@ -109,6 +131,7 @@ export class SalonReels extends Component {
     await this.wait(this.reducedMotion?.02:.55);this.transitioning=false;
   }
   public async expandColumn(column:number):Promise<void>{
+    if(this.reducedMotion)return;
     const light=this.art.light(this.maskRoot,1,this.x(column),0,this.cellW*1.5,this.height,180);
     light.setScale(.6,.1,1);tween(light).to(.35,{scale:new Vec3(1,1,1)},{easing:'backOut'}).start();
     this.highlight(Array.from({length:this.config.rows},(_,r)=>column*this.config.rows+r));
@@ -117,6 +140,13 @@ export class SalonReels extends Component {
   private wait(seconds:number):Promise<void>{return new Promise(resolve=>this.scheduleOnce(resolve,seconds));}
   protected update(dt:number):void{
     this.clock+=Math.min(dt,.1);
+    for(const spark of this.sparks){
+      if(this.reducedMotion||spark.age>=spark.life){spark.alpha.opacity=0;continue;}
+      spark.age+=Math.min(dt,.1);const t=spark.age,p=Math.min(1,t/spark.life);
+      spark.node.setPosition(spark.x+spark.vx*t,spark.y+spark.vy*t-120*t*t);
+      spark.node.setScale(1-p*.7,1-p*.7,1);spark.node.angle=t*140;
+      spark.alpha.opacity=220*(1-p)*(1-p);
+    }
     if(!this.reducedMotion){const sweep=(this.clock%4.6)/4.6,eased=sweep*sweep*(3-2*sweep);this.reflection.setPosition(-this.width*1.25+eased*this.width*2.5,Math.sin(sweep*Math.PI)*this.height*.09);this.reflectionAlpha.opacity=Math.pow(Math.sin(sweep*Math.PI),2)*(this.running?82:126);}
     else this.reflectionAlpha.opacity=0;
     for(let c=0;c<this.lights.length;c++){
@@ -139,7 +169,7 @@ export class SalonReels extends Component {
         const cell=this.cols[c].cells[j+2],wave=this.reducedMotion?0:Math.sin(this.clock*1.8+c*.9+j*1.3);
         const phase=(this.clock+c*.53)%3.8,activeRow=Math.floor((this.clock+c*.53)/3.8)%this.config.rows;
         const hop=this.reducedMotion||j!==activeRow?0:Math.sin(Math.min(1,phase/1.3)*Math.PI);
-        cell.emphasis=Math.max(0,cell.emphasis-dt*.6);const punch=cell.emphasis*.09;
+        cell.emphasis=Math.max(0,cell.emphasis-dt*.6);const punch=this.reducedMotion?0:cell.emphasis*.09;
         cell.node.setPosition(this.x(c),this.y(j)+wave*Math.min(4,this.cellH*.02)+hop*Math.min(7,this.cellH*.035));
         // Preserve the jewel's silhouette: breathe uniformly, never stretch it.
         const breath=1+wave*.014+punch+hop*.065;

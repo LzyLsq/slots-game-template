@@ -4,7 +4,10 @@ body,canvas { touch-action:none; }
 #GameDiv,#Cocos3dGameContainer,#GameCanvas { width:100%; height:100%; }
 canvas { display:block; }
 textarea.cocosEditBox[maxlength="72"] { -webkit-text-security:disc; }
-input,textarea { font-size:16px!important; touch-action:manipulation; }
+/* Cocos positions its DOM EditBox in 1080-wide design coordinates and then
+   scales the whole element to the viewport. Match the 54px canvas label so
+   active input remains a readable 16–20px on phones. */
+input,textarea { font-size:54px!important; line-height:68px!important; font-weight:700!important; touch-action:manipulation; }
 #csw-preloader { position:fixed; inset:0; z-index:9999; display:grid; place-items:center; padding:24px; isolation:isolate; overflow:hidden; background:#153e36 url('aurelia-loader-bg.jpg') center/cover no-repeat; transition:opacity .4s ease; }
 #csw-preloader::before { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,#153e3620,#153e3610 35%,#153e3680); }
 #csw-preloader.is-ready { opacity:0; pointer-events:none; }

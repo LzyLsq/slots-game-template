@@ -25,5 +25,19 @@ async(page)=>{
   await page.waitForFunction(()=>document.getElementById('csw-preloader')?.classList.contains('is-ready'));await page.waitForTimeout(550);
   await page.screenshot({path:shots+'f8-'+screen+'-final.png'});
  }
- if(errors.length)throw Error(errors.join('\n'));return {draftPreserved:true,pagesCaptured:7,errors};
+ await page.goto('http://127.0.0.1:4310/?debug=1&screen=profile&v=f8-signout');
+ await page.waitForFunction(()=>document.getElementById('csw-preloader')?.classList.contains('is-ready'));await page.waitForTimeout(550);
+ for(let cycle=0;cycle<3;cycle++){
+  await click('Sign out');await page.waitForTimeout(500);
+  const authCopy=await page.evaluate(()=>{
+   const cc=window.cc,a=cc.director.getScene().getChildByName('Canvas').getComponent('AureliaApp'),labels=a.root.getComponentsInChildren(cc.Label);
+   const values=labels.map(label=>label.string);
+   return {page:a.page,stableCache:labels.every(label=>label.cacheMode===cc.Label.CacheMode.NONE),values};
+  });
+  for(const expected of ['Welcome to the salon','Username','Sign in','Sign in with Apple','Continue as guest','Terms','Privacy','Support'])if(!authCopy.values.includes(expected))throw Error('Missing login copy after sign-out: '+expected);
+  if(authCopy.page!=='login'||!authCopy.stableCache)throw Error('Login text rendering was not stable after sign-out');
+  if(cycle<2){await click('Guest');await page.waitForTimeout(180);await click('Confirm eligibility');await page.waitForTimeout(420);await click('Account');await page.waitForTimeout(420);}
+ }
+ await page.screenshot({path:shots+'f8-signout-copy-stable.png'});
+ if(errors.length)throw Error(errors.join('\n'));return {draftPreserved:true,pagesCaptured:8,signOutCycles:3,loginCopyStable:true,errors};
 }

@@ -46,6 +46,8 @@ export class LocalAuthService implements AuthService {
 
   public async guestLogin(): Promise<AuthResult> {
     if (!complianceCurrent(this.save.read().compliance)) return { ok: false, message: 'Please confirm eligibility before continuing.' };
+    const currentId=this.save.read().currentUserId,current=currentId?this.save.read().players[currentId]:undefined;
+    if(current?.isGuest)return {ok:true,player:current};
     const suffix = SecureRNG.id('guest').slice(-6); const player = newPlayer(`guest_${suffix}`, 'Starlight Guest', true);
     this.save.update((state) => { state.players[player.id] = player; state.playerData[player.id] = createPlayerScope(); state.currentUserId = player.id; state.rememberLogin = false; });
     return { ok: true, player: this.save.read().players[player.id] };

@@ -28,11 +28,15 @@ export class GameBootstrap {
   public readonly redDots: RedDotManager;
 
   public constructor(public readonly save = new SaveService(), debugPurchases = false, apiBaseUrl?: string) {
-    this.api = apiBaseUrl ? new ProductionApiClient(apiBaseUrl) : undefined; this.remoteMode = Boolean(this.api); this.profile = new PlayerProfileService(save, this.api); this.economy = new EconomyService(save, this.profile); this.auth = this.api ? new RemoteAuthService(save, this.api) : new LocalAuthService(save); this.rank = new RankService(this.api);
+    this.api = apiBaseUrl ? new ProductionApiClient(apiBaseUrl) : undefined; this.remoteMode = Boolean(this.api); this.profile = new PlayerProfileService(save, this.api); this.economy = new EconomyService(save, this.profile); this.auth = this.api ? new RemoteAuthService(save, this.api) : new LocalAuthService(save); this.rank = new RankService(this.api, save);
     this.store = new StoreService(save, this.economy, debugPurchases, this.api); this.rewards = new RewardService(save, this.economy); this.checkIn = new CheckInService(save, this.economy);
     this.wheel = new WheelService(save, this.economy); this.mail = new MailService(save, this.economy); this.achievements = new AchievementService(save, this.economy); this.redDots = new RedDotManager(save);
     if (this.profile.current()) { this.economy.recoverPending(); this.wheel.recoverPending(); }
   }
 
-  public async resumeSession(): Promise<boolean> { if (!this.save.read().rememberLogin) return false; const result = await this.auth.resume(); return result.ok; }
+  public async resumeSession(): Promise<boolean> {
+    const state=this.save.read(),current=state.currentUserId?state.players[state.currentUserId]:undefined;
+    if(!state.rememberLogin&&!current?.isGuest)return false;
+    const result=await this.auth.resume();return result.ok;
+  }
 }

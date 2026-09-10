@@ -5,7 +5,7 @@ async(page)=>{
   const a=window.cc.director.getScene().getChildByName('Canvas').getComponent('AureliaApp');
   return {generation:a.generation,fields:a.root.getComponentsInChildren('cc.EditBox').map(e=>({
    value:e.string,label:e.textLabel.string,active:e.textLabel.node.active,
-   font:e.textLabel.fontSize,align:e.textLabel.verticalAlign
+   font:e.textLabel.fontSize,hintFont:e.placeholderLabel.fontSize,align:e.textLabel.verticalAlign
   }))};
  });
  const focus=async index=>{
@@ -30,7 +30,7 @@ async(page)=>{
    await focus(i);await page.locator('input:visible').fill(values[i]);
    if(i===0){
     const font=await page.locator('input:visible').evaluate(e=>parseFloat(getComputedStyle(e).fontSize));
-    if(font<16)throw Error('Native input too small: '+font);
+    if(font<54)throw Error('Native input too small: '+font);
     await page.setViewportSize({width:390,height:600});await page.waitForTimeout(200);
     await page.setViewportSize({width:390,height:844});await page.waitForTimeout(200);
    }
@@ -42,7 +42,7 @@ async(page)=>{
    if(after.generation!==before.generation)throw Error('Resize rebuilt live form');
    after.fields.forEach((f,i)=>{
     if(f.value!==values[i]||!f.active||!f.label)throw Error('Lost input '+screen+' '+i);
-    if(f.font<54||f.align!==1)throw Error('Input typography regression');
+    if(f.font<54||f.hintFont<42||f.align!==1)throw Error('Input typography regression');
     if((i===1||i===2&&screen==='register')&&f.label===values[i])throw Error('Password visible');
    });
   }
