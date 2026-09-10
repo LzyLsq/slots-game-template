@@ -1,0 +1,44 @@
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html,body { width:100%; height:100%; margin:0; overflow:hidden; background:#253e52; color:#fff4d8; font-family:Arial,sans-serif; }
+body,canvas { touch-action:none; }
+#GameDiv,#Cocos3dGameContainer,#GameCanvas { width:100%; height:100%; }
+canvas { display:block; }
+textarea.cocosEditBox[maxlength="72"] { -webkit-text-security:disc; }
+/* Cocos positions its DOM EditBox in 1080-wide design coordinates and then
+   scales the whole element to the viewport. Match the 54px canvas label so
+   active input remains a readable 16–20px on phones. */
+input,textarea { font-size:54px!important; line-height:68px!important; font-weight:700!important; touch-action:manipulation; }
+#csw-preloader { position:fixed; inset:0; z-index:9999; display:grid; place-items:center; padding:24px; isolation:isolate; overflow:hidden; background:#253e52 url('cloud-port.png') center/cover no-repeat; transition:opacity .4s ease; }
+#csw-preloader::before { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,#253e5220,#253e5210 35%,#253e5280); }
+#csw-preloader.is-ready { opacity:0; pointer-events:none; }
+.loading-sign { width:min(92vw,460px); padding:24px 24px 28px; text-align:center; border:1px solid #ead197; border-radius:100px 100px 20px 20px; background:linear-gradient(120deg,#253e52e8,#253e52c9),url('cloud-port.png') center/cover; box-shadow:0 5px 0 #dca95470,0 18px 70px #253e5240; }
+.wordmark { width:100%; height:auto; aspect-ratio:3/2; object-fit:contain; margin:-8px auto -18px; }
+.invitation { margin:12px 0 30px; font:bold 20px/1.4 Georgia,serif; }
+.loading-track { height:7px; border-radius:9px; background:#fff4d832; overflow:hidden; }
+#loading-progress { display:block; height:100%; transform:scaleX(0); transform-origin:left; background:linear-gradient(90deg,#dca954,#fff4d8,#edab97); transition:transform .2s linear; }
+#loading-copy { min-height:42px; margin:18px 0 0; font-size:16px; font-weight:700; line-height:1.45; }
+#loading-retry { padding:12px 28px; margin-top:12px; min-height:48px; font:bold 17px Arial; color:#253e52; background:#fff4d8; border:2px solid #dca954; border-radius:12px; cursor:pointer; }
+#loading-retry:focus-visible { outline:3px solid white; outline-offset:4px; }
+.virtual-notice { position:absolute; bottom:max(20px,env(safe-area-inset-bottom)); left:20px; right:20px; margin:0; text-align:center; font-size:13px; font-weight:700; text-shadow:0 2px 6px #253e52; }
+.salon-light { position:absolute; pointer-events:none; inset:-30%; z-index:-1; background:linear-gradient(115deg,transparent 35%,#fff4d84d 49%,transparent 63%); animation:salon-light 9s ease-in-out infinite; }
+@keyframes salon-light { 0%,100% { transform:translateX(-20%) rotate(-8deg); opacity:.3; } 50% { transform:translateX(20%) rotate(8deg); opacity:.7; } }
+@media(max-height:600px) { .loading-sign { padding:12px 24px; width:300px; } .wordmark { height:130px; } .invitation { margin:8px 0 15px; font-size:17px; } }
+@media(prefers-reduced-motion:reduce) { .salon-light { animation:none; } #csw-preloader { transition:opacity .01s; } }
+
+/* F14: the ship stays visible above an ivory boarding pass. */
+#csw-preloader { align-items:end; padding-bottom:max(17vh,105px); background-color:#f1d7bc; }
+#csw-preloader::before { background:linear-gradient(180deg,transparent 40%,#f6dec066); }
+.loading-sign { position:relative; width:min(88vw,410px); padding:20px 28px; border:3px double #cca465; border-radius:8px 28px 8px 28px; background:#fff3dcf5; color:#253e52; box-shadow:0 8px 0 #d9b77a,0 14px 35px #76543844; }
+.wordmark { position:absolute; width:90%; left:5%; bottom:calc(100% + 6vh); height:180px; margin:0; animation:boarding-float 4s ease-in-out infinite; }
+.invitation { margin:6px 0 20px; font-size:18px; }
+.loading-track { background:#dbc29b; height:9px; overflow:visible; }
+#loading-progress { border-radius:9px; background:linear-gradient(90deg,#bb822c,#edc879,#fff3cd); box-shadow:0 0 12px #e8bc59; }
+#loading-copy { font-size:16px; }
+.virtual-notice { color:#253e52; text-shadow:0 1px 2px #fff; }
+@keyframes boarding-float { 0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)} }
+@media(max-height:600px){.wordmark{height:140px;bottom:calc(100% + 4vh)} #csw-preloader{padding-bottom:90px} }
+@media(prefers-reduced-motion:reduce){.wordmark{animation:none}}
+
+/* Boarding scenery supplies the physical counter during boot as well. */
+.loading-sign{background:transparent;border:0;box-shadow:none;color:#fff4dd;border-radius:0}
+.loading-track{background:#ffffff35}.virtual-notice{color:#fff4dd;text-shadow:0 1px 3px #163c44}
