@@ -1,5 +1,9 @@
 # F1 · Royal Wealth Casino Suite
 
+## 运行截图
+
+![F1 完整运行截图](../../游戏截图/F1_Royal_Wealth_Casino_Suite.png)
+
 F1 是一个完整的竖屏赌场游戏模板，由高级财富大厅 L02 和四种不同 Slots 玩法组成：
 
 - S07：5x4 1024 Ways + Fortune Wheel

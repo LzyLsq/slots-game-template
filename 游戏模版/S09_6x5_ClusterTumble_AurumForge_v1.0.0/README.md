@@ -1,5 +1,9 @@
 # S09 · Aurum Forge 6×5 Cluster Tumble Slot
 
+## 运行截图
+
+![S09 Aurum Forge 完整运行截图](../游戏截图/S09_6x5_ClusterTumble_AurumForge.png)
+
 商业级竖屏 Cocos Creator 3.8.8 + TypeScript Slots 模板。主题是香槟金、熔金与祖母绿玻璃构成的财富铸造厂，核心玩法是 6×5 Cluster Pays、连锁掉落、递增倍率和 Forge Energy 奖励。它与 S07 的 1024 Ways + Fortune Wheel 是不同数学和交互结构。
 
 ## 打开与运行

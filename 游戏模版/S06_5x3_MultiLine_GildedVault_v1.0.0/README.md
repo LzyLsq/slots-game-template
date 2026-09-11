@@ -1,5 +1,9 @@
 # S06 · Gilded Vault 5×3 Multi-Line Slot
 
+## 运行截图
+
+![S06 完整运行截图](../游戏截图/S06_5x3_MultiLine_GildedVault.png)
+
 商业级竖屏 Cocos Creator 3.8.8 + TypeScript Slots 模板。主题为黑金私人金库，核心元素包括金币、珠宝、宝石、金库门和金币宝箱。这是真正可玩的 5×3 多线 Slots，不是静态换皮页。
 
 ## 打开与运行

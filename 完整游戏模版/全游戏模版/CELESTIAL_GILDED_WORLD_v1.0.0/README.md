@@ -1,5 +1,9 @@
 # GILDED CELEBRATION v1.0.0
 
+## 运行截图
+
+![Gilded Celebration 完整运行截图](../../游戏截图/CELESTIAL_GILDED_WORLD.png)
+
 原创 Cocos Creator 3.8.8 竖屏 Slots 合集，以柔和土豪金、金红珠宝、金币筹码和喜庆博彩氛围为统一风格。包含四款独立玩法、四台不同结构的真实柜机、大厅、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、动效和 VFX。
 
 ## 项目内容

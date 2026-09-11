@@ -1,5 +1,9 @@
 # S09 · Royal Ascension 5×4 Expanding Wild Respins Slot
 
+## 运行截图
+
+![S09 Royal Ascension 完整运行截图](../游戏截图/S09_5x4_ExpandingWilds_RoyalAscension.png)
+
 商业级竖屏 Cocos Creator 3.8.8 + TypeScript Slots 模板。主题采用皇家红、蓝宝石和高纯度黄金机柜，核心玩法是 5×4 的 1024 Ways、整轴扩展金狮 WILD、锁轴免费重转和皇家宝箱奖励。这是具有真实余额、投注、输赢和功能弹层的可玩模板，不是静态换皮页。
 
 ## 打开与运行

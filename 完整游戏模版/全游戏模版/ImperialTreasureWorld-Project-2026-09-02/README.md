@@ -1,5 +1,9 @@
 # IMPERIAL TREASURE WORLD v1.0.0
 
+## 运行截图
+
+![Imperial Treasure World 完整运行截图](../../游戏截图/ImperialTreasureWorld-Project-2026-09-02.png)
+
 以帝王金、黑曜石、红宝石、祖母绿、蓝宝石和珍珠母贝为统一视觉语言的 Cocos Creator 3.8.8 竖屏 Slots 合集。项目由已验证的完整游戏模板派生，保留四款数学玩法、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、图片边框、人物图、动态背景、程序化音效与 VFX。
 
 ## 四个财富世界

@@ -1,5 +1,9 @@
 # FORTUNE HARBOR CASINO — F3 v1.0.0
 
+## 运行截图
+
+![F3 完整运行截图](../../游戏截图/F3_Fortune_Harbor_Casino.png)
+
 一套原创的 Cocos Creator 3.8.8 竖屏完整 Slots 世界。F3 以阳光财富港湾为统一世界观，使用同一太阳罗盘 Logo、主持人 Marina Vale、香槟黄铜、海玻璃绿、珊瑚红和真实柜机工艺，四款游戏拥有完全不同的数学结构与特色机构。
 
 ## 四个子游戏

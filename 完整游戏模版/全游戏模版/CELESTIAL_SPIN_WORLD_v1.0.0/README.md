@@ -1,5 +1,9 @@
 # CELESTIAL SPIN WORLD v1.0.0
 
+## 运行截图
+
+![Celestial Spin World 完整运行截图](../../游戏截图/CELESTIAL_SPIN_WORLD.png)
+
 原创 Cocos Creator 3.8.8 竖屏 Slots 合集，包含四款完整玩法、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、图片边框、人物图、动态背景、程序化音效和 VFX。
 
 ## 项目内容

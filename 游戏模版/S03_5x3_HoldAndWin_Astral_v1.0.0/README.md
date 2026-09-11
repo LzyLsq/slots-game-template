@@ -1,5 +1,9 @@
 # S03 Astral Vault — 5×3 Hold & Win
 
+## 运行截图
+
+![S03 完整运行截图](../游戏截图/S03_5x3_HoldAndWin_Astral.png)
+
 Version 1.0.0. A responsive Cocos Creator 3.8.8 slot template for desktop and mobile browsers.
 
 ## Included gameplay

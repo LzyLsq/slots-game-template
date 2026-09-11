@@ -1,5 +1,9 @@
 # S08 · Royal Diamond Megaways
 
+## 运行截图
+
+![S08 完整运行截图](../游戏截图/S08_6Reel_Megaways_RoyalDiamond.png)
+
 高品质竖屏 6 转轴 Megaways 连消 Slots 模版，使用 Cocos Creator 3.8.8 与 TypeScript。
 
 ## 核心玩法
@@ -26,4 +30,3 @@ npm run build:web
 ```
 
 主题配置：`assets/resources/config/royal-diamond.json`
-

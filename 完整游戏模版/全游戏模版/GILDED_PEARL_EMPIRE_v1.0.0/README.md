@@ -1,5 +1,9 @@
 # GILDED PEARL EMPIRE v1.0.0
 
+## 运行截图
+
+![Gilded Pearl Empire 完整运行截图](../../游戏截图/GILDED_PEARL_EMPIRE.png)
+
 基于 CELESTIAL SPIN WORLD 模板重制的原创 Cocos Creator 3.8.8 竖屏 Slots 合集。统一采用柔和轻奢的香槟金、珍珠白、玫瑰金与宝石点缀，包含四款完整玩法、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、图片边框、动态背景、程序化音效和高级财富 VFX。
 
 主背景与财富符号图集由本机 CC Switch `/v1/responses + image_generation` 生成，真实响应链记录于 `CC_SWITCH_ASSET_MANIFEST.md`。

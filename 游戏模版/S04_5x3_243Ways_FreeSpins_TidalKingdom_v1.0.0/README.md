@@ -1,5 +1,9 @@
 # S04 Tidal Kingdom — 5×3 243 Ways Free Spins
 
+## 运行截图
+
+![S04 完整运行截图](../游戏截图/S04_5x3_243Ways_FreeSpins_TidalKingdom_Main.png)
+
 Version 1.0.0. A responsive Cocos Creator 3.8.8 slot template for desktop and mobile browsers.
 
 ## Distinct gameplay

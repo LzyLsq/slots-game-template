@@ -1,5 +1,9 @@
 # PHARAOH KEMET TREASURY v1.0.0
 
+## 运行截图
+
+![Pharaoh Kemet Treasury 完整运行截图](../../游戏截图/PHARAOH_KEMET_TREASURY.png)
+
 基于 GILDED PEARL EMPIRE 模板重制的原创 Cocos Creator 3.8.8 竖屏 Slots 合集。主题全面更换为古埃及神殿风:尼罗河暮色、鎏金石柱、圣甲虫与法老宝藏,包含四款完整玩法(20 线旋转 / 243 路 / 3×3 经典 / Hold & Spin 头奖)、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、图片边框、动态背景、程序化音效和高级财富 VFX。
 
 核心美术由 RetroStyle Games《Crowns of Kemet》工作室素材包(游戏内商用许可)与本地程序化生成管线(`tools/asset_pipeline/`,Python + PIL)合成:转轮框、阿努比斯、四枚高阶符号、WILD 与 Logo 为工作室原图;宝石、圣物、机柜、转盘、UI 框架为管线绘制,风格与原图无缝匹配。

@@ -1,5 +1,9 @@
 # S02 — 6×5 Cluster Cascade Fantasy Slot
 
+## 运行截图
+
+![S02 完整运行截图](../游戏截图/S02_6x5_ClusterCascade_Fantasy.png)
+
 High-polish Cocos Creator 3.8.8 master template for a Cluster Pays slot. It is a different game family from S01: there are no paylines. Five or more matching symbols connected vertically or horizontally win, disappear, and refill from above.
 
 ## Playable features

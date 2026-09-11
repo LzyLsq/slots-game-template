@@ -1,5 +1,9 @@
 # S10 · Sovereign Treasury 5×4 Cash Collect Slot
 
+## 运行截图
+
+![S10 完整运行截图](../游戏截图/S10_5x4_CashCollect_SovereignTreasury.png)
+
 商业级竖屏 Cocos Creator 3.8.8 + TypeScript Slots 模板。纯金、深绿琲琅和珠宝金库机柜覆盖全屏，所有文字、转轴、余额和按钮都对齐机柜的真实凹槽。核心玩法为 5×4、1024 Ways 与 Cash Collect：前四轴的金币携带倍率，第五轴出现 Collector 宝箱后一次收集。
 
 ## 运行

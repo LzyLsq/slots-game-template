@@ -1,5 +1,9 @@
 # L01 · Slot 大厅与账户首页模板
 
+## 运行截图
+
+![L01 完整运行截图](../运行截图/L01_Slot_Lobby_Account.png)
+
 基于 Cocos Creator 3.8.8 + TypeScript 的独立大厅母模板。当前视觉采用香槟金、酒红、金币、宝箱、筹码与 Jackpot 体系。登录、注册、首页、收银台、排行榜、奖励、账户均使用独立场景背景；图片由 CC Switch 的 `/v1/responses` + `image_generation` 生成，并由 Cocos 原生文字和控件完成排版。
 
 ## 已实现

@@ -1,5 +1,9 @@
 # S05 · Sweet Temptation 3×3 Center-Line Slot Template
 
+## 运行截图
+
+![S05 完整运行截图](../游戏截图/S05_3x3_CenterLine_SweetTemptation.png)
+
 A commercial portrait Cocos Creator 3.8.8 + TypeScript slot template with an integrated patisserie cabinet, generated art assets, responsive controls, and full loading/win feedback.
 
 ## Open and run

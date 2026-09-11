@@ -1,5 +1,9 @@
 # S01 · 3×3 Center-Line Arcade Slot Template
 
+## 运行截图
+
+![S01 完整运行截图](../游戏截图/S01_3x3_CenterLine_Arcade.png)
+
 A reusable Cocos Creator 3.8.8 + TypeScript slot-game factory rebuilt from the supplied Unity project. Each product launches one configured theme, with no player-facing theme switcher.
 
 ## Open and run
