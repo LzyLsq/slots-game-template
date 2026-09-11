@@ -1,0 +1,32 @@
+{
+  "name": "f18-gilded-express",
+  "uuid": "a6bdce75-af4f-4ec3-a9d6-486fb7ef0cd4",
+  "version": "1.0.0",
+  "description": "F18 Gilded Express \u2014 a storybook treasure railway",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout",
+    "test:layout": "node --import tsx tools/layout-test.ts",
+    "test:math": "node --import tsx tools/math-test.ts",
+    "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
+    "test:rank": "node --import tsx tools/rank-test.ts",
+    "test:rtp": "node --import tsx tools/rtp-simulation.ts 100000",
+    "release:audit": "node --import tsx tools/release-audit.ts",
+    "typecheck:math": "tsc -p tsconfig.math.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
+    "server:dev": "node --import tsx server/ProductionServer.ts",
+    "server:production": "NODE_ENV=production node --import tsx server/PostgresProductionServer.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "8.15.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}
