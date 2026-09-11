@@ -2,7 +2,13 @@
 
 ## 运行截图
 
-![F1 完整运行截图](../../游戏截图/F1_Royal_Wealth_Casino_Suite.png)
+| 大厅登录 | 大厅首页 |
+| --- | --- |
+| ![大厅登录](../../../首页模版/运行截图/L02_Royal_Wealth_Casino_Lobby.png) | ![大厅首页](../../游戏截图/F1_Royal_Wealth_Casino_Suite.png) |
+| S07 Fortune Wheel | S08 Megaways |
+| ![S07 Fortune Wheel](../../../游戏模版/游戏截图/S07_5x4_1024Ways_RoyalFortuneWheel.png) | ![S08 Megaways](../../../游戏模版/游戏截图/S08_6Reel_Megaways_RoyalDiamond.png) |
+| S09 Aurum Forge | S10 Sovereign Treasury |
+| ![S09 Aurum Forge](../../../游戏模版/游戏截图/S09_6x5_ClusterTumble_AurumForge.png) | ![S10 Sovereign Treasury](../../../游戏模版/游戏截图/S10_5x4_CashCollect_SovereignTreasury.png) |
 
 F1 是一个完整的竖屏赌场游戏模板，由高级财富大厅 L02 和四种不同 Slots 玩法组成：
 

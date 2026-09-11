@@ -2,7 +2,17 @@
 
 ## 运行截图
 
-![F2 完整运行截图](../../游戏截图/F2_Vanta_Nights_Casino.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](docs/screenshots/full-flow/login.png) | ![大厅](docs/screenshots/full-flow/home.png) |
+| 商店 | 奖励 |
+| ![商店](docs/screenshots/full-flow/store.png) | ![奖励](docs/screenshots/full-flow/rewards.png) |
+| 排行 | 账户 |
+| ![排行](docs/screenshots/full-flow/rank.png) | ![账户](docs/screenshots/full-flow/profile.png) |
+| Crimson Roulette | Sapphire Surge |
+| ![Crimson Roulette](docs/screenshots/full-flow/game-1-crimson-roulette.png) | ![Sapphire Surge](docs/screenshots/full-flow/game-2-sapphire-surge.png) |
+| Emerald Dice | Amethyst Jackpot |
+| ![Emerald Dice](docs/screenshots/full-flow/game-3-emerald-dice.png) | ![Amethyst Jackpot](docs/screenshots/full-flow/game-4-amethyst-jackpot.png) |
 
 一套原创的 Cocos Creator 3.8.8 竖屏完整 Slots 世界。它不是 F1 的换皮：F2 采用轻奢夜都会赌场世界观，以日蚀钻石徽标、主持人 Ava、黑曜玻璃、银铬金属和明快霓虹作为统一视觉语言，并提供四种真正不同的数学玩法。
 

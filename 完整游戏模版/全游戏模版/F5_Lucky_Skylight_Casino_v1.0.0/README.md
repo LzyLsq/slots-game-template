@@ -2,7 +2,13 @@
 
 ## 运行截图
 
-![F5 完整运行截图](screenshots/PREVIEW_HOME_MOBILE.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](screenshots/PREVIEW_LOGIN_MOBILE.png) | ![大厅](screenshots/PREVIEW_HOME_MOBILE.png) |
+| Seven Skylight | Clover Cash Club |
+| ![Seven Skylight](screenshots/PREVIEW_SEVEN_SKYLIGHT_MOBILE.png) | ![Clover Cash Club](screenshots/PREVIEW_CLOVER_CASH_CLUB_MOBILE.png) |
+| Dice Drift Deluxe | Sky Vault Cascade |
+| ![Dice Drift Deluxe](screenshots/PREVIEW_DICE_DRIFT_DELUXE_MOBILE.png) | ![Sky Vault Cascade](screenshots/PREVIEW_SKY_VAULT_CASCADE_MOBILE.png) |
 
 原创 Cocos Creator 3.8.8 竖屏完整 Slots 模板。F5 的统一世界观是明亮、柔和的金色天光赌场中庭：香槟黄铜、奶油皮革、天青磨砂玻璃和杏桃灯光构成成熟商业质感；金币、筹码与骰子沿“财富星轨”缓慢公转，贯穿登录、加载、大厅、商城、账户和大奖演出。
 

@@ -2,7 +2,17 @@
 
 ## 运行截图
 
-![Pharaoh Kemet Treasury 完整运行截图](../../游戏截图/PHARAOH_KEMET_TREASURY.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](docs/screenshots/full-flow/login.png) | ![大厅](docs/screenshots/full-flow/home.png) |
+| 商店 | 奖励 |
+| ![商店](docs/screenshots/full-flow/store.png) | ![奖励](docs/screenshots/full-flow/rewards.png) |
+| 排行 | 账户 |
+| ![排行](docs/screenshots/full-flow/rank.png) | ![账户](docs/screenshots/full-flow/profile.png) |
+| Astral Vault | Nile Treasury |
+| ![Astral Vault](docs/screenshots/full-flow/game-1-astral-vault.png) | ![Nile Treasury](docs/screenshots/full-flow/game-2-golden-dynasty.png) |
+| Scarab Classic | Pyramid Jackpot |
+| ![Scarab Classic](docs/screenshots/full-flow/game-3-neon-classic.png) | ![Pyramid Jackpot](docs/screenshots/full-flow/game-4-cosmic-coins.png) |
 
 基于 GILDED PEARL EMPIRE 模板重制的原创 Cocos Creator 3.8.8 竖屏 Slots 合集。主题全面更换为古埃及神殿风:尼罗河暮色、鎏金石柱、圣甲虫与法老宝藏,包含四款完整玩法(20 线旋转 / 243 路 / 3×3 经典 / Hold & Spin 头奖)、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、图片边框、动态背景、程序化音效和高级财富 VFX。
 

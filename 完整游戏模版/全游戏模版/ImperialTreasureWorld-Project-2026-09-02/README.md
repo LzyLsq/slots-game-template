@@ -2,7 +2,17 @@
 
 ## 运行截图
 
-![Imperial Treasure World 完整运行截图](../../游戏截图/ImperialTreasureWorld-Project-2026-09-02.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](docs/screenshots/full-flow/login.png) | ![大厅](docs/screenshots/full-flow/home.png) |
+| 商店 | 奖励 |
+| ![商店](docs/screenshots/full-flow/store.png) | ![奖励](docs/screenshots/full-flow/rewards.png) |
+| 排行 | 账户 |
+| ![排行](docs/screenshots/full-flow/rank.png) | ![账户](docs/screenshots/full-flow/profile.png) |
+| Astral Vault | Golden Dynasty |
+| ![Astral Vault](docs/screenshots/full-flow/game-1-astral-vault.png) | ![Golden Dynasty](docs/screenshots/full-flow/game-2-golden-dynasty.png) |
+| Neon Classic | Cosmic Coins |
+| ![Neon Classic](docs/screenshots/full-flow/game-3-neon-classic.png) | ![Cosmic Coins](docs/screenshots/full-flow/game-4-cosmic-coins.png) |
 
 以帝王金、黑曜石、红宝石、祖母绿、蓝宝石和珍珠母贝为统一视觉语言的 Cocos Creator 3.8.8 竖屏 Slots 合集。项目由已验证的完整游戏模板派生，保留四款数学玩法、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、图片边框、人物图、动态背景、程序化音效与 VFX。
 

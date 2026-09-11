@@ -2,7 +2,17 @@
 
 ## 运行截图
 
-![F3 完整运行截图](../../游戏截图/F3_Fortune_Harbor_Casino.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](docs/screenshots/full-flow/login.png) | ![大厅](docs/screenshots/full-flow/home.png) |
+| 商店 | 奖励 |
+| ![商店](docs/screenshots/full-flow/store.png) | ![奖励](docs/screenshots/full-flow/rewards.png) |
+| 排行 | 账户 |
+| ![排行](docs/screenshots/full-flow/rank.png) | ![账户](docs/screenshots/full-flow/profile.png) |
+| Golden Tide | Captain's Chest |
+| ![Golden Tide](docs/screenshots/full-flow/game-1-golden-tide.png) | ![Captain's Chest](docs/screenshots/full-flow/game-2-captains-chest.png) |
+| Pearl Parade | Lucky Lighthouse |
+| ![Pearl Parade](docs/screenshots/full-flow/game-3-pearl-parade.png) | ![Lucky Lighthouse](docs/screenshots/full-flow/game-4-lucky-lighthouse.png) |
 
 一套原创的 Cocos Creator 3.8.8 竖屏完整 Slots 世界。F3 以阳光财富港湾为统一世界观，使用同一太阳罗盘 Logo、主持人 Marina Vale、香槟黄铜、海玻璃绿、珊瑚红和真实柜机工艺，四款游戏拥有完全不同的数学结构与特色机构。
 

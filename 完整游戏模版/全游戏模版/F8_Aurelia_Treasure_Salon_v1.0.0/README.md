@@ -13,7 +13,17 @@
 
 ## 登录页预览
 
-![宫殿主题登录页，含 Apple 登录和动态金色光效](docs/screenshots/login-effects-v14.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](docs/screenshots/full-flow/login.png) | ![大厅](docs/screenshots/full-flow/home.png) |
+| 商店 | 奖励 |
+| ![商店](docs/screenshots/full-flow/store.png) | ![奖励](docs/screenshots/full-flow/rewards.png) |
+| 排行 | 账户 |
+| ![排行](docs/screenshots/full-flow/rank.png) | ![账户](docs/screenshots/full-flow/profile.png) |
+| Golden Hour | Jade Treasury |
+| ![Golden Hour](docs/screenshots/full-flow/game-1-golden-hour.png) | ![Jade Treasury](docs/screenshots/full-flow/game-2-jade-treasury.png) |
+| Pearl Palace | Ruby Revel |
+| ![Pearl Palace](docs/screenshots/full-flow/game-3-pearl-palace.png) | ![Ruby Revel](docs/screenshots/full-flow/game-4-ruby-revel.png) |
 
 ## 目录与预览
 

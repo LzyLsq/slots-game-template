@@ -2,7 +2,17 @@
 
 ## 运行截图
 
-![Gilded 完整运行截图](../../游戏截图/GILDED.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](docs/screenshots/full-flow/login.png) | ![大厅](docs/screenshots/full-flow/home.png) |
+| 商店 | 奖励 |
+| ![商店](docs/screenshots/full-flow/store.png) | ![奖励](docs/screenshots/full-flow/rewards.png) |
+| 排行 | 账户 |
+| ![排行](docs/screenshots/full-flow/rank.png) | ![账户](docs/screenshots/full-flow/profile.png) |
+| Astral Vault | Golden Dynasty |
+| ![Astral Vault](docs/screenshots/full-flow/game-1-astral-vault.png) | ![Golden Dynasty](docs/screenshots/full-flow/game-2-golden-dynasty.png) |
+| Neon Classic | Cosmic Coins |
+| ![Neon Classic](docs/screenshots/full-flow/game-3-neon-classic.png) | ![Cosmic Coins](docs/screenshots/full-flow/game-4-cosmic-coins.png) |
 
 基于 CELESTIAL SPIN WORLD 模板重制的原创 Cocos Creator 3.8.8 竖屏 Slots 合集。统一采用柔和轻奢的香槟金、珍珠白、玫瑰金与宝石点缀，包含四款完整玩法、账号/游客入口、试玩金币、奖励中心、设置、移动端安全区、图片边框、动态背景、程序化音效和高级财富 VFX。
 

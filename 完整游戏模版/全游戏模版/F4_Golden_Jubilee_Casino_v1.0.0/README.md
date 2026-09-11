@@ -2,7 +2,13 @@
 
 ## 运行截图
 
-![F4 完整运行截图](../../游戏截图/F4_Golden_Jubilee_Casino.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](screenshots/PREVIEW_LOGIN_MOBILE.png) | ![大厅](screenshots/PREVIEW_HOME_MOBILE.png) |
+| Lucky Coin Grove | Treasure Parade |
+| ![Lucky Coin Grove](screenshots/PREVIEW_LUCKY_COIN_GROVE_MOBILE.png) | ![Treasure Parade](screenshots/PREVIEW_TREASURE_PARADE_MOBILE.png) |
+| Lantern Fortune | Jubilee Cascade |
+| ![Lantern Fortune](screenshots/PREVIEW_LANTERN_FORTUNE_MOBILE.png) | ![Jubilee Cascade](screenshots/PREVIEW_JUBILEE_CASCADE_MOBILE.png) |
 
 一套原创的 Cocos Creator 3.8.8 竖屏完整 Slots 世界。F4 以“柔和喜庆的财富庆典”为统一世界观，使用 Golden Jubilee 太阳徽章、主持人 Sienna、香槟金、珊瑚红、玉石绿和真实实体柜机工艺。大厅、账户、商店、奖励、排行、加载页与四台柜机共享同一视觉语言，四款游戏则通过玩法、场景、主色、符号和特效形成清晰差异。
 

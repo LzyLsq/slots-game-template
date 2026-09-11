@@ -2,7 +2,13 @@
 
 ## 运行截图
 
-![F6 完整运行截图](screenshots/PREVIEW_HOME_MOBILE.png)
+| 登录 | 大厅 |
+| --- | --- |
+| ![登录](screenshots/PREVIEW_LOGIN_MOBILE.png) | ![大厅](screenshots/PREVIEW_HOME_MOBILE.png) |
+| Golden Parade | Blossom Fortune |
+| ![Golden Parade](screenshots/PREVIEW_GOLDEN_PARADE_MOBILE.png) | ![Blossom Fortune](screenshots/PREVIEW_BLOSSOM_FORTUNE_MOBILE.png) |
+| Lantern Treasure | Treasure Wheel |
+| ![Lantern Treasure](screenshots/PREVIEW_LANTERN_TREASURE_MOBILE.png) | ![Treasure Wheel](screenshots/PREVIEW_TREASURE_WHEEL_MOBILE.png) |
 
 原创 Cocos Creator 3.8.8 竖屏完整 Slots 模板。F6 的统一世界观是一座轻松喜庆的“财富花园嘉年华”：香槟金、温润珐琅、牡丹琉璃、红金灯笼与晴空蓝构成柔和但华丽的商业质感；金币、宝箱、花朵和灯笼贯穿登录、加载、大厅、商城、账户与大奖演出。
 
