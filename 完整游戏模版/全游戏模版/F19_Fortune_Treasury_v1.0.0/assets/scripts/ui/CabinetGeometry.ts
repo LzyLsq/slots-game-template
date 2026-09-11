@@ -1,0 +1,27 @@
+import type { GameId } from '../math/types';
+export const CABINET_ROOM_WIDTH=2304;export const CABINET_ROOM_HEIGHT=4608;
+export type Box=readonly[number,number,number,number];
+export interface CabinetGeometry {
+  screen:Box;title:Box;balance:Box;win:Box;spin:Box;minus:Box;plus:Box;auto:Box;bet:Box;topWin:Box;
+  status:Box;ink:string;titleIndex:number;
+}
+// Four original integrated treasury environments. Final apertures are measured on 2304×4608 paintings.
+export const CABINETS:Record<GameId,CabinetGeometry>={
+ 'golden-hour':{"screen": [-60.75, 546.78, 1148.1, 1020.82], "title": [-14.83, 202.61, 1056.26, 171.44], "minus": [16.16, 1706.54, 153.83, 158.23], "bet": [205.64, 1731.63, 455.86, 110.0], "plus": [697.15, 1706.54, 153.83, 158.23], "spin": [941.02, 1681.46, 211.99, 218.06], "auto": [-177.06, 1712.33, 153.83, 158.23], "balance": [-165.8, 2055.82, 435.23, 135.08], "win": [299.44, 2055.82, 442.73, 135.08], "topWin": [774.06, 2055.82, 438.98, 135.08], "status": [295.68, 1924.61, 435.23, 82.98], "ink": "#4B362A", "titleIndex": 1},
+ 'jade-treasury':{"screen": [-190.62, 720.81, 1405.26, 719.52], "title": [-134.42, 456.64, 1292.84, 171.44], "minus": [463.28, 1581.14, 151.77, 156.24], "bet": [635.66, 1610.07, 354.13, 104.16], "plus": [1016.02, 1581.14, 151.77, 156.24], "spin": [182.23, 1542.56, 224.84, 231.48], "auto": [-87.58, 1586.93, 157.39, 162.04], "balance": [-166.26, 1928.37, 434.69, 135.03], "win": [298.41, 1928.37, 442.19, 135.03], "topWin": [772.45, 1928.37, 438.44, 135.03], "status": [294.65, 1797.18, 434.69, 82.95], "ink": "#4B362A", "titleIndex": 2},
+ 'pearl-palace':{"screen": [-112.71, 572.75, 1249.41, 971.47], "title": [-62.73, 303.59, 1149.45, 171.44], "minus": [89.9, 1686.86, 151.96, 156.13], "bet": [269.99, 1713.84, 423.97, 104.08], "plus": [723.99, 1686.86, 151.96, 156.13], "spin": [-204.63, 1648.31, 225.12, 231.3], "auto": [965.99, 1686.86, 155.7, 159.98], "balance": [-167.11, 2031.88, 435.23, 134.93], "win": [298.13, 2031.88, 442.73, 134.93], "topWin": [772.76, 2031.88, 438.98, 134.93], "status": [294.39, 1900.82, 435.23, 82.88], "ink": "#4B362A", "titleIndex": 3},
+ 'ruby-revel':{"screen": [-141.28, 476.64, 1306.55, 1000.05], "title": [-89.01, 172.48, 1202.03, 171.44], "minus": [-60.56, 1619.0, 153.93, 157.7], "bet": [114.03, 1645.93, 420.5, 103.85], "plus": [555.17, 1619.0, 153.93, 157.7], "spin": [771.06, 1580.54, 225.27, 230.78], "auto": [1056.4, 1619.0, 155.81, 159.62], "balance": [-167.56, 1963.25, 435.52, 134.62], "win": [297.99, 1963.25, 443.03, 134.62], "topWin": [772.93, 1963.25, 439.27, 134.62], "status": [294.24, 1832.47, 435.52, 82.7], "ink": "#4B362A", "titleIndex": 4},
+};
+export function imagePoint(b:Box):readonly[number,number]{return[b[0]+b[2]/2-512,1152-b[1]-b[3]/2];}
+export function cabinetScale(width:number,height:number):number{return Math.max(width/1024,height/2304);}
+/** Fit the entire interactive cabinet, not just its background crop. */
+export function cabinetLayout(width:number,height:number,g:CabinetGeometry,topInset=0,bottomInset=0):{scale:number;y:number}{
+ const boxes=[g.title,g.balance,g.screen,g.win,g.spin,g.minus,g.plus,g.auto,g.bet,g.topWin];
+ const top=1152-Math.min(70,...boxes.map(b=>b[1])); // Keep the conductor/mascot crown visible on tablets, including the below-screen Coral title.
+ const bottom=1152-Math.max(...boxes.map(b=>b[1]+b[3]));
+ const left=Math.min(...boxes.map(b=>b[0])),right=Math.max(...boxes.map(b=>b[0]+b[2]));
+ const safeTop=height/2-topInset-170,safeBottom=-height/2+bottomInset+158;
+ const scale=Math.min(cabinetScale(width,height),(safeTop-safeBottom)/(top-bottom),(width-72)/(2*Math.max(512-left,right-512)));
+ const y=Math.max(safeBottom-bottom*scale,Math.min(0,safeTop-top*scale));
+ return {scale,y};
+}
