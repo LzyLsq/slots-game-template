@@ -1,3 +1,4 @@
+import {tr} from '../ui/Language';
 import { _decorator, BlockInputEvents, Color, Component, Graphics, Label, Layers, Node, ResolutionPolicy, screen, UITransform, view } from 'cc';
 const { ccclass } = _decorator;
 
@@ -56,7 +57,7 @@ export class SafeAreaAdapter extends Component {
       overlay.addComponent(Graphics);
       overlay.addComponent(BlockInputEvents);
       const message = new Node('Message'); message.layer = Layers.Enum.UI_2D; message.addComponent(UITransform); overlay.addChild(message);
-      const label = message.addComponent(Label); label.string = 'PORTRAIT MODE\nROTATE YOUR DEVICE'; label.fontSize = 42; label.lineHeight = 56; label.isBold = true; label.color = new Color(255, 229, 155); label.horizontalAlign = Label.HorizontalAlign.CENTER; label.verticalAlign = Label.VerticalAlign.CENTER;
+      const label = message.addComponent(Label); label.string = tr('PORTRAIT MODE\nROTATE YOUR DEVICE'); label.fontSize = 42; label.lineHeight = 56; label.isBold = true; label.color = new Color(255, 229, 155); label.horizontalAlign = Label.HorizontalAlign.CENTER; label.verticalAlign = Label.VerticalAlign.CENTER;
       this.rotateOverlay = overlay;
     }
     const overlay = this.rotateOverlay; overlay.active = landscape; overlay.setSiblingIndex(this.node.children.length - 1);

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { GameBootstrap } from '../assets/scripts/core/GameBootstrap';
 import { PRIVACY_VERSION, TERMS_VERSION } from '../assets/scripts/core/ReleaseConfig';
 import { LocalAuthService } from '../assets/scripts/services/LocalAuthService';
-import { RankService } from '../assets/scripts/services/RankService';
+import { RankService, hallStandings } from '../assets/scripts/services/RankService';
 import { createPlayerScope, MemoryStorage, SaveService } from '../assets/scripts/services/SaveService';
 
 const main=async():Promise<void>=>{
@@ -36,3 +36,14 @@ const main=async():Promise<void>=>{
 };
 
 void main();
+
+const player={rank:1,nickname:'Player',winnings:100000,avatar:6,current:true};
+const mixed=hallStandings([player]);
+assert.equal(mixed.find(r=>r.current)?.rank,2);
+assert.equal(mixed.filter(r=>r.virtual).length,5);
+assert.equal(player.rank,1,'Presentation must not mutate real rank');
+assert.equal(hallStandings([{...player,winnings:200000}])[0].current,true);
+assert.equal(hallStandings([{...player,winnings:128000}])[0].current,true);
+assert.equal(hallStandings([{...player,winnings:0}]).find(r=>r.current)?.rank,6);
+assert(mixed.every((r,i)=>r.rank===i+1&&(!i||mixed[i-1].winnings>=r.winnings)));
+console.log('PASS mixed standings: score order, player promotion, ties, zero score and immutable source');

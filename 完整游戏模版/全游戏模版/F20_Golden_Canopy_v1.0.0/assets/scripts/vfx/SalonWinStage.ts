@@ -1,3 +1,4 @@
+import {tr} from '../ui/Language';
 import { _decorator, Color, Component, EventTouch, Graphics, Label, Node, tween, UIOpacity, Vec3 } from 'cc';
 import { SalonArt, box, COLORS, opacity, outlined, text } from '../ui/SalonArt';
 import { GAME_CONFIGS, symbolAtlas, prizeArt } from '../math/GameConfigs';
@@ -48,8 +49,8 @@ export class SalonWinStage extends Component {
   }
   private reveal():void {
     if(!this.revealed&&!this.reduced){this.finale.forEach((alpha,i)=>tween(alpha).delay(i*.06).to(.12,{opacity:225}).to(.5,{opacity:0},{easing:'sineOut'}).start());tween(this.count.node).to(.16,{scale:new Vec3(1.09,1.09,1)}).to(.24,{scale:new Vec3(1,1,1)},{easing:'backOut'}).start();}
-    this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=Math.floor(this.amount).toLocaleString('en-US');
-    this.hint.string='Added to your wallet · Tap to continue';
+    this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=tr(Math.floor(this.amount).toLocaleString('en-US'));
+    this.hint.string=tr('Added to your wallet · Tap to continue');
   }
   private advance():void {
     if(this.finished)return;
@@ -65,7 +66,7 @@ export class SalonWinStage extends Component {
     const tick=Math.floor(this.elapsed*24);
     if(tick!==this.lastTick&&this.elapsed<this.countDuration){
       this.lastTick=tick;const p=Math.min(1,Math.max(0,(this.elapsed-.55)/(this.countDuration-.55)));
-      this.count.string=Math.floor(this.amount*(1-Math.pow(1-p,2.4))).toLocaleString('en-US');
+      this.count.string=tr(Math.floor(this.amount*(1-Math.pow(1-p,2.4))).toLocaleString('en-US'));
     }
     if(this.elapsed>=this.countDuration&&!this.revealed)this.reveal();
     // A completed amount is held for at least 2 seconds before auto-dismissal.

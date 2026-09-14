@@ -1,4 +1,5 @@
-import { Color, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
+import {tr,language} from './Language';
+import { Color, EventTouch, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
 export const COLORS = { cream: '#FFF8E7', gold: '#FFD988', jade: '#214D57', ink: '#4B362A', coral: '#ED967C' };
 export class SalonArt {
   public reducedMotion=false;
@@ -98,9 +99,9 @@ export class SalonArt {
 export function box(parent: Node, name: string, x: number, y: number, w: number, h: number): Node {
   const n = new Node(name); n.layer = Layers.Enum.UI_2D; n.addComponent(UITransform).setContentSize(w, h); n.setPosition(x, y); parent.addChild(n); return n;
 }
-export function text(parent: Node, value: string, x: number, y: number, w: number, h: number, size = 32, color = COLORS.cream, display = false): Label {
+export function text(parent: Node, value: string, x: number, y: number, w: number, h: number, size = 32, color = COLORS.cream, display = false, raw = false): Label {
   const n = box(parent, `Text:${value.slice(0, 28)}`, x, y, w, h); const l = n.addComponent(Label);
-  l.string = value; l.fontSize = size; l.lineHeight = size * 1.25; l.fontFamily = display ? 'Georgia' : 'Arial'; l.isBold = true;
+  l.string = raw ? value : tr(value); l.fontSize = size; l.lineHeight = size * 1.25; l.fontFamily = language()==='en' ? (display ? 'Georgia' : 'Arial') : 'Arial'; l.isBold = true;
   l.color = new Color(color); l.horizontalAlign = Label.HorizontalAlign.CENTER; l.verticalAlign = Label.VerticalAlign.CENTER;
   // CHAR shares a dynamic glyph atlas across pages. Destroying a label-heavy
   // profile page while creating the login form can evict glyphs that the new
@@ -109,7 +110,7 @@ export function text(parent: Node, value: string, x: number, y: number, w: numbe
   l.overflow = Label.Overflow.SHRINK; l.enableWrapText = true; l.cacheMode = Label.CacheMode.NONE; return l;
 }
 export function bindPress(hit: Node, inner: Node, action: () => void, feel:{depth?:number;compression?:number;release?:number;tilt?:number}={}): void {
-  let pressed=false;
+  let pressed=false,startX=0,startY=0;
   // A separate transform keeps breathing/sheen tweens alive after a tap.
   // The inner node retains its local coordinates for existing idle animations.
   const parent=inner.parent!;const order=inner.getSiblingIndex();
@@ -121,9 +122,15 @@ export function bindPress(hit: Node, inner: Node, action: () => void, feel:{dept
     pressed=false;response?.stop();
     response=tween(motion).to(.11,target(1.045,-2),{easing:'quadOut'}).to(Math.max(.16,feel.release??.2),target(1),{easing:'sineInOut'}).start();
   };
-  hit.on(Node.EventType.TOUCH_START,()=>{
+  hit.on(Node.EventType.TOUCH_START,(event:EventTouch)=>{
+    const point=event.getUILocation();startX=point.x;startY=point.y;
     pressed=true;response?.stop();
     response=tween(motion).to(.065,target(Math.min(.94,feel.compression??.92),feel.depth??6),{easing:'quadOut'}).start();
+  });
+  // Cancel the press once the finger drags; returning over the button is not a new tap.
+  hit.on(Node.EventType.TOUCH_MOVE,(event:EventTouch)=>{
+    if(!pressed)return;const point=event.getUILocation();
+    if(Math.hypot(point.x-startX,point.y-startY)>36)restore();
   });
   hit.on(Node.EventType.TOUCH_CANCEL,restore);
   hit.on(Node.EventType.TOUCH_END,()=>{const run=pressed;restore();if(run)action();});

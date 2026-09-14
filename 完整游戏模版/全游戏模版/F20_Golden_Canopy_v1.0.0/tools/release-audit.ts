@@ -25,9 +25,13 @@ const buildConfig = read('tools/web-mobile-release-build.json');
 const builtMainConfig = resolve(root, 'build/web-mobile/assets/main/config.json');
 const builtSettings = resolve(root, 'build/web-mobile/src/settings.json');
 const fixedLegalBuildFiles = ['privacy.html', 'terms.html', 'support.html'].every((file) => existsSync(resolve(root, 'build/web-mobile', file)));
-const generatedArt = ['salon','celebration','symbols','symbols-blur','interfaces','optics','portraits','apple-mark','harvest-brand','harvest-hall-soft','harvest-store','harvest-rank','harvest-profile','harvest-rewards',
- ...Array.from({length:16},(_,i)=>'harvest-button-'+i),...Array.from({length:4},(_,i)=>'harvest-card-'+i),...Array.from({length:4},(_,i)=>'harvest-soft-plate-'+i),
- ...['golden-hour','jade-treasury','pearl-palace','ruby-revel'].map(id=>id+'-tall')].map(name=>`assets/resources/art/${name}.png`);
+const gameIds = ['golden-hour','jade-treasury','pearl-palace','ruby-revel'];
+const generatedArt = ['salon','symbols','symbols-blur','interfaces','optics','portraits','apple-mark','canopy-brand','canopy-hall-soft','canopy-services','canopy-destinations',
+ ...Array.from({length:16},(_,i)=>'canopy-button-'+i),
+ ...Array.from({length:4},(_,i)=>'canopy-title-'+i),
+ ...Array.from({length:4},(_,i)=>'canopy-frame-'+i),
+ ...Array.from({length:4},(_,i)=>'canopy-soft-plate-'+i),
+ ...gameIds.flatMap(id=>[id+'-tall','symbols-'+id,'symbols-'+id+'-blur','prize-'+id])].map(name=>`assets/resources/art/${name}.png`);
 const generatedArtComplete = generatedArt.every((path) => existsSync(resolve(root, path)) && existsSync(resolve(root, `${path}.meta`)));
 const geometry=read('assets/scripts/ui/CabinetGeometry.ts');
 const winStage=read('assets/scripts/vfx/SalonWinStage.ts');
@@ -36,7 +40,7 @@ const resultGenerator=read('assets/scripts/math/ResultGenerator.ts');
 add('Publisher identity and public legal URLs', !releaseConfig.includes('REPLACE_WITH_'), 'Set publisherLegalName, supportEmail and HTTPS legal URLs.');
 add('App Store product identifiers', !store.includes('com.publisher.'), 'Replace all com.publisher.* product IDs with App Store Connect consumable IDs.');
 add('Hosted legal documents finalized', !legal.includes('REPLACE_WITH_') && !legal.includes('Insert the publisher') && !legal.includes('Finalize '), 'Complete counsel-reviewed publisher, retention, territory and governing-law clauses.');
-add('F15 artwork set is complete', generatedArtComplete, 'Integrated cabinets and shared bitmap atlases require their Cocos meta files.');
+add('F20 artwork set is complete', generatedArtComplete, 'Integrated cabinets and shared bitmap atlases require their Cocos meta files.');
 add('Four feature models are present', ['golden-hour','jade-respin','pearl-expansion','ruby-cascade'].every(id=>resultGenerator.includes(id)), 'Feature behavior is additionally exercised by npm test; this static check is not visual acceptance.');
 add('Shared cabinet design plane is preserved', app.includes('Cabinet-coordinate-plane') && app.includes('cabinetLayout(') && geometry.includes('1024') && geometry.includes('2304'), 'Art, reels and controls use measured coordinates on one uniformly scaled plane; test:layout checks bounds.');
 add('Win presentation has reveal and teardown', winStage.includes('private reveal()') && winStage.includes('protected onDestroy()') && app.includes('SalonWinStage'), 'Browser QA must also verify celebration dismissal and input recovery.');
@@ -56,8 +60,8 @@ add('Release UI has no simulation claims', !/local demo|local simulations|refres
 add('Account deletion available', app.includes('Delete account & data') && server.includes('deleteAccount('), 'In-app re-authenticated deletion and server pseudonymization path exist.');
 add('Privacy, terms and support in app', app.includes("['terms','privacy','support']") && app.includes('private legal('), 'Legal/support links must remain reachable on the authentication screen.');
 add('Eligibility gate versioned', app.includes('guestConsent()') && app.includes('complianceCurrent(') && releaseConfig.includes('TERMS_VERSION') && releaseConfig.includes('PRIVACY_VERSION'), 'Policy changes require eligibility confirmation again.');
-add('Release build includes the launch scene', buildConfig.includes('"md5Cache": false') && buildConfig.includes('db://assets/scenes/LuckySkylightWorld.scene') && buildConfig.includes('e6f4e0a7-9acf-497a-b5f5-a7c4490d1802'), 'The checked-in build configuration must retain the launch scene and stable public filenames.');
-add('Built web artifact is complete', existsSync(builtMainConfig) && existsSync(builtSettings) && readFileSync(builtSettings, 'utf8').includes('"launchScene":"db://assets/scenes/LuckySkylightWorld.scene"') && fixedLegalBuildFiles, 'Build web-mobile with the release config and verify the scene plus fixed privacy, terms and support URLs.');
+add('Release build includes the launch scene', buildConfig.includes('"md5Cache": false') && buildConfig.includes('db://assets/scenes/GildedExpress.scene') && buildConfig.includes('e6f4e0a7-9acf-497a-b5f5-a7c4490d1802'), 'The checked-in build configuration must retain the launch scene and stable public filenames.');
+add('Built web artifact is complete', existsSync(builtMainConfig) && existsSync(builtSettings) && readFileSync(builtSettings, 'utf8').includes('"launchScene":"db://assets/scenes/GildedExpress.scene"') && fixedLegalBuildFiles, 'Build web-mobile with the release config and verify the scene plus fixed privacy, terms and support URLs.');
 
 const failures = checks.filter((check) => !check.ok);
 for (const check of checks) process.stdout.write(`${check.ok ? 'PASS' : 'BLOCK'}  ${check.name}\n       ${check.detail}\n`);

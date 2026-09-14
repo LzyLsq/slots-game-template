@@ -190,9 +190,10 @@ export class SalonReels extends Component {
   private wait(seconds:number):Promise<void>{return new Promise(resolve=>this.scheduleOnce(resolve,seconds));}
   protected update(dt:number):void{
     this.clock+=Math.min(dt,.1);
-    for(const fx of this.themeFX){fx.age+=Math.min(dt,.1);const t=Math.min(1,fx.age/.95);fx.alpha.opacity=this.reducedMotion?0:170*Math.sin(t*Math.PI)*Math.pow(1-t,.5);const k=.45+t*.85;fx.node.setScale(k,k,1);fx.node.setPosition(fx.x,fx.y+(this.config.id==='pearl-palace'?t*this.cellH*.10:0));fx.node.angle=this.config.id==='jade-treasury'?t*14:0;}
+    for(const fx of this.themeFX){if(this.reducedMotion||fx.age>=.95){if(fx.alpha.opacity)fx.alpha.opacity=0;continue;}fx.age+=Math.min(dt,.1);const t=Math.min(1,fx.age/.95);fx.alpha.opacity=this.reducedMotion?0:170*Math.sin(t*Math.PI)*Math.pow(1-t,.5);const k=.45+t*.85;fx.node.setScale(k,k,1);fx.node.setPosition(fx.x,fx.y+(this.config.id==='pearl-palace'?t*this.cellH*.10:0));fx.node.angle=this.config.id==='jade-treasury'?t*14:0;}
     const idle=!this.running&&!this.transitioning&&!this.reducedMotion;
     for(const mote of this.motes){
+      if(!idle){if(mote.alpha.opacity)mote.alpha.opacity=0;continue;}
       const phase=(this.clock*mote.speed+mote.phase)%1;
       mote.node.setPosition((mote.lane-.5)*this.width+Math.sin(phase*Math.PI*3+mote.phase*9)*this.cellW*.13,(phase-.5)*this.height);
       mote.node.angle=this.clock*24+mote.phase*360;
@@ -229,18 +230,20 @@ export class SalonReels extends Component {
     if(!this.running){
       for(let c=0;c<this.cols.length;c++)for(let j=0;j<this.config.rows;j++){
         if(!this.reducedMotion&&this.cols[c].landAge<.58){this.landingCell(c,j);continue;}
-        const cell=this.cols[c].cells[j+2],wave=this.reducedMotion?0:Math.sin(this.clock*1.15+c*.9+j*1.3);
+        // Blend out of the exact spring rest before resuming independent idle motion.
+        const u=Math.min(1,Math.max(0,(this.cols[c].landAge-.58)/.45)),mix=this.reducedMotion?0:u*u*(3-2*u);
+        const cell=this.cols[c].cells[j+2],wave=Math.sin(this.clock*1.15+c*.9+j*1.3)*mix;
         const phase=(this.clock+c*.53)%3.8,activeRow=Math.floor((this.clock+c*.53)/3.8)%this.config.rows;
-        const hop=this.reducedMotion||j!==activeRow?0:Math.sin(Math.min(1,phase/1.3)*Math.PI);
-        cell.emphasis=Math.max(0,cell.emphasis-dt*.6);const punch=this.reducedMotion?0:cell.emphasis*.09;
+        const hop=j!==activeRow?0:Math.sin(Math.min(1,phase/1.3)*Math.PI)*mix;
+        cell.emphasis=Math.max(0,cell.emphasis-dt*.6);const punch=cell.emphasis*.09*mix;
         cell.node.setPosition(this.x(c),this.y(j)+wave*Math.min(5,this.cellH*.028)+hop*Math.min(7,this.cellH*.035));
         // Preserve the jewel's silhouette: breathe uniformly, never stretch it.
         const landing=this.reducedMotion?0:Math.max(0,1-this.cols[c].landAge/.55)*Math.sin(this.cols[c].landAge*19)*.055;
         const breath=Math.min(1.085,1+wave*.025+punch+hop*.05+landing);
         const id=this.target[c*this.config.rows+j],coin=id==='coin',pearl=this.config.id==='pearl-palace'&&(id==='pearl'||id==='chip'),pig=this.config.id==='golden-hour'&&id==='bell';
-        if(!this.reducedMotion&&(pearl||pig)){const t=this.clock*(pearl?1.0:1.35)+c+j;cell.node.setPosition(this.x(c)+Math.sin(t)*this.cellW*.035,this.y(j)+Math.cos(t*.8)*this.cellH*.038);}
+        if(!this.reducedMotion&&(pearl||pig)){const t=this.clock*(pearl?1.0:1.35)+c+j;cell.node.setPosition(this.x(c)+Math.sin(t)*this.cellW*.035*mix,this.y(j)+Math.cos(t*.8)*this.cellH*.038*mix);}
         const turn=(this.clock+c*.8+j*.6)%7.5;
-        const tilt=this.reducedMotion?1:coin&&turn<1.6?1-Math.sin(turn/1.6*Math.PI)*.17:1;
+        const tilt=this.reducedMotion?1:coin&&turn<1.6?1-Math.sin(turn/1.6*Math.PI)*.17*mix:1;
         cell.node.setScale(breath*tilt,breath,1);
         cell.node.angle=this.reducedMotion?0:wave*(pearl?3.5:pig?3:this.config.id==='jade-treasury'?2.4:3.2)+hop*Math.sin(phase*7)*1.8;
       }
