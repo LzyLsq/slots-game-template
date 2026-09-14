@@ -17,5 +17,5 @@ export class MailService {
     this.save.update((state) => { const userId = state.currentUserId; if (userId) state.playerData[userId].mail[id] = { ...current, read: true, claimed: true }; }); return true;
   }
   public claimAll(): number { return INBOX_MESSAGES.reduce((sum, item) => sum + (this.claim(item.id) ? item.credits : 0), 0); }
-  public deleteRead(): void { this.save.update((state) => { const userId = state.currentUserId; if (!userId) return; INBOX_MESSAGES.forEach((item) => { const value = state.playerData[userId].mail[item.id] ?? { read: false, claimed: false, deleted: false }; if (value.read) state.playerData[userId].mail[item.id] = { ...value, deleted: true }; }); }); }
+  public deleteRead(): void { this.save.update((state) => { const userId = state.currentUserId; if (!userId) return; INBOX_MESSAGES.forEach((item) => { const value = state.playerData[userId].mail[item.id] ?? { read: false, claimed: false, deleted: false }; if (value.read && (item.credits === 0 || value.claimed)) state.playerData[userId].mail[item.id] = { ...value, deleted: true }; }); }); }
 }

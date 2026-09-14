@@ -1,3 +1,4 @@
+import { INBOX_MESSAGES } from '../services/MailService';
 import { _decorator, BlockInputEvents, Color, Component, EditBox, game, Game, Graphics, Label, Mask, Node, ScrollView, Sprite, tween, Tween, UIOpacity, UITransform, Vec3, Widget } from 'cc';
 import { GameBootstrap } from '../core/GameBootstrap';
 import { SecureRNG } from '../core/SecureRNG';
@@ -147,7 +148,7 @@ export class AureliaApp extends Component {
     this.art.image(wallet,'symbols',-194,0,70,70,0);
     this.balanceLabel=text(wallet,money(this.services.economy.balance()),-4,0,298,76,46,COLORS.cream);
     const topup=this.art.image(wallet,'caravan-button-2',202,0,74,74);topup.name='Top up';bindPress(topup,topup,()=>void this.navigate('store'));
-    this.art.button(this.content!,'Mail',95,y,87,87,'',5,()=>this.mail());
+    const mailboxButton=this.art.button(this.content!,'Mail',95,y,87,87,'',5,()=>this.mail());const unreadMail=INBOX_MESSAGES.filter(m=>{const state=this.services.mail.state(m.id);return !state.read&&!state.deleted;}).length;if(unreadMail)text(mailboxButton,String(unreadMail),33,33,40,40,27,COLORS.cream,true);
     const avatar=this.art.image(this.content!,'portraits',431,y,109,109,p?.avatar??0);bindPress(avatar,avatar,()=>void this.navigate('profile'));
     outlined(text(this.content!,p?.nickname??'Guest',266,y,208,69,27,COLORS.cream),'#173F49',2);
   }
@@ -579,7 +580,7 @@ export class AureliaApp extends Component {
     text(stage,this.services.remoteMode?'Verified total wins':'On-device total wins',124,311,635,56,30,COLORS.ink);
     const stamp=this.generation;const render=(rows=this.services.rank.list('all-time',this.services.profile.current())):void=>{if(stamp!==this.generation)return;
       if(!rows.length){text(stage,'Your first settled win begins\nyour place in the chronicle.',0,20,860,190,43,COLORS.ink,true);this.art.button(stage,'Explore games',0,-215,690,114,'Find your first treasure',6,()=>void this.navigate('home'),3);return;}
-      rows.slice(0,5).forEach((r,i)=>{const n=this.art.panel(stage,0,139-i*172,945,150,r.current?2:0),ink=r.current?COLORS.cream:COLORS.ink;this.reveal(n,i*.08);text(n,'#'+r.rank,-380,0,133,78,43,ink,true);const face=this.art.image(n,'portraits',-248,0,112,112,r.avatar);this.idleAccent(face,i*.7,4,2);text(n,r.nickname,0,21,336,61,34,ink,true);text(n,r.current?'YOUR CARAVAN':'TRAVELLER',0,-35,332,44,24,ink);this.count(text(n,money(r.winnings),310,0,260,78,35,ink,true),r.winnings);});
+      this.visibleRanks(rows,5).forEach((r,i)=>{const n=this.art.panel(stage,0,139-i*172,945,150,r.current?2:0),ink=r.current?COLORS.cream:COLORS.ink;this.reveal(n,i*.08);text(n,'#'+r.rank,-380,0,133,78,43,ink,true);const face=this.art.image(n,'portraits',-248,0,112,112,r.avatar);this.idleAccent(face,i*.7,4,2);text(n,r.nickname,0,21,336,61,34,ink,true);text(n,r.current?'YOUR CARAVAN':'TRAVELLER',0,-35,332,44,24,ink);this.count(text(n,money(r.winnings),310,0,260,78,35,ink,true),r.winnings);});
     };if(this.services.remoteMode)void this.services.rank.refresh('all-time').then(render).catch(()=>this.toast('Unable to load legends.'));else render();
     text(stage,'Settled wins · Shared wallet · No invented opponents',0,-655,970,54,27,COLORS.ink);
   }
@@ -589,7 +590,7 @@ export class AureliaApp extends Component {
     text(stage,'YOUR CARAVAN PASSPORT',0,609,994,92,47,COLORS.ink,true);
     const book=this.art.panel(stage,0,330,945,406,0);this.metalEdges(book,926,388,0);
     const portrait=this.art.image(book,'portraits',-272,18,255,255,p.avatar);this.breathe(portrait);bindPress(portrait,portrait,()=>this.avatars());
-    text(book,p.nickname,148,94,511,77,43,COLORS.ink,true);text(book,p.isGuest?'GUEST TRAVELLER':'REGISTERED TRAVELLER',149,17,519,52,28,COLORS.ink);
+    const editableName=text(book,p.nickname+' · EDIT',148,94,511,77,43,COLORS.ink,true);editableName.enableWrapText=false;editableName.node.name='Edit nickname';bindPress(editableName.node,editableName.node,()=>this.editNickname());text(book,p.isGuest?'GUEST TRAVELLER':'REGISTERED TRAVELLER',149,17,519,52,28,COLORS.ink);
     this.art.button(book,'Choose portrait',145,-84,471,88,'Change portrait',4,()=>this.avatars(),0);
     [p.totalWin,p.biggestWin].forEach((v,i)=>{const n=this.art.panel(stage,i?245:-245,41,460,141,2);text(n,i?'BEST DISCOVERY':'TOTAL WON',0,32,425,42,27,COLORS.cream);this.count(text(n,money(v),0,-23,425,62,43,COLORS.cream,true),v);});
     const links:[string,number,()=>void][]=[['Coin ledger',1,()=>this.history()],['Privacy & help',7,()=>this.legal('privacy')],['Sign out',9,()=>void this.signOut()]];
@@ -600,10 +601,63 @@ export class AureliaApp extends Component {
   private async signOut():Promise<void>{
     if(this.busy)return;this.services.auth.logout();this.authExpanded=false;this.draft.password=this.draft.confirmPassword='';await this.navigate('login');
   }
+  private visibleRanks<T extends {current:boolean}>(rows:T[],limit:number):T[]{
+    const visible=rows.slice(0,limit),player=rows.find(r=>r.current);
+    if(player&&!visible.includes(player))visible[limit-1]=player;
+    return visible;
+  }
+
+  private editNickname():void {
+    if(this.busy)return;
+    const player=this.services.profile.current();if(!player)return;
+    const panel=this.sheet('Edit nickname',650);let value=player.nickname;
+    text(panel,'Use 2–18 characters',0,157,680,56,32,COLORS.cream);
+    this.field(panel,'Nickname',42,value,v=>value=v);
+    const error=text(panel,'',0,-55,710,68,29,COLORS.cream);
+    this.art.button(panel,'Save nickname',0,-191,710,106,'Save nickname',14,()=>{
+      if(this.busy)return;
+      const nickname=value.trim();
+      if(nickname.length<2||nickname.length>18||/[\u0000-\u001f\u007f]/.test(nickname)){error.string='Use 2–18 characters';return;}
+      this.busy=true;
+      void this.services.profile.setNickname(nickname).then(ok=>{
+        if(!ok){if(error.isValid)error.string='Nickname could not be saved.';return;}
+        this.closeModal();this.render();this.toast('Nickname saved.');
+      }).catch(()=>{if(error.isValid)error.string='Nickname could not be saved.';}).finally(()=>{this.busy=false;});
+    },0);
+  }
+
+
   private avatars():void{const s=this.sheet('Choose your portrait',1110);for(let i=0;i<4;i++){const n=this.art.image(s,'portraits',(i%2-.5)*330,180-Math.floor(i/2)*350,270,270,i);bindPress(n,n,()=>void this.services.profile.setAvatar(i).then(ok=>{if(ok){this.render();this.audio.play('win');this.toast('Portrait saved to your account.');}else this.toast('Portrait could not be saved.');}));}}
   private history():void{const s=this.sheet('Your coin ledger',1190);const rows=this.services.save.currentScope()?.transactions.slice(-7).reverse()??[];rows.forEach((r,i)=>{const n=this.art.panel(s,0,394-i*132,840,115,1);text(n,r.type.replace(/-/g,' '),-178,0,425,90,31,COLORS.jade);text(n,(r.amount>0?'+':'')+money(r.amount),233,0,326,79,36,COLORS.ink);});if(!rows.length)text(s,'Your coin activity will appear here.',0,0,850,160,40);}
   private deleteAccount():void{const s=this.sheet('Delete account & data',670);let password='';text(s,'This permanently deletes your account, progress\nand unused coins. This action cannot be undone.',0,105,830,174,36);this.field(s,'Password (not needed for guest)',-53,'',v=>password=v,true);this.art.button(s,'Confirm deletion',0,-228,780,105,'Permanently delete account',undefined,()=>void this.services.auth.deleteCurrentAccount(password).then(r=>{if(r.ok){this.page='login';this.render();}else this.toast(r.message??'Unable to delete.');}),2);}
-  private mail():void{const s=this.sheet('Caravan post',590);this.art.image(s,'interfaces',0,97,225,175,5);text(s,'Welcome to Golden Caravan. Your daily gifts\nare waiting in Rewards.',0,-55,820,158,41);this.art.button(s,'Open rewards',0,-200,690,106,'Visit Rewards',2,()=>{this.closeModal();void this.navigate('rewards');});}
+  private mail():void {
+    const panel=this.sheet('Mailbox',1110),items=INBOX_MESSAGES.filter(m=>!this.services.mail.state(m.id).deleted);
+    text(panel,'Gifts and notices',0,377,750,55,31);
+    items.forEach((m,i)=>{const state=this.services.mail.state(m.id),row=this.art.panel(panel,0,230-i*210,840,177,0);
+      const icon=this.art.image(row,'interfaces',-293,0,94,94,state.read?5:2);
+      text(row,m.title,45,24,540,48,31,COLORS.ink).enableWrapText=false;
+      text(row,state.claimed?'Attachment collected':m.credits?money(m.credits)+' COINS':state.read?'Read':'Unread',45,-27,530,42,28,COLORS.ink);
+      bindPress(row,icon,()=>this.openMail(m.id));row.name='Mail item '+m.id;
+    });
+    if(!items.length)text(panel,'Your mailbox is empty',0,90,740,110,39);
+    this.art.button(panel,'Claim all mail',-200,-391,390,100,'Collect all',14,()=>{if(this.services.remoteMode){this.toast('Mail rewards require the event server.');return;}const amount=this.services.mail.claimAll();this.render();this.mail();this.toast(amount?money(amount)+' coins collected':'No attachments to collect');},0);
+    this.art.button(panel,'Clear read mail',200,-391,390,100,'Clear read',9,()=>{this.services.mail.deleteRead();this.render();this.mail();},0);
+    text(panel,'Unclaimed gifts are kept when clearing mail',0,-474,770,45,26);
+  }
+  private openMail(id:string):void {
+    const item=INBOX_MESSAGES.find(m=>m.id===id);if(!item)return;
+    this.services.mail.read(id);this.render();const panel=this.sheet('Letter',920),state=this.services.mail.state(id);
+    text(panel,item.title,0,254,770,85,38,COLORS.cream,true);
+    text(panel,item.body,0,112,740,160,33);
+    const gift=this.art.image(panel,item.credits?'symbols':'interfaces',0,-70,140,140,item.credits?0:5);
+    text(panel,item.credits?money(item.credits)+' COINS':'System notice',0,-173,700,55,37);
+    this.art.button(panel,'Collect mail attachment',0,-277,730,100,state.claimed?'Attachment collected':item.credits?'Collect attachment':'Back to mailbox',14,()=>{
+      if(!item.credits||state.claimed){this.mail();return;}
+      if(this.services.remoteMode){this.toast('Mail rewards require the event server.');return;}
+      if(this.services.mail.claim(id)){this.audio.play('win');this.render();this.openMail(id);this.toast(money(item.credits)+' coins collected');}
+    },0);
+    this.art.button(panel,'Back to mailbox',0,-383,580,76,'Back to mailbox',9,()=>this.mail(),0);
+  }
   private rules():void{
     this.auto=false;this.updateAuto();const s=this.sheet(this.config.name+' · Rules',1350);
     const descriptions:Record<GameId,string>={

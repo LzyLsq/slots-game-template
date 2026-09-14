@@ -10,7 +10,7 @@ export class PlayerProfileService {
   public current(): PlayerRecord | undefined { const id = this.save.read().currentUserId; return id ? this.save.read().players[id] : undefined; }
   public async setNickname(nickname: string): Promise<boolean> {
     const value = nickname.trim(); const id = this.save.read().currentUserId;
-    if (!id || value.length < 2 || value.length > 18) return false;
+    if (!id || value.length < 2 || value.length > 18 || /[\u0000-\u001f\u007f]/.test(value)) return false;
     const previous = this.save.read().players[id].nickname; this.save.update((state) => { state.players[id].nickname = value; });
     return this.commit({ nickname: value }, () => this.save.update((state) => { if (state.players[id]) state.players[id].nickname = previous; }));
   }

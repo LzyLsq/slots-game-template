@@ -1,3 +1,4 @@
+import { INBOX_MESSAGES } from '../services/MailService';
 import { _decorator, BlockInputEvents, Color, Component, EditBox, game, Game, Graphics, Label, Mask, Node, ScrollView, Sprite, tween, Tween, UIOpacity, UITransform, Vec3, Widget } from 'cc';
 import { GameBootstrap } from '../core/GameBootstrap';
 import { SecureRNG } from '../core/SecureRNG';
@@ -120,7 +121,7 @@ export class AureliaApp extends Component {
     this.balanceLabel=text(ledger,money(this.services.economy.balance()),-5,0,362,72,49,this.page==='home'?COLORS.ink:COLORS.cream);
     this.art.button(ledger,'Top up',240,0,99,99,'',8,()=>void this.navigate('store'));
     const avatar=this.art.image(this.content!,'portraits',-440,y,112,112,p?.avatar??0);bindPress(avatar,avatar,()=>void this.navigate('profile'));
-    this.art.button(this.content!,'Mail',-285,y,115,110,'',5,()=>this.mail());
+    const mailboxButton=this.art.button(this.content!,'Mail',-285,y,115,110,'',5,()=>this.mail());const unreadMail=INBOX_MESSAGES.filter(m=>{const state=this.services.mail.state(m.id);return !state.read&&!state.deleted;}).length;if(unreadMail)text(mailboxButton,String(unreadMail),33,33,40,40,27,COLORS.cream,true);
   }
   private navigation():void{
     const nav=this.page==='home'?this.art.image(this.content!,'harvest-soft-plate-1',0,-this.top+104+Safe.safeBottom,1040,166):this.art.panel(this.content!,0,-this.top+104+Safe.safeBottom,1040,166,0);
@@ -497,16 +498,16 @@ export class AureliaApp extends Component {
     this.refreshBalance();
   }catch{this.toast('Unable to collect. Please try again.');}finally{this.busy=false;}}
   private rankPage():void{
-    this.title('Golden Honours','Ranked by total coins won',3);const n=box(this.content!,'Honours ceremony',0,this.top-789,978,623);
+    this.title('Golden Honours','Total wins · Includes simulated competitors',3);const n=box(this.content!,'Honours ceremony',0,this.top-789,978,623);
     this.art.panel(n,0,-104,955,225,0);
     text(n,this.services.remoteMode?'VERIFIED ALL-TIME RANKING':'ON-DEVICE ALL-TIME RANKING',0,-43,900,76,39,COLORS.gold,true);
-    const status=text(n,this.services.remoteMode?'Loading verified results…':'Ranks use total wins saved on this device.',0,-146,890,110,32);
+    const status=text(n,this.services.remoteMode?'Loading verified results…':'Total wins · Includes simulated competitors',0,-146,890,110,32);
     const stamp=this.generation;const render=(rows=this.services.rank.list('all-time',this.services.profile.current())):void=>{
       if(stamp!==this.generation)return;
       if(!rows.length){text(this.content!,'No settled wins yet.',0,this.top-1235,900,110,39,COLORS.cream);return;}
       const head=this.art.panel(this.content!,0,this.top-1127,974,70,0);
       text(head,'RANK',-367,0,150,48,25,COLORS.gold);text(head,'PLAYER',-90,0,360,48,25,COLORS.gold);text(head,'TOTAL WON',304,0,270,48,25,COLORS.gold);
-      rows.slice(0,5).forEach((r,i)=>{
+      this.visibleRanks(rows,5).forEach((r,i)=>{
         const gap=Math.min(138,(this.height-1480)/5),rowH=gap-12;
         const row=this.art.panel(this.content!,0,this.top-1225-i*gap,974,rowH,r.current?3:1);
         text(row,'#'+r.rank,-382,0,118,80,34,r.current?COLORS.cream:COLORS.jade,true);
@@ -521,7 +522,7 @@ export class AureliaApp extends Component {
     this.title('My Harvest Club','One account. One shared treasure wallet.',4);const p=this.services.profile.current();if(!p)return;
     const passport=this.art.panel(this.content!,0,this.top-746,980,574,0);
     const avatar=this.art.image(passport,'portraits',-281,90,236,236,p.avatar);bindPress(avatar,avatar,()=>this.avatars());
-    text(passport,p.nickname,124,155,548,85,48,COLORS.cream,true);text(passport,p.isGuest?'Guest · On-device progress':'Member account',129,73,564,72,33);
+    const editableName=text(passport,p.nickname+' · EDIT',124,155,548,85,48,COLORS.cream,true);editableName.enableWrapText=false;editableName.node.name='Edit nickname';bindPress(editableName.node,editableName.node,()=>this.editNickname());text(passport,p.isGuest?'Guest · On-device progress':'Member account',129,73,564,72,33);
     this.art.button(passport,'Change avatar',125,-22,517,89,'Choose portrait',4,()=>this.avatars(),1);
     text(passport,'TOTAL WON',-225,-148,432,64,33,COLORS.gold);text(passport,'BEST WIN',230,-148,420,64,33,COLORS.gold);
     text(passport,money(p.totalWin),-225,-208,431,66,44);text(passport,money(p.biggestWin),230,-208,420,66,44);
@@ -531,10 +532,63 @@ export class AureliaApp extends Component {
   private async signOut():Promise<void>{
     if(this.busy)return;this.services.auth.logout();this.draft.password=this.draft.confirmPassword='';await this.navigate('login');
   }
+  private visibleRanks<T extends {current:boolean}>(rows:T[],limit:number):T[]{
+    const visible=rows.slice(0,limit),player=rows.find(r=>r.current);
+    if(player&&!visible.includes(player))visible[limit-1]=player;
+    return visible;
+  }
+
+  private editNickname():void {
+    if(this.busy)return;
+    const player=this.services.profile.current();if(!player)return;
+    const panel=this.sheet('Edit nickname',650);let value=player.nickname;
+    text(panel,'Use 2–18 characters',0,157,680,56,32,COLORS.cream);
+    this.field(panel,'Nickname',42,value,v=>value=v);
+    const error=text(panel,'',0,-55,710,68,29,COLORS.cream);
+    this.art.button(panel,'Save nickname',0,-191,710,106,'Save nickname',14,()=>{
+      if(this.busy)return;
+      const nickname=value.trim();
+      if(nickname.length<2||nickname.length>18||/[\u0000-\u001f\u007f]/.test(nickname)){error.string='Use 2–18 characters';return;}
+      this.busy=true;
+      void this.services.profile.setNickname(nickname).then(ok=>{
+        if(!ok){if(error.isValid)error.string='Nickname could not be saved.';return;}
+        this.closeModal();this.render();this.toast('Nickname saved.');
+      }).catch(()=>{if(error.isValid)error.string='Nickname could not be saved.';}).finally(()=>{this.busy=false;});
+    },0);
+  }
+
+
   private avatars():void{const s=this.sheet('Choose your portrait',1110);for(let i=0;i<16;i++){const n=this.art.image(s,'portraits',(i%4-1.5)*213,326-Math.floor(i/4)*222,189,189,i);bindPress(n,n,()=>void this.services.profile.setAvatar(i).then(ok=>{if(ok)this.render();else this.toast('Portrait could not be saved.');}));}}
   private history():void{const s=this.sheet('Your coin ledger',1190);const rows=this.services.save.currentScope()?.transactions.slice(-7).reverse()??[];rows.forEach((r,i)=>{const n=this.art.panel(s,0,394-i*132,840,115,1);text(n,r.type.replace(/-/g,' '),-178,0,425,90,31,COLORS.jade);text(n,(r.amount>0?'+':'')+money(r.amount),233,0,326,79,36,COLORS.ink);});if(!rows.length)text(s,'Your coin activity will appear here.',0,0,850,160,40);}
   private deleteAccount():void{const s=this.sheet('Delete account & data',670);let password='';text(s,'This permanently deletes your account, progress\nand unused coins. This action cannot be undone.',0,105,830,174,36);this.field(s,'Password (not needed for guest)',-53,'',v=>password=v,true);this.art.button(s,'Confirm deletion',0,-228,780,105,'Permanently delete account',undefined,()=>void this.services.auth.deleteCurrentAccount(password).then(r=>{if(r.ok){this.page='login';this.render();}else this.toast(r.message??'Unable to delete.');}),2);}
-  private mail():void{const s=this.sheet('Your invitations',590);this.art.image(s,'interfaces',0,97,225,175,5);text(s,'Welcome to Golden Harvest. Your daily gifts\nare waiting in Rewards.',0,-55,820,158,41);this.art.button(s,'Open rewards',0,-200,690,106,'Visit Rewards',2,()=>{this.closeModal();void this.navigate('rewards');});}
+  private mail():void {
+    const panel=this.sheet('Mailbox',1110),items=INBOX_MESSAGES.filter(m=>!this.services.mail.state(m.id).deleted);
+    text(panel,'Gifts and notices',0,377,750,55,31);
+    items.forEach((m,i)=>{const state=this.services.mail.state(m.id),row=this.art.panel(panel,0,230-i*210,840,177,0);
+      const icon=this.art.image(row,'interfaces',-293,0,94,94,state.read?5:2);
+      text(row,m.title,45,24,540,48,31,COLORS.cream).enableWrapText=false;
+      text(row,state.claimed?'Attachment collected':m.credits?money(m.credits)+' COINS':state.read?'Read':'Unread',45,-27,530,42,28,COLORS.cream);
+      bindPress(row,icon,()=>this.openMail(m.id));row.name='Mail item '+m.id;
+    });
+    if(!items.length)text(panel,'Your mailbox is empty',0,90,740,110,39);
+    this.art.button(panel,'Claim all mail',-200,-391,390,100,'Collect',14,()=>{if(this.services.remoteMode){this.toast('Mail rewards require the event server.');return;}const amount=this.services.mail.claimAll();this.render();this.mail();this.toast(amount?money(amount)+' coins collected':'No attachments to collect');},0);
+    this.art.button(panel,'Clear read mail',200,-391,390,100,'Clear',9,()=>{this.services.mail.deleteRead();this.render();this.mail();},0);
+    text(panel,'Unclaimed gifts are kept when clearing mail',0,-474,770,45,26);
+  }
+  private openMail(id:string):void {
+    const item=INBOX_MESSAGES.find(m=>m.id===id);if(!item)return;
+    this.services.mail.read(id);this.render();const panel=this.sheet('Letter',920),state=this.services.mail.state(id);
+    text(panel,item.title,0,254,770,85,38,COLORS.cream,true);
+    text(panel,item.body,0,112,740,160,33);
+    const gift=this.art.image(panel,item.credits?'symbols':'interfaces',0,-70,140,140,item.credits?0:5);
+    text(panel,item.credits?money(item.credits)+' COINS':'System notice',0,-173,700,55,37);
+    this.art.button(panel,'Collect mail attachment',0,-277,730,100,state.claimed?'Attachment collected':item.credits?'Collect attachment':'Back to mailbox',14,()=>{
+      if(!item.credits||state.claimed){this.mail();return;}
+      if(this.services.remoteMode){this.toast('Mail rewards require the event server.');return;}
+      if(this.services.mail.claim(id)){this.audio.play('win');this.render();this.openMail(id);this.toast(money(item.credits)+' coins collected');}
+    },0);
+    this.art.button(panel,'Back to mailbox',0,-383,580,76,'Back to mailbox',9,()=>this.mail(),0);
+  }
   private rules():void{
     this.auto=false;this.updateAuto();const s=this.sheet(this.config.name+' · Rules',1350);
     const descriptions:Record<GameId,string>={

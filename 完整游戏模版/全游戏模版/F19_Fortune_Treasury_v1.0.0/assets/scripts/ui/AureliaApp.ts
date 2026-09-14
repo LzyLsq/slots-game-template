@@ -1,3 +1,4 @@
+import { INBOX_MESSAGES } from '../services/MailService';
 import { _decorator, BlockInputEvents, Color, Component, EditBox, EffectAsset, resources, game, Game, Graphics, Label, Mask, Node, ScrollView, Sprite, tween, Tween, UIOpacity, UITransform, Vec3, Widget } from 'cc';
 import { GameBootstrap } from '../core/GameBootstrap';
 import { SecureRNG } from '../core/SecureRNG';
@@ -150,7 +151,7 @@ export class AureliaApp extends Component {
     this.art.image(wallet,'symbols',-194,0,70,70,0);
     this.balanceLabel=text(wallet,money(this.services.economy.balance()),-4,0,298,76,46,COLORS.cream);
     const topup=this.art.image(wallet,'treasury-button-2',202,0,74,74);topup.name='Top up';bindPress(topup,topup,()=>void this.navigate('store'));
-    this.art.button(this.content!,'Mail',95,y,87,87,'',5,()=>this.mail());
+    const mailboxButton=this.art.button(this.content!,'Mail',95,y,87,87,'',5,()=>this.mail());const unreadMail=INBOX_MESSAGES.filter(m=>{const state=this.services.mail.state(m.id);return !state.read&&!state.deleted;}).length;if(unreadMail)text(mailboxButton,String(unreadMail),33,33,40,40,27,COLORS.cream,true);
     const avatar=this.art.image(this.content!,'portraits',431,y,109,109,p?.avatar??0);bindPress(avatar,avatar,()=>void this.navigate('profile'));
     outlined(text(this.content!,p?.nickname??'Guest',266,y,208,69,27,COLORS.cream),'#173F49',2).enableWrapText=false;
   }
@@ -624,12 +625,12 @@ export class AureliaApp extends Component {
   }catch{this.refreshBalance();this.toast('Unable to collect. Please try again.');}finally{this.busy=false;}}
   private rankPage():void{
     const stage=this.pageStage('Hall of fortune');text(stage,'HALL OF FORTUNE',0,624,840,92,44,COLORS.ink,true);
-    text(stage,this.services.remoteMode?'Verified settled winnings':'Real winnings on this device',0,543,940,59,30,COLORS.ink);
+    text(stage,this.services.remoteMode?'Verified settled winnings':'Total wins · Includes simulated competitors',0,543,940,59,30,COLORS.ink);
     const stamp=this.generation;const render=(rows=this.services.rank.list('all-time',this.services.profile.current())):void=>{if(stamp!==this.generation)return;
       const trophy=this.art.image(stage,'interfaces',0,358,254,254,3);this.idleAccent(trophy,0,11,.5,1.5);this.edgeJewels(trophy,220,200);this.sheen(trophy,176,184,1.2);
       if(!rows.length){const empty=this.art.panel(stage,0,32,923,316,0);text(empty,'Your first settled win\nbegins your collection of honours.',0,54,800,138,40,COLORS.ink,true);this.art.button(empty,'Explore games',0,-78,738,103,'Explore the treasury',6,()=>void this.navigate('home'),3);return;}
-      rows.slice(0,3).forEach((r,i)=>{const x=[0,-318,318][i],y=i?37:120,h=i?318:390;const pedestal=this.art.panel(stage,x,y,303,h,i?0:2),ink=i?COLORS.ink:COLORS.cream;const portrait=this.art.image(pedestal,'portraits',0,h/2-93,136,136,r.avatar);portrait.name='Honour portrait '+i;this.idleAccent(portrait,i*.75,7,.35,1.7);this.edgeJewels(portrait,119,119,i*.85);pedestal.name='Honour pedestal '+i;text(pedestal,'#'+r.rank+' '+r.nickname,0,-17,264,72,29,ink,true).enableWrapText=false;this.count(text(pedestal,money(r.winnings),0,-h/2+58,263,71,36,ink,true),r.winnings);this.metalEdges(pedestal,282,h-20,i*.8);});
-      rows.slice(3,6).forEach((r,i)=>{const row=this.art.panel(stage,0,-235-i*140,929,123,r.current?2:0),ink=r.current?COLORS.cream:COLORS.ink;text(row,'#'+r.rank,-382,0,100,60,33,ink);this.art.image(row,'portraits',-262,0,85,85,r.avatar);text(row,r.nickname,-26,0,365,65,32,ink).enableWrapText=false;text(row,money(r.winnings),290,0,211,66,33,ink);this.reveal(row,i*.12);});
+      this.visibleRanks(rows,6).slice(0,3).forEach((r,i)=>{const x=[0,-318,318][i],y=i?37:120,h=i?318:390;const pedestal=this.art.panel(stage,x,y,303,h,i?0:2),ink=i?COLORS.ink:COLORS.cream;const portrait=this.art.image(pedestal,'portraits',0,h/2-93,136,136,r.avatar);portrait.name='Honour portrait '+i;this.idleAccent(portrait,i*.75,7,.35,1.7);this.edgeJewels(portrait,119,119,i*.85);pedestal.name='Honour pedestal '+i;text(pedestal,'#'+r.rank+' '+r.nickname,0,-17,264,72,29,ink,true).enableWrapText=false;this.count(text(pedestal,money(r.winnings),0,-h/2+58,263,71,36,ink,true),r.winnings);this.metalEdges(pedestal,282,h-20,i*.8);});
+      this.visibleRanks(rows,6).slice(3,6).forEach((r,i)=>{const row=this.art.panel(stage,0,-235-i*140,929,123,r.current?2:0),ink=r.current?COLORS.cream:COLORS.ink;text(row,'#'+r.rank,-382,0,100,60,33,ink);this.art.image(row,'portraits',-262,0,85,85,r.avatar);text(row,r.nickname,-26,0,365,65,32,ink).enableWrapText=false;text(row,money(r.winnings),290,0,211,66,33,ink);this.reveal(row,i*.12);});
       if(rows.length<4)this.art.button(stage,'Explore games',0,-361,814,114,'Build your next record',6,()=>void this.navigate('home'),3);
     };if(this.services.remoteMode)void this.services.rank.refresh('all-time').then(render).catch(()=>this.toast('Unable to load honours.'));else render();
   }
@@ -637,7 +638,7 @@ export class AureliaApp extends Component {
   private profilePage():void{
     const stage=this.pageStage('Private treasury'),p=this.services.profile.current();if(!p)return;text(stage,'YOUR PRIVATE TREASURY',0,626,870,86,39,COLORS.ink,true);
     const member=this.art.panel(stage,0,380,948,315,2);const face=this.art.image(member,'portraits',-304,15,237,237,p.avatar);this.idleAccent(face,0,7,.5,1.5);this.edgeJewels(face,210,220);bindPress(face,face,()=>this.avatars());
-    text(member,p.nickname,133,77,585,76,46,COLORS.cream,true).enableWrapText=false;text(member,p.isGuest?'GUEST COLLECTOR':'TREASURY MEMBER',133,12,585,50,28,COLORS.cream);this.art.button(member,'Choose portrait',134,-76,525,87,'Choose portrait',4,()=>this.avatars(),0);
+    const editableName=text(member,p.nickname+' · EDIT',133,77,585,76,46,COLORS.cream,true);editableName.enableWrapText=false;editableName.node.name='Edit nickname';bindPress(editableName.node,editableName.node,()=>this.editNickname());text(member,p.isGuest?'GUEST COLLECTOR':'TREASURY MEMBER',133,12,585,50,28,COLORS.cream);this.art.button(member,'Choose portrait',134,-76,525,87,'Choose portrait',4,()=>this.avatars(),0);
     [p.totalWin,p.biggestWin].forEach((v,i)=>{const n=this.art.panel(stage,i?240:-240,114,456,147,0);text(n,i?'TOP WIN':'TOTAL WON',0,36,398,44,27,COLORS.ink);this.count(text(n,money(v),0,-27,398,64,42,COLORS.ink,true),v);});
     const links:[string,number,()=>void][]=[['Coin ledger',1,()=>this.history()],['Privacy & help',7,()=>this.legal('privacy')],['Sign out',9,()=>void this.signOut()]];
     links.forEach(([label,icon,action],i)=>{const n=this.art.button(stage,label,0,-100-i*154,938,123,label,icon,action,0);this.metalEdges(n,910,105,i*.7);this.reveal(n,i*.09);});
@@ -647,6 +648,32 @@ export class AureliaApp extends Component {
   private async signOut():Promise<void>{
     if(this.busy)return;this.services.auth.logout();this.authExpanded=false;this.draft.password=this.draft.confirmPassword='';await this.navigate('login');
   }
+  private visibleRanks<T extends {current:boolean}>(rows:T[],limit:number):T[]{
+    const visible=rows.slice(0,limit),player=rows.find(r=>r.current);
+    if(player&&!visible.includes(player))visible[limit-1]=player;
+    return visible;
+  }
+
+  private editNickname():void {
+    if(this.busy)return;
+    const player=this.services.profile.current();if(!player)return;
+    const panel=this.sheet('Edit nickname',650);let value=player.nickname;
+    text(panel,'Use 2–18 characters',0,157,680,56,32,COLORS.cream);
+    this.field(panel,'Nickname',42,value,v=>value=v);
+    const error=text(panel,'',0,-55,710,68,29,COLORS.cream);
+    this.art.button(panel,'Save nickname',0,-191,710,106,'Save nickname',14,()=>{
+      if(this.busy)return;
+      const nickname=value.trim();
+      if(nickname.length<2||nickname.length>18||/[\u0000-\u001f\u007f]/.test(nickname)){error.string='Use 2–18 characters';return;}
+      this.busy=true;
+      void this.services.profile.setNickname(nickname).then(ok=>{
+        if(!ok){if(error.isValid)error.string='Nickname could not be saved.';return;}
+        this.closeModal();this.render();this.toast('Nickname saved.');
+      }).catch(()=>{if(error.isValid)error.string='Nickname could not be saved.';}).finally(()=>{this.busy=false;});
+    },0);
+  }
+
+
   private avatars():void{const s=this.sheet('Choose your portrait',1270);for(let i=0;i<16;i++){const n=this.art.image(s,'portraits',(i%4-1.5)*210,350-Math.floor(i/4)*248,183,183,i);n.name='Choose avatar '+i;if(this.services.profile.current()?.avatar===i)this.art.image(n,'interfaces',65,-65,43,43,14);bindPress(n,n,()=>void this.selectPortrait(n,i));}}
   private async selectPortrait(portrait:Node,index:number):Promise<void>{
     if(this.busy)return;this.busy=true;const generation=this.generation;
@@ -665,7 +692,34 @@ export class AureliaApp extends Component {
   }
   private history():void{const s=this.sheet('Your coin ledger',1190);const rows=this.services.save.currentScope()?.transactions.slice(-7).reverse()??[];rows.forEach((r,i)=>{const n=this.art.panel(s,0,394-i*132,840,115,1);text(n,r.type.replace(/-/g,' '),-178,0,425,90,31,COLORS.jade);text(n,(r.amount>0?'+':'')+exactMoney(r.amount),233,0,326,79,36,COLORS.ink);});if(!rows.length){const icon=this.art.image(s,'interfaces',0,156,220,220,1);this.idleAccent(icon,0,7,.3,1.5);text(s,'Your coin ledger is ready',0,-20,820,90,40,COLORS.gold,true);text(s,'Collect a reward or play a round.\nYour coin activity will appear here.',0,-132,820,142,34);this.art.button(s,'Ledger rewards',0,-302,730,108,'Explore rewards',2,()=>{this.closeModal();void this.navigate('rewards');},0);}}
   private deleteAccount():void{const s=this.sheet('Delete account & data',670);let password='';text(s,'This permanently deletes your account, progress\nand unused coins. This action cannot be undone.',0,105,830,174,36);this.field(s,'Password (not needed for guest)',-53,'',v=>password=v,true);this.art.button(s,'Confirm deletion',0,-228,780,105,'Permanently delete account',undefined,()=>void this.services.auth.deleteCurrentAccount(password).then(r=>{if(r.ok){this.page='login';this.render();}else this.toast(r.message??'Unable to delete.');}),2);}
-  private mail():void{const s=this.sheet('Treasury post',590);this.art.image(s,'interfaces',0,97,225,175,5);text(s,'Welcome to Fortune Treasury. Your daily gifts\nare waiting in Rewards.',0,-55,820,158,41);this.art.button(s,'Open rewards',0,-200,690,106,'Visit Rewards',2,()=>{this.closeModal();void this.navigate('rewards');});}
+  private mail():void {
+    const panel=this.sheet('Mailbox',1110),items=INBOX_MESSAGES.filter(m=>!this.services.mail.state(m.id).deleted);
+    text(panel,'Gifts and notices',0,377,750,55,31);
+    items.forEach((m,i)=>{const state=this.services.mail.state(m.id),row=this.art.panel(panel,0,230-i*210,840,177,0);
+      const icon=this.art.image(row,'interfaces',-293,0,94,94,state.read?5:2);
+      text(row,m.title,45,24,540,48,31,COLORS.ink).enableWrapText=false;
+      text(row,state.claimed?'Attachment collected':m.credits?money(m.credits)+' COINS':state.read?'Read':'Unread',45,-27,530,42,28,COLORS.ink);
+      bindPress(row,icon,()=>this.openMail(m.id));row.name='Mail item '+m.id;
+    });
+    if(!items.length)text(panel,'Your mailbox is empty',0,90,740,110,39);
+    this.art.button(panel,'Claim all mail',-200,-391,390,100,'Collect all',14,()=>{if(this.services.remoteMode){this.toast('Mail rewards require the event server.');return;}const amount=this.services.mail.claimAll();this.render();this.mail();this.toast(amount?money(amount)+' coins collected':'No attachments to collect');},0);
+    this.art.button(panel,'Clear read mail',200,-391,390,100,'Clear read',9,()=>{this.services.mail.deleteRead();this.render();this.mail();},0);
+    text(panel,'Unclaimed gifts are kept when clearing mail',0,-474,770,45,26);
+  }
+  private openMail(id:string):void {
+    const item=INBOX_MESSAGES.find(m=>m.id===id);if(!item)return;
+    this.services.mail.read(id);this.render();const panel=this.sheet('Letter',920),state=this.services.mail.state(id);
+    text(panel,item.title,0,254,770,85,38,COLORS.cream,true);
+    text(panel,item.body,0,112,740,160,33);
+    const gift=this.art.image(panel,item.credits?'symbols':'interfaces',0,-70,140,140,item.credits?0:5);
+    text(panel,item.credits?money(item.credits)+' COINS':'System notice',0,-173,700,55,37);
+    this.art.button(panel,'Collect mail attachment',0,-277,730,100,state.claimed?'Attachment collected':item.credits?'Collect attachment':'Back to mailbox',14,()=>{
+      if(!item.credits||state.claimed){this.mail();return;}
+      if(this.services.remoteMode){this.toast('Mail rewards require the event server.');return;}
+      if(this.services.mail.claim(id)){this.audio.play('win');this.render();this.openMail(id);this.toast(money(item.credits)+' coins collected');}
+    },0);
+    this.art.button(panel,'Back to mailbox',0,-383,580,76,'Back to mailbox',9,()=>this.mail(),0);
+  }
   private rules(band=0,features=false):void{
     this.auto=false;this.updateAuto();const cfg=this.config,s=this.sheet(cfg.name+' · Rules',1480);
     const tabs=this.art.button(s,'Payout rules',-219,550,413,87,'PAYOUTS',0,()=>this.rules(band,false),features?0:3);
