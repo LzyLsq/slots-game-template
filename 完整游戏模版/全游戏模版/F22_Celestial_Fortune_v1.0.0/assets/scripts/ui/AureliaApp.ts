@@ -99,11 +99,11 @@ export class AureliaApp extends Component {
     const previous=this.root;if(previous){const a=opacity(previous,255);Tween.stopAllByTarget(a);a.opacity=255;for(const edit of previous.getComponentsInChildren(EditBox))edit.enabled=false;}
     if(this.retiring&&this.retiring!==previous)this.retiring.destroy();this.retiring=previous;
     this.height=Safe.visibleHeight;this.top=this.height/2;
-    const root=box(this.node,'Royal-Jubilee-interface',0,0,Safe.visibleWidth,this.height);this.root=root;root.addComponent(BlockInputEvents);
+    const root=box(this.node,'Celestial-Fortune-interface',0,0,Safe.visibleWidth,this.height);this.root=root;root.addComponent(BlockInputEvents);
     const backdrop=this.page==='home'?'canopy-hall-soft':this.page==='login'||this.page==='register'?'salon':'canopy-services';
     this.bg=this.page==='game'?undefined:this.art.cover(root,backdrop,0,0,Safe.visibleWidth,this.height);
 
-    if(this.page!=='game'){box(root,'Royal coin atmosphere',0,0,Safe.visibleWidth,this.height).addComponent(CanopyLeaves).setup(this.art,Safe.visibleWidth,this.height,this.reduced);}
+    if(this.page!=='game'){box(root,'Fortune coin atmosphere',0,0,Safe.visibleWidth,this.height).addComponent(CanopyLeaves).setup(this.art,Safe.visibleWidth,this.height,this.reduced);}
     this.content=box(root,'Page',0,0,1080,this.height);
     if(this.page==='login'||this.page==='register')this.authPage();
     else if(this.page==='game')this.gamePage();
@@ -174,13 +174,15 @@ export class AureliaApp extends Component {
     dot.active=true;const label=dot.getComponentInChildren(Label);if(label)label.string=String(unread);
   }
   private navigation():void{
-    const nav=this.art.enamel(this.content!,0,-this.top+132+Safe.safeBottom,984,206);
-    this.art.image(nav,'interfaces',-458,77,52,52,0);this.art.image(nav,'interfaces',458,77,52,52,0);
+    const nav=box(this.content!,'Garden cloud navigation',0,-this.top+132+Safe.safeBottom,984,206);
+    // A soft pool of warm light rests on the garden floor without a rigid card edge.
+    const mist=box(nav,'Warm cloud footing',0,-13,1000,190).addComponent(Graphics);
+    for(let i=0;i<18;i++){mist.fillColor=new Color(255,247,222,9);mist.ellipse(0,0,500-i*7,94-i*3);mist.fill();}
     const pages:Page[]=['store','rewards','home','rank','profile'],labels=['Shop','Gifts','Garden','Honours','Account'],icons=[1,2,5,3,4];
     pages.forEach((page,i)=>{
       const center=i===2,active=page===this.page;
       const hit=box(nav,labels[i],(i-2)*160,0,156,184);
-      if(active){const seat=this.art.enamel(hit,0,4,150,155);opacity(seat,210);const accent=box(hit,'Active navigation underline',0,-72,60,4).addComponent(Graphics);accent.fillColor=new Color('#A8422D');accent.roundRect(-30,-2,60,4,2);accent.fill();}
+      if(active){const accent=box(hit,'Active garden marker',0,-62,42,6).addComponent(Graphics);accent.fillColor=new Color('#A8422D');accent.roundRect(-21,-3,42,6,3);accent.fill();}
       const icon=this.art.image(hit,'interfaces',0,48,center?111:88,center?102:88,icons[i]);
       const captionY=-25;
       const caption=outlined(text(hit,labels[i],0,captionY,150,50,36,'#35200F'),'#FFF4DD',1.5);caption.enableWrapText=false;
@@ -229,7 +231,7 @@ export class AureliaApp extends Component {
     let startX=0,startY=0,swiped=false;
     world.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{const v=e.getUILocation();startX=v.x;startY=v.y;swiped=false;},this,true);
     world.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>{const v=e.getUILocation(),dx=v.x-startX,dy=v.y-startY;if(!swiped&&Math.abs(dx)>100&&Math.abs(dx)>Math.abs(dy)*1.2){swiped=true;select(this.selectedRoute+(dx<0?1:-1));this.audio.play('tap');}},this,true);
-    this.art.button(stage,'Fortune festival',0,-645,680,110,'FORTUNE FESTIVAL',6,()=>this.celebration(),0);
+    this.art.button(stage,'Fortune festival',0,-645,680,110,'CAISHEN’S BLESSING',6,()=>this.celebration(),0);
     select(this.selectedRoute,false);this.festivalDrift(stage);
   }
 
@@ -752,7 +754,7 @@ export class AureliaApp extends Component {
     else{this.refreshBalance();this.toast('Today’s gift has already been collected.');}
   }catch{this.refreshBalance();this.toast('Unable to collect. Please try again.');}finally{this.busy=false;}}
   private rankPage():void{
-    const stage=this.pageStage('Royal honours');
+    const stage=this.pageStage('Celestial honours');
     text(stage,'THE CELESTIAL HONOUR ROLL',0,629,930,84,40,COLORS.ink,true);
     text(stage,'TOTAL WON',0,548,910,46,31,COLORS.ink);
     const stamp=this.generation;const render=(players=this.services.rank.list('all-time',this.services.profile.current())):void=>{if(stamp!==this.generation)return;
@@ -895,7 +897,7 @@ if(!records.length){const icon=this.art.image(s,'interfaces',0,156,220,220,1);th
     this.art.button(panel,'Back to mailbox',0,-383,580,76,'Back to mailbox',9,()=>this.mail(),0);
   }
   private celebration():void {
-    const panel=this.sheet('FORTUNE FESTIVAL',1440),today=new Date().toISOString().slice(0,10);
+    const panel=this.sheet('CAISHEN’S BLESSING',1440),today=new Date().toISOString().slice(0,10);
     text(panel,'One free treasure draw every day',0,508,770,55,32);
     const wheel=box(panel,'Celebration carousel',0,255,520,520);
     this.art.image(panel,'symbols',0,255,200,200,1);
@@ -934,7 +936,7 @@ if(!records.length){const icon=this.art.image(s,'interfaces',0,156,220,220,1);th
       text(row,claimed?'Collected':money(amount)+' COINS',14,-24,490,42,29,COLORS.ink);
       row.name='Celebration milestone '+target;bindPress(row,row,()=>{
         if(claimed){this.toast('Reward already collected');return;}
-        if(played<target){this.toast('Play any royal game to advance this task');return;}
+        if(played<target){this.toast('Play any game to gather good fortune');return;}
         if(this.services.remoteMode){this.toast('Celebration rewards require the event server.');return;}
         if(this.services.rewards.claim(id,amount,'achievement')){this.audio.play('win');this.refreshBalance();this.celebration();this.toast(money(amount)+' coins collected');}
       });

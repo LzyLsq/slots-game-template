@@ -64,9 +64,9 @@ export const translations:Record<string,readonly string[]> = {
 "JOIN THE FESTIVAL":["加入聚宝盛会", "加入聚寶盛會", "祝祭に参加", "축제 참가"],
 "PLAY NOW":["开始游戏", "開始遊戲", "プレイ", "플레이"],
 "A JOURNEY TO GOOD FORTUNE":["天宫寻宝之旅", "天宮尋寶之旅", "幸運への旅", "행운을 향한 여정"],
-"FORTUNE FESTIVAL":["皇家庆典", "皇家慶典", "ロイヤル祝祭", "로열 축제"],
-"Celestial mailbox":["皇家邮箱", "皇家郵箱", "ロイヤルメール", "왕실 우편함"],
-"Celestial letter":["皇家来信", "皇家來信", "王室からの手紙", "왕실 편지"],
+"CAISHEN’S BLESSING":["财神赐福", "財神賜福", "財神の祝福", "재신의 축복"],
+"Celestial mailbox":["仙庭邮箱", "仙庭郵箱", "仙庭メール", "선계 우편함"],
+"Celestial letter":["仙庭来信", "仙庭來信", "仙庭からの手紙", "선계 편지"],
 "Palace post · Gifts and notices":["宫廷邮局 · 礼物与通知", "宮廷郵局 · 禮物與通知", "王室便り・ギフトとお知らせ", "왕실 우편 · 선물과 알림"],
 "Attachment collected":["附件已领取", "附件已領取", "受取済み", "첨부 보상 수령 완료"],
 "Collect attachment":["领取附件", "領取附件", "添付を受け取る", "첨부 보상 받기"],
@@ -84,7 +84,7 @@ export const translations:Record<string,readonly string[]> = {
 "Open my treasure":["开启我的宝藏", "開啟我的寶藏", "宝物を開く", "내 보물 열기"],
 "Revealing your treasure…":["正在揭晓宝藏…", "正在揭曉寶藏…", "宝物を公開中…", "보물 공개 중…"],
 "Round milestones are one-time rewards.\nDaily draw resets at 00:00 UTC.":["局数任务仅可领取一次。\n每日抽选于UTC 00:00重置。", "局數任務僅可領取一次。\n每日抽選於UTC 00:00重置。", "回数報酬は各1回のみ。\n毎日UTC 00:00に抽選をリセット。", "플레이 횟수 보상은 1회 한정입니다.\n추첨은 매일 UTC 00:00 초기화됩니다."],
-"Play any royal game to advance this task":["游玩任意柜机即可推进任务", "遊玩任意櫃機即可推進任務", "ゲームをプレイして進めましょう", "아무 게임이나 플레이해 진행하세요"],
+"Play any game to gather good fortune":["游玩任意柜机即可推进任务", "遊玩任意櫃機即可推進任務", "ゲームをプレイして進めましょう", "아무 게임이나 플레이해 진행하세요"],
 "No attachments to collect":["没有可领取的附件", "沒有可領取的附件", "受取可能な添付はありません", "받을 첨부 보상이 없습니다"],
 "Reward already collected":["奖励已领取", "獎勵已領取", "報酬は受取済み", "이미 받은 보상입니다"],
 
@@ -97,7 +97,7 @@ export const translations:Record<string,readonly string[]> = {
 "Includes simulated competitors":["榜单含模拟参赛角色","榜單含模擬參賽角色","シミュレーション参加者を含みます","모의 참가자 포함"],
 "Palace":["皇宫", "皇宮", "王宮", "왕궁"],
 "TAP TO PLAY":["点击进入", "點擊進入", "タップしてプレイ", "탭하여 플레이"],
-"ENTER THE CELEBRATION":["开启皇家庆典", "開啟皇家慶典", "祝祭へ進む", "축제 입장"],
+"ENTER THE CELEBRATION":["开启财神赐福", "開啟財神賜福", "祝祭へ進む", "축제 입장"],
 "CAISHEN HALL":["财神宝殿", "財神寶殿", "財神の宝殿", "재신의 전당"],
 "WISH GROVE":["如意精灵", "如意精靈", "願いの森", "소원의 숲"],
 "LOTUS LIGHT":["莲灯仙境", "蓮燈仙境", "蓮の灯", "연꽃 등불"],
@@ -106,8 +106,8 @@ export const translations:Record<string,readonly string[]> = {
 "YOUR ROYAL MEMBERSHIP":["皇家会员", "皇家會員", "王室メンバー", "왕실 회원"],
 "ROYAL GUEST":["皇家贵宾", "皇家貴賓", "王室ゲスト", "왕실 손님"],
 "JUBILEE MEMBER":["庆典会员", "慶典會員", "祝祭メンバー", "축제 회원"],
-"Your celestial festival starts here":["从这里开启皇家庆典", "從這裡開啟皇家慶典", "王室の祝祭へようこそ", "왕실 축제를 시작하세요"],
-"Treasures fit for a royal celebration":["挑选皇家宝藏", "挑選皇家寶藏", "王家の宝物を選ぼう", "왕실 보물을 선택하세요"],
+"Your celestial festival starts here":["从这里开启财神赐福", "從這裡開啟財神賜福", "王室の祝祭へようこそ", "왕실 축제를 시작하세요"],
+"Treasures fit for a royal celebration":["挑选仙庭宝藏", "挑選仙庭寶藏", "王家の宝物を選ぼう", "왕실 보물을 선택하세요"],
 
   "Language": [
     "语言",
@@ -1781,6 +1781,10 @@ export const translations:Record<string,readonly string[]> = {
     "검증된 잔액을 동기화할 수 없습니다."
   ]
 };
+Object.assign(translations, {
+"Play {0} rounds": ["游玩 {0} 局", "遊玩 {0} 局", "{0} 回プレイ", "{0}회 플레이"],
+"Round milestones are one-time rewards. Daily draw resets at 00:00 UTC.": ["局数奖励仅可领取一次。每日赐福于 UTC 00:00 重置。", "局數獎勵僅可領取一次。每日賜福於 UTC 00:00 重置。", "回数報酬は一度限り。毎日の祝福は UTC 00:00 に更新。", "횟수 보상은 1회 한정. 매일 UTC 00:00에 축복 초기화."]
+});
 const patterns=Object.keys(translations).filter(k=>k.includes('{')).sort((a,b)=>b.length-a.length).map(key=>({key,re:new RegExp('^'+key.split(/(\{\d+\})/).map(p=>/^\{\d+\}$/.test(p)?'(.+?)':p.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('')+'$')}));
 export function tr(value:string):string {
  if(selected==='en')return value;
