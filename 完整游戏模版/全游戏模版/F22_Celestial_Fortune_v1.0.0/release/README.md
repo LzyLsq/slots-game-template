@@ -36,3 +36,7 @@ npm run release:audit
 ```
 
 Then validate StoreKit in Xcode with a StoreKit Configuration, Apple Sandbox accounts and TestFlight. Test purchase success, Ask to Buy/pending, cancellation, duplicate delivery, network loss after charge, server retry, refund notification, account deletion and wallet synchronization.
+
+## Independent gameplay v4 verification
+
+This build changes ordinary-spin settlement, board geometry and cabinet features. Review `docs/primary-gameplay-v4.json`, `docs/primary-rtp-v4.json` (and any refined report), and `docs/independent-v4-release-status.json`. Monte Carlo results are development samples, not certification. Web screenshots do not replace iPhone Safari, native device, StoreKit Sandbox or TestFlight validation. Four cabinets within one game share a primary family but have separate bonus behavior; the number of wholly unrelated primary families is ten across the available projects.

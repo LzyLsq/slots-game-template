@@ -1,11 +1,12 @@
+import {ECONOMY} from '../math/EconomyProfile';
 import { EconomyService } from './EconomyService';
 import { SaveService } from './SaveService';
 
 export interface MailItem { id: string; title: string; body: string; credits: number; kind: 'system' | 'reward'; }
 export const INBOX_MESSAGES: readonly MailItem[] = [
-  { id: 'welcome', title: 'Welcome aboard Gilded Express', body: 'Your new-player virtual coin gift is attached.', credits: 5_000, kind: 'reward' },
+  { id: 'welcome', title: 'Welcome aboard Gilded Express', body: 'Your new-player virtual coin gift is attached.', credits: ECONOMY.mail[0], kind: 'reward' },
   { id: 'maintenance', title: 'Railway Notice', body: 'Service notices and railway updates will appear here.', credits: 0, kind: 'system' },
-  { id: 'weekend', title: 'Weekend Gold Shower', body: 'Claim a virtual-credit bonus.', credits: 3_000, kind: 'reward' },
+  { id: 'weekend', title: 'Weekend Gold Shower', body: 'Claim a virtual-credit bonus.', credits: ECONOMY.mail[1], kind: 'reward' },
 ];
 export class MailService {
   public constructor(private readonly save: SaveService, private readonly economy: EconomyService) {}

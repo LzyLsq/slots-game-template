@@ -1,3 +1,4 @@
+import {ECONOMY} from '../assets/scripts/math/EconomyProfile';
 import { randomBytes, randomUUID, scrypt as scryptCallback, timingSafeEqual } from 'node:crypto';
 import { createReadStream, existsSync, statSync } from 'node:fs';
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
@@ -32,7 +33,7 @@ class AuthoritativeGameService {
     const username = typeof input.username === 'string' ? input.username.trim() : ''; const nickname = typeof input.nickname === 'string' ? input.nickname.trim() : ''; const password = typeof input.password === 'string' ? input.password : '';
     if (!/^[A-Za-z0-9_]{3,18}$/.test(username) || nickname.length < 2 || nickname.length > 18 || password.length < 10 || password.length > 72 || input.acceptedTerms !== true) throw new ApiError(400, 'Invalid registration details.');
     const key = username.toLowerCase(); if (this.usernames.has(key)) throw new ApiError(409, 'Account already exists.');
-    const account: Account = { id: SecureRNG.id('player'), appAccountToken: randomUUID(), username, nickname, isGuest: false, credential: await this.hashPassword(password), credits: 100_000, rounds: new Map() };
+    const account: Account = { id: SecureRNG.id('player'), appAccountToken: randomUUID(), username, nickname, isGuest: false, credential: await this.hashPassword(password), credits: ECONOMY.start, rounds: new Map() };
     this.accounts.set(account.id, account); this.usernames.set(key, account.id); return account;
   }
 
@@ -41,7 +42,7 @@ class AuthoritativeGameService {
     const valid = account?.credential ? await this.verifyPassword(password, account.credential) : false; if (!account || !valid) throw new ApiError(401, 'Username or password is incorrect.'); return account;
   }
 
-  public guest(): Account { const account: Account = { id: SecureRNG.id('guest'), appAccountToken: randomUUID(), username: SecureRNG.id('guest').slice(-12), nickname: 'Guest Captain', isGuest: true, credits: 100_000, rounds: new Map() }; this.accounts.set(account.id, account); return account; }
+  public guest(): Account { const account: Account = { id: SecureRNG.id('guest'), appAccountToken: randomUUID(), username: SecureRNG.id('guest').slice(-12), nickname: 'Guest Captain', isGuest: true, credits: ECONOMY.start, rounds: new Map() }; this.accounts.set(account.id, account); return account; }
   public createSession(account: Account): { token: string; session: Session } { const token = randomBytes(32).toString('base64url'); const session = { accountId: account.id, csrfToken: randomBytes(24).toString('base64url'), expiresAt: Date.now() + SESSION_MS }; this.sessions.set(token, session); return { token, session }; }
   public session(token: string): { account: Account; session: Session } | undefined { const session = this.sessions.get(token); if (!session || session.expiresAt <= Date.now()) { if (token) this.sessions.delete(token); return undefined; } const account = this.accounts.get(session.accountId); return account ? { account, session } : undefined; }
   public logout(token: string): void { this.sessions.delete(token); }
@@ -87,8 +88,9 @@ class AuthoritativeGameService {
 
   public spin(account: Account, input: Record<string, unknown>): { result: SpinResult; balance: number } {
     const gameId = input.gameId as GameId; const config = GAME_CONFIG_BY_ID[gameId]; const bet = Number(input.bet); const requestId = typeof input.requestId === 'string' ? input.requestId : '';
-    if (!config || !config.bets.includes(bet) || !/^[A-Za-z0-9_-]{12,80}$/.test(requestId)) throw new ApiError(400, 'Invalid spin request.');
+    if (!config || !Number.isSafeInteger(bet) || bet<=0 || !/^[A-Za-z0-9_-]{12,80}$/.test(requestId)) throw new ApiError(400, 'Invalid spin request.');
     const replay = account.rounds.get(requestId); if (replay) return replay;
+    if(!config.bets.includes(bet))throw new ApiError(400,'Unsupported bet for a new round.');
     if (account.credits < bet) throw new ApiError(409, 'Insufficient credits.');
     const result = this.generator.generate(config, bet, this.rng); const nextBalance = account.credits - bet + result.totalWin;
     if (!Number.isSafeInteger(nextBalance) || nextBalance < 0 || result.totalWin > 50_000_000) throw new ApiError(500, 'Round settlement rejected.');

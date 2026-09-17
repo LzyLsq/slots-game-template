@@ -1,3 +1,16 @@
+import {LabelOutline} from 'cc';
+import {cabinetToolText} from './CabinetToolText';
+import {drawRulePages} from './RulePages';
+import {awardCredits, awardEvidence, featureAwardEvidence, awardSummary, roundEvidence, tierRules, winTier} from '../vfx/WinPresentation';
+import {primaryRuleText} from '../math/PrimaryRuleText';
+import {drawRuleHelp,helpTitle} from './RuleHelp';
+import {primaryStatus,HAND_NAMES,HAND_FACTORS} from '../math/IndependentCore';
+import {tr,language,setLanguage,LANGUAGES} from './Language';
+import {CORE_TITLE,CORE_NOTES,CORE_DESCRIPTIONS,coreSymbols} from '../math/CoreGame';
+import {ruleAward,ruleCounts,ruleAllCounts} from '../math/PaytableDisplay';
+
+import {SIGNATURE_TITLE,SIGNATURE_NOTES,FEATURE_PROFILES} from '../math/SignatureFeature';
+import {ECONOMY} from '../math/EconomyProfile';
 import { INBOX_MESSAGES } from '../services/MailService';
 import { _decorator, BlockInputEvents, Color, Component, EditBox, game, Game, Graphics, Label, Mask, Node, ScrollView, Sprite, tween, Tween, UIOpacity, UITransform, Vec3, Widget } from 'cc';
 import { GameBootstrap } from '../core/GameBootstrap';
@@ -21,8 +34,17 @@ import { LEGAL_SECTIONS, type LegalPage } from './LegalContent';
 const { ccclass } = _decorator;
 type Page = 'login'|'register'|'home'|'store'|'rewards'|'rank'|'profile'|'game';
 type State = {kind:'idle'}|{kind:'spinning';requestId:string}|{kind:'presenting';result:SpinResult}|{kind:'retry';requestId:string};
-const MODES = ['One line. Three holds of treasure.', 'Lock gold. Keep the treasure.', '1,024 ways. Next stop: treasure.', 'Clusters tumble. Multipliers grow.'];
+const exactMoney=(n:number)=>Math.floor(n).toLocaleString('en-US');
+const MODES = GAME_CONFIGS.map(c=>c.modeLabel);
 const money=(n:number):string=>Math.floor(n).toLocaleString('en-US');
+// Keep the small cabinet record legible; account/history values retain full precision.
+const topWinMoney=(n:number):string=>{
+  const value=Math.floor(n),absolute=Math.abs(value);if(absolute<1000)return exactMoney(value);
+  const locale=language(),units:readonly (readonly [number,string])[]=locale==='en'?[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']]:locale==='ko'?[[1e12,'조'],[1e8,'억'],[1e4,'만']]:locale==='ja'?[[1e12,'兆'],[1e8,'億'],[1e4,'万']]:locale==='zh-TW'?[[1e12,'兆'],[1e8,'億'],[1e4,'萬']]:[[1e12,'万亿'],[1e8,'亿'],[1e4,'万']];
+  const [divisor,suffix]=units.find(([size])=>absolute>=size)??[1,''],scaled=value/divisor;
+  const decimals=Math.abs(scaled)>=100?0:Math.abs(scaled)>=10?1:2,factor=10**decimals;
+  return String(Math.trunc(scaled*factor)/factor)+suffix;
+};
 @ccclass('AureliaApp')
 export class AureliaApp extends Component {
   private art=new SalonArt(); private services!:GameBootstrap;private root?:Node;private content?:Node;private bg?:Node;
@@ -30,6 +52,7 @@ export class AureliaApp extends Component {
   private page:Page='login';private config:GameConfig=GAME_CONFIGS[0];private state:State={kind:'idle'};
   private authExpanded=false;private selectedRoute=0;private curtainClosed=false;private betIndex=1;private auto=false;private autoWait=0;private visible=true;private busy=false;private generation=0;
   private balanceLabel?:Label;private betLabel?:Label;private winLabel?:Label;private topWinLabel?:Label;private hintLabel?:Label;
+  private presentedWin=0;private cancelWinCount?:()=>void;
   private top=960;private height=1920;private debug=false;private reduced=false;private force?:string;
   private draft={username:'',password:'',confirmPassword:'',nickname:'',acceptedTerms:false};
   private generator=new ResultGenerator();private rng=new SecureRNG();private audio!:AudioManager;
@@ -74,7 +97,7 @@ export class AureliaApp extends Component {
   private restoreRemoteRound():boolean{
     if(!this.services.api)return false;const pending=this.journal.pending();if(!pending)return false;
     const config=GAME_CONFIGS.find(c=>c.id===pending.gameId);if(!config)return false;
-    this.config=config;this.betIndex=config.bets.indexOf(pending.bet);this.page='game';this.state={kind:'retry',requestId:pending.requestId};
+    this.config=config;this.betIndex=Math.max(0,config.bets.indexOf(pending.bet));this.page='game';this.state={kind:'retry',requestId:pending.requestId};
     return true;
   }
   private resize():void{
@@ -87,6 +110,7 @@ export class AureliaApp extends Component {
     if(this.root&&!this.busy)this.render();
   }
   private render():void{
+    this.cancelWinCount?.();this.presentedWin=0;
     this.generation++;this.modal=undefined;this.notification=undefined;this.reels=undefined;this.plane=undefined;
     this.balanceLabel=this.betLabel=this.winLabel=this.topWinLabel=this.hintLabel=this.autoLamp=this.soundLamp=undefined;
     const previous=this.root;if(previous){const a=opacity(previous,255);Tween.stopAllByTarget(a);a.opacity=255;for(const edit of previous.getComponentsInChildren(EditBox))edit.enabled=false;}
@@ -181,8 +205,11 @@ export class AureliaApp extends Component {
       const gate=box(stage,'Enter '+cfg.name,x,y,462,495);
       const frame=this.art.panel(gate,0,32,460,448,i%2?1:0);
       const scene=this.art.cover(frame,'caravan-card-'+i,0,8,416,386,-1,76);this.idleAccent(scene,i*.8,4,.4);
-      const name=this.art.panel(gate,0,-114,450,87,2);text(name,cfg.name,0,0,418,66,35,COLORS.cream,true);
-      text(gate,['3 REELS','20 PAYLINES','1,024 WAYS','CLUSTER WINS'][i],0,-175,447,42,31,COLORS.ink);
+      const name=this.art.panel(gate,0,-109,450,156,2);name.name='Destination nameplate';
+      const title=text(name,cfg.name,0,35,384,46,35,COLORS.cream,true);title.node.name='Destination title';
+      title.lineHeight=40;title.node.getComponent('TextFit')!.enabled=false;title.overflow=Label.Overflow.SHRINK;
+      const subtitle=text(name,cfg.modeLabel,0,-24,382,72,31,'#FFF4D6');subtitle.node.name='Destination mode';
+      subtitle.lineHeight=34;subtitle.node.getComponent('TextFit')!.enabled=false;subtitle.enableWrapText=true;subtitle.overflow=Label.Overflow.SHRINK;
       const play=this.art.button(gate,'Play '+cfg.name,0,-228,354,79,'ENTER',0,()=>void this.navigate('game',cfg),3);
       this.metalEdges(frame,442,430,i*.7);this.edgeJewels(frame,438,424,i);this.reveal(gate,i*.09);
       bindPress(scene,scene,()=>void this.navigate('game',cfg));this.sheen(play,320,66);
@@ -221,7 +248,7 @@ export class AureliaApp extends Component {
       this.art.button(panel,'Switch account form',0,-478,789,82,'Back to sign in',9,()=>void this.navigate('login'),0);
     }else{
       const primary=this.art.button(panel,'Sign in',0,-100,800,123,'SIGN IN',14,()=>void this.authAction('login'),3);this.sheen(primary,760,110);
-      const apple=this.art.panel(panel,0,-248,800,107,1);apple.name='Sign in with Apple';this.art.image(apple,'apple-mark',-205,0,44,51);text(apple,'Sign in with Apple',47,0,486,76,38,COLORS.ink);bindPress(apple,apple,()=>void this.authAction('apple'));
+      const apple=this.art.panel(panel,0,-248,800,107,1);apple.name='Sign in with Apple';this.art.image(apple,'apple-mark',-270,0,44,51);text(apple,'Sign in with Apple',0,0,486,76,38,COLORS.ink);bindPress(apple,apple,()=>void this.authAction('apple'));
       this.art.button(panel,'Guest',-205,-382,390,94,'Guest play',0,()=>this.guestConsent(),0);
       this.art.button(panel,'Create account',205,-382,390,94,'Register',4,()=>void this.navigate('register'),0);
     }
@@ -288,9 +315,10 @@ export class AureliaApp extends Component {
     const titlePoint=imagePoint(g.title),title=text(this.plane,cfg.name,titlePoint[0],titlePoint[1],g.title[2]*.94,g.title[3]*.86,61,COLORS.ink,true);title.enableWrapText=false;title.overflow=Label.Overflow.SHRINK;this.idleAccent(title.node,GAME_CONFIGS.indexOf(cfg),3,.35);
     const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};
     const balance=imagePoint(g.balance);
-    this.balanceLabel=text(this.plane,money(this.services.economy.balance()),balance[0]-g.balance[2]*.09,balance[1],g.balance[2]*.73,g.balance[3],35,'#59351B');this.balanceLabel.enableWrapText=false;this.balanceLabel.overflow=Label.Overflow.SHRINK;this.balanceLabel.lineHeight=40;
+    this.balanceLabel=text(this.plane,money(this.services.economy.balance()),balance[0]-g.balance[2]*.09,balance[1],g.balance[2]*.73,Math.max(58,g.balance[3]),38,'#59351B');this.balanceLabel.enableWrapText=false;this.balanceLabel.overflow=Label.Overflow.SHRINK;this.balanceLabel.lineHeight=40;
     const recharge=this.art.image(this.plane,'caravan-button-'+(GAME_CONFIGS.indexOf(cfg)*4+2),balance[0]+g.balance[2]*.41,balance[1],60,60);recharge.name='Recharge';bindPress(recharge,recharge,()=>{if(this.state.kind==='idle')void this.navigate('store');else this.toast('Finish the round before opening the shop.');});
     const win=imagePoint(g.win);this.winLabel=text(this.plane,'WIN  0',win[0],win[1],g.win[2],g.win[3],41,'#803F25');
+    const winReadout=this.winLabel.node.getComponent(UITransform)!;winReadout.setContentSize(Math.min(winReadout.width,g.win[2]-2*Math.max(16,g.win[2]*.06)),winReadout.height);
     const themeIndex=GAME_CONFIGS.indexOf(cfg);
 
     const readoutInk='#253D51';
@@ -303,9 +331,9 @@ export class AureliaApp extends Component {
       return host;
     };
     const betPanel=display('BET display',g.bet,themeIndex*4);
-    const betCaption=outlined(text(betPanel,'BET',-g.bet[2]*.14,0,g.bet[2]*.30,g.bet[3]*.8,28,readoutInk),readoutOutline,1);
-    betCaption.fontFamily='Arial Black';betCaption.enableWrapText=false;betCaption.overflow=Label.Overflow.SHRINK;
-    this.betLabel=outlined(text(betPanel,money(this.bet),g.bet[2]*.25,0,g.bet[2]*.38,g.bet[3]*.82,35,readoutInk),readoutOutline,1);
+    const betCaption=outlined(text(betPanel,'BET',-g.bet[2]*.25,0,g.bet[2]*.40,Math.max(64,g.bet[3]*.8),40,readoutInk),readoutOutline,1);
+    betCaption.fontFamily='Arial';betCaption.fontSize=40;betCaption.lineHeight=44;betCaption.enableWrapText=false;betCaption.overflow=Label.Overflow.SHRINK;const betCaptionFit=betCaption.node.getComponent('TextFit');if(betCaptionFit)betCaptionFit.enabled=false;if(language()==='ja')betCaption.string='掛金';
+    this.betLabel=outlined(text(betPanel,money(this.bet),g.bet[2]*.22,0,g.bet[2]*.46,Math.max(58,g.bet[3]*.82),38,readoutInk),readoutOutline,1);
     this.betLabel.fontFamily='Arial Black';this.betLabel.enableWrapText=false;this.betLabel.overflow=Label.Overflow.SHRINK;
     const ctl=(rect:Box,label:string,index:number,action:()=>void):Node=>{
       const pos=imagePoint(rect);const hit=box(this.plane!,label,pos[0],pos[1],Math.max(108,rect[2]),Math.max(110,rect[3]));
@@ -322,48 +350,83 @@ export class AureliaApp extends Component {
     ctl(g.minus,'Decrease bet',2,()=>this.changeBet(-1));ctl(g.plus,'Increase bet',1,()=>this.changeBet(1));
     const spin=ctl(g.spin,'SPIN',0,()=>void this.spin());
     const auto=ctl(g.auto,'AUTO',3,()=>{this.auto=!this.auto;this.updateAuto();this.toast(this.auto?'Auto spin on · Tap AUTO again to stop.':'Auto spin off.');if(this.auto&&this.state.kind==='idle')void this.spin();});
-    const autoStatus=imagePoint(g.status);this.autoLamp=text(this.plane,'AUTO OFF',autoStatus[0],autoStatus[1],g.status[2],g.status[3],29,readoutInk);this.updateAuto();
+    const autoStatus=imagePoint(g.status);this.autoLamp=text(this.plane,'AUTO OFF',autoStatus[0],autoStatus[1],g.status[2]*.88,Math.max(64,g.status[3]),40,readoutInk);this.autoLamp.fontSize=40;this.autoLamp.lineHeight=44;this.autoLamp.enableWrapText=false;this.autoLamp.overflow=Label.Overflow.SHRINK;const autoCaptionFit=this.autoLamp.node.getComponent('TextFit');if(autoCaptionFit)autoCaptionFit.enabled=false;this.updateAuto();
     const halo=this.art.light(spin,1,0,0,g.spin[2]*1.65,g.spin[2]*1.65,135);halo.setSiblingIndex(0);
     if(!this.reduced)tween(halo).to(2.4,{scale:new Vec3(1.06,1.06,1),angle:8},{easing:'sineInOut'}).to(2.4,{scale:new Vec3(.95,.95,1),angle:-8},{easing:'sineInOut'}).union().repeatForever().start();
     const topPanel=display('TOP WIN display',g.topWin,themeIndex*4+1);
-    this.topWinLabel=outlined(text(topPanel,'TOP WIN '+money(this.services.profile.current()?.biggestWin??0),0,0,g.topWin[2]*.94,g.topWin[3],29,readoutInk),readoutOutline,1);
-    this.topWinLabel.fontFamily='Arial Black';this.topWinLabel.lineHeight=34;this.topWinLabel.enableWrapText=false;this.topWinLabel.overflow=Label.Overflow.SHRINK;
-    const toolbar=box(this.content!,'Safe top tools',0,this.top-77-Safe.safeTop,1000,130);
+    this.topWinLabel=this.compactRecord(topPanel,g.topWin,readoutInk,readoutOutline);
+    // Money readouts reserve a full glyph line: TextFit's generic 1.22 line budget
+    // previously compressed ordinary zero/bet values to 7px on narrow phones.
+    for(const amount of [this.balanceLabel,this.betLabel,this.winLabel,this.topWinLabel]){
+      if(!amount)continue;
+      const fit=amount.node.getComponent('TextFit');if(fit)fit.enabled=false;
+      const rect=amount.node.getComponent(UITransform)!;
+      rect.setContentSize(rect.width,Math.max(64,rect.height));
+      amount.fontFamily='Arial';amount.fontSize=48;amount.lineHeight=52;
+      amount.enableWrapText=false;amount.overflow=Label.Overflow.SHRINK;
+    }
+    const toolbar=box(this.content!,'Safe top tools',0,this.top-95-Safe.safeTop,1000,154);
     const tool=(name:string,x:number,icon:number,label:string,action:()=>void):Label=>{
-      const hit=box(toolbar,name,x,0,127,118),face=box(hit,name+' face',0,0,127,118);
-      this.art.image(face,'interfaces',0,12,82,82,icon);
-      const caption=outlined(text(face,label,0,-46,124,28,21,COLORS.cream),'#15352F',3);
-      caption.fontFamily='Arial Black';caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
+      const hit=box(toolbar,name,x,0,180,160),face=box(hit,name+' face',0,0,180,154);
+      this.art.image(face,'interfaces',0,36,64,64,icon);
+      const caption=outlined(text(face,cabinetToolText(label),0,-36,172,82,38,COLORS.cream),'#15352F',2);
+      const fit=caption.node.getComponent('TextFit');if(fit)fit.enabled=false;
+      caption.fontFamily='Arial';caption.lineHeight=40;caption.enableWrapText=false;caption.overflow=Label.Overflow.CLAMP;
       bindPress(hit,face,()=>{this.audio.play('tap');action();});return caption;
     };
     tool('Back to salon',-427,9,'BACK',()=>void this.navigate('home'));
     tool('Rules',290,7,'RULES',()=>this.rules());
     this.soundLamp=tool('Audio',436,8,'SOUND ON',()=>void this.toggleSound());this.updateSound();
     this.hintLabel=outlined(text(this.content!,MODES[GAME_CONFIGS.indexOf(cfg)],0,-this.top+88+Safe.safeBottom,980,110,38,COLORS.cream));
+    this.hintLabel.node.getComponent(LabelOutline)!.width=4;this.hintLabel.node.getComponent('TextFit')!.enabled=false;this.hintLabel.fontSize=42;this.hintLabel.lineHeight=46;this.hintLabel.enableWrapText=false;this.hintLabel.overflow=Label.Overflow.SHRINK;this.hintLabel.getComponent(UITransform)!.setContentSize(980,148);
     this.layoutPlane();
     if(this.force){this.scheduleOnce(()=>void this.spin(),1);}
+  }
+  private syncHintMaterial():void{
+    const hint=this.hintLabel?.node;if(!hint||!this.content)return;
+    let material=this.content.getChildByName('Award hint material');
+    if(!material){
+      // Feather into the cabinet's own palette; no panel edge or opaque card.
+      material=box(this.content,'Award hint material',0,0,1280,184);
+      material.setSiblingIndex(hint.getSiblingIndex());
+      const shade=material.addComponent(Graphics);
+      for(let i=0;i<64;i++){
+        const u=(i+.5)/64,alpha=Math.round(190*Math.pow(Math.sin(Math.PI*u),1.4));
+        shade.fillColor=new Color(77,38,18,alpha);
+        shade.rect(-640,-92+i*184/64,1280,184/64);shade.fill();
+      }
+    }
+    material.setPosition(hint.position);
   }
   private layoutPlane():void{
     if(!this.plane)return;const h=Safe.visibleHeight;
     const layout=cabinetLayout(Safe.visibleWidth,h,CABINETS[this.config.id],Safe.safeTop,Safe.safeBottom);
     this.plane.setScale(layout.scale,layout.scale,1);this.plane.setPosition(0,layout.y);
 
-    this.content?.getChildByName('Safe top tools')?.setPosition(0,h/2-77-Safe.safeTop);
+    const toolbar=this.content?.getChildByName('Safe top tools');
+    if(toolbar){
+      toolbar.setPosition(0,h/2-95-Safe.safeTop);
+      const left=-Safe.visibleWidth/2+Safe.safeLeft+110,right=Safe.visibleWidth/2-Safe.safeRight-110;
+      toolbar.getChildByName('Back to salon')?.setPosition(left,0);
+      toolbar.getChildByName('Rules')?.setPosition(right-194,0);
+      toolbar.getChildByName('Audio')?.setPosition(right,0);
+    }
     this.hintLabel?.node.setPosition(0,-h/2+88+Safe.safeBottom);
+    this.syncHintMaterial();
   }
-  private get bet():number{return this.config.bets[this.betIndex];}
+  private get bet():number{const pending=this.journal.pending();return pending?.gameId===this.config.id?pending.bet:this.config.bets[this.betIndex];}
   private changeBet(delta:number):void{
     if(this.state.kind!=='idle'){this.toast('Bet is locked while the reels are moving.');return;}
     const next=Math.max(0,Math.min(this.config.bets.length-1,this.betIndex+delta));
     if(next===this.betIndex){this.toast(delta<0?'Minimum bet selected.':'Maximum bet selected.');return;}
-    this.betIndex=next;if(this.betLabel)this.betLabel.string=money(this.bet);if(this.hintLabel)this.hintLabel.string=`BET ${money(this.bet)} selected`;
+    this.betIndex=next;if(this.betLabel)this.betLabel.string=money(this.bet);if(this.hintLabel)this.hintLabel.string=tr(`BET ${money(this.bet)} selected`);
   }
   private updateAuto():void{
-    if(!this.autoLamp)return;this.autoLamp.string=this.auto?'AUTO ON':'AUTO OFF';this.autoLamp.color=new Color(this.auto?'#15705B':'#253D51');
+    if(!this.autoLamp)return;this.autoLamp.string=tr(this.auto?'AUTO ON':'AUTO OFF');this.autoLamp.color=new Color(this.auto?'#15705B':'#253D51');
     Tween.stopAllByTarget(this.autoLamp.node);this.autoLamp.node.setScale(1,1,1);
     if(this.auto&&!this.reduced)tween(this.autoLamp.node).to(.55,{scale:new Vec3(1.08,1.08,1)},{easing:'sineInOut'}).to(.55,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).union().repeatForever().start();
   }
-  private updateSound(enabled=this.services.profile.current()?.settings.sound??true):void{if(this.soundLamp){this.soundLamp.string=enabled?'SOUND ON':'SOUND OFF';this.soundLamp.color=new Color(enabled?'#FFF4D8':'#D8B79A');}}
+  private updateSound(enabled=this.services.profile.current()?.settings.sound??true):void{if(this.soundLamp){this.soundLamp.string=cabinetToolText(enabled?'SOUND ON':'SOUND OFF');this.soundLamp.color=new Color(enabled?'#FFF4D8':'#D8B79A');}}
   private async toggleSound():Promise<void>{
     const settings=this.services.profile.current()?.settings;if(!settings){this.toast('Sound settings are unavailable.');return;}
     const previous=settings.sound,next=!previous;this.audio.setEffects(next);this.updateSound(next);if(next)this.audio.play('tap');
@@ -381,7 +444,7 @@ export class AureliaApp extends Component {
     const recovering=this.state.kind==='retry';
     if(api){try{this.journal.begin(requestId,this.config.id,this.bet);}catch{this.toast('Unable to save the round. Free device storage, then try again.');return;}}
     if(!api&&!this.services.economy.reserveSpin(requestId,this.bet)){this.auto=false;this.updateAuto();this.toast('Not enough coins. Visit Rewards or the Coin Shop.');return;}
-    if(this.winLabel)this.winLabel.string='WIN  0';
+    this.resetWinAmount();
     this.state={kind:'spinning',requestId};this.reels.lockCoins({});this.reels.begin();this.audio.play('spin');this.refreshBalance();if(this.hintLabel)this.hintLabel.string='Treasures in motion…';
     let settled=false;
     try{
@@ -393,10 +456,11 @@ export class AureliaApp extends Component {
       }
       settled=true;await this.reels.finish(result);
       this.state={kind:'presenting',result};this.reels.highlight(result.wins.flatMap(w=>[...w.positions]));
+      await this.presentAwardEvidence(result);
       if(result.featureResult)await this.presentFeature(result);
-      if(result.totalWin>=this.bet)await this.presentWin(result.totalWin,result.totalWin/this.bet>=10);
-      if(this.winLabel)this.winLabel.string=(result.totalWin>0&&result.totalWin<this.bet?'RETURN  ':'WIN  ')+money(result.totalWin);
-      if(this.hintLabel)this.hintLabel.string=result.totalWin>0?'Treasure added to your wallet.':MODES[GAME_CONFIGS.indexOf(this.config)];
+      if(result.totalWin>=this.bet)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0);
+      this.resetWinAmount(result.totalWin);
+      if(this.hintLabel)this.hintLabel.string=roundEvidence(result,this.bet);
       this.state={kind:'idle'};this.refreshBalance();this.refreshTopWin();this.autoWait=.8;
     }catch(error){
       this.auto=false;this.updateAuto();console.error(error);
@@ -409,8 +473,41 @@ export class AureliaApp extends Component {
       else{this.services.economy.cancelReservation(requestId);this.state={kind:'idle'};this.reels.show(this.config.reelStrips.flatMap(s=>s.slice(0,this.config.rows)));this.toast('Round interrupted. Your wallet has been preserved.');}
     }
   }
+  /** Show the actual awarded cells before any feature replaces this grid. */
+  private async presentAwardEvidence(result:SpinResult):Promise<void>{
+    const awards=result.wins.filter(w=>awardCredits(w)>0);
+    if(!awards.length)return;
+    // A bounded sample avoids a long presentation on hundreds of Ways. The
+    // denominator remains the full award count; the final total includes all.
+    const shown=awards.slice(0,3);
+    for(let i=0;i<shown.length;i++){
+      this.reels?.highlight(shown[i].positions);
+      if(this.hintLabel)this.hintLabel.string=awardEvidence(this.config,shown[i],i+1,awards.length);
+      if(i===0)this.audio.playAward(0);
+      await Promise.all([this.countWinAmount(result.baseWin,result.totalWin),this.delay(this.reduced?.35:1.2)]);
+    }
+    this.reels?.highlight(awards.flatMap(w=>[...w.positions]));
+    if(awards.length>1){if(this.hintLabel)this.hintLabel.string=awardSummary(awards,result.baseWin);await this.delay(this.reduced?.35:.7);}
+  }
   private async presentFeature(result:SpinResult):Promise<void>{
     const feature=result.featureResult!;const reels=this.reels!;
+    if(feature.type==='cabinet-feature'){
+      let cumulative=result.baseWin;
+      for(const round of feature.rounds){
+        if(this.hintLabel)this.hintLabel.string=tr(round.caption??'BONUS')+' · '+round.index+'/'+feature.rounds.length+(round.multiplier?' · '+round.multiplier+'×':'');
+        if(round.motion==='drop')await reels.collapseTo(round.grid,round.removed??[]);
+        else if(round.motion==='rise')await reels.riseTo(round.grid,round.removed??[]);
+        else if(round.motion==='move')await reels.moveSymbols(round.grid,round.moved??[],round.held??[]);
+        else if(round.motion==='respin'){this.audio.play('spin');await reels.respinCells(round.grid,round.held??[]);}
+        else await reels.transformTo(round.grid,round.focus??[]);
+        if(round.locked)reels.lockCoins(round.locked,round.lockedSymbol);
+        for(const col of round.expandedColumns??[])await reels.expandColumn(col);
+        reels.highlight(round.wins.flatMap(w=>Array.from(w.positions)));
+        cumulative+=round.credits;
+        if(round.credits>0){this.audio.playAward(round.index-1);if(this.hintLabel)this.hintLabel.string=featureAwardEvidence(this.config,round.wins,round.credits,round.index,feature.rounds.length);}
+        await Promise.all([this.countWinAmount(cumulative,result.totalWin),this.delay(this.reduced?.1:round.credits>0?1.1:.18)]);
+      }return;
+    }
     if(feature.type==='golden-hour'){
       const panel=this.sheet('The three golden vaults',780);
       text(panel,'Choose a vault to reveal your treasure',0,190,850,91,39);
@@ -421,7 +518,7 @@ export class AureliaApp extends Component {
           if(chosen)return;chosen=true;this.audio.play('win');
           const award=feature.pickAwards?.[i]??feature.totalCredits;
           text(panel,money(award)+' COINS',0,-127,850,106,56,COLORS.gold,true);
-          this.scheduleOnce(()=>{this.closeModal();resolve();},this.reduced?.15:1.3);
+          void Promise.all([this.countWinAmount(result.baseWin+feature.totalCredits,result.totalWin),this.delay(this.reduced?.15:1.3)]).then(()=>{this.closeModal();resolve();});
         };
         for(let i=0;i<3;i++){
           const hit=box(panel,'Open vault '+(i+1),(i-1)*278,26,240,270);
@@ -440,15 +537,39 @@ export class AureliaApp extends Component {
     let cumulative=result.baseWin;
     for(const round of feature.rounds){
       if(this.hintLabel)this.hintLabel.string=feature.type==='ruby-cascade'?`MOON CASCADE · ${round.multiplier}×`:feature.type==='jade-respin'?`LOCKED GOLD · ${round.remaining} RESPINS LEFT`:`SUNSTONE WILD · ${round.index} OF ${feature.rounds.length}`;
-      if(feature.type==='ruby-cascade')await reels.collapseTo(round.grid,round.removed??[]);
+      if(round.removed||feature.type==='ruby-cascade')await reels.collapseTo(round.grid,round.removed??[]);
+      else if(round.caption)await reels.transformTo(round.grid,round.focus);
       else{reels.begin();this.audio.play('spin');await reels.finishGrid(round.grid,true);}
+      if(round.caption&&this.hintLabel)this.hintLabel.string=tr(round.caption)+' · '+round.index+'/'+feature.rounds.length+(round.multiplier?' · '+round.multiplier+'×':'');
       if(round.locked)reels.lockCoins(round.locked);
       if(round.expandedColumn!==undefined)await reels.expandColumn(round.expandedColumn);
       reels.highlight(round.wins.flatMap(w=>[...w.positions]));
-      cumulative+=round.credits;if(this.winLabel)this.winLabel.string='WIN  '+money(cumulative);
-      if(round.credits>0)this.audio.play('win');
-      await this.delay(round.credits>0?.62:.22);
+      cumulative+=round.credits;
+      if(round.credits>0){this.audio.playAward(round.index-1);if(this.hintLabel)this.hintLabel.string=featureAwardEvidence(this.config,round.wins,round.credits,round.index,feature.rounds.length);}
+      await Promise.all([this.countWinAmount(cumulative,result.totalWin),this.delay(this.reduced?.1:round.credits>0?1.1:.22)]);
     }
+  }
+  /** Presentation only: one readout continues through base and feature awards. */
+  private writeWinAmount(amount:number,total=amount):void{
+    this.presentedWin=amount;
+    if(this.winLabel?.isValid)this.winLabel.string=tr((total>0&&total<this.bet?'RETURN  ':'WIN  ')+money(amount));
+  }
+  private resetWinAmount(amount=0):void{
+    this.cancelWinCount?.();this.writeWinAmount(amount);
+  }
+  private countWinAmount(amount:number,total=amount):Promise<void>{
+    this.cancelWinCount?.();
+    const label=this.winLabel,from=this.presentedWin;
+    if(this.reduced||!label?.isValid||amount<=from){this.writeWinAmount(amount,total);return Promise.resolve();}
+    return new Promise<void>(resolve=>{
+      const value={n:from};let done=false;
+      const finish=():void=>{if(done)return;done=true;Tween.stopAllByTarget(value);if(this.cancelWinCount===finish)this.cancelWinCount=undefined;resolve();};
+      this.cancelWinCount=finish;
+      tween(value).to(.34,{n:amount},{easing:'cubicOut',onUpdate:()=>{
+        if(!label.isValid||label!==this.winLabel){finish();return;}
+        this.writeWinAmount(value.n,total);
+      }}).call(()=>{if(label.isValid&&label===this.winLabel)this.writeWinAmount(amount,total);finish();}).start();
+    });
   }
   private async presentWin(amount:number,big:boolean):Promise<void>{
     if(big){
@@ -456,7 +577,7 @@ export class AureliaApp extends Component {
       // Keep the integrated scene visible, but do not let cabinet readouts and
       // controls show through the transparent celebration artwork.
       const hidden=(this.plane?.children??[]).filter(n=>n.active&&!['Cabinet reflections','Reels',this.config.id+'-tall'].includes(n.name));
-      for(const n of [this.hintLabel?.node,this.content?.getChildByName('Safe top tools')])if(n?.active)hidden.push(n);
+      for(const n of [this.hintLabel?.node,this.content?.getChildByName('Award hint material'),this.content?.getChildByName('Safe top tools')])if(n?.active)hidden.push(n);
       const fades=hidden.map(n=>({node:n,alpha:n.getComponent(UIOpacity)??n.addComponent(UIOpacity)}));
       const prior=fades.map(f=>f.alpha.opacity);
       try{
@@ -468,22 +589,25 @@ export class AureliaApp extends Component {
         if(this.modal===stage)this.closeModal();
       }
     }else{
-      this.audio.play('win');const label=this.winLabel;
-      const g=CABINETS[this.config.id],screen=imagePoint(g.screen);
-      const banner=this.art.panel(this.plane!,screen[0],screen[1]-g.screen[3]/2+120,Math.min(680,g.screen[2]-24),204,0);banner.name='Ordinary win celebration';
-      const badge=this.art.image(banner,symbolAtlas(this.config.id),-230,0,134,134,[8,14,7,2][GAME_CONFIGS.indexOf(this.config)]);
-      text(banner,amount/this.bet>=5?'NICE WIN':'WIN',55,49,420,60,38,'#5B3427',true);
-      const total=outlined(text(banner,'0',55,-30,422,94,money(amount).length>9?48:68,'#573225',false),'#FFF2D6',1);
-      this.reveal(banner);this.metalEdges(banner,650,190,0);if(!this.reduced){tween(badge).to(.3,{scale:new Vec3(1.16,1.16,1)},{easing:'backOut'}).to(.4,{scale:new Vec3(1,1,1)}).start();
-        for(let i=0;i<8;i++){const spark=this.art.light(banner,3,(i%2?1:-1)*(225+i*9),(i-4)*18,50,50,190);tween(spark).by(.65,{position:new Vec3((i%2?1:-1)*45,65,0),angle:90}).start();tween(opacity(spark,190)).to(.85,{opacity:0}).start();}}
-      try{if(this.reduced){total.string=money(amount);if(label)label.string='WIN  '+money(amount);await this.delay(.8);}
-      else{const v={n:0};await new Promise<void>(resolve=>tween(v).to(.85,{n:amount},{easing:'expoOut',onUpdate:()=>{total.string=money(v.n);if(label?.isValid)label.string='WIN  '+money(v.n);}}).call(()=>resolve()).start());total.string=money(amount);if(label?.isValid)label.string='WIN  '+money(amount);await this.delay(.65);tween(opacity(banner,255)).to(.2,{opacity:0}).start();await this.delay(.2);}}
-      finally{if(banner.isValid)banner.destroy();}
+      if(amount>this.presentedWin)this.audio.playAward(0);
+      await Promise.all([this.countWinAmount(amount),this.delay(this.reduced?.12:.32)]);
     }
   }
 
   private refreshBalance():void{if(this.balanceLabel)this.balanceLabel.string=money(this.services.economy.balance());}
-  private refreshTopWin():void{if(this.topWinLabel)this.topWinLabel.string='TOP WIN '+money(this.services.profile.current()?.biggestWin??0);}
+  /** A small engraved trophy leaves the existing record plate to its number. */
+  private compactRecord(panel:Node,rect:Box,ink:string,outline:string):Label{
+    const size=Math.min(rect[3]*.58,rect[2]*.12),icon=box(panel,'TOP WIN trophy',-rect[2]*.40,0,size,size),g=icon.addComponent(Graphics);
+    g.fillColor=new Color(ink);g.strokeColor=new Color(outline);g.lineWidth=1;
+    g.moveTo(-size*.32,size*.36);g.lineTo(size*.32,size*.36);g.lineTo(size*.24,-size*.02);g.lineTo(size*.08,-size*.18);g.lineTo(size*.08,-size*.32);g.lineTo(size*.27,-size*.32);g.lineTo(size*.27,-size*.44);g.lineTo(-size*.27,-size*.44);g.lineTo(-size*.27,-size*.32);g.lineTo(-size*.08,-size*.32);g.lineTo(-size*.08,-size*.18);g.lineTo(-size*.24,-size*.02);g.close();g.fill();g.stroke();
+    g.strokeColor=new Color(ink);g.lineWidth=Math.max(2,size*.075);g.moveTo(-size*.31,size*.25);g.lineTo(-size*.44,size*.25);g.lineTo(-size*.40,0);g.lineTo(-size*.20,-size*.08);g.stroke();g.moveTo(size*.31,size*.25);g.lineTo(size*.44,size*.25);g.lineTo(size*.40,0);g.lineTo(size*.20,-size*.08);g.stroke();
+    const label=outlined(text(panel,topWinMoney(this.services.profile.current()?.biggestWin??0),rect[2]*.075,0,rect[2]*.78,Math.max(64,rect[3]*.86),48,ink),outline,1);
+    const fit=label.node.getComponent('TextFit');if(fit)fit.enabled=false;
+    label.fontFamily='Arial';label.fontSize=48;label.lineHeight=52;label.enableWrapText=false;label.overflow=Label.Overflow.SHRINK;
+    bindPress(panel,icon,()=>this.toast(tr('TOP WIN')+' · '+exactMoney(this.services.profile.current()?.biggestWin??0)));
+    return label;
+  }
+  private refreshTopWin():void{if(this.topWinLabel)this.topWinLabel.string=topWinMoney(this.services.profile.current()?.biggestWin??0);}
   private delay(seconds:number):Promise<void>{return new Promise(resolve=>this.scheduleOnce(resolve,this.reduced?Math.min(.12,seconds):seconds));}
   protected update(dt:number):void{const fx=this.plane?.getChildByName('Cabinet reflections')?.getComponent(SalonAtmosphere);if(fx)fx.energy=this.state.kind==='spinning'?1:this.state.kind==='presenting'?.6:0;if(this.auto&&this.visible&&this.state.kind==='idle'&&this.page==='game'&&!this.modal){this.autoWait-=dt;if(this.autoWait<=0){this.autoWait=1;void this.spin();}}}
   private hide():void{this.visible=false;this.auto=false;this.updateAuto();}
@@ -528,41 +652,42 @@ export class AureliaApp extends Component {
     for(let i=0;i<9;i++){const coin=this.art.image(this.root,'symbols',(i-4)*25,-110,54,54,0);coin.name='Reward arrival coin';const o=opacity(coin,0);tween(o).delay(i*.045).to(.12,{opacity:255}).delay(.58).to(.16,{opacity:0}).start();tween(coin).delay(i*.045).to(.2,{position:new Vec3((i-4)*39,15,0)},{easing:'sineOut'}).to(.65,{position:target,scale:new Vec3(.4,.4,1)},{easing:'quadIn'}).call(()=>coin.destroy()).start();}
   }
   private storePage():void{
-    const stage=this.pageStage('Caravan merchant counter');
-    text(stage,'THE TREASURE BAZAAR',0,605,980,92,49,COLORS.ink,true);
-    const chest=this.art.image(stage,'symbols',-288,382,244,244,5);this.breathe(chest);this.edgeJewels(chest,232,228);
-    text(stage,'A little more\nfor the journey',145,410,556,132,44,COLORS.ink,true);
-    text(stage,this.services.remoteMode?'Choose your coin bundle':'Preview · Purchases unavailable',130,304,609,65,29,COLORS.ink);
-    const stamp=this.generation;void this.services.store.catalog().then(items=>{if(stamp!==this.generation)return;items.forEach((item,i)=>{
-      const row=this.art.panel(stage,0,135-i*199,949,177,i===3?2:0),ink=i===3?COLORS.cream:COLORS.ink;this.reveal(row,i*.08);
-      const gift=this.art.image(row,'symbols',-353,0,126,126,[9,1,5,6][i]);this.idleAccent(gift,i*.6,5,4);
-      text(row,item.label,-56,43,401,54,28,ink);this.count(text(row,money(item.credits+item.bonus),-56,-24,400,64,43,ink,true),item.credits+item.bonus);
-      this.art.button(row,'Buy '+item.id,303,0,265,96,item.available?item.displayPrice:'Unavailable',1,()=>void this.purchase(item.id),3);this.metalEdges(row,926,159,i*.8);
-    });}).catch(()=>this.toast('Shop unavailable. Please try again.'));
-    this.art.button(stage,'Synchronize purchases',0,-625,820,93,'Restore unfinished purchases',13,()=>void this.services.store.restore().then(r=>{this.refreshBalance();this.toast(r.message);}),0);
+    const stage=this.pageStage("CARAVAN SUPPLIES"),stamp=this.generation;
+    text(stage,"CARAVAN SUPPLIES",0,629,932,78,43,COLORS.ink,true);
+    text(stage,this.services.remoteMode?'Choose a coin supply':'Preview · Purchases unavailable',0,547,907,47,27,COLORS.ink);
+    const layout:number[][]=[[-25, 342, 856, 215], [25, 79, 856, 215], [-25, -184, 856, 215], [25, -447, 856, 215]];
+    void this.services.store.catalog().then(items=>{if(stamp!==this.generation)return;
+      items.forEach((item,i)=>{const [x,y,w,h]=layout[i],wide=w>600,compact=h<260&&!wide,node=this.art.panel(stage,x,y,w,h,0);node.name='Supply '+item.id;
+        const total=item.credits+item.bonus,bonus=Math.round(item.bonus/item.credits*100);
+        const art=this.art.image(node,symbolAtlas(GAME_CONFIGS[i].id),wide?-w*.36:0,wide?0:h*.27,wide?127:Math.min(129,h*.24),wide?127:Math.min(129,h*.24),[0,1,5,9][i]);
+        if(!this.reduced){const alpha=opacity(art,245);tween(alpha).to(2.5+i*.3,{opacity:190},{easing:'sineInOut'}).to(2.5+i*.3,{opacity:245},{easing:'sineInOut'}).union().repeatForever().start();}
+        if(compact)art.active=false;const tx=compact?-w*.20:wide?-w*.06:0,tw=compact?w*.5:wide?w*.42:w*.84;
+        const amount=text(node,money(total),tx,compact?30:wide?42:h*.03,tw,65,wide?42:36,COLORS.ink,true);amount.enableWrapText=false;
+        text(node,bonus?bonus+'% BONUS':'STANDARD',compact?0:tx,compact?-h*.27:wide?-14:-h*.13,compact?w*.86:tw,36,22,COLORS.ink,true);
+        if(h>=300)text(node,'Base '+money(item.credits)+'\nGift '+money(item.bonus),tx,-h*.285,tw,68,24,COLORS.ink);
+        this.art.button(node,'Buy '+item.id,compact?w*.27:wide?w*.33:0,compact?28:wide?0:-h*.40,compact?w*.36:wide?w*.255:w*.84,Math.min(75,h*.29),item.available?item.displayPrice:'Offline',undefined,()=>void this.purchase(item.id),0);
+      });
+    }).catch(()=>this.toast('Shop unavailable. Please try again.'));
+    this.art.button(stage,'Synchronize purchases',0,-611,780,82,'Sync unfinished purchases',undefined,()=>void this.services.store.restore().then(r=>{this.refreshBalance();this.toast(r.message);}),0);
+    const legal=this.art.panel(stage,0,-680,830,58,0);text(legal,'Virtual coins · No cash value',0,0,750,36,24,COLORS.ink);
   }
 
   private async purchase(id:string):Promise<void>{if(this.busy)return;this.busy=true;try{const r=await this.services.store.purchase(id);this.refreshBalance();this.toast(r.message);}finally{this.busy=false;}}
   private rewardsPage():void{
-    const stage=this.pageStage('Seven stamps passport');text(stage,'THE SEVEN-STAMP TRAIL',0,612,990,91,49,COLORS.ink,true);
-    const progress=this.services.save.currentScope()?.checkIn,today=new Date().toISOString().slice(0,10),claimed=progress?.lastClaimDate===today;
-    const active=claimed?((progress?.cycleDay??0)+6)%7:(progress?.cycleDay??0);
-    text(stage,'DAY '+(active+1)+(claimed?' · STAMP COLLECTED':' · YOUR NEXT TREASURE'),0,524,960,66,35,COLORS.ink,true);
-    this.services.checkIn.rewards.forEach((amount,i)=>{
-      const isToday=i===active,done=i<active||(isToday&&claimed),special=i===6;
-      const x=special?0:i%2?244:-244,y=special?-277:354-Math.floor(i/2)*198,w=special?944:462;
-      const stamp=this.art.panel(stage,x,y,w,177,isToday?2:0),ink=isToday?COLORS.cream:COLORS.ink;stamp.name='Check-in day '+(i+1);
-      const icon=this.art.image(stamp,done?'interfaces':'symbols',special?-339:-153,0,104,104,done?14:special?5:0);this.idleAccent(icon,i*.45,4,3);
-      text(stamp,'DAY '+(i+1),special?-136:45,46,special?252:281,42,30,ink,true);
-      text(stamp,money(amount)+' coins',special?-117:45,0,special?310:281,48,34,ink,true);
-      text(stamp,done?'COLLECTED':isToday?'CLAIM TODAY':'LOCKED',special?236:45,special?0:-48,special?330:281,44,27,ink);
-      if(isToday&&!claimed)this.metalEdges(stamp,w-14,161,0);
-      bindPress(stamp,stamp,()=>{if(isToday&&!claimed)void this.claim('check-in');else this.toast('Day '+(i+1)+' · '+money(amount)+' coins · '+(done?'Collected':'Available on a later check-in'));});
+    const stage=this.pageStage("THE STAMPED CARAVAN"),scope=this.services.save.currentScope(),today=new Date().toISOString().slice(0,10),progress=scope?.checkIn,claimed=progress?.lastClaimDate===today,active=claimed?((progress?.cycleDay??0)+6)%7:(progress?.cycleDay??0);
+    text(stage,"THE STAMPED CARAVAN",0,631,940,78,42,COLORS.ink,true);
+    text(stage,tr('DAY '+(active+1))+' · '+tr(claimed?'COLLECTED':'READY TO CLAIM'),0,545,920,47,29,COLORS.ink);
+    const spots:number[][]=[[-316, 390], [0, 330], [316, 270], [316, 18], [0, 78], [-316, 138], [-316, -126]],thread=box(stage,'Seven day path',0,0,1020,1400).addComponent(Graphics);thread.strokeColor=new Color(175,128,60,90);thread.lineWidth=5;spots.forEach(([x,y],i)=>{if(i)thread.lineTo(x,y);else thread.moveTo(x,y);});thread.stroke();
+    this.services.checkIn.rewards.forEach((amount,i)=>{const [x,y]=spots[i],current=i===active,done=i<active||(current&&claimed),node=box(stage,'Check-in day '+(i+1),x,y,274,205);const face=node.addComponent(Graphics);face.fillColor=new Color('#FFF2D2');face.strokeColor=new Color('#B88738');face.lineWidth=4;face.roundRect(-131,-96,262,192,21);face.fill();face.stroke();face.strokeColor=new Color('#E7C882');face.lineWidth=2;face.roundRect(-120,-85,240,170,15);face.stroke();
+      text(node,'DAY '+(i+1),0,62,232,48,34,COLORS.ink,true);text(node,money(amount),0,8,234,53,35,COLORS.ink,true);text(node,done?'COLLECTED':current?'TODAY':'UPCOMING',0,-53,235,44,32,COLORS.ink,true);
+      if(current){const g=box(node,'Today outline',0,0,274,205).addComponent(Graphics);g.strokeColor=new Color('#B78C37');g.lineWidth=3;g.roundRect(-120,-83,240,166,18);g.stroke();if(!this.reduced){const alpha=opacity(g.node,240);tween(alpha).to(1.8,{opacity:85},{easing:'sineInOut'}).to(1.8,{opacity:240},{easing:'sineInOut'}).union().repeatForever().start();}}
+      bindPress(node,node,()=>{if(current&&!claimed)void this.claim('check-in');else this.toast('Day '+(i+1)+' · '+money(amount)+' coins · '+(done?'Collected':'Upcoming'));});
     });
-    this.art.button(stage,'Check in',0,-416,868,96,claimed?'DAY '+(active+1)+' · COLLECTED':'CLAIM DAY '+(active+1)+' · '+money(this.services.checkIn.rewards[active]),14,()=>{if(!claimed)void this.claim('check-in');else this.toast('Come back after 00:00 UTC for your next stamp.');},3);
-    const daily=this.art.panel(stage,0,-568,944,167,0);this.idleAccent(this.art.image(daily,'symbols',-348,0,124,124,9),0,6,4);
-    text(daily,'DAILY TRAVEL PURSE · 5,000',70,39,670,51,31,COLORS.ink,true);
-    this.art.button(daily,'Claim daily',65,-37,611,76,this.services.save.currentScope()?.claims['daily-free:'+today]?'Gift collected':'Collect travel purse',2,()=>void this.claim('daily'),2);
+    this.art.button(stage,'Check in',0,-322,836,94,claimed?'DAY '+(active+1)+' COLLECTED':'CLAIM DAY '+(active+1)+' · '+money(this.services.checkIn.rewards[active]),undefined,()=>{if(!claimed)void this.claim('check-in');else this.toast('Next reward after 00:00 UTC.');},0);
+    const daily=this.art.panel(stage,0,-534,912,230,0),collected=!!scope?.claims['daily-free:'+today];
+    this.art.image(daily,'symbols',-314,0,147,147,5);text(daily,'DAILY GIFT · '+money(ECONOMY.daily),109,52,573,46,30,COLORS.ink,true);
+    this.art.button(daily,'Claim daily',109,-28,530,80,collected?'COLLECTED':'Collect daily gift',undefined,()=>{if(!collected)void this.claim('daily');else this.toast('Today’s gift is already collected.');},0);
+    text(stage,'Daily reset 00:00 UTC · Progress saved to your account',0,-677,936,38,23,COLORS.ink);
   }
 
   private async claim(kind:'daily'|'check-in'):Promise<void>{if(this.busy)return;this.busy=true;const before=this.services.economy.balance();try{
@@ -582,20 +707,34 @@ export class AureliaApp extends Component {
       if(!rows.length){text(stage,'Your first settled win begins\nyour place in the chronicle.',0,20,860,190,43,COLORS.ink,true);this.art.button(stage,'Explore games',0,-215,690,114,'Find your first treasure',6,()=>void this.navigate('home'),3);return;}
       this.visibleRanks(rows,5).forEach((r,i)=>{const n=this.art.panel(stage,0,139-i*172,945,150,r.current?2:0),ink=r.current?COLORS.cream:COLORS.ink;this.reveal(n,i*.08);text(n,'#'+r.rank,-380,0,133,78,43,ink,true);const face=this.art.image(n,'portraits',-248,0,112,112,r.avatar);this.idleAccent(face,i*.7,4,2);text(n,r.nickname,0,21,336,61,34,ink,true);text(n,r.current?'YOUR CARAVAN':'TRAVELLER',0,-35,332,44,24,ink);this.count(text(n,money(r.winnings),310,0,260,78,35,ink,true),r.winnings);});
     };if(this.services.remoteMode)void this.services.rank.refresh('all-time').then(render).catch(()=>this.toast('Unable to load legends.'));else render();
-    text(stage,'Settled wins · Shared wallet · No invented opponents',0,-655,970,54,27,COLORS.ink);
+    text(stage,this.services.remoteMode?'Verified settled wins':'Saved player scores · Themed challenge standings',0,-655,970,54,27,COLORS.ink);
   }
 
+
+  private languages():void{
+    if(this.busy)return;const panel=this.sheet('Choose language',1010);
+    LANGUAGES.forEach((entry,i)=>this.art.button(panel,'Locale '+entry.code,0,285-i*137,760,110,entry.name,undefined,()=>{setLanguage(entry.code);this.closeModal();this.render();},entry.code===language()?3:0));
+    text(panel,'Saved on this device',0,-417,740,58,29,COLORS.cream);
+  }
   private profilePage():void{
-    const stage=this.pageStage('Traveller passport'),p=this.services.profile.current();if(!p)return;
-    text(stage,'YOUR CARAVAN PASSPORT',0,609,994,92,47,COLORS.ink,true);
-    const book=this.art.panel(stage,0,330,945,406,0);this.metalEdges(book,926,388,0);
-    const portrait=this.art.image(book,'portraits',-272,18,255,255,p.avatar);this.breathe(portrait);bindPress(portrait,portrait,()=>this.avatars());
-    const editableName=text(book,p.nickname+' · EDIT',148,94,511,77,43,COLORS.ink,true);editableName.enableWrapText=false;editableName.node.name='Edit nickname';bindPress(editableName.node,editableName.node,()=>this.editNickname());text(book,p.isGuest?'GUEST TRAVELLER':'REGISTERED TRAVELLER',149,17,519,52,28,COLORS.ink);
-    this.art.button(book,'Choose portrait',145,-84,471,88,'Change portrait',4,()=>this.avatars(),0);
-    [p.totalWin,p.biggestWin].forEach((v,i)=>{const n=this.art.panel(stage,i?245:-245,41,460,141,2);text(n,i?'BEST DISCOVERY':'TOTAL WON',0,32,425,42,27,COLORS.cream);this.count(text(n,money(v),0,-23,425,62,43,COLORS.cream,true),v);});
-    const links:[string,number,()=>void][]=[['Coin ledger',1,()=>this.history()],['Privacy & help',7,()=>this.legal('privacy')],['Sign out',9,()=>void this.signOut()]];
-    links.forEach(([label,icon,action],i)=>{const n=this.art.button(stage,label,0,-128-i*149,940,121,label,icon,action,0);this.metalEdges(n,920,106,i*.7);this.reveal(n,i*.08);});
-    this.art.button(stage,'Delete account',0,-605,587,79,'Delete account',15,()=>this.deleteAccount(),2);
+    const stage=this.pageStage("TRAVELLER ATLAS"),p=this.services.profile.current();if(!p)return;
+    const balance=this.services.economy.balance(),ledger=this.services.save.currentScope()?.transactions??[];
+    text(stage,"TRAVELLER ATLAS",0,622,928,82,42,COLORS.ink,true);
+    const plate=(name:string,x:number,y:number,w:number,h:number):Node=>{const node=this.art.panel(stage,x,y,w,h,0);node.name=name;return node;};
+    const stat=(x:number,y:number,w:number,h:number,label:string,value:number):void=>{const node=plate(label,x,y,w,h);text(node,label,0,h*.22,w*.8,39,25,COLORS.ink,true);const v=text(node,money(value),0,-h*.14,w*.8,61,39,COLORS.ink,true);v.enableWrapText=false;};
+    const identity=(x:number,y:number,w:number,h:number):void=>{const node=plate('Editable identity',x,y,w,h),wide=w>600;
+      const portrait=this.art.image(node,'portraits',wide?-w*.33:0,wide?0:h*.22,wide?164:126,wide?164:126,p.avatar);bindPress(portrait,portrait,()=>this.avatars());
+      const tx=wide?w*.13:0,tw=wide?w*.57:w*.85;
+      const name=text(node,p.nickname,tx,wide?54:-h*.055,tw,55,35,COLORS.ink,true);name.enableWrapText=false;bindPress(name.node,name.node,()=>this.editNickname());
+      text(node,p.isGuest?'GUEST · LEVEL '+p.level:'MEMBER · LEVEL '+p.level,tx,wide?0:-h*.22,tw,37,23,COLORS.ink);
+      this.art.button(node,'Edit nickname',tx,wide?-66:-h*.365,Math.min(tw,350),61,'Edit name',undefined,()=>this.editNickname(),0);
+    };
+    const activity=(x:number,y:number,w:number,h:number):void=>{const node=plate('Account activity',x,y,w,h);text(node,'COIN JOURNAL',0,h/2-47,w*.82,44,28,COLORS.ink,true);text(node,ledger.length+' recorded entries',0,h/2-97,w*.83,38,24,COLORS.ink);if(h>250)text(node,'Your settled activity is saved\nwith this account.',0,-2,w*.8,81,25,COLORS.ink);this.art.button(node,'Open coin history',0,-h/2+51,w*.78,65,'View history',undefined,()=>this.history(),0);};
+    identity(-254,329,386,368);stat(219,465,462,149,'TRAVEL PURSE',balance);stat(219,252,462,149,'JOURNEYS',p.gamesPlayed);activity(214,-40,470,297);stat(-251,-99,394,160,'BEST DELIVERY',p.biggestWin);stat(0,-348,901,144,'TOTAL DISCOVERED',p.totalWin);
+    const links:[string,()=>void][]=[['Language',()=>this.languages()],['Portrait',()=>this.avatars()],['Privacy',()=>this.legal('privacy')]];
+    links.forEach(([label,action],i)=>this.art.button(stage,label,(i-(links.length-1)/2)*(910/links.length),-522,880/links.length,75,label,undefined,action,0));
+    this.art.button(stage,'Sign out',-229,-626,429,77,'Sign out',undefined,()=>void this.signOut(),0);
+    this.art.button(stage,'Delete account',229,-626,429,77,'Delete account',undefined,()=>this.deleteAccount(),0);
   }
 
   private async signOut():Promise<void>{
@@ -658,19 +797,42 @@ export class AureliaApp extends Component {
     },0);
     this.art.button(panel,'Back to mailbox',0,-383,580,76,'Back to mailbox',9,()=>this.mail(),0);
   }
-  private rules():void{
-    this.auto=false;this.updateAuto();const s=this.sheet(this.config.name+' · Rules',1350);
-    const descriptions:Record<GameId,string>={
-      'golden-hour':'Three reels · Three rows · One centre payline.\nMatching symbols pay left to right on the centre line.\nThree safes anywhere reveal a predetermined vault prize.',
-      'jade-treasury':'Five reels · Three rows · Twenty fixed paylines.\nSix gold coins trigger three-life lock-and-respin.\nNew coins reset the lives. Full screen adds a bonus.',
-      'pearl-palace':'Five reels · Four rows · 1,024 ways.\nThree safes trigger five bonus spins.\nOne column expands to WILD during each bonus spin.',
-      'ruby-revel':'Five by five · Connected treasure clusters.\nFive or more matching neighbours pay; diagonals do not.\nWinning clusters collapse, refill and raise the multiplier.',
-    };
-    text(s,descriptions[this.config.id],0,424,865,293,35);
-    const symbols=this.config.symbols.filter(v=>v.tier!=='wild'&&v.tier!=='scatter'&&v.tier!=='bonus').slice(0,6);
-    symbols.forEach((sym,i)=>{const y=206-i*96;this.art.image(s,symbolAtlas(this.config.id),-346,y,83,83,SYMBOL_ART[sym.id]);const pay=this.config.paytable[sym.id];text(s,sym.label,-141,y,308,69,29);text(s,Object.entries(pay??{}).map(([n,v])=>`${n}: ${v}×`).join(' · '),177,y,488,81,27);});
-    text(s,'Values above are raw paytable factors. Payout scale and\nline/ways divisors apply; all awards use whole coins.\nVirtual coins only. No cash-out. Take regular breaks.',0,-512,890,161,31);
+  private howToPlay(page=0):void{
+    this.auto=false;this.updateAuto();const cfg=this.config,s=this.ruleSheet(cfg.name+' · '+helpTitle());
+    this.art.button(s,'Payout rules',-286,550,274,87,'PAYOUTS',undefined,()=>this.rules(0,false,true));
+    this.art.button(s,'Feature rules',0,550,274,87,'FEATURES',undefined,()=>this.rules(0,true));
+    this.art.button(s,'Rule diagram',286,550,274,87,helpTitle(),undefined,()=>this.howToPlay(page),3);
+    drawRuleHelp(s,cfg,this.art,page,next=>this.howToPlay(next));
   }
+  private rules(band=0,features=false,payoutFirst=false):void{
+    this.auto=false;this.updateAuto();const cfg=this.config,s=this.ruleSheet(cfg.name+' · Rules');
+    this.art.button(s,'Payout rules',-286,550,274,87,'PAYOUTS',undefined,()=>this.rules(0,false,true),features?0:3);
+    this.art.button(s,'Feature rules',0,550,274,87,'FEATURES',undefined,()=>this.rules(0,true),features?3:0);
+    this.art.button(s,'Rule diagram',286,550,274,87,helpTitle(),undefined,()=>this.howToPlay());
+    drawRulePages(s,cfg,this.art,this.bet,band,features,FEATURE_PROFILES[cfg.id].notes,next=>this.rules(next,features),payoutFirst);
+  }
+
+  private ruleSheet(title:string):Node{
+    // Paging is an update inside one reading surface, not a new modal transition.
+    // Keep the opaque frame and input shield in place throughout rapid taps.
+    const overlay=this.modal;
+    let panel=overlay?.isValid&&!overlay.getChildByName('Dialog is closing')
+      ?overlay.children.find(child=>!!child.getChildByName('Rule content anchor')):undefined;
+    if(!panel){
+      panel=this.sheet(title,1480);
+      const heading=panel.children.find(child=>!!child.getComponent(Label));
+      if(heading)heading.name='Rule dialog title';
+      box(panel,'Rule content anchor',0,0,978,1480);
+    }else{
+      const heading=panel.getChildByName('Rule dialog title')?.getComponent(Label);
+      if(heading)heading.string=tr(title);
+    }
+    const anchor=panel.getChildByName('Rule content anchor')!;
+    for(const child of [...anchor.children]){child.active=false;child.destroy();}
+    // Retain the panel's text palette/insets without duplicating its background.
+    return box(anchor,panel.name,0,0,978,1480);
+  }
+
   private legal(which:LegalPage):void{
     const s=this.sheet(which==='terms'?'Terms of Service':which==='privacy'?'Privacy & Data':'Player Support',1360);
     LEGAL_SECTIONS[which].forEach((section,i)=>{const y=460-i*210;text(s,section.title,0,y,850,56,34,COLORS.gold);text(s,section.body.replace(/\n/g,' '),0,y-88,861,150,31);});
@@ -686,11 +848,11 @@ export class AureliaApp extends Component {
     }
     this.modal=overlay;return panel;
   }
-  private closeModal():void{if(this.modal){this.modal.destroy();this.modal=undefined;}}
+  private closeModal():void{if(this.modal){this.modal.active=false;this.modal.destroy();this.modal=undefined;}}
   private toast(message:string):void{
     this.notification?.destroy();const n=this.art.panel(this.root!,0,-this.top+338,990,178,2);text(n,message,0,0,916,144,36);this.notification=n;
     if(!this.reduced){const alpha=opacity(n,0);tween(alpha).to(.2,{opacity:255}).delay(3.8).to(.3,{opacity:0}).start();}
     this.scheduleOnce(()=>{if(n.isValid)n.destroy();if(this.notification===n)this.notification=undefined;},4.4);
   }
-  protected onDestroy():void{game.off(Game.EVENT_HIDE,this.hide,this);game.off(Game.EVENT_SHOW,this.show,this);}
+  protected onDestroy():void{this.cancelWinCount?.();game.off(Game.EVENT_HIDE,this.hide,this);game.off(Game.EVENT_SHOW,this.show,this);}
 }

@@ -1,0 +1,50 @@
+
+> f15-honey-parade@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 824,
+    hits: 1054,
+    sampleReturn: 0.923675,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 702,
+    hits: 702,
+    sampleReturn: 0.9828983333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 4,
+    spins: 3000,
+    features: 225,
+    hits: 647,
+    sampleReturn: 0.9598466666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 232,
+    hits: 232,
+    sampleReturn: 0.814415,
+    layoutVariants: 1
+  }
+]

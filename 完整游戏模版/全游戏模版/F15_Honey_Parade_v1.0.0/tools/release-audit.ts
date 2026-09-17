@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 interface Check { readonly name: string; readonly ok: boolean; readonly detail: string; }
@@ -25,9 +25,7 @@ const buildConfig = read('tools/web-mobile-release-build.json');
 const builtMainConfig = resolve(root, 'build/web-mobile/assets/main/config.json');
 const builtSettings = resolve(root, 'build/web-mobile/src/settings.json');
 const fixedLegalBuildFiles = ['privacy.html', 'terms.html', 'support.html'].every((file) => existsSync(resolve(root, 'build/web-mobile', file)));
-const generatedArt = ['salon','celebration','symbols','symbols-blur','interfaces','optics','portraits','apple-mark','harvest-brand','harvest-hall-soft','harvest-store','harvest-rank','harvest-profile','harvest-rewards',
- ...Array.from({length:16},(_,i)=>'harvest-button-'+i),...Array.from({length:4},(_,i)=>'harvest-card-'+i),...Array.from({length:4},(_,i)=>'harvest-soft-plate-'+i),
- ...['golden-hour','jade-treasury','pearl-palace','ruby-revel'].map(id=>id+'-tall')].map(name=>`assets/resources/art/${name}.png`);
+const generatedArt = readdirSync(resolve(root,'assets/resources/art')).filter(name=>name.endsWith('.png')).map(name=>'assets/resources/art/'+name);
 const generatedArtComplete = generatedArt.every((path) => existsSync(resolve(root, path)) && existsSync(resolve(root, `${path}.meta`)));
 const geometry=read('assets/scripts/ui/CabinetGeometry.ts');
 const winStage=read('assets/scripts/vfx/SalonWinStage.ts');
@@ -37,7 +35,7 @@ add('Publisher identity and public legal URLs', !releaseConfig.includes('REPLACE
 add('App Store product identifiers', !store.includes('com.publisher.'), 'Replace all com.publisher.* product IDs with App Store Connect consumable IDs.');
 add('Hosted legal documents finalized', !legal.includes('REPLACE_WITH_') && !legal.includes('Insert the publisher') && !legal.includes('Finalize '), 'Complete counsel-reviewed publisher, retention, territory and governing-law clauses.');
 add('F15 artwork set is complete', generatedArtComplete, 'Integrated cabinets and shared bitmap atlases require their Cocos meta files.');
-add('Four feature models are present', ['golden-hour','jade-respin','pearl-expansion','ruby-cascade'].every(id=>resultGenerator.includes(id)), 'Feature behavior is additionally exercised by npm test; this static check is not visual acceptance.');
+add('Independent core and signature are wired', resultGenerator.includes('evaluateCore') && resultGenerator.includes('SignatureFeature') && read('assets/scripts/math/GameConfigs.ts').includes('independentCabinet') && packageJson.includes('test:core'), 'Project-specific base evaluation and signature are additionally checked by the core tests and browser presentation checks.');
 add('Shared cabinet design plane is preserved', app.includes('Cabinet-coordinate-plane') && app.includes('cabinetLayout(') && geometry.includes('1024') && geometry.includes('2304'), 'Art, reels and controls use measured coordinates on one uniformly scaled plane; test:layout checks bounds.');
 add('Win presentation has reveal and teardown', winStage.includes('private reveal()') && winStage.includes('protected onDestroy()') && app.includes('SalonWinStage'), 'Browser QA must also verify celebration dismissal and input recovery.');
 add('Registration uses an independent draft', app.includes('this.draft.username') && app.includes('EditBox.EventType.TEXT_CHANGED') && app.includes('this.draft.acceptedTerms=!this.draft.acceptedTerms'), 'Browser QA must verify that legal review and acceptance retain typed fields.');
@@ -59,6 +57,10 @@ add('Eligibility gate versioned', app.includes('guestConsent()') && app.includes
 add('Release build includes the launch scene', buildConfig.includes('"md5Cache": false') && buildConfig.includes('db://assets/scenes/LuckySkylightWorld.scene') && buildConfig.includes('e6f4e0a7-9acf-497a-b5f5-a7c4490d1802'), 'The checked-in build configuration must retain the launch scene and stable public filenames.');
 add('Built web artifact is complete', existsSync(builtMainConfig) && existsSync(builtSettings) && readFileSync(builtSettings, 'utf8').includes('"launchScene":"db://assets/scenes/LuckySkylightWorld.scene"') && fixedLegalBuildFiles, 'Build web-mobile with the release config and verify the scene plus fixed privacy, terms and support URLs.');
 
+// Source-string checks cannot establish a shipping native binary.
+const readiness=JSON.parse(read('docs/independent-v4-release-status.json'));
+add('Native release integration complete',readiness.requiresImplementation.length===0,'StoreKit and Apple sign-in contracts alone are not executable native bridges.');
+add('Device and production acceptance recorded',readiness.readyForSubmission===true,'Record real device, Sandbox/TestFlight and production verification before claiming release readiness.');
 const failures = checks.filter((check) => !check.ok);
 for (const check of checks) process.stdout.write(`${check.ok ? 'PASS' : 'BLOCK'}  ${check.name}\n       ${check.detail}\n`);
 process.stdout.write(`\n${checks.length - failures.length}/${checks.length} automated release checks passed.\n`);

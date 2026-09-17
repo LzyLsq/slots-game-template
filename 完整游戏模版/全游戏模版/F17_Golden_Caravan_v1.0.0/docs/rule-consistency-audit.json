@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-16",
+  "corrections": [
+    {
+      "before": "Any regular-symbol win starts two crossings.",
+      "after": "Any non-Scatter win starts two crossings."
+    },
+    {
+      "before": "The board moves one reel left. A new rightmost reel enters. Existing reels remain intact; both directions are evaluated.",
+      "after": "Move all reels one position left and draw the rightmost reel. Evaluate matching adjacent-row paths from the left."
+    },
+    {
+      "before": "All reels slide one position left and a new reel arrives on the right. Matching routes must stay within one row; multipliers 1x, 2x, 3x.",
+      "after": "Move reels left and draw a new rightmost reel. From the left, each matching step stays level or moves one row up; multipliers 1x, 2x, 3x."
+    }
+  ],
+  "animation": "New symbols enter opposite to the actual movement direction.",
+  "languages": [
+    "en",
+    "zh-CN",
+    "zh-TW",
+    "ja",
+    "ko"
+  ]
+}

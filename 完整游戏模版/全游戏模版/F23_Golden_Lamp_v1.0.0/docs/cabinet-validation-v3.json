@@ -1,0 +1,42 @@
+[
+  {
+    "id": "golden-hour",
+    "core": "independent-collector-grid",
+    "feature": "cash-collect",
+    "samples": 6000,
+    "features": 2735,
+    "motions": [
+      "respin"
+    ]
+  },
+  {
+    "id": "jade-treasury",
+    "core": "independent-line-reels",
+    "feature": "sticky-reset",
+    "samples": 6000,
+    "features": 611,
+    "motions": [
+      "respin"
+    ]
+  },
+  {
+    "id": "pearl-palace",
+    "core": "independent-any-reel-ways",
+    "feature": "sync-reels",
+    "samples": 6000,
+    "features": 2694,
+    "motions": [
+      "respin"
+    ]
+  },
+  {
+    "id": "ruby-revel",
+    "core": "independent-scatter-groups",
+    "feature": "sticky-cascade",
+    "samples": 6000,
+    "features": 5731,
+    "motions": [
+      "drop"
+    ]
+  }
+]

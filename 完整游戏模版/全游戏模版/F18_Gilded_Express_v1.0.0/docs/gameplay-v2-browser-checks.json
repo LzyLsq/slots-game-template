@@ -1,0 +1,70 @@
+{
+  "featurePresentationChecks": [
+    {
+      "n": 18,
+      "game": "golden-hour",
+      "title": "WILD EXPRESS",
+      "type": "express-wild",
+      "rounds": 3,
+      "total": 749,
+      "feature": 749,
+      "bet": 150,
+      "same": true,
+      "caption": "EXPRESS STOP · 3/3",
+      "transitioning": false
+    },
+    {
+      "n": 18,
+      "game": "jade-treasury",
+      "title": "WILD EXPRESS",
+      "type": "express-wild",
+      "rounds": 5,
+      "total": 218,
+      "feature": 218,
+      "bet": 150,
+      "same": true,
+      "caption": "EXPRESS STOP · 5/5",
+      "transitioning": false
+    },
+    {
+      "n": 18,
+      "game": "pearl-palace",
+      "title": "WILD EXPRESS",
+      "type": "express-wild",
+      "rounds": 5,
+      "total": 223,
+      "feature": 174,
+      "bet": 150,
+      "same": true,
+      "caption": "EXPRESS STOP · 5/5",
+      "transitioning": false
+    },
+    {
+      "n": 18,
+      "game": "ruby-revel",
+      "title": "WILD EXPRESS",
+      "type": "express-wild",
+      "rounds": 5,
+      "total": 164,
+      "feature": 164,
+      "bet": 150,
+      "same": true,
+      "caption": "EXPRESS STOP · 5/5",
+      "transitioning": false
+    }
+  ],
+  "uiEconomyChecks": [
+    {
+      "n": 18,
+      "shopAmounts": true,
+      "spin": {
+        "before": 42000,
+        "after": 42786,
+        "expected": 42786,
+        "state": "idle",
+        "feature": "express-wild"
+      }
+    }
+  ],
+  "pageErrors": []
+}

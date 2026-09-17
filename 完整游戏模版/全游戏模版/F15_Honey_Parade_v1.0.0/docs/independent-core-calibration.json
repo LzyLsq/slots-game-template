@@ -1,0 +1,118 @@
+[
+  {
+    "game": "golden-hour",
+    "oldScale": 1,
+    "payoutScale": 11.121076,
+    "featurePayoutScale": 4.043207,
+    "target": 0.96,
+    "train": {
+      "rtp": 0.13984166666666667,
+      "baseRtp": 0.05575,
+      "featureRtp": 0.08409166666666666,
+      "se": 0.002601805711606364,
+      "hitRate": 0.060316666666666664,
+      "featureRate": 0.04675,
+      "max": 6,
+      "spins": 60000,
+      "seed": 96648
+    },
+    "validation": {
+      "rtp": 0.981681700000039,
+      "baseRtp": 0.6365644000000226,
+      "featureRtp": 0.3451173000000114,
+      "se": 0.013409884661283282,
+      "hitRate": 0.06144,
+      "featureRate": 0.04696,
+      "max": 38.41,
+      "spins": 100000,
+      "seed": 9547037
+    }
+  },
+  {
+    "game": "jade-treasury",
+    "oldScale": 1,
+    "payoutScale": 14.814815,
+    "featurePayoutScale": 3.953488,
+    "target": 0.96,
+    "train": {
+      "rtp": 0.12785,
+      "baseRtp": 0.04185,
+      "featureRtp": 0.086,
+      "se": 0.0028072691106993206,
+      "hitRate": 0.04348333333333333,
+      "featureRate": 0.04348333333333333,
+      "max": 10.5,
+      "spins": 60000,
+      "seed": 96649
+    },
+    "validation": {
+      "rtp": 0.9915331000000241,
+      "baseRtp": 0.6408436999999934,
+      "featureRtp": 0.3506894000000106,
+      "se": 0.01664280723545078,
+      "hitRate": 0.04419,
+      "featureRate": 0.04419,
+      "max": 79.52,
+      "spins": 100000,
+      "seed": 9547038
+    }
+  },
+  {
+    "game": "pearl-palace",
+    "oldScale": 1,
+    "payoutScale": 4.062244,
+    "featurePayoutScale": 1.474841,
+    "target": 0.96,
+    "train": {
+      "rtp": 0.3831583333333333,
+      "baseRtp": 0.152625,
+      "featureRtp": 0.23053333333333334,
+      "se": 0.004696377293351116,
+      "hitRate": 0.1476,
+      "featureRate": 0.11061666666666667,
+      "max": 14.5,
+      "spins": 60000,
+      "seed": 96650
+    },
+    "validation": {
+      "rtp": 0.9581031499999078,
+      "baseRtp": 0.6178120499999115,
+      "featureRtp": 0.34029110000002294,
+      "se": 0.008653585925071768,
+      "hitRate": 0.14783,
+      "featureRate": 0.11063,
+      "max": 29.52,
+      "spins": 100000,
+      "seed": 9547039
+    }
+  },
+  {
+    "game": "ruby-revel",
+    "oldScale": 1,
+    "payoutScale": 3.833076,
+    "featurePayoutScale": 0.906546,
+    "target": 0.96,
+    "train": {
+      "rtp": 0.5368,
+      "baseRtp": 0.16175,
+      "featureRtp": 0.37505,
+      "se": 0.006106712679875439,
+      "hitRate": 0.16318333333333335,
+      "featureRate": 0.16318333333333335,
+      "max": 17.5,
+      "spins": 60000,
+      "seed": 96651
+    },
+    "validation": {
+      "rtp": 0.9487392999998947,
+      "baseRtp": 0.6124922000000496,
+      "featureRtp": 0.3362471000000194,
+      "se": 0.00837258735419,
+      "hitRate": 0.16227,
+      "featureRate": 0.16227,
+      "max": 33.88,
+      "spins": 100000,
+      "seed": 9547040
+    }
+  }
+]

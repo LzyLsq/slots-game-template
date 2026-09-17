@@ -1,15 +1,90 @@
+import { reelTravel, reelVelocity, brakeTravel, brakeVelocity, fallDuration, fallDelay, smoothStep5 } from './ReelMotion';
+import {CoreReelGuide} from './CoreReelGuide';
 import { _decorator, Component, Color, Graphics, Label, Mask, Node, Sprite, SpriteFrame, tween, Tween, UIOpacity, Vec3 } from 'cc';
 import type { GameConfig, SpinResult } from '../math/types';
 import { SYMBOL_ART, symbolAtlas } from '../math/GameConfigs';
 import { SalonArt, box, opacity, outlined, text } from '../ui/SalonArt';
 import { imagePoint, type Box } from '../ui/CabinetGeometry';
 const { ccclass } = _decorator;
-interface Cell { node: Node; sprite: Sprite; alpha:UIOpacity; logical:number; blurred:boolean; emphasis:number; echo:Node; echoSprite:Sprite; echoAlpha:UIOpacity; entryX:number; entryY:number; entryAngle:number; entryScaleX:number; entryScaleY:number; }
+// Time, width, height, lift (cell-height units). Quintic joins retain zero velocity/acceleration.
+const AWARD_POSES = [[0,1,1,0],[.065,1.018,.967,-.006],[.205,1.034,1.045,.013],[.345,.994,.984,-.003],[.49,1.009,1.012,.003],[.70,1,1,0]] as const;
+interface Cell { node: Node; sprite: Sprite; alpha:UIOpacity; logical:number; blurred:boolean; emphasis:number; awardAge:number; awardSpark:boolean; awardAccent:boolean; winning:boolean; echo:Node; echoSprite:Sprite; echoAlpha:UIOpacity; entryX:number; entryY:number; entryAngle:number; entryScaleX:number; entryScaleY:number; }
 interface Column { cells:Cell[]; elapsed:number; travel:number; final:number; brake:number; stopped:boolean; landAge:number; velocity:number; }
 interface ReelLight { glow:Node; glowAlpha:UIOpacity; glint:Node; glintAlpha:UIOpacity; trail:Node; trailAlpha:UIOpacity; }
 interface Locked { node:Node; amount:Label; }
 @ccclass('SalonReels')
 export class SalonReels extends Component {
+  private cellTapes:{mask:Node;tape:Node;faces:Sprite[]}[]=[];
+  private primaryLayer?:Node;
+  private primaryLayout?:SpinResult['layout'];
+  private shutters:Node[]=[];
+  private shutterHeights:number[]=[];
+  public setPrimaryLayout(layout:SpinResult['layout']):void{this.primaryLayout=layout;this.paintPrimaryBoard();}
+  private paintPrimaryBoard(grid:readonly string[]=this.target):void{
+    if(!this.maskRoot)return;
+    const c=this.config,kind=c.primaryKind;
+    if(kind==='variable-ways'){
+      if(!this.primaryLayer){
+        this.primaryLayer=box(this.maskRoot,'Primary rule geometry',0,0,this.width,this.height);
+        for(let x=0;x<c.columns;x++){
+          const shutter=box(this.primaryLayer,'Recessed reel shutter '+x,this.x(x),-this.height/2,this.cellW,this.height);
+          const g=shutter.addComponent(Graphics),w=this.cellW;
+          // Brushed rolling metal, recessed behind the rim: no per-cell plates.
+          const tone=[88, 43, 24];
+          for(let k=0;k<72;k++){
+            const u=k/71,shine=9+Math.cos(u*Math.PI*3)*6;
+            g.fillColor=new Color(tone[0]+shine,tone[1]+shine,tone[2]+shine);
+            g.rect(-w/2,-this.height*(k+1)/72,w,this.height/72+.5);g.fill();
+          }
+          // Fine horizontal grooves continue across adjacent closed reels.
+          for(let y=12;y<this.height;y+=12){
+            g.fillColor=new Color(12,8,4,58);g.rect(-w/2,-y,w,1.5);g.fill();
+            g.fillColor=new Color(255,222,160,32);g.rect(-w/2,-y-1.5,w,1);g.fill();
+          }
+          for(let k=0;k<12;k++){
+            const a=Math.round(14*Math.sin((k+.5)/12*Math.PI));
+            g.fillColor=new Color(255,228,167,a);g.rect(-w/2+k*w/12,-this.height,w/12+.5,this.height);g.fill();
+          }
+          g.fillColor=new Color(20,12,5,135);g.rect(-w/2,-10,w,10);g.fill();
+          g.fillColor=new Color('#9B7544');g.rect(-w/2,-4,w,4);g.fill();
+          g.fillColor=new Color('#FCE2AB');g.rect(-w/2,-5,w,1.5);g.fill();
+          this.shutters.push(shutter);
+        }
+      }
+      const heights=this.primaryLayout?.activeRows??Array(c.columns).fill(c.rows);
+      for(let x=0;x<c.columns;x++){
+        const height=heights[x],node=this.shutters[x];if(this.shutterHeights[x]===height)continue;
+        const previous=this.shutterHeights[x];this.shutterHeights[x]=height;
+        Tween.stopAllByTarget(node);const position=new Vec3(this.x(x),this.height/2-height*this.cellH,0);
+        if(previous!==undefined&&this.running&&!this.reducedMotion)tween(node).delay(x*.035).to(.52,{position},{easing:'sineInOut'}).start();
+        else node.setPosition(position);
+      }
+      this.primaryLayer.setSiblingIndex(this.maskRoot.children.length-1);
+      return;
+    }
+    if(this.primaryLayer){this.primaryLayer.active=false;this.primaryLayer.destroy();}
+    const layer=box(this.maskRoot,'Primary rule geometry',0,0,this.width,this.height);this.primaryLayer=layer;
+    const g=layer.addComponent(Graphics);g.strokeColor=new Color('#F9DD9D');g.lineWidth=2;
+    if(kind==='twin-boards'){
+      g.lineWidth=12;g.strokeColor=new Color('#765033');g.moveTo(-this.width/2,0);g.lineTo(this.width/2,0);g.stroke();g.lineWidth=3;g.strokeColor=new Color('#FFE0A5');g.stroke();
+
+    }
+    if(kind==='poker-reels'){
+      g.strokeColor=new Color(230,194,119,72);g.lineWidth=1;
+      for(let y=1;y<c.rows;y++){const edge=this.height/2-y*this.cellH;g.moveTo(-this.width/2+12,edge);g.lineTo(this.width/2-12,edge);g.stroke();}
+    }
+    if(kind==='vertical-lines'){
+      const reverse=c.id==='jade-treasury';g.strokeColor=new Color('#F8D18A');
+      for(let x=0;x<c.columns;x++){const y=reverse?-this.height/2+12:this.height/2-12,d=reverse?1:-1;g.moveTo(this.x(x)-8,y-d*6);g.lineTo(this.x(x),y+d*6);g.lineTo(this.x(x)+8,y-d*6);g.stroke();}
+    }
+    if(kind==='collector-grid'&&grid.length){
+      const coin=c.symbols.find(s=>!['wild','scatter','bonus'].includes(s.tier))!.id;
+      for(let p=0;p<grid.length;p++)if(grid[p]===coin||grid[p]===c.wildId){const x=this.x(Math.floor(p/c.rows)),y=this.y(p%c.rows),r=Math.min(this.cellW,this.cellH)*.42;g.lineWidth=grid[p]===c.wildId?2:1;g.strokeColor=new Color(245,209,137,grid[p]===c.wildId?125:55);g.arc(x,y,r,Math.PI*.15,Math.PI*.85,false);g.stroke();}
+    }
+
+  }
+
+  private coreGuide?:CoreReelGuide;
   private art!:SalonArt; private config!:GameConfig; private cols:Column[]=[];
   private sharp:Record<string,SpriteFrame>={};private blur:Record<string,SpriteFrame>={};
   private width=0;private height=0;private cellH=0;private cellW=0;
@@ -19,7 +94,7 @@ export class SalonReels extends Component {
   private locks:Locked[]=[];private locked:Readonly<Record<number,number>>={};
   private lights:ReelLight[]=[];private winFrames:{node:Node;alpha:UIOpacity;delay:number;active:boolean}[]=[];
   private winAge=99;private idleLightMix=1;
-  private sparks:{node:Node;alpha:UIOpacity;x:number;y:number;vx:number;vy:number;age:number;life:number}[]=[];
+  private sparks:{node:Node;alpha:UIOpacity;x:number;y:number;vx:number;vy:number;age:number;life:number;curl:number;twist:number}[]=[];
   private themeFX:{node:Node;alpha:UIOpacity;age:number;x:number;y:number}[]=[];private themeCursor=0;
   // Theme-specific mechanical timing. Reel math and result selection stay independent.
   private speed=12;private brakeDuration=.82;private ramp=.34;private hold=.8;private stagger=.14;private overrun=.045;private settle=.26;
@@ -42,6 +117,7 @@ export class SalonReels extends Component {
     for(const symbol of config.symbols){const index=SYMBOL_ART[symbol.id]??0;this.sharp[symbol.id]=art.frame(symbolAtlas(config.id),index);this.blur[symbol.id]=art.frame(symbolAtlas(config.id)+'-blur',index);}
     const [x,y]=imagePoint(rect);this.node.setPosition(x,y);
     this.maskRoot=box(this.node,'Exact-reel-aperture',0,0,this.width,this.height);this.maskRoot.addComponent(Mask).type=Mask.Type.GRAPHICS_RECT;
+    const guide=box(this.maskRoot,'Core rule guide',0,0,this.width,this.height);this.coreGuide=guide.addComponent(CoreReelGuide);this.coreGuide.setup(config,this.width,this.height);
     const rails=box(this.maskRoot,'Glass reel dividers',0,0,this.width,this.height).addComponent(Graphics);
     for(let pass=0;pass<2;pass++){
       rails.strokeColor=pass?new Color('#F7DDA0'):new Color(config.id==='pearl-palace'?'#486576':config.id==='jade-treasury'?'#97614C':'#96622D');rails.lineWidth=pass?1.6:6;
@@ -60,7 +136,7 @@ export class SalonReels extends Component {
           if(this.running||this.transitioning||this.reducedMotion)return;
           this.sparkle(col,j,6);this.themeAccent(col,j);cells[j+2].emphasis=.5;
         });
-        cells.push({node:n,sprite:n.getComponent(Sprite)!,alpha:opacity(n,255),logical:NaN,blurred:false,emphasis:0,echo,echoSprite:echo.getComponent(Sprite)!,echoAlpha,entryX:0,entryY:0,entryAngle:0,entryScaleX:1,entryScaleY:1});
+        cells.push({node:n,sprite:n.getComponent(Sprite)!,alpha:opacity(n,255),logical:NaN,blurred:false,emphasis:0,awardAge:Infinity,awardSpark:false,awardAccent:false,winning:false,echo,echoSprite:echo.getComponent(Sprite)!,echoAlpha,entryX:0,entryY:0,entryAngle:0,entryScaleX:1,entryScaleY:1});
       }
       this.cols.push({cells,elapsed:0,travel:0,final:0,brake:Infinity,stopped:true,landAge:99,velocity:0});
     }
@@ -77,9 +153,9 @@ export class SalonReels extends Component {
       this.lights.push({glow,glowAlpha:glow.getComponent(UIOpacity)!,glint,glintAlpha:glint.getComponent(UIOpacity)!,trail,trailAlpha:trail.getComponent(UIOpacity)!});
     }
     // A fixed particle pool keeps repeated wins from allocating nodes per frame.
-    for(let i=0;i<32;i++){
+    for(let i=0;i<96;i++){
       const node=art.light(this.maskRoot,3,0,0,30,30,0);
-      this.sparks.push({node,alpha:node.getComponent(UIOpacity)!,x:0,y:0,vx:0,vy:0,age:1,life:.7});
+      this.sparks.push({node,alpha:node.getComponent(UIOpacity)!,x:0,y:0,vx:0,vy:0,age:1,life:.7,curl:0,twist:0});
     }
     const tint=new Color(config.id==='pearl-palace'?'#BDECF5':config.id==='jade-treasury'?'#FFD0CE':'#FFE3A2');
     for(let i=0;i<12;i++){
@@ -116,21 +192,25 @@ export class SalonReels extends Component {
   private x(col:number):number{return -this.width/2+(col+.5)*this.cellW;}
   private y(row:number):number{return this.height/2-(row+.5)*this.cellH;}
   public show(grid:readonly string[]):void {
+    this.coreGuide?.highlight([]);
+    for(const reel of this.cellTapes)if(reel){reel.mask.active=false;Tween.stopAllByTarget(reel.tape);}
+    this.paintPrimaryBoard(grid);
     this.target=grid;this.running=false;this.transitioning=false;this.winFocus=0;this.winAge=99;
     for(const frame of this.winFrames){frame.active=false;frame.alpha.opacity=0;}
     for(let c=0;c<this.cols.length;c++){
       const col=this.cols[c];col.travel=col.final=100;col.stopped=true;col.velocity=0;
-      for(const cell of col.cells){cell.logical=NaN;cell.emphasis=0;Tween.stopAllByTarget(cell.node);Tween.stopAllByTarget(cell.alpha);cell.alpha.opacity=255;}
+      for(const cell of col.cells){cell.logical=NaN;cell.emphasis=0;cell.awardAge=Infinity;cell.winning=false;Tween.stopAllByTarget(cell.node);Tween.stopAllByTarget(cell.alpha);cell.alpha.opacity=255;}
       this.draw(c,false);
     }
   }
   public begin():void {
+    this.coreGuide?.highlight([]);
     this.winFocus=0;this.winAge=99;for(const frame of this.winFrames){frame.active=false;frame.alpha.opacity=0;}this.starting=this.target;this.running=true;this.transitioning=false;this.target=[];
     for(const [c,col] of this.cols.entries()){col.elapsed=0;col.travel=0;col.brake=Infinity;col.stopped=false;col.final=100000;col.landAge=99;col.velocity=0;
-      for(const [k,cell] of col.cells.entries()){cell.entryX=cell.node.position.x-this.x(c);cell.entryY=cell.node.position.y-this.y(k-2);cell.entryAngle=cell.node.angle;cell.entryScaleX=cell.node.scale.x;cell.entryScaleY=cell.node.scale.y;cell.logical=NaN;cell.emphasis=0;cell.alpha.opacity=255;Tween.stopAllByTarget(cell.node);Tween.stopAllByTarget(cell.alpha);}
+      for(const [k,cell] of col.cells.entries()){cell.entryX=cell.node.position.x-this.x(c);cell.entryY=cell.node.position.y-this.y(k-2);cell.entryAngle=cell.node.angle;cell.entryScaleX=cell.node.scale.x;cell.entryScaleY=cell.node.scale.y;cell.logical=NaN;cell.emphasis=0;cell.awardAge=Infinity;cell.winning=false;cell.alpha.opacity=255;Tween.stopAllByTarget(cell.node);Tween.stopAllByTarget(cell.alpha);}
     }
   }
-  public finish(result:SpinResult):Promise<void>{return this.finishGrid(result.grid);}
+  public finish(result:SpinResult):Promise<void>{this.setPrimaryLayout(result.layout);return this.finishGrid(result.grid).then(()=>this.paintPrimaryBoard(result.grid));}
   public finishGrid(grid:readonly string[],quick=false):Promise<void>{
     if(!this.running)this.begin();this.target=grid;
     // Quick mode changes HOLD duration, never velocity halfway through a spin.
@@ -140,10 +220,7 @@ export class SalonReels extends Component {
     }
     return new Promise(resolve=>{this.resolve=resolve;});
   }
-  private travelAt(t:number):number{
-    if(t<this.ramp){const u=t/this.ramp;return this.speed*this.ramp*(u*u*u-.5*u*u*u*u);}
-    return this.speed*this.ramp*.5+(t-this.ramp)*this.speed;
-  }
+  private travelAt(t:number):number{return reelTravel(t,this.speed,this.ramp);}
   private themeAccent(column:number,row:number):void{
     if(this.reducedMotion)return;const fx=this.themeFX[this.themeCursor++%this.themeFX.length];fx.age=0;fx.x=this.x(column);fx.y=this.y(row);fx.node.setPosition(fx.x,fx.y);fx.alpha.opacity=170;
   }
@@ -152,24 +229,76 @@ export class SalonReels extends Component {
       const spark=this.sparks[this.sparkCursor++%this.sparks.length],angle=i*Math.PI*2/count+this.clock;
       spark.x=this.x(column);spark.y=this.y(row);
       spark.vx=Math.cos(angle)*this.cellW*.42;spark.vy=Math.sin(angle)*this.cellH*.42+30;
-      spark.age=0;spark.node.setPosition(spark.x,spark.y);
+      spark.age=0;spark.life=.7;spark.curl=0;spark.twist=0;spark.alpha.opacity=0;spark.node.setScale(1,1,1);spark.node.angle=0;spark.node.setPosition(spark.x,spark.y);
+    }
+  }
+  /** Reuses the fixed sparkle pool; no nodes or vectors are created per frame. */
+  private dissolve(column:number,row:number,delay:number):void{
+    if(this.reducedMotion)return;
+    this.themeAccent(column,row);
+    const theme=['golden-hour','jade-treasury','pearl-palace','ruby-revel'].indexOf(this.config.id);
+    for(let i=0;i<3;i++){
+      const spark=this.sparks[this.sparkCursor++%this.sparks.length],angle=i*Math.PI*2/3+column*.39+row*.27;
+      spark.x=this.x(column);spark.y=this.y(row);
+      spark.vx=Math.cos(angle)*this.cellW*.46;spark.vy=Math.sin(angle)*this.cellH*.3+this.cellH*.65;
+      spark.age=-delay;spark.life=.58+(i%2)*.16;spark.curl=this.cellW*(theme%2?-.22:.22);spark.twist=angle;
+      spark.alpha.opacity=0;spark.node.setScale(1,1,1);spark.node.angle=0;spark.node.setPosition(spark.x,spark.y);
+    }
+  }
+  /** Winning cells answer independently of reel landing; text and untouched cells never move. */
+  private awardCell(c:number,row:number,dt:number):void{
+    const cell=this.cols[c].cells[row+2];
+    if(this.reducedMotion){cell.awardAge=Infinity;cell.emphasis=0;return;}
+    if(!Number.isFinite(cell.awardAge))return;
+    const before=cell.awardAge;cell.awardAge+=Math.max(0,Math.min(dt,.1));
+    const age=cell.awardAge;if(age<0)return;
+    if(before<.065&&age>=.065&&cell.awardSpark){
+      this.sparkle(c,row,3);
+      if(cell.awardAccent)this.themeAccent(c,row);
+      if(cell.awardAccent)this.onWinAccent?.(c);
+    }
+    if(age>=.70){cell.awardAge=Infinity;cell.emphasis=0;return;}
+    let k=0;while(k<AWARD_POSES.length-2&&age>AWARD_POSES[k+1][0])k++;
+    const a=AWARD_POSES[k],b=AWARD_POSES[k+1],t=smoothStep5((age-a[0])/(b[0]-a[0]));
+    const sx=a[1]+(b[1]-a[1])*t,sy=a[2]+(b[2]-a[2])*t,lift=a[3]+(b[3]-a[3])*t;
+    const blend=age<.065?smoothStep5(age/.065):age>.49?1-smoothStep5((age-.49)/.21):1;
+    const n=cell.node,baseX=this.x(c),baseY=this.y(row);
+    // Suppress competing idle/landing motion smoothly instead of stacking scale overshoots.
+    n.setPosition(baseX+(n.position.x-baseX)*(1-blend),baseY+(n.position.y-baseY)*(1-blend)+lift*this.cellH);
+    n.setScale(1+(n.scale.x-1)*(1-blend)+sx-1,1+(n.scale.y-1)*(1-blend)+sy-1,1);
+    n.angle*=1-blend;cell.emphasis=blend*.65;
+  }
+  private prepareAward(positions:readonly number[]):void{
+    const chosen=new Set(positions),columns=new Set<number>();let sparkCount=0;
+    for(let c=0;c<this.cols.length;c++)for(let r=0;r<this.config.rows;r++){
+      const cell=this.cols[c].cells[r+2],selected=chosen.has(c*this.config.rows+r);
+      cell.winning=selected;cell.emphasis=0;
+      cell.awardAge=selected&&!this.transitioning&&!this.reducedMotion?-(c*.032+(r%3)*.013):Infinity;
+      cell.awardSpark=selected&&sparkCount++<12;cell.awardAccent=selected&&!columns.has(c);
+      if(selected)columns.add(c);
     }
   }
   public highlight(positions:readonly number[]):void{
+    const materialGuide=['cluster-avalanche','scatter-groups','collector-grid','poker-reels'].includes(this.config.primaryKind??'');
+    positions=Array.from(new Set(positions.filter(p=>Number.isInteger(p)&&p>=0&&p<this.config.columns*this.config.rows)));
+    this.prepareAward(positions);
+    this.coreGuide?.highlight(positions);
+    this.coreGuide?.node.setSiblingIndex(this.maskRoot.children.length-1);
+    if(this.primaryLayer?.isValid)this.primaryLayer.setSiblingIndex(this.maskRoot.children.length-1);
     const valid=new Set(positions.filter(p=>Number.isInteger(p)&&p>=0&&p<this.winFrames.length));
-    this.winAge=0;this.winFocus=valid.size?1.8+Math.max(...Array.from(valid,p=>Math.floor(p/this.config.rows)))*.09:0;
+    this.winAge=0;this.winFocus=valid.size?1.8+Math.max(...Array.from(valid,p=>Math.floor(p/this.config.rows)))*.032+.026:0;
     for(let p=0;p<this.winFrames.length;p++){
-      const frame=this.winFrames[p];frame.active=valid.has(p);frame.delay=Math.floor(p/this.config.rows)*.09;
+      const frame=this.winFrames[p];frame.active=!materialGuide&&valid.has(p);frame.delay=Math.floor(p/this.config.rows)*.032+(p%this.config.rows%3)*.013;
       frame.alpha.opacity=this.reducedMotion&&frame.active?220:0;
       this.cols[Math.floor(p/this.config.rows)].cells[p%this.config.rows+2].emphasis=0;
     }
   }
 
-  public lockCoins(values:Readonly<Record<number,number>>):void{
+  public lockCoins(values:Readonly<Record<number,number>>,symbolId=this.config.bonusId??this.config.wildId):void{
     const previous=this.locked;this.locked=values;
     for(let i=0;i<this.locks.length;i++){
       const lock=this.locks[i];lock.node.active=i in values;
-      if(lock.node.active){lock.amount.string=String(values[i]);if(!(i in previous)&&!this.reducedMotion){lock.node.setScale(.72,.72,1);tween(lock.node).to(.34,{scale:new Vec3(1,1,1)},{easing:'backOut'}).start();}}
+      if(lock.node.active){lock.amount.string=String(values[i]);const face=lock.node.children[0]?.getComponent(Sprite);if(face)face.spriteFrame=this.sharp[symbolId];if(!(i in previous)&&!this.reducedMotion){lock.node.setScale(.72,.72,1);tween(lock.node).to(.34,{scale:new Vec3(1,1,1)},{easing:'backOut'}).start();}}
     }
     if(!this.running)for(let c=0;c<this.cols.length;c++)this.draw(c,false);
   }
@@ -184,34 +313,129 @@ export class SalonReels extends Component {
       const refill=this.config.rows-sources[c].length;
       for(let r=refill;r<this.config.rows;r++)if(old[c*this.config.rows+sources[c][r-refill]]!==grid[c*this.config.rows+r])throw new Error('Invalid cascade survivor');
     }
-    if(this.reducedMotion){this.show(grid);return;}
+    if(this.reducedMotion||!cleared.size){this.show(grid);return;}
     this.transitioning=true;
     this.highlight(removed);
-    for(const position of removed){const cell=this.cols[Math.floor(position/this.config.rows)].cells[position%this.config.rows+2];tween(cell.node).to(.2,{scale:new Vec3(.2,.2,1)},{easing:'backIn'}).start();tween(cell.alpha).to(.18,{opacity:0}).start();}
-    await this.wait(this.reducedMotion?.01:.22);if(!this.isValid)return;
+    let clearAt=0;
+    for(const position of removed){
+      const col=Math.floor(position/this.config.rows),row=position%this.config.rows,cell=this.cols[col].cells[row+2],delay=(col%3)*.014+(row%3)*.010;
+      this.dissolve(col,row,delay+.075);
+      Tween.stopAllByTarget(cell.node);Tween.stopAllByTarget(cell.alpha);
+      tween(cell.node).delay(delay).to(.075,{scale:new Vec3(1.045,1.045,1)},{easing:'sineOut'}).to(.165,{scale:new Vec3(.34,.34,1),position:new Vec3(this.x(col),this.y(row)+this.cellH*.045,0)},{easing:'sineIn'}).start();
+      tween(cell.alpha).delay(delay+.06).to(.18,{opacity:0},{easing:'sineInOut'}).start();
+      clearAt=Math.max(clearAt,delay+.24);
+    }
+    await this.wait(clearAt+.010);if(!this.isValid)return;
     this.show(grid);this.transitioning=true;
+    let finishAt=0;
     for(let c=0;c<this.cols.length;c++){
-      const survivors=sources[c];
-      const refill=this.config.rows-survivors.length;
+      const survivors=sources[c],refill=this.config.rows-survivors.length;
       for(let r=0;r<this.config.rows;r++){
-        const cell=this.cols[c].cells[r+2];const source=r<refill?r-refill:survivors[r-refill];
-        cell.node.setPosition(this.x(c),this.y(source));
-        const distance=Math.max(0,r-source),duration=.22+Math.min(3,distance)*.055;
-        if(!distance){cell.node.setPosition(this.x(c),this.y(r));continue;}
-        // Each symbol falls from its own source, with a short, contained landing.
+        const cell=this.cols[c].cells[r+2],source=r<refill?r-refill:survivors[r-refill];
+        const distance=Math.max(0,r-source),delay=fallDelay(c,r),duration=fallDuration(distance);
+        const panelY=0;
+        cell.node.setPosition(this.x(c),this.y(source)-panelY);cell.node.setScale(1,1,1);cell.node.angle=0;
+        if(!distance){cell.node.setPosition(this.x(c),this.y(r)-panelY);continue;}
         cell.alpha.opacity=r<refill?0:255;
-        tween(cell.alpha).delay(c*.035).to(.12,{opacity:255}).start();
-        tween(cell.node).delay(c*.035)
-          .to(duration,{position:new Vec3(this.x(c),this.y(r)-this.cellH*.025,0)},{easing:'quadIn'})
-          .call(()=>{if(this.isValid){this.themeAccent(c,r);this.sparkle(c,r,2);}})
-          .to(.11,{position:new Vec3(this.x(c),this.y(r)+this.cellH*.010,0),scale:new Vec3(1.025,.975,1)},{easing:'quadOut'})
-          .to(.14,{position:new Vec3(this.x(c),this.y(r),0),scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();
+        tween(cell.alpha).delay(delay).to(.10,{opacity:255},{easing:'sineOut'}).start();
+        const targetY=this.y(r)-panelY;
+        // Position accelerates continuously; squash/stretch runs alongside it, never
+        // splitting the fall into velocity-resetting position tweens.
+        const stretch=1+Math.min(.065,.035+Math.sqrt(distance)*.012);
+        const rebound=this.cellH*Math.min(.017,.009+Math.sqrt(distance)*.003);
+        const impact=.065,lift=.09,settle=.12;
+        tween(cell.node).delay(delay).parallel(
+          tween(cell.node).to(duration,{position:new Vec3(this.x(c),targetY,0)},{easing:'quadIn'}),
+          tween(cell.node).to(duration*.62,{scale:new Vec3(1-(stretch-1)*.55,stretch,1)},{easing:'sineIn'})
+            .to(duration*.38,{scale:new Vec3(1,1,1)},{easing:'sineInOut'})
+        )
+          .to(impact,{position:new Vec3(this.x(c),targetY-this.cellH*.009,0),scale:new Vec3(1.055,.94,1)},{easing:'sineOut'})
+          .call(()=>{if(this.isValid&&r===this.config.rows-1)this.sparkle(c,r,2);})
+          .to(lift,{position:new Vec3(this.x(c),targetY+rebound,0),scale:new Vec3(.987,1.025,1)},{easing:'quadOut'})
+          .to(settle,{position:new Vec3(this.x(c),targetY,0),scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();
+        finishAt=Math.max(finishAt,delay+duration+impact+lift+settle);
       }
     }
-    await this.wait(.22+Math.min(3,this.config.rows)*.055+.25+(this.config.columns-1)*.035+.04);
-    if(!this.isValid)return;
+    await this.wait(finishAt+.016);if(!this.isValid)return;
+    // Exact resting transforms also cover low frame rates and interrupted last tween ticks.
+    for(let c=0;c<this.cols.length;c++)for(let r=0;r<this.config.rows;r++){
+      const cell=this.cols[c].cells[r+2];Tween.stopAllByTarget(cell.node);Tween.stopAllByTarget(cell.alpha);
+      cell.node.setPosition(this.x(c),this.y(r));cell.node.setScale(1,1,1);cell.node.angle=0;cell.alpha.opacity=255;
+    }
     for(const col of this.cols)col.landAge=this.landingDuration+(this.config.rows-1)*this.landingDelay;
     this.transitioning=false;
+  }
+  public async transformTo(grid:readonly string[],focus:readonly number[]=[]):Promise<void>{
+    if(grid.length!==this.config.columns*this.config.rows)throw new Error('Invalid transformation grid');
+    const changed=grid.flatMap((id,i)=>id!==this.target[i]?[i]:[]);
+    if(this.reducedMotion){this.show(grid);return;}
+    this.transitioning=true;
+    for(const p of changed){const cell=this.cols[Math.floor(p/this.config.rows)].cells[p%this.config.rows+2];Tween.stopAllByTarget(cell.node);tween(cell.node).to(.15,{scale:new Vec3(.80,.80,1)},{easing:'sineIn'}).start();tween(cell.alpha).to(.15,{opacity:90}).start();}
+    await this.wait(.16);if(!this.isValid)return;
+    this.show(grid);this.transitioning=true;
+    for(const p of changed){const col=Math.floor(p/this.config.rows),row=p%this.config.rows,cell=this.cols[col].cells[row+2];cell.node.setScale(.80,.80,1);cell.alpha.opacity=90;tween(cell.node).to(.20,{scale:new Vec3(1.025,1.025,1)},{easing:'sineOut'}).to(.12,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();tween(cell.alpha).to(.2,{opacity:255}).start();this.sparkle(col,row,2);}
+    this.highlight(focus.length?focus:changed);await this.wait(.36);
+    // Transformation focus is an action cue, not proof of a winning combination.
+    if(this.isValid){for(const p of changed){const cell=this.cols[Math.floor(p/this.config.rows)].cells[p%this.config.rows+2];Tween.stopAllByTarget(cell.node);Tween.stopAllByTarget(cell.alpha);cell.node.setScale(1,1,1);cell.node.angle=0;cell.alpha.opacity=255;}this.highlight([]);this.transitioning=false;}
+  }
+  /** Cache each aperture and tape; repeated collector respins allocate no new scene nodes. */
+  public async respinCells(grid:readonly string[],held:readonly number[]=[]):Promise<void>{
+    if(this.reducedMotion){this.show(grid);return;}
+    this.show(this.target);this.transitioning=true;const fixed=new Set(held),steps=7;
+    for(let p=0;p<grid.length;p++)if(!fixed.has(p)){
+      const x=Math.floor(p/this.config.rows),y=p%this.config.rows,cell=this.cols[x].cells[y+2];cell.alpha.opacity=0;
+      let reel=this.cellTapes[p];
+      if(!reel){
+        const mask=box(this.maskRoot,'Cached cell aperture '+p,this.x(x),this.y(y),this.cellW,this.cellH);mask.addComponent(Mask).type=Mask.Type.GRAPHICS_RECT;
+        const tape=box(mask,'Reusable symbol tape',0,0,this.cellW,this.cellH),faces:Sprite[]=[];
+        for(let k=0;k<=steps;k++)faces.push(this.art.image(tape,symbolAtlas(this.config.id),0,k*this.cellH,Math.min(this.cellW,this.cellH)*.87,Math.min(this.cellW,this.cellH)*.87,0).getComponent(Sprite)!);
+        reel=this.cellTapes[p]={mask,tape,faces};
+      }
+      reel.mask.active=true;reel.tape.setPosition(0,0);const strip=this.config.reelStrips[x];
+      for(let k=0;k<=steps;k++){const id=k===0?this.target[p]:k===steps?grid[p]:strip[(p*7+k*3)%strip.length];reel.faces[k].spriteFrame=this.sharp[id];}
+      tween(reel.tape).delay(x*.04+(y%3)*.012).to(.94,{position:new Vec3(0,-steps*this.cellH,0)},{easing:smoothStep5}).start();
+    }
+    if(this.primaryLayer?.isValid)this.primaryLayer.setSiblingIndex(this.maskRoot.children.length-1);
+    await this.wait(.99+(this.config.columns-1)*.04);if(!this.isValid)return;
+    this.show(grid);
+  }
+  /** Ease actual source-to-destination travel; deformation stays inside the symbol margin. */
+  private glideSymbol(node:Node,x:number,y:number,duration=.42):void{
+    const dx=Math.abs(x-node.position.x),dy=Math.abs(y-node.position.y),length=dx+dy;
+    const ax=length?dx/length:0,ay=length?dy/length:0;
+    const stretch=new Vec3(1+.048*ax-.024*ay,1+.048*ay-.024*ax,1);
+    const contact=new Vec3(1-.018*ax+.018*ay,1-.018*ay+.018*ax,1);
+    tween(node).parallel(
+      tween(node).to(duration,{position:new Vec3(x,y,0)},{easing:smoothStep5}),
+      tween(node).to(duration*.46,{scale:stretch},{easing:'sineInOut'})
+        .to(duration*.54,{scale:contact},{easing:'sineInOut'})
+    ).to(.11,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();
+  }
+  public async moveSymbols(grid:readonly string[],moves:readonly {from:number;to:number}[],held:readonly number[]=[]):Promise<void>{
+    if(this.reducedMotion){this.show(grid);return;}
+    const old=Array.from(this.target),fixed=new Set(held.filter(p=>old[p]===grid[p]&&!moves.some(m=>m.to===p||m.from===p))),dest=new Set(moves.map(m=>m.to)),nodes:Node[]=[];
+    this.show(old);this.transitioning=true;
+    for(let p=0;p<old.length;p++)if(!fixed.has(p))this.cols[Math.floor(p/this.config.rows)].cells[p%this.config.rows+2].alpha.opacity=0;
+    for(const m of moves){const ghost=this.art.image(this.maskRoot,symbolAtlas(this.config.id),this.x(Math.floor(m.from/this.config.rows)),this.y(m.from%this.config.rows),Math.min(this.cellW,this.cellH)*.87,Math.min(this.cellW,this.cellH)*.87,SYMBOL_ART[old[m.from]]);nodes.push(ghost);this.glideSymbol(ghost,this.x(Math.floor(m.to/this.config.rows)),this.y(m.to%this.config.rows));}
+    const horizontal=moves.some(m=>Math.floor(m.from/this.config.rows)!==Math.floor(m.to/this.config.rows));
+    // New symbols enter opposite to the actual movement, including upward refills.
+    const direction=moves.find(m=>m.from!==m.to);
+    const incomingX=horizontal&&direction?-Math.sign(Math.floor(direction.to/this.config.rows)-Math.floor(direction.from/this.config.rows))*this.cellW:0;
+    const incomingY=!horizontal&&direction?Math.sign(direction.to%this.config.rows-direction.from%this.config.rows)*this.cellH:0;
+    for(let p=0;p<grid.length;p++)if(!dest.has(p)&&!fixed.has(p)){
+      const x=this.x(Math.floor(p/this.config.rows)),y=this.y(p%this.config.rows),ghost=this.art.image(this.maskRoot,symbolAtlas(this.config.id),x+incomingX,y+incomingY,Math.min(this.cellW,this.cellH)*.87,Math.min(this.cellW,this.cellH)*.87,SYMBOL_ART[grid[p]]);nodes.push(ghost);const alpha=opacity(ghost,0);tween(alpha).delay(.025).to(.20,{opacity:255},{easing:'sineOut'}).start();this.glideSymbol(ghost,x,y);
+    }
+    await this.wait(.546);if(!this.isValid)return;nodes.forEach(n=>n.destroy());this.show(grid);
+  }
+  public async riseTo(grid:readonly string[],removed:readonly number[]):Promise<void>{
+    const cleared=new Set(removed),moves:{from:number;to:number}[]=[];
+    for(let x=0;x<this.config.columns;x++){let y=0;for(let r=0;r<this.config.rows;r++)if(!cleared.has(x*this.config.rows+r)){const from=x*this.config.rows+r,to=x*this.config.rows+y++;if(this.target[from]!==grid[to])throw new Error('Invalid rising survivor');moves.push({from,to});}}
+    if(this.reducedMotion){this.show(grid);return;}this.show(this.target);this.transitioning=true;
+    const nodes:Node[]=[];for(const col of this.cols)for(const cell of col.cells)cell.alpha.opacity=0;
+    const destinations=new Set(moves.map(m=>m.to));
+    for(let p=0;p<grid.length;p++){const m=moves.find(m=>m.to===p),x=Math.floor(p/this.config.rows),y=p%this.config.rows,source=m?m.from%this.config.rows:y+this.config.rows;
+      const n=this.art.image(this.maskRoot,symbolAtlas(this.config.id),this.x(x),this.y(source),Math.min(this.cellW,this.cellH)*.87,Math.min(this.cellW,this.cellH)*.87,SYMBOL_ART[grid[p]]);nodes.push(n);tween(n).delay(x*.035).to(.48,{position:new Vec3(this.x(x),this.y(y),0)},{easing:'sineInOut'}).start();}
+    await this.wait(.5+(this.config.columns-1)*.035);if(!this.isValid)return;nodes.forEach(n=>n.destroy());this.show(grid);
   }
   public async expandColumn(column:number):Promise<void>{
     if(this.reducedMotion)return;
@@ -219,27 +443,24 @@ export class SalonReels extends Component {
     light.setScale(.6,.1,1);tween(light).to(.35,{scale:new Vec3(1,1,1)},{easing:'backOut'}).start();
     this.highlight(Array.from({length:this.config.rows},(_,r)=>column*this.config.rows+r));
     await this.wait(this.reducedMotion?.04:.65);if(light.isValid)light.destroy();
+    if(this.isValid)this.highlight([]); // Expansion is an action cue; the caller highlights real wins.
   }
   private wait(seconds:number):Promise<void>{return new Promise(resolve=>this.scheduleOnce(resolve,seconds));}
   protected update(dt:number):void{
+    if(this.coreGuide){this.coreGuide.busy=this.running||this.transitioning;this.coreGuide.reduced=this.reducedMotion;}
     this.clock+=Math.min(dt,.1);this.winFocus=Math.max(0,this.winFocus-dt);
     let wanted=0;if(this.running)for(const col of this.cols)wanted=Math.max(wanted,col.velocity);
     this.kineticEnergy+=(wanted-this.kineticEnergy)*(1-Math.exp(-dt*7));this.onMotion?.(this.reducedMotion?0:this.kineticEnergy);
     this.idleLightMix+=((this.winFocus>0?0:1)-this.idleLightMix)*(1-Math.exp(-dt*10));
-    const priorWinAge=this.winAge;this.winAge+=Math.min(dt,.1);
-    let accentedColumn=-1;
+    this.winAge+=Math.min(dt,.1);
     for(let p=0;p<this.winFrames.length;p++){
       const frame=this.winFrames[p];if(!frame.active)continue;
-      const age=this.winAge-frame.delay,previous=priorWinAge-frame.delay;
-      if(previous<=0&&age>0){
-        const c=Math.floor(p/this.config.rows),r=p%this.config.rows;this.cols[c].cells[r+2].emphasis=1;
-        if(!this.reducedMotion){this.themeAccent(c,r);this.sparkle(c,r,4);if(accentedColumn!==c){this.onWinAccent?.(c);accentedColumn=c;}}
-      }
+      const age=this.winAge-frame.delay;
       const enter=Math.min(1,Math.max(0,age/.18)),exit=Math.min(1,Math.max(0,(1.8-age)/.48));
       frame.alpha.opacity=age<0?0:this.reducedMotion?(age<1.8?220:0):enter*exit*(220+Math.sin(Math.max(0,age)*5)*25);
       if(age>=1.8)frame.active=false;
     }
-    for(const col of this.cols)for(const cell of col.cells){if(!this.running)cell.echoAlpha.opacity=0;if(this.transitioning)continue;const target=this.winFocus>0&&cell.emphasis<.1?172:255;cell.alpha.opacity+=(target-cell.alpha.opacity)*(1-Math.exp(-dt*9));}
+    for(const col of this.cols)for(const cell of col.cells){if(!this.running)cell.echoAlpha.opacity=0;if(this.transitioning)continue;const target=this.winFocus>0&&!cell.winning?220:255;cell.alpha.opacity+=(target-cell.alpha.opacity)*(1-Math.exp(-dt*9));}
     for(const fx of this.themeFX){if(this.reducedMotion||fx.age>=.95){if(fx.alpha.opacity)fx.alpha.opacity=0;continue;}fx.age+=Math.min(dt,.1);const t=Math.min(1,fx.age/.95);fx.alpha.opacity=this.reducedMotion?0:170*Math.sin(t*Math.PI)*Math.pow(1-t,.5);const k=.45+t*.85;fx.node.setScale(k,k,1);fx.node.setPosition(fx.x,fx.y+(this.config.id==='pearl-palace'?t*this.cellH*.10:0));fx.node.angle=this.config.id==='jade-treasury'?t*14:0;}
     const idle=!this.running&&!this.transitioning&&!this.reducedMotion;
     for(const mote of this.motes){
@@ -251,12 +472,12 @@ export class SalonReels extends Component {
     }
     if(idle&&this.winFocus<=0){
       this.idleSparkAge+=Math.min(dt,.1);
-      if(this.idleSparkAge>2.2){this.idleSparkAge=0;const index=Math.floor(this.clock/2.2)%(this.config.columns*this.config.rows);this.sparkle(Math.floor(index/this.config.rows),index%this.config.rows,3);}
+      if(this.idleSparkAge>2.2){this.idleSparkAge=0;const index=Math.floor(this.clock/2.2)%(this.config.columns*this.config.rows);}
     }else this.idleSparkAge=0;
     for(const spark of this.sparks){
       if(this.reducedMotion||spark.age>=spark.life){spark.alpha.opacity=0;continue;}
-      spark.age+=Math.min(dt,.1);const t=spark.age,p=Math.min(1,t/spark.life);
-      spark.node.setPosition(spark.x+spark.vx*t,spark.y+spark.vy*t-120*t*t);
+      spark.age+=Math.min(dt,.1);if(spark.age<0){spark.alpha.opacity=0;continue;}const t=spark.age,p=Math.min(1,t/spark.life);
+      spark.node.setPosition(spark.x+spark.vx*t+Math.sin(p*Math.PI*2+spark.twist)*spark.curl*p,spark.y+spark.vy*t-120*t*t);
       spark.node.setScale(1-p*.7,1-p*.7,1);spark.node.angle=t*140;
       spark.alpha.opacity=220*(1-p)*(1-p);
     }
@@ -288,34 +509,33 @@ export class SalonReels extends Component {
     for(let c=0;c<this.cols.length;c++){
       const col=this.cols[c];if(col.stopped){for(let r=0;r<this.config.rows;r++)this.restCell(c,r,dt);stopped++;continue;}
       col.elapsed+=Math.min(dt,.1);const t=col.elapsed;
+      const ramp=this.ramp,overrun=this.overrun,settle=this.settle;
+      let velocity=reelVelocity(t,this.speed,ramp);
       if(t<col.brake)col.travel=this.travelAt(t);
       else{
-        const u=Math.min(1,(t-col.brake)/this.brakeDuration),start=this.travelAt(col.brake);
-        const u2=u*u,u3=u2*u;
-        col.travel=(2*u3-3*u2+1)*start+(u3-2*u2+u)*this.speed*this.brakeDuration+(-2*u3+3*u2)*(col.final+this.overrun);
-        if(u>=1){const b=Math.min(1,(t-col.brake-this.brakeDuration)/this.settle);col.travel=col.final+this.overrun*(1-b*b*(3-2*b));if(b>=1){col.travel=col.final;col.stopped=true;col.landAge=0;this.sparkle(c,this.config.rows-1,3);this.onStop?.(c);stopped++;}}
+        const u=Math.min(1,(t-col.brake)/this.brakeDuration),start=this.travelAt(col.brake),end=col.final+overrun;
+        col.travel=brakeTravel(u,start,end,this.speed,this.brakeDuration);
+        velocity=brakeVelocity(u,start,end,this.speed,this.brakeDuration);
+        if(u>=1){const b=Math.min(1,(t-col.brake-this.brakeDuration)/settle);col.travel=col.final+overrun*(1-b*b*(3-2*b));velocity=0;if(b>=1){col.travel=col.final;col.stopped=true;col.landAge=0;this.sparkle(c,this.config.rows-1,3);this.onStop?.(c);stopped++;}}
       }
-      // Use actual velocity for continuous stretch; avoid sharp/blur atlas swaps.
-      const u=Math.min(1,Math.max(0,(t-col.brake)/this.brakeDuration));
-      const start=this.travelAt(col.brake),end=col.final+this.overrun;
-      const velocity=t<col.brake?this.speed*(t<this.ramp?(3*(t/this.ramp)**2-2*(t/this.ramp)**3):1):u<1?((6*u*u-6*u)*start+(3*u*u-4*u+1)*this.speed*this.brakeDuration+(-6*u*u+6*u)*end)/this.brakeDuration:0;
-      col.velocity=col.stopped?0:Math.min(1,Math.max(0,velocity/this.speed));this.draw(c,false,col.velocity);
+      const motion=col.stopped?0:Math.min(1,Math.max(0,velocity/this.speed));
+      col.velocity=motion;this.draw(c,false,motion);
     }
     if(stopped===this.cols.length){this.running=false;const done=this.resolve;this.resolve=undefined;done?.();}
   }
   private restCell(c:number,j:number,dt:number):void {
         const landingEnd=this.landingDuration+(this.config.rows-1)*this.landingDelay;
-        if(!this.reducedMotion&&this.cols[c].landAge<landingEnd){this.landingCell(c,j);return;}
+        if(!this.reducedMotion&&this.cols[c].landAge<landingEnd){this.landingCell(c,j);this.awardCell(c,j,dt);return;}
         // Blend out of the exact spring rest before resuming independent idle motion.
         const u=Math.min(1,Math.max(0,(this.cols[c].landAge-landingEnd)/.45)),mix=this.reducedMotion?0:u*u*(3-2*u);
         const cell=this.cols[c].cells[j+2],wave=Math.sin(this.clock*1.15+c*.9+j*1.3)*mix;
         const phase=(this.clock+c*.53)%3.8,activeRow=Math.floor((this.clock+c*.53)/3.8)%this.config.rows;
         const hop=j!==activeRow?0:Math.sin(Math.min(1,phase/1.3)*Math.PI)*mix;
-        cell.emphasis=Math.max(0,cell.emphasis-dt*.6);const punch=cell.emphasis*.09*mix;
-        cell.node.setPosition(this.x(c),this.y(j)+wave*Math.min(5,this.cellH*.028)+hop*Math.min(7,this.cellH*.035));
+        cell.emphasis=Math.max(0,cell.emphasis-dt*.6);
+        cell.node.setPosition(this.x(c),this.y(j)+wave*Math.min(2,this.cellH*.012)+hop*Math.min(3,this.cellH*.014));
         // Preserve the jewel's silhouette: breathe uniformly, never stretch it.
         const landing=this.reducedMotion?0:Math.max(0,1-this.cols[c].landAge/.55)*Math.sin(this.cols[c].landAge*19)*.055;
-        const breath=Math.min(1.085,1+wave*.012+punch+hop*.025+landing);
+        const breath=Math.min(1.085,1+wave*.010+hop*.018+landing);
         const id=this.target[c*this.config.rows+j],coin=id==='coin',pearl=this.config.id==='pearl-palace'&&(id==='pearl'||id==='chip'),pig=this.config.id==='golden-hour'&&id==='bell';
         if(!this.reducedMotion&&(pearl||pig)){const t=this.clock*(pearl?1.0:1.35)+c+j;cell.node.setPosition(this.x(c)+Math.sin(t)*this.cellW*.035*mix,this.y(j)+Math.cos(t*.8)*this.cellH*.038*mix);}
         const turn=(this.clock+c*.8+j*.6)%7.5;
@@ -323,6 +543,7 @@ export class SalonReels extends Component {
         cell.node.setScale(breath*tilt,breath,1);
         cell.node.angle=this.reducedMotion?0:wave*(pearl?1.3:pig?1.5:this.config.id==='jade-treasury'?1.8:1.1)+hop*Math.sin(phase*7)*1.8;
 
+    this.awardCell(c,j,dt);
   }
 
   private landingCell(c:number,row:number):void{

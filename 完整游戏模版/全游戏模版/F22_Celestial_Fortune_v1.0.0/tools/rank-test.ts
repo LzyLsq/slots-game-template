@@ -37,13 +37,11 @@ const main=async():Promise<void>=>{
 
 void main();
 
-const player={rank:1,nickname:'Player',winnings:100000,avatar:6,current:true};
-const mixed=hallStandings([player]);
-assert.equal(mixed.find(r=>r.current)?.rank,2);
-assert.equal(mixed.filter(r=>r.virtual).length,12);
-assert.equal(player.rank,1,'Presentation must not mutate real rank');
-assert.equal(hallStandings([{...player,winnings:200000}])[0].current,true);
-assert.equal(hallStandings([{...player,winnings:128000}])[0].current,true);
-assert.equal(hallStandings([{...player,winnings:0}]).find(r=>r.current)?.rank,13);
-assert(mixed.every((r,i)=>r.rank===i+1&&(!i||mixed[i-1].winnings>=r.winnings)));
-console.log('PASS mixed standings: score order, player promotion, ties, zero score and immutable source');
+const characters=hallStandings([]);
+assert.equal(characters.length,8);
+const top=characters[0].winnings;
+const player={rank:1,nickname:'Player',winnings:top,avatar:6,current:true};
+assert(hallStandings([player])[0].current,'Real player wins score ties');
+assert.equal(hallStandings([{...player,winnings:0}]).find(r=>r.current)?.rank,9);
+assert.equal(player.rank,1,'Display must not mutate real standings');
+assert(hallStandings([player]).every((r,i,a)=>r.rank===i+1&&(!i||a[i-1].winnings>=r.winnings)));

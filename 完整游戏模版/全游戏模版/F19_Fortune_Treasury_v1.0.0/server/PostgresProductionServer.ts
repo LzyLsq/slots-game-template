@@ -1,3 +1,4 @@
+import {ECONOMY} from '../assets/scripts/math/EconomyProfile';
 import { createHash, randomBytes, randomUUID, scrypt as scryptCallback, timingSafeEqual } from 'node:crypto';
 import { createReadStream, existsSync, statSync } from 'node:fs';
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
@@ -55,8 +56,8 @@ class PostgresGameService {
     try {
       await client.query('BEGIN');
       await client.query('INSERT INTO accounts (id, username, nickname, app_account_token, password_hash, password_salt, is_guest, terms_version, privacy_version, terms_accepted_at, age_confirmed_at) VALUES ($1, $2, $3, $4, $5, $6, false, $7, $8, now(), now())', [id, username, nickname, appAccountToken, hash, salt, TERMS_VERSION, PRIVACY_VERSION]);
-      await client.query('INSERT INTO wallets (account_id, balance) VALUES ($1, $2)', [id, 100_000]); await client.query('COMMIT');
-      return { id, appAccountToken, username, nickname, avatar: 0, settings: DEFAULT_SETTINGS, isGuest: false, signInProvider: 'password', credential: { hash, salt }, credits: 100_000 };
+      await client.query('INSERT INTO wallets (account_id, balance) VALUES ($1, $2)', [id, ECONOMY.start]); await client.query('COMMIT');
+      return { id, appAccountToken, username, nickname, avatar: 0, settings: DEFAULT_SETTINGS, isGuest: false, signInProvider: 'password', credential: { hash, salt }, credits: ECONOMY.start };
     } catch (error) { await client.query('ROLLBACK'); if ((error as { code?: string }).code === '23505') throw new ApiError(409, 'Account already exists.'); throw error; } finally { client.release(); }
   }
 
@@ -79,16 +80,16 @@ class PostgresGameService {
     try {
       await client.query('BEGIN');
       await client.query('INSERT INTO accounts (id, username, nickname, app_account_token, apple_subject, is_guest, terms_version, privacy_version, terms_accepted_at, age_confirmed_at) VALUES ($1,$2,$3,$4,$5,false,$6,$7,now(),now())', [id, username, nickname, appAccountToken, claims.sub, TERMS_VERSION, PRIVACY_VERSION]);
-      await client.query('INSERT INTO wallets (account_id, balance) VALUES ($1,$2)', [id, 100_000]); await client.query('COMMIT');
-      return { id, appAccountToken, username, nickname, avatar: 0, settings: DEFAULT_SETTINGS, isGuest: false, signInProvider: 'apple', credits: 100_000 };
+      await client.query('INSERT INTO wallets (account_id, balance) VALUES ($1,$2)', [id, ECONOMY.start]); await client.query('COMMIT');
+      return { id, appAccountToken, username, nickname, avatar: 0, settings: DEFAULT_SETTINGS, isGuest: false, signInProvider: 'apple', credits: ECONOMY.start };
     } catch (error) { await client.query('ROLLBACK'); if ((error as { code?: string }).code === '23505') throw new ApiError(409, 'This Apple account is already linked. Please try again.'); throw error; } finally { client.release(); }
   }
 
   public async guest(): Promise<Account> {
     const id = randomUUID(); const appAccountToken = randomUUID(); const username = `guest_${randomBytes(6).toString('hex')}`; const client = await this.pool.connect();
-    try { await client.query('BEGIN'); await client.query('INSERT INTO accounts (id, username, nickname, app_account_token, is_guest) VALUES ($1, $2, $3, $4, true)', [id, username, 'Fortune Guest', appAccountToken]); await client.query('INSERT INTO wallets (account_id, balance) VALUES ($1, $2)', [id, 100_000]); await client.query('COMMIT'); }
+    try { await client.query('BEGIN'); await client.query('INSERT INTO accounts (id, username, nickname, app_account_token, is_guest) VALUES ($1, $2, $3, $4, true)', [id, username, 'Fortune Guest', appAccountToken]); await client.query('INSERT INTO wallets (account_id, balance) VALUES ($1, $2)', [id, ECONOMY.start]); await client.query('COMMIT'); }
     catch (error) { await client.query('ROLLBACK'); throw error; } finally { client.release(); }
-    return { id, appAccountToken, username, nickname: 'Fortune Guest', avatar: 0, settings: DEFAULT_SETTINGS, isGuest: true, signInProvider: 'guest', credits: 100_000 };
+    return { id, appAccountToken, username, nickname: 'Fortune Guest', avatar: 0, settings: DEFAULT_SETTINGS, isGuest: true, signInProvider: 'guest', credits: ECONOMY.start };
   }
 
   public async createSession(account: Account): Promise<{ token: string; csrfToken: string }> {
@@ -115,10 +116,11 @@ class PostgresGameService {
 
   public async spin(account: Account, input: Record<string, unknown>): Promise<{ result: SpinResult; balance: number }> {
     const gameId = input.gameId as GameId; const config = GAME_CONFIG_BY_ID[gameId]; const bet = Number(input.bet); const requestId = typeof input.requestId === 'string' ? input.requestId : '';
-    if (!config || !config.bets.includes(bet) || !/^[A-Za-z0-9_-]{12,80}$/.test(requestId)) throw new ApiError(400, 'Invalid spin request.'); const client = await this.pool.connect();
+    if (!config || !Number.isSafeInteger(bet) || bet<=0 || !/^[A-Za-z0-9_-]{12,80}$/.test(requestId)) throw new ApiError(400, 'Invalid spin request.'); const client = await this.pool.connect();
     try {
       await client.query('BEGIN'); await client.query('SELECT balance FROM wallets WHERE account_id = $1 FOR UPDATE', [account.id]);
       const replay = await client.query('SELECT result_json, balance_after FROM rounds WHERE account_id = $1 AND request_id = $2', [account.id, requestId]); if (replay.rows[0]) { await client.query('COMMIT'); return { result: replay.rows[0].result_json as SpinResult, balance: numberValue(replay.rows[0].balance_after) }; }
+      if(!config.bets.includes(bet))throw new ApiError(400,'Unsupported bet for a new round.');
       const wallet = await client.query('SELECT balance FROM wallets WHERE account_id = $1', [account.id]); const balance = numberValue(wallet.rows[0]?.balance); if (!Number.isSafeInteger(balance) || balance < bet) throw new ApiError(409, 'Insufficient credits.');
       const result = this.generator.generate(config, bet, this.rng); const nextBalance = balance - bet + result.totalWin; if (!Number.isSafeInteger(nextBalance) || nextBalance < 0 || result.totalWin > 50_000_000) throw new ApiError(500, 'Round settlement rejected.');
       await client.query('UPDATE wallets SET balance = $2, version = version + 1 WHERE account_id = $1', [account.id, nextBalance]);
@@ -185,13 +187,13 @@ class PostgresGameService {
 
   public async claimReward(account: Account, input: Record<string, unknown>): Promise<{ rewardKey: string; amount: number; balance: number; detail?: { day?: number; sector?: number } }> {
     const kind = typeof input.kind === 'string' ? input.kind : ''; const id = typeof input.id === 'string' ? input.id : ''; const today = new Date().toISOString().slice(0, 10); let rewardKey = ''; let amount = 0; let detail: { day?: number; sector?: number } | undefined;
-    if (kind === 'daily') { rewardKey = `daily-free:${today}`; amount = 5_000; }
-    else if (kind === 'check-in') { const count = await this.pool.query("SELECT count(*)::int AS count FROM reward_claims WHERE account_id=$1 AND reward_key LIKE 'check-in:%'", [account.id]); const day = numberValue(count.rows[0]?.count) % 7; const rewards = [2_000, 3_000, 5_000, 8_000, 12_000, 18_000, 50_000] as const; rewardKey = `check-in:${today}`; amount = rewards[day]; detail = { day: day + 1 }; }
-    else if (kind === 'wheel') { const sectors = [1_000, 2_000, 5_000, 10_000, 1_500, 3_000, 8_000, 25_000] as const; const sector = this.rng.int(0, sectors.length); rewardKey = `wheel:${today}`; amount = sectors[sector]; detail = { sector }; }
-    else if (kind === 'mail') { const mail = new Map([['welcome', 5_000], ['weekend', 3_000]]); amount = mail.get(id) ?? 0; rewardKey = `mail:${id}`; }
+    if (kind === 'daily') { rewardKey = `daily-free:${today}`; amount = ECONOMY.daily; }
+    else if (kind === 'check-in') { const count = await this.pool.query("SELECT count(*)::int AS count FROM reward_claims WHERE account_id=$1 AND reward_key LIKE 'check-in:%'", [account.id]); const day = numberValue(count.rows[0]?.count) % 7; const rewards = ECONOMY.check; rewardKey = `check-in:${today}`; amount = rewards[day]; detail = { day: day + 1 }; }
+    else if (kind === 'wheel') { const sectors = ECONOMY.wheel; const sector = this.rng.int(0, sectors.length); rewardKey = `wheel:${today}`; amount = sectors[sector]; detail = { sector }; }
+    else if (kind === 'mail') { const mail = new Map([['welcome', ECONOMY.mail[0]], ['weekend', ECONOMY.mail[1]]]); amount = mail.get(id) ?? 0; rewardKey = `mail:${id}`; }
     else if (kind === 'achievement') {
       const stats = await this.pool.query("SELECT count(*)::int AS spins, coalesce(sum(win),0)::bigint AS total_win, count(*) FILTER (WHERE result_json ? 'feature')::int AS features FROM rounds WHERE account_id=$1", [account.id]); const row = stats.rows[0] ?? {}; const achievements = new Map<string, { eligible: boolean; amount: number }>([
-        ['first-spin', { eligible: numberValue(row.spins) >= 1, amount: 1_000 }], ['spin-25', { eligible: numberValue(row.spins) >= 25, amount: 5_000 }], ['win-10000', { eligible: numberValue(row.total_win) >= 10_000, amount: 8_000 }], ['feature-3', { eligible: numberValue(row.features) >= 3, amount: 12_000 }],
+        ['first-spin', { eligible: numberValue(row.spins) >= ECONOMY.targets[0], amount: ECONOMY.achievements[0] }], ['spin-25', { eligible: numberValue(row.spins) >= ECONOMY.targets[1], amount: ECONOMY.achievements[1] }], ['win-10000', { eligible: numberValue(row.total_win) >= ECONOMY.targets[2], amount: ECONOMY.achievements[2] }], ['feature-3', { eligible: numberValue(row.features) >= ECONOMY.targets[3], amount: ECONOMY.achievements[3] }],
       ]); const reward = achievements.get(id); if (!reward?.eligible) throw new ApiError(409, 'Achievement is not ready.'); rewardKey = `achievement:${id}`; amount = reward.amount;
     }
     if (!rewardKey || amount <= 0) throw new ApiError(400, 'Reward request is invalid.'); const client = await this.pool.connect();

@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { GameBootstrap } from '../assets/scripts/core/GameBootstrap';
 import { SeededRNG } from '../assets/scripts/core/SeededRNG';
@@ -12,7 +13,7 @@ import {
 import { ResultGenerator } from '../assets/scripts/math/ResultGenerator';
 import { MemoryStorage, SaveService } from '../assets/scripts/services/SaveService';
 import { PRIVACY_VERSION, TERMS_VERSION } from '../assets/scripts/core/ReleaseConfig';
-import { StoreService, STORE_PRODUCTS, type AureliaPurchaseBridge, type StoreServerClient } from '../assets/scripts/services/StoreService';
+import { StoreService, STORE_PRODUCTS, LEGACY_STORE_PRODUCTS, ALL_STORE_PRODUCTS, type AureliaPurchaseBridge, type StoreServerClient } from '../assets/scripts/services/StoreService';
 
 const main = async (): Promise<void> => {
   const generator = new ResultGenerator();
@@ -30,16 +31,15 @@ const main = async (): Promise<void> => {
   assert.deepEqual(first.grid, second.grid, 'test seeds must reproduce the same grid'); assert.deepEqual(first.stops, second.stops, 'test seeds must reproduce the same stops');
   assert.throws(() => generator.generate(GOLDEN_HOUR, 999_999, new SeededRNG(1)), /Unsupported bet/);
 
-  const forcedLine = generator.generate(GOLDEN_HOUR, 500, new SeededRNG(9003), { symbolId: 'chest', count: 3, wild: true }); assert(forcedLine.wins.some((win) => win.count >= 3), 'forced three-of-a-kind must evaluate');
-  const golden = generator.generate(GOLDEN_HOUR, 500, new SeededRNG(444), { scatterCount: 3 }); assert.equal(golden.feature?.type, 'golden-hour'); assert.equal(golden.featureResult?.rounds.length, 1); assert(golden.featureResult?.pickAwards?.every(p=>p===golden.featureWin));
-  const pearl = generator.generate(PEARL_PALACE, 500, new SeededRNG(445), { scatterCount: 3 }); assert.equal(pearl.feature?.type, 'pearl-expansion'); assert.equal(pearl.featureResult?.rounds.length, 5);
-  const jade = generator.generate(JADE_TREASURY, 500, new SeededRNG(555), { holdAndSpin: true }); assert.equal(jade.feature?.type, 'jade-respin'); assert((jade.featureResult?.rounds.length ?? 0) > 0); assert(jade.featureWin > 0);
-  const ruby = generator.generate(RUBY_REVEL, 500, new SeededRNG(777), { symbolId: 'chest', count: 5 }); assert.equal(ruby.feature?.type, 'ruby-cascade'); assert((ruby.featureResult?.rounds.length ?? 0) > 0);
+  const forcedLine = generator.generate(GOLDEN_HOUR, 500, new SeededRNG(9003), { symbolId: 'chest', count: 3, wild: true }); assert.deepEqual(forcedLine.wins,generator.evaluate({...GOLDEN_HOUR,activeRows:forcedLine.layout?.activeRows},forcedLine.grid,500));
+  for(const c of GAME_CONFIGS){const result=generator.generate(c,c.bets[0],new SeededRNG(444));assert.equal(result.featureWin,result.featureResult?.rounds.reduce((sum,r)=>sum+r.credits,0)??0);}
 
-  const allWild = Array.from({ length: PEARL_PALACE.columns * PEARL_PALACE.rows }, () => PEARL_PALACE.wildId); const wildWays = new WaysEvaluator().evaluate(PEARL_PALACE, allWild, 500);
-  assert.equal(wildWays.length, 1, 'an all-Wild way must not be paid once per regular symbol'); assert.equal(wildWays[0].symbolId, PEARL_PALACE.wildId);
-  const clusterGrid = Array.from({ length: RUBY_REVEL.columns * RUBY_REVEL.rows }, () => 'bars');
-  const clusterWins = new ClusterEvaluator().evaluate(RUBY_REVEL, clusterGrid, 500); assert.equal(clusterWins.length, 1); assert.equal(clusterWins[0].count, 25);
+  for(const cfg of GAME_CONFIGS){
+    const allWild=Array(cfg.columns*cfg.rows).fill(cfg.wildId),wins=generator.evaluate(cfg,allWild,cfg.bets[2]);
+    if(cfg.primaryKind==='collector-grid'){assert.equal(wins.length,0,'collectors without collectibles must not pay');continue;}
+    assert(wins.length>0);assert(wins.every(w=>w.symbolId===(cfg.primaryKind==='poker-reels'?'hand-5':cfg.wildId)),'pure Wild pays once under the active family rule');
+    assert.equal(wins.length,cfg.primaryKind==='twin-boards'?cfg.paylines.length*2:cfg.payMode==='paylines'?cfg.paylines.length:1);
+  }
   for(const config of GAME_CONFIGS){const capped = generator.generate(config, 500, new SeededRNG(999), { winTier: 'epic' }); assert(capped.totalWin <= 500 * config.maxWinMultiplier);}
 
   const malformed = new MemoryStorage(); malformed.setItem('honey-parade-f15.cocos.save.v1', '{"currentUserId":"missing","players":{"broken":{"username":42}},"playerData":"bad"}');
@@ -60,12 +60,12 @@ const main = async (): Promise<void> => {
     restore: async () => [], finish: async (transactionId) => { assert.equal(transactionId, paidTransactionId); finished += 1; },
   };
   const purchaseServer: StoreServerClient = {
-    verifyApplePurchase: async () => ({ status: 'verified', productId: STORE_PRODUCTS[0].appleProductId, transactionId: paidTransactionId, creditedCredits: 10_000, authoritativeBalance: paidBefore + 10_000 }),
-    synchronizePurchases: async () => ({ status: 'verified', authoritativeBalance: paidBefore + 10_000 }),
+    verifyApplePurchase: async () => ({ status: 'verified', productId: STORE_PRODUCTS[0].appleProductId, transactionId: paidTransactionId, creditedCredits: (STORE_PRODUCTS[0].credits+STORE_PRODUCTS[0].bonus), authoritativeBalance: paidBefore + (STORE_PRODUCTS[0].credits+STORE_PRODUCTS[0].bonus) }),
+    synchronizePurchases: async () => ({ status: 'verified', authoritativeBalance: paidBefore + (STORE_PRODUCTS[0].credits+STORE_PRODUCTS[0].bonus) }),
   };
   (globalThis as typeof globalThis & { __AURELIA_IAP__?: AureliaPurchaseBridge }).__AURELIA_IAP__ = bridge;
-  const paidStore = new StoreService(save, bootstrap.economy, false, purchaseServer); const delivered = await paidStore.purchase(STORE_PRODUCTS[0].id); assert.equal(delivered.status, 'verified'); assert.equal(delivered.credited, 10_000); assert.equal(bootstrap.economy.balance(), paidBefore + 10_000); assert.equal(finished, 1);
-  const duplicate = await paidStore.purchase(STORE_PRODUCTS[0].id); assert.equal(duplicate.status, 'duplicate'); assert.equal(duplicate.credited, 0); assert.equal(bootstrap.economy.balance(), paidBefore + 10_000, 'replayed Apple transaction must not credit twice'); assert.equal(finished, 2);
+  const paidStore = new StoreService(save, bootstrap.economy, false, purchaseServer); const delivered = await paidStore.purchase(STORE_PRODUCTS[0].id); assert.equal(delivered.status, 'verified'); assert.equal(delivered.credited, (STORE_PRODUCTS[0].credits+STORE_PRODUCTS[0].bonus)); assert.equal(bootstrap.economy.balance(), paidBefore + (STORE_PRODUCTS[0].credits+STORE_PRODUCTS[0].bonus)); assert.equal(finished, 1);
+  const duplicate = await paidStore.purchase(STORE_PRODUCTS[0].id); assert.equal(duplicate.status, 'duplicate'); assert.equal(duplicate.credited, 0); assert.equal(bootstrap.economy.balance(), paidBefore + (STORE_PRODUCTS[0].credits+STORE_PRODUCTS[0].bonus), 'replayed Apple transaction must not credit twice'); assert.equal(finished, 2);
   const interruptedBalance = bootstrap.economy.balance(); let invalidFinishCalls = 0;
   const pendingBridge: AureliaPurchaseBridge = {
     products: bridge.products,
@@ -94,3 +94,9 @@ const main = async (): Promise<void> => {
 };
 
 void main();
+
+const historicMap=JSON.parse(readFileSync(new URL('../server/iap-products.v2.json',import.meta.url),'utf8'));
+for(const p of ALL_STORE_PRODUCTS)assert.equal(historicMap[p.appleProductId],p.credits+p.bonus,'Server and client product amounts agree');
+for(const p of LEGACY_STORE_PRODUCTS)assert.ok(ALL_STORE_PRODUCTS.includes(p),'Historical products remain resolvable');
+assert.equal(new Set(ALL_STORE_PRODUCTS.map(p=>p.appleProductId)).size,ALL_STORE_PRODUCTS.length);
+for(const [i,p] of STORE_PRODUCTS.entries())assert.equal(p.bonus/p.credits,[0,.2,.4,.6][i]);

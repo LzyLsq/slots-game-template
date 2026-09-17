@@ -1,6 +1,6 @@
 # StoreKit 2 bridge contract
 
-During the Cocos iOS export, expose an object at `globalThis.__FORTUNE_BLOOM_IAP__` matching `FortuneBloomPurchaseBridge` in `assets/scripts/services/StoreService.ts`.
+During the Cocos iOS export, expose an object at `globalThis.__AURELIA_IAP__` matching `AureliaPurchaseBridge` in `assets/scripts/services/StoreService.ts`.
 
 ## `products(productIds)`
 

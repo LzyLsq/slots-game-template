@@ -1,0 +1,70 @@
+{
+  "featurePresentationChecks": [
+    {
+      "n": 17,
+      "game": "golden-hour",
+      "title": "CARAVAN DELIVERY",
+      "type": "caravan-delivery",
+      "rounds": 3,
+      "total": 467,
+      "feature": 467,
+      "bet": 100,
+      "same": true,
+      "caption": "DELIVERY COMPLETE · 3/3",
+      "transitioning": false
+    },
+    {
+      "n": 17,
+      "game": "jade-treasury",
+      "title": "CARAVAN DELIVERY",
+      "type": "caravan-delivery",
+      "rounds": 5,
+      "total": 197,
+      "feature": 197,
+      "bet": 100,
+      "same": true,
+      "caption": "DELIVERY COMPLETE · 5/5",
+      "transitioning": false
+    },
+    {
+      "n": 17,
+      "game": "pearl-palace",
+      "title": "CARAVAN DELIVERY",
+      "type": "caravan-delivery",
+      "rounds": 5,
+      "total": 180,
+      "feature": 138,
+      "bet": 100,
+      "same": true,
+      "caption": "DELIVERY COMPLETE · 5/5",
+      "transitioning": false
+    },
+    {
+      "n": 17,
+      "game": "ruby-revel",
+      "title": "CARAVAN DELIVERY",
+      "type": "caravan-delivery",
+      "rounds": 5,
+      "total": 236,
+      "feature": 236,
+      "bet": 100,
+      "same": true,
+      "caption": "DELIVERY COMPLETE · 5/5",
+      "transitioning": false
+    }
+  ],
+  "uiEconomyChecks": [
+    {
+      "n": 17,
+      "shopAmounts": true,
+      "spin": {
+        "before": 36000,
+        "after": 36952,
+        "expected": 36952,
+        "state": "idle",
+        "feature": "caravan-delivery"
+      }
+    }
+  ],
+  "pageErrors": []
+}

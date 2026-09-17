@@ -1,0 +1,80 @@
+{
+  "validation": {
+    "status": "PASS",
+    "results": [
+      {
+        "gameId": "golden-hour",
+        "spins": 200000,
+        "seed": 94635781,
+        "bet": 420,
+        "payoutScale": 1.44225077,
+        "targetRtp": 0.957,
+        "rtp": 0.9570645119047619,
+        "confidence95": [
+          0.9488265999650733,
+          0.9653024238444505
+        ],
+        "baseRtp": 0.9490197738095238,
+        "featureRtp": 0.008044738095238094,
+        "hitRate": 0.988705,
+        "featureRate": 0.067335,
+        "maxWin": 7269
+      },
+      {
+        "gameId": "jade-treasury",
+        "spins": 200000,
+        "seed": 94635781,
+        "bet": 420,
+        "payoutScale": 0.78365246,
+        "targetRtp": 0.957,
+        "rtp": 0.9480259642857143,
+        "confidence95": [
+          0.9335612357079784,
+          0.9624906928634501
+        ],
+        "baseRtp": 0.45901475,
+        "featureRtp": 0.4890112142857143,
+        "hitRate": 0.991005,
+        "featureRate": 0.04735,
+        "maxWin": 30478
+      },
+      {
+        "gameId": "pearl-palace",
+        "spins": 200000,
+        "seed": 94635781,
+        "bet": 420,
+        "payoutScale": 0.17124023,
+        "targetRtp": 0.957,
+        "rtp": 0.963671130952381,
+        "confidence95": [
+          0.9592551577702941,
+          0.9680871041344679
+        ],
+        "baseRtp": 0.12192521428571429,
+        "featureRtp": 0.8417459166666666,
+        "hitRate": 0.99989,
+        "featureRate": 0.434455,
+        "maxWin": 1534
+      },
+      {
+        "gameId": "ruby-revel",
+        "spins": 200000,
+        "seed": 94635781,
+        "bet": 420,
+        "payoutScale": 0.05596686,
+        "targetRtp": 0.957,
+        "rtp": 0.9457987857142857,
+        "confidence95": [
+          0.9434274510674237,
+          0.9481701203611477
+        ],
+        "baseRtp": 0.04535630952380952,
+        "featureRtp": 0.9004424761904762,
+        "hitRate": 1,
+        "featureRate": 1,
+        "maxWin": 1758
+      }
+    ]
+  },
+  "note": "Post round-once settlement fix. Development Monte Carlo sample; not certified RTP."
+}

@@ -29,20 +29,7 @@ export class RankService {
 export interface HallRankEntry extends RankEntry { virtual: boolean; }
 /** Mixed display standings; never writes character scores into saved player records. */
 export function hallStandings(players: readonly RankEntry[]): HallRankEntry[] {
-  const friends = [
-    {nickname:'Acorn Archie',winnings:128000,avatar:0},
-    {nickname:'Ruby Rosie',winnings:96500,avatar:1},
-    {nickname:'Pearl Pippin',winnings:74200,avatar:2},
-    {nickname:'Crown Robin',winnings:53600,avatar:3},
-    {nickname:'Lucky Clover',winnings:31800,avatar:8},
-    {nickname:'Amber Belle',winnings:28750,avatar:4},
-    {nickname:'Golden Leo',winnings:24600,avatar:5},
-    {nickname:'Pearl Luna',winnings:19300,avatar:6},
-    {nickname:'Ruby Felix',winnings:15800,avatar:7},
-    {nickname:'Velvet Rose',winnings:11200,avatar:9},
-    {nickname:'Sunny Jasper',winnings:7400,avatar:10},
-    {nickname:'Crown Daisy',winnings:3500,avatar:11},
-  ];
+  const friends = [{"nickname": "Dune Scout", "winnings": 104536, "avatar": 0}, {"nickname": "Silk Merchant", "winnings": 78119, "avatar": 1}, {"nickname": "Oasis Guide", "winnings": 57702, "avatar": 2}, {"nickname": "Amber Trader", "winnings": 40885, "avatar": 3}, {"nickname": "Moon Caravan", "winnings": 25268, "avatar": 4}, {"nickname": "Spice Keeper", "winnings": 14451, "avatar": 5}, {"nickname": "Ruby Porter", "winnings": 7234, "avatar": 6}, {"nickname": "Pearl Compass", "winnings": 2417, "avatar": 7}];
   return [...players.map(p=>({...p,virtual:false})),...friends.map(p=>({...p,rank:0,current:false,virtual:true}))]
     .sort((a,b)=>b.winnings-a.winnings||Number(a.virtual)-Number(b.virtual)||a.rank-b.rank||a.nickname.localeCompare(b.nickname))
     .map((p,i)=>({...p,rank:i+1}));

@@ -1,0 +1,50 @@
+
+> f13-golden-harvest@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 567,
+    hits: 870,
+    sampleReturn: 0.9573033333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'line-reels',
+    columns: 4,
+    rows: 3,
+    spins: 3000,
+    features: 811,
+    hits: 811,
+    sampleReturn: 0.9601483333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1423,
+    hits: 1542,
+    sampleReturn: 0.9716383333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1453,
+    hits: 2192,
+    sampleReturn: 0.9844733333333333,
+    layoutVariants: 1
+  }
+]

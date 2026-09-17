@@ -12,13 +12,14 @@ export class SafeAreaAdapter extends Component {
   public static safeLeft = 0;
   public static safeRight = 0;
   private rotateOverlay?: Node;
+  private insetProbe?: HTMLDivElement;
 
   protected onLoad(): void {
     this.reflow(false);
     screen.on('window-resize', this.onResize, this);
   }
 
-  protected onDestroy(): void { screen.off('window-resize', this.onResize, this); }
+  protected onDestroy(): void { screen.off('window-resize', this.onResize, this);this.insetProbe?.remove(); }
 
   private onResize(): void { this.reflow(true); }
 
@@ -43,6 +44,21 @@ export class SafeAreaAdapter extends Component {
     SafeAreaAdapter.safeRight = Math.max(0, (windowSize.width - safe.x - safe.width) * scaleX);
     SafeAreaAdapter.safeBottom = Math.max(0, safe.y * scaleY);
     SafeAreaAdapter.safeTop = Math.max(0, (windowSize.height - safe.y - safe.height) * scaleY);
+
+    if(typeof document!=='undefined'&&document.body){
+      if(!this.insetProbe){
+        this.insetProbe=document.createElement('div');this.insetProbe.id='f13-safe-area-probe';
+        this.insetProbe.setAttribute('aria-hidden','true');
+        this.insetProbe.style.cssText='position:fixed;left:0;top:0;width:0;height:0;visibility:hidden;pointer-events:none;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)';
+        document.body.appendChild(this.insetProbe);
+      }
+      const css=getComputedStyle(this.insetProbe),sx=SafeAreaAdapter.visibleWidth/Math.max(1,document.documentElement.clientWidth),sy=SafeAreaAdapter.visibleHeight/Math.max(1,document.documentElement.clientHeight);
+      // Native and CSS values describe the same inset; taking max avoids double padding.
+      SafeAreaAdapter.safeTop=Math.max(SafeAreaAdapter.safeTop,(parseFloat(css.paddingTop)||0)*sy);
+      SafeAreaAdapter.safeBottom=Math.max(SafeAreaAdapter.safeBottom,(parseFloat(css.paddingBottom)||0)*sy);
+      SafeAreaAdapter.safeLeft=Math.max(SafeAreaAdapter.safeLeft,(parseFloat(css.paddingLeft)||0)*sx);
+      SafeAreaAdapter.safeRight=Math.max(SafeAreaAdapter.safeRight,(parseFloat(css.paddingRight)||0)*sx);
+    }
 
     this.getComponent(UITransform)?.setContentSize(SafeAreaAdapter.visibleWidth, SafeAreaAdapter.visibleHeight);
 

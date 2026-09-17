@@ -1,0 +1,44 @@
+[
+  {
+    "id": "golden-hour",
+    "core": "independent-collector-grid",
+    "feature": "coin-vault",
+    "samples": 6000,
+    "features": 982,
+    "motions": [
+      "collect",
+      "respin"
+    ]
+  },
+  {
+    "id": "jade-treasury",
+    "core": "independent-any-reel-ways",
+    "feature": "key-respin",
+    "samples": 6000,
+    "features": 3235,
+    "motions": [
+      "respin"
+    ]
+  },
+  {
+    "id": "pearl-palace",
+    "core": "independent-cluster-avalanche",
+    "feature": "symbol-collector",
+    "samples": 6000,
+    "features": 5981,
+    "motions": [
+      "collect",
+      "respin"
+    ]
+  },
+  {
+    "id": "ruby-revel",
+    "core": "independent-line-reels",
+    "feature": "mystery-cross",
+    "samples": 6000,
+    "features": 2516,
+    "motions": [
+      "transform"
+    ]
+  }
+]

@@ -1,10 +1,21 @@
+import {LabelOutline} from 'cc';
+import {cabinetToolText} from './CabinetToolText';
+import {drawRulePages} from './RulePages';
+import {awardCredits, awardEvidence, featureAwardEvidence, awardSummary, roundEvidence, tierRules, winTier} from '../vfx/WinPresentation';
+import {primaryRuleText} from '../math/PrimaryRuleText';
+import {drawRuleHelp,helpTitle} from './RuleHelp';
+import {primaryStatus,HAND_NAMES,HAND_FACTORS} from '../math/IndependentCore';
+import {ruleAward,ruleAllCounts} from '../math/PaytableDisplay';
+import {tr,language,setLanguage,LANGUAGES} from './Language';
+import {CORE_TITLE,CORE_NOTES,CORE_DESCRIPTIONS,coreSymbols} from '../math/CoreGame';
+import {SIGNATURE_TITLE,SIGNATURE_NOTES,FEATURE_PROFILES} from '../math/SignatureFeature';
 import { INBOX_MESSAGES } from '../services/MailService';
 import { _decorator, BlockInputEvents, Color, Component, EditBox, game, Game, Graphics, Label, Mask, Node, ScrollView, Sprite, tween, Tween, UIOpacity, UITransform, Vec3, Widget } from 'cc';
 import { GameBootstrap } from '../core/GameBootstrap';
 import { SecureRNG } from '../core/SecureRNG';
 import { AudioManager } from '../audio/AudioManager';
-import { PRIVACY_VERSION, TERMS_VERSION } from '../core/ReleaseConfig';
-import { GAME_CONFIGS, SYMBOL_ART } from '../math/GameConfigs';
+import { complianceCurrent, PRIVACY_VERSION, TERMS_VERSION } from '../core/ReleaseConfig';
+import { GAME_CONFIGS, symbolAtlas, SYMBOL_ART } from '../math/GameConfigs';
 import { ResultGenerator } from '../math/ResultGenerator';
 import type { GameConfig, GameId, SpinResult } from '../math/types';
 import type { AuthResult } from '../services/AuthService';
@@ -21,8 +32,17 @@ import { LEGAL_SECTIONS, type LegalPage } from './LegalContent';
 const { ccclass } = _decorator;
 type Page = 'login'|'register'|'home'|'store'|'rewards'|'rank'|'profile'|'game';
 type State = {kind:'idle'}|{kind:'spinning';requestId:string}|{kind:'presenting';result:SpinResult}|{kind:'retry';requestId:string};
-const MODES = ['One line. Three keys to the vault.', 'Lock gold. Keep the treasure.', '1,024 ways. A garden of gold.', 'Clusters tumble. Multipliers grow.'];
+const exactMoney=(n:number)=>Math.floor(n).toLocaleString('en-US');
+const MODES = GAME_CONFIGS.map(c=>c.modeLabel);
 const money=(n:number):string=>Math.floor(n).toLocaleString('en-US');
+// Keep the small cabinet record legible; account/history values retain full precision.
+const topWinMoney=(n:number):string=>{
+  const value=Math.floor(n),absolute=Math.abs(value);if(absolute<1000)return exactMoney(value);
+  const locale=language(),units:readonly (readonly [number,string])[]=locale==='en'?[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']]:locale==='ko'?[[1e12,'조'],[1e8,'억'],[1e4,'만']]:locale==='ja'?[[1e12,'兆'],[1e8,'億'],[1e4,'万']]:locale==='zh-TW'?[[1e12,'兆'],[1e8,'億'],[1e4,'萬']]:[[1e12,'万亿'],[1e8,'亿'],[1e4,'万']];
+  const [divisor,suffix]=units.find(([size])=>absolute>=size)??[1,''],scaled=value/divisor;
+  const decimals=Math.abs(scaled)>=100?0:Math.abs(scaled)>=10?1:2,factor=10**decimals;
+  return String(Math.trunc(scaled*factor)/factor)+suffix;
+};
 @ccclass('AureliaApp')
 export class AureliaApp extends Component {
   private art=new SalonArt(); private services!:GameBootstrap;private root?:Node;private content?:Node;private bg?:Node;
@@ -30,6 +50,7 @@ export class AureliaApp extends Component {
   private page:Page='login';private config:GameConfig=GAME_CONFIGS[0];private state:State={kind:'idle'};
   private betIndex=1;private auto=false;private autoWait=0;private visible=true;private busy=false;private generation=0;
   private balanceLabel?:Label;private betLabel?:Label;private winLabel?:Label;private topWinLabel?:Label;private hintLabel?:Label;
+  private presentedWin=0;private cancelWinCount?:()=>void;
   private top=960;private height=1920;private debug=false;private reduced=false;private force?:string;
   private draft={username:'',password:'',confirmPassword:'',nickname:'',acceptedTerms:false};
   private generator=new ResultGenerator();private rng=new SecureRNG();private audio!:AudioManager;
@@ -87,6 +108,7 @@ export class AureliaApp extends Component {
     if(this.root&&!this.busy)this.render();
   }
   private render():void{
+    this.cancelWinCount?.();this.presentedWin=0;
     this.generation++;this.modal=undefined;this.notification=undefined;this.reels=undefined;this.plane=undefined;
     this.balanceLabel=this.betLabel=this.winLabel=this.topWinLabel=this.hintLabel=this.autoLamp=this.soundLamp=undefined;
     this.root?.destroy();this.height=Safe.visibleHeight;this.top=this.height/2;
@@ -101,6 +123,7 @@ export class AureliaApp extends Component {
     else{this.header();if(this.page==='home')this.homePage();if(this.page==='store')this.storePage();if(this.page==='rewards')this.rewardsPage();if(this.page==='rank')this.rankPage();if(this.page==='profile')this.profilePage();this.navigation();}
     this.node.getChildByName('RotateDeviceOverlay')?.setSiblingIndex(this.node.children.length-1);
     const o=opacity(this.content,0);tween(o).to(this.reduced?.01:.28,{opacity:255},{easing:'sineOut'}).start();
+    if(this.page!=='login'&&this.page!=='register'&&!complianceCurrent(this.services.save.read().compliance))this.policyConsent();
   }
   private async navigate(page:Page,config?:GameConfig):Promise<void>{
     if(this.state.kind!=='idle'&&this.page==='game'){this.toast('Finish the current round before leaving.');return;}
@@ -249,6 +272,14 @@ export class AureliaApp extends Component {
       if(result.ok){this.draft.password=this.draft.confirmPassword='';this.page='home';if(this.restoreRemoteRound())await this.art.load([this.config.id+'-tall']);this.render();}else this.toast(result.message??'Unable to sign in.');
     }catch{this.toast('Unable to connect. Your form has been kept.');}finally{this.busy=false;}
   }
+  private policyConsent():void{
+    if(this.modal)return;
+    const panel=this.sheet('Updated harvest agreement',710);
+    const close=panel.getChildByName('Close dialog');if(close)close.active=false;
+    text(panel,'Confirm that you meet your region’s minimum age\nand accept the current Terms and Privacy Policy.\nVirtual coins have no cash value.',0,105,820,240,36);
+    this.art.button(panel,'Accept updated policy',0,-99,760,108,'Accept & continue',14,()=>{this.accept();this.closeModal();},3);
+    this.art.button(panel,'Return to sign in',0,-241,760,99,'Sign out to review policies',7,()=>{this.closeModal();void this.signOut();},1);
+  }
   private guestConsent():void{
     const s=this.sheet('Before you enter',650);
     text(s,'This is a simulated casino for eligible adults.\nCoins have no cash value and cannot be withdrawn.\n\nConfirm that you meet your region’s minimum age\nand accept the Terms and Privacy Policy.',0,20,820,330,36);
@@ -268,6 +299,7 @@ export class AureliaApp extends Component {
     this.balanceLabel=text(this.plane,money(this.services.economy.balance()),balance[0]-4,balance[1],g.balance[2]*.66,g.balance[3],43,'#59351B');
     this.art.button(this.plane,'Recharge',balance[0]+g.balance[2]*.41,balance[1],65,67,'',8,()=>{if(this.state.kind==='idle')void this.navigate('store');else this.toast('Finish the round before opening the shop.');});
     const win=imagePoint(g.win);this.winLabel=text(this.plane,'WIN  0',win[0],win[1],g.win[2],g.win[3],41,'#803F25');
+    const winReadout=this.winLabel.node.getComponent(UITransform)!;winReadout.setContentSize(Math.min(winReadout.width,g.win[2]-2*Math.max(16,g.win[2]*.06)),winReadout.height);
     const themeIndex=GAME_CONFIGS.indexOf(cfg);
     
     const readoutInk=COLORS.cream;
@@ -280,9 +312,9 @@ export class AureliaApp extends Component {
       return host;
     };
     const betPanel=display('BET display',g.bet,themeIndex*4);
-    const betCaption=outlined(text(betPanel,'BET',-g.bet[2]*.14,0,g.bet[2]*.30,g.bet[3]*.8,30,readoutInk),readoutOutline,3);
+    const betCaption=outlined(text(betPanel,'BET',-g.bet[2]*.30,0,g.bet[2]*.34,Math.max(52,g.bet[3]*.8),30,readoutInk),readoutOutline,3);
     betCaption.fontFamily='Arial Black';betCaption.enableWrapText=false;betCaption.overflow=Label.Overflow.SHRINK;
-    this.betLabel=outlined(text(betPanel,money(this.bet),g.bet[2]*.25,0,g.bet[2]*.38,g.bet[3]*.82,40,readoutInk),readoutOutline,3);
+    this.betLabel=outlined(text(betPanel,money(this.bet),g.bet[2]*.19,0,g.bet[2]*.56,Math.max(64,g.bet[3]*.82),40,readoutInk),readoutOutline,3);
     this.betLabel.fontFamily='Arial Black';this.betLabel.enableWrapText=false;this.betLabel.overflow=Label.Overflow.SHRINK;
     const ctl=(rect:Box,label:string,index:number,action:()=>void):Node=>{
       const pos=imagePoint(rect);const hit=box(this.plane!,label,pos[0],pos[1],Math.max(108,rect[2]),Math.max(110,rect[3]));
@@ -306,44 +338,80 @@ export class AureliaApp extends Component {
     const topPanel=display('TOP WIN display',g.topWin,themeIndex*4+1);
     const topCaption=outlined(text(topPanel,'TOP WIN',-g.topWin[2]*.20,-g.topWin[3]*.06,g.topWin[2]*.40,g.topWin[3]*.78,34,readoutInk),readoutOutline,3);
     topCaption.fontFamily='Arial Black';topCaption.enableWrapText=false;topCaption.overflow=Label.Overflow.SHRINK;
-    this.topWinLabel=outlined(text(topPanel,money(this.services.profile.current()?.biggestWin??0),g.topWin[2]*.23,-g.topWin[3]*.06,g.topWin[2]*.36,g.topWin[3]*.8,45,readoutInk),readoutOutline,3);
+    this.topWinLabel=outlined(text(topPanel,topWinMoney(this.services.profile.current()?.biggestWin??0),g.topWin[2]*.23,-g.topWin[3]*.06,g.topWin[2]*.36,g.topWin[3]*.8,45,readoutInk),readoutOutline,3);
     this.topWinLabel.fontFamily='Arial Black';this.topWinLabel.enableWrapText=false;this.topWinLabel.overflow=Label.Overflow.SHRINK;
-    const toolbar=box(this.content!,'Safe top tools',0,this.top-77-Safe.safeTop,1000,130);
+    // Money readouts reserve a full glyph line: TextFit's generic 1.22 line budget
+    // previously compressed ordinary zero/bet values to 7px on narrow phones.
+    for(const amount of [this.balanceLabel,this.betLabel,this.winLabel,this.topWinLabel]){
+      if(!amount)continue;
+      const fit=amount.node.getComponent('TextFit');if(fit)fit.enabled=false;
+      const rect=amount.node.getComponent(UITransform)!;
+      rect.setContentSize(rect.width,Math.max(64,rect.height));
+      amount.fontFamily='Arial';amount.fontSize=48;amount.lineHeight=52;
+      amount.enableWrapText=false;amount.overflow=Label.Overflow.SHRINK;
+    }
+    const toolbar=box(this.content!,'Safe top tools',0,this.top-95-Safe.safeTop,1000,154);
     const tool=(name:string,x:number,icon:number,label:string,action:()=>void):Label=>{
-      const hit=box(toolbar,name,x,0,127,118),face=box(hit,name+' face',0,0,127,118);
-      this.art.image(face,'interfaces',0,12,82,82,icon);
-      const caption=outlined(text(face,label,0,-46,124,28,21,COLORS.cream),'#15352F',3);
-      caption.fontFamily='Arial Black';caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
+      const hit=box(toolbar,name,x,0,180,160),face=box(hit,name+' face',0,0,180,154);
+      this.art.image(face,'interfaces',0,36,64,64,icon);
+      const caption=outlined(text(face,cabinetToolText(label),0,-36,172,82,38,COLORS.cream),'#15352F',2);
+      const fit=caption.node.getComponent('TextFit');if(fit)fit.enabled=false;
+      caption.fontFamily='Arial';caption.lineHeight=40;caption.enableWrapText=false;caption.overflow=Label.Overflow.CLAMP;
       bindPress(hit,face,()=>{this.audio.play('tap');action();});return caption;
     };
     tool('Back to salon',-427,0,'BACK',()=>void this.navigate('home'));
     tool('Rules',290,7,'RULES',()=>this.rules());
     this.soundLamp=tool('Audio',436,6,'SOUND ON',()=>void this.toggleSound());this.updateSound();
     this.hintLabel=outlined(text(this.content!,MODES[GAME_CONFIGS.indexOf(cfg)],0,-this.top+88+Safe.safeBottom,980,110,38,COLORS.cream));
+    this.hintLabel.node.getComponent(LabelOutline)!.width=4;this.hintLabel.node.getComponent('TextFit')!.enabled=false;this.hintLabel.fontSize=42;this.hintLabel.lineHeight=46;this.hintLabel.enableWrapText=false;this.hintLabel.overflow=Label.Overflow.SHRINK;this.hintLabel.getComponent(UITransform)!.setContentSize(980,148);
     this.layoutPlane();
     if(this.force){this.scheduleOnce(()=>void this.spin(),1);}
+  }
+  private syncHintMaterial():void{
+    const hint=this.hintLabel?.node;if(!hint||!this.content)return;
+    let material=this.content.getChildByName('Award hint material');
+    if(!material){
+      // Feather into the cabinet's own palette; no panel edge or opaque card.
+      material=box(this.content,'Award hint material',0,0,1280,184);
+      material.setSiblingIndex(hint.getSiblingIndex());
+      const shade=material.addComponent(Graphics);
+      for(let i=0;i<64;i++){
+        const u=(i+.5)/64,alpha=Math.round(190*Math.pow(Math.sin(Math.PI*u),1.4));
+        shade.fillColor=new Color(66,41,20,alpha);
+        shade.rect(-640,-92+i*184/64,1280,184/64);shade.fill();
+      }
+    }
+    material.setPosition(hint.position);
   }
   private layoutPlane():void{
     if(!this.plane)return;const h=Safe.visibleHeight;
     const layout=cabinetLayout(Safe.visibleWidth,h,CABINETS[this.config.id],Safe.safeTop,Safe.safeBottom);
     this.plane.setScale(layout.scale,layout.scale,1);this.plane.setPosition(0,layout.y);
 
-    this.content?.getChildByName('Safe top tools')?.setPosition(0,h/2-77-Safe.safeTop);
+    const toolbar=this.content?.getChildByName('Safe top tools');
+    if(toolbar){
+      toolbar.setPosition(0,h/2-95-Safe.safeTop);
+      const left=-Safe.visibleWidth/2+Safe.safeLeft+110,right=Safe.visibleWidth/2-Safe.safeRight-110;
+      toolbar.getChildByName('Back to salon')?.setPosition(left,0);
+      toolbar.getChildByName('Rules')?.setPosition(right-194,0);
+      toolbar.getChildByName('Audio')?.setPosition(right,0);
+    }
     this.hintLabel?.node.setPosition(0,-h/2+88+Safe.safeBottom);
+    this.syncHintMaterial();
   }
   private get bet():number{return this.config.bets[this.betIndex];}
   private changeBet(delta:number):void{
     if(this.state.kind!=='idle'){this.toast('Bet is locked while the reels are moving.');return;}
     const next=Math.max(0,Math.min(this.config.bets.length-1,this.betIndex+delta));
     if(next===this.betIndex){this.toast(delta<0?'Minimum bet selected.':'Maximum bet selected.');return;}
-    this.betIndex=next;if(this.betLabel)this.betLabel.string=money(this.bet);if(this.hintLabel)this.hintLabel.string=`BET ${money(this.bet)} selected`;
+    this.betIndex=next;if(this.betLabel)this.betLabel.string=money(this.bet);if(this.hintLabel)this.hintLabel.string=tr(`BET ${money(this.bet)} selected`);
   }
   private updateAuto():void{
-    if(!this.autoLamp)return;this.autoLamp.string=this.auto?'AUTO ON':'AUTO OFF';this.autoLamp.color=new Color(this.auto?'#72FF9F':COLORS.cream);
+    if(!this.autoLamp)return;this.autoLamp.string=tr(this.auto?'AUTO ON':'AUTO OFF');this.autoLamp.color=new Color(this.auto?'#72FF9F':COLORS.cream);
     Tween.stopAllByTarget(this.autoLamp.node);this.autoLamp.node.setScale(1,1,1);
     if(this.auto&&!this.reduced)tween(this.autoLamp.node).to(.55,{scale:new Vec3(1.08,1.08,1)},{easing:'sineInOut'}).to(.55,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).union().repeatForever().start();
   }
-  private updateSound(enabled=this.services.profile.current()?.settings.sound??true):void{if(this.soundLamp){this.soundLamp.string=enabled?'SOUND ON':'SOUND OFF';this.soundLamp.color=new Color(enabled?'#FFF4D8':'#D8B79A');}}
+  private updateSound(enabled=this.services.profile.current()?.settings.sound??true):void{if(this.soundLamp){this.soundLamp.string=cabinetToolText(enabled?'SOUND ON':'SOUND OFF');this.soundLamp.color=new Color(enabled?'#FFF4D8':'#D8B79A');}}
   private async toggleSound():Promise<void>{
     const settings=this.services.profile.current()?.settings;if(!settings){this.toast('Sound settings are unavailable.');return;}
     const previous=settings.sound,next=!previous;this.audio.setEffects(next);this.updateSound(next);if(next)this.audio.play('tap');
@@ -352,6 +420,7 @@ export class AureliaApp extends Component {
     this.toast(next?'Sound on.':'Sound off.');
   }
   private async spin():Promise<void>{
+    if(!complianceCurrent(this.services.save.read().compliance)){this.policyConsent();return;}
     if(this.page!=='game'||!this.reels||this.modal||this.busy)return;
 
     if(this.state.kind!=='idle'&&this.state.kind!=='retry')return;
@@ -360,7 +429,7 @@ export class AureliaApp extends Component {
     const recovering=this.state.kind==='retry';
     if(api){try{this.journal.begin(requestId,this.config.id,this.bet);}catch{this.toast('Unable to save the round. Free device storage, then try again.');return;}}
     if(!api&&!this.services.economy.reserveSpin(requestId,this.bet)){this.auto=false;this.updateAuto();this.toast('Not enough coins. Visit Rewards or the Coin Shop.');return;}
-    if(this.winLabel)this.winLabel.string='WIN  0';
+    this.resetWinAmount();
     this.state={kind:'spinning',requestId};this.reels.lockCoins({});this.reels.begin();this.audio.play('spin');this.refreshBalance();if(this.hintLabel)this.hintLabel.string='Treasures in motion…';
     let settled=false;
     try{
@@ -372,10 +441,11 @@ export class AureliaApp extends Component {
       }
       settled=true;await this.reels.finish(result);
       this.state={kind:'presenting',result};this.reels.highlight(result.wins.flatMap(w=>[...w.positions]));
+      await this.presentAwardEvidence(result);
       if(result.featureResult)await this.presentFeature(result);
-      if(result.totalWin>0)await this.presentWin(result.totalWin,result.totalWin/this.bet>=20);
-      if(this.winLabel)this.winLabel.string='WIN  '+money(result.totalWin);
-      if(this.hintLabel)this.hintLabel.string=result.totalWin>0?'Treasure added to your wallet.':MODES[GAME_CONFIGS.indexOf(this.config)];
+      if(result.totalWin>=this.bet)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0);
+      this.resetWinAmount(result.totalWin);
+      if(this.hintLabel)this.hintLabel.string=roundEvidence(result,this.bet);
       this.state={kind:'idle'};this.refreshBalance();this.refreshTopWin();this.autoWait=.8;
     }catch(error){
       this.auto=false;this.updateAuto();console.error(error);
@@ -388,8 +458,41 @@ export class AureliaApp extends Component {
       else{this.services.economy.cancelReservation(requestId);this.state={kind:'idle'};this.reels.show(this.config.reelStrips.flatMap(s=>s.slice(0,this.config.rows)));this.toast('Round interrupted. Your wallet has been preserved.');}
     }
   }
+  /** Show the actual awarded cells before any feature replaces this grid. */
+  private async presentAwardEvidence(result:SpinResult):Promise<void>{
+    const awards=result.wins.filter(w=>awardCredits(w)>0);
+    if(!awards.length)return;
+    // A bounded sample avoids a long presentation on hundreds of Ways. The
+    // denominator remains the full award count; the final total includes all.
+    const shown=awards.slice(0,3);
+    for(let i=0;i<shown.length;i++){
+      this.reels?.highlight(shown[i].positions);
+      if(this.hintLabel)this.hintLabel.string=awardEvidence(this.config,shown[i],i+1,awards.length);
+      if(i===0)this.audio.playAward(0);
+      await Promise.all([this.countWinAmount(result.baseWin,result.totalWin),this.delay(this.reduced?.35:1.2)]);
+    }
+    this.reels?.highlight(awards.flatMap(w=>[...w.positions]));
+    if(awards.length>1){if(this.hintLabel)this.hintLabel.string=awardSummary(awards,result.baseWin);await this.delay(this.reduced?.35:.7);}
+  }
   private async presentFeature(result:SpinResult):Promise<void>{
     const feature=result.featureResult!;const reels=this.reels!;
+    if(feature.type==='cabinet-feature'){
+      let cumulative=result.baseWin;
+      for(const round of feature.rounds){
+        if(this.hintLabel)this.hintLabel.string=tr(round.caption??'BONUS')+' · '+round.index+'/'+feature.rounds.length+(round.multiplier?' · '+round.multiplier+'×':'');
+        if(round.motion==='drop')await reels.collapseTo(round.grid,round.removed??[]);
+        else if(round.motion==='rise')await reels.riseTo(round.grid,round.removed??[]);
+        else if(round.motion==='move')await reels.moveSymbols(round.grid,round.moved??[],round.held??[]);
+        else if(round.motion==='respin'){this.audio.play('spin');await reels.respinCells(round.grid,round.held??[]);}
+        else await reels.transformTo(round.grid,round.focus??[]);
+        if(round.locked)reels.lockCoins(round.locked,round.lockedSymbol);
+        for(const col of round.expandedColumns??[])await reels.expandColumn(col);
+        reels.highlight(round.wins.flatMap(w=>Array.from(w.positions)));
+        cumulative+=round.credits;
+        if(round.credits>0){this.audio.playAward(round.index-1);if(this.hintLabel)this.hintLabel.string=featureAwardEvidence(this.config,round.wins,round.credits,round.index,feature.rounds.length);}
+        await Promise.all([this.countWinAmount(cumulative,result.totalWin),this.delay(this.reduced?.1:round.credits>0?1.1:.18)]);
+      }return;
+    }
     if(feature.type==='golden-hour'){
       const panel=this.sheet('The three golden vaults',780);
       text(panel,'Choose a vault to reveal your treasure',0,190,850,91,39);
@@ -400,7 +503,7 @@ export class AureliaApp extends Component {
           if(chosen)return;chosen=true;this.audio.play('win');
           const award=feature.pickAwards?.[i]??feature.totalCredits;
           text(panel,money(award)+' COINS',0,-127,850,106,56,COLORS.gold,true);
-          this.scheduleOnce(()=>{this.closeModal();resolve();},this.reduced?.15:1.3);
+          void Promise.all([this.countWinAmount(result.baseWin+feature.totalCredits,result.totalWin),this.delay(this.reduced?.15:1.3)]).then(()=>{this.closeModal();resolve();});
         };
         for(let i=0;i<3;i++){
           const hit=box(panel,'Open vault '+(i+1),(i-1)*278,26,240,270);
@@ -418,16 +521,39 @@ export class AureliaApp extends Component {
     }
     let cumulative=result.baseWin;
     for(const round of feature.rounds){
-      if(this.hintLabel)this.hintLabel.string=feature.type==='ruby-cascade'?`TREASURE TUMBLE · ${round.multiplier}×`:feature.type==='jade-respin'?`LOCKED GOLD · ${round.remaining} RESPINS LEFT`:`PEARL EXPANSION · ${round.index} OF ${feature.rounds.length}`;
-      if(feature.type==='ruby-cascade')await reels.collapseTo(round.grid,round.removed??[]);
+      if(this.hintLabel)this.hintLabel.string=round.caption??(feature.type==='ruby-cascade'?`TREASURE TUMBLE · ${round.multiplier}×`:feature.type==='jade-respin'?`LOCKED GOLD · ${round.remaining} RESPINS LEFT`:`PEARL EXPANSION · ${round.index} OF ${feature.rounds.length}`);
+      if(round.caption)await reels.transformTo(round.grid,round.focus);
+      else if(feature.type==='ruby-cascade')await reels.collapseTo(round.grid,round.removed??[]);
       else{reels.begin();this.audio.play('spin');await reels.finishGrid(round.grid,true);}
       if(round.locked)reels.lockCoins(round.locked);
       if(round.expandedColumn!==undefined)await reels.expandColumn(round.expandedColumn);
       reels.highlight(round.wins.flatMap(w=>[...w.positions]));
-      cumulative+=round.credits;if(this.winLabel)this.winLabel.string='WIN  '+money(cumulative);
-      if(round.credits>0)this.audio.play('win');
-      await this.delay(round.credits>0?.62:.22);
+      cumulative+=round.credits;
+      if(round.credits>0){this.audio.playAward(round.index-1);if(this.hintLabel)this.hintLabel.string=featureAwardEvidence(this.config,round.wins,round.credits,round.index,feature.rounds.length);}
+      await Promise.all([this.countWinAmount(cumulative,result.totalWin),this.delay(this.reduced?.1:round.credits>0?1.1:.22)]);
     }
+  }
+  /** Presentation only: one readout continues through base and feature awards. */
+  private writeWinAmount(amount:number,total=amount):void{
+    this.presentedWin=amount;
+    if(this.winLabel?.isValid)this.winLabel.string=tr((total>0&&total<this.bet?'RETURN  ':'WIN  ')+money(amount));
+  }
+  private resetWinAmount(amount=0):void{
+    this.cancelWinCount?.();this.writeWinAmount(amount);
+  }
+  private countWinAmount(amount:number,total=amount):Promise<void>{
+    this.cancelWinCount?.();
+    const label=this.winLabel,from=this.presentedWin;
+    if(this.reduced||!label?.isValid||amount<=from){this.writeWinAmount(amount,total);return Promise.resolve();}
+    return new Promise<void>(resolve=>{
+      const value={n:from};let done=false;
+      const finish=():void=>{if(done)return;done=true;Tween.stopAllByTarget(value);if(this.cancelWinCount===finish)this.cancelWinCount=undefined;resolve();};
+      this.cancelWinCount=finish;
+      tween(value).to(.34,{n:amount},{easing:'cubicOut',onUpdate:()=>{
+        if(!label.isValid||label!==this.winLabel){finish();return;}
+        this.writeWinAmount(value.n,total);
+      }}).call(()=>{if(label.isValid&&label===this.winLabel)this.writeWinAmount(amount,total);finish();}).start();
+    });
   }
   private async presentWin(amount:number,big:boolean):Promise<void>{
     if(big){
@@ -435,7 +561,7 @@ export class AureliaApp extends Component {
       // Keep the integrated scene visible, but do not let cabinet readouts and
       // controls show through the transparent celebration artwork.
       const hidden=(this.plane?.children??[]).filter(n=>n.active&&!['Cabinet reflections','Reels',this.config.id+'-tall'].includes(n.name));
-      for(const n of [this.hintLabel?.node,this.content?.getChildByName('Safe top tools')])if(n?.active)hidden.push(n);
+      for(const n of [this.hintLabel?.node,this.content?.getChildByName('Award hint material'),this.content?.getChildByName('Safe top tools')])if(n?.active)hidden.push(n);
       const fades=hidden.map(n=>({node:n,alpha:n.getComponent(UIOpacity)??n.addComponent(UIOpacity)}));
       const prior=fades.map(f=>f.alpha.opacity);
       try{
@@ -447,15 +573,13 @@ export class AureliaApp extends Component {
         if(this.modal===stage)this.closeModal();
       }
     }else{
-      this.audio.play('win');
-      const label=this.winLabel;
-      if(this.reduced){if(label)label.string='WIN  '+money(amount);return;}
-      const v={n:0};
-      await new Promise<void>(resolve=>tween(v).to(.8,{n:amount},{easing:'expoOut',onUpdate:()=>{if(label?.isValid)label.string='WIN  '+money(v.n);}}).call(()=>{if(label?.isValid)label.string='WIN  '+money(amount);resolve();}).start());
+      if(amount>this.presentedWin)this.audio.playAward(0);
+      await Promise.all([this.countWinAmount(amount),this.delay(this.reduced?.12:.32)]);
     }
   }
+
   private refreshBalance():void{if(this.balanceLabel)this.balanceLabel.string=money(this.services.economy.balance());}
-  private refreshTopWin():void{if(this.topWinLabel)this.topWinLabel.string=money(this.services.profile.current()?.biggestWin??0);}
+  private refreshTopWin():void{if(this.topWinLabel)this.topWinLabel.string=topWinMoney(this.services.profile.current()?.biggestWin??0);}
   private delay(seconds:number):Promise<void>{return new Promise(resolve=>this.scheduleOnce(resolve,this.reduced?Math.min(.12,seconds):seconds));}
   protected update(dt:number):void{const fx=this.plane?.getChildByName('Cabinet reflections')?.getComponent(SalonAtmosphere);if(fx)fx.energy=this.state.kind==='spinning'?1:this.state.kind==='presenting'?.6:0;if(this.auto&&this.visible&&this.state.kind==='idle'&&this.page==='game'&&!this.modal){this.autoWait-=dt;if(this.autoWait<=0){this.autoWait=1;void this.spin();}}}
   private hide():void{this.visible=false;this.auto=false;this.updateAuto();}
@@ -466,32 +590,44 @@ export class AureliaApp extends Component {
     text(this.content!,value,88,this.top-280,700,108,62,COLORS.jade,true);text(this.content!,sub,65,this.top-370,742,76,34,COLORS.jade);
   }
   private storePage():void{
-    this.title('Golden Treasury','Treasures for every visit',1);const stamp=this.generation;
-    const note=text(this.content!,this.services.remoteMode?'Prices are supplied by Apple.':'Preview mode · Purchases unavailable',0,this.top-474,980,79,33,COLORS.jade);
-    void this.services.store.catalog().then(items=>{if(stamp!==this.generation)return;items.forEach((item,i)=>{
-      const rowH=Math.min(520,(this.height-1040)/2);
-      const frame=this.art.panel(this.content!,i%2===0?-250:250,this.top-530-rowH/2-Math.floor(i/2)*(rowH+32),474,rowH,i%2?2:0);
-      const n=box(frame,'Treasury product',0,0,474,520);const fit=rowH/520;n.setScale(fit,fit,1);
-      this.art.image(n,'symbols',0,106,280,245,[9,1,5,8][i]);
-      text(n,money(item.credits+item.bonus),0,-39,433,78,55,COLORS.cream,true);
-      text(n,item.label,0,-109,428,65,25);
-      this.art.button(n,'Buy '+item.id,0,-189,365,99,item.available?item.displayPrice:'Unavailable',undefined,()=>void this.purchase(item.id));
-    });});
-    this.art.button(this.content!,'Synchronize purchases',0,-this.top+394,920,105,'Sync unfinished purchases',undefined,()=>void this.services.store.restore().then(r=>{this.refreshBalance();this.toast(r.message);}),1);
-    outlined(text(this.content!,'Consumable virtual coins. No cash value. No cash-out.',0,-this.top+278,950,68,33,COLORS.cream));
+    const stage=this.pageStage("HARVEST MARKET"),stamp=this.generation;
+    text(stage,"HARVEST MARKET",0,629,932,78,43,COLORS.ink,true);
+    text(stage,this.services.remoteMode?'Choose a coin supply':'Preview · Purchases unavailable',0,547,907,47,27,COLORS.ink);
+    const layout:number[][]=[[-237, 275, 442, 365], [237, 275, 442, 365], [-237, -153, 442, 365], [237, -153, 442, 365]];
+    void this.services.store.catalog().then(items=>{if(stamp!==this.generation)return;
+      items.forEach((item,i)=>{const [x,y,w,h]=layout[i],wide=w>600,compact=h<260&&!wide,node=this.art.panel(stage,x,y,w,h,0);node.name='Supply '+item.id;
+        const total=item.credits+item.bonus,bonus=Math.round(item.bonus/item.credits*100);
+        const art=this.art.image(node,symbolAtlas(GAME_CONFIGS[i].id),wide?-w*.36:0,wide?0:h*.27,wide?127:Math.min(129,h*.24),wide?127:Math.min(129,h*.24),[0,1,5,9][i]);
+        if(!this.reduced){const alpha=opacity(art,245);tween(alpha).to(2.5+i*.3,{opacity:190},{easing:'sineInOut'}).to(2.5+i*.3,{opacity:245},{easing:'sineInOut'}).union().repeatForever().start();}
+        if(compact)art.active=false;const tx=compact?-w*.20:wide?-w*.06:0,tw=compact?w*.5:wide?w*.42:w*.84;
+        const amount=text(node,money(total),tx,compact?30:wide?42:h*.03,tw,65,wide?42:36,COLORS.ink,true);amount.enableWrapText=false;
+        text(node,bonus?bonus+'% BONUS':'STANDARD',compact?0:tx,compact?-h*.27:wide?-14:-h*.13,compact?w*.86:tw,36,22,COLORS.ink,true);
+        if(h>=300)text(node,'Base '+money(item.credits)+'\nGift '+money(item.bonus),tx,-h*.285,tw,68,24,COLORS.ink);
+        this.art.button(node,'Buy '+item.id,compact?w*.27:wide?w*.33:0,compact?28:wide?0:-h*.40,compact?w*.36:wide?w*.255:w*.84,Math.min(75,h*.29),item.available?item.displayPrice:'Offline',undefined,()=>void this.purchase(item.id),0);
+      });
+    }).catch(()=>this.toast('Shop unavailable. Please try again.'));
+    this.art.button(stage,'Synchronize purchases',0,-611,780,82,'Sync unfinished purchases',undefined,()=>void this.services.store.restore().then(r=>{this.refreshBalance();this.toast(r.message);}),0);
+    const legal=this.art.panel(stage,0,-680,830,58,0);text(legal,'Virtual coins · No cash value',0,0,750,36,24,COLORS.ink);
   }
+
   private async purchase(id:string):Promise<void>{if(this.busy)return;this.busy=true;try{const r=await this.services.store.purchase(id);this.refreshBalance();this.toast(r.message);}finally{this.busy=false;}}
   private rewardsPage():void{
-    this.title('The Harvest Festival','Your daily treasures, in one place',2);
-    const n=this.art.panel(this.content!,0,this.top-790,975,620,2);
-    this.art.image(n,'symbols',0,90,440,410,9);
-    const ledger=this.art.panel(n,0,-109,871,229,0);text(ledger,'DAILY TREASURE',0,54,800,60,41,COLORS.gold,true);text(ledger,'5,000 complimentary coins',0,-5,800,66,41);
-    this.art.button(n,'Claim daily',0,-231,700,102,'Claim your daily gift',2,()=>void this.claim('daily'));
-    const check=this.art.panel(this.content!,0,this.top-1325,975,330,1);
-    text(check,'The seven-visit collection',0,88,900,85,43,COLORS.jade,true);text(check,'Visit daily for a growing coin gift.\nYour next gift is saved to your account.',0,-3,863,114,36,COLORS.ink);
-    this.art.button(check,'Check in',0,-106,701,90,'Collect today’s check-in',14,()=>void this.claim('check-in'));
-    outlined(text(this.content!,'Rewards follow your wallet across all four games.',0,-this.top+283,950,94,34,COLORS.cream));
+    const stage=this.pageStage("SEVEN HARVESTS"),scope=this.services.save.currentScope(),today=new Date().toISOString().slice(0,10),progress=scope?.checkIn,claimed=progress?.lastClaimDate===today,active=claimed?((progress?.cycleDay??0)+6)%7:(progress?.cycleDay??0);
+    text(stage,"SEVEN HARVESTS",0,631,940,78,42,COLORS.ink,true);
+    text(stage,tr('DAY '+(active+1))+' · '+tr(claimed?'COLLECTED':'READY TO CLAIM'),0,545,920,47,29,COLORS.ink);
+    const spots:number[][]=[[-315, 373], [0, 373], [315, 373], [-315, 147], [0, 147], [315, 147], [0, -104]],thread=box(stage,'Seven day path',0,0,1020,1400).addComponent(Graphics);thread.strokeColor=new Color(175,128,60,90);thread.lineWidth=5;spots.forEach(([x,y],i)=>{if(i)thread.lineTo(x,y);else thread.moveTo(x,y);});thread.stroke();
+    this.services.checkIn.rewards.forEach((amount,i)=>{const [x,y]=spots[i],current=i===active,done=i<active||(current&&claimed),node=box(stage,'Check-in day '+(i+1),x,y,274,205);const face=node.addComponent(Graphics);face.fillColor=new Color('#FFF2D2');face.strokeColor=new Color('#B88738');face.lineWidth=4;face.roundRect(-131,-96,262,192,21);face.fill();face.stroke();face.strokeColor=new Color('#E7C882');face.lineWidth=2;face.roundRect(-120,-85,240,170,15);face.stroke();
+      text(node,'DAY '+(i+1),0,62,232,48,34,COLORS.ink,true);text(node,money(amount),0,8,234,53,35,COLORS.ink,true);text(node,done?'COLLECTED':current?'TODAY':'UPCOMING',0,-53,235,44,32,COLORS.ink,true);
+      if(current){const g=box(node,'Today outline',0,0,274,205).addComponent(Graphics);g.strokeColor=new Color('#B78C37');g.lineWidth=3;g.roundRect(-120,-83,240,166,18);g.stroke();if(!this.reduced){const alpha=opacity(g.node,240);tween(alpha).to(1.8,{opacity:85},{easing:'sineInOut'}).to(1.8,{opacity:240},{easing:'sineInOut'}).union().repeatForever().start();}}
+      bindPress(node,node,()=>{if(current&&!claimed)void this.claim('check-in');else this.toast('Day '+(i+1)+' · '+money(amount)+' coins · '+(done?'Collected':'Upcoming'));});
+    });
+    this.art.button(stage,'Check in',0,-322,836,94,claimed?'DAY '+(active+1)+' COLLECTED':'CLAIM DAY '+(active+1)+' · '+money(this.services.checkIn.rewards[active]),undefined,()=>{if(!claimed)void this.claim('check-in');else this.toast('Next reward after 00:00 UTC.');},0);
+    const daily=this.art.panel(stage,0,-534,912,230,0),collected=!!scope?.claims['daily-free:'+today];
+    this.art.image(daily,'symbols',-314,0,147,147,5);text(daily,'DAILY GIFT · '+money(5000),109,52,573,46,30,COLORS.ink,true);
+    this.art.button(daily,'Claim daily',109,-28,530,80,collected?'COLLECTED':'Collect daily gift',undefined,()=>{if(!collected)void this.claim('daily');else this.toast('Today’s gift is already collected.');},0);
+    text(stage,'Daily reset 00:00 UTC · Progress saved to your account',0,-677,936,38,23,COLORS.ink);
   }
+
   private async claim(kind:'daily'|'check-in'):Promise<void>{if(this.busy)return;this.busy=true;try{
     if(this.services.api){await this.services.api.claimReward(kind);const me=await this.services.api.me();this.services.economy.synchronizePurchasedBalance(me.player.credits,SecureRNG.id('reward-sync'));this.toast('Reward collected.');}
     else{const today=new Date().toISOString().slice(0,10);const ok=kind==='daily'?this.services.store.claimDaily(today):this.services.checkIn.claimToday(today).ok;this.toast(ok?'Your gift has been added to the wallet.':'Today’s gift has already been collected.');}
@@ -518,17 +654,34 @@ export class AureliaApp extends Component {
     };
     if(this.services.remoteMode)void this.services.rank.refresh('all-time').then(rows=>{if(stamp!==this.generation)return;status.string='Server results · Updated now';render(rows);}).catch(()=>{if(stamp!==this.generation)return;status.string='Unable to load ranking. Tap Ranking to retry.';this.toast('Ranking unavailable. Try again later.');});else render();
   }
-  private profilePage():void{
-    this.title('My Harvest Club','One account. One shared treasure wallet.',4);const p=this.services.profile.current();if(!p)return;
-    const passport=this.art.panel(this.content!,0,this.top-746,980,574,0);
-    const avatar=this.art.image(passport,'portraits',-281,90,236,236,p.avatar);bindPress(avatar,avatar,()=>this.avatars());
-    const editableName=text(passport,p.nickname+' · EDIT',124,155,548,85,48,COLORS.cream,true);editableName.enableWrapText=false;editableName.node.name='Edit nickname';bindPress(editableName.node,editableName.node,()=>this.editNickname());text(passport,p.isGuest?'Guest · On-device progress':'Member account',129,73,564,72,33);
-    this.art.button(passport,'Change avatar',125,-22,517,89,'Choose portrait',4,()=>this.avatars(),1);
-    text(passport,'TOTAL WON',-225,-148,432,64,33,COLORS.gold);text(passport,'BEST WIN',230,-148,420,64,33,COLORS.gold);
-    text(passport,money(p.totalWin),-225,-208,431,66,44);text(passport,money(p.biggestWin),230,-208,420,66,44);
-    const links:[string,number,()=>void][]=[['Wallet history',1,()=>this.history()],['Terms, privacy & help',7,()=>this.legal('privacy')],['Sign out',9,()=>void this.signOut()],['Delete account & data',15,()=>this.deleteAccount()]];
-    links.forEach(([name,i,action],k)=>this.art.button(this.content!,name,0,this.top-1126-k*132,965,113,name,i,action,k===3?2:1));
+  private pageStage(name:string):Node{const available=this.height-520-Safe.safeTop-Safe.safeBottom,scale=Math.min(1,available/1400,(Safe.visibleWidth-60)/1020);const n=box(this.content!,name,0,(Safe.safeBottom-Safe.safeTop)/2,1020,1400);n.setScale(scale,scale,1);return n;}
+
+  private languages():void{
+    if(this.busy)return;const panel=this.sheet('Choose language',1010);
+    LANGUAGES.forEach((entry,i)=>this.art.button(panel,'Locale '+entry.code,0,285-i*137,760,110,entry.name,undefined,()=>{setLanguage(entry.code);this.closeModal();this.render();},entry.code===language()?3:0));
+    text(panel,'Saved on this device',0,-417,740,58,29,COLORS.cream);
   }
+  private profilePage():void{
+    const stage=this.pageStage("HARVEST JOURNAL"),p=this.services.profile.current();if(!p)return;
+    const balance=this.services.economy.balance(),ledger=this.services.save.currentScope()?.transactions??[];
+    text(stage,"HARVEST JOURNAL",0,622,928,82,42,COLORS.ink,true);
+    const plate=(name:string,x:number,y:number,w:number,h:number):Node=>{const node=this.art.panel(stage,x,y,w,h,0);node.name=name;return node;};
+    const stat=(x:number,y:number,w:number,h:number,label:string,value:number):void=>{const node=plate(label,x,y,w,h);text(node,label,0,h*.22,w*.8,39,25,COLORS.cream,true);const v=text(node,money(value),0,-h*.14,w*.8,61,39,COLORS.cream,true);v.enableWrapText=false;};
+    const identity=(x:number,y:number,w:number,h:number):void=>{const node=plate('Editable identity',x,y,w,h),wide=w>600;
+      const portrait=this.art.image(node,'portraits',wide?-w*.33:0,wide?0:h*.22,wide?164:126,wide?164:126,p.avatar);bindPress(portrait,portrait,()=>this.avatars());
+      const tx=wide?w*.13:0,tw=wide?w*.57:w*.85;
+      const name=text(node,p.nickname,tx,wide?54:-h*.055,tw,55,35,COLORS.cream,true);name.enableWrapText=false;bindPress(name.node,name.node,()=>this.editNickname());
+      text(node,p.isGuest?'GUEST · LEVEL '+p.level:'MEMBER · LEVEL '+p.level,tx,wide?0:-h*.22,tw,37,23,COLORS.cream);
+      this.art.button(node,'Edit nickname',tx,wide?-66:-h*.365,Math.min(tw,350),61,'Edit name',undefined,()=>this.editNickname(),0);
+    };
+    const activity=(x:number,y:number,w:number,h:number):void=>{const node=plate('Account activity',x,y,w,h);text(node,'COIN JOURNAL',0,h/2-47,w*.82,44,28,COLORS.cream,true);text(node,ledger.length+' recorded entries',0,h/2-97,w*.83,38,24,COLORS.cream);if(h>250)text(node,'Your settled activity is saved\nwith this account.',0,-2,w*.8,81,25,COLORS.cream);this.art.button(node,'Open coin history',0,-h/2+51,w*.78,65,'View history',undefined,()=>this.history(),0);};
+    identity(-228,329,444,374);stat(241,437,428,153,'HARVEST RESERVE',balance);stat(241,226,428,153,'BEST HARVEST',p.biggestWin);stat(-228,10,444,151,'ROUNDS SOWN',p.gamesPlayed);stat(241,10,428,151,'TOTAL HARVEST',p.totalWin);activity(0,-259,918,300);
+    const links:[string,()=>void][]=[['Language',()=>this.languages()],['Portrait',()=>this.avatars()],['Privacy',()=>this.legal('privacy')]];
+    links.forEach(([label,action],i)=>this.art.button(stage,label,(i-(links.length-1)/2)*(910/links.length),-522,880/links.length,75,label,undefined,action,0));
+    this.art.button(stage,'Sign out',-229,-626,429,77,'Sign out',undefined,()=>void this.signOut(),0);
+    this.art.button(stage,'Delete account',229,-626,429,77,'Delete account',undefined,()=>this.deleteAccount(),0);
+  }
+
   private async signOut():Promise<void>{
     if(this.busy)return;this.services.auth.logout();this.draft.password=this.draft.confirmPassword='';await this.navigate('login');
   }
@@ -589,19 +742,42 @@ export class AureliaApp extends Component {
     },0);
     this.art.button(panel,'Back to mailbox',0,-383,580,76,'Back to mailbox',9,()=>this.mail(),0);
   }
-  private rules():void{
-    this.auto=false;this.updateAuto();const s=this.sheet(this.config.name+' · Rules',1350);
-    const descriptions:Record<GameId,string>={
-      'golden-hour':'Three reels · Three rows · One centre payline.\nMatching symbols pay left to right on the centre line.\nThree safes anywhere reveal a predetermined vault prize.',
-      'jade-treasury':'Five reels · Three rows · Twenty fixed paylines.\nSix gold coins trigger three-life lock-and-respin.\nNew coins reset the lives. Full screen adds a bonus.',
-      'pearl-palace':'Five reels · Four rows · 1,024 ways.\nThree safes trigger five bonus spins.\nOne column expands to WILD during each bonus spin.',
-      'ruby-revel':'Five by five · Connected treasure clusters.\nFive or more matching neighbours pay; diagonals do not.\nWinning clusters collapse, refill and raise the multiplier.',
-    };
-    text(s,descriptions[this.config.id],0,424,865,293,35);
-    const symbols=this.config.symbols.filter(v=>v.tier!=='wild'&&v.tier!=='scatter'&&v.tier!=='bonus').slice(0,6);
-    symbols.forEach((sym,i)=>{const y=206-i*96;this.art.image(s,'symbols',-346,y,83,83,SYMBOL_ART[sym.id]);const pay=this.config.paytable[sym.id];text(s,sym.label,-141,y,308,69,29);text(s,Object.entries(pay??{}).map(([n,v])=>`${n}: ${v}×`).join(' · '),177,y,488,81,27);});
-    text(s,'Values above are raw paytable factors. Payout scale and\nline/ways divisors apply; all awards use whole coins.\nVirtual coins only. No cash-out. Take regular breaks.',0,-512,890,161,31);
+  private howToPlay(page=0):void{
+    this.auto=false;this.updateAuto();const cfg=this.config,s=this.ruleSheet(cfg.name+' · '+helpTitle());
+    this.art.button(s,'Payout rules',-286,550,274,87,'PAYOUTS',undefined,()=>this.rules(0,false,true));
+    this.art.button(s,'Feature rules',0,550,274,87,'FEATURES',undefined,()=>this.rules(0,true));
+    this.art.button(s,'Rule diagram',286,550,274,87,helpTitle(),undefined,()=>this.howToPlay(page),3);
+    drawRuleHelp(s,cfg,this.art,page,next=>this.howToPlay(next));
   }
+  private rules(band=0,features=false,payoutFirst=false):void{
+    this.auto=false;this.updateAuto();const cfg=this.config,s=this.ruleSheet(cfg.name+' · Rules');
+    this.art.button(s,'Payout rules',-286,550,274,87,'PAYOUTS',undefined,()=>this.rules(0,false,true),features?0:3);
+    this.art.button(s,'Feature rules',0,550,274,87,'FEATURES',undefined,()=>this.rules(0,true),features?3:0);
+    this.art.button(s,'Rule diagram',286,550,274,87,helpTitle(),undefined,()=>this.howToPlay());
+    drawRulePages(s,cfg,this.art,this.bet,band,features,FEATURE_PROFILES[cfg.id].notes,next=>this.rules(next,features),payoutFirst);
+  }
+
+  private ruleSheet(title:string):Node{
+    // Paging is an update inside one reading surface, not a new modal transition.
+    // Keep the opaque frame and input shield in place throughout rapid taps.
+    const overlay=this.modal;
+    let panel=overlay?.isValid&&!overlay.getChildByName('Dialog is closing')
+      ?overlay.children.find(child=>!!child.getChildByName('Rule content anchor')):undefined;
+    if(!panel){
+      panel=this.sheet(title,1480);
+      const heading=panel.children.find(child=>!!child.getComponent(Label));
+      if(heading)heading.name='Rule dialog title';
+      box(panel,'Rule content anchor',0,0,978,1480);
+    }else{
+      const heading=panel.getChildByName('Rule dialog title')?.getComponent(Label);
+      if(heading)heading.string=tr(title);
+    }
+    const anchor=panel.getChildByName('Rule content anchor')!;
+    for(const child of [...anchor.children]){child.active=false;child.destroy();}
+    // Retain the panel's text palette/insets without duplicating its background.
+    return box(anchor,panel.name,0,0,978,1480);
+  }
+
   private legal(which:LegalPage):void{
     const s=this.sheet(which==='terms'?'Terms of Service':which==='privacy'?'Privacy & Data':'Player Support',1360);
     LEGAL_SECTIONS[which].forEach((section,i)=>{const y=460-i*210;text(s,section.title,0,y,850,56,34,COLORS.gold);text(s,section.body.replace(/\n/g,' '),0,y-88,861,150,31);});
@@ -617,11 +793,11 @@ export class AureliaApp extends Component {
     }
     this.modal=overlay;return panel;
   }
-  private closeModal():void{if(this.modal){this.modal.destroy();this.modal=undefined;}}
+  private closeModal():void{if(this.modal){this.modal.active=false;this.modal.destroy();this.modal=undefined;}}
   private toast(message:string):void{
     this.notification?.destroy();const n=this.art.panel(this.root!,0,-this.top+338,990,178,0);text(n,message,0,0,916,144,36);this.notification=n;
     if(!this.reduced){const alpha=opacity(n,0);tween(alpha).to(.2,{opacity:255}).delay(3.8).to(.3,{opacity:0}).start();}
     this.scheduleOnce(()=>{if(n.isValid)n.destroy();if(this.notification===n)this.notification=undefined;},4.4);
   }
-  protected onDestroy():void{game.off(Game.EVENT_HIDE,this.hide,this);game.off(Game.EVENT_SHOW,this.show,this);}
+  protected onDestroy():void{this.cancelWinCount?.();game.off(Game.EVENT_HIDE,this.hide,this);game.off(Game.EVENT_SHOW,this.show,this);}
 }

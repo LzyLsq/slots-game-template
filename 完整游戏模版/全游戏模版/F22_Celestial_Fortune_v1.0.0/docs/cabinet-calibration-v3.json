@@ -1,0 +1,45 @@
+{
+  "note": "Deterministic engineering samples; not certified RTP",
+  "report": [
+    {
+      "id": "golden-hour",
+      "samples": 30000,
+      "scale": 0.48054805,
+      "target": 0.954,
+      "observedRtp": 0.9502230476190475,
+      "baseShare": 0.2971942844669812,
+      "featureFrequency": 0.8498666666666667,
+      "max": 9.611428571428572
+    },
+    {
+      "id": "jade-treasury",
+      "samples": 30000,
+      "scale": 1.18992427,
+      "target": 0.954,
+      "observedRtp": 0.918555380952381,
+      "baseShare": 0.6632200399783433,
+      "featureFrequency": 0.40423333333333333,
+      "max": 37.02
+    },
+    {
+      "id": "pearl-palace",
+      "samples": 30000,
+      "scale": 1.80288567,
+      "target": 0.954,
+      "observedRtp": 0.9340694761904761,
+      "baseShare": 0.46278812570218525,
+      "featureFrequency": 0.4713,
+      "max": 35.36714285714286
+    },
+    {
+      "id": "ruby-revel",
+      "samples": 30000,
+      "scale": 0.04447023,
+      "target": 0.954,
+      "observedRtp": 0.9548443095238096,
+      "baseShare": 0.017464322329180642,
+      "featureFrequency": 0.9997666666666667,
+      "max": 1.7121428571428572
+    }
+  ]
+}

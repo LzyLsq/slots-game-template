@@ -2,12 +2,12 @@
   "name": "f18-gilded-express",
   "uuid": "a6bdce75-af4f-4ec3-a9d6-486fb7ef0cd4",
   "version": "1.0.0",
-  "description": "F18 Gilded Express \u2014 a storybook treasure railway",
+  "description": "F18 Gilded Express — a storybook treasure railway",
   "creator": {
     "version": "3.8.8"
   },
   "scripts": {
-    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout",
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary",
     "test:layout": "node --import tsx tools/layout-test.ts",
     "test:math": "node --import tsx tools/math-test.ts",
     "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
@@ -18,7 +18,11 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
     "server:dev": "node --import tsx server/ProductionServer.ts",
-    "server:production": "NODE_ENV=production node --import tsx server/PostgresProductionServer.ts"
+    "server:production": "NODE_ENV=production node --import tsx server/PostgresProductionServer.ts",
+    "test:signature": "node --import tsx tools/signature-test.ts",
+    "test:core": "node --import tsx tools/core-test.ts",
+    "test:cabinets": "node --import tsx tools/cabinet-test.ts",
+    "test:primary": "node --import tsx tools/primary-test.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

@@ -1,0 +1,50 @@
+
+> f21-royal-jubilee@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'twin-boards',
+    columns: 3,
+    rows: 6,
+    spins: 3000,
+    features: 1421,
+    hits: 1576,
+    sampleReturn: 0.9263851851851852,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'twin-boards',
+    columns: 4,
+    rows: 6,
+    spins: 3000,
+    features: 84,
+    hits: 1212,
+    sampleReturn: 0.9142651851851852,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'twin-boards',
+    columns: 4,
+    rows: 6,
+    spins: 3000,
+    features: 1585,
+    hits: 1650,
+    sampleReturn: 0.9165977777777777,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'twin-boards',
+    columns: 5,
+    rows: 6,
+    spins: 3000,
+    features: 702,
+    hits: 2048,
+    sampleReturn: 0.9518481481481481,
+    layoutVariants: 1
+  }
+]

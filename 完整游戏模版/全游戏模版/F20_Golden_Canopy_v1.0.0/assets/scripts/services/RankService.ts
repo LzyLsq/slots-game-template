@@ -29,13 +29,7 @@ export class RankService {
 export interface HallRankEntry extends RankEntry { virtual: boolean; }
 /** Mixed display standings; never writes character scores into saved player records. */
 export function hallStandings(players: readonly RankEntry[]): HallRankEntry[] {
-  const friends = [
-    {nickname:'Acorn Archie',winnings:128000,avatar:0},
-    {nickname:'Ruby Rosie',winnings:96500,avatar:1},
-    {nickname:'Pearl Pippin',winnings:74200,avatar:2},
-    {nickname:'Crown Robin',winnings:53600,avatar:3},
-    {nickname:'Lucky Clover',winnings:31800,avatar:8},
-  ];
+  const friends = [{"nickname": "Canopy Warden", "winnings": 78844, "avatar": 0}, {"nickname": "Sunlit Grove", "winnings": 58976, "avatar": 1}, {"nickname": "Golden Bough", "winnings": 43608, "avatar": 2}, {"nickname": "Dew Collector", "winnings": 30940, "avatar": 3}, {"nickname": "Emerald Root", "winnings": 19172, "avatar": 4}, {"nickname": "Bloom Keeper", "winnings": 11004, "avatar": 5}, {"nickname": "Amber Leaf", "winnings": 5536, "avatar": 6}, {"nickname": "Orchid Star", "winnings": 1868, "avatar": 7}];
   return [...players.map(p=>({...p,virtual:false})),...friends.map(p=>({...p,rank:0,current:false,virtual:true}))]
     .sort((a,b)=>b.winnings-a.winnings||Number(a.virtual)-Number(b.virtual)||a.rank-b.rank||a.nickname.localeCompare(b.nickname))
     .map((p,i)=>({...p,rank:i+1}));

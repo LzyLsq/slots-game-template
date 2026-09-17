@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "game": "golden-hour",
+      "before": 66000,
+      "after": 67606,
+      "expected": 67606,
+      "state": "idle",
+      "same": true,
+      "feature": "cabinet-feature",
+      "rounds": 15,
+      "transitioning": false
+    },
+    {
+      "game": "jade-treasury",
+      "before": 67606,
+      "after": 67812,
+      "expected": 67812,
+      "state": "idle",
+      "same": true,
+      "feature": "cabinet-feature",
+      "rounds": 2,
+      "transitioning": false
+    },
+    {
+      "game": "pearl-palace",
+      "before": 67812,
+      "after": 68188,
+      "expected": 68188,
+      "state": "idle",
+      "same": true,
+      "feature": "cabinet-feature",
+      "rounds": 14,
+      "transitioning": false
+    },
+    {
+      "game": "ruby-revel",
+      "before": 68188,
+      "after": 68365,
+      "expected": 68365,
+      "state": "idle",
+      "same": true,
+      "feature": "cabinet-feature",
+      "rounds": 1,
+      "transitioning": false
+    }
+  ],
+  "errors": []
+}

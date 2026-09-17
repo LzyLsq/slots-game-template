@@ -1,3 +1,4 @@
+import {ECONOMY} from '../math/EconomyProfile';
 import { SecureRNG } from '../core/SecureRNG';
 import { EconomyService } from './EconomyService';
 import { SaveService } from './SaveService';
@@ -13,12 +14,16 @@ export interface CoinProduct {
 
 // Create these identifiers as Consumable products in App Store Connect.
 // StoreKit supplies localized prices; debugPrice is localhost-only.
-export const STORE_PRODUCTS: readonly CoinProduct[] = [
+export const LEGACY_STORE_PRODUCTS: readonly CoinProduct[] = [
   { id: 'purse', appleProductId: 'com.publisher.gildedexpress.coins.purse', credits: 10_000, bonus: 0, label: 'TRAVEL PURSE', debugPrice: '$0.99' },
   { id: 'bullion', appleProductId: 'com.publisher.gildedexpress.coins.bullion', credits: 50_000, bonus: 5_000, label: 'BULLION CASE', debugPrice: '$4.99' },
   { id: 'chest', appleProductId: 'com.publisher.gildedexpress.coins.chest', credits: 120_000, bonus: 18_000, label: 'TREASURE CHEST', debugPrice: '$9.99' },
   { id: 'vault', appleProductId: 'com.publisher.gildedexpress.coins.vault', credits: 300_000, bonus: 60_000, label: 'CARAVAN VAULT', debugPrice: '$19.99' },
 ];
+const PREVIOUS_PACKS=[[10500, 0], [35000, 3500], [87500, 14000], [210000, 42000]] as const;
+export const PREVIOUS_STORE_PRODUCTS:readonly CoinProduct[]=LEGACY_STORE_PRODUCTS.map((p,i)=>({...p,appleProductId:p.appleProductId+'.v2',credits:PREVIOUS_PACKS[i][0],bonus:PREVIOUS_PACKS[i][1]}));
+export const STORE_PRODUCTS:readonly CoinProduct[]=LEGACY_STORE_PRODUCTS.map((p,i)=>({...p,appleProductId:p.appleProductId+'.v3',credits:ECONOMY.packs[i][0],bonus:ECONOMY.packs[i][1]}));
+export const ALL_STORE_PRODUCTS:readonly CoinProduct[]=[...STORE_PRODUCTS,...PREVIOUS_STORE_PRODUCTS,...LEGACY_STORE_PRODUCTS];
 
 export interface NativeProductInfo { readonly productId: string; readonly displayPrice: string; readonly displayName?: string; }
 export type PurchaseStatus = 'verified' | 'cancelled' | 'pending' | 'failed';
@@ -121,7 +126,7 @@ export class StoreService {
       const pending = await bridge.restore(player.appAccountToken);
       for (const native of pending) {
         if (native.status !== 'verified' || !native.signedTransactionInfo || !validTransactionId(native.transactionId)) continue;
-        const verified = await this.server.verifyApplePurchase(native.signedTransactionInfo); const product = STORE_PRODUCTS.find((item) => item.appleProductId === verified.productId); if (!product || verified.transactionId !== native.transactionId || verified.creditedCredits !== product.credits + product.bonus) continue;
+        const verified = await this.server.verifyApplePurchase(native.signedTransactionInfo); const product = ALL_STORE_PRODUCTS.find((item) => item.appleProductId === verified.productId); if (!product || verified.transactionId !== native.transactionId || verified.creditedCredits !== product.credits + product.bonus) continue;
         if (!this.save.currentScope()?.creditedPurchaseIds.includes(verified.transactionId)) this.economy.creditVerifiedPurchase(verified.creditedCredits, verified.transactionId, verified.authoritativeBalance);
         await bridge.finish(native.transactionId);
       }
@@ -142,6 +147,6 @@ export class StoreService {
     const key = `daily-free:${today}`; if (scope.claims[key]) return false;
     let credited = false;
     this.save.update((state) => { const id = state.currentUserId; if (!id || state.playerData[id].claims[key]) return; state.playerData[id].claims[key] = new Date().toISOString(); credited = true; });
-    return credited && this.economy.credit(5_000, 'daily-free', key);
+    return credited && this.economy.credit(ECONOMY.daily, 'daily-free', key);
   }
 }

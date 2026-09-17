@@ -1,0 +1,50 @@
+
+> f22-celestial-fortune@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'scatter-groups',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 2991,
+    hits: 2991,
+    sampleReturn: 0.9581244444444444,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'scatter-groups',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 2081,
+    hits: 2674,
+    sampleReturn: 0.9613566666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 4,
+    spins: 3000,
+    features: 1544,
+    hits: 1822,
+    sampleReturn: 0.9082511111111111,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 3000,
+    hits: 3000,
+    sampleReturn: 0.9594611111111111,
+    layoutVariants: 1
+  }
+]

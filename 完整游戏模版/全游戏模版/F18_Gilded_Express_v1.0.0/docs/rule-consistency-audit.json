@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-16",
+  "corrections": [
+    {
+      "before": "Each board pays at 2x plus its WILD count, capped at 5x. Both directions pay the better award per symbol once.",
+      "after": "Each free board uses the marked vertical zigzag lines. Its multiplier is 2x plus its WILD count, capped at 5x."
+    },
+    {
+      "mode": "golden-hour",
+      "after": "Cabinet-specific starting direction and per-line award rule"
+    },
+    {
+      "mode": "jade-treasury",
+      "after": "Cabinet-specific starting direction and per-line award rule"
+    },
+    {
+      "mode": "pearl-palace",
+      "after": "Cabinet-specific starting direction and per-line award rule"
+    },
+    {
+      "mode": "ruby-revel",
+      "after": "Cabinet-specific starting direction and per-line award rule"
+    }
+  ],
+  "animation": "New symbols enter opposite to the actual movement direction.",
+  "languages": [
+    "en",
+    "zh-CN",
+    "zh-TW",
+    "ja",
+    "ko"
+  ]
+}

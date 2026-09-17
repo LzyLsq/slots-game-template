@@ -1,0 +1,31 @@
+{
+  "project": "F17",
+  "name": "Golden Caravan",
+  "primaryFamily": "route-paths",
+  "readyForSubmission": false,
+  "implemented": [
+    "Primary settlement family",
+    "Four cabinet feature flows",
+    "Primary board geometry",
+    "Rule translations and paytable amounts"
+  ],
+  "requiresImplementation": [
+    "Native StoreKit 2 bridge and retry listener",
+    "Native Sign in with Apple bridge",
+    "Platform-native device verification"
+  ],
+  "requiresPublisherConfiguration": [
+    "Publisher legal identity",
+    "Apple team and unique Bundle ID",
+    "App Store Connect product IDs",
+    "Production API and legal/support URLs",
+    "Production database and notification endpoint"
+  ],
+  "requiresAcceptance": [
+    "Native purchase/refund/retry tests",
+    "TestFlight device run",
+    "Distinct-product visual and gameplay review",
+    "Five-language review on actual iPhone",
+    "Minimum/maximum wager rounding and return-balance acceptance"
+  ]
+}

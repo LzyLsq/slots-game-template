@@ -1,3 +1,4 @@
+import {tierCaption, winTier} from './WinPresentation';
 import { _decorator, Color, Component, EventTouch, Graphics, Label, Node, tween, UIOpacity, Vec3 } from 'cc';
 import { SalonArt, box, COLORS, opacity, outlined, text } from '../ui/SalonArt';
 import { SalonAtmosphere } from './SalonAtmosphere';
@@ -11,7 +12,7 @@ export class SalonWinStage extends Component {
   private count!:Label; private hint!:Label; private group!:Node; private veil!:UIOpacity;
   private rays!:Node; private halo!:Node; private done?:()=>void; private reduced=false;
   public setup(art:SalonArt, amount:number, height:number, reduced:boolean,multiplier=20,theme=0):Promise<void> {
-    this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=multiplier>=100?2:multiplier>=50?1:0;
+    this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=Math.max(0,winTier(multiplier)-1);
     this.countDuration=[3.3,4.1,4.9][this.tier];this.holdUntil=this.countDuration+2.2;
     const shade=box(this.node,'Warm celebration veil',0,0,1600,height);const dim=shade.addComponent(Graphics);dim.fillColor=new Color(49,24,15,150);dim.rect(-800,-height/2,1600,height);dim.fill();
     this.group=box(this.node,'Celebration choreography',0,0,1080,1920);
@@ -24,10 +25,11 @@ export class SalonWinStage extends Component {
     const treasure=art.image(this.group,'celebration',0,150,1030,1230);
     const title=outlined(text(this.group,['BIG WIN','MEGA WIN','EPIC WIN'][this.tier],0,660,980,160,104,COLORS.gold,true),'#582919',5);
     text(this.group,['GOLDEN MINT · COIN CORONATION','HARVEST VAULT · TREASURY UNLOCKED','GOLDEN ORCHARD · ABUNDANT HARVEST','JUBILEE LANTERNS · FESTIVAL OF GOLD'][this.theme],0,543,960,70,30,COLORS.cream);
+    outlined(text(this.group,tierCaption(multiplier),0,463,940,74,29,COLORS.cream),'#582919',3);
     // Theme objects occupy the sides of the treasure, away from the title and count.
     for(let i=0;i<4;i++){const n=art.image(this.group,'symbols',(i%2?1:-1)*(i<2?340:380),i<2?300:-180,i<2?210:145,i<2?210:145,[[0,1,0,10],[8,13,0,1],[4,3,6,4],[11,11,14,11]][this.theme][i]);this.emblems.push(n);}
     const plate=art.panel(this.group,0,-503,871,189,0);
-    this.count=outlined(text(plate,'0',0,0,816,165,91,COLORS.gold,true));
+    this.count=outlined(text(plate,'0',0,0,650,106,Math.min(78,650/(Math.floor(amount).toLocaleString('en-US').length*.65)),COLORS.gold,true));
     this.hint=outlined(text(this.group,'Tap to reveal the full amount',0,-649,890,78,36));
     const collect=art.button(this.group,'Collect your treasure',0,-760,730,118,'Collect treasure',1,()=>this.advance());
     // A button tap must not also trigger the stage's reveal/dismiss handler.
@@ -45,7 +47,7 @@ export class SalonWinStage extends Component {
     return new Promise(resolve=>{this.done=resolve;});
   }
   private reveal():void {
-    if(!this.revealed&&!this.reduced){tween(this.count.node).to(.16,{scale:new Vec3(1.09,1.09,1)}).to(.24,{scale:new Vec3(1,1,1)},{easing:'backOut'}).start();}
+    if(!this.revealed&&!this.reduced){tween(this.count.node).to(.09,{scale:new Vec3(.97,.97,1)},{easing:'sineOut'}).to(.22,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();}
     this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=Math.floor(this.amount).toLocaleString('en-US');
     this.hint.string='Added to your wallet · Tap to continue';
   }

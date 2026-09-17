@@ -1,3 +1,5 @@
+import {tr} from './Language';
+import {TextFit} from './TextFit';
 import { Color, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
 export const COLORS = { cream: '#FFF8E7', gold: '#FFD988', jade: '#613F45', ink: '#633C32', coral: '#ED967C' };
 export class SalonArt {
@@ -86,14 +88,15 @@ export function box(parent: Node, name: string, x: number, y: number, w: number,
   const n = new Node(name); n.layer = Layers.Enum.UI_2D; n.addComponent(UITransform).setContentSize(w, h); n.setPosition(x, y); parent.addChild(n); return n;
 }
 export function text(parent: Node, value: string, x: number, y: number, w: number, h: number, size = 32, color = COLORS.cream, display = false): Label {
+  if(parent.name==='Parchment dialog'){const frame=parent.getComponent(UITransform);if(frame){w=Math.max(16,Math.min(w,frame.width*.84-2*Math.abs(x)));h=Math.max(16,Math.min(h,frame.height-90-2*Math.abs(y)));}}
   const n = box(parent, `Text:${value.slice(0, 28)}`, x, y, w, h); const l = n.addComponent(Label);
-  l.string = value; l.fontSize = size; l.lineHeight = size * 1.25; l.fontFamily = display ? 'Georgia' : 'Arial'; l.isBold = true;
+  l.string = tr(value); l.fontSize = size; l.lineHeight = size * 1.25; l.fontFamily = display ? 'Georgia' : 'Arial'; l.isBold = true;
   l.color = new Color(color); l.horizontalAlign = Label.HorizontalAlign.CENTER; l.verticalAlign = Label.VerticalAlign.CENTER;
   // CHAR shares a dynamic glyph atlas across pages. Destroying a label-heavy
   // profile page while creating the login form can evict glyphs that the new
   // labels still reference, leaving blank buttons until a full reload.
   // Per-label textures cost a few draw calls but keep auth copy deterministic.
-  l.overflow = Label.Overflow.CLAMP; l.enableWrapText = true; l.cacheMode = Label.CacheMode.NONE; return l;
+  l.overflow = Label.Overflow.CLAMP; l.enableWrapText = true; l.cacheMode = Label.CacheMode.NONE; n.addComponent(TextFit); return l;
 }
 export function bindPress(hit: Node, inner: Node, action: () => void, feel:{depth?:number;compression?:number;release?:number;tilt?:number}={}): void {
   let pressed=false;

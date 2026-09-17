@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-16",
+  "corrections": [
+    {
+      "before": "The most numerous regular symbol upgrades one tier everywhere. Ties follow the payout list. Only increased line awards pay.",
+      "after": "Upgrade the most numerous regular symbol one tier everywhere. Ties follow the payout list; the highest tier stays unchanged. Pay only the full-grid count award increase."
+    },
+    {
+      "before": "All coins change into one randomly selected regular symbol together. Evaluate left-to-right ways and pay only the increase.",
+      "after": "All coins become one randomly selected regular symbol. Count matching symbols anywhere on the board; pay only the award increase."
+    },
+    {
+      "before": "The most numerous regular symbol advances one tier per step, up to three steps or the highest tier. Only increased cluster awards pay.",
+      "after": "The most numerous regular symbol advances one tier per step, up to three steps or the highest tier. Pay only increases in full-grid count awards; adjacency is not required."
+    }
+  ],
+  "animation": "New symbols enter opposite to the actual movement direction.",
+  "languages": [
+    "en",
+    "zh-CN",
+    "zh-TW",
+    "ja",
+    "ko"
+  ]
+}

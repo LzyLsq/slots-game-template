@@ -1,0 +1,50 @@
+
+> f18-gilded-express@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'vertical-lines',
+    columns: 3,
+    rows: 4,
+    spins: 3000,
+    features: 441,
+    hits: 684,
+    sampleReturn: 0.9429085714285714,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'vertical-lines',
+    columns: 4,
+    rows: 5,
+    spins: 3000,
+    features: 490,
+    hits: 490,
+    sampleReturn: 0.8602133333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'vertical-lines',
+    columns: 4,
+    rows: 5,
+    spins: 3000,
+    features: 323,
+    hits: 1627,
+    sampleReturn: 0.9657704761904762,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'vertical-lines',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 838,
+    hits: 1615,
+    sampleReturn: 0.9914438095238095,
+    layoutVariants: 1
+  }
+]

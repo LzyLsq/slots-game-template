@@ -1,0 +1,159 @@
+{
+  "note": "Development min/max sample, not certified RTP.",
+  "samples": [
+    {
+      "status": "PASS",
+      "results": [
+        {
+          "gameId": "golden-hour",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 60,
+          "payoutScale": 0.51914115,
+          "targetRtp": 0.958,
+          "rtp": 0.955083,
+          "confidence95": [
+            0.9386239453772537,
+            0.9715420546227463
+          ],
+          "baseRtp": 0.6438111666666667,
+          "featureRtp": 0.31127183333333336,
+          "hitRate": 0.23758,
+          "featureRate": 0.15416,
+          "maxWin": 2057
+        },
+        {
+          "gameId": "jade-treasury",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 60,
+          "payoutScale": 0.70530332,
+          "targetRtp": 0.958,
+          "rtp": 0.9669368333333334,
+          "confidence95": [
+            0.9447191436525515,
+            0.9891545230141152
+          ],
+          "baseRtp": 0.27053533333333335,
+          "featureRtp": 0.6964015,
+          "hitRate": 0.16857,
+          "featureRate": 0.16857,
+          "maxWin": 10665
+        },
+        {
+          "gameId": "pearl-palace",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 60,
+          "payoutScale": 0.38616862,
+          "targetRtp": 0.958,
+          "rtp": 0.9521723333333333,
+          "confidence95": [
+            0.9416029295394891,
+            0.9627417371271775
+          ],
+          "baseRtp": 0.732474,
+          "featureRtp": 0.21969833333333333,
+          "hitRate": 0.55223,
+          "featureRate": 0.1075,
+          "maxWin": 2857
+        },
+        {
+          "gameId": "ruby-revel",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 60,
+          "payoutScale": 0.22121706,
+          "targetRtp": 0.958,
+          "rtp": 0.9777061666666667,
+          "confidence95": [
+            0.963446621281163,
+            0.9919657120521703
+          ],
+          "baseRtp": 0.26547866666666664,
+          "featureRtp": 0.7122275,
+          "hitRate": 0.53483,
+          "featureRate": 0.27149,
+          "maxWin": 3231
+        }
+      ]
+    },
+    {
+      "status": "PASS",
+      "results": [
+        {
+          "gameId": "golden-hour",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 1500,
+          "payoutScale": 0.51914115,
+          "targetRtp": 0.958,
+          "rtp": 0.9549325733333334,
+          "confidence95": [
+            0.9384770059430061,
+            0.9713881407236606
+          ],
+          "baseRtp": 0.6437796666666666,
+          "featureRtp": 0.3111529066666667,
+          "hitRate": 0.23758,
+          "featureRate": 0.15416,
+          "maxWin": 51395
+        },
+        {
+          "gameId": "jade-treasury",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 1500,
+          "payoutScale": 0.70530332,
+          "targetRtp": 0.958,
+          "rtp": 0.96851814,
+          "confidence95": [
+            0.9462917356232013,
+            0.9907445443767987
+          ],
+          "baseRtp": 0.27100632,
+          "featureRtp": 0.69751182,
+          "hitRate": 0.16857,
+          "featureRate": 0.16857,
+          "maxWin": 266604
+        },
+        {
+          "gameId": "pearl-palace",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 1500,
+          "payoutScale": 0.38616862,
+          "targetRtp": 0.958,
+          "rtp": 0.9486675733333333,
+          "confidence95": [
+            0.9381058531357905,
+            0.959229293530876
+          ],
+          "baseRtp": 0.7299276,
+          "featureRtp": 0.21873997333333334,
+          "hitRate": 0.55223,
+          "featureRate": 0.1075,
+          "maxWin": 71415
+        },
+        {
+          "gameId": "ruby-revel",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 1500,
+          "payoutScale": 0.22121706,
+          "targetRtp": 0.958,
+          "rtp": 0.9802507,
+          "confidence95": [
+            0.9659779593892966,
+            0.9945234406107034
+          ],
+          "baseRtp": 0.2661389333333333,
+          "featureRtp": 0.7141117666666666,
+          "hitRate": 0.53483,
+          "featureRate": 0.27149,
+          "maxWin": 80890
+        }
+      ]
+    }
+  ]
+}

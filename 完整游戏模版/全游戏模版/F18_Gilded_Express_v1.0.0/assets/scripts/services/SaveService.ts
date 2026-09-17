@@ -1,3 +1,5 @@
+import {GAME_CONFIGS} from '../math/GameConfigs';
+import {ECONOMY} from '../math/EconomyProfile';
 import { SecureRNG } from '../core/SecureRNG';
 
 export interface PasswordCredential {
@@ -105,7 +107,7 @@ const sanitizePlayer = (id: string, value: unknown): PlayerRecord | undefined =>
     username, credential: sanitizeCredential(player.credential), nickname: stringValue(player.nickname, username, 24).trim() || username,
     avatar: Math.floor(numberValue(player.avatar, 0, 0, 15)), isGuest: boolValue(player.isGuest, false),
     signInProvider: player.signInProvider === 'apple' ? 'apple' : boolValue(player.isGuest, false) ? 'guest' : 'password', level: Math.floor(numberValue(player.level, 1, 1, 10_000)),
-    experience: Math.floor(numberValue(player.experience)), credits: Math.floor(numberValue(player.credits, 100_000, 0, 1_000_000_000)),
+    experience: Math.floor(numberValue(player.experience)), credits: Math.floor(numberValue(player.credits, ECONOMY.start, 0, 1_000_000_000)),
     gamesPlayed: Math.floor(numberValue(player.gamesPlayed)), biggestWin: Math.floor(numberValue(player.biggestWin)), totalWin: Math.floor(numberValue(player.totalWin)),
     settings: { music: boolValue(settings.music, true), sound: boolValue(settings.sound, true), vibration: boolValue(settings.vibration, true), quality, language: settings.language === 'zh-CN' ? 'zh-CN' : 'en' },
   };
@@ -123,7 +125,7 @@ const sanitizeScope = (value: unknown): PlayerScopedSave => {
   if (pendingWheel.spinId && Number.isFinite(pendingWheel.amount) && Number.isFinite(pendingWheel.sector)) next.wheel.pending = { spinId: stringValue(pendingWheel.spinId, '', 96), sector: Math.floor(numberValue(pendingWheel.sector, 0, 0, 7)), amount: Math.floor(numberValue(pendingWheel.amount, 0, 1, 100_000)) };
   if (pending.spinId && Number.isFinite(pending.bet)) next.pendingSpin = { spinId: stringValue(pending.spinId, '', 128), bet: Math.floor(numberValue(pending.bet, 0, 1, 1_000_000)), reservedAt: stringValue(pending.reservedAt, '', 48) };
   const remote=objectValue(raw.pendingRemoteSpin);
-  if(typeof remote.requestId==='string'&&/^[a-z0-9-]{12,128}$/i.test(remote.requestId)&&typeof remote.gameId==='string'&&['golden-hour','jade-treasury','pearl-palace','ruby-revel'].includes(remote.gameId)&&[50,100,200,500,1000].includes(remote.bet as number))next.pendingRemoteSpin={requestId:remote.requestId,gameId:remote.gameId,bet:remote.bet as number};
+  if(typeof remote.requestId==='string'&&/^[a-z0-9-]{12,128}$/i.test(remote.requestId)&&typeof remote.gameId==='string'&&['golden-hour','jade-treasury','pearl-palace','ruby-revel'].includes(remote.gameId)&&[50,100,200,500,1000,...GAME_CONFIGS.flatMap(c=>Array.from(c.bets))].includes(remote.bet as number))next.pendingRemoteSpin={requestId:remote.requestId,gameId:remote.gameId,bet:remote.bet as number};
   next.settledSpinIds = Array.isArray(raw.settledSpinIds) ? raw.settledSpinIds.filter((id): id is string => typeof id === 'string').slice(-200) : [];
   next.creditedPurchaseIds = Array.isArray(raw.creditedPurchaseIds) ? raw.creditedPurchaseIds.filter((id): id is string => typeof id === 'string' && /^[A-Za-z0-9._:-]{3,160}$/.test(id)).slice(-500) : [];
   return next;

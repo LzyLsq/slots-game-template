@@ -1,0 +1,70 @@
+{
+  "featurePresentationChecks": [
+    {
+      "n": 22,
+      "game": "golden-hour",
+      "title": "CELESTIAL TRANSMUTATION",
+      "type": "celestial-transmute",
+      "rounds": 3,
+      "total": 113,
+      "feature": 113,
+      "bet": 120,
+      "same": true,
+      "caption": "CELESTIAL UPGRADE · 3/3",
+      "transitioning": false
+    },
+    {
+      "n": 22,
+      "game": "jade-treasury",
+      "title": "CELESTIAL TRANSMUTATION",
+      "type": "celestial-transmute",
+      "rounds": 3,
+      "total": 63,
+      "feature": 63,
+      "bet": 120,
+      "same": true,
+      "caption": "CELESTIAL UPGRADE · 3/3",
+      "transitioning": false
+    },
+    {
+      "n": 22,
+      "game": "pearl-palace",
+      "title": "CELESTIAL TRANSMUTATION",
+      "type": "celestial-transmute",
+      "rounds": 3,
+      "total": 94,
+      "feature": 93,
+      "bet": 120,
+      "same": true,
+      "caption": "CELESTIAL UPGRADE · 3/3",
+      "transitioning": false
+    },
+    {
+      "n": 22,
+      "game": "ruby-revel",
+      "title": "CELESTIAL TRANSMUTATION",
+      "type": "celestial-transmute",
+      "rounds": 3,
+      "total": 249,
+      "feature": 136,
+      "bet": 120,
+      "same": true,
+      "caption": "CELESTIAL UPGRADE · 3/3",
+      "transitioning": false
+    }
+  ],
+  "uiEconomyChecks": [
+    {
+      "n": 22,
+      "shopAmounts": true,
+      "spin": {
+        "before": 45000,
+        "after": 44880,
+        "expected": 44880,
+        "state": "idle",
+        "feature": "celestial-transmute"
+      }
+    }
+  ],
+  "pageErrors": []
+}

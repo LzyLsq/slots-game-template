@@ -1,0 +1,156 @@
+{
+  "training": {
+    "status": "CALIBRATION_REQUIRED",
+    "results": [
+      {
+        "gameId": "golden-hour",
+        "spins": 750000,
+        "seed": 120594171,
+        "bet": 200,
+        "payoutScale": 3.51630875,
+        "targetRtp": 0.96,
+        "rtp": 0.9594342066666667,
+        "confidence95": [
+          0.9547737636523029,
+          0.9640946496810304
+        ],
+        "baseRtp": 0.8590468333333333,
+        "featureRtp": 0.10038737333333334,
+        "hitRate": 0.35074666666666665,
+        "featureRate": 0.264444,
+        "maxWin": 13714
+      },
+      {
+        "gameId": "jade-treasury",
+        "spins": 750000,
+        "seed": 120594171,
+        "bet": 200,
+        "payoutScale": 7.58477462,
+        "targetRtp": 0.96,
+        "rtp": 0.9508397466666667,
+        "confidence95": [
+          0.9444203029679007,
+          0.9572591903654327
+        ],
+        "baseRtp": 0.87527628,
+        "featureRtp": 0.07556346666666666,
+        "hitRate": 0.235008,
+        "featureRate": 0.235008,
+        "maxWin": 13106
+      },
+      {
+        "gameId": "pearl-palace",
+        "spins": 750000,
+        "seed": 120594171,
+        "bet": 200,
+        "payoutScale": 4.0323853,
+        "targetRtp": 0.96,
+        "rtp": 0.9664106533333333,
+        "confidence95": [
+          0.9608506141836176,
+          0.971970692483049
+        ],
+        "baseRtp": 0.95678144,
+        "featureRtp": 0.009629213333333332,
+        "hitRate": 0.22034133333333333,
+        "featureRate": 0.07718266666666666,
+        "maxWin": 6704
+      },
+      {
+        "gameId": "ruby-revel",
+        "spins": 750000,
+        "seed": 120594171,
+        "bet": 200,
+        "payoutScale": 26.27890977,
+        "targetRtp": 0.96,
+        "rtp": 0.9235115533333333,
+        "confidence95": [
+          0.9127629641838173,
+          0.9342601424828494
+        ],
+        "baseRtp": 0.7962340733333333,
+        "featureRtp": 0.12727748,
+        "hitRate": 0.08454666666666667,
+        "featureRate": 0.08454666666666667,
+        "maxWin": 71697
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "results": [
+      {
+        "gameId": "golden-hour",
+        "spins": 500000,
+        "seed": 219540369,
+        "bet": 200,
+        "payoutScale": 3.51838237,
+        "targetRtp": 0.96,
+        "rtp": 0.96904906,
+        "confidence95": [
+          0.9632932399841283,
+          0.9748048800158717
+        ],
+        "baseRtp": 0.86763469,
+        "featureRtp": 0.10141437,
+        "hitRate": 0.35282,
+        "featureRate": 0.266046,
+        "maxWin": 14652
+      },
+      {
+        "gameId": "jade-treasury",
+        "spins": 500000,
+        "seed": 219540369,
+        "bet": 200,
+        "payoutScale": 7.65784525,
+        "targetRtp": 0.96,
+        "rtp": 0.96004244,
+        "confidence95": [
+          0.9521225051475231,
+          0.967962374852477
+        ],
+        "baseRtp": 0.88481511,
+        "featureRtp": 0.07522733,
+        "hitRate": 0.235694,
+        "featureRate": 0.235694,
+        "maxWin": 15200
+      },
+      {
+        "gameId": "pearl-palace",
+        "spins": 500000,
+        "seed": 219540369,
+        "bet": 200,
+        "payoutScale": 4.0056366,
+        "targetRtp": 0.96,
+        "rtp": 0.95676346,
+        "confidence95": [
+          0.9500032908769199,
+          0.9635236291230801
+        ],
+        "baseRtp": 0.94780956,
+        "featureRtp": 0.0089539,
+        "hitRate": 0.220146,
+        "featureRate": 0.077362,
+        "maxWin": 5170
+      },
+      {
+        "gameId": "ruby-revel",
+        "spins": 500000,
+        "seed": 219540369,
+        "bet": 200,
+        "payoutScale": 27.31720387,
+        "targetRtp": 0.96,
+        "rtp": 0.9577293,
+        "confidence95": [
+          0.944156967407807,
+          0.971301632592193
+        ],
+        "baseRtp": 0.82836513,
+        "featureRtp": 0.12936417,
+        "hitRate": 0.084642,
+        "featureRate": 0.084642,
+        "maxWin": 46252
+      }
+    ]
+  }
+}

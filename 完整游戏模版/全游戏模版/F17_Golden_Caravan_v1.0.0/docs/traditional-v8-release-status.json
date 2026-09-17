@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "snapshotAt": "2026-09-16T17:58:55+08:00",
+  "project": "F17",
+  "name": "Golden Caravan",
+  "releaseStatus": "blocked",
+  "readyForSubmission": false,
+  "scope": {
+    "projectCount": 10,
+    "cabinetCount": 40,
+    "missingProject": "F16 is not present in this workspace and is not included.",
+    "familyCountAcrossSuite": 7,
+    "qualification": "40 configured cabinets use 7 conventional primary winning families plus cabinet-specific feature flows. These are not 40 unrelated fundamental slot mechanisms. Four primary families within each project differ; primary families are shared across projects.",
+    "independentProductAcceptance": "pending; the current family matrix is not evidence of App Store acceptance or full product differentiation."
+  },
+  "cabinets": [
+    {
+      "id": "golden-hour",
+      "name": "RUBY DUNES",
+      "primaryKind": "line-reels",
+      "columns": 3,
+      "rows": 3,
+      "modeLabel": "5 PAYLINES"
+    },
+    {
+      "id": "jade-treasury",
+      "name": "PEARL OASIS",
+      "primaryKind": "scatter-groups",
+      "columns": 6,
+      "rows": 5,
+      "modeLabel": "8+ ANYWHERE PAYS"
+    },
+    {
+      "id": "pearl-palace",
+      "name": "SPICE GOLD",
+      "primaryKind": "variable-ways",
+      "columns": 6,
+      "rows": 5,
+      "modeLabel": "VARIABLE HEIGHT WAYS"
+    },
+    {
+      "id": "ruby-revel",
+      "name": "MOON SILK",
+      "primaryKind": "cluster-avalanche",
+      "columns": 6,
+      "rows": 5,
+      "modeLabel": "5+ CONNECTED CLUSTERS"
+    }
+  ],
+  "validation": {
+    "finalSourceRuleAndPrimaryChecks": {
+      "status": "passed",
+      "commands": [
+        "node --import tsx tools/rule-contract-test.ts",
+        "npm run test:primary"
+      ],
+      "projectCommandCount": 2,
+      "suiteCommandCount": 20,
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/final-contract-checks.json",
+      "scope": "Final mathematical source checks reported for all ten projects; not a native build or full UI acceptance."
+    },
+    "featureMathHandoff": {
+      "status": "evidence_available",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/FEATURE_STATUS.md",
+      "scope": "240,000 natural spins across 40 modes before final split calibration; reachability and conservation evidence, not certified RTP or final playback quality."
+    },
+    "finalNaturalObservation": {
+      "status": "evidence_available",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/FINAL_NATURAL_OBSERVATION.md",
+      "scope": "100,000 paid spins each for F17-3, F19-3, F22-1 and F22-4; 400,000 total. Bounded samples do not establish theoretical maxima, certified RTP, frame rate or visual quality."
+    },
+    "earlierCompiledBrowserEvidence": [],
+    "finalBuild": {
+      "status": "passed",
+      "target": "web-mobile",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/cabinet-v3/f17-build.log",
+      "scope": "Final browser artifact built successfully; not an iOS archive, native-device acceptance or submission certification.",
+      "buildLogQualification": "Cocos build completion recorded. Some logs contain editor/process shutdown warnings after successful build; compiled-positive fixtures separately verify the produced bundles."
+    },
+    "finalUiAcceptance": {
+      "status": "pending",
+      "reason": "Rule geometry and pagination checks pass across all ten projects; final targeted normal-amount checks also pass 400 states. Complete visual acceptance remains pending for supporting small text, large-amount stress and real-device review.",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/final-targeted-ui",
+      "additionalEvidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/ui-followup-status.md"
+    },
+    "realDeviceAndTestFlight": {
+      "status": "pending",
+      "reason": "No recorded native real-device, Sandbox purchase/refund/retry or TestFlight acceptance in the retained release documents."
+    },
+    "compiledPositiveFixtures": {
+      "status": "passed",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/compiled-positive-check.json",
+      "projectModes": 4,
+      "suiteModes": 40,
+      "scope": "Existing result records: each final compiled evaluator produced positive, finite awards with valid positions for an explicit winning fixture. Not a comprehensive statistical or end-to-end UI test."
+    },
+    "paytableReferenceChecks": {
+      "status": "passed",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/paytable-reference-checks.json",
+      "scope": "30 commands across ten projects: targeted reference/rounding checks, rule contracts and typechecks; 32,391 targeted assertions, including 242 small positive references."
+    },
+    "readabilityReview": {
+      "status": "pending",
+      "completedScope": "Normal initial primary amounts pass targeted post-fix review in all four modes, five locales and widths 320/414.",
+      "remainingScope": [
+        "Supporting/auxiliary small text",
+        "Large-amount stress and long numeric values",
+        "Physical iPhone readability and hardware acceptance"
+      ],
+      "resolvedIssues": [
+        {
+          "issue": "Narrow-layout primary amounts previously as small as 6.989 CSS px across the suite, including F19 values around 9.35–9.78 CSS px.",
+          "status": "resolved_for_normal_initial_amounts",
+          "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/amount-readability-ui/summary.json",
+          "suiteMinimumAfterFixCssPx": 11.33321099567455,
+          "projectMinimumAfterFixCssPx": 12.379982363315696
+        }
+      ],
+      "independence": "Remaining visual/device review is separate from the retained native integration, publisher configuration and App Store submission blockers."
+    },
+    "finalTargetedGeometry": {
+      "status": "passed",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/final-targeted-ui/F17.json",
+      "checks": 1082,
+      "overflow": 0,
+      "pageerrors": 0,
+      "navigationChecks": 120,
+      "navigationPassed": 120,
+      "readabilityCandidates": 87,
+      "qualification": "Earlier final-rule geometry and actual pagination interactions passed. Later changes affected amount regions only; rule pages were unchanged and that evidence remains applicable. The final amount-region regression is a separate 400-state check, not a rerun of the whole suite."
+    },
+    "normalAmountReadability": {
+      "status": "passed",
+      "evidence": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/amount-readability-ui/summary.json",
+      "states": 40,
+      "overflow": 0,
+      "errors": 0,
+      "minimumPrimaryAmountCssPx": 12.379982363315696,
+      "suiteStates": 400,
+      "suiteMinimumPrimaryAmountCssPx": 11.33321099567455,
+      "scope": "4 modes × 5 locales × 320/414 widths, normal initial amounts; not all supporting text, large-amount stress, or iPhone hardware acceptance.",
+      "regressionScope": "Only amount-region changes were retested in these final 400 states. Earlier 12,996 rule/geometry checks and 1,200 pagination interactions remain applicable to unchanged rule pages; those full suites were not rerun."
+    }
+  },
+  "requiresImplementation": [
+    "Native StoreKit 2 bridge and retry listener",
+    "Native Sign in with Apple bridge",
+    "Platform-native device verification"
+  ],
+  "requiresPublisherConfiguration": [
+    "Publisher legal identity",
+    "Apple team and unique Bundle ID",
+    "App Store Connect product IDs",
+    "Production API and legal/support URLs",
+    "Production database and notification endpoint"
+  ],
+  "requiresAcceptance": [
+    "Native purchase/refund/retry tests",
+    "TestFlight device run",
+    "Distinct-product visual and gameplay review",
+    "Five-language review on actual iPhone",
+    "Minimum/maximum wager rounding and return-balance acceptance",
+    "Final rebuilt browser artifacts: all four modes, five locales, narrow/mobile layouts, readable rules, win explanation, animation pacing and wallet conservation"
+  ],
+  "retainedHistoricalReleaseBlocks": [
+    "Publisher identity and public legal URLs",
+    "App Store product identifiers",
+    "Hosted legal documents finalized",
+    "Native release integration complete",
+    "Device and production acceptance recorded"
+  ],
+  "historicalEvidence": [
+    "docs/independent-v4-release-status.json",
+    "docs/release-audit-v4.txt",
+    "docs/independent-release-audit.log"
+  ],
+  "historicalEvidenceCaution": "Historical primaryFamily values may describe earlier implementations; cabinets above are read from current GameConfigs.ts. Historical audit PASS entries are not a fresh release certification. Existing blockers remain until explicit completion evidence replaces them.",
+  "sourceSha256AtSnapshot": {
+    "assets/scripts/math/GameConfigs.ts": "d0909d615f787b0b566fd7eeeb0f1970d2f1694e1a24971e6ccc5918cb3fa57a",
+    "assets/scripts/math/IndependentCore.ts": "813f9c0d7dd95e870e84f821a877f80b9ca630e38e047eaf2b67a7346bcbc988",
+    "assets/scripts/math/PaytableDisplay.ts": "cf3d4b33e3e03ae1ce47fcb7c45d4493f6418054ddd4579d20a47f63bff56dd0",
+    "assets/scripts/math/PrimaryRuleText.ts": "1a9989f7bedfdaa528e7751b81d58b3bc43e9d7bc76b275d8b2db01425c7b1de",
+    "assets/scripts/math/SignatureFeature.ts": "10d60b289f1f5e95af8194f997ae0263a1ac426ede8ddb2b893d62a6aa87a6f8",
+    "assets/scripts/ui/AureliaApp.ts": "9624e620ee37b24f00a8c68e3f85dbd134c2f9312d6c306bacbf49b57107cdc9",
+    "assets/scripts/ui/RulePages.ts": "3fe6e8e068219ce77e42e077fe167d2eea3e50320a28b9de94f07812db546e2b"
+  },
+  "reviewDisclaimer": "App Store approval is not guaranteed. Submission readiness remains false until implementation, configuration, final product review and native acceptance blockers are closed.",
+  "artifactIdentity": {
+    "snapshotAt": "2026-09-16T18:18:01+08:00",
+    "sourceTreeSha256": "d11267da04e3e9ebc61a3f4f10ea60d43ebd493e5cd22622f6fa2b092db57b8b",
+    "sourceFileCount": 124,
+    "buildTreeSha256": "4491609e8c0b11324b8154bce42cc4cf96808b613cf6e5498864bb6f30f99027",
+    "buildFileCount": 141,
+    "mainBundleSha256": "14a0656985f7c92f388109258d5f3c16ed49d79ad24dbca206a9a7059cd83a25",
+    "manifest": "/Users/mengjunzhu/Documents/Codex/2026-09-09/zhe/work/traditional-v8/final-artifact-manifest.json",
+    "qualification": "Post amount-readability source/build snapshot, including final F15 rebuild. New acceptance results are still being consolidated; fingerprints alone do not establish visual acceptance or reproducible builds."
+  },
+  "evidenceUpdatedAt": "2026-09-16T18:20:28+08:00"
+}

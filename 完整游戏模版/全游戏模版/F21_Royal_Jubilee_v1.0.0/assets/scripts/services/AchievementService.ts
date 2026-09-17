@@ -1,12 +1,13 @@
+import {ECONOMY} from '../math/EconomyProfile';
 import { EconomyService } from './EconomyService';
 import { SaveService } from './SaveService';
 
 export interface Achievement { id: string; title: string; target: number; reward: number; category: 'spin' | 'win' | 'feature'; }
 export const ACHIEVEMENTS: readonly Achievement[] = [
-  { id: 'first-spin', title: 'First Orbit', target: 1, reward: 1_000, category: 'spin' },
-  { id: 'spin-25', title: 'Steady Navigator', target: 25, reward: 5_000, category: 'spin' },
-  { id: 'win-10000', title: 'Luminous Haul', target: 10_000, reward: 8_000, category: 'win' },
-  { id: 'feature-3', title: 'Feature Seeker', target: 3, reward: 12_000, category: 'feature' },
+  { id: 'first-spin', title: 'First Orbit', target: ECONOMY.targets[0], reward: ECONOMY.achievements[0], category: 'spin' },
+  { id: 'spin-25', title: 'Steady Navigator', target: ECONOMY.targets[1], reward: ECONOMY.achievements[1], category: 'spin' },
+  { id: 'win-10000', title: 'Luminous Haul', target: ECONOMY.targets[2], reward: ECONOMY.achievements[2], category: 'win' },
+  { id: 'feature-3', title: 'Feature Seeker', target: ECONOMY.targets[3], reward: ECONOMY.achievements[3], category: 'feature' },
 ];
 export class AchievementService {
   public constructor(private readonly save: SaveService, private readonly economy: EconomyService) {}

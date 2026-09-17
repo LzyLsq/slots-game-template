@@ -1,3 +1,4 @@
+import {ECONOMY} from '../math/EconomyProfile';
 import { SecureRNG } from '../core/SecureRNG';
 import { complianceCurrent, PRIVACY_VERSION, TERMS_VERSION } from '../core/ReleaseConfig';
 import type { AuthResult, AuthService, LoginInput, RegistrationInput } from './AuthService';
@@ -5,7 +6,7 @@ import { createCredential, verifyCredential } from './CredentialService';
 import { createPlayerScope, SaveService, type PasswordCredential, type PlayerRecord } from './SaveService';
 
 const newPlayer = (username: string, nickname: string, isGuest: boolean, credential?: PasswordCredential): PlayerRecord => ({
-  id: SecureRNG.id(isGuest ? 'guest' : 'player'), appAccountToken: SecureRNG.uuid(), termsAcceptedAt: new Date().toISOString(), termsVersion: TERMS_VERSION, privacyVersion: PRIVACY_VERSION, username, credential, nickname, avatar: 0, isGuest, signInProvider: isGuest ? 'guest' : 'password', level: 1, experience: 0, credits: 100_000,
+  id: SecureRNG.id(isGuest ? 'guest' : 'player'), appAccountToken: SecureRNG.uuid(), termsAcceptedAt: new Date().toISOString(), termsVersion: TERMS_VERSION, privacyVersion: PRIVACY_VERSION, username, credential, nickname, avatar: 0, isGuest, signInProvider: isGuest ? 'guest' : 'password', level: 1, experience: 0, credits: ECONOMY.start,
   gamesPlayed: 0, biggestWin: 0, totalWin: 0,
   settings: { music: true, sound: true, vibration: true, quality: 'medium', language: 'en' },
 });

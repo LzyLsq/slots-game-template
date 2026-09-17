@@ -1,0 +1,50 @@
+
+> f19-fortune-treasury@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'collector-grid',
+    columns: 4,
+    rows: 4,
+    spins: 3000,
+    features: 530,
+    hits: 1746,
+    sampleReturn: 0.9476273333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 998,
+    hits: 998,
+    sampleReturn: 1.0092253333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'collector-grid',
+    columns: 4,
+    rows: 5,
+    spins: 3000,
+    features: 2054,
+    hits: 2647,
+    sampleReturn: 0.962994,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 1622,
+    hits: 1578,
+    sampleReturn: 0.96636,
+    layoutVariants: 1
+  }
+]

@@ -29,20 +29,7 @@ export class RankService {
 export interface HallRankEntry extends RankEntry { virtual: boolean; }
 /** Mixed display standings; never writes character scores into saved player records. */
 export function hallStandings(players: readonly RankEntry[]): HallRankEntry[] {
-  const friends = [
-    {nickname:'Jade Lantern',winnings:128000,avatar:0},
-    {nickname:'Peach Blossom',winnings:96500,avatar:1},
-    {nickname:'Lotus Dream',winnings:74200,avatar:2},
-    {nickname:'Golden Sage',winnings:53600,avatar:3},
-    {nickname:'Lucky Cloud',winnings:31800,avatar:8},
-    {nickname:'Amber Wish',winnings:28750,avatar:4},
-    {nickname:'Fortune Star',winnings:24600,avatar:5},
-    {nickname:'Pearl Moon',winnings:19300,avatar:6},
-    {nickname:'Crimson Silk',winnings:15800,avatar:7},
-    {nickname:'Willow Song',winnings:11200,avatar:9},
-    {nickname:'Sunlit Jade',winnings:7400,avatar:10},
-    {nickname:'Celestial Dawn',winnings:3500,avatar:11},
-  ];
+  const friends = [{"nickname": "Cloud Sage", "winnings": 131316, "avatar": 0}, {"nickname": "Jade Spirit", "winnings": 98214, "avatar": 1}, {"nickname": "Fortune Immortal", "winnings": 72612, "avatar": 2}, {"nickname": "Crimson Wish", "winnings": 51510, "avatar": 3}, {"nickname": "Lotus Fairy", "winnings": 31908, "avatar": 4}, {"nickname": "Heavenly Pearl", "winnings": 18306, "avatar": 5}, {"nickname": "Phoenix Blessing", "winnings": 9204, "avatar": 6}, {"nickname": "Prosperity Star", "winnings": 3102, "avatar": 7}];
   return [...players.map(p=>({...p,virtual:false})),...friends.map(p=>({...p,rank:0,current:false,virtual:true}))]
     .sort((a,b)=>b.winnings-a.winnings||Number(a.virtual)-Number(b.virtual)||a.rank-b.rank||a.nickname.localeCompare(b.nickname))
     .map((p,i)=>({...p,rank:i+1}));

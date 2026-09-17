@@ -1,0 +1,50 @@
+
+> f17-golden-caravan@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'route-paths',
+    columns: 4,
+    rows: 4,
+    spins: 3000,
+    features: 1958,
+    hits: 2008,
+    sampleReturn: 0.9889930555555555,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'route-paths',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 270,
+    hits: 1280,
+    sampleReturn: 0.9259944444444445,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'route-paths',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 3000,
+    hits: 2765,
+    sampleReturn: 0.9493111111111111,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'route-paths',
+    columns: 6,
+    rows: 4,
+    spins: 3000,
+    features: 1557,
+    hits: 1557,
+    sampleReturn: 1.0024875,
+    layoutVariants: 1
+  }
+]

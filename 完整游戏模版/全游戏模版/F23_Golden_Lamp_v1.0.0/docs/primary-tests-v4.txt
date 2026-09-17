@@ -1,0 +1,50 @@
+
+> f23-golden-lamp@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'poker-reels',
+    columns: 5,
+    rows: 1,
+    spins: 3000,
+    features: 193,
+    hits: 2970,
+    sampleReturn: 0.9749587301587301,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'poker-reels',
+    columns: 5,
+    rows: 2,
+    spins: 3000,
+    features: 141,
+    hits: 2979,
+    sampleReturn: 0.9540031746031746,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'poker-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1275,
+    hits: 2999,
+    sampleReturn: 0.9452206349206349,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'poker-reels',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 3000,
+    hits: 3000,
+    sampleReturn: 0.9495119047619047,
+    layoutVariants: 1
+  }
+]

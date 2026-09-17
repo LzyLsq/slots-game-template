@@ -1,3 +1,4 @@
+import {ECONOMY} from '../math/EconomyProfile';
 import { SecureRNG } from '../core/SecureRNG';
 import { EconomyService } from './EconomyService';
 import { SaveService } from './SaveService';
@@ -13,7 +14,7 @@ export class RewardService {
 }
 
 export class CheckInService extends RewardService {
-  public readonly rewards = [2_000, 3_000, 5_000, 8_000, 12_000, 18_000, 50_000] as const;
+  public readonly rewards = ECONOMY.check;
   public claimToday(today: string): { ok: boolean; amount: number; day: number } {
     const state = this.save.currentScope()?.checkIn;
     if (!state || !/^\d{4}-\d{2}-\d{2}$/.test(today)) return { ok: false, amount: 0, day: 1 };
@@ -25,7 +26,7 @@ export class CheckInService extends RewardService {
 }
 
 export class WheelService extends RewardService {
-  public readonly sectors = [1_000, 2_000, 5_000, 10_000, 1_500, 3_000, 8_000, 25_000] as const;
+  public readonly sectors = ECONOMY.wheel;
   private readonly rng = new SecureRNG();
   public prepare(today: string): { spinId: string; sector: number; amount: number } | undefined {
     const scope = this.save.currentScope(); if (!scope || !/^\d{4}-\d{2}-\d{2}$/.test(today)) return undefined;

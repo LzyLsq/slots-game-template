@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "id": "golden-hour",
+      "mode": "CENTRE LINE · SUN EXPANSION",
+      "feature": "sun-expansion",
+      "steps": 1,
+      "final": true,
+      "before": 54000,
+      "after": 53800,
+      "expected": 53800,
+      "state": "idle",
+      "transitioning": false
+    },
+    {
+      "id": "jade-treasury",
+      "mode": "243 WAYS · COIN LOCK",
+      "feature": "coin-lock",
+      "steps": 15,
+      "final": true,
+      "before": 53800,
+      "after": 61472,
+      "expected": 61472,
+      "state": "idle",
+      "transitioning": false
+    },
+    {
+      "id": "pearl-palace",
+      "mode": "CLUSTERS · PEARL CASCADE",
+      "feature": "pearl-drop",
+      "steps": 1,
+      "final": true,
+      "before": 61472,
+      "after": 61354,
+      "expected": 61354,
+      "state": "idle",
+      "transitioning": false
+    },
+    {
+      "id": "ruby-revel",
+      "mode": "20 LINES · WILD PROCESSION",
+      "feature": "royal-procession",
+      "steps": 4,
+      "final": true,
+      "before": 61354,
+      "after": 61720,
+      "expected": 61720,
+      "state": "idle",
+      "transitioning": false
+    }
+  ],
+  "errors": []
+}

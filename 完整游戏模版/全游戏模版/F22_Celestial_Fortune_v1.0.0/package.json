@@ -2,12 +2,12 @@
   "name": "f22-celestial-fortune",
   "uuid": "d1d35e83-7368-4943-8ffa-f83c821934ab",
   "version": "1.0.0",
-  "description": "F22 Celestial Fortune \u2014 a joyful celestial treasure festival",
+  "description": "F22 Celestial Fortune — a joyful celestial treasure festival",
   "creator": {
     "version": "3.8.8"
   },
   "scripts": {
-    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language",
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary",
     "test:layout": "node --import tsx tools/layout-test.ts",
     "test:math": "node --import tsx tools/math-test.ts",
     "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
@@ -20,7 +20,11 @@
     "server:dev": "node --import tsx server/ProductionServer.ts",
     "server:production": "NODE_ENV=production node --import tsx server/PostgresProductionServer.ts",
     "test:rules": "node --import tsx tools/rules-test.ts",
-    "test:language": "node --import tsx tools/language-test.ts"
+    "test:language": "node --import tsx tools/language-test.ts",
+    "test:signature": "node --import tsx tools/signature-test.ts",
+    "test:core": "node --import tsx tools/core-test.ts",
+    "test:cabinets": "node --import tsx tools/cabinet-test.ts",
+    "test:primary": "node --import tsx tools/primary-test.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

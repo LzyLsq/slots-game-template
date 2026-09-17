@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-16",
+  "corrections": [
+    {
+      "before": "Any regular-symbol win starts two respins.",
+      "after": "Any non-Scatter win starts two respins."
+    },
+    {
+      "before": "A count-anywhere win starts the harvest.",
+      "after": "A payline win starts the harvest."
+    },
+    {
+      "before": "Refill only the largest winning symbol group in its original cells. No gravity. Stop when no group wins; multipliers 1x to 4x.",
+      "after": "Refill only the longest winning line combination in place. Stop on no line win or after four refills; multipliers 1x, 2x, 3x, 4x."
+    },
+    {
+      "after": "No payline win plus WILD can trigger nudges even when Scatters pay."
+    }
+  ],
+  "animation": "New symbols enter opposite to the actual movement direction.",
+  "languages": [
+    "en",
+    "zh-CN",
+    "zh-TW",
+    "ja",
+    "ko"
+  ]
+}

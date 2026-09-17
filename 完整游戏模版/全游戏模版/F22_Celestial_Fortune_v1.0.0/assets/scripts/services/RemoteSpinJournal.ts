@@ -8,9 +8,10 @@ export class RemoteSpinJournal {
   public pending(){return this.save.currentScope()?.pendingRemoteSpin;}
   public begin(requestId:string,gameId:GameId,bet:number):void{
     const id=this.save.read().currentUserId;
-    if(!id||!GAME_CONFIG_BY_ID[gameId]?.bets.includes(bet)||!/^[a-z0-9-]{12,128}$/i.test(requestId))throw new Error('Invalid round reservation.');
+    if(!id||!GAME_CONFIG_BY_ID[gameId]||!Number.isSafeInteger(bet)||bet<=0||!/^[a-z0-9-]{12,128}$/i.test(requestId))throw new Error('Invalid round reservation.');
     const pending=this.pending();
     if(pending){if(pending.requestId!==requestId||pending.gameId!==gameId||pending.bet!==bet)throw new Error('Recover your previous round first.');return;}
+    if(!GAME_CONFIG_BY_ID[gameId].bets.includes(bet))throw new Error('Unsupported new bet.');
     this.save.update(s=>{s.playerData[id].pendingRemoteSpin={requestId,gameId,bet};});
   }
   public reject(requestId:string):void{

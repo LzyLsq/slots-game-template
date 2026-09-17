@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-16",
+  "corrections": [
+    {
+      "before": "Any regular-symbol win starts three cloud shifts.",
+      "after": "Any non-Scatter win starts three cloud shifts."
+    },
+    {
+      "before": "All symbols move up one cell. Only the new bottom row is drawn. Each shifted board pays once.",
+      "after": "Open cells move up one position; draw a new bottom symbol on each reel. Closed cells stay unchanged. Each board pays once."
+    },
+    {
+      "before": "Each reel containing a WILD becomes entirely WILD. Only the increase over the original award pays.",
+      "after": "All open cells on a reel containing an open WILD become WILD. Closed cells stay unchanged. Pay only the award increase."
+    },
+    {
+      "before": "All coins become the same randomly selected regular symbol. Awards start from the right edge. Pay only the increase.",
+      "after": "Open coins become one randomly selected regular symbol. Evaluate Ways from the left; pay only the award increase."
+    }
+  ],
+  "animation": "New symbols enter opposite to the actual movement direction.",
+  "closedCells": "Preserved during rising shifts and expansion, excluded from animation focus, masked above moving symbols.",
+  "languages": [
+    "en",
+    "zh-CN",
+    "zh-TW",
+    "ja",
+    "ko"
+  ]
+}

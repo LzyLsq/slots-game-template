@@ -1,0 +1,50 @@
+
+> f14-cloud-crown@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'variable-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 1545,
+    hits: 1645,
+    sampleReturn: 0.8781933333333334,
+    layoutVariants: 243
+  },
+  {
+    id: 'jade-treasury',
+    family: 'variable-ways',
+    columns: 6,
+    rows: 4,
+    spins: 3000,
+    features: 1449,
+    hits: 1445,
+    sampleReturn: 0.8396033333333334,
+    layoutVariants: 720
+  },
+  {
+    id: 'pearl-palace',
+    family: 'variable-ways',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1431,
+    hits: 1932,
+    sampleReturn: 0.8836183333333333,
+    layoutVariants: 961
+  },
+  {
+    id: 'ruby-revel',
+    family: 'variable-ways',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 2115,
+    hits: 2088,
+    sampleReturn: 0.962105,
+    layoutVariants: 2122
+  }
+]

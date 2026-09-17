@@ -1,6 +1,6 @@
 # Sign in with Apple bridge contract
 
-The Cocos layer exposes the **Continue with Apple** entry but never fabricates an Apple account. During iOS export, enable the **Sign in with Apple** capability and expose `globalThis.__FORTUNE_BLOOM_APPLE_AUTH__` matching `FortuneBloomAppleAuthBridge` in `assets/scripts/services/AppleSignInService.ts`.
+The Cocos layer exposes the **Continue with Apple** entry but never fabricates an Apple account. During iOS export, enable the **Sign in with Apple** capability and expose `globalThis.__AURELIA_APPLE_AUTH__` matching `AureliaAppleAuthBridge` in `assets/scripts/services/AppleSignInService.ts`.
 
 ## `isAvailable()`
 

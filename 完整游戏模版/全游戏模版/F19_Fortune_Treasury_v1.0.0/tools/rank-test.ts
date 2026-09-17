@@ -27,10 +27,13 @@ const main=async():Promise<void>=>{
   });
 
   const rows=new RankService(undefined,save).list('all-time',save.read().players[guestId]);
-  assert.deepEqual(rows.map(row=>[row.rank,row.nickname,row.winnings,row.current]),[
-    [1,'Local Member',2_400,false],
-    [2,'Collector',1_250,true],
+  const actual=rows.filter(row=>!('virtual' in row)||!(row as typeof row & {virtual:boolean}).virtual);
+  assert.deepEqual(actual.map(row=>[row.nickname,row.winnings,row.current]),[
+    ['Local Member',2400,false],
+    [first.player.nickname,1250,true],
   ]);
+  assert(rows.every((row,i)=>row.rank===i+1&&(!i||rows[i-1].winnings>=row.winnings)));
+  assert(!rows.some(row=>row.nickname==='Stale Guest'));
   assert.equal(await new GameBootstrap(save).resumeSession(),true,'Guest session did not survive a reload');
   console.log('PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.');
 };

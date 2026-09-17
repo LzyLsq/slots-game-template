@@ -1,0 +1,70 @@
+{
+  "featurePresentationChecks": [
+    {
+      "n": 23,
+      "game": "golden-hour",
+      "title": "LAMP RECIPE FORGE",
+      "type": "lamp-forge",
+      "rounds": 2,
+      "total": 1047,
+      "feature": 145,
+      "bet": 180,
+      "same": true,
+      "caption": "FORGE REFILL · 2/2",
+      "transitioning": false
+    },
+    {
+      "n": 23,
+      "game": "jade-treasury",
+      "title": "LAMP RECIPE FORGE",
+      "type": "lamp-forge",
+      "rounds": 4,
+      "total": 298,
+      "feature": 298,
+      "bet": 180,
+      "same": true,
+      "caption": "FORGE REFILL · 4/4",
+      "transitioning": false
+    },
+    {
+      "n": 23,
+      "game": "pearl-palace",
+      "title": "LAMP RECIPE FORGE",
+      "type": "lamp-forge",
+      "rounds": 2,
+      "total": 623,
+      "feature": 170,
+      "bet": 180,
+      "same": true,
+      "caption": "FORGE REFILL · 2/2",
+      "transitioning": false
+    },
+    {
+      "n": 23,
+      "game": "ruby-revel",
+      "title": "LAMP RECIPE FORGE",
+      "type": "lamp-forge",
+      "rounds": 2,
+      "total": 219,
+      "feature": 219,
+      "bet": 180,
+      "same": true,
+      "caption": "FORGE REFILL · 2/2",
+      "transitioning": false
+    }
+  ],
+  "uiEconomyChecks": [
+    {
+      "n": 23,
+      "shopAmounts": true,
+      "spin": {
+        "before": 50400,
+        "after": 50414,
+        "expected": 50414,
+        "state": "idle",
+        "feature": "lamp-forge"
+      }
+    }
+  ],
+  "pageErrors": []
+}

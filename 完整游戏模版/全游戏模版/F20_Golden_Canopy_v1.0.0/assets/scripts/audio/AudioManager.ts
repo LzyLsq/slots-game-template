@@ -28,6 +28,16 @@ export class AudioManager extends Component {
     notes[cue].forEach(([frequency, duration, type, delay]) => this.tone(frequency, duration, type, delay, cue === 'tap' ? 0.018 : 0.035));
   }
 
+  /** A short, bounded musical lift follows paid feature rounds, never silent misses. */
+  public playAward(step = 0): void {
+    if (!this.effectsEnabled) return;
+    const pitches = [1, 1.05946, 1.12246, 1.18921, 1.25992];
+    const pitch = pitches[Math.max(0, Math.min(4, Math.floor(step)))];
+    for (const [frequency, duration, delay] of [[523, .10, 0], [659, .12, .065], [784, .17, .13]]) {
+      this.tone(frequency * pitch, duration, 'sine', delay, .025);
+    }
+  }
+
   public vibrate(pattern: number | number[] = 18): void {
     if (!this.vibrationEnabled || typeof navigator === 'undefined' || typeof navigator.vibrate !== 'function') return;
     navigator.vibrate(pattern);

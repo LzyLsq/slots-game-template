@@ -13,12 +13,15 @@ export interface CoinProduct {
 
 // Create these identifiers as Consumable products in App Store Connect.
 // StoreKit supplies localized prices; debugPrice is localhost-only.
-export const STORE_PRODUCTS: readonly CoinProduct[] = [
+export const LEGACY_STORE_PRODUCTS: readonly CoinProduct[] = [
   { id: 'purse', appleProductId: 'com.publisher.honeyparade.coins.purse', credits: 10_000, bonus: 0, label: 'HONEY POUCH', debugPrice: '$0.99' },
   { id: 'bullion', appleProductId: 'com.publisher.honeyparade.coins.bullion', credits: 50_000, bonus: 5_000, label: 'PEACH CACHE', debugPrice: '$4.99' },
   { id: 'chest', appleProductId: 'com.publisher.honeyparade.coins.chest', credits: 120_000, bonus: 18_000, label: 'GOLDEN HONEY', debugPrice: '$9.99' },
   { id: 'vault', appleProductId: 'com.publisher.honeyparade.coins.vault', credits: 300_000, bonus: 60_000, label: 'FESTIVAL VAULT', debugPrice: '$19.99' },
 ];
+export const STORE_PRODUCTS:readonly CoinProduct[]=LEGACY_STORE_PRODUCTS.map((p,i)=>({...p,appleProductId:'com.publisher.honeyparade.coins.'+p.id+'.v2',credits:10000*[1,5,10,20][i],bonus:10000*[0,1,4,12][i]}));
+export const ALL_STORE_PRODUCTS:readonly CoinProduct[]=[...STORE_PRODUCTS,...LEGACY_STORE_PRODUCTS];
+
 
 export interface NativeProductInfo { readonly productId: string; readonly displayPrice: string; readonly displayName?: string; }
 export type PurchaseStatus = 'verified' | 'cancelled' | 'pending' | 'failed';
@@ -121,7 +124,7 @@ export class StoreService {
       const pending = await bridge.restore(player.appAccountToken);
       for (const native of pending) {
         if (native.status !== 'verified' || !native.signedTransactionInfo || !validTransactionId(native.transactionId)) continue;
-        const verified = await this.server.verifyApplePurchase(native.signedTransactionInfo); const product = STORE_PRODUCTS.find((item) => item.appleProductId === verified.productId); if (!product || verified.transactionId !== native.transactionId || verified.creditedCredits !== product.credits + product.bonus) continue;
+        const verified = await this.server.verifyApplePurchase(native.signedTransactionInfo); const product = ALL_STORE_PRODUCTS.find((item) => item.appleProductId === verified.productId); if (!product || verified.transactionId !== native.transactionId || verified.creditedCredits !== product.credits + product.bonus) continue;
         if (!this.save.currentScope()?.creditedPurchaseIds.includes(verified.transactionId)) this.economy.creditVerifiedPurchase(verified.creditedCredits, verified.transactionId, verified.authoritativeBalance);
         await bridge.finish(native.transactionId);
       }
