@@ -1,6 +1,6 @@
 import {tr} from './Language';
 import {TextFit} from './TextFit';
-import { Color, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
+import { EventTouch, Color, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
 export const COLORS = { cream: '#FFF4D8', gold: '#F4C879', jade: '#284356', ink: '#253E52', coral: '#EDAB97' };
 export class SalonArt {
   private textures = new Map<string, Texture2D>();
@@ -13,7 +13,10 @@ export class SalonArt {
       while (queue.length) {
         const name = queue.shift()!;
         if (!this.textures.has(name)) {
-          const tex = await new Promise<Texture2D>((resolve, reject) => resources.load(`art/${name}/texture`, Texture2D, (error, asset) => error ? reject(error) : resolve(asset)));
+          const tex = await new Promise<Texture2D>((resolve, reject) => {
+            const timeout=setTimeout(()=>reject(new Error('Artwork load timed out: '+name)),20000);
+            resources.load(`art/${name}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
+          });
           tex.setFilters(Texture2D.Filter.LINEAR, Texture2D.Filter.LINEAR); this.textures.set(name, tex);
         }
         progress?.(++done, names.length);
@@ -99,15 +102,42 @@ export function text(parent: Node, value: string, x: number, y: number, w: numbe
   l.overflow = Label.Overflow.CLAMP; l.enableWrapText = true; l.cacheMode = Label.CacheMode.NONE; n.addComponent(TextFit); return l;
 }
 export function bindPress(hit: Node, inner: Node, action: () => void, feel:{depth?:number;compression?:number;release?:number;tilt?:number}={}): void {
-  let pressed = false;
-  const rest = inner.scale.clone();
-  const origin=inner.position.clone(),pressedPosition=new Vec3(origin.x,origin.y-(feel.depth??5),origin.z);
-  const restAngle=inner.angle;
-  const down = new Vec3(rest.x * (feel.compression??.96), rest.y * (feel.compression??.96), rest.z);
-  const restore = (): void => { pressed = false; Tween.stopAllByTarget(inner); tween(inner).to(feel.release??.09, { scale: rest, position:origin, angle:restAngle }, { easing: 'backOut' }).start(); };
-  hit.on(Node.EventType.TOUCH_START, () => { pressed = true; Tween.stopAllByTarget(inner); tween(inner).to(.07, { scale: down, position:pressedPosition, angle:restAngle+(feel.tilt??0) }, { easing: 'sineOut' }).start(); });
-  hit.on(Node.EventType.TOUCH_CANCEL, restore);
-  hit.on(Node.EventType.TOUCH_END, () => { const run = pressed; restore(); if (run) action(); });
+  let pressed=false,startX=0,startY=0,touchId:number|null|undefined;
+  // A stable sibling receives input when the artwork itself was the old target.
+  // Its bounds never shrink with the press animation or the idle artwork drift.
+  let surface=hit;
+  if(hit===inner){
+    const size=hit.getComponent(UITransform)!;
+    surface=box(hit.parent!,'Input area · '+hit.name,hit.position.x,hit.position.y,size.width,size.height);
+    surface.setScale(hit.scale);surface.setRotation(hit.rotation);
+    surface.getComponent(UITransform)!.setAnchorPoint(size.anchorPoint);
+    surface.setSiblingIndex(hit.getSiblingIndex()+1);
+    hit.on(Node.EventType.NODE_DESTROYED,()=>{if(surface.isValid)surface.destroy();});
+  }
+  const parent=inner.parent!,order=inner.getSiblingIndex();
+  const motion=box(parent,'Press motion · '+hit.name,0,0,0,0);
+  motion.setSiblingIndex(order);inner.setParent(motion);
+  let response:Tween<Node>|undefined;
+  const target=(scale:number,depth=0)=>{const p=inner.position;return {angle:depth>0?(feel.tilt??0):0,scale:new Vec3(scale,scale,1),position:new Vec3(p.x*(1-scale),p.y*(1-scale)-depth,0)};};
+  const restore=():void=>{
+    pressed=false;touchId=undefined;response?.stop();
+    if(motion.isValid)response=tween(motion).to(.11,target(1.025,-1),{easing:'quadOut'}).to(Math.max(.16,feel.release??.2),target(1),{easing:'sineInOut'}).start();
+  };
+  surface.on(Node.EventType.TOUCH_START,(event:EventTouch)=>{
+    if(event.target!==surface||pressed||!hit.activeInHierarchy)return;
+    const point=event.getUILocation();startX=point.x;startY=point.y;touchId=event.getID();
+    pressed=true;response?.stop();
+    response=tween(motion).to(.065,target(Math.min(.94,feel.compression??.92),feel.depth??6),{easing:'quadOut'}).start();
+  });
+  surface.on(Node.EventType.TOUCH_MOVE,(event:EventTouch)=>{
+    if(!pressed||event.getID()!==touchId)return;const point=event.getUILocation();
+    if(Math.hypot(point.x-startX,point.y-startY)>36)restore();
+  });
+  surface.on(Node.EventType.TOUCH_CANCEL,(event:EventTouch)=>{if(event.target===surface&&event.getID()===touchId)restore();});
+  surface.on(Node.EventType.TOUCH_END,(event:EventTouch)=>{
+    if(event.target!==surface||event.getID()!==touchId)return;
+    const run=pressed&&hit.activeInHierarchy;restore();if(run)action();
+  });
 }
 export function opacity(n: Node, value: number): UIOpacity { const o = n.getComponent(UIOpacity) ?? n.addComponent(UIOpacity); o.opacity = value; return o; }
 export function outlined(label:Label,color='#15352F',width=2):Label {

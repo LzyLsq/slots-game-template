@@ -1,3 +1,4 @@
+import { OrdinaryWinStage } from '../vfx/OrdinaryWinStage';
 import {LabelOutline} from 'cc';
 import {cabinetToolText} from './CabinetToolText';
 import {drawRulePages} from './RulePages';
@@ -466,7 +467,7 @@ export class AureliaApp extends Component {
       this.state={kind:'presenting',result};this.reels.highlight(result.wins.flatMap(w=>[...w.positions]));
       await this.presentAwardEvidence(result);
       if(result.featureResult)await this.presentFeature(result);
-      if(result.totalWin>=this.bet)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0);
+      if(result.totalWin>0)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0);
       this.resetWinAmount(result.totalWin);
       if(this.hintLabel)this.hintLabel.string=roundEvidence(result,this.bet);
       this.state={kind:'idle'};this.refreshBalance();this.refreshTopWin();this.autoWait=.8;
@@ -585,7 +586,15 @@ export class AureliaApp extends Component {
       }
     }else{
       if(amount>this.presentedWin)this.audio.playAward(0);
-      await Promise.all([this.countWinAmount(amount),this.delay(this.reduced?.12:.32)]);
+      const stage=box(this.content!,'Ordinary win presentation',0,0,1080,this.height);
+      const hidden=[this.hintLabel?.node,this.content?.getChildByName('Award hint material')].filter((n):n is Node=>!!n&&n.active);
+      hidden.forEach(n=>n.active=false);
+      try{
+        await Promise.all([this.countWinAmount(amount),stage.addComponent(OrdinaryWinStage).setup(this.art,amount,Safe.visibleHeight,this.reduced,this.bet,{y:-Safe.visibleHeight/2+88+Safe.safeBottom,width:980})]);
+      }finally{
+        if(stage.isValid)stage.destroy();
+        hidden.forEach(n=>{if(n.isValid)n.active=true;});
+      }
     }
   }
 

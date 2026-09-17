@@ -75,7 +75,10 @@ export class CoreReelGuide extends Component{
  }
  protected onDestroy():void{
   // The shade is a sibling so locked amounts remain above it; release that pooled node too.
-  if(this.shade?.node.isValid&&this.shade.node.parent!==this.node)this.shade.node.destroy();
+  // The shade is a sibling and may have been destroyed earlier in the
+  // parent's teardown. Cocos clears Component.node during that destruction.
+  const shadeNode=this.shade?.node;
+  if(shadeNode?.isValid&&shadeNode.parent!==this.node)shadeNode.destroy();
  }
  protected update(dt:number):void{
   this.t+=Math.min(dt,.1);this.age+=Math.min(dt,.1);this.inkAlpha.opacity=this.hasAward?250:0;

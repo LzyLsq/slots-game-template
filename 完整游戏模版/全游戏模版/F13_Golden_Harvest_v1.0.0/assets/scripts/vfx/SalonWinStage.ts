@@ -3,6 +3,8 @@ import { _decorator, Color, Component, EventTouch, Graphics, Label, Node, tween,
 import { SalonArt, box, COLORS, opacity, outlined, text } from '../ui/SalonArt';
 import { SalonAtmosphere } from './SalonAtmosphere';
 const { ccclass } = _decorator;
+/** Match settlement precision; only the in-progress count may use integer steps. */
+const formatWinAmount=(amount:number):string=>amount.toLocaleString('en-US',{maximumFractionDigits:3});
 
 /** A staged, skippable celebration. Settlement always happens before entry. */
 @ccclass('SalonWinStage')
@@ -23,13 +25,19 @@ export class SalonWinStage extends Component {
     const stream=box(this.group,'Coin fountain',0,0,1080,1720).addComponent(SalonAtmosphere);
     stream.setup(art,1080,1720,true,[40,52,64][this.tier]);stream.reducedMotion=reduced;
     const treasure=art.image(this.group,'celebration',0,150,1030,1230);
-    const title=outlined(text(this.group,['BIG WIN','MEGA WIN','EPIC WIN'][this.tier],0,660,980,160,104,COLORS.gold,true),'#582919',5);
-    text(this.group,['GOLDEN MINT · COIN CORONATION','HARVEST VAULT · TREASURY UNLOCKED','GOLDEN ORCHARD · ABUNDANT HARVEST','JUBILEE LANTERNS · FESTIVAL OF GOLD'][this.theme],0,543,960,70,30,COLORS.cream);
-    outlined(text(this.group,tierCaption(multiplier),0,463,940,74,29,COLORS.cream),'#582919',3);
+    // The themed nameplate masks baked cabinet lettering without a black overlay.
+    const titlePlate=art.panel(this.group,0,635,1040,240,0);titlePlate.name='Grand win title nameplate';
+    const title=outlined(text(titlePlate,['BIG WIN','MEGA WIN','EPIC WIN'][this.tier],0,30,840,98,84,COLORS.gold,true),'#582919',2);
+    title.enableWrapText=false;
+    const subtitle=text(titlePlate,['GOLDEN MINT · COIN CORONATION','HARVEST VAULT · TREASURY UNLOCKED','GOLDEN ORCHARD · ABUNDANT HARVEST','JUBILEE LANTERNS · FESTIVAL OF GOLD'][this.theme],0,-55,840,44,28,COLORS.cream);
+    subtitle.enableWrapText=false;
+    const rulePlate=art.panel(this.group,0,455,940,100,0);rulePlate.name='Grand win explanation nameplate';
+    outlined(text(rulePlate,tierCaption(multiplier),0,0,800,60,27,COLORS.cream),'#582919',1);
     // Theme objects occupy the sides of the treasure, away from the title and count.
     for(let i=0;i<4;i++){const n=art.image(this.group,'symbols',(i%2?1:-1)*(i<2?340:380),i<2?300:-180,i<2?210:145,i<2?210:145,[[0,1,0,10],[8,13,0,1],[4,3,6,4],[11,11,14,11]][this.theme][i]);this.emblems.push(n);}
     const plate=art.panel(this.group,0,-503,871,189,0);
-    this.count=outlined(text(plate,'0',0,0,650,106,Math.min(78,650/(Math.floor(amount).toLocaleString('en-US').length*.65)),COLORS.gold,true));
+    this.count=outlined(text(plate,'0',0,0,650,106,Math.min(78,650/(formatWinAmount(amount).length*.65)),COLORS.gold,true));
+    this.count.enableWrapText=false;
     this.hint=outlined(text(this.group,'Tap to reveal the full amount',0,-649,890,78,36));
     const collect=art.button(this.group,'Collect your treasure',0,-760,730,118,'Collect treasure',1,()=>this.advance());
     // A button tap must not also trigger the stage's reveal/dismiss handler.
@@ -48,7 +56,7 @@ export class SalonWinStage extends Component {
   }
   private reveal():void {
     if(!this.revealed&&!this.reduced){tween(this.count.node).to(.09,{scale:new Vec3(.97,.97,1)},{easing:'sineOut'}).to(.22,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();}
-    this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=Math.floor(this.amount).toLocaleString('en-US');
+    this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=formatWinAmount(this.amount);
     this.hint.string='Added to your wallet · Tap to continue';
   }
   private advance():void {
