@@ -1,0 +1,38 @@
+
+> f24-aurum-atelier@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-hour',
+    core: 'independent-line-reels',
+    feature: 'mint-stamp',
+    samples: 6000,
+    features: 764,
+    motions: [ 'expand' ]
+  },
+  {
+    id: 'jade-treasury',
+    core: 'independent-any-reel-ways',
+    feature: 'prism-free',
+    samples: 6000,
+    features: 484,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'pearl-palace',
+    core: 'independent-collector-grid',
+    feature: 'link-respin',
+    samples: 6000,
+    features: 614,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'ruby-revel',
+    core: 'independent-cluster-avalanche',
+    feature: 'forge-cascade',
+    samples: 6000,
+    features: 3030,
+    motions: [ 'drop' ]
+  }
+]

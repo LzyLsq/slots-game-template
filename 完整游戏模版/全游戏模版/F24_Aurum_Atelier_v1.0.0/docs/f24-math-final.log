@@ -1,0 +1,42 @@
+
+> f24-aurum-atelier@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 237308,
+      "wins": 346,
+      "features": 122,
+      "maxWin": 4635
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 249674,
+      "wins": 886,
+      "features": 78,
+      "maxWin": 5936
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 244159,
+      "wins": 500,
+      "features": 103,
+      "maxWin": 4500
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 217722,
+      "wins": 509,
+      "features": 509,
+      "maxWin": 6056
+    }
+  }
+}

@@ -1,0 +1,1389 @@
+{
+  "golden-hour": {
+    "base": {
+      "spinId": "golden-hour-3310429218-15",
+      "gameId": "golden-hour",
+      "seed": 3310429218,
+      "stops": [
+        42,
+        22,
+        28
+      ],
+      "grid": [
+        "wild",
+        "bell",
+        "ring",
+        "chest",
+        "chip",
+        "ring",
+        "chip",
+        "wild",
+        "chip"
+      ],
+      "layout": {
+        "family": "line-reels"
+      },
+      "wins": [
+        {
+          "kind": "line",
+          "symbolId": "chip",
+          "count": 3,
+          "multiplier": 5.15,
+          "credits": 258,
+          "positions": [
+            0,
+            4,
+            8
+          ],
+          "lineIndex": 3
+        }
+      ],
+      "baseWin": 258,
+      "featureWin": 0,
+      "totalWin": 258,
+      "anticipationColumns": []
+    },
+    "feature": {
+      "spinId": "golden-hour-2532082259-31",
+      "gameId": "golden-hour",
+      "seed": 2532082259,
+      "stops": [
+        40,
+        36,
+        31
+      ],
+      "grid": [
+        "bell",
+        "chip",
+        "wild",
+        "wild",
+        "chip",
+        "bars",
+        "chest",
+        "chest",
+        "chip"
+      ],
+      "layout": {
+        "family": "line-reels"
+      },
+      "wins": [],
+      "baseWin": 0,
+      "featureWin": 1545,
+      "totalWin": 1545,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "bell",
+              "chip",
+              "wild",
+              "wild",
+              "wild",
+              "wild",
+              "chest",
+              "chest",
+              "chip"
+            ],
+            "wins": [
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 5.15,
+                "credits": 258,
+                "positions": [
+                  2,
+                  5,
+                  8
+                ],
+                "lineIndex": 2
+              },
+              {
+                "kind": "line",
+                "symbolId": "chest",
+                "count": 3,
+                "multiplier": 25.75,
+                "credits": 1287,
+                "positions": [
+                  2,
+                  4,
+                  6
+                ],
+                "lineIndex": 4
+              }
+            ],
+            "credits": 1545,
+            "caption": "SOVEREIGN STAMP",
+            "motion": "expand",
+            "focus": [
+              3,
+              4,
+              5
+            ],
+            "expandedColumn": 1,
+            "expandedColumns": [
+              1
+            ],
+            "held": [
+              0,
+              1,
+              2,
+              6,
+              7,
+              8
+            ]
+          }
+        ],
+        "totalCredits": 1545,
+        "detail": "A WILD on the middle reel activates the minting press after the base five-line award. The middle reel becomes three WILDs. Re-evaluate the same five paylines and pay only each line’s positive increase over its original award. The two outside reels stay fixed; there is no extra wager or fresh spin. The combined base and bonus win is capped by the displayed round maximum. A fully WILD middle reel can activate the stamp but has no additional payout if no line improves."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 1
+      },
+      "anticipationColumns": []
+    },
+    "featureSeed": 2532082259
+  },
+  "jade-treasury": {
+    "base": {
+      "spinId": "jade-treasury-24001-6003",
+      "gameId": "jade-treasury",
+      "seed": 24001,
+      "stops": [
+        25,
+        47,
+        35,
+        20,
+        50
+      ],
+      "grid": [
+        "pouch",
+        "pouch",
+        "key",
+        "wild",
+        "pouch",
+        "safe",
+        "crown",
+        "bars",
+        "pouch",
+        "chest",
+        "bars",
+        "chip",
+        "chip",
+        "pouch",
+        "chip",
+        "pouch",
+        "wild",
+        "key",
+        "pouch",
+        "bars"
+      ],
+      "layout": {
+        "family": "any-reel-ways"
+      },
+      "wins": [
+        {
+          "kind": "ways",
+          "symbolId": "pouch",
+          "count": 5,
+          "multiplier": 96.6,
+          "credits": 283,
+          "positions": [
+            0,
+            1,
+            3,
+            4,
+            8,
+            13,
+            15,
+            16,
+            18
+          ],
+          "ways": 12
+        },
+        {
+          "kind": "ways",
+          "symbolId": "bars",
+          "count": 3,
+          "multiplier": 10.35,
+          "credits": 3,
+          "positions": [
+            3,
+            7,
+            10
+          ],
+          "ways": 1
+        }
+      ],
+      "baseWin": 286,
+      "featureWin": 0,
+      "totalWin": 286,
+      "anticipationColumns": []
+    },
+    "feature": {
+      "spinId": "jade-treasury-3378107657-6016",
+      "gameId": "jade-treasury",
+      "seed": 3378107657,
+      "stops": [
+        28,
+        24,
+        45,
+        26,
+        44
+      ],
+      "grid": [
+        "wild",
+        "bars",
+        "key",
+        "crown",
+        "pouch",
+        "key",
+        "safe",
+        "key",
+        "key",
+        "wild",
+        "safe",
+        "bars",
+        "chip",
+        "safe",
+        "bars",
+        "chip",
+        "pouch",
+        "safe",
+        "pouch",
+        "bars"
+      ],
+      "layout": {
+        "family": "any-reel-ways"
+      },
+      "wins": [
+        {
+          "kind": "ways",
+          "symbolId": "pouch",
+          "count": 3,
+          "multiplier": 6.8999999999999995,
+          "credits": 2,
+          "positions": [
+            0,
+            4,
+            9
+          ],
+          "ways": 1
+        },
+        {
+          "kind": "ways",
+          "symbolId": "key",
+          "count": 3,
+          "multiplier": 13.799999999999999,
+          "credits": 27,
+          "positions": [
+            0,
+            2,
+            5,
+            7,
+            8,
+            9
+          ],
+          "ways": 8
+        },
+        {
+          "kind": "scatter",
+          "symbolId": "safe",
+          "count": 4,
+          "multiplier": 1.38,
+          "credits": 345,
+          "positions": [
+            6,
+            10,
+            13,
+            17
+          ]
+        }
+      ],
+      "baseWin": 374,
+      "featureWin": 174,
+      "totalWin": 548,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "chip",
+              "crown",
+              "chest",
+              "pouch",
+              "safe",
+              "bars",
+              "chip",
+              "key",
+              "chest",
+              "bars",
+              "chip",
+              "crown",
+              "key",
+              "chest",
+              "key",
+              "safe",
+              "safe",
+              "key",
+              "bars",
+              "pouch"
+            ],
+            "wins": [
+              {
+                "kind": "ways",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 6.8999999999999995,
+                "credits": 2,
+                "positions": [
+                  0,
+                  6,
+                  10
+                ],
+                "ways": 1
+              }
+            ],
+            "credits": 2,
+            "caption": "PRISM FREE SPINS",
+            "motion": "respin",
+            "held": [],
+            "remaining": 5,
+            "multiplier": 2
+          },
+          {
+            "index": 2,
+            "grid": [
+              "chip",
+              "chest",
+              "chip",
+              "safe",
+              "pouch",
+              "key",
+              "pouch",
+              "crown",
+              "chip",
+              "chip",
+              "pouch",
+              "bars",
+              "bars",
+              "chest",
+              "key",
+              "chip",
+              "crown",
+              "crown",
+              "chip",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PRISM FREE SPINS",
+            "motion": "respin",
+            "held": [],
+            "remaining": 4,
+            "multiplier": 2
+          },
+          {
+            "index": 3,
+            "grid": [
+              "key",
+              "wild",
+              "bars",
+              "key",
+              "key",
+              "pouch",
+              "crown",
+              "pouch",
+              "pouch",
+              "chip",
+              "chip",
+              "crown",
+              "bars",
+              "key",
+              "chest",
+              "key",
+              "pouch",
+              "bars",
+              "pouch",
+              "bars"
+            ],
+            "wins": [
+              {
+                "kind": "ways",
+                "symbolId": "pouch",
+                "count": 3,
+                "multiplier": 13.799999999999999,
+                "credits": 7,
+                "positions": [
+                  1,
+                  5,
+                  7,
+                  8
+                ],
+                "ways": 2
+              },
+              {
+                "kind": "ways",
+                "symbolId": "crown",
+                "count": 3,
+                "multiplier": 41.4,
+                "credits": 10,
+                "positions": [
+                  1,
+                  6,
+                  11
+                ],
+                "ways": 1
+              }
+            ],
+            "credits": 17,
+            "caption": "PRISM FREE SPINS",
+            "motion": "respin",
+            "held": [],
+            "remaining": 3,
+            "multiplier": 2
+          },
+          {
+            "index": 4,
+            "grid": [
+              "chip",
+              "chip",
+              "chip",
+              "safe",
+              "chip",
+              "chip",
+              "bars",
+              "chest",
+              "pouch",
+              "safe",
+              "chest",
+              "pouch",
+              "bars",
+              "chip",
+              "safe",
+              "bars",
+              "chip",
+              "chip",
+              "bars",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PRISM FREE SPINS",
+            "motion": "respin",
+            "held": [],
+            "remaining": 2,
+            "multiplier": 2
+          },
+          {
+            "index": 5,
+            "grid": [
+              "pouch",
+              "chip",
+              "pouch",
+              "chip",
+              "pouch",
+              "crown",
+              "pouch",
+              "safe",
+              "chip",
+              "bars",
+              "bars",
+              "wild",
+              "pouch",
+              "pouch",
+              "chest",
+              "wild",
+              "chip",
+              "chip",
+              "chip",
+              "key"
+            ],
+            "wins": [
+              {
+                "kind": "ways",
+                "symbolId": "pouch",
+                "count": 4,
+                "multiplier": 49.67999999999999,
+                "credits": 145,
+                "positions": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  11,
+                  12,
+                  13,
+                  15
+                ],
+                "ways": 12
+              }
+            ],
+            "credits": 145,
+            "caption": "PRISM FREE SPINS",
+            "motion": "respin",
+            "held": [],
+            "remaining": 1,
+            "multiplier": 2
+          },
+          {
+            "index": 6,
+            "grid": [
+              "pouch",
+              "key",
+              "chip",
+              "bars",
+              "pouch",
+              "safe",
+              "crown",
+              "bars",
+              "bars",
+              "key",
+              "chip",
+              "bars",
+              "key",
+              "chip",
+              "chip",
+              "chip",
+              "key",
+              "bars",
+              "key",
+              "chip"
+            ],
+            "wins": [
+              {
+                "kind": "ways",
+                "symbolId": "bars",
+                "count": 3,
+                "multiplier": 20.7,
+                "credits": 10,
+                "positions": [
+                  3,
+                  7,
+                  8,
+                  11
+                ],
+                "ways": 2
+              }
+            ],
+            "credits": 10,
+            "caption": "PRISM FREE SPINS",
+            "motion": "respin",
+            "held": [],
+            "remaining": 0,
+            "multiplier": 2
+          }
+        ],
+        "totalCredits": 174,
+        "detail": "Three or more SCATTER seals anywhere trigger exactly six free spins. The triggering board pays its normal ways and scatter awards first. Each free spin draws a fresh 5×4 board and pays 1024 left-start ways at 2×. WILDs do not stay fixed. SCATTERs in free spins neither pay nor retrigger; six free spins always finish the feature. No additional wager is taken. The displayed round maximum caps the combined trigger and all free-spin awards."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 6
+      },
+      "anticipationColumns": []
+    },
+    "featureSeed": 3378107657
+  },
+  "pearl-palace": {
+    "base": {
+      "spinId": "pearl-palace-24002-12005",
+      "gameId": "pearl-palace",
+      "seed": 24002,
+      "stops": [
+        25,
+        48,
+        5,
+        4,
+        30
+      ],
+      "grid": [
+        "bars",
+        "aqua",
+        "ring",
+        "pearl",
+        "wild",
+        "chip",
+        "pearl",
+        "chip",
+        "coin",
+        "pearl",
+        "ring",
+        "chip",
+        "chip",
+        "bars",
+        "wild"
+      ],
+      "layout": {
+        "family": "collector-grid"
+      },
+      "wins": [
+        {
+          "kind": "cluster",
+          "symbolId": "chip",
+          "count": 4,
+          "positions": [
+            5,
+            7,
+            11,
+            12,
+            4,
+            14
+          ],
+          "multiplier": 0.27,
+          "credits": 68
+        }
+      ],
+      "baseWin": 68,
+      "featureWin": 0,
+      "totalWin": 68,
+      "anticipationColumns": []
+    },
+    "feature": {
+      "spinId": "pearl-palace-2494287989-12006",
+      "gameId": "pearl-palace",
+      "seed": 2494287989,
+      "stops": [
+        12,
+        15,
+        34,
+        52,
+        21
+      ],
+      "grid": [
+        "aqua",
+        "coin",
+        "coin",
+        "coin",
+        "ring",
+        "aqua",
+        "coin",
+        "aqua",
+        "aqua",
+        "chip",
+        "ring",
+        "chip",
+        "coin",
+        "aqua",
+        "chip"
+      ],
+      "layout": {
+        "family": "collector-grid"
+      },
+      "wins": [],
+      "baseWin": 0,
+      "featureWin": 563,
+      "totalWin": 563,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "aqua",
+              "coin",
+              "coin",
+              "coin",
+              "ring",
+              "aqua",
+              "coin",
+              "aqua",
+              "aqua",
+              "chip",
+              "ring",
+              "chip",
+              "coin",
+              "aqua",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "LOCKED GOLD LINKS",
+            "motion": "collect",
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 56,
+              "2": 113,
+              "3": 56,
+              "6": 56,
+              "12": 57
+            },
+            "remaining": 3,
+            "focus": [
+              1,
+              2,
+              3,
+              6,
+              12
+            ]
+          },
+          {
+            "index": 2,
+            "grid": [
+              "chip",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "ring",
+              "coin",
+              "bars",
+              "aqua",
+              "chip",
+              "wild",
+              "bars",
+              "coin",
+              "bars",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "LOCKED GOLD LINKS",
+            "motion": "respin",
+            "held": [
+              1,
+              2,
+              3,
+              6,
+              12
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 56,
+              "2": 113,
+              "3": 56,
+              "4": 225,
+              "6": 56,
+              "12": 57
+            },
+            "remaining": 3,
+            "focus": [
+              4
+            ]
+          },
+          {
+            "index": 3,
+            "grid": [
+              "aqua",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "pearl",
+              "coin",
+              "chip",
+              "chip",
+              "bars",
+              "bars",
+              "chip",
+              "coin",
+              "chip",
+              "aqua"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "LOCKED GOLD LINKS",
+            "motion": "respin",
+            "held": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              12
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 56,
+              "2": 113,
+              "3": 56,
+              "4": 225,
+              "6": 56,
+              "12": 57
+            },
+            "remaining": 2,
+            "focus": []
+          },
+          {
+            "index": 4,
+            "grid": [
+              "bars",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "bars",
+              "coin",
+              "ring",
+              "aqua",
+              "bars",
+              "aqua",
+              "aqua",
+              "coin",
+              "chip",
+              "ring"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "LOCKED GOLD LINKS",
+            "motion": "respin",
+            "held": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              12
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 56,
+              "2": 113,
+              "3": 56,
+              "4": 225,
+              "6": 56,
+              "12": 57
+            },
+            "remaining": 1,
+            "focus": []
+          },
+          {
+            "index": 5,
+            "grid": [
+              "aqua",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "bars",
+              "coin",
+              "crown",
+              "ring",
+              "ring",
+              "chip",
+              "aqua",
+              "coin",
+              "bars",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "LOCKED GOLD LINKS",
+            "motion": "respin",
+            "held": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              12
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 56,
+              "2": 113,
+              "3": 56,
+              "4": 225,
+              "6": 56,
+              "12": 57
+            },
+            "remaining": 0,
+            "focus": []
+          },
+          {
+            "index": 6,
+            "grid": [
+              "aqua",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "bars",
+              "coin",
+              "crown",
+              "ring",
+              "ring",
+              "chip",
+              "aqua",
+              "coin",
+              "bars",
+              "chip"
+            ],
+            "wins": [
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  1
+                ],
+                "credits": 56,
+                "multiplier": 0.224
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  2
+                ],
+                "credits": 113,
+                "multiplier": 0.452
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  3
+                ],
+                "credits": 56,
+                "multiplier": 0.224
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  4
+                ],
+                "credits": 225,
+                "multiplier": 0.9
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  6
+                ],
+                "credits": 56,
+                "multiplier": 0.224
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  12
+                ],
+                "credits": 57,
+                "multiplier": 0.228
+              }
+            ],
+            "credits": 563,
+            "caption": "LOCKED GOLD LINKS",
+            "motion": "collect",
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 56,
+              "2": 113,
+              "3": 56,
+              "4": 225,
+              "6": 56,
+              "12": 57
+            },
+            "remaining": 0,
+            "focus": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              12
+            ]
+          }
+        ],
+        "totalCredits": 563,
+        "detail": "Three or more BONUS gold coin stacks anywhere trigger hold-and-respin. The ordinary cash-plus-collector award is settled first; it is not replayed during this bonus. Each triggering coin stack locks a value selected equally from 0.5×, 1×, 2× or 5× total bet, multiplied by the payout factor. Begin with three chances. Respin only unlocked positions; new coin stacks lock their values and reset chances to three. End after three misses, a full 15-cell board, or 12 respins. Collect every locked value once at the end; filling the board adds no separate jackpot. Fractional values carry between coin stacks so displayed integer values equal the final collection. No extra wager is taken, and the round win maximum applies."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 6
+      },
+      "anticipationColumns": []
+    },
+    "featureSeed": 2494287989
+  },
+  "ruby-revel": {
+    "base": {
+      "spinId": "ruby-revel-376092695-18008",
+      "gameId": "ruby-revel",
+      "seed": 376092695,
+      "stops": [
+        20,
+        36,
+        26,
+        38,
+        29,
+        6
+      ],
+      "grid": [
+        "chest",
+        "chest",
+        "ruby",
+        "bars",
+        "chip",
+        "wild",
+        "chip",
+        "bars",
+        "crown",
+        "chip",
+        "chip",
+        "pouch",
+        "chip",
+        "wild",
+        "chip",
+        "chip",
+        "pouch",
+        "chip",
+        "chip",
+        "pouch",
+        "chest",
+        "bars",
+        "chip",
+        "ruby",
+        "chip",
+        "chip",
+        "pouch",
+        "pouch",
+        "bars",
+        "pouch"
+      ],
+      "layout": {
+        "family": "cluster-avalanche"
+      },
+      "wins": [
+        {
+          "kind": "cluster",
+          "symbolId": "chip",
+          "count": 8,
+          "multiplier": 0.6443229004156223,
+          "credits": 161,
+          "positions": [
+            4,
+            9,
+            14,
+            13,
+            12,
+            17,
+            22,
+            18
+          ]
+        }
+      ],
+      "baseWin": 161,
+      "featureWin": 0,
+      "totalWin": 161,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "chip",
+              "chest",
+              "chest",
+              "ruby",
+              "bars",
+              "pouch",
+              "wild",
+              "chip",
+              "bars",
+              "crown",
+              "chip",
+              "pouch",
+              "chip",
+              "chip",
+              "pouch",
+              "ruby",
+              "bars",
+              "chip",
+              "pouch",
+              "pouch",
+              "wild",
+              "chest",
+              "bars",
+              "ruby",
+              "chip",
+              "chip",
+              "pouch",
+              "pouch",
+              "bars",
+              "pouch"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "MASTERWORK CASCADE",
+            "motion": "drop",
+            "removed": [
+              4,
+              9,
+              14,
+              13,
+              12,
+              17,
+              22,
+              18
+            ],
+            "multiplier": 2
+          }
+        ],
+        "totalCredits": 0,
+        "detail": "A group of six or more identical symbols connected horizontally or vertically pays and starts the forge cascade. Diagonal contact does not connect groups. Remove the winning cells, let surviving symbols fall in their original order, and refill from above. New qualifying groups pay 2× on drop one, 3× on drop two, 5× on drop three and 8× on drop four. Stop when the new board has no qualifying group or after four drops. Every board is evaluated once; no extra wager is taken. WILDs join ordinary groups and are removed when they win. The combined base and cascade awards share the round maximum."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 1
+      },
+      "anticipationColumns": []
+    },
+    "feature": {
+      "spinId": "ruby-revel-2151893135-18015",
+      "gameId": "ruby-revel",
+      "seed": 2151893135,
+      "stops": [
+        37,
+        44,
+        22,
+        40,
+        8,
+        38
+      ],
+      "grid": [
+        "chip",
+        "pouch",
+        "chip",
+        "pouch",
+        "chip",
+        "bars",
+        "pouch",
+        "pouch",
+        "pouch",
+        "chip",
+        "chip",
+        "ruby",
+        "pouch",
+        "ruby",
+        "chip",
+        "chip",
+        "chip",
+        "pouch",
+        "chip",
+        "chest",
+        "wild",
+        "ruby",
+        "crown",
+        "pouch",
+        "chip",
+        "chip",
+        "chip",
+        "chip",
+        "pouch",
+        "pouch"
+      ],
+      "layout": {
+        "family": "cluster-avalanche"
+      },
+      "wins": [
+        {
+          "kind": "cluster",
+          "symbolId": "chip",
+          "count": 7,
+          "multiplier": 0.35072496346852755,
+          "credits": 88,
+          "positions": [
+            10,
+            15,
+            16,
+            20,
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "kind": "cluster",
+          "symbolId": "pouch",
+          "count": 7,
+          "multiplier": 0.7014499269370551,
+          "credits": 175,
+          "positions": [
+            1,
+            6,
+            7,
+            8,
+            3,
+            12,
+            17
+          ]
+        }
+      ],
+      "baseWin": 263,
+      "featureWin": 446,
+      "totalWin": 709,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "pouch",
+              "chip",
+              "chip",
+              "chip",
+              "chip",
+              "pouch",
+              "chip",
+              "chest",
+              "bars",
+              "chip",
+              "pouch",
+              "chip",
+              "ruby",
+              "ruby",
+              "chip",
+              "pouch",
+              "bars",
+              "chip",
+              "chip",
+              "chest",
+              "pouch",
+              "ruby",
+              "crown",
+              "pouch",
+              "chip",
+              "pouch",
+              "bars",
+              "ruby",
+              "pouch",
+              "pouch"
+            ],
+            "wins": [
+              {
+                "kind": "cluster",
+                "symbolId": "chip",
+                "count": 8,
+                "multiplier": 1.2886458008312447,
+                "credits": 322,
+                "positions": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  9,
+                  14,
+                  6,
+                  11
+                ]
+              },
+              {
+                "kind": "cluster",
+                "symbolId": "pouch",
+                "count": 6,
+                "multiplier": 0.49600000000000005,
+                "credits": 124,
+                "positions": [
+                  0,
+                  5,
+                  10,
+                  15,
+                  20,
+                  25
+                ]
+              }
+            ],
+            "credits": 446,
+            "caption": "MASTERWORK CASCADE",
+            "motion": "drop",
+            "removed": [
+              10,
+              15,
+              16,
+              20,
+              25,
+              26,
+              27,
+              1,
+              6,
+              7,
+              8,
+              3,
+              12,
+              17
+            ],
+            "multiplier": 2
+          },
+          {
+            "index": 2,
+            "grid": [
+              "chip",
+              "bars",
+              "chip",
+              "chip",
+              "wild",
+              "ruby",
+              "chip",
+              "chest",
+              "chest",
+              "bars",
+              "chip",
+              "bars",
+              "pouch",
+              "ruby",
+              "ruby",
+              "pouch",
+              "bars",
+              "chip",
+              "chip",
+              "chest",
+              "chip",
+              "ruby",
+              "crown",
+              "pouch",
+              "chip",
+              "chip",
+              "bars",
+              "ruby",
+              "pouch",
+              "pouch"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "MASTERWORK CASCADE",
+            "motion": "drop",
+            "removed": [
+              1,
+              2,
+              3,
+              4,
+              9,
+              14,
+              6,
+              11,
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "multiplier": 3
+          }
+        ],
+        "totalCredits": 446,
+        "detail": "A group of six or more identical symbols connected horizontally or vertically pays and starts the forge cascade. Diagonal contact does not connect groups. Remove the winning cells, let surviving symbols fall in their original order, and refill from above. New qualifying groups pay 2× on drop one, 3× on drop two, 5× on drop three and 8× on drop four. Stop when the new board has no qualifying group or after four drops. Every board is evaluated once; no extra wager is taken. WILDs join ordinary groups and are removed when they win. The combined base and cascade awards share the round maximum."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 2
+      },
+      "anticipationColumns": []
+    },
+    "featureSeed": 2151893135
+  }
+}

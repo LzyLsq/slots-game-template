@@ -1,0 +1,35 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#eddbc4}
+body{font-family:Arial,"PingFang SC","Hiragino Sans","Malgun Gothic",sans-serif}
+#GameDiv,#Cocos3dGameContainer,#GameCanvas{width:100%;height:100%;position:absolute;inset:0}
+#GameCanvas{outline:0;touch-action:none}
+#csw-preloader{position:fixed;inset:0;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:max(24px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));overflow:auto;color:#594027;background:radial-gradient(ellipse at 50% 35%,#fff9ed 0%,#efe0ca 55%,#d4b58e 100%);transition:opacity .18s ease}
+#csw-preloader::before{content:"";position:absolute;inset:12px;border:1px solid #ab82544d;pointer-events:none}
+#csw-preloader.is-ready{opacity:0;pointer-events:none}
+.salon-light{position:absolute;inset:0;overflow:hidden;pointer-events:none;background:repeating-linear-gradient(110deg,transparent 0 100px,#fff7e51a 102px 103px,transparent 105px 220px)}
+.loading-sign{position:relative;flex:none;width:min(100%,380px);padding:30px 26px 24px;text-align:center;border:1px solid #b38a574d;border-radius:120px 120px 20px 20px;background:linear-gradient(155deg,#fffaf1ed,#f5e7d2ed);box-shadow:0 14px 50px #68442019,inset 0 0 0 6px #fffdf447}
+.atelier-seal{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 18px;border:1px solid #ac8148;transform:rotate(45deg);font:italic 24px Georgia;color:#8c622e}
+.atelier-seal span{transform:rotate(-45deg)}
+.wordmark{margin:0;color:#795126;font:normal clamp(34px,9vw,45px)/1.08 Georgia,"Times New Roman",serif;letter-spacing:.12em;text-indent:.12em;text-shadow:0 1px #fff}
+.wordmark span{display:block;font-size:.46em;letter-spacing:.38em;text-indent:.38em;margin-top:10px}
+.invitation{margin:18px 0 0;font-size:11px;font-weight:600;line-height:1.6;letter-spacing:.15em;overflow-wrap:anywhere}
+.treasure-loading{position:relative;height:106px;margin:8px 0 12px;overflow:hidden;isolation:isolate}
+.treasure-loading::before{content:"";position:absolute;width:138px;height:35px;left:50%;bottom:9px;transform:translateX(-50%);border:1px solid #c59e6699;border-radius:50%;background:radial-gradient(ellipse,#b0824240,transparent 68%)}
+.atelier-gem{position:absolute;left:calc(50% - 30px);top:22px;width:60px;height:60px;transform:rotate(45deg);border:1px solid #ad7b35;background:conic-gradient(from 45deg,#f9dfa0,#c69345,#fff0bd,#d7a44d,#f9dfa0);box-shadow:inset 0 0 0 8px #fff2c066,0 4px 20px #b88c4e30;animation:polish 3s ease-in-out infinite}
+.vault-glint{position:absolute;left:calc(50% + 25px);top:10px;color:#b18339;font-size:25px;animation:glint 3s ease-in-out infinite}
+.loading-track{position:relative;isolation:isolate;contain:paint;height:10px;width:100%;border:1px solid #b18b53;border-radius:8px;overflow:hidden;clip-path:inset(0 round 8px);background:#e4d2b8;box-shadow:0 1px #fff}
+#loading-progress{display:block;width:100%;height:100%;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#9e7135,#e0b764,#f5d58b);transition:transform .3s ease-out}
+#loading-copy{min-height:42px;margin:14px 0 0;font-size:13px;line-height:1.6;color:#62472d;overflow-wrap:anywhere}
+#loading-retry{min-height:44px;margin-top:10px;padding:10px 25px;background:#805b2d;border:1px solid #a78147;border-radius:8px;color:#fff8e9;font-family:inherit;font-size:14px;font-weight:600;line-height:1.4;cursor:pointer}
+#loading-retry:focus-visible{outline:3px solid #b98636;outline-offset:3px}
+.virtual-notice{position:relative;flex:none;max-width:360px;margin:0;text-align:center;font-size:11px;line-height:1.7;color:#64492e}
+@keyframes polish{50%{filter:brightness(1.12);transform:translateY(-4px) rotate(45deg)}}
+@keyframes glint{50%{opacity:.35;transform:scale(.7)}}
+@media(max-height:650px){#csw-preloader{gap:16px}.loading-sign{padding:24px 22px 16px}.atelier-seal{margin-bottom:14px;width:34px;height:34px;font-size:20px}.treasure-loading{height:90px;margin:4px 0 10px}.atelier-gem{top:14px}.invitation{margin-top:14px}}
+@media(max-height:460px) and (orientation:landscape){#csw-preloader{justify-content:flex-start;gap:12px}.loading-sign{border-radius:18px;padding:18px 24px}.atelier-seal,.treasure-loading{display:none}.wordmark{font-size:28px}.wordmark span{display:inline;margin-left:12px;font-size:.65em;letter-spacing:.15em}.invitation{margin:10px 0 14px}#loading-copy{min-height:21px;margin-top:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Use the same illustrated atelier as the in-game arrival screen. */
+#csw-preloader{background:#eddbc4 url("atelier-loading-hall.png") center/cover no-repeat}
+.loading-sign{background:linear-gradient(155deg,#fffaf1ed,#f5e7d2ed);box-shadow:0 14px 50px #68442030,inset 0 0 0 6px #fffdf447}
+.virtual-notice{padding:6px 12px;border-radius:12px;background:#fff7e7e8}

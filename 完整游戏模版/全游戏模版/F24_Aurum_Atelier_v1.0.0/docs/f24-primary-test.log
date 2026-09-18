@@ -1,0 +1,58 @@
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 370,
+    featurePaidHits: 176,
+    coreHits: 1003,
+    coreReturn: 0.7472946666666667,
+    hits: 1083,
+    sampleReturn: 0.9417,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 211,
+    featurePaidHits: 211,
+    coreHits: 2542,
+    coreReturn: 0.46941466666666665,
+    hits: 2582,
+    sampleReturn: 0.9060293333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 290,
+    featurePaidHits: 290,
+    coreHits: 1292,
+    coreReturn: 0.117824,
+    hits: 1481,
+    sampleReturn: 0.9394213333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1493,
+    featurePaidHits: 482,
+    coreHits: 1493,
+    coreReturn: 0.43771333333333334,
+    hits: 1493,
+    sampleReturn: 0.9733133333333334,
+    layoutVariants: 1
+  }
+]

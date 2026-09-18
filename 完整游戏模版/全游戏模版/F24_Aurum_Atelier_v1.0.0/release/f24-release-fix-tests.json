@@ -1,0 +1,26 @@
+[
+  {
+    "check": "test:apple-auth",
+    "exitCode": 0,
+    "log": "release/f24-test-apple-auth-2026-09-17.log",
+    "output": "\n> f24-aurum-atelier@1.0.0 test:apple-auth\n> node --import tsx tools/apple-auth-test.ts\n\nPASS  Apple identity signature, audience, expiry and nonce verification\n"
+  },
+  {
+    "check": "test:rank",
+    "exitCode": 0,
+    "log": "release/f24-test-rank-2026-09-17.log",
+    "output": "\n> f24-aurum-atelier@1.0.0 test:rank\n> node --import tsx tools/rank-test.ts\n\nPASS  Guest totals persist and on-device ranking is sorted from real saved profiles.\n"
+  },
+  {
+    "check": "typecheck:server",
+    "exitCode": 0,
+    "log": "release/f24-typecheck-server-2026-09-17.log",
+    "output": "\n> f24-aurum-atelier@1.0.0 typecheck:server\n> tsc -p tsconfig.server.json --noEmit\n\n"
+  },
+  {
+    "check": "typecheck",
+    "exitCode": 0,
+    "log": "release/f24-typecheck-2026-09-17.log",
+    "output": "\n> f24-aurum-atelier@1.0.0 typecheck\n> tsc -p tsconfig.json --noEmit\n\n"
+  }
+]

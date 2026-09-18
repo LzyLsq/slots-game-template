@@ -1,0 +1,38 @@
+PASS F24: deterministic rules/bonus boundaries, 5-language rule content, 24,000 natural rounds, no invented payout, four positive base/feature fixtures [
+  {
+    id: 'golden-hour',
+    name: 'SOVEREIGN MINT',
+    primary: 'line-reels',
+    bonus: 'mint-stamp',
+    naturalRounds: 6000,
+    naturalFeatures: 773,
+    featureSeed: 2532082259
+  },
+  {
+    id: 'jade-treasury',
+    name: 'PRISM CUT',
+    primary: 'any-reel-ways',
+    bonus: 'prism-free',
+    naturalRounds: 6000,
+    naturalFeatures: 470,
+    featureSeed: 3378107657
+  },
+  {
+    id: 'pearl-palace',
+    name: 'GILDED LINKS',
+    primary: 'collector-grid',
+    bonus: 'link-respin',
+    naturalRounds: 6000,
+    naturalFeatures: 581,
+    featureSeed: 2494287989
+  },
+  {
+    id: 'ruby-revel',
+    name: 'MASTERWORK VAULT',
+    primary: 'cluster-avalanche',
+    bonus: 'forge-cascade',
+    naturalRounds: 6000,
+    naturalFeatures: 2995,
+    featureSeed: 2151893135
+  }
+]

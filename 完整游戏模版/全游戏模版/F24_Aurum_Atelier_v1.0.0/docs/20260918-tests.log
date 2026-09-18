@@ -1,0 +1,306 @@
+
+> f24-aurum-atelier@1.0.0 test
+> npm run test:math && npm run test:services && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:contracts && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary
+
+
+> f24-aurum-atelier@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 237261,
+      "wins": 346,
+      "features": 122,
+      "maxWin": 4635
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 249655,
+      "wins": 886,
+      "features": 78,
+      "maxWin": 5935
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 244159,
+      "wins": 500,
+      "features": 103,
+      "maxWin": 4500
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 250000,
+      "won": 217731,
+      "wins": 509,
+      "features": 509,
+      "maxWin": 6056
+    }
+  }
+}
+
+> f24-aurum-atelier@1.0.0 test:services
+> node --import tsx tools/service-regression-test.ts
+
+service regression tests passed
+
+> f24-aurum-atelier@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f24-aurum-atelier@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f24-aurum-atelier@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 48 cabinet/viewport combinations: current geometry, nonoverlapping faces/hit areas, 44px controls and safe insets.
+
+> f24-aurum-atelier@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 370,
+    featurePaidHits: 176,
+    coreHits: 1003,
+    coreReturn: 0.7471626666666666,
+    hits: 1083,
+    sampleReturn: 0.9415,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 211,
+    featurePaidHits: 211,
+    coreHits: 2542,
+    coreReturn: 0.46947866666666666,
+    hits: 2582,
+    sampleReturn: 0.9060146666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 290,
+    featurePaidHits: 290,
+    coreHits: 1292,
+    coreReturn: 0.117824,
+    hits: 1481,
+    sampleReturn: 0.9394213333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1493,
+    featurePaidHits: 482,
+    coreHits: 1493,
+    coreReturn: 0.43773866666666666,
+    hits: 1493,
+    sampleReturn: 0.9733906666666666,
+    layoutVariants: 1
+  }
+]
+
+> f24-aurum-atelier@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+
+> f24-aurum-atelier@1.0.0 test:contracts
+> node --import tsx tools/contract-test.ts
+
+PASS: 24 solvable routes; invalid moves/save normalization; charge caps; resume/undo; exactly-once album; account isolation; atomic local + remote spin charge; unchanged coin rewards; storage failure.
+
+> f24-aurum-atelier@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, F24 products, current order replay, persistent wallets and claims
+
+> f24-aurum-atelier@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 370,
+    featurePaidHits: 176,
+    coreHits: 1003,
+    coreReturn: 0.7471626666666666,
+    hits: 1083,
+    sampleReturn: 0.9415,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 211,
+    featurePaidHits: 211,
+    coreHits: 2542,
+    coreReturn: 0.46947866666666666,
+    hits: 2582,
+    sampleReturn: 0.9060146666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 290,
+    featurePaidHits: 290,
+    coreHits: 1292,
+    coreReturn: 0.117824,
+    hits: 1481,
+    sampleReturn: 0.9394213333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1493,
+    featurePaidHits: 482,
+    coreHits: 1493,
+    coreReturn: 0.43773866666666666,
+    hits: 1493,
+    sampleReturn: 0.9733906666666666,
+    layoutVariants: 1
+  }
+]
+
+> f24-aurum-atelier@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-hour',
+    core: 'independent-line-reels',
+    feature: 'mint-stamp',
+    samples: 6000,
+    features: 764,
+    motions: [ 'expand' ]
+  },
+  {
+    id: 'jade-treasury',
+    core: 'independent-any-reel-ways',
+    feature: 'prism-free',
+    samples: 6000,
+    features: 484,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'pearl-palace',
+    core: 'independent-collector-grid',
+    feature: 'link-respin',
+    samples: 6000,
+    features: 614,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'ruby-revel',
+    core: 'independent-cluster-avalanche',
+    feature: 'forge-cascade',
+    samples: 6000,
+    features: 3030,
+    motions: [ 'drop' ]
+  }
+]
+
+> f24-aurum-atelier@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 370,
+    featurePaidHits: 176,
+    coreHits: 1003,
+    coreReturn: 0.7471626666666666,
+    hits: 1083,
+    sampleReturn: 0.9415,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 211,
+    featurePaidHits: 211,
+    coreHits: 2542,
+    coreReturn: 0.46947866666666666,
+    hits: 2582,
+    sampleReturn: 0.9060146666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 290,
+    featurePaidHits: 290,
+    coreHits: 1292,
+    coreReturn: 0.117824,
+    hits: 1481,
+    sampleReturn: 0.9394213333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1493,
+    featurePaidHits: 482,
+    coreHits: 1493,
+    coreReturn: 0.43773866666666666,
+    hits: 1493,
+    sampleReturn: 0.9733906666666666,
+    layoutVariants: 1
+  }
+]

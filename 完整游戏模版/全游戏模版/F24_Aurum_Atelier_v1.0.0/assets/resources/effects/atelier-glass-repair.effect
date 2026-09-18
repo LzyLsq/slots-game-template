@@ -1,0 +1,124 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.0 }
+        repairX: { value: [386, 440, 580, 637] }
+        repairY: { value: [1118, 1182, 1248, 1315] }
+        glassBounds: { value: [226, 1038, 800, 1398] }
+        imageSize: { value: [1024, 2736, 0, 0] }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  uniform GlassRepair {
+    vec4 repairX;
+    vec4 repairY;
+    vec4 glassBounds;
+    vec4 imageSize;
+  };
+  vec2 cleanSpan(float p, vec4 ranges) {
+    if (p > ranges.x && p < ranges.y) return ranges.xy;
+    if (p > ranges.z && p < ranges.w) return ranges.zw;
+    return vec2(p);
+  }
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      #if IS_GRAY
+        float gray  = 0.2126 * o.r + 0.7152 * o.g + 0.0722 * o.b;
+        o.r = o.g = o.b = gray;
+      #endif
+    #endif
+
+    // Restore only the authored placeholder crossbars using clean adjacent
+    // glass samples. The original bezel, corners and reflections are untouched.
+    #if USE_TEXTURE
+      vec2 p = uv0 * imageSize.xy;
+      if (p.x >= glassBounds.x && p.x <= glassBounds.z && p.y >= glassBounds.y && p.y <= glassBounds.w) {
+        vec2 xs = cleanSpan(p.x, repairX);
+        vec2 ys = cleanSpan(p.y, repairY);
+        if (xs.x != xs.y || ys.x != ys.y) {
+          float tx = (p.x-xs.x)/max(1.0,xs.y-xs.x);
+          float ty = (p.y-ys.x)/max(1.0,ys.y-ys.x);
+          vec4 a = CCSampleWithAlphaSeparated(cc_spriteTexture,vec2(xs.x,ys.x)/imageSize.xy);
+          vec4 b = CCSampleWithAlphaSeparated(cc_spriteTexture,vec2(xs.y,ys.x)/imageSize.xy);
+          vec4 c = CCSampleWithAlphaSeparated(cc_spriteTexture,vec2(xs.x,ys.y)/imageSize.xy);
+          vec4 d = CCSampleWithAlphaSeparated(cc_spriteTexture,vec2(xs.y,ys.y)/imageSize.xy);
+          o = mix(mix(a,b,tx),mix(c,d,tx),ty);
+        }
+      }
+    #endif
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

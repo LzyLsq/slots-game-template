@@ -1,0 +1,24 @@
+/library/
+/temp/
+/local/
+/profiles/
+/build/
+/node_modules
+/.creator/
+/.playwright-cli/
+/output/
+/work/generated/
+/work/imagegen/
+/work/ccswitch/
+/work/prompts/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+/.CocosCreator/
+
+# Keep final release captures and QA reports; intermediate captures remain local.
+/docs/screenshots/*
+!/docs/screenshots/*.json
+!/docs/screenshots/release/

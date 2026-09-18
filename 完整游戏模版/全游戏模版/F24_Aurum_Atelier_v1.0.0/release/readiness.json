@@ -1,0 +1,31 @@
+{
+  "project": "F24 Aurum Atelier",
+  "auditedAt": "2026-09-17",
+  "candidateBundleId": "com.publisher.aurumatelier",
+  "readyForSubmission": false,
+  "browserTemplate": true,
+  "requiresImplementation": [
+    "Executable iOS StoreKit 2 bridge and launch-time unfinished transaction recovery",
+    "Executable native Apple sign-in bridge if Apple entry is retained",
+    "Apple token revocation on Apple-account deletion"
+  ],
+  "requiresPublisherConfiguration": [
+    "Registered App ID, signing team and provisioning",
+    "App Store Connect consumable catalog and localized prices",
+    "Production HTTPS backend, isolated database, Apple certificate configuration",
+    "Publisher legal identity, policy/support URLs and data retention decisions",
+    "Age rating, territories, privacy answers and content rights"
+  ],
+  "requiresEvidence": [
+    "iOS export, signed archive, real-device and TestFlight validation",
+    "Sandbox purchase/refund/retry/idempotency and wallet verification",
+    "Guest/password/Apple account deletion and Apple token revocation",
+    "Actual F24 screenshots and full-language fit checks",
+    "Substantive independent-product comparison against F13-F23"
+  ],
+  "notes": [
+    "A candidate identifier is not proof of App ID registration.",
+    "Local and simulated ranking entries must not be represented as real online players.",
+    "A release-audit source scan cannot certify native integrations or guarantee App Review approval."
+  ]
+}
