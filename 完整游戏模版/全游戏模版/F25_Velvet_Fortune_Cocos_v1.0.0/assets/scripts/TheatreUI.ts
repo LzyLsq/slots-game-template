@@ -51,11 +51,11 @@ const sw=sf.rect.width,sh=sf.rect.height;let iw=w,ih=h;if(fit!=='stretch'){const
 }
 export function clip(p:Node,name:string,x:number,y:number,w:number,h:number,r=0){const n=group(p,name,x,y,w,h),mask=n.addComponent(Mask);mask.type=Mask.Type.GRAPHICS_RECT;return n}
 export function bind(n:Node,fn:()=>void,enabled:()=>boolean=()=>true,face?:Node){
- const target=face||n,start=target.position.clone();let dragged=false,pressed=false,down={x:0,y:0};
+ const target=face||n,start=target.position.clone(),physical=target.name==='Physical key face';let dragged=false,pressed=false,down={x:0,y:0};
  const reset=()=>{if(!pressed)return;pressed=false;Tween.stopAllByTarget(target);tween(target).to(.26,{scale:Vec3.ONE,position:start},{easing:'sineOut'}).start()};
  n.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{if(!enabled())return;pressed=true;dragged=false;down=e.getUILocation();Tween.stopAllByTarget(target);const u=target.getComponent(UITransform)!;
  // A physical face descends into a stationary socket. Artwork/card taps only compress gently.
- tween(target).to(.10,{scale:new Vec3(face?.992:.988,face?.985:.988,1),position:new Vec3(start.x+u.width*(face?.004:.006),start.y-(face?3:u.height*.006))},{easing:'quadOut'}).start()});
+ tween(target).to(.10,{scale:new Vec3(face?.992:.988,face?.985:.988,1),position:new Vec3(start.x+u.width*(face?.004:.006),start.y-(physical?5:face?3:u.height*.006))},{easing:'quadOut'}).start()});
  n.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>{const p=e.getUILocation();if(Math.hypot(p.x-down.x,p.y-down.y)>16){dragged=true;reset()}});n.on(Node.EventType.TOUCH_CANCEL,reset);
  n.on(Node.EventType.TOUCH_END,()=>{const active=pressed;reset();if(active&&!dragged&&enabled())fn()});
 }
@@ -71,14 +71,17 @@ export function cabinetKey(art:TheatreArt,p:Node,name:string,m:number,index:numb
  const base=group(n,'Fixed brass socket',0,0,w,h),g=base.addComponent(Graphics);
  for(let i=5;i>0;i--){g.fillColor=new Color(80,44,28,10+i*3);g.ellipse(cx,-cy-6,diam/2+i,diam*.44+i);g.fill()}
  g.fillColor=color('#A8773F');g.ellipse(cx,-cy-5,diam/2,diam*.45);g.fill();g.strokeColor=color('#EDD29A');g.lineWidth=2;g.ellipse(cx,-cy-4,diam/2-1,diam*.44);g.stroke();
+ // Theme-specific engraving stays fixed while the enamel face is pressed.
+ if(index===0){const ornament=group(base,'Theme socket engraving',cx,cy,diam,diam),og=ornament.addComponent(Graphics);og.lineWidth=1.5;og.strokeColor=new Color(157,109,57,160);
+ const petals=[8,4,12,6][m];for(let k=0;k<petals;k++){const a=k*Math.PI*2/petals,r=diam*.52;og.moveTo(Math.cos(a)*r,Math.sin(a)*r);og.lineTo(Math.cos(a)*(r+4),Math.sin(a)*(r+4));og.stroke()}}
  // The engraved outer frame is bolted to the console; only the enamel centre travels.
  art.image(base,`key-${m}-${index}`,(w-diam)/2,0,diam,diam);
  const aperture=group(n,'Inset key aperture',0,0,w,h),mask=aperture.addComponent(Mask);mask.type=Mask.Type.GRAPHICS_STENCIL;
  const stencil=aperture.getComponent(Graphics)!;stencil.clear();stencil.circle(cx,-diam/2,diam*.358);stencil.fill();
  const face=group(aperture,'Physical key face',0,0,w,h);const image=art.image(face,`key-${m}-${index}`,(w-diam)/2,0,diam,diam);
  // Reflection is clipped to the original enamel; the bolted rim stays still.
- art.shine(image,m*.8+index*1.35,index===0?.20:.11);
- if(art.sheenEnabled){const rim=group(base,'Warm rim reflection',cx,cy,diam,diam),gl= rim.addComponent(Graphics);gl.lineWidth=2;gl.strokeColor=new Color(255,227,168,150);gl.arc(0,0,diam*.485,.12,1.05,false);gl.stroke();const op=alpha(rim,55);tween(op).delay(index*.8).to(1.8,{opacity:180},{easing:'sineInOut'}).to(2.8,{opacity:45},{easing:'sineInOut'}).delay(1.5).union().repeatForever().start()}
+ art.shine(image,m*.8+index*1.35,index===0?.34:.22);
+ if(art.sheenEnabled){const rim=group(base,'Warm rim reflection',cx,cy,diam,diam),gl= rim.addComponent(Graphics);gl.lineWidth=2;gl.strokeColor=new Color(255,227,168,150);gl.arc(0,0,diam*.485,.12,1.05,false);gl.stroke();if(index===0)tween(rim).by(9+m*.6,{angle:360}).union().repeatForever().start();const op=alpha(rim,55);tween(op).delay(index*.8).to(1.8,{opacity:180},{easing:'sineInOut'}).to(2.8,{opacity:45},{easing:'sineInOut'}).delay(1.5).union().repeatForever().start()}
  bind(n,fn,enabled,face);return {node:n,face,image};
 }
 export function float(n:Node,seconds=5,amount=5){const p=n.position.clone();tween(n).to(seconds/2,{position:new Vec3(p.x,p.y+amount)},{easing:'sineInOut'}).to(seconds/2,{position:p},{easing:'sineInOut'}).union().repeatForever().start()}

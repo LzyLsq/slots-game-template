@@ -17,7 +17,8 @@
     "qa:soak": "node tools/qa/soak.cjs",
     "qa:profile": "node tools/qa/profile.cjs",
     "qa:auth": "node tools/qa/auth.cjs",
-    "qa:art-fit": "node tools/qa/art-fit.cjs"
+    "qa:art-fit": "node tools/qa/art-fit.cjs",
+    "qa:polish": "node tools/qa/polish.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

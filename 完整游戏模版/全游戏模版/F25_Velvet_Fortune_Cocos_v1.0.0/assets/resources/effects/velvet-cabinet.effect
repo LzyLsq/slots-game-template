@@ -81,7 +81,15 @@ CCProgram sprite-fs %{
     vec4 o = vec4(1, 1, 1, 1);
 
     #if USE_TEXTURE
-      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      // Only the upper side drapery breathes; the character, screen and controls stay anchored.
+      vec2 sampleUV = uv0;
+      vec4 original = CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      float velvet = smoothstep(0.10, 0.28, original.r - original.g) * (1.0 - smoothstep(0.32, 0.55, original.g));
+      float upper = smoothstep(0.025, 0.07, uv0.y) * (1.0 - smoothstep(0.23, 0.32, uv0.y));
+      float leftCloth = exp(-pow((uv0.x - 0.065) / 0.045, 2.0));
+      float rightCloth = exp(-pow((uv0.x - 0.935) / 0.045, 2.0));
+      sampleUV.x += velvet * upper * (leftCloth - rightCloth) * 0.0032 * sin(cc_time.x * 1.05 + uv0.y * 19.0 + cabinet.w);
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, sampleUV);
       #if IS_GRAY
         float gray  = 0.2126 * o.r + 0.7152 * o.g + 0.0722 * o.b;
         o.r = o.g = o.b = gray;
@@ -100,9 +108,31 @@ CCProgram sprite-fs %{
     float shimmer = pow(max(0.0, sin(uv0.x * 30.0 - time * 1.5)), 10.0);
     float bright = smoothstep(0.30, 0.88, max(o.r, max(o.g, o.b)));
     float gold = smoothstep(0.015, 0.20, o.r - o.b);
-    float energy = sides * sweep * 0.28 + (topRail + bottomRail) * crossing * 0.32 + coins * shimmer * 0.15;
+    float energy = sides * sweep * 0.43 + (topRail + bottomRail) * crossing * 0.43 + coins * shimmer * 0.23;
     energy += (topRail + bottomRail) * response.x * (0.10 + 0.12 * crossing) + sides * response.x * 0.07;
-    o.rgb += vec3(1.0, 0.82, 0.48) * energy * bright * gold;
+    // Broad changing illumination belongs to the original ornament pixels, not an overlay card.
+    float ornament = exp(-pow((uv0.y - (cabinet.x - 0.19)) / 0.062, 2.0));
+    float sideObjects = exp(-pow((uv0.x - 0.18) / 0.12, 2.0)) + exp(-pow((uv0.x - 0.82) / 0.12, 2.0));
+    float passing = exp(-pow((uv0.x - (0.5 + 0.43 * sin(time * 0.62 + cabinet.w))) / 0.18, 2.0));
+    float pearl = 1.0 - smoothstep(0.0, 0.35, abs(cabinet.w - 2.0));
+    energy += ornament * sideObjects * passing * (0.22 + pearl * 0.10);
+    vec3 warmth = mix(vec3(1.0, 0.82, 0.48),vec3(0.79,0.91,1.0),pearl * 0.40);
+    // Exterior columns and plinth catch slow, staggered reflected stage light.
+    float exterior = exp(-pow((uv0.x-.035)/.036,2.0)) + exp(-pow((uv0.x-.965)/.036,2.0));
+    float lowerBody = smoothstep(cabinet.z+.10,cabinet.z+.17,uv0.y);
+    float exteriorWave = .5+.5*sin(time*.73-uv0.y*10.0+uv0.x*4.0+cabinet.w);
+    float plinth = exp(-pow((uv0.y-.935)/.043,2.0));
+    float floorSweep = exp(-pow((uv0.x-(.5+.36*sin(time*.46+cabinet.w)))/.17,2.0));
+    energy += exterior*(.05+.38*exteriorWave) + lowerBody*plinth*floorSweep*.36;
+    o.rgb *= 1.0 + exterior * gold * (exteriorWave*.22-.09);
+    o.rgb += warmth * energy * bright * max(gold,pearl * 0.45);
+    // A continuous broad reflection travels on metal, leaving the reel opening untouched.
+    float glossPhase = mod(time+cabinet.w*1.25,7.8)/7.8;
+    float glossAxis = uv0.x+uv0.y*.30-(-.42+glossPhase*2.08);
+    float glossBand = exp(-pow(glossAxis/.072,2.0))*.50 + exp(-pow((glossAxis+.085)/.15,2.0))*.17;
+    float metalShape = clamp(sides+exterior+topRail+bottomRail+coins*sideObjects+lowerBody*.45,0.0,1.0);
+    float glossMask = bright*max(gold,pearl*.40)*metalShape;
+    o.rgb = mix(o.rgb,mix(vec3(1.0,.94,.75),vec3(.94,.97,1.0),pearl*.65),clamp(glossBand*glossMask,0.0,.55));
     o *= color;
     ALPHA_TEST(o);
     return o;

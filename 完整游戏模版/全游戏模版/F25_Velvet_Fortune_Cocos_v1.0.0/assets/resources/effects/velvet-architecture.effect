@@ -95,7 +95,27 @@ CCProgram sprite-fs %{
     float position = -.18 + mod(time*.095,1.38);
     float sweep = exp(-pow((uv0.x+uv0.y*.22-position)/.085,2.0));
     float glimmer = .5+.5*sin(time*.65+uv0.y*18.0);
-    o.rgb += vec3(1.0,.78,.42) * gold * (cornice*sweep*.20 + column*glimmer*.065);
+    o.rgb += vec3(1.0,.78,.42) * gold * (cornice*sweep*.62 + column*glimmer*.28);
+    // Reflected light travels around the four carved openings, not across their text.
+    float archSides = exp(-pow((uv0.x-.159)/.014,2.0)) + exp(-pow((uv0.x-.435)/.014,2.0))
+                    + exp(-pow((uv0.x-.563)/.014,2.0)) + exp(-pow((uv0.x-.839)/.014,2.0));
+    float upperBoxes = smoothstep(.19,.23,uv0.y)*(1.0-smoothstep(.37,.40,uv0.y));
+    float lowerBoxes = smoothstep(.50,.54,uv0.y)*(1.0-smoothstep(.68,.71,uv0.y));
+    float drift = .5+.5*sin(time*.83-uv0.y*13.0+uv0.x*8.0);
+    float floor = smoothstep(.81,.91,uv0.y);
+    float reflection = exp(-pow((uv0.x-(.5+.28*sin(time*.43)))/.16,2.0));
+    o.rgb += vec3(1.0,.83,.56)*gold*(archSides*(upperBoxes+lowerBoxes)*drift*.48+floor*reflection*.28);
+    // A moving pool of reflected light reads through both shade and highlight.
+    float architecture = clamp(column+cornice+archSides*(upperBoxes+lowerBoxes),0.0,1.0);
+    float broadPass = exp(-pow((uv0.x-(.5+.48*sin(time*.75)))/.12,2.0));
+    o.rgb *= 1.0 + architecture*gold*(broadPass*.20-.065);
+    // Broad satin reflection, with a soft leading edge and a longer falloff.
+    float glossPhase = mod(time,8.5)/8.5;
+    float glossAxis = uv0.x+uv0.y*.32-(-.40+glossPhase*2.05);
+    float glossBand = exp(-pow(glossAxis/.075,2.0))*.46 + exp(-pow((glossAxis+.09)/.17,2.0))*.16;
+    float sculpted = clamp(architecture+floor*.55+(1.0-smoothstep(.10,.18,uv0.y))*.65,0.0,1.0);
+    float glossMask = gold*sculpted;
+    o.rgb = mix(o.rgb,vec3(1.0,.95,.78),clamp(glossBand*glossMask,0.0,.52));
     o *= color;
     ALPHA_TEST(o);
     return o;

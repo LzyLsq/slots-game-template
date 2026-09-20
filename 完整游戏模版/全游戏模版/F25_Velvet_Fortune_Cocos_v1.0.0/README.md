@@ -47,8 +47,18 @@ macOS 默认 Creator 路径为 `/Applications/CocosCreator.app/Contents/MacOS/Co
 
 ## 当前版本截图
 
-[查看 soft-response-21 全部 14 张运行截图](docs/screenshots/soft-response-21/README.md)（浏览器运行截图）。
+[查看 material-gloss-26 全部 14 张最新运行截图](docs/screenshots/material-gloss-26/README.md)。包含登录、大厅、商店、奖励、排行、账户及四台柜机的两种手机尺寸。
 
-![大厅](docs/screenshots/soft-response-21/home.png)
+![大厅](docs/screenshots/material-gloss-26/home.png)
 
-![柜机](docs/screenshots/soft-response-21/mode1.png)
+![柜机](docs/screenshots/material-gloss-26/mode1.png)
+
+本地预览：`http://127.0.0.1:5526/?v=f25-material-gloss-26`。
+
+本次汇总独立产品完善、背景音乐、加载反馈、柜机按压与待机、大厅及柜机材质光泽。详见 [材质光泽](docs/GLOSS_26.md)、[可见动态](docs/VISIBLE_MOTION_25.md)、[大厅及外侧动态](docs/HALL_EXTERIOR_24.md)、[柜机动态](docs/CABINET_MOTION_23.md)。
+
+## 独立产品完善（independent-polish-22）
+
+[本轮改动与独立发布检查](docs/INDEPENDENT_RELEASE.md) · [该轮历史截图](docs/screenshots/independent-polish-22/README.md)
+
+本地预览：`http://127.0.0.1:5526/?v=f25-independent-polish-22`。仍未进行真实设备、正式登录/支付及平台审核验收。
