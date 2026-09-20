@@ -1,0 +1,37 @@
+{
+  "checks": [
+    "Four cabinet roundtrips preserve background, brand and hero image dimensions"
+  ],
+  "baseline": [
+    {
+      "name": "hall-final",
+      "w": 1038.77,
+      "h": 1558.15
+    },
+    {
+      "name": "brand",
+      "w": 225.4,
+      "h": 142
+    },
+    {
+      "name": "hero0",
+      "w": 453.33,
+      "h": 272
+    },
+    {
+      "name": "hero1",
+      "w": 453.33,
+      "h": 272
+    },
+    {
+      "name": "hero2",
+      "w": 453.33,
+      "h": 272
+    },
+    {
+      "name": "hero3",
+      "w": 453.33,
+      "h": 272
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        fabric: { value: [0.3, 0.1, 0.2, 1] }
+        dimensions: { value: [500, 300, 10, 0] }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+  #include <builtin/uniforms/cc-global>
+  uniform FabricParams { vec4 fabric; vec4 dimensions; };
+
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      #if IS_GRAY
+        float gray  = 0.2126 * o.r + 0.7152 * o.g + 0.0722 * o.b;
+        o.r = o.g = o.b = gray;
+      #endif
+    #endif
+
+    vec2 pixel = uv0 * dimensions.xy;
+    float light = smoothstep(0.4, 0.75, fabric.r);
+    float broad = sin(uv0.x * 8.0 + sin(uv0.y * 5.0) * 1.2);
+    float folds = sin(uv0.x * 23.0 + sin(uv0.y * 7.0) * 0.7);
+    float weave = sin(pixel.x * 2.1) * sin(pixel.y * 2.2);
+    float grain = fract(sin(dot(floor(pixel * 0.75), vec2(12.9898,78.233))) * 43758.5453) - 0.5;
+    float edge = pow(abs(uv0.x - 0.5) * 2.0, 3.0);
+    float silk = broad * 0.035 + folds * 0.009 + weave * 0.005 + grain * 0.009;
+    vec3 darkCloth = fabric.rgb * (0.83 + broad * 0.15 + folds * 0.045) + vec3(0.045,0.022,0.014) * (1.0-edge);
+    vec3 ivory = fabric.rgb + vec3(silk) - vec3(0.09,0.075,0.05) * edge;
+    // A restrained woven damask lives at the margins, leaving the reading area clear.
+    vec2 motif = pixel / vec2(110.0,140.0);
+    float ornament = pow(max(0.0,cos(motif.x*6.283)*cos(motif.y*6.283)),12.0);
+    float margin = smoothstep(0.65,1.0,abs(uv0.x-0.5)*2.0);
+    o.rgb = mix(darkCloth,ivory,light) + vec3(0.085,0.052,0.015)*ornament*margin;
+    vec2 q = abs(pixel-dimensions.xy*0.5) - (dimensions.xy*0.5-vec2(dimensions.z));
+    float distanceToEdge = length(max(q,vec2(0.0)))+min(max(q.x,q.y),0.0)-dimensions.z;
+    o.a *= 1.0-smoothstep(-0.8,0.6,distanceToEdge);
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

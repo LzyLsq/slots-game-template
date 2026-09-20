@@ -1,0 +1,16 @@
+<style>
+#velvet-boot{position:fixed;inset:0;z-index:10000;background:#291722;display:grid;place-items:center;transition:opacity .4s ease;pointer-events:all}
+#velvet-boot .foyer{position:relative;width:min(100vw,56.25vh);height:100%;overflow:hidden;background:linear-gradient(0deg,rgba(33,14,27,.6),transparent 65%),url('boot/login.webp') center/cover}
+#velvet-boot .brand{position:absolute;top:22%;left:14%;width:72%;animation:boot-float 7s ease-in-out infinite}
+#velvet-boot .invitation{position:absolute;left:10%;right:10%;bottom:14%;padding:30px 18px 24px;text-align:center;color:#ffedc4;background:linear-gradient(110deg,rgba(52,22,36,.95),rgba(82,39,49,.96),rgba(52,22,36,.95));border:1px solid #c29b5f;box-shadow:0 8px 24px #28102160,inset 0 0 0 4px #412630,inset 0 0 0 5px #9d774e;font:14px/1.5 Georgia,serif}
+#velvet-boot h1{font-size:19px;margin:0 0 7px;font-weight:normal;letter-spacing:1px}#velvet-boot p{font:12px/1.5 Arial,sans-serif;margin:0;color:#dfc9ac}
+#velvet-boot .track{height:8px;border:1px solid #b58d53;padding:2px;border-radius:8px;background:#241520;margin:24px 0 10px}
+#velvet-boot .fill{height:100%;width:2%;border-radius:6px;background:linear-gradient(90deg,#a97130,#f1cf83,#fff0bf);box-shadow:0 0 9px #f0bf6960;transition:width .18s ease}
+#velvet-boot .note{position:absolute;bottom:5%;left:5%;right:5%;text-align:center;color:#fff1d9;text-shadow:0 1px 3px #291222;font:11px Arial,sans-serif}
+#velvet-boot button{display:none;margin:14px auto 0;padding:9px 20px;background:#f4dfb2;color:#4d2530;border:1px solid #b78a50;border-radius:5px}
+@keyframes boot-float{50%{transform:translateY(-6px)}}@media(prefers-reduced-motion:reduce){#velvet-boot .brand{animation:none}#velvet-boot,#velvet-boot .fill{transition:none}}
+</style>
+<div id="velvet-boot" role="status" aria-live="polite"><div class="foyer"><img class="brand" src="boot/brand.webp" alt="Velvet Fortune"><div class="invitation"><h1>Your royal seat awaits</h1><p id="velvet-boot-message">Preparing the theatre…</p><div class="track" role="progressbar" aria-label="Loading game" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="fill"></div></div><p id="velvet-boot-percent">0%</p><button type="button" onclick="location.reload()">Try again</button></div><div class="note">Virtual coins · No cash value</div></div></div>
+<script>
+(()=>{let progress=0;const root=document.getElementById('velvet-boot');window.velvetBootProgress=n=>{progress=Math.max(progress,Math.min(1,n));const pct=Math.round(progress*100);root.querySelector('.fill').style.width=pct+'%';root.querySelector('.track').setAttribute('aria-valuenow',pct);document.getElementById('velvet-boot-percent').textContent=pct+'%';};window.velvetBootReady=()=>{window.velvetBootProgress(1);document.getElementById('velvet-boot-message').textContent='The theatre is ready';requestAnimationFrame(()=>requestAnimationFrame(()=>{root.style.opacity='0';root.style.pointerEvents='none';setTimeout(()=>root.remove(),450)}))};window.velvetBootError=()=>{document.getElementById('velvet-boot-message').textContent='Could not load the theatre. Please try again.';root.querySelector('button').style.display='block'};})();
+</script>

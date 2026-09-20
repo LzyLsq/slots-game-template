@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync,mkdirSync,copyFileSync} from 'node:fs';
+import {spawn} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const project=fileURLToPath(new URL('../',import.meta.url));
+const debug=process.argv.includes('--debug');
+const child=spawn(process.env.COCOS_CREATOR||'/Applications/CocosCreator.app/Contents/MacOS/CocosCreator',['--project',project,'--build',`platform=web-mobile;debug=${debug};sourceMaps=${debug}`],{stdio:['inherit','pipe','pipe']});
+let failed=false;
+for(const stream of [child.stdout,child.stderr])stream.on('data',chunk=>{const s=chunk.toString();if(/build task.*failed|SyntaxError:|error: Error:|attached to .* is missing or invalid/i.test(s))failed=true;process.stdout.write(chunk)});
+child.on('error',e=>{console.error(e);process.exitCode=1});
+child.on('exit',code=>{process.exitCode=failed?1:code===36?0:code||0;if(!process.exitCode){const file=project+'build/web-mobile/index.html';try{let html=readFileSync(file,'utf8').replace(/<title>.*?<\/title>/,'<title>F25 · Velvet Fortune</title>').replace('<head>','<head>\n<link rel="icon" href="data:,">');mkdirSync(project+'build/web-mobile/boot',{recursive:true});for(const name of ['login','brand'])copyFileSync(project+'assets/resources/art/'+name+'.webp',project+'build/web-mobile/boot/'+name+'.webp');html=html.replace(/<body([^>]*)>/,m=>m+readFileSync(project+'tools/boot.html','utf8'));writeFileSync(file,html)}catch(e){console.error(e);process.exitCode=1}}});

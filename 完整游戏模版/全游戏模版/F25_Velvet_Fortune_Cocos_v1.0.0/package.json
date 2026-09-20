@@ -1,0 +1,27 @@
+{
+  "name": "f25-velvet-fortune-cocos",
+  "uuid": "3bc0d676-6b22-49e5-8f98-1255854f5067",
+  "version": "1.0.0",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.mjs",
+    "audit:math": "node --import tsx tests/simulate.mjs",
+    "build:web": "node tools/build.mjs",
+    "start": "node tools/serve.mjs",
+    "qa:interaction": "node tools/qa/interaction.cjs",
+    "qa:layout": "node tools/qa/layout.cjs",
+    "qa:awards": "node tools/qa/awards.cjs",
+    "qa:stability": "node tools/qa/stability.cjs",
+    "qa:soak": "node tools/qa/soak.cjs",
+    "qa:profile": "node tools/qa/profile.cjs",
+    "qa:auth": "node tools/qa/auth.cjs",
+    "qa:art-fit": "node tools/qa/art-fit.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  }
+}
