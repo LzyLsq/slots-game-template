@@ -1,0 +1,1011 @@
+{
+  "version": 1,
+  "auditedAt": "2026-09-18T07:41:31.282Z",
+  "reference": "F21_Royal_Jubilee_v1.0.0",
+  "scope": "Shipped PNG assets only; Cocos meta files remain paired. New hashes alone do not establish originality or licensing.",
+  "generation": "New art was generated through the user-requested local CC Switch pipeline. Prompt/response and processing evidence remain in workspace output/jamboree-art, outside the distributable. No blanket commercial-license certification is asserted.",
+  "reusedExceptions": [
+    "assets/resources/art/apple-mark.png"
+  ],
+  "retiredRecoverable": [
+    "output/jamboree-art/retired-unused/salon.png (+ .meta)",
+    "output/jamboree-art/retired-unused/symbols-blur.png (+ .meta)",
+    "output/jamboree-art/retired-unused/canopy-hall-soft.png (+ .meta)",
+    "output/jamboree-art/retired-unused/canopy-destinations.png (+ .meta)",
+    "output/jamboree-art/retired-unused/jamboree-chest-room.png (+ .meta)"
+  ],
+  "assets": [
+    {
+      "file": "assets/resources/art/apple-mark.png",
+      "sha256": "a26517b985e0d9949050d66c38f50e301f811ccea5c5e41f77109e9e4bc510fc",
+      "byteIdenticalF21Source": "apple-mark.png",
+      "evidence": [
+        {
+          "item": "Inherited Apple brand mark; publisher must review brand-use requirements.",
+          "availableInWorkspace": false
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-brand.png",
+      "sha256": "9989ae14e103df47a7833fde681c48f093e4742d96bf01c0cc9d7fdb212c8abd",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "brand.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "brand.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-0.png",
+      "sha256": "8125a0dc5bb71eb9d04cf0de30e714344686c30c1456476671853cb69c6c0864",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-1.png",
+      "sha256": "d918eaaf1e785e9fd6546fe789a03229bbb91c9ed63a59e0d7f897c43e622b20",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-10.png",
+      "sha256": "d1338b25a52f744931d272b58df505e0d65ca46c89b35e491ed2ca1ffeb27512",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-11.png",
+      "sha256": "55040a682495cfb26561713671b03cbec5db1a9df6c1e1169e0bda81a2a6b80a",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-12.png",
+      "sha256": "f9e6eb548331a4b510a5fe484fd2e3ec271f67d5d0b7c3ff3e33cb50285d5bf6",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-13.png",
+      "sha256": "53c4782040bcda7255cf7108631f4033f4e6862d161eaccd893bfbc557d189d8",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-14.png",
+      "sha256": "0fac7bd4e0dcc52fce0f7cac556ed1f3eb5b9478dbf27262a66eaff12faee4f0",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-15.png",
+      "sha256": "0392233f8ff581b6a2469161f0debf630a7303370aa5655e458e18ab573e6462",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-2.png",
+      "sha256": "4542ecbd19cd29f0201b52fba7cc4abdf5a60651e1942442bdbbb55b03668fcd",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-3.png",
+      "sha256": "6c2114b7ea019c5939ba52052e47d129ab47bb39887de7430e75a105bbcd3c12",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-4.png",
+      "sha256": "7a0ce4e8e3f7d41377c527aaa6dc0efcf1cb7afddc5f1a75c6f95d3e2c3b8405",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-5.png",
+      "sha256": "f566a99ab010fe06810846357a70bc5530c20e3de96533b918c32e5d84cb0c07",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-6.png",
+      "sha256": "aa41e2a75ff7536182faa02a0a6ac4dccb6be5d7d9c030e63151fbef98662a1f",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-7.png",
+      "sha256": "9a02e5c2b7bb9a460c6fe37e104dec50925fffdaed5f7216d6209b75d5d84d2c",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-8.png",
+      "sha256": "380bc2ed7b8f800e97459d2a7a677ff7f103dc1e7a922811011856999691a8a3",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-button-9.png",
+      "sha256": "4ddf30cdebad2141b54b03185ae14c0298a88c176864a829b0483d5c50be96c2",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "controls-rounded-v3.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "controls-rounded-v3.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-0.png",
+      "sha256": "7e33a954cdfa07762f3af2c4e959dab6ce5dabfc2df37cee37c6a6df81cec1aa",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-1.png",
+      "sha256": "3e01a04b38d8530594d93a6a1e4e77620596cd93c41b27cc91f4ab4ce90e27b8",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-2.png",
+      "sha256": "cfa7268d20302bffb404e1ac3ddf483f7d9cf40834c448bfc5e90cce099bbd70",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-3.png",
+      "sha256": "1797e72f71e5555e0c94750d0038b2f18c0145582587c41bc66035cf668f90a0",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-services.png",
+      "sha256": "19b6c27e34a74d4ebd4ae7787921318ed5987a6947e310249abbdb6e794bfaad",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "services.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "services.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_services.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-0.png",
+      "sha256": "00c9eb5edfc14dc3757828598447778e009a6f30335a5ba60cf3ad37191fcda3",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-1.png",
+      "sha256": "1b1b3c777ccbab7b948654a585f110845717cab1b2c12aa9b9ee8bb8b9029515",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-2.png",
+      "sha256": "1f4143b868506cd362c7095c888de9fd61c818ede86f6ca24a6940ef0a6d0bd8",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-3.png",
+      "sha256": "a47c821b618a5ce00a4f88720ff856ae21be7c88cb19813cc1bd1464b459f019",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "panels-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "panels-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-title-0.png",
+      "sha256": "8da39a2bd8ddb992d1cc9964f185e0e8e7d3b46aec5da47a88759922f766b1f2",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "titles.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "titles.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-title-1.png",
+      "sha256": "c2e6bf2ed4db9788c5362a18c0773c7bbb422ea0e4e23c67cf92d8eae7466528",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "titles.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "titles.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-title-2.png",
+      "sha256": "bdd08501e2499ba4a2d71eaa3ec4dd91f636118e147df113ed79172a836f4a25",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "titles.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "titles.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/canopy-title-3.png",
+      "sha256": "d0125fa4ef18a5a287bcaca3d81f7350774338913d6d015a1355e4536d783fe8",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "titles.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "titles.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_art.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/golden-hour-tall.png",
+      "sha256": "bcb951153d15b277382e1d8762269a71e7ed74708c22592d7d81a2711c180bfc",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "chest-cabinet.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "chest-cabinet.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "chest-wide.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "finish-room-outpaints.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/interfaces.png",
+      "sha256": "6ad9f7aaa0c2f10663f28650751b391151ad3c995df24bae61148dd1baaaf44c",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "interfaces-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "interfaces-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "process-ui-assets.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/jade-treasury-tall.png",
+      "sha256": "8fee84ab34cd0d10fca116101a48d37988872e5687600761e00999f8c1e99e55",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "gem-cabinet.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "gem-cabinet.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "gem-wide.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "finish-room-outpaints.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/jamboree-plaza.png",
+      "sha256": "c658e862368607de9912e4070d2c2d0faafc632fed0d34461f1d1b914eb013dc",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "plaza.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "plaza.response.json",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/optics.png",
+      "sha256": "92b735a7be603faa8b8f0febc945a67feaf60973b69df8c47396f54b4a296f2e",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "optics-new.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "optics-new.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare-optics.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/pearl-palace-tall.png",
+      "sha256": "9527a67484613dd668fc7ffe8a8c9adb55216140733cc3a950dcec5c7e7e57f1",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "pearl-cabinet.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "pearl-cabinet.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "pearl-wide.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "finish-room-outpaints.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/portraits.png",
+      "sha256": "cbe1ba1954e1be9322d7f6efb7aaa04ec4afa4ca11047e5bb2e1c67f595fa08f",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "portraits.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "portraits.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_services.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/prize-golden-hour.png",
+      "sha256": "fcc8c8063b17565fd67746892908d7a9c7286255c45a7d744e03582cb720830f",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "prizes.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prizes.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_services.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/prize-jade-treasury.png",
+      "sha256": "831cd4666ed8ddb77036cbdebc699e3f10381b7ed3cebb1fda7c2489d4465f94",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "prizes.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prizes.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_services.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/prize-pearl-palace.png",
+      "sha256": "aae9ce4bec8b6e5a170f5a95339949e40e99b7e16fa8f45324d9284f5233c5a1",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "prizes.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prizes.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_services.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/prize-ruby-revel.png",
+      "sha256": "d5a51bc09864f21c6e3873856d69801fe3fb3c5377e2beb57a6feeb003aae757",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "prizes.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prizes.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_services.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/ruby-revel-tall.png",
+      "sha256": "c752771f48c719daa95274d829940cf3312c561a90a70994f0e6bd3f6aa86048",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "crown-cabinet.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "crown-cabinet.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "crown-wide.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "finish-room-outpaints.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-golden-hour-blur.png",
+      "sha256": "623c765db7b4fa444a8b77a6a584451df70c4ea0b027bc47819e800a7b116995",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "treasure-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "treasure-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-golden-hour.png",
+      "sha256": "71e4d90ecc5cb9d27cf7e31bdd7ab74794437b4de3908b6438ba13c004ac1563",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "treasure-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "treasure-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-jade-treasury-blur.png",
+      "sha256": "93ace63e532203a3bf1631b62bacc0134a67e7523662aaccbcf44c34bb6fbf15",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "gem-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "gem-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-jade-treasury.png",
+      "sha256": "49ee2e7c981e98889f808b84926b1622aef32378e0706555c58dc52d110e29e8",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "gem-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "gem-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-pearl-palace-blur.png",
+      "sha256": "bafaf87a4c99d8a222c6da4a14633ac282890db3028905b9f76d599f16420557",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "pearl-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "pearl-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-pearl-palace.png",
+      "sha256": "599ba49bc90e120ee426f0eab7b492b6ed630618ec0f54ff5b7697975b2ff094",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "pearl-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "pearl-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-ruby-revel-blur.png",
+      "sha256": "6e5114fbaad9e43fd3a2e689590da82fcbe2846f6c78d9889274077ff1fb735d",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "crown-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "crown-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols-ruby-revel.png",
+      "sha256": "76f1deb45dbb349704f798d2b8205f358263953ae2109cdc9ec3de2f1f65c536",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "crown-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "crown-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    },
+    {
+      "file": "assets/resources/art/symbols.png",
+      "sha256": "71e4d90ecc5cb9d27cf7e31bdd7ab74794437b4de3908b6438ba13c004ac1563",
+      "byteIdenticalF21Source": null,
+      "evidence": [
+        {
+          "item": "treasure-symbols.prompt.txt",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "treasure-symbols.response.json",
+          "availableInWorkspace": true
+        },
+        {
+          "item": "prepare_symbols.py",
+          "availableInWorkspace": true
+        }
+      ]
+    }
+  ]
+}

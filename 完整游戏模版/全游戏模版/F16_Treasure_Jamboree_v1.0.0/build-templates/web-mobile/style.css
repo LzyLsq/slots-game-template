@@ -1,0 +1,26 @@
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#69523b url('jamboree-plaza.jpg') center/cover no-repeat;font-family:Arial,sans-serif;color:#fff7df}
+body,canvas{touch-action:none}
+#GameDiv,#Cocos3dGameContainer,#GameCanvas{width:100%;height:100%;position:absolute;inset:0}
+/* Native Cocos inputs are sized in the 1080px design coordinate space. */
+input,textarea{font-size:54px!important;line-height:68px!important}
+input[type=password],textarea[type=password]{-webkit-text-security:disc}
+#csw-preloader{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;justify-content:space-between;align-items:center;box-sizing:border-box;padding:max(28px,env(safe-area-inset-top)) 20px max(16px,env(safe-area-inset-bottom));overflow:hidden;background:url('jamboree-plaza.jpg') center/cover no-repeat;transition:opacity .48s ease-in-out;isolation:isolate}
+#csw-preloader::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(27,51,48,.65),transparent 42%,rgba(33,29,26,.86))}
+#csw-preloader.is-ready{opacity:0;pointer-events:none}
+.loading-sign{text-align:center;max-width:490px;width:100%;text-shadow:0 2px 4px #3a2a20}
+.wordmark{font-family:Georgia,serif;font-size:clamp(34px,8vw,58px);font-weight:900;line-height:.98;letter-spacing:-1.8px;margin:16px 0;color:#ffedab}
+.wordmark span{display:block;font-size:1.18em;color:#fff6d4}
+.invitation{font-size:12px;letter-spacing:2px;font-weight:700;line-height:1.6}
+.loading-footer{width:min(100%,420px);text-align:center}
+.loading-track{height:9px;margin:0 24px;border:1px solid #e9c47f;border-radius:8px;padding:3px;background:rgba(40,28,20,.65);overflow:hidden}
+#loading-progress{height:100%;width:100%;display:block;border-radius:6px;transform:scaleX(0);transform-origin:left;transition:transform .35s ease-out;background:linear-gradient(90deg,#d4a045,#ffe5a0)}
+#loading-copy{font-size:16px;line-height:1.5;min-height:48px;margin:14px 8px 8px;font-weight:700}
+.virtual-notice{font-size:12px;line-height:1.5;color:#fff5df;margin:14px 0 0}
+#loading-retry{min-height:48px;padding:10px 28px;border:2px solid #fff0b0;border-radius:24px;background:linear-gradient(#ebc773,#b77d35);box-shadow:0 3px 0 #6b4928;color:#372814;font:700 16px Arial;cursor:pointer}
+#loading-retry:active{transform:translateY(2px);box-shadow:0 1px 0 #6b4928}
+#loading-retry:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.salon-light{position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 64% 40%,rgba(255,237,173,.19),transparent 45%);animation:daylight 7s ease-in-out infinite}
+@keyframes daylight{50%{opacity:.38}}
+.is-background .salon-light{animation-play-state:paused}
+@media(max-height:480px){.wordmark{font-size:28px;margin:0}.wordmark span{display:inline}.invitation{margin:8px}#loading-copy{min-height:24px;margin:8px}.virtual-notice{margin-top:6px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

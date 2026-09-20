@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import { PressGesture } from '../assets/scripts/ui/PressGesture';
+
+const tap=new PressGesture();
+assert.equal(tap.start(1,0,0,true),true);
+assert.equal(tap.start(2,0,0,true),false,'second finger cannot replace the first');
+assert.equal(tap.end(2,true),false,'second finger cannot activate the press');
+assert.equal(tap.end(1,true),true);
+assert.equal(tap.end(1,true),false,'duplicate release cannot activate twice');
+tap.start(3,0,0,true);
+assert.equal(tap.move(3,1,1,false),true,'leaving the actual rectangle cancels immediately');
+assert.equal(tap.move(3,0,0,true),false);
+assert.equal(tap.end(3,true),false,'returning inside does not rearm');
+tap.start(4,0,0,true);
+assert.equal(tap.move(4,19,0,true),true,'a drag within a large button is not a tap');
+assert.equal(tap.end(4,true),false);
+tap.start(5,0,0,true);tap.reset();
+assert.equal(tap.end(5,true),false,'cancel, hide and deactivate do not trigger actions');
+assert.equal(tap.start(6,0,0,false),false,'outside down is ignored');
+assert.equal(tap.start(7,0,0,true),true);
+assert.equal(tap.end(7,false),false,'release outside is never accepted');
+assert.equal(tap.start(8,0,0,true),true);
+assert.equal(tap.move(9,500,500,false),false,'unowned move cannot cancel primary touch');
+assert.equal(tap.move(8,4,3,true),false);
+assert.equal(tap.end(8,true),true,'small natural finger movement is accepted');
+console.log('PASS press ownership, duplicate release, exit/reentry, drag, cancel/hide, outside release and touch jitter.');
