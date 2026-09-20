@@ -1,0 +1,45 @@
+/* Scene fittings: interaction lives on the object, never on a floating card. */
+.bottom-nav .nav-button{position:relative;isolation:isolate;min-width:0;transition:filter .16s,transform .18s}
+.bottom-nav .nav-button.selected span{text-decoration:none;color:#633d12}
+.bottom-nav .nav-button::before{content:'';position:absolute;inset:2px 8% 19px;z-index:-1;border-radius:50%;background:radial-gradient(ellipse,#fff6cfb3 0%,#f3cd7166 36%,transparent 70%);opacity:0;pointer-events:none}
+.bottom-nav .nav-button.selected::before{opacity:1}
+.bottom-nav .nav-button.selected img{animation:nav-object-settle .36s cubic-bezier(.2,.8,.3,1) both;filter:drop-shadow(0 3px 2px #82572040)}
+.bottom-nav .nav-button span{padding:0 2px;line-height:1.25}
+.bottom-nav .nav-button:active img{transform:translateY(1px) scale(.94);filter:brightness(.97)}
+@keyframes nav-object-settle{0%{transform:translateY(2px) scale(.94)}65%{transform:translateY(-4px) scale(1.065)}100%{transform:translateY(-3px) scale(1.05)}}
+.harbor-v2 .destination{transition:filter .18s;transform:none!important}
+.harbor-v2 .destination-copy{transition:filter .18s,translate .18s}
+.harbor-v2 .destination:active .destination-copy{translate:0 1px;filter:brightness(.88)}
+.harbor-v2 .destination:focus-visible{outline-offset:-9px;border-radius:45%}
+.harbor-v2 .sea-sparkles i{width:7px;height:7px;opacity:.5}
+.harbor-v2 .sea-sparkles i:nth-child(3n){display:none}
+.harbor-v2 .daily-ribbon .daily-treasure{animation:gift-invitation 6s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes gift-invitation{0%,70%,100%{transform:none}78%{transform:translateY(-3px) rotate(-2deg)}86%{transform:translateY(-1px) rotate(1.5deg)}94%{transform:none}}
+/* Keep content visible throughout a navigation; animate objects, not the scene. */
+.service-header h1{animation:heading-settle .24s ease-out both}
+@keyframes heading-settle{from{transform:translateY(3px)}to{transform:none}}
+.game-links button{display:flex;justify-content:center;align-items:center;gap:5px;min-height:44px;min-width:0;line-height:1.35;padding:6px 9px}
+.game-links button .control-icon{width:19px;height:19px;flex-basis:19px}
+.primary:disabled{opacity:.85;filter:saturate(.45)}
+@media(prefers-reduced-motion:reduce){.bottom-nav .nav-button.selected img,.harbor-v2 .daily-ribbon .daily-treasure,.service-header h1{animation:none}}
+.reduced .bottom-nav .nav-button.selected img,.reduced .harbor-v2 .daily-ribbon .daily-treasure,.reduced .service-header h1{animation:none}
+
+/* Each voyage has its own award lighting, on the treasure rather than a modal card. */
+.award-dialog{--prize-light:255,210,112;--prize-ring:255,224,150}
+.award-theme-pearl{--prize-light:196,227,255;--prize-ring:222,232,255}
+.award-theme-reef{--prize-light:142,230,187;--prize-ring:188,249,202}
+.award-theme-beacon{--prize-light:255,184,113;--prize-ring:255,210,145}
+.award-dialog .award-voyage{color:#fff1cf;text-shadow:0 2px 4px #30200b;font:700 clamp(12px,3.8vw,17px)/1.35 Georgia,'Songti SC',serif;max-width:88%;margin:0 auto 6px;text-wrap:balance;z-index:2}
+.award-dialog .victory-rays{background:repeating-conic-gradient(rgba(var(--prize-light),.6) 0deg 4deg,transparent 4deg 22deg);opacity:.62}
+.award-dialog .treasure-orbit{border-color:rgba(var(--prize-ring),.6);box-shadow:0 0 15px rgba(var(--prize-light),.3),inset 0 0 12px rgba(var(--prize-light),.2)}
+.award-keepsake{position:absolute;bottom:14%;width:27%;aspect-ratio:1;display:grid;place-items:center;pointer-events:none;filter:drop-shadow(0 4px 4px #61390d55);animation:keepsake-arrive .65s .1s cubic-bezier(.2,.75,.3,1) both}
+.award-keepsake::before{content:'';position:absolute;inset:-10%;background:radial-gradient(ellipse,rgba(var(--prize-light),.4),transparent 68%);z-index:-1}
+.award-keepsake .symbol-icon{width:100%;height:100%;object-fit:contain}
+.keepsake-left{left:-9%;rotate:-9deg}.keepsake-right{right:-9%;rotate:9deg;animation-delay:.18s}
+@keyframes keepsake-arrive{from{opacity:0;transform:translateY(15px) scale(.65)}to{opacity:1;transform:none}}
+/* Prize particles stay above the physical console, away from its numbers and controls. */
+.cabinet>.coin-burst{inset:24% 15% 41%;z-index:2;border-radius:12px}
+.award-dialog .coin-burst i{filter:drop-shadow(0 2px 2px #4b270933)}
+@media(max-height:650px){.award-dialog .award-voyage{margin-bottom:2px;font-size:12px}.award-dialog .award-treasure{height:27dvh}.award-keepsake{width:24%}}
+@media(prefers-reduced-motion:reduce){.award-keepsake{animation:none}}
+.reduced .award-keepsake{animation:none}

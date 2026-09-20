@@ -1,0 +1,114 @@
+/* Painted F26 materials. Separate text and icons preserve localization and hit areas. */
+:root{background:#d3b477 url('/art/premium/loading.webp') center/cover fixed;--harbor-enamel:url('/art/premium/pearl-texture.webp');--enamel-surface:url('/art/premium/amber-texture.webp');--harbor-ivory:url('/art/premium/pearl-texture.webp')}
+.round-btn,.small-enamel,.primary,.harbor-v2 .daily-ribbon,.harbor-v2 .wallet,.game-wallet .wallet,.captain{border:0;box-shadow:none;text-shadow:none;background-color:transparent;background-repeat:no-repeat;background-size:100% 100%;background-origin:border-box;background-clip:border-box;color:#543515}
+.round-btn,.captain{background-image:url('/art/premium/medallion.png');border-radius:50%;padding:9px;width:48px;min-width:48px;min-height:48px}
+.round-btn .control-icon{width:27px;height:27px;object-fit:contain;filter:none}.round-btn .ui-icon{width:29px;height:29px;object-fit:contain}
+.small-enamel{background-image:url('/art/premium/ivory.png');padding:10px 18px;min-height:46px;line-height:1.3}
+.primary,.harbor-v2 .daily-ribbon{background-image:url('/art/premium/amber.png');padding:15px 25px;color:#4a290b;font-weight:850;text-shadow:0 1px #fff0bc;min-height:54px}
+.primary.has-fitting{gap:9px}.primary .control-icon{width:24px;height:24px;flex-basis:24px}
+.harbor-v2 .wallet,.game-wallet .wallet{background-image:url('/art/premium/ivory.png');border-radius:0;padding:8px 17px;color:#513519;min-height:44px;gap:4px}
+.wallet .plus{background:transparent url('/art/premium/medallion.png') center/100% 100% no-repeat;color:#513419;border:0;box-shadow:none;width:28px;height:28px;padding:0;flex-shrink:0}
+.round-btn:after,.small-enamel:after,.primary:after,.daily-ribbon:after,.wallet:after{display:none}
+.integrated .game-header>div{background:transparent url('/art/premium/ivory.png') center/100% 100% no-repeat;border:0;box-shadow:none;color:#533519;padding:12px 23px;min-width:0}
+.integrated .game-header h1,.integrated .game-header p{color:#533519;text-shadow:none}.integrated .game-header p{opacity:1}
+.service-header,.dialog>header{background:url('/art/premium/pearl-texture.webp') center/cover;border-color:#bd9047;box-shadow:inset 0 2px #f3d49a,inset 0 -2px #63401d;padding-left:14px;padding-right:14px}
+.service-header h1,.dialog>header h2{color:#513519;text-shadow:0 1px #fff9e9}
+.dialog,.passport,.letter,.rank-note,.standings li,.settings-panel select,.dialog form input,.quick-rule,.history-entry{background-image:url('/art/premium/pearl-texture.webp');background-size:cover;color:#51371e}
+.service-page,.gifts-page{background-image:linear-gradient(#fff5e8dd,#fff2dddc),url('/art/premium/pearl-texture.webp');background-size:cover}
+.coin-pack{background-image:url('/art/premium/pearl-texture.webp')!important;background-size:cover!important}
+.bottom-nav{background:url('/art/premium/pearl-texture.webp') center/cover;border-top:2px solid #d5ae68;box-shadow:inset 0 2px #fff8df,0 -2px 8px #65452322;border-radius:20px 20px 0 0;padding-top:8px}
+.bottom-nav .nav-button{background:none;color:#543619;text-shadow:none}.bottom-nav .nav-button span{color:#543619;text-shadow:0 1px #fff8df;font-weight:750}
+.bottom-nav .nav-button.selected{background:none}.bottom-nav .nav-button.selected:after{display:none}
+.bottom-nav .nav-button.selected img{transform:translateY(-3px) scale(1.05)}
+.shop-intro{background:url('/art/premium/navy.png') center/100% 100% no-repeat;color:#fff3cf;border:0;box-shadow:none;padding:20px 26px}
+.settings-panel b{background:url('/art/premium/amber.png') center/100% 100% no-repeat;color:#4a2e13;box-shadow:none;border:0;padding:9px 16px}
+.brand p{background:url('/art/premium/ivory.png') center/100% 100% no-repeat;color:#573619;border:0;box-shadow:none;padding:9px 22px}
+.control-icon{object-fit:contain;filter:none;width:23px;height:23px;flex:0 0 23px}.spin-mark .control-icon{width:32px;height:32px;margin:auto}.history-mark .control-icon{width:26px;height:26px;margin:auto}
+.loading{position:relative;isolation:isolate;max-width:480px;margin:auto;height:100dvh;min-height:440px;overflow:hidden;background:#ecd5a3 url('/art/premium/loading.webp') center/cover no-repeat;gap:0;color:#563818;justify-content:flex-start}
+.loading-brand{position:absolute;top:8%;left:8%;width:84%;text-align:center;filter:drop-shadow(0 2px 1px #fff3d9)}
+.loading-brand>span{font:800 25px Georgia,serif;letter-spacing:.16em;color:#7f511f}.loading-brand h1{font:900 clamp(48px,16vw,74px)/1.1 Georgia,serif;letter-spacing:.05em;color:#ae7125;text-shadow:0 2px #ffefbc,0 -1px #674416}
+.loading-treasure{position:absolute;left:27%;top:57%;width:46%;height:20%;pointer-events:none}.loading-treasure img{width:100%;height:100%;object-fit:contain;animation:treasure-breathe 3s ease-in-out infinite}
+.loading-treasure i{position:absolute;left:20%;top:40%;width:5px;height:5px;background:#ffefb0;box-shadow:0 0 9px #ffd764;border-radius:50%;animation:treasure-spark 2.4s ease-out infinite}.loading-treasure i:nth-of-type(2){left:72%;animation-delay:-.8s}.loading-treasure i:nth-of-type(3){left:51%;top:20%;animation-delay:-1.6s}
+.loading-meter{position:absolute;left:12%;bottom:15%;width:76%;height:52px;background:url('/art/premium/loader.png') center/100% 100% no-repeat;--progress:0}
+.loading-fill{position:absolute;left:12.7%;right:12.6%;top:29%;bottom:29%;border-radius:12px;overflow:hidden;isolation:isolate}.loading-fill>i{display:block;width:100%;height:100%;background:url('/art/premium/amber-texture.webp') left center/280px 100%;transform:scaleX(var(--progress));transform-origin:left;border-radius:inherit;transition:transform .12s linear}
+.loading progress{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}.loading>h1{margin-top:40vh}.loading>p{max-width:82%;padding:18px;background:url('/art/premium/ivory.png') center/100% 100%;text-align:center}.loading>button{margin:16px;padding:15px 32px;background:url('/art/premium/amber.png') center/100% 100%;color:#4a290b}
+@keyframes treasure-breathe{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+@keyframes treasure-spark{0%{opacity:0;transform:translateY(10px) scale(.4)}40%{opacity:1}100%{opacity:0;transform:translateY(-30px) scale(.1)}}
+@media(max-width:360px){.round-btn{width:44px;min-width:44px;min-height:44px}.small-enamel{padding:10px 15px;font-size:11px}.integrated .game-header>div{padding:11px 19px}.harbor-v2 .wallet,.game-wallet .wallet{padding:7px 10px}.wallet b{font-size:14px;min-width:58px}.game-header{gap:5px}.control-icon{flex-basis:20px;width:20px;height:20px}}
+@media(prefers-reduced-motion:reduce){.loading-treasure img,.loading-treasure i{animation:none}.loading-fill>i{transition:none}}
+
+button:focus-visible{outline:2px solid #fff1bd;outline-offset:2px;box-shadow:0 0 0 4px #94612c}
+/* The lobby is one painted scene; floating utilities are not extra cards. */
+.harbor-v2 .home-top .wallet{background:none;border:0;box-shadow:none;padding:4px 2px;color:#fff7de;min-height:42px;filter:none}
+.harbor-v2 .home-top .wallet b{text-shadow:0 2px 3px #342213,1px 0 #5e411f,-1px 0 #5e411f,0 -1px #5e411f}
+.harbor-v2 .brand p{background:none;border:0;box-shadow:none;color:#51381f;text-shadow:0 1px 2px #fff7df,0 0 5px #fff3cd;padding:5px 8px}
+.harbor-v2 .daily-ribbon{background:none;border:0;border-radius:0;box-shadow:none;padding:0 10px;min-height:70px;width:210px;max-width:65%;color:#4b2c12;text-shadow:0 1px 2px #fff4d8;gap:5px;overflow:visible}
+.harbor-v2 .daily-ribbon:before,.harbor-v2 .daily-ribbon:after{display:none}
+.harbor-v2 .daily-ribbon .daily-treasure{width:78px;height:72px;object-fit:contain;flex:0 0 78px;filter:drop-shadow(0 3px 2px #67401e33)}
+.harbor-v2 .daily-ribbon>span:last-child{display:none}.harbor-v2 .daily-ribbon b{color:#6d3b10;text-shadow:0 1px #fff3c9;font-size:20px}.harbor-v2 .daily-ribbon>span{font-size:12px;line-height:1.5}
+.harbor-v2 .daily-ribbon:hover .daily-treasure{transform:translateY(-3px);transition:transform .2s}
+.bottom-nav .nav-button.selected span{color:#543619;text-shadow:0 1px #fff8df;text-decoration:underline;text-underline-offset:5px;text-decoration-color:#bd872f;text-decoration-thickness:2px}
+/* Short screens keep a readable title inside the painted sign; rules remain in each cabinet. */
+@media(max-height:620px){.harbor-v2 .destination-copy{transform:none}.harbor-v2 .destination-copy small{display:none}.harbor-v2 .brand p{display:none}}
+
+/* One ivory-and-gold architectural surface; secondary content is engraved into it. */
+.service-header{background:transparent;border:0;box-shadow:none;min-height:85px;height:85px;align-items:center;padding-top:14px;padding-bottom:12px}
+.service-header h1{background:url('/art/premium/ivory.png') center/100% 100% no-repeat;padding:17px 26px;font-size:21px}
+.service-page{border:0;box-shadow:none;border-radius:42px 42px 0 0;margin:0 15px;padding:22px 20px 34px;background-image:linear-gradient(#fff7eac7,#fff7eae8),url('/art/premium/pearl-texture.webp');background-size:cover}
+.service-page h2,.service-page p,.service-page small{color:#64492b}.service-page h2{font-family:Georgia,'Songti SC',serif;color:#57391c}
+.shop-packs{gap:0}.coin-pack{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;border-bottom:1px solid #b18a4c55!important;transform:none!important;padding:16px 4px;min-height:115px}
+.coin-pack:nth-child(n){margin-left:0;margin-right:0}.coin-pack:last-child{border-bottom:0!important}.coin-pack em{border:0;background:none;color:#725535}.coin-pack strong{color:#78531f}.coin-pack .pack-art{filter:drop-shadow(0 5px 4px #875b2122)}
+.passport{background:none;border:0;box-shadow:none;border-radius:0}.rank-note{background:none;border:0}.standings{gap:0}.standings li{background:none;border:0;border-radius:0;box-shadow:none;border-bottom:1px solid #c5a36a66;padding-top:12px;padding-bottom:12px}.standings li.self{background:linear-gradient(90deg,#f1d39c55,#fff2cf,#f1d39c55)}
+.dialog{background-image:linear-gradient(#fff8eae8,#fff4dfe8),url('/art/premium/pearl-texture.webp');border:2px solid #cea654;box-shadow:inset 0 0 0 3px #fff9e7,0 12px 45px #39200f66}
+.dialog>header{background:transparent;border-bottom:1px solid #cfb781;box-shadow:none;padding-top:12px;padding-bottom:12px}.dialog>header h2{color:#523717;text-shadow:none}
+.quick-rule,.history-entry{background:none;border-radius:0;box-shadow:none}.quick-rule{border:0;border-left:3px solid #cfac64;padding-left:12px}.history-entry{border:0;border-bottom:1px solid #cbb08155}
+.primary{transition:transform .18s ease,filter .18s ease}.primary:active{transform:translateY(2px) scale(.985);filter:brightness(.96)}
+.integrated .game-header>div{background:none;border:0;box-shadow:none;padding:6px 3px}.integrated .game-header h1{color:#543519;text-shadow:0 1px 2px #fff9e8,0 0 7px #fff2cf}.integrated .game-header p{color:#503b25;text-shadow:0 1px 2px #fff6dd}
+.integrated .game-wallet .wallet{background:url('/art/premium/ivory.png') center/100% 100% no-repeat;color:#50391d;padding-left:13px;padding-right:13px}
+@media(max-width:360px){.service-page{margin:0 10px;padding:18px 15px 30px}.service-header h1{font-size:17px;padding:16px 21px}.coin-pack{min-height:106px}.integrated .game-header>div{padding:6px 1px}.integrated .game-header h1{font-size:15px}}
+
+/* Hit areas and names registered to the four sculpted island signs. */
+.harbor-v2 .brand{top:8.3%;left:37%;right:10%}.harbor-v2 .brand>span{font-size:13px}.harbor-v2 .brand h1{font-size:clamp(37px,11vw,51px)}.harbor-v2 .brand p{font-size:9px;line-height:1.4;margin-top:6px}
+.harbor-v2 .destination{left:3%;top:18%;width:43%;height:21%;border-radius:0}.harbor-v2 .destination:nth-child(even){left:55%;width:42%;border-radius:0}.harbor-v2 .destination:nth-child(n+3){top:40%;height:25%}
+.harbor-v2 .destination-copy,.harbor-v2 .destination:nth-child(n+3) .destination-copy,.harbor-v2 .destination:nth-child(4) .destination-copy{top:auto;bottom:7.5%;height:13%;left:18%;right:16%;transform:none;gap:0}
+.harbor-v2 .destination:nth-child(n+3) .destination-copy{bottom:2.9%;height:13%;left:18%;right:16%}
+.harbor-v2 .destination:nth-child(even) .destination-copy{left:18%;right:16%}
+.harbor-v2 .destination-copy strong{white-space:nowrap;font-size:clamp(9px,2.5vw,12px);line-height:1.13;text-wrap:balance;width:100%;color:#563817}
+.harbor-v2 .destination-copy small{display:none}
+html[lang=ja] .harbor-v2 .destination-copy strong{font-size:clamp(9px,2.6vw,12px)}
+.harbor-v2 .daily-ribbon{bottom:9%;left:17%;right:17%;width:66%;max-width:none;min-height:76px}.harbor-v2 .daily-ribbon .daily-treasure{width:68px;flex-basis:68px;height:68px}
+/* Light belongs to the water, shell, crystal and lantern, never the text. */
+.harbor-details .coin-catch{display:none}.harbor-details .pearl-lustre{left:67%;top:26%;width:17%;height:8%}.harbor-details .grotto-jewel{left:19%;top:47%;width:10%;height:5%}.harbor-details .grotto-jewel>img{display:none}.harbor-details .lighthouse-sweep{left:77%;top:39%;width:12%;height:5%}.harbor-details .water-rings{left:42%;top:66%;width:21%;height:7%}.harbor-details .pin-glint{display:none}
+@media(max-height:620px){.harbor-v2 .brand{top:11%}.harbor-v2 .brand h1{font-size:34px}.harbor-v2 .brand>span{font-size:10px}.harbor-v2 .daily-ribbon{bottom:7%}.harbor-v2 .destination-copy strong{font-size:9px}.harbor-v2 .destination-copy{transform:none}}
+
+.harbor-v2 .daily-ribbon b{white-space:nowrap;overflow-wrap:normal}.harbor-v2 .daily-ribbon>span{flex-shrink:0}
+
+/* Cabinet-front celebration: the treasure and its fittings are the surface. */
+.modal-backdrop.award-backdrop{background:radial-gradient(ellipse at 50% 44%,#261b0830,#1a140db3);backdrop-filter:none;-webkit-backdrop-filter:none;overflow-y:auto}
+.dialog.award-dialog{background:none;border:0;border-radius:0;box-shadow:none;overflow:visible;width:min(94vw,440px);max-height:94dvh;animation:award-reveal .44s cubic-bezier(.18,.8,.25,1) both}
+.award-dialog>header{position:relative;background:none;border:0;box-shadow:none;justify-content:center;padding:4px 42px 12px;min-height:56px}
+.award-dialog>header h2{font:900 clamp(26px,8vw,38px)/1.12 Georgia,'Songti SC',serif;color:#ffe4a0;text-shadow:0 2px #805017,0 -1px #fff7d8,0 4px 12px #231404;flex:1;text-align:center;text-wrap:balance}
+.award-dialog>header .round-btn{position:absolute;right:0;top:4px;width:38px;min-width:38px;min-height:38px;padding:7px}.award-dialog>header .control-icon{width:24px;height:24px}
+.award-dialog .dialog-body{overflow:visible;padding:0 9px 8px}
+.award-dialog .victory-stage{padding:0;gap:0;overflow:visible}
+.award-treasure{position:relative;width:78%;height:clamp(175px,30dvh,280px);display:grid;place-items:center;z-index:1;isolation:isolate}
+.award-treasure>img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 12px #68390f66);animation:treasure-arrive .65s cubic-bezier(.2,.85,.3,1.12) both,treasure-hover 3.8s .65s ease-in-out infinite}
+.award-dialog .victory-rays{top:-26px;width:420px;height:420px;margin-left:-210px;opacity:.8;pointer-events:none;background:repeating-conic-gradient(#ffe29b88 0deg 5deg,transparent 5deg 20deg);mask-image:radial-gradient(#0007 15%,transparent 68%)}
+.treasure-orbit{position:absolute;inset:17% -4%;border:2px solid #ffe4a278;border-radius:50%;transform:rotate(-17deg);box-shadow:0 0 15px #ffd17588,inset 0 0 12px #f9cf6566;z-index:-1;animation:orbit-breathe 2.7s ease-in-out infinite}
+.treasure-star{position:absolute;width:15px;height:15px;background:#fff2bc;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:treasure-sparkle 2.2s ease-in-out infinite}.star-a{left:7%;top:30%}.star-b{right:5%;top:56%;animation-delay:-.7s}.star-c{right:23%;top:6%;animation-delay:-1.4s}
+.award-dialog .victory-artwork{width:96%;height:84px;aspect-ratio:auto;margin-top:-5px}.award-dialog .victory-artwork .victory-art{object-fit:fill}.award-dialog .victory-copy{inset:19% 15%;width:70%;height:62%;gap:1px}.award-dialog .victory-copy>span{font-size:11px;color:#674722}.award-dialog .victory-copy>strong{font-size:clamp(25px,8vw,36px);color:#6c4118;white-space:nowrap;line-height:1.12}
+.award-dialog .victory-stage .primary{width:84%;min-height:56px;margin:18px 0 0;font-size:14px;padding:14px 28px;filter:drop-shadow(0 3px 3px #29150c66)}
+.award-dialog .coin-burst{inset:-40px -8px 72px;z-index:0;overflow:hidden}.award-dialog .victory-stage>.primary{z-index:3}
+@keyframes award-reveal{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes treasure-arrive{from{opacity:0;transform:translateY(28px) scale(.75)}to{opacity:1;transform:none}}
+@keyframes treasure-hover{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+@keyframes orbit-breathe{0%,100%{opacity:.55;transform:rotate(-17deg) scale(.96)}50%{opacity:1;transform:rotate(-12deg) scale(1.04)}}
+@keyframes treasure-sparkle{0%,100%{opacity:.15;transform:scale(.5) rotate(0)}50%{opacity:1;transform:scale(1.1) rotate(90deg)}}
+/* Context-specific controls: slim scene fittings, substantial cabinet keys. */
+.integrated .history-button>span{background:none;box-shadow:none;border-color:transparent;color:#61411d}
+.integrated .cabinet .game-footer button{background:none}
+.primary,.small-enamel,.round-btn{position:relative}.primary:not(:disabled):active,.small-enamel:not(:disabled):active{transform:translateY(2px) scale(.98);filter:brightness(.94)}
+.primary:not(:disabled):hover,.round-btn:not(:disabled):hover{filter:brightness(1.06)}
+@media(max-height:650px){.award-treasure{height:30dvh}.award-dialog>header{padding-bottom:5px}.award-dialog .victory-artwork{height:74px}.award-dialog .victory-stage .primary{margin-top:12px;min-height:49px}}
+@media(prefers-reduced-motion:reduce){.award-dialog,.award-treasure>img,.treasure-orbit,.treasure-star{animation:none!important}}
+.reduced .award-dialog,.reduced .award-treasure>img,.reduced .treasure-orbit,.reduced .treasure-star{animation:none!important}

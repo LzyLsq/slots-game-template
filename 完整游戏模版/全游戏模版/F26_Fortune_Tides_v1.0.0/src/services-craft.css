@@ -1,0 +1,198 @@
+/* Service rooms share the painted harbor architecture, not a full-page card. */
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) {
+  --service-ink:#49341e;
+  background-color:#e6cea0;
+  background-image:url('/art/services-v2.webp'),url('/art/premium/pearl-texture.webp');
+  background-size:100% max(760px,100dvh),320px auto;
+  background-position:center top,center bottom;
+  background-repeat:no-repeat,repeat;
+  color:var(--service-ink);
+}
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-header {
+  height:112px;
+  min-height:112px;
+  padding:32px 9px 18px;
+  gap:5px;
+  background:none;
+  border:0;
+  box-shadow:none;
+}
+.service-header h1 {
+  background:none;
+  padding:0;
+  max-width:62%;
+  font-size:clamp(16px,4.7vw,22px);
+  line-height:1.12;
+  color:#65411c;
+  text-shadow:0 1px #fff4da;
+}
+.service-header .round-btn {
+  width:42px;
+  min-width:42px;
+  min-height:44px;
+  padding:8px;
+}
+.service-page,
+.service-page.gifts-page {
+  min-height:calc(100dvh - 190px);
+  margin:0;
+  padding:14px 27px 28px;
+  background:none;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  position:relative;
+  isolation:isolate;
+}
+.service-page h2 {font-size:21px;color:#50371e;}
+.service-page :is(p,small,label,select,strong,em,span) {overflow-wrap:anywhere;}
+.service-page :is(button,section,div,span,select) {min-width:0;}
+.service-page .fineprint {font-size:10px;line-height:1.6;color:#594329;}
+.service-page .primary {max-width:100%;white-space:normal;}
+
+/* A compact catalogue: treasure displayed on soft pools of reflected light. */
+.shop-page .section-intro {
+  grid-template-columns:58px minmax(0,1fr);
+  gap:3px 8px;
+  margin:0 0 20px;
+  padding:10px 12px;
+  background:linear-gradient(90deg,#fff1cdde,#ffefd9ed 55%,#f8e4b8de);
+  border-block:1px solid #b9915366;
+}
+.shop-page .section-intro .hero-symbol {width:58px;height:62px;}
+.shop-page .section-intro h2 {font-size:16px;line-height:1.25;}
+.shop-page .section-intro p {font-size:10px;line-height:1.45;color:#63482c;}
+.shop-packs {grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 9px;}
+.shop-page .coin-pack {
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  gap:4px;
+  padding:12px 12px 17px;
+  margin:0;
+  min-height:202px;
+  text-align:center;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:radial-gradient(ellipse at 50% 68%,#fff2d7fa 0%,#ffedcddd 43%,#ffefd37a 62%,transparent 75%)!important;
+  color:#593c20;
+  filter:none;
+}
+.coin-pack .pack-art {width:108px;height:86px;display:grid;place-items:center;flex-shrink:0;}
+.coin-pack .pack-art img:first-child {width:100px;height:86px;object-fit:contain;}
+.coin-pack.pack-3 .pack-art img {width:108px;}
+.coin-pack>span:nth-child(2) {width:100%;align-items:center;gap:2px;flex:1;}
+.shop-page .coin-pack small {font-size:10px;line-height:1.3;color:#684823;text-shadow:0 1px #fff0cf;}
+.shop-page .coin-pack strong {font-family:Georgia,serif;font-size:25px;line-height:1.1;color:#674215;text-shadow:0 1px #fff7e2;}
+.shop-page .coin-pack>span:nth-child(2)>span {font-size:10px;color:#6a5338;}
+.shop-page .coin-pack em {width:100%;font-size:9px;line-height:1.35;text-align:center;color:#795a37;border-top:1px solid #b6884655;padding-top:6px;}
+.shop-page>.fineprint {margin:17px 8px 0;text-align:center;padding:8px;background:#fff0cece;border-block:1px solid #b48b4f44;}
+
+/* Daily treasure stands directly in the sunlit room. */
+.service-page.gifts-page {padding-top:18px;}
+.gifts-page h2 {margin:0 auto 8px;max-width:95%;text-shadow:0 1px 3px #fff1ce;}
+.gifts-page>p {font-size:12px;line-height:1.6;max-width:290px;color:#513b24;text-shadow:0 1px 2px #fff3d9;}
+.gifts-page>.treasure-gift {
+  height:220px;
+  margin:8px -9px 10px;
+  background:radial-gradient(ellipse at 50% 69%,#ffe4a18a,transparent 66%);
+  filter:none;
+}
+.treasure-gift .gift-treasure {width:210px;height:190px;filter:drop-shadow(0 12px 6px #6b4b353c);}
+.gifts-page .treasure-gift>span {
+  bottom:0;
+  min-width:180px;
+  padding:10px 22px;
+  background:url('/art/premium/ivory.png') center/100% 100% no-repeat;
+  font:900 30px/1.1 Georgia,serif;
+  color:#855114;
+  text-shadow:0 1px #fff8da;
+  z-index:3;
+}
+.gifts-page>.primary {min-width:75%;max-width:100%;margin:4px auto 12px;padding-inline:24px;background:transparent url('/art/premium/amber.png') center/100% 100% no-repeat;}
+.gifts-page .tide-path {margin:27px 0 14px;gap:3px;}
+.gifts-page .tide-path:before {height:2px;background:#ae7c32;box-shadow:0 1px #fff4cc;}
+.gifts-page .tide-path span {width:34px;height:36px;border:0;border-radius:50%;background:url('/art/premium/medallion.png') center/100% 100% no-repeat;color:#66421e;font-weight:800;}
+.gifts-page .tide-path span.done {color:#fff4ca;background:url('/art/premium/navy.png') center/100% 100% no-repeat;}
+.gifts-page>.fineprint {font-size:10px;}
+
+/* Podium columns and a ruled harbor ledger. */
+.rank-page {padding-top:18px;}
+.rank-page .rank-podium {gap:6px;padding-top:0;background:none;}
+.rank-page .podium-place {
+  flex:1;
+  width:0;
+  gap:6px;
+  padding:0 5px 12px;
+  border:0;
+  border-radius:0;
+  background:linear-gradient(transparent 29%,#fff1d5e0 45%,#ead1a4ed 100%);
+  box-shadow:0 3px #bb9252;
+  color:#583e20;
+}
+.podium-place .symbol-icon {width:65px;height:69px;filter:drop-shadow(0 3px 2px #3a35283b);}
+.rank-page .podium-place span {font-size:10px;line-height:1.3;min-height:27px;width:100%;padding-top:5px;}
+.rank-page .podium-place b {font-size:12px;color:#674214;max-width:100%;overflow-wrap:anywhere;}
+.rank-page .podium-place small {font:900 24px/1 Georgia,serif;color:#9c6a22;}
+.rank-page .place-0 {padding-bottom:30px;background:linear-gradient(transparent 23%,#fff4dbe8 40%,#e8c88fee 100%);}
+.rank-page .place-2 {padding-bottom:6px;}
+.rank-page .rank-note {margin:16px 0 10px;padding:7px 9px;border-radius:0;background:#fff0cde8;border-block:1px solid #a77a3a55;font-size:9px;text-align:center;}
+.rank-page .standings {padding:4px 11px;background:linear-gradient(#f8ebd6d9,#f4e5cddd),url('/art/premium/pearl-texture.webp') center/cover;border-block:2px solid #bd9655;box-shadow:0 5px 12px #79572c22;}
+.rank-page .standings li {grid-template-columns:21px minmax(0,1fr) minmax(50px,auto);gap:6px;padding:11px 1px;background:none;border-bottom:1px solid #a7844f55;}
+.rank-page .standings li:last-child {border-bottom:0;}
+.rank-page .standings li>b {font-size:18px;color:#8b6029;}
+.rank-page .standings li>span {font-size:11px;gap:3px;color:#513c27;}
+.rank-page .standings small {font-size:9px;color:#6f5b3e;}
+.rank-page .standings strong {font-size:12px;text-align:right;color:#63451e;}
+.rank-page .standings .self {margin-inline:-6px;padding-inline:7px;background:linear-gradient(90deg,#e0b96066,#fff0c4,#e0b96066);border-radius:2px;}
+.rank-page .standings .self :is(b,span,strong,small) {color:#684115;}
+
+/* Captain portrait above a compact ship's record. */
+.profile-page .passport {margin:0 0 14px;padding:0 8px 8px;border:0;border-radius:0;background:none;box-shadow:none;}
+.profile-page .passport-portrait {width:106px;height:103px;margin:0 auto 3px;}
+.profile-page .passport-portrait .ui-icon {width:100px;height:108px;filter:drop-shadow(0 5px 3px #5a462d44);}
+.profile-page .passport>p {font-size:9px;letter-spacing:.2em;color:#795325;text-shadow:0 1px #fff1ce;}
+.profile-page .passport h2 {max-width:100%;margin:5px auto 3px;font-size:24px;line-height:1.25;text-shadow:0 1px 3px #fff1ce;}
+.profile-page .passport .small-enamel {min-height:42px;font-size:11px;padding:10px 24px;}
+.profile-page .passport-stamp {right:5px;top:15px;width:43px;height:43px;padding:10px 3px;border:2px double #9b733b77;color:#7c623d88;font-size:11px;}
+.profile-page .stats {margin:0 0 17px;background:linear-gradient(#fff4e3c9,#f8e7c8df),url('/art/premium/pearl-texture.webp') center/cover;border-block:2px solid #cfad6e;box-shadow:0 5px 10px #614b2922;}
+.profile-page .stats>div {padding:12px 7px;gap:5px;border-bottom:1px solid #b8945955;}
+.profile-page .stats>div:nth-child(odd) {border-right:1px solid #b8945955;}
+.profile-page .stats small {font-size:10px;color:#654b2d;line-height:1.35;}
+.profile-page .stats strong {font:700 22px/1.15 Georgia,serif;color:#875c20;}
+.profile-page .settings-panel {gap:8px 10px;padding:12px 13px;background:linear-gradient(#f8ebd6d9,#f4e5cddd),url('/art/premium/pearl-texture.webp') center/cover;border-block:1px solid #b78e4c;font-size:12px;}
+.profile-page .settings-panel select {width:100%;padding:7px 3px;font-size:12px;border-radius:3px;color:#563d21;}
+.profile-page .settings-panel button {min-height:45px;gap:6px;}
+.profile-page .settings-panel b {padding:8px 14px;font-size:11px;max-width:45%;text-align:center;flex-shrink:1;}
+.profile-page>.fineprint {margin-top:10px;text-align:center;font-size:9px;}
+
+/* Sealed letters remain individual pieces of stationery in the room. */
+.mail-page {padding-top:21px;}
+.mail-page .postmark {width:108px;height:108px;margin:0 auto 30px;color:#1b555add;border-color:#1b555a99;font-size:10px;background:#fff0c955;}
+.mail-page .letter {gap:10px;padding:18px 13px;min-height:106px;border:0;border-block:1px solid #ba8c45;border-radius:2px;background:linear-gradient(#f8ebd6d9,#f4e5cddd),url('/art/premium/pearl-texture.webp') center/cover;box-shadow:0 3px #c3a36b,0 7px 12px #4d43232b;margin-bottom:22px;}
+.mail-page .letter .envelope {flex:0 0 43px;}
+.mail-page .letter .envelope .ui-icon {width:43px;height:46px;filter:drop-shadow(0 3px 2px #8c652533);}
+.mail-page .letter>span:nth-child(2) {min-width:0;gap:8px;}
+.mail-page .letter strong {font:700 15px/1.3 Georgia,'Songti SC',serif;color:#563a1f;}
+.mail-page .letter small {font-size:10px;line-height:1.45;color:#785b35;}
+.mail-page .letter.read {filter:saturate(.65);box-shadow:0 2px #bca476,0 4px 8px #4d43231a;}
+
+@media(max-width:360px) {
+  .service-page,.service-page.gifts-page {padding:10px 22px 24px;}
+  .service-header h1 {font-size:16px;}
+  .shop-page .section-intro {padding:9px 7px;grid-template-columns:43px minmax(0,1fr);gap:3px 7px;margin-bottom:15px;}
+  .shop-page .section-intro .hero-symbol {width:43px;height:55px;}
+  .shop-page .section-intro h2 {font-size:14px;}
+  .shop-page .coin-pack {min-height:190px;padding:12px 9px 16px;}
+  .shop-page .coin-pack strong {font-size:22px;}
+  .shop-page .coin-pack small {font-size:9px;}
+  .gifts-page h2 {font-size:20px;}
+  .gifts-page>.treasure-gift {height:205px;}
+  .gifts-page .tide-path span {width:30px;height:33px;font-size:11px;}
+  .rank-page .podium-place b {font-size:11px;}
+  .rank-page .standings {padding-inline:8px;}
+  .rank-page .standings strong {font-size:11px;}
+  .profile-page .stats strong {font-size:20px;}
+}

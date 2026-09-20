@@ -1,0 +1,192 @@
+{
+  "date": "2026-09-18",
+  "disclaimer": "Observed finite-sample simulation only; not certified, theoretical, or guaranteed RTP. Sample maxima are not mathematical caps.",
+  "method": {
+    "roundsPerMode": 100000,
+    "bet": 100,
+    "prng": "LCG uint32: state=(Math.imul(state,1664525)+1013904223)>>>0; draw=state/4294967296",
+    "seedByModeIndex": "0x26F000 + index in MODES",
+    "order": "mint, pearl, reef, beacon; single continuous PRNG stream per mode",
+    "rtp": "sum(totalWin)/(rounds*bet)*100",
+    "standardError": "population standard deviation of payout/bet divided by sqrt(rounds), times 100",
+    "winFrequency": "totalWin > 0; includes payouts below stake",
+    "distribution": "zero = 0; below1x = (0,1); fromAtoBx = [A,B); atLeast25x = [25,infinity)",
+    "engineSha256": "fa63b8fd5eaa7e4dfcae96f0136f5463446d41f92c02286870a226969d09fed7"
+  },
+  "before": {
+    "mint": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551808,
+      "observedRtpPercent": 44.715700000001455,
+      "standardErrorPercent": 0.2876542746685683,
+      "winFrequencyPercent": 49.896,
+      "maxWinMultiplier": 20.5,
+      "featureFrequencyPercent": 0,
+      "distribution": {
+        "zero": 50104,
+        "below1x": 35201,
+        "from1to2x": 9509,
+        "from2to5x": 4466,
+        "from5to10x": 661,
+        "from10to25x": 59,
+        "atLeast25x": 0
+      }
+    },
+    "pearl": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551809,
+      "observedRtpPercent": 19.84420703125,
+      "standardErrorPercent": 0.09658543682879056,
+      "winFrequencyPercent": 77.503,
+      "maxWinMultiplier": 6.390625,
+      "featureFrequencyPercent": 0,
+      "distribution": {
+        "zero": 22497,
+        "below1x": 74932,
+        "from1to2x": 2213,
+        "from2to5x": 355,
+        "from5to10x": 3,
+        "from10to25x": 0,
+        "atLeast25x": 0
+      }
+    },
+    "reef": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551810,
+      "observedRtpPercent": 2.3735999999999957,
+      "standardErrorPercent": 0.04382305592265333,
+      "winFrequencyPercent": 3.582,
+      "maxWinMultiplier": 3.2,
+      "featureFrequencyPercent": 3.582,
+      "distribution": {
+        "zero": 96418,
+        "below1x": 2804,
+        "from1to2x": 743,
+        "from2to5x": 35,
+        "from5to10x": 0,
+        "from10to25x": 0,
+        "atLeast25x": 0
+      }
+    },
+    "beacon": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551811,
+      "observedRtpPercent": 684.516,
+      "standardErrorPercent": 3.6483969709229833,
+      "winFrequencyPercent": 81.516,
+      "maxWinMultiplier": 72,
+      "featureFrequencyPercent": 19.674,
+      "distribution": {
+        "zero": 18484,
+        "below1x": 0,
+        "from1to2x": 20736,
+        "from2to5x": 41106,
+        "from5to10x": 78,
+        "from10to25x": 6764,
+        "atLeast25x": 12832
+      }
+    }
+  },
+  "after": {
+    "mint": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551808,
+      "observedRtpPercent": 93.90296999999717,
+      "standardErrorPercent": 0.6040739768039459,
+      "winFrequencyPercent": 49.896,
+      "maxWinMultiplier": 43.05,
+      "featureFrequencyPercent": 0,
+      "distribution": {
+        "zero": 50104,
+        "below1x": 21410,
+        "from1to2x": 13791,
+        "from2to5x": 10966,
+        "from5to10x": 2952,
+        "from10to25x": 744,
+        "atLeast25x": 33
+      },
+      "observedMeanPayout": 93.90296999999717,
+      "approximate95PercentIntervalRtp": [
+        92.71898500546143,
+        95.0869549945329
+      ]
+    },
+    "pearl": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551809,
+      "observedRtpPercent": 93.90204375000216,
+      "standardErrorPercent": 0.4490251109596126,
+      "winFrequencyPercent": 77.503,
+      "maxWinMultiplier": 30.675,
+      "featureFrequencyPercent": 0,
+      "distribution": {
+        "zero": 22497,
+        "below1x": 46648,
+        "from1to2x": 17033,
+        "from2to5x": 11741,
+        "from5to10x": 1811,
+        "from10to25x": 268,
+        "atLeast25x": 2
+      },
+      "observedMeanPayout": 93.90204375000216,
+      "approximate95PercentIntervalRtp": [
+        93.02195453252132,
+        94.78213296748301
+      ]
+    },
+    "reef": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551810,
+      "observedRtpPercent": 93.55837499999767,
+      "standardErrorPercent": 0.4033840751671575,
+      "winFrequencyPercent": 49.326,
+      "maxWinMultiplier": 13.68,
+      "featureFrequencyPercent": 49.326,
+      "distribution": {
+        "zero": 50674,
+        "below1x": 17936,
+        "from1to2x": 18434,
+        "from2to5x": 11564,
+        "from5to10x": 1383,
+        "from10to25x": 9,
+        "atLeast25x": 0
+      },
+      "observedMeanPayout": 93.55837499999767,
+      "approximate95PercentIntervalRtp": [
+        92.76774221267004,
+        94.34900778732529
+      ]
+    },
+    "beacon": {
+      "rounds": 100000,
+      "bet": 100,
+      "seed": 2551811,
+      "observedRtpPercent": 93.292,
+      "standardErrorPercent": 1.1099351455648208,
+      "winFrequencyPercent": 37.061,
+      "maxWinMultiplier": 63,
+      "featureFrequencyPercent": 1.374,
+      "distribution": {
+        "zero": 62939,
+        "below1x": 0,
+        "from1to2x": 20965,
+        "from2to5x": 14722,
+        "from5to10x": 7,
+        "from10to25x": 495,
+        "atLeast25x": 872
+      },
+      "observedMeanPayout": 93.292,
+      "approximate95PercentIntervalRtp": [
+        91.11652711469296,
+        95.46747288530705
+      ]
+    }
+  }
+}

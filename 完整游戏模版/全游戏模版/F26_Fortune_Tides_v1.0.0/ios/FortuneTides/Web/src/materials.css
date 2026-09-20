@@ -1,0 +1,152 @@
+/* Harbor materials: restrained engraving under readable copy; movement stays decorative. */
+:root{--tide-engraving:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22144%22%20height%3D%22144%22%20viewBox%3D%220%200%20144%20144%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23956425%22%20stroke-opacity%3D%22.055%22%20stroke-width%3D%22.65%22%3E%3Cpath%20d%3D%22M-36%2036Q0%200%2036%2036T108%2036T180%2036M-36%20108Q0%2072%2036%20108T108%20108T180%20108M-36%2042Q0%206%2036%2042T108%2042T180%2042M-36%20114Q0%2078%2036%20114T108%20114T180%20114%22%2F%3E%3Cpath%20d%3D%22M36%203v12m-6-6h12M108%2075v12m-6-6h12%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%23fff8d1%22%20stroke-opacity%3D%22.12%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M-36%2034Q0-2%2036%2034T108%2034T180%2034M-36%20106Q0%2070%2036%20106T108%20106T180%20106%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A");--ivory-surface:radial-gradient(ellipse at 32% 0%,#fffef0 0%,#fff5d9 45%,#e8cd91 100%);--enamel-surface:radial-gradient(ellipse at 28% 0%,#62b7a3 0%,#237b70 42%,#104f50 100%);background:radial-gradient(ellipse at top,#527e76,#183f49 62%,#102a37)}
+.app,.page-game{background-image:var(--tide-engraving),var(--ivory-surface)}
+.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail{background-image:url('/art/services-v2.webp'),var(--tide-engraving),linear-gradient(#e8d4a9,#f7ecd0);background-size:100% auto,144px,100% 100%;background-repeat:no-repeat,repeat,no-repeat}
+.service-page,.gifts-page{background-image:var(--tide-engraving),radial-gradient(ellipse at 50% 10%,#fffbedf7,#fbefd5f5 60%,#e5d0a8f7);background-size:144px,100% 100%;box-shadow:inset 0 0 0 3px #fff9e6b0,inset 0 -10px 30px #b7894020,0 7px 25px #5e431b1a}
+.dialog,#toast,.passport,.letter,.rank-note,.standings li,.paytable th,.line-diagrams>div,.settings-panel select,.dialog form input{background-image:var(--tide-engraving),var(--ivory-surface);background-size:144px,100% 100%}
+.dialog>header{background-image:var(--tide-engraving),linear-gradient(105deg,#eed49c,#fff9e4 45%,#ebd098);border-radius:20px 20px 0 0}
+.dialog-body{background-image:radial-gradient(ellipse at top,#fffdf050,transparent 70%)}
+.coin-pack{background-image:var(--tide-engraving),radial-gradient(ellipse at 28% 0%,#fffdec,#f8e8bd 65%,#e2c388)!important;background-size:144px,100% 100%!important}
+.coin-pack .pack-art{filter:drop-shadow(0 4px 3px #8a591b25)}
+.bottom-nav{background-image:var(--tide-engraving),linear-gradient(90deg,#b98a3d,#fff2ce 4%,#fff9e4 46%,#efd394 96%,#b98a3d);background-size:144px,100% 100%}
+.round-btn,.small-enamel,.wallet,.game-wallet .wallet,.integrated .game-header>div,.integrated .result-ribbon,.brand p{background-image:var(--tide-engraving),var(--ivory-surface);background-size:110px,100% 100%;box-shadow:inset 0 1px 1px #fffde8,inset 0 -3px 7px #b6893c22,0 2px 0 #ae804444}
+.primary,.harbor-v2 .daily-ribbon,.harbor-v2 .wallet,.wallet .plus,.settings-panel b{background-image:var(--tide-engraving),var(--enamel-surface);background-size:100px,100% 100%;color:#fff8db;box-shadow:inset 0 2px 1px #b8edcf,inset 0 -3px 5px #073c4555,0 3px 0 #a77b37,0 5px 9px #254e4225}
+.round-btn,.small-enamel,.primary,.daily-ribbon,.wallet{position:relative;isolation:isolate;overflow:hidden}
+.round-btn:after,.small-enamel:after,.primary:after,.daily-ribbon:after,.wallet:after{content:'';position:absolute;inset:-20% -60%;pointer-events:none;z-index:1;background:linear-gradient(108deg,transparent 38%,#fff8d02b 47%,#ffffff40 50%,#fff8d01a 53%,transparent 62%);transform:translateX(-75%);animation:enamel-reflection 8s ease-in-out infinite}
+.daily-ribbon:after{animation-delay:-2s}.small-enamel:after{animation-delay:-4s}.wallet:after{animation-delay:-6s}
+button:active:not(:disabled){transition-duration:70ms}
+.primary:active:not(:disabled),.small-enamel:active:not(:disabled),.round-btn:active:not(:disabled),.daily-ribbon:active:not(:disabled){box-shadow:inset 0 3px 6px #314d4938,0 1px 0 #b89150;filter:brightness(1.06)}
+.nav-button:active .ui-icon{transform:translateY(2px) scale(.91);transition:transform 80ms}
+.nav-button .ui-icon{transition:transform .38s cubic-bezier(.2,1.6,.4,1)}
+.nav-button.selected .ui-icon{animation:nav-settle .5s cubic-bezier(.2,1.3,.4,1) both}
+.integrated.game-view{background-image:var(--tide-engraving),var(--ivory-surface)}
+.integrated .game-links,.integrated .disclaimer{background-image:var(--tide-engraving),linear-gradient(#f4e3bd,#fff5df)}
+.integrated .spin-button:after{background:linear-gradient(110deg,transparent 30%,#fff8be50 49%,transparent 66%);animation:enamel-reflection 5s ease-in-out infinite}
+.integrated .bet-picker,.integrated .history-button{border-radius:38%;transition:transform .18s cubic-bezier(.2,1.5,.4,1),filter .18s}
+.integrated .bet-picker:active,.integrated .history-button:active{filter:brightness(1.2);background:radial-gradient(ellipse,#fff4c135,transparent 70%)}
+.loading{background:linear-gradient(#163d4850,#15545175),url('/art/lobby-crisp-v4.webp') center/cover;color:#fff1c7;text-shadow:0 2px 4px #183d42}
+.loading button{background-image:var(--tide-engraving),var(--ivory-surface);color:#684d29}
+.loading progress{border:1px solid #eacb7d;background:linear-gradient(#163d48,#34786f)}
+.loading progress::-webkit-progress-bar{background:linear-gradient(#163d48,#34786f);border-radius:10px}
+.loading progress::-webkit-progress-value{background:linear-gradient(#fff4c1,#e5b656 50%,#b9802c);border-radius:10px}
+/* Localized reflected water and airborne motes: they never cover plaques or controls. */
+.harbor-atmosphere{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.harbor-atmosphere:before{content:'';position:absolute;left:35%;top:40%;width:27%;height:47%;background:repeating-radial-gradient(ellipse at 30% 10%,transparent 0 17px,#d9fff72b 19px,transparent 23px 37px);mask-image:radial-gradient(ellipse,#000,transparent 70%);animation:water-reflection 7s ease-in-out infinite alternate}
+.harbor-atmosphere:after{content:'';position:absolute;left:42%;top:18%;width:15%;height:58%;background:linear-gradient(100deg,transparent,#fff4bb33,transparent);transform-origin:top;animation:harbor-ray 12s ease-in-out infinite alternate;mask-image:linear-gradient(transparent,#000 15%,transparent)}
+.harbor-atmosphere i{position:absolute;left:var(--x);top:var(--y);width:3px;height:3px;border-radius:50%;background:radial-gradient(#fffde3,#efbc63aa,transparent);box-shadow:0 0 5px #ffe29870;animation:treasure-mote 6s ease-in-out infinite;animation-delay:var(--delay)}
+@keyframes enamel-reflection{0%,58%{transform:translateX(-75%);opacity:0}64%{opacity:1}90%,100%{transform:translateX(75%);opacity:0}}
+@keyframes water-reflection{from{transform:translate(-4px,-6px) scale(.97);opacity:.3}to{transform:translate(5px,7px) scale(1.06);opacity:.75}}
+@keyframes harbor-ray{from{transform:rotate(-12deg);opacity:.25}to{transform:rotate(10deg);opacity:.8}}
+@keyframes treasure-mote{0%,100%{transform:translate(0,8px) scale(.4);opacity:0}30%{opacity:.8}75%{transform:translate(8px,-16px) scale(1);opacity:.3}}
+@keyframes nav-settle{0%{transform:translateY(0) scale(.94)}65%{transform:translateY(-5px) scale(1.12)}100%{transform:translateY(-3px) scale(1.08)}}
+.reduced .harbor-atmosphere,.motion-paused .harbor-atmosphere{display:none}
+.reduced :is(.primary,.daily-ribbon,.round-btn,.small-enamel,.wallet,.spin-button):after,.reduced .nav-button.selected .ui-icon{animation:none}
+.motion-paused *,.motion-paused *:before,.motion-paused *:after{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.harbor-atmosphere{display:none}:is(.primary,.daily-ribbon,.round-btn,.small-enamel,.wallet,.spin-button):after,.nav-button.selected .ui-icon{animation:none}}
+/* Keep reflection layers inside each button's measured bounds, including scroll metrics. */
+.round-btn:after,.small-enamel:after,.primary:after,.daily-ribbon:after,.wallet:after{inset:0;background-size:300% 100%;transform:none;animation-name:enamel-surface-light}
+@keyframes enamel-surface-light{0%,58%{background-position:100% 0;opacity:0}64%{opacity:.8}90%,100%{background-position:0 0;opacity:0}}
+
+.tide-path span,.letter.read{background-image:var(--tide-engraving),var(--ivory-surface);box-shadow:inset 0 2px 2px #fffde8,inset 0 -2px 5px #b6893c30}
+.tide-path span.done{background-image:var(--tide-engraving),var(--enamel-surface)}
+.standings .self{background-image:var(--tide-engraving),linear-gradient(120deg,#e4f2dc,#c1dfca)}
+.modal-backdrop{background:radial-gradient(ellipse at 50% 35%,#34797066,#102e447f)}
+/* Precision pass: crisp typography, quieter engraving, scene-specific animation. */
+.harbor-v2 .brand{filter:none}.brand h1{text-shadow:0 2px #976021,0 -1px #fff2b5,1px 0 #fff7d2,-1px 0 #fff7d2}
+.harbor-v2 .destination-copy strong{text-shadow:none;color:#57391b;font-weight:750}
+.harbor-v2 .destination-copy small{color:#624726}
+.nav-button .ui-icon,.mail-button .ui-icon,.captain .ui-icon{filter:drop-shadow(0 1px 0 #724c2b45)}
+.service-page{background-image:radial-gradient(ellipse at 50% 0%,#fffcedf5,#f8e9cbf0 70%,#e7cea4f5),var(--tide-engraving);box-shadow:inset 0 0 0 2px #fff9e6b0,0 5px 14px #5e431b14}
+.round-btn{border:1px solid #be934b;box-shadow:inset 0 0 0 2px #fff5cf,inset 0 -3px 4px #be924733,0 2px 0 #9d773d}
+.scene-details{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2;contain:layout paint}
+.scene-details img{width:100%;height:100%;object-fit:contain}
+.coin-catch{position:absolute;width:5.4%;height:3.4%;perspective:150px}
+.coin-catch-a{left:27%;top:32.5%}.coin-catch-b{left:66%;top:69%}
+.coin-catch img{animation:coin-idle-turn 5s cubic-bezier(.4,0,.25,1) infinite;filter:drop-shadow(0 2px 1px #6b421b45)}
+.coin-catch-b img{animation-delay:-2.5s}
+.pearl-lustre{position:absolute;left:68%;top:27.8%;width:11%;height:6%;border-radius:50%;overflow:visible}
+.pearl-lustre i{position:absolute;inset:0;border:1px solid #fff6dd88;border-radius:50%;animation:pearl-ring 4s ease-out infinite;opacity:0}
+.pearl-lustre i:nth-child(2){animation-delay:1.3s}.pearl-lustre i:nth-child(3){animation-delay:2.6s}
+.grotto-jewel{position:absolute;left:24%;top:48%;width:7%;height:5%}
+.grotto-jewel img{animation:facet-sway 5s ease-in-out infinite;filter:drop-shadow(0 2px 1px #12504d55)}
+.grotto-jewel i,.pin-glint,.crown-pin{position:absolute;width:10px;height:10px;background:linear-gradient(135deg,#fff,#fff0ad);clip-path:polygon(50% 0,58% 40%,100% 50%,58% 60%,50% 100%,42% 60%,0 50%,42% 40%);animation:precise-glint 4.6s ease-in-out infinite;animation-delay:var(--delay,0s)}
+.grotto-jewel i{top:15%;left:45%}.pin-glint{left:var(--x);top:var(--y)}
+.lighthouse-sweep{position:absolute;left:72%;top:49.3%;width:25%;height:13%;transform-origin:0 50%;background:linear-gradient(90deg,#fff6c49c,#fff8cc20 55%,transparent);clip-path:polygon(0 48%,100% 0,100% 100%,0 52%);animation:lighthouse-lantern 8s ease-in-out infinite}
+.water-rings{position:absolute;left:40%;top:80%;width:22%;height:5%}
+.water-rings i{position:absolute;inset:0;border-radius:50%;border:1px solid #dafff8aa;animation:water-ring 4.8s ease-out infinite;opacity:0}.water-rings i:nth-child(2){animation-delay:1.6s}.water-rings i:nth-child(3){animation-delay:3.2s}
+.crown-facet{position:absolute;left:44%;top:15%;width:13%;height:10%;border-radius:50%;background:linear-gradient(120deg,transparent 35%,#fff9db60 48%,transparent 61%);background-size:300% 100%;animation:enamel-surface-light 4.5s infinite}
+.detail-pearl .crown-facet{background:radial-gradient(ellipse,#ffebe747,transparent 65%);animation:pearl-crown 4s ease-in-out infinite}
+.detail-reef .crown-facet{background:linear-gradient(115deg,transparent,#c8ffed55,transparent);background-size:300% 100%;animation-duration:3.8s}
+.detail-beacon .crown-facet{left:39%;top:8%;width:24%;height:6%;background:radial-gradient(ellipse,#fff7ae75,transparent 68%);animation:pearl-crown 3.6s ease-in-out infinite}
+.crown-pin{top:19%;left:51%;animation-duration:3.4s}
+.rim-light{position:absolute;top:28%;height:33%;width:1.2%;overflow:hidden;border-radius:50%;background:linear-gradient(transparent,#fff5c280,transparent);animation:rim-breathe 3.8s ease-in-out infinite}.rim-left{left:15%}.rim-right{right:15%;animation-delay:-1.9s}
+.has-award .rim-light{animation-duration:.65s}.is-spinning .rim-light{animation-duration:1.4s}
+.touch-spark{position:fixed;pointer-events:none;z-index:80;width:0;height:0}.touch-spark i{position:absolute;width:3px;height:3px;border-radius:50%;background:linear-gradient(#fff5bf,#d79b2e);animation:touch-crystal .45s ease-out both}
+@keyframes coin-idle-turn{0%,52%,100%{transform:translateY(0) rotateY(0)}65%{transform:translateY(-6px) rotateY(150deg)}80%{transform:translateY(-3px) rotateY(300deg)}92%{transform:translateY(0) rotateY(360deg)}}
+@keyframes pearl-ring{0%{transform:scale(.7);opacity:0}20%{opacity:.75}100%{transform:scale(1.7);opacity:0}}
+@keyframes facet-sway{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-4px) rotate(5deg)}}
+@keyframes precise-glint{0%,42%,100%{opacity:0;transform:scale(.25) rotate(0)}58%{opacity:1;transform:scale(1.15) rotate(35deg)}74%{opacity:0;transform:scale(.4) rotate(70deg)}}
+@keyframes lighthouse-lantern{0%,100%{transform:rotate(-18deg);opacity:.2}50%{transform:rotate(20deg);opacity:.85}}
+@keyframes water-ring{0%{transform:scale(.45);opacity:0}25%{opacity:.65}100%{transform:scale(1.35);opacity:0}}
+@keyframes pearl-crown{0%,100%{opacity:.2;transform:scale(.95)}50%{opacity:.85;transform:scale(1.03)}}
+@keyframes rim-breathe{0%,100%{opacity:.08}50%{opacity:.65}}
+@keyframes touch-crystal{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+.reduced .scene-details{display:none}@media(prefers-reduced-motion:reduce){.scene-details,.touch-spark{display:none}}
+/* Let the grotto's own crystals carry the light, without a second pasted gem. */
+.grotto-jewel img{display:none}.grotto-jewel{left:28%;top:46%;width:6%;height:5%;background:linear-gradient(112deg,transparent 27%,#d7fff060 49%,transparent 66%);clip-path:polygon(50% 0,94% 37%,75% 100%,30% 86%,0 33%);background-size:300% 100%;animation:enamel-surface-light 4s infinite}
+
+/* Machined brass surrounds inset enamel; text stays on a calm, opaque face. */
+:root{--harbor-enamel:linear-gradient(112deg,#b6e3c52e,transparent 30%,#051e282e 78%),url('/art/enamel-grain.webp');--harbor-ivory:radial-gradient(ellipse at 38% 12%,#fffcebaa,transparent 65%),url('/art/ivory-grain.webp');--harbor-brass:linear-gradient(125deg,#fff3b8,#b67c2d 19%,#ffdc88 43%,#fff2bf 48%,#a26a24 76%,#f3ca74)}
+.round-btn,.small-enamel,.primary,.harbor-v2 .wallet,.harbor-v2 .daily-ribbon,.game-wallet .wallet{background:var(--harbor-enamel) padding-box,var(--harbor-brass) border-box;color:#fff4d3;border:2px solid transparent;box-shadow:inset 0 1px 0 #e2ffe580,inset 0 -3px 4px #062d3d80,inset 0 0 0 2px #0a484b80,0 2px 0 #80551e,0 3px 4px #38260c35;text-shadow:0 1px 1px #082e35;border-radius:22px}
+.round-btn{border-radius:50%}
+.primary{border-width:3px;box-shadow:inset 0 2px 1px #c2edcc77,inset 0 -4px 5px #062e3977,inset 0 0 0 2px #123f42,0 3px 0 #77531f,0 5px 8px #4b331e33}
+.wallet .plus{background:radial-gradient(circle at 32% 20%,#fff6c4,#dba33f 65%,#9b6825);color:#3c4937;text-shadow:0 1px #fff2b9;border-color:#fbe2a0;box-shadow:inset 0 1px #fffbe0,0 1px 2px #07373e}
+.integrated .game-header>div{background:var(--harbor-enamel) padding-box,var(--harbor-brass) border-box;border:2px solid transparent;box-shadow:inset 0 0 0 2px #123f4277,inset 0 2px 1px #d6f4cf66,0 2px 2px #57391433;color:#fff1cc;border-radius:18px}
+.integrated .game-header h1{color:#fff0c2;text-shadow:0 1px 1px #112f36}.integrated .game-header p{color:#e0e7cb}
+.integrated .result-ribbon{background:var(--harbor-ivory) padding-box,var(--harbor-brass) border-box;border:2px solid transparent;box-shadow:inset 0 0 0 2px #fff6d577,inset 0 -3px 6px #80501c22;color:#624728}
+.bottom-nav{background:linear-gradient(#ffefb52b,transparent 25%),url('/art/enamel-grain.webp');border-top:3px solid #dbb264;box-shadow:inset 0 1px #fff1b9,inset 0 4px 0 #765424,inset 0 6px 0 #c79d5566,0 -3px 8px #203d3b22;border-radius:20px 20px 0 0;color:#fff0c9}
+.nav-button{color:#fff0c9;text-shadow:0 1px #173b39}.nav-button.selected{background:radial-gradient(ellipse at 50% 55%,#e7ce8430,transparent 72%)}.nav-button.selected:after{background:linear-gradient(90deg,transparent,#ffe6a0,transparent);box-shadow:none}
+.service-header{background:var(--harbor-enamel);border-bottom:3px double #e8c67e;box-shadow:inset 0 -1px #112d32,0 3px 7px #314e3822}.service-header h1{color:#fff0c9;text-shadow:0 1px #193d38}
+.dialog,.passport,.letter,.rank-note,.standings li,.settings-panel select,.dialog form input{background-image:var(--harbor-ivory);background-size:auto,256px;color:#59452e}
+.dialog{border:3px solid #ceaa62;box-shadow:inset 0 0 0 2px #fff4d1,0 15px 45px #142d3d55}
+.dialog>header{background:var(--harbor-enamel);color:#fff0c9;border-bottom:2px solid #be9956;box-shadow:inset 0 1px #efffde55}.dialog>header h2{color:#fff0c9;text-shadow:0 1px #123936}
+.coin-pack{background-image:var(--harbor-ivory)!important;background-size:auto,256px!important}
+.service-page,.gifts-page{background-image:linear-gradient(#fff8e9b0,#fff5e180),url('/art/ivory-grain.webp');background-size:auto,256px}
+.shop-intro{background:var(--harbor-enamel);box-shadow:inset 0 1px #c6e8bc88,inset 0 -4px 12px #062e3a44,0 3px 0 #99733b}
+.round-btn:after,.small-enamel:after,.primary:after,.daily-ribbon:after,.wallet:after{opacity:.45}
+/* Curved face reflections and distinct light/dark bevels, without enlarging controls. */
+:root{--harbor-enamel:radial-gradient(ellipse at 30% -25%,#d3ffe16b,transparent 66%),linear-gradient(180deg,#b3e9c52e 0%,transparent 44%,#032f3b30 49%,#042b3540 100%),url('/art/enamel-grain.webp')}
+.round-btn,.small-enamel,.primary,.harbor-v2 .daily-ribbon,.harbor-v2 .wallet,.game-wallet .wallet{box-shadow:inset 0 2px 1px #e0ffe699,inset 2px 0 2px #acd7b544,inset 0 -4px 4px #032c3c99,inset 0 0 0 2px #123f4255,0 2px 0 #80551e,0 3px 4px #38260c35}
+.bottom-nav .nav-button,.bottom-nav .nav-button.selected,.bottom-nav .nav-button span{color:#fff0c9;text-shadow:0 1px 1px #103b3b}
+.bottom-nav .nav-button.selected span{color:#fff8df}
+/* Native-scale control fittings: icons occupy a reserved slot, never cover copy. */
+.control-icon{display:inline-block;width:18px;height:18px;flex:0 0 18px;vertical-align:middle;pointer-events:none;filter:drop-shadow(0 1px 0 #61471950)}
+.round-btn .control-icon{width:23px;height:23px}.has-fitting{display:inline-flex;align-items:center;justify-content:center;gap:7px}.primary.has-fitting{display:flex}
+.spin-mark .control-icon{width:30px;height:30px}.history-mark .control-icon{width:23px;height:23px}
+.small-enamel{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:5px}.small-enamel svg{flex-shrink:0}
+.game-links button{min-height:44px;max-width:55%;line-height:1.4}.game-links .control-icon{width:15px;height:15px;flex-basis:15px}
+.settings-panel button,.mail-content button{min-height:44px}
+button:focus-visible{outline:2px solid #fff4bd;outline-offset:2px;box-shadow:0 0 0 5px #216763}
+.nav-button:hover .ui-icon,.captain:hover .ui-icon{filter:brightness(1.08);transition:filter .2s}
+.idle-lantern{position:absolute;top:21%;width:10%;height:7%;border-radius:50%;background:radial-gradient(ellipse,#fff1a06b,#ffbc2420 40%,transparent 70%);animation:lantern-warmth 4.2s ease-in-out infinite;mix-blend-mode:screen}
+.lantern-left{left:13%}.lantern-right{right:13%;animation-delay:-1.7s}
+.detail-pearl .idle-lantern{top:19%;background:radial-gradient(ellipse,#fff2e36b,#ecb4e820 40%,transparent 70%)}
+.detail-reef .idle-lantern{top:18%;background:radial-gradient(ellipse,#c9ffe76b,#56efc520 40%,transparent 70%)}
+.detail-beacon .idle-lantern{top:12%;width:13%;height:9%}
+.metal-sweep{position:absolute;left:17%;top:60.4%;width:66%;height:1%;border-radius:50%;background:linear-gradient(90deg,transparent 40%,#fff8c4cc 50%,transparent 60%);background-size:350% 100%;animation:metal-travel 6s ease-in-out infinite}
+.cabinet-firefly{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff0b3;box-shadow:0 0 4px #ffcb52;animation:cabinet-ember 4.8s ease-in-out infinite;animation-delay:calc(var(--i)*-.77s)}
+@keyframes lantern-warmth{0%,100%{opacity:.3;transform:scale(.9)}48%{opacity:1;transform:scale(1.13)}}
+@keyframes metal-travel{0%,30%{background-position:100% 0;opacity:0}45%{opacity:.85}75%,100%{background-position:0 0;opacity:0}}
+@keyframes cabinet-ember{0%,100%{opacity:0;transform:translate(0,5px) scale(.6)}30%{opacity:.85}75%{opacity:0;transform:translate(5px,-14px) scale(.2)}}
+.is-spinning .idle-lantern{animation-duration:1s}.has-award .idle-lantern{animation-duration:.7s}
+@media(max-width:360px){.small-enamel{padding:6px 9px}.has-fitting{gap:4px}.game-links .control-icon{display:none}}
+@media(prefers-reduced-motion:reduce){.idle-lantern,.metal-sweep,.cabinet-firefly{animation:none}}
+
+/* Rulebook explains actual assets and payout basis before the detailed math. */
+.quick-rule{padding:12px 14px;border:1px solid #d9b466;border-radius:14px;background:linear-gradient(135deg,#fff6db,#f7dfaa);color:#4d321c;box-shadow:inset 0 1px #fff9ec}
+.quick-rule p{margin:6px 0 0;line-height:1.6}.paytable-basis{font-size:12px;line-height:1.6;color:#63401f}
+.symbol-legend{display:grid;gap:10px;margin:14px 0}.symbol-legend>div{display:flex;align-items:center;gap:10px}.symbol-legend img{width:42px;height:42px;object-fit:contain;flex-shrink:0}.symbol-legend span{min-width:0}.symbol-legend b,.symbol-legend small{display:block;overflow-wrap:anywhere}.symbol-legend small{font-size:11px;line-height:1.5;color:#6b502e}
+.victory-stage>.coin-burst{z-index:1}.victory-artwork{position:relative;z-index:2}.victory-stage>.primary{position:relative;z-index:3}
+@media(max-height:620px){.harbor .destination-copy{transform:translateY(5px)}}
+
+.history-entry{width:100%;display:grid;grid-template-columns:36px minmax(0,1fr) auto;align-items:center;gap:9px;padding:12px;text-align:left;color:#543718;border:1px solid #d8b774;border-radius:12px;background:linear-gradient(135deg,#fff6dc,#efd09a);box-shadow:inset 0 1px #fff8dd;margin:6px 0}.history-entry img{width:36px;height:36px}.history-entry span{min-width:0}.history-entry b,.history-entry small{display:block;overflow-wrap:anywhere}.history-entry strong{font-size:13px}.award-breakdown>div{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid #d9c494}.award-breakdown img{width:38px;height:38px}.award-breakdown b,.award-breakdown small{display:block;overflow-wrap:anywhere}.award-breakdown small{font-size:11px;line-height:1.5}.award-breakdown strong{font-size:12px}
