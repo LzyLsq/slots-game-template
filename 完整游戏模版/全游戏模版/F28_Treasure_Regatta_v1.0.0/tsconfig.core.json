@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "NodeNext", "moduleResolution": "NodeNext",
+    "strict": true, "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true, "noUnusedParameters": true,
+    "esModuleInterop": true, "skipLibCheck": true, "types": ["node"],
+    "lib": ["ES2022", "DOM"]
+  },
+  "include": ["assets/scripts/core/**/*.ts", "assets/scripts/motion/**/*.ts", "tests/**/*.ts", "tools/**/*.ts"]
+}

@@ -1,0 +1,25 @@
+{
+  "platform": "ios",
+  "debug": true,
+  "buildPath": "project://build",
+  "outputName": "ios-simulator",
+  "name": "f28-treasure-regatta",
+  "sourceMaps": true,
+  "md5Cache": false,
+  "packAutoAtlas": true,
+  "useSplashScreen": true,
+  "startScene": "ab271200-5734-417c-9239-e6c4ba271001",
+  "scenes": [{"url": "db://assets/scenes/TreasureRegatta.scene", "uuid": "ab271200-5734-417c-9239-e6c4ba271001"}],
+  "packages": {
+    "ios": {
+      "packageName": "org.treasureregatta.f28",
+      "targetVersion": "15.0",
+      "orientation": {"portrait": true, "landscapeLeft": false, "landscapeRight": false, "upsideDown": false},
+      "osTarget": {"iphoneos": false, "simulator": true},
+      "renderBackEnd": {"metal": true, "gles3": false},
+      "developerTeam": "",
+      "skipUpdateXcodeProject": false
+    },
+    "native": {"remoteServerAddress": "", "polyfills": {"asyncFunctions": true}, "encrypted": false, "compressZip": false, "makeAfterBuild": false, "JobSystem": "none"}
+  }
+}

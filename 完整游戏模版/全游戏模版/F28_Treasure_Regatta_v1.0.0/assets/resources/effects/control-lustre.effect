@@ -1,0 +1,108 @@
+// Sprite pipeline derived from Cocos Creator builtin-sprite.effect.
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        atlasRect: { value: [0, 0, 1, 1] }
+        reflection: { value: [-1, 0, 0.15, 0] }
+        tone: { value: [0, 0, 0, 0] }
+}%
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec4 color;
+  out vec2 uv0;
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+    return pos;
+  }
+}%
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  uniform Lustre {
+    vec4 atlasRect;
+    vec4 reflection;
+    vec4 tone;
+  };
+  in vec4 color;
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+  #endif
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+    #if USE_TEXTURE
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      vec2 localUV = (uv0 - atlasRect.xy) / atlasRect.zw;
+      float distanceToLight = abs(localUV.x + localUV.y * 0.22 - reflection.x);
+      float softBand = 1.0 - smoothstep(0.0, reflection.z, distanceToLight);
+      float core = 1.0 - smoothstep(0.0, reflection.z * 0.24, distanceToLight);
+      float luminance = dot(o.rgb, vec3(0.2126, 0.7152, 0.0722));
+      // Generated illustrated controls carried a cool charcoal antialias halo.
+      // On a nine-sliced lobby button that fringe reads as a permanent black
+      // drop shadow. Warm and lift only low-luminance edge pixels; the alpha,
+      // gold bevels, wood, rope and opaque engraved detail remain physical.
+      float translucentFringe = 1.0 - smoothstep(0.62, 0.98, o.a);
+      float darkFringe = 1.0 - smoothstep(0.08, 0.36, luminance);
+      float warmLift = darkFringe * (translucentFringe * 0.55 + 0.45) * tone.x;
+      o.rgb = mix(o.rgb, vec3(0.56, 0.36, 0.10), warmLift * 0.56);
+      luminance = dot(o.rgb, vec3(0.2126, 0.7152, 0.0722));
+      // Keep dark engraved edges, source alpha and warm colour intact. No overlay quad.
+      float polish = smoothstep(0.12, 0.65, luminance);
+      // Harbor enamel receives a restrained ambient lift. The factor is zero
+      // for cabinet hardware, so their mode-specific materials remain intact.
+      o.rgb += (vec3(1.0, 0.975, 0.88) - o.rgb) * reflection.w * polish;
+      o.rgb += (vec3(1.0, 0.96, 0.84) - o.rgb) *
+        (softBand * 0.72 + core * 0.28) * reflection.y * polish;
+      #if IS_GRAY
+        float gray = dot(o.rgb, vec3(0.2126, 0.7152, 0.0722));
+        o.rgb = vec3(gray);
+      #endif
+    #endif
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

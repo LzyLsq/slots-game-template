@@ -1,0 +1,14 @@
+{
+  "name": "f28-treasure-regatta",
+  "version": "0.1.0",
+  "private": true,
+  "description": "F28 Treasure Regatta — independent virtual-coin game, in production",
+  "creator": { "version": "3.8.8" },
+  "uuid": "57e4dc01-284c-4270-96e6-129dec811f27",
+  "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck:core": "tsc -p tsconfig.core.json --noEmit",
+    "simulate": "tsx tools/simulate.ts"
+  },
+  "devDependencies": { "@types/node": "22.10.0", "tsx": "4.20.0", "typescript": "5.7.3" }
+}

@@ -1,0 +1,31 @@
+{
+  "platform": "web-mobile",
+  "debug": false,
+  "buildPath": "project://build",
+  "outputName": "web-mobile",
+  "name": "f28-treasure-regatta",
+  "sourceMaps": true,
+  "md5Cache": false,
+  "packAutoAtlas": true,
+  "useSplashScreen": true,
+  "startScene": "ab271200-5734-417c-9239-e6c4ba271001",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/TreasureRegatta.scene",
+      "uuid": "ab271200-5734-417c-9239-e6c4ba271001"
+    }
+  ],
+  "packages": {
+    "web-mobile": {
+      "orientation": "portrait",
+      "useWebGPU": false,
+      "embedWebDebugger": false
+    }
+  },
+  "overwriteProjectSettings": {
+    "includeModules": {
+      "gfx-webgl2": "on"
+    }
+  }
+}
+
