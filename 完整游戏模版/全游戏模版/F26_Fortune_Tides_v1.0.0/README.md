@@ -44,19 +44,21 @@ npm run build
 
 ## 当前截图
 
+以下画面对应 `f26-mode-arrivals-41`。四个模式均已加入独立主题加载场景、真实准备进度、防重复进入及柔和入场转场。
+
 ### 大厅
 
-![Fortune Tides 大厅](docs/screenshots/craft36-final/00-harbor.png)
+![Fortune Tides 大厅](docs/screenshots/mode-arrivals-41/00-harbor.png)
 
 ### 四台柜机
 
 | Coin Corsair | Pearl Sanctuary |
 |---|---|
-| ![Coin Corsair](docs/screenshots/craft36-final/01-coin-corsair.png) | ![Pearl Sanctuary](docs/screenshots/craft36-final/02-pearl-sanctuary.png) |
+| ![Coin Corsair](docs/screenshots/mode-arrivals-41/01-coin-corsair.png) | ![Pearl Sanctuary](docs/screenshots/mode-arrivals-41/02-pearl-sanctuary.png) |
 
 | Gem Lagoon | Fortune Beacon |
 |---|---|
-| ![Gem Lagoon](docs/screenshots/craft36-final/03-gem-lagoon.png) | ![Fortune Beacon](docs/screenshots/craft36-final/04-fortune-beacon.png) |
+| ![Gem Lagoon](docs/screenshots/mode-arrivals-41/03-gem-lagoon.png) | ![Fortune Beacon](docs/screenshots/mode-arrivals-41/04-fortune-beacon.png) |
 
 ## 发布状态
 

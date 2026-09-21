@@ -1,0 +1,224 @@
+/* F26 service rooms: distinct scenes built from the established harbor materials. */
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail){
+  --room-ink:#422d18;--room-gold:#b77a22;--room-light:#fff4d0;
+  min-height:100dvh;background-color:#183f47;background-image:linear-gradient(180deg,#082d3a15 0 15%,#3e210f16 55%,#160c068a 100%),url('/art/services-v2.webp');background-position:center top;background-size:cover;background-attachment:fixed;overflow-x:hidden
+}
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-header{position:relative;z-index:6;height:104px;min-height:104px;padding:calc(17px + env(safe-area-inset-top)) 16px 20px;display:grid;grid-template-columns:48px minmax(0,1fr) 48px;align-items:center;background:linear-gradient(180deg,#183c48e8,#17313fb8 65%,transparent);filter:drop-shadow(0 8px 8px #16110845)}
+.service-header:after{content:"";position:absolute;left:19%;right:19%;bottom:11px;height:2px;background:linear-gradient(90deg,transparent,#f6d487,#fff8d0,#f6d487,transparent);box-shadow:0 1px 7px #ffe7a4;opacity:.78}
+.service-header h1{max-width:100%;padding:0 7px;color:#fff2bd;font:800 clamp(18px,5.2vw,24px)/1.08 Georgia,'Songti SC',serif;letter-spacing:.02em;text-align:center;text-shadow:0 2px 2px #251506,0 0 12px #f4b94f70;overflow-wrap:anywhere}
+.service-header .round-btn{width:46px;min-width:46px;height:48px;min-height:48px;padding:8px;border:0!important;border-radius:50%!important;background:url('/art/premium/medallion.png') center/100% 100% no-repeat!important;color:#55310e!important;box-shadow:0 5px 9px #130b065c!important;filter:drop-shadow(0 0 4px #ffe5a866);font-size:26px}
+.service-header .round-btn:active{transform:translateY(2px) scale(.96)}
+.service-header .round-btn .ui-icon{width:31px;height:31px;filter:drop-shadow(0 1px 1px #fff0bf)}
+.service-page,.service-page.gifts-page{position:relative;isolation:isolate;z-index:1;min-height:calc(100dvh - 180px);margin:-4px 17px 86px;padding:26px 28px 34px;background:linear-gradient(104deg,#fff6d9e8,#f7dfaddf 54%,#eed09bd8),url('/art/premium/pearl-texture.webp') center/cover;border:0;border-radius:0;box-shadow:inset 0 0 0 1px #fff4cdcc,inset 0 -16px 35px #8d59182c,0 10px 30px #120c0870;clip-path:polygon(4% 0,96% 0,100% 4%,98.7% 17%,100% 30%,98.5% 45%,100% 58%,98.7% 73%,100% 88%,96% 100%,4% 100%,0 96%,1.3% 82%,0 67%,1.4% 51%,0 37%,1.3% 21%,0 5%)}
+.service-page:before,.service-page:after{content:"";position:absolute;z-index:-1;pointer-events:none}
+.service-page:before{inset:9px 12px;border-block:1px solid #9e6a2c54;background:radial-gradient(circle at 50% 0,#fff9de9e,transparent 36%)}
+.service-page:after{left:50%;bottom:8px;width:118px;height:22px;transform:translateX(-50%);background:url('/art/crafted/pearl.png') center/contain no-repeat;opacity:.52}
+.service-page .fineprint{position:relative;color:#654827;font-size:10px;line-height:1.55;text-shadow:0 1px #fff4d8}
+.service-page button:focus-visible{outline:3px solid #fff3b0;outline-offset:3px}
+
+/* Coin catalog: a supply counter with four materially different displays. */
+.page-shop{background-image:linear-gradient(180deg,#062e3b24,#2f1b0d65),url('/art/services-v2.webp')}
+.shop-page{padding-top:20px}
+.shop-page .section-intro{position:relative;grid-template-columns:72px minmax(0,1fr);min-height:82px;gap:2px 10px;margin:0 -5px 17px;padding:12px 15px;background:linear-gradient(90deg,#513315ed,#8e5c24e8 50%,#42270ee8),url('/art/premium/wood-texture.webp') center/cover;border:1px solid #e5bb6b;border-radius:9px 9px 18px 18px;box-shadow:inset 0 0 0 3px #2b170b55,inset 0 1px #fff0ac80,0 7px 12px #4b2a174c;color:#fff0c4}
+.shop-page .section-intro:after{content:"";position:absolute;inset:5px;border:1px solid #f3cc7c52;border-radius:6px 6px 14px 14px;pointer-events:none}
+.shop-page .section-intro .hero-symbol{width:70px;height:69px;object-fit:contain;filter:drop-shadow(0 5px 4px #170b0670);animation:serviceTreasure 3.4s ease-in-out infinite}
+.shop-page .section-intro h2{align-self:end;color:#fff0bd;font:800 16px/1.15 Georgia,serif;text-shadow:0 2px #251507}
+.shop-page .section-intro p{align-self:start;color:#f8ddb0;font-size:10px;line-height:1.4;text-shadow:0 1px #251507}
+.shop-packs{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px 8px}
+.shop-page .coin-pack{position:relative;min-height:190px;padding:11px 8px 16px;overflow:hidden;border:0!important;border-radius:42% 42% 13px 13px/26px 26px 13px 13px!important;background:radial-gradient(ellipse at 50% 46%,#fff9db 0 22%,#eac881d9 49%,#9d66286b 70%,transparent 71%)!important;box-shadow:none!important;color:#523315}
+.shop-page .coin-pack:before{content:"";position:absolute;left:8%;right:8%;bottom:7px;height:46px;border-radius:50%;background:linear-gradient(#8a571b,#3e250d);border:3px double #e4b85b;box-shadow:inset 0 5px 7px #1c0f0780,0 6px 7px #3a210f4d;z-index:-1}
+.shop-page .coin-pack:after{content:"";position:absolute;left:17%;right:17%;top:91px;height:2px;background:linear-gradient(90deg,transparent,#fff6c5,transparent);transform:rotate(-8deg);opacity:.75;animation:serviceShine 3.8s ease-in-out infinite}
+.shop-page .coin-pack:nth-child(2):before{background:linear-gradient(#315f68,#142e39);border-color:#9bd0cf}.shop-page .coin-pack:nth-child(3):before{background:linear-gradient(#81463a,#3c2025);border-color:#e7aa83}.shop-page .coin-pack:nth-child(4):before{background:linear-gradient(#5f416e,#261d3f);border-color:#dab8e5}
+.coin-pack .pack-art{height:84px}.coin-pack .pack-art img:first-child{width:96px;height:82px;object-fit:contain;filter:drop-shadow(0 7px 5px #3c240f55)}
+.shop-page .coin-pack strong{font-size:23px;color:#603c13;text-shadow:0 1px #fff4c9}.shop-page .coin-pack em{position:relative;z-index:2;margin-top:5px;padding:5px 4px 0;color:#fff1c2;border:0;font-size:9px;text-shadow:0 1px #271507}
+.shop-page>.fineprint{margin:16px 0 0;padding:8px 12px;background:url('/art/premium/ivory.png') center/100% 100% no-repeat;border:0;text-align:center}
+
+/* Daily gift: a voyage route, not a generic card. */
+.page-gifts{background-image:linear-gradient(180deg,#13374725,#351e105c),url('/art/crafted/captains-cabin.webp')}
+.gifts-page{text-align:center;padding-top:19px!important}
+.gifts-page h2{margin:0 auto 4px;color:#573717;font:800 23px/1.15 Georgia,serif;text-shadow:0 1px #fff1ca}
+.gifts-page>p{max-width:290px;margin:0 auto;color:#5b4023;font-size:11px;line-height:1.45}
+.gifts-page>.treasure-gift{position:relative;height:188px;margin:3px -8px 3px;background:radial-gradient(ellipse at 50% 72%,#ffd778b8,transparent 65%)}
+.treasure-gift .gift-treasure{width:190px;height:174px;object-fit:contain;filter:drop-shadow(0 11px 7px #53301865);animation:serviceTreasure 3s ease-in-out infinite}
+.treasure-gift .gift-rays{position:absolute;inset:5% 13%;background:repeating-conic-gradient(from 0deg,#ffd77b00 0 10deg,#ffe4a454 11deg 17deg,#ffd77b00 18deg 31deg);border-radius:50%;animation:serviceRays 18s linear infinite}
+.gifts-page .treasure-gift>span{bottom:2px;min-width:165px;padding:8px 20px;background:url('/art/premium/ivory.png') center/100% 100% no-repeat;color:#7b4b12;font-size:27px}
+.gifts-page>.primary{min-width:72%;min-height:54px;margin:4px auto 8px;background:url('/art/premium/amber.png') center/100% 100% no-repeat!important;border:0!important;box-shadow:0 6px 10px #4d2b1640!important;text-shadow:0 2px #5d350f}
+.gifts-page .tide-path{position:relative;margin:21px -2px 12px;padding:13px 4px 8px;background:linear-gradient(90deg,transparent,#6a45171d,transparent);gap:2px}
+.gifts-page .tide-path:before{height:5px;background:repeating-linear-gradient(90deg,#8e6428 0 8px,#f1d28b 8px 12px);box-shadow:0 1px #fff0c6}
+.gifts-page .tide-path span{position:relative;width:32px;height:34px;border:0;background:url('/art/premium/medallion.png') center/100% 100% no-repeat;color:#5c3a17;box-shadow:none}.gifts-page .tide-path span.done{background:url('/art/premium/navy.png') center/100% 100% no-repeat;color:#fff0bf}
+
+/* Leaderboard: trophy gallery and engraved ledger. */
+.page-rank{background-image:linear-gradient(180deg,#0d32404a,#37200f52),url('/art/lobby-treasure-v3.webp')}
+.rank-page{padding-top:18px}
+.rank-page .rank-podium{min-height:190px;gap:5px;padding:25px 3px 4px;align-items:end;background:radial-gradient(ellipse at 50% 45%,#fff1a083,transparent 61%)}
+.rank-page .podium-place{position:relative;min-width:0;padding:12px 3px 13px;background:linear-gradient(90deg,#71451c,#c38a3a 48%,#6d4219),url('/art/premium/wood-texture.webp') center/cover;border:2px solid #e4bd6a;border-radius:11px 11px 3px 3px;box-shadow:inset 0 0 0 2px #3b210c55,0 8px 10px #3f250e55;color:#fff1bd;text-shadow:0 1px #2d1909}
+.rank-page .podium-place:after{content:"";position:absolute;left:8%;right:8%;bottom:4px;height:2px;background:linear-gradient(90deg,transparent,#fff0af,transparent)}
+.rank-page .podium-place .symbol-icon{filter:drop-shadow(0 5px 4px #29170770);animation:trophyFloat 3.2s ease-in-out infinite}
+.rank-page .place-0{min-height:135px;order:2}.rank-page .place-1{min-height:111px;order:1}.rank-page .place-2{min-height:96px;order:3}
+.rank-page .rank-note{margin:4px auto 10px;padding:5px 12px;background:url('/art/premium/ivory.png') center/100% 100% no-repeat;text-align:center}
+.rank-page .standings{margin:0 -2px;padding:8px 8px 12px;background:linear-gradient(#f7e6b8e8,#e6c98ae8),url('/art/premium/pearl-texture.webp') center/cover;border:4px double #815420;box-shadow:inset 0 0 12px #5f3a1548,0 5px 10px #4d2b183c}
+.rank-page .standings li{min-height:46px;margin:0;border-bottom:1px solid #9a6b315c;border-radius:0;background:transparent!important;box-shadow:none!important}.rank-page .standings li:last-child{border-bottom:0}.rank-page .standings li.self{margin:2px -3px;background:linear-gradient(90deg,#1d5367,#3b7480,#1c4e61)!important;border:1px solid #e3bd68;border-radius:7px;color:#fff2c1;text-shadow:0 1px #102d37}
+
+/* Captain profile: passport, brass instruments and account locker. */
+.page-profile{background-image:linear-gradient(180deg,#0c334040,#3c210e54),url('/art/crafted/captains-cabin.webp')}
+.profile-page{padding-top:20px;padding-bottom:32px!important}
+.profile-page .passport{position:relative;display:grid;grid-template-columns:82px minmax(0,1fr);grid-template-rows:auto auto auto;column-gap:12px;align-items:center;margin:0 0 14px;padding:14px 15px;background:linear-gradient(105deg,#5d3818e8,#a16d30e0 47%,#553115e8),url('/art/premium/wood-texture.webp') center/cover;border:2px solid #ddae5d;border-radius:10px 22px 10px 22px;box-shadow:inset 0 0 0 3px #2d190950,0 8px 13px #321b0d55;color:#fff0c2;text-shadow:0 1px #2b180a}
+.profile-page .passport-portrait{grid-row:1/4;width:76px;height:76px;padding:6px;background:url('/art/premium/medallion.png') center/100% 100% no-repeat}.profile-page .passport-portrait .ui-icon{width:64px;height:64px}.profile-page .passport p{margin:0;font-size:9px;letter-spacing:.15em;color:#edcf90}.profile-page .passport h2{margin:1px 0;color:#fff2c5;font-size:21px;text-align:left}.profile-page .passport .small-enamel{justify-self:start;min-height:33px;padding:6px 22px;background:url('/art/premium/navy.png') center/100% 100% no-repeat!important;color:#fff0c2!important}.profile-page .passport-stamp{right:9px;bottom:8px;color:#f7d58566;border-color:#f7d58566}
+.profile-page .stats{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:0 0 14px;padding:8px;background:#714918;border:3px double #e2bb6f;box-shadow:0 6px 11px #321c0d45}.profile-page .stats div{min-height:68px;padding:10px 5px;background:linear-gradient(145deg,#fff5d7,#e6c88e),url('/art/premium/pearl-texture.webp') center/cover;border:0}.profile-page .stats small{color:#6d4c27}.profile-page .stats strong{font:800 20px/1.15 Georgia,serif;color:#694315;text-shadow:0 1px #fff2c5}
+.profile-page .settings-panel{gap:2px 9px;padding:10px 12px;background:linear-gradient(#f5e0aee8,#dfbf7ee8),url('/art/bronze-grain.webp') center/180px;border:3px double #8a5d29;box-shadow:inset 0 0 9px #70420f32}.profile-page .settings-panel select{background:url('/art/premium/ivory.png') center/100% 100% no-repeat;border:0;border-radius:0;color:#4e3215;padding:7px 17px}.profile-page .settings-panel button{min-height:43px;padding:4px 2px;border-bottom:1px solid #8d632d55}.profile-page .settings-panel b{min-width:61px;text-align:center;background:url('/art/premium/ivory.png') center/100% 100% no-repeat;border-radius:0;color:#4d3317}
+.profile-page .account-actions{margin:13px 0 0;padding:13px 14px 9px;background:linear-gradient(100deg,#4b2b15ec,#7d4d24eb,#452612ec),url('/art/premium/wood-texture.webp') center/cover;border:2px solid #d6a758;color:#fff0c4;box-shadow:inset 0 0 0 2px #2a160956,0 6px 10px #35200f42}.profile-page .account-actions small{color:#ecd6aa}.profile-page .account-actions .primary{min-height:50px;background:url('/art/premium/amber.png') center/100% 100% no-repeat!important;border:0!important}.profile-page .account-delete{color:#ffe0bb!important}
+
+/* Mail: a captain's dispatch desk. */
+.page-mail{background-image:linear-gradient(180deg,#0d33412f,#321d0f62),url('/art/services-v2.webp')}
+.mail-page{padding-top:20px}.mail-page .postmark{width:118px;height:118px;margin:0 auto 15px;border:4px double #81572085;color:#735028ad;background:radial-gradient(circle,#fff2c68a,transparent 69%);box-shadow:0 0 25px #ffd98d44;animation:postmarkBreathe 4s ease-in-out infinite}
+.mail-page .letter{position:relative;min-height:75px;margin:0 0 12px;padding:13px 13px;gap:10px;background:linear-gradient(120deg,#fff6d6,#e7c77f),url('/art/premium/pearl-texture.webp') center/cover;border:2px solid #9c6b2f;border-radius:3px 3px 16px 3px;box-shadow:inset 0 0 0 2px #fff1bd,0 5px 9px #492b1645;overflow:hidden}.mail-page .letter:after{content:"";position:absolute;right:-18px;bottom:-25px;width:64px;height:64px;border:3px double #9a622d69;border-radius:50%}.mail-page .letter .envelope .ui-icon{filter:drop-shadow(0 3px 2px #5f3b1850)}.mail-page .letter.read{filter:saturate(.72);opacity:.87}
+
+/* Login: captain's embarkation desk, all primary actions remain in the first phone viewport. */
+.page-login,.page-register{min-height:100dvh;background:#172f32 url('/art/crafted/captains-cabin.webp') center/cover fixed;overflow:hidden}
+.auth-page{position:relative;isolation:isolate;min-height:100dvh;height:100dvh;padding:calc(22px + env(safe-area-inset-top)) 20px max(16px,env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,#071e2661,#5230142b 55%,#170c077d);color:#4d3216;overflow:hidden}
+.auth-page:before,.auth-page:after{content:"";position:absolute;pointer-events:none;z-index:-1}.auth-page:before{inset:0;background:radial-gradient(circle at 16% 14%,#ffe3a044,transparent 17%),radial-gradient(circle at 84% 18%,#fff0bf3d,transparent 16%),linear-gradient(90deg,#120b0752,transparent 28% 72%,#120b0752);animation:cabinLight 5s ease-in-out infinite}.auth-page:after{left:50%;bottom:-33px;width:min(500px,118vw);height:150px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 60%,#ffcf6666,transparent 58%)}
+.auth-brand{position:relative;z-index:2;flex:0 0 auto;padding:0 0 14px;color:#fff1bd;text-align:center;text-shadow:0 3px 3px #351d0c,0 0 16px #f8bd4f66}.auth-brand:before{content:"";position:absolute;left:50%;top:-20px;width:170px;height:96px;transform:translateX(-50%);background:url('/art/crafted/pearl.png') center/contain no-repeat;opacity:.22;filter:sepia(1) saturate(1.6);z-index:-1}.auth-brand>span{font:800 15px/1 Georgia,serif;letter-spacing:.28em}.auth-brand h1{margin:2px 0 0;font:900 clamp(42px,12vw,56px)/.88 Georgia,serif;letter-spacing:.015em}.auth-brand p{max-width:330px;margin:8px auto 0;font-size:12px;line-height:1.35;color:#ffeac2}
+.auth-panel{position:relative;flex:0 1 auto;width:min(100%,390px);max-height:calc(100dvh - 145px);margin:0 auto;padding:17px 23px 15px;overflow-y:auto;overscroll-behavior:contain;background:linear-gradient(108deg,#fff4d9ed,#eed098eb 56%,#f8e4b9ec),url('/art/premium/pearl-texture.webp') center/cover;border:0;border-radius:0;box-shadow:inset 0 0 0 2px #fff1c6b8,inset 0 -12px 28px #8a541c29,0 12px 30px #170d0878;clip-path:polygon(7% 0,93% 0,100% 7%,98% 21%,100% 36%,98% 51%,100% 67%,98% 84%,93% 100%,7% 100%,0 93%,2% 78%,0 61%,2% 45%,0 28%,2% 12%)}
+.auth-panel:before{content:"";position:absolute;inset:8px 11px;border-block:1px solid #9d672d5c;pointer-events:none}.auth-emblem{height:62px}.auth-emblem img{width:69px;height:69px;margin:-10px auto 0;padding:5px;background:url('/art/premium/medallion.png') center/100% 100% no-repeat;filter:drop-shadow(0 5px 4px #4b2c1759);animation:captainEmblem 3.8s ease-in-out infinite}.auth-panel h2{position:relative;margin:3px 0 10px;color:#513318;font:800 22px/1.2 Georgia,serif;text-shadow:0 1px #fff0c6}.auth-entry-actions .primary,.auth-panel form .primary{position:relative;min-height:58px;padding:15px 28px;background:url('/art/premium/amber.png') center/100% 100% no-repeat!important;border:0!important;border-radius:0!important;box-shadow:0 7px 11px #4c2c1845!important;color:#fff4d0!important;font-weight:900;text-shadow:0 2px #61370d;overflow:hidden}.auth-entry-actions .primary:after,.auth-panel form .primary:after{content:"";position:absolute;top:6px;bottom:7px;width:35%;left:-45%;transform:skewX(-24deg);background:linear-gradient(90deg,transparent,#fff8d08c,transparent);animation:authButtonShine 4.5s ease-in-out infinite}.auth-links{margin:7px 0 4px;gap:5px 8px}.auth-links button{min-height:42px;min-width:42%;padding:8px 16px!important;background:url('/art/premium/ivory.png') center/100% 100% no-repeat!important;border:0!important;color:#583817!important;text-decoration:none!important;font-size:11px}
+.auth-support{display:flex;gap:7px;justify-content:center;margin:4px 0 7px}.auth-support button{flex:1;min-width:0;min-height:38px;padding:6px 10px;background:url('/art/premium/navy.png') center/100% 100% no-repeat!important;border:0!important;color:#fff0c4!important;font-size:10px;line-height:1.2;text-shadow:0 1px #172d37;white-space:normal;overflow-wrap:anywhere}.auth-footer{position:relative;padding-top:7px;border-top:1px solid #9e6c3357}.auth-consent{grid-template-columns:20px minmax(0,1fr)!important;gap:7px!important;font-size:10px!important;line-height:1.35}.auth-consent input{width:18px!important;height:18px!important;min-height:18px!important;margin:0;accent-color:#97621d}.auth-legal-links{display:flex;justify-content:center;gap:4px 12px}.auth-legal-links button,.auth-form-tools button{min-height:32px;padding:4px 7px;background:none!important;border:0!important;box-shadow:none!important;color:#6d451c!important;text-decoration:underline;text-underline-offset:3px;font-size:10px}.auth-note{margin:2px 0 4px;font-size:9px;line-height:1.35}.auth-language{margin-top:4px}.auth-language select{width:100%;min-height:34px;padding:4px 13px;background:url('/art/premium/ivory.png') center/100% 100% no-repeat;border:0;border-radius:0;color:#513418;font-size:11px}.auth-panel form{gap:6px}.auth-panel label{gap:3px;font-size:11px}.auth-panel input{min-height:41px;padding:8px 13px;background:linear-gradient(#fff9e7e8,#ebd09ddf),url('/art/crafted/input.png') center/100% 100% no-repeat;border:1px solid #9b672d;border-radius:4px}.auth-panel small{font-size:9px}.auth-form-tools{display:flex;justify-content:space-between;margin-top:3px}
+
+.bottom-nav{background:linear-gradient(180deg,#3b2414f4,#1c1210f7),url('/art/premium/wood-texture.webp') center/cover;border-top:2px solid #dfb560;box-shadow:0 -5px 14px #120b0780,inset 0 1px #fff0a463}.bottom-nav .nav-button{position:relative;background:transparent!important}.bottom-nav .nav-button.selected:before{content:"";position:absolute;inset:2px 4px 7px;background:url('/art/premium/navy.png') center/100% 100% no-repeat;z-index:-1;filter:drop-shadow(0 0 5px #eaca78)}
+
+@keyframes serviceTreasure{0%,100%{transform:translateY(0) rotate(-.4deg)}50%{transform:translateY(-5px) rotate(.5deg)}}
+@keyframes serviceShine{0%,38%,100%{transform:translateX(-30px) rotate(-8deg);opacity:0}48%,62%{opacity:.82}72%{transform:translateX(38px) rotate(-8deg);opacity:0}}
+@keyframes serviceRays{to{transform:rotate(360deg)}}
+@keyframes trophyFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes postmarkBreathe{0%,100%{filter:brightness(.94)}50%{filter:brightness(1.12)}}
+@keyframes cabinLight{0%,100%{opacity:.78}50%{opacity:1}}
+@keyframes captainEmblem{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes authButtonShine{0%,58%,100%{left:-45%;opacity:0}65%{opacity:.8}78%{left:115%;opacity:0}}
+@media(max-width:360px){
+  :is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-header{height:94px;min-height:94px;padding-inline:12px;grid-template-columns:43px minmax(0,1fr) 43px}.service-header .round-btn{width:42px;min-width:42px;height:43px;min-height:43px}.service-page,.service-page.gifts-page{margin-inline:12px;padding:20px 22px 29px}.shop-page .section-intro{grid-template-columns:56px minmax(0,1fr);padding-inline:10px}.shop-page .section-intro .hero-symbol{width:55px}.shop-page .coin-pack{min-height:176px;padding-inline:5px}.shop-page .coin-pack strong{font-size:20px}.rank-page .rank-podium{min-height:170px}.profile-page .passport{grid-template-columns:67px minmax(0,1fr);padding-inline:10px}.profile-page .passport-portrait{width:64px;height:64px}.profile-page .passport-portrait .ui-icon{width:53px;height:53px}.profile-page .stats strong{font-size:18px}.auth-page{padding-inline:14px}.auth-brand{padding-bottom:10px}.auth-brand h1{font-size:42px}.auth-panel{padding:14px 19px 12px;max-height:calc(100dvh - 125px)}
+}
+@media(max-height:650px){.auth-page{justify-content:flex-start;padding-top:15px}.auth-brand{padding-bottom:8px}.auth-brand h1{font-size:38px}.auth-brand p{margin-top:5px;font-size:10px}.auth-panel{max-height:calc(100dvh - 103px);padding-top:12px}.auth-emblem{height:50px}.auth-emblem img{width:58px;height:58px}.auth-panel h2{font-size:19px;margin-bottom:7px}.auth-entry-actions .primary{min-height:49px;padding-block:11px}.auth-links button{min-height:36px}.auth-support button{min-height:34px}.auth-note{display:none}}
+@media(prefers-reduced-motion:reduce){.shop-page .section-intro .hero-symbol,.treasure-gift .gift-treasure,.gift-rays,.rank-page .symbol-icon,.mail-page .postmark,.auth-page:before,.auth-emblem img,.auth-entry-actions .primary:after,.auth-panel form .primary:after{animation:none!important}}
+/* True narrow-screen containment: padding stays inside the parchment width. */
+.auth-panel{box-sizing:border-box;min-width:0;max-width:390px}
+.auth-panel :is(button,input,select,label,div,footer,form){min-width:0;max-width:100%;box-sizing:border-box}
+.auth-links,.auth-support{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+.auth-links button,.auth-support button{width:100%;min-width:0!important;padding-inline:8px!important;overflow-wrap:anywhere;white-space:normal}
+@media(max-width:340px){.auth-page{padding-inline:10px}.auth-panel{width:100%;padding-inline:16px}.auth-brand h1{font-size:39px}.auth-links button{font-size:10px}.auth-support button{font-size:9px}.auth-consent{font-size:9px!important}}
+
+/* Fixed mobile stages: service rooms stay inside the viewport; long rule dialogs remain independently scrollable. */
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail){height:100svh;min-height:0;overflow:hidden;background-attachment:scroll}
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-header{box-sizing:border-box;height:94px;min-height:94px;padding-top:calc(12px + env(safe-area-inset-top));padding-bottom:14px}
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-page{box-sizing:border-box;height:calc(100svh - 176px - env(safe-area-inset-bottom));min-height:0;margin:0 12px calc(82px + env(safe-area-inset-bottom));padding:14px 20px 16px;overflow:hidden;clip-path:polygon(3% 0,97% 0,100% 5%,99% 25%,100% 50%,99% 75%,100% 95%,97% 100%,3% 100%,0 95%,1% 75%,0 50%,1% 25%,0 5%)}
+
+/* Store counter, compact enough to finish every purchase action on one phone screen. */
+.shop-page{display:grid;grid-template-rows:auto 1fr auto;gap:7px;padding-top:10px!important}
+.shop-page .section-intro{min-height:55px;margin:0;padding:6px 10px;grid-template-columns:48px minmax(0,1fr)}
+.shop-page .section-intro .hero-symbol{width:48px;height:48px}
+.shop-page .section-intro h2{font-size:13px}.shop-page .section-intro p{font-size:9px;line-height:1.2}
+.shop-packs{min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:6px}
+.shop-page .coin-pack{min-height:0!important;height:auto;padding:4px 6px 10px;border-radius:28% 28% 10px 10px/18px 18px 10px 10px!important}
+.shop-page .coin-pack:before{height:31px;bottom:3px}.shop-page .coin-pack:after{bottom:8px;font-size:7px}
+.shop-page .coin-pack .pack-art{height:44px!important;min-height:44px}.shop-page .coin-pack .pack-art img,.shop-page .coin-pack .symbol-icon{max-height:44px!important}
+.shop-page .coin-pack strong{font-size:15px!important;line-height:1}.shop-page .coin-pack small,.shop-page .coin-pack span span{font-size:8px!important}.shop-page .coin-pack em{font-size:7px!important;bottom:8px!important}
+.shop-page>.fineprint{margin:0;text-align:center;font-size:8px}
+
+/* Gift room uses one contained ceremony, without a hidden lower section. */
+.service-page.gifts-page{display:grid;grid-template-rows:auto auto minmax(82px,1fr) auto auto auto;align-content:center;gap:3px;padding:11px 22px 13px}
+.gifts-page h2,.gifts-page p{margin:0}.gifts-page h2{font-size:18px}.gifts-page>p{font-size:10px;line-height:1.3}.gifts-page .treasure-gift{min-height:82px;margin:0}.gifts-page .gift-treasure{max-height:95px}.gifts-page .primary{min-height:44px!important;margin:0!important}.gifts-page .tide-path{margin:2px 0!important}.gifts-page .fineprint{font-size:8px}
+
+/* Leaderboard pagination replaces the former 25-row scrolling sheet. */
+.rank-page{display:grid;grid-template-rows:82px auto minmax(0,1fr) 38px;gap:4px;padding:8px 18px 10px!important}
+.rank-page .rank-podium{height:82px;min-height:82px;margin:0}.rank-page .podium-place{min-height:66px!important;padding:3px 2px!important}.rank-page .podium-place .symbol-icon{width:25px!important;height:25px!important}.rank-page .podium-place span{font-size:8px}.rank-page .podium-place b{font-size:9px}.rank-page .rank-note{margin:0 auto;padding:2px 8px;font-size:8px}
+.rank-page .standings{min-height:0;margin:0;padding:3px 6px;display:grid;grid-template-rows:repeat(5,minmax(0,1fr))}
+.rank-page .standings li{min-height:0!important;height:auto;padding:2px 6px!important;font-size:10px}.rank-page .standings li span small{font-size:7px}.rank-page .standings li strong{font-size:9px}
+.rank-pager{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:7px}
+.rank-pager button{height:34px;min-height:34px;padding:4px 8px;border:0;background:url('/art/premium/navy.png') center/100% 100% no-repeat;color:#fff0c7;font:700 10px/1.1 Georgia,serif;text-shadow:0 1px #241507}.rank-pager button:last-child{background-image:url('/art/premium/amber.png');color:#57320e;text-shadow:0 1px #fff1b5}.rank-pager button:disabled{filter:saturate(.25);opacity:.5}.rank-pager b{font-size:10px;color:#5a3c1d;white-space:nowrap}
+
+/* Captain profile is split into three physical console panes instead of a tall scrolling form. */
+.profile-page{display:grid;grid-template-rows:94px 38px minmax(0,1fr);gap:7px;padding:9px 18px 12px!important}
+.profile-page .passport{height:94px;box-sizing:border-box;margin:0;padding:8px 11px;grid-template-columns:66px minmax(0,1fr);column-gap:9px}.profile-page .passport-portrait{width:61px;height:61px;padding:4px}.profile-page .passport-portrait .ui-icon{width:53px;height:53px}.profile-page .passport h2{font-size:17px}.profile-page .passport .small-enamel{min-height:28px;padding:3px 15px;font-size:9px}
+.profile-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.profile-tabs button{min-height:36px;padding:4px 3px;border:0;background:url('/art/premium/ivory.png') center/100% 100% no-repeat;color:#60401d;font:700 9px/1.15 Georgia,serif}.profile-tabs button.selected{background-image:url('/art/premium/navy.png');color:#fff1c8;text-shadow:0 1px #241507}
+.profile-page .profile-pane{min-height:0;height:100%;box-sizing:border-box;margin:0!important}
+.profile-page .stats{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:1px;padding:6px}.profile-page .stats div{min-height:0;padding:5px}.profile-page .stats strong{font-size:16px}
+.profile-page .settings-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(90px,.9fr);align-content:center;padding:8px 12px}.profile-page .settings-panel button{min-height:39px}
+.profile-page .account-actions{display:grid;grid-template-rows:auto auto auto;align-content:center;gap:7px;padding:10px 12px!important;text-align:center}.profile-page .account-actions p{margin:0}.profile-page .account-actions p small{margin-top:2px}.account-button-row{display:grid;grid-template-columns:1.25fr .75fr;gap:6px}.profile-page .account-actions .primary,.profile-page .account-delete{display:flex;align-items:center;justify-content:center;min-height:42px!important;margin:0;padding:7px 6px;font-size:10px}.profile-page .account-delete{background:url('/art/premium/ivory.png') center/100% 100% no-repeat!important;color:#713719!important;text-decoration:none}.account-footnote{font-size:8px!important;line-height:1.25!important;color:#ecd6aa!important}
+
+/* Mail desk remains fully operable without moving the whole page. */
+.mail-page{display:grid;grid-template-rows:68px repeat(2,minmax(0,1fr)) auto;gap:7px;padding:9px 19px 12px!important}.mail-page .postmark{width:64px;height:64px;margin:0 auto;font-size:8px;line-height:1.25;border-width:3px}.mail-page .letter{min-height:0;height:auto;margin:0;padding:7px 9px}.mail-page .letter .envelope{width:42px;height:42px}.mail-page .letter strong{font-size:11px}.mail-page .letter small{font-size:8px}.mail-page>.fineprint{margin:0;text-align:center;font-size:8px}
+
+/* Login and registration are fixed scenes; content is resized structurally rather than put in a scroll box. */
+.page-login,.page-register{height:100svh!important;min-height:0!important;overflow:hidden!important;background-attachment:scroll!important}
+.auth-page{box-sizing:border-box;height:100svh;min-height:0!important;display:grid;grid-template-rows:auto minmax(0,1fr);align-content:center;padding:calc(10px + env(safe-area-inset-top)) 14px calc(10px + env(safe-area-inset-bottom));overflow:hidden}
+.auth-brand{padding:0 0 7px}.auth-brand>span{font-size:13px}.auth-brand h1{font-size:36px}.auth-brand p{margin-top:3px;font-size:10px;line-height:1.2}
+.auth-panel{width:min(390px,100%);max-height:none!important;height:100%;min-height:0;margin:0 auto;padding:10px 18px;overflow:hidden!important;display:flex;flex-direction:column;justify-content:center;border-radius:24px 24px 16px 16px}
+.auth-emblem{height:39px}.auth-emblem img{width:46px;height:46px;margin-top:-7px}.auth-panel h2{margin:2px 0 7px;font-size:18px}.auth-entry-actions .primary,.auth-panel form .primary{min-height:44px!important;padding:9px 15px!important}.auth-links{margin:4px 0;gap:3px 8px}.auth-links button,.auth-support button{min-height:31px!important;padding:4px 6px!important;font-size:10px}.auth-support{margin:2px 0!important;gap:4px}.auth-footer{margin-top:3px!important}.auth-consent{font-size:9px!important;line-height:1.25!important}.auth-legal-links button{min-height:28px!important;font-size:9px!important}.auth-note{margin:2px 0;font-size:8px;line-height:1.2}.auth-language{margin-top:4px}.auth-language select{min-height:32px;padding:3px;font-size:11px}
+.auth-panel form{gap:4px}.auth-panel form label{gap:2px;font-size:10px}.auth-panel input{min-height:37px;padding:6px 9px;font-size:14px}.auth-panel small{font-size:8px;line-height:1.2}.auth-form-tools{margin-top:2px!important}.auth-form-tools button{min-height:30px!important;font-size:9px}.auth-error{font-size:9px;line-height:1.2}
+
+@media(max-height:560px){
+  :is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-header{height:82px;min-height:82px;padding-top:8px;padding-bottom:9px}
+  :is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-page{height:calc(100svh - 164px - env(safe-area-inset-bottom))}
+  .auth-brand p,.auth-note{display:none}.auth-brand h1{font-size:31px}.auth-panel{padding-block:7px}.auth-panel input{min-height:34px}
+}
+@media(max-width:340px){
+  :is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-page{margin-inline:7px;padding-inline:13px}
+  .service-header h1{font-size:17px}.rank-pager button span{display:none}.profile-page{padding-inline:12px!important}.profile-tabs button{font-size:8px}
+  .auth-page{padding-inline:8px}.auth-panel{padding-inline:12px}.auth-brand h1{font-size:33px}
+}
+
+/* Profile room lives in the captain's cabin instead of stretching one web-like card down the screen. */
+.page-profile .profile-page{background:transparent;box-shadow:none;clip-path:none;padding:9px 17px 12px!important;grid-template-rows:94px 38px auto;align-content:start}
+.page-profile .profile-page:before,.page-profile .profile-page:after{display:none}
+.profile-page .profile-pane{height:auto!important;min-height:174px;align-self:start;border-radius:13px;overflow:hidden;box-shadow:inset 0 0 0 1px #ffe0a766,0 8px 16px #180c0873}
+.profile-page .stats{padding:7px;background:linear-gradient(135deg,#714718f0,#35200ef2),url('/art/premium/wood-texture.webp') center/cover;border:2px solid #e0b565}
+.profile-page .stats div{position:relative;min-height:78px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,#fff8dc,#e4c27c 72%),url('/art/premium/pearl-texture.webp') center/cover;border:1px solid #9b682c}
+.profile-page .stats div:before{content:'◆';position:absolute;top:5px;color:#aa762c;font-size:7px}.profile-page .stats small{font-size:9px}.profile-page .stats strong{font-size:17px}
+.profile-page .settings-panel{min-height:174px;padding:18px 15px;background:linear-gradient(110deg,#4d2d15ee,#865526e8,#3d2413ef),url('/art/premium/wood-texture.webp') center/cover;border:2px solid #dbad5e;color:#fff0c4}.profile-page .settings-panel label{color:#f4dca8}.profile-page .settings-panel button{color:#fff0c4;border-color:#d7a95c55}.profile-page .settings-panel select{min-height:40px}
+.profile-page .account-actions{min-height:174px;padding:18px 15px!important;background:linear-gradient(105deg,#173b49ef,#285f6ced,#132e3aef),url('/art/bronze-grain.webp') center/180px;border:2px solid #d8ad63;color:#fff0c4}.profile-page .account-actions:before{content:'⚓';display:block;margin:auto;width:38px;height:38px;border:2px solid #e3bd70;border-radius:50%;font-size:21px;line-height:34px;color:#f6d894;background:#163743;box-shadow:0 0 12px #f1c96755}.profile-page .account-actions p{font-size:13px}.profile-page .account-actions .account-footnote{max-width:310px;margin:auto}
+@media(max-height:620px){.profile-page .profile-pane{min-height:146px}.profile-page .stats div{min-height:64px}.profile-page .settings-panel,.profile-page .account-actions{min-height:146px;padding-block:11px!important}.profile-page .account-actions:before{width:30px;height:30px;font-size:17px;line-height:27px}}
+
+/* The app is a fixed game viewport. Only long legal/rule dialog bodies may scroll internally. */
+html,body{height:100%;min-height:0;overflow:hidden!important;overscroll-behavior:none}
+#app{height:100svh;min-height:0;overflow:hidden!important}
+.dialog-body{overscroll-behavior:contain}
+
+/* Login is a compact arrival scene, not a tall empty form sheet. */
+.auth-page{grid-template-rows:auto auto;align-content:center}
+.auth-panel{height:auto!important;min-height:0!important;justify-content:flex-start}
+.auth-entry-choice .auth-panel{padding:13px 18px 12px;box-shadow:inset 0 0 0 2px #fff1c6b8,inset 0 -12px 28px #8a541c29,0 12px 30px #170d0878}
+.auth-scene{position:relative;height:112px;flex:0 0 112px;margin:-2px 0 2px;background:radial-gradient(ellipse at 50% 70%,#fff4bdad,transparent 62%)}
+.auth-scene:before{content:'';position:absolute;left:50%;top:2px;width:96px;height:96px;transform:translateX(-50%);background:url('/art/premium/medallion.png') center/contain no-repeat;filter:drop-shadow(0 6px 8px #56300d66)}
+.auth-captain{position:absolute;z-index:2;left:50%;top:13px;width:70px;height:70px;transform:translateX(-50%)}.auth-captain .ui-icon{width:70px;height:70px;object-fit:contain;filter:drop-shadow(0 4px 3px #3f250f55)}
+.auth-treasure{position:absolute;z-index:3;right:calc(50% - 75px);bottom:-1px;width:55px;height:48px;object-fit:contain;filter:drop-shadow(0 4px 3px #4b2b125b)}
+.auth-scene i{position:absolute;left:calc(50% - 75px);bottom:8px;width:48px;height:34px;background:url('/art/treasure-purse.png') center/contain no-repeat;filter:drop-shadow(0 4px 3px #4b2b125b)}
+.auth-entry-choice .auth-entry-actions,.auth-entry-choice .auth-support,.auth-entry-choice .auth-footer{position:relative;z-index:2}
+.auth-entry-form .auth-panel{max-height:calc(100svh - 30px)!important;padding:14px 20px}
+@media(max-height:620px){.auth-scene{height:78px;flex-basis:78px}.auth-scene:before{width:70px;height:70px}.auth-captain{top:8px;width:52px;height:52px}.auth-captain .ui-icon{width:52px;height:52px}.auth-treasure{width:42px;height:36px;right:calc(50% - 57px)}.auth-scene i{width:37px;height:27px;left:calc(50% - 58px);bottom:4px}.auth-entry-choice .auth-panel{padding-top:8px}.auth-entry-choice .auth-links button,.auth-entry-choice .auth-support button{min-height:29px!important}.auth-entry-choice .auth-entry-actions .primary{min-height:40px!important}}
+
+/* fixed-stage cleanup: pages occupy the viewport themselves instead of hiding extra document height. */
+.app.page-home,
+.app.page-shop,.app.page-gifts,.app.page-rank,.app.page-profile,.app.page-mail{
+  box-sizing:border-box;height:100svh;min-height:0;padding-bottom:0!important;overflow:hidden!important
+}
+.page-home .harbor{box-sizing:border-box;height:calc(100svh - 82px - var(--safe-bottom));min-height:0;overflow:hidden}
+:is(.page-shop,.page-gifts,.page-rank,.page-profile,.page-mail) .service-page{
+  margin-bottom:calc(82px + env(safe-area-inset-bottom));
+}
+.rank-page .standings{
+  max-height:none!important;overflow:hidden!important;overscroll-behavior:none!important;
+  scrollbar-width:none!important;padding-right:6px
+}
+.rank-page .standings::-webkit-scrollbar{display:none}
+
+/* Footer labels stay fully readable. No marquee, clipping, or ellipsis. */
+.bottom-nav .nav-button{overflow:visible!important}
+.bottom-nav .nav-button span{
+  width:100%;min-height:20px!important;max-height:22px!important;padding:0 1px;
+  display:flex!important;align-items:center;justify-content:center;
+  white-space:normal!important;overflow:visible!important;text-overflow:clip!important;
+  overflow-wrap:normal!important;word-break:normal;line-height:10px!important;font-size:8.5px!important
+}
+@media(max-width:330px){.bottom-nav .nav-button span{font-size:8px!important;line-height:9px!important}}
+
+/* Award scenes are fixed presentations; only long legal and rule copy scrolls inside dialog-body. */
+.modal-backdrop.award-backdrop{overflow:hidden!important}
+/* Daily reward remains above the transparent voyage hit layer and is always tappable. */
+.page-home .daily-ribbon{z-index:5;pointer-events:auto}
