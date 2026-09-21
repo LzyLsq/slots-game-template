@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E2F5054857C5565BB6B537B /* StoreKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51E2C47519D2FC59D5F31DE /* StoreKitTest.framework */; };
+		360B016C5C81069760D1B388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D46B58990983A27C15C9449 /* Foundation.framework */; };
+		3F70591A2DA435D6168F06CF /* StoreKitBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FA9D05843F60EA6D65BF2 /* StoreKitBackend.swift */; };
+		404196EABB214F88F2A9FE9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 082AA5000D2FB0B00B062013 /* AppDelegate.m */; };
+		4D8E758753CA610F6ACED2C8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899C067C4E538DC1CAB5F948 /* StoreKit.framework */; };
+		4E04BD46F16E4FBBC86BF89C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 46150660AD2F4177405E891B /* PrivacyInfo.xcprivacy */; };
+		58C686C5843BCDD6561C23EE /* H5LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD77629A6AA33E4365091CF /* H5LocalServer.m */; };
+		5CDDE2BE92C01E7918B35E0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94502971DE0A7ADA869C5858 /* Assets.xcassets */; };
+		8785559215F8880513975A92 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF45E7F8B3A2BA344F2A6A6D /* WebKit.framework */; };
+		8EC1F91DDE80E0C26AB1BFEE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C42A64449AB26FF71D2FE5 /* XCTest.framework */; };
+		92DF94C833959A5AE3C56F50 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C5C7A7C29E0793932D4F3B /* AuthenticationServices.framework */; };
+		9BBCC5B320A8DC1D546B73F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 833934024E80333E1EE1EA0F /* main.m */; };
+		C675D6ABA8A1612D00246173 /* AppleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DBA9D76D131798D2C06806 /* AppleLogin.m */; };
+		D7CDA05C7E12B62BF450F867 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D46B58990983A27C15C9449 /* Foundation.framework */; };
+		DD196C032F7B3212DA54586E /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F35C0C57317179F804C944D /* LocalStore.m */; };
+		E3CDBF35225A08DE02C5A358 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59A20BF47A72C55C1005A98 /* UIKit.framework */; };
+		E461F83B209051814631DBDE /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C963A1BB996125920D6B4728 /* StoreTests.swift */; };
+		FAB03DF70A1E73F440C34991 /* FortuneTreasury.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 73D8923ACE62963A08E30BFE /* FortuneTreasury.storekit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB9CF2C74FE7351D3FCF22B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 888AEDC191D1949CBBF0FF6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53F75474ED83A562124468D9;
+			remoteInfo = FortuneTreasuryH5Host;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		082AA5000D2FB0B00B062013 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		14C37C350333ABFB42D37410 /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
+		1F35C0C57317179F804C944D /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+		21140AEF03DAFD750C486761 /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
+		46150660AD2F4177405E891B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		4D46B58990983A27C15C9449 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		709FA9D05843F60EA6D65BF2 /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
+		73D8923ACE62963A08E30BFE /* FortuneTreasury.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = FortuneTreasury.storekit; sourceTree = "<group>"; };
+		7E719519111B7A5921019EC5 /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		80DBA9D76D131798D2C06806 /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
+		833934024E80333E1EE1EA0F /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84822DF809F640D73EC925CE /* FortuneTreasuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortuneTreasuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C42A64449AB26FF71D2FE5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		899C067C4E538DC1CAB5F948 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		89E2F6F7F2E7468C97AAB75F /* FortuneTreasuryH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortuneTreasuryH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94502971DE0A7ADA869C5858 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DD77629A6AA33E4365091CF /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
+		B2BBBAC35FAA5AEB6EFA9459 /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		B59A20BF47A72C55C1005A98 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C854E9AD04D3B9654C480CDE /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C963A1BB996125920D6B4728 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		E02AB434AFFF8ED0B705539C /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
+		E7C5C7A7C29E0793932D4F3B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		E8899281AB67826DAFC1C97A /* FortuneTreasury.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = FortuneTreasury.entitlements; sourceTree = "<group>"; };
+		F51E2C47519D2FC59D5F31DE /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
+		FF45E7F8B3A2BA344F2A6A6D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A12E81A54C0478793F7FFE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				360B016C5C81069760D1B388 /* Foundation.framework in Frameworks */,
+				E3CDBF35225A08DE02C5A358 /* UIKit.framework in Frameworks */,
+				8785559215F8880513975A92 /* WebKit.framework in Frameworks */,
+				4D8E758753CA610F6ACED2C8 /* StoreKit.framework in Frameworks */,
+				92DF94C833959A5AE3C56F50 /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D542C105D29585FD2B9E4E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7CDA05C7E12B62BF450F867 /* Foundation.framework in Frameworks */,
+				8EC1F91DDE80E0C26AB1BFEE /* XCTest.framework in Frameworks */,
+				0E2F5054857C5565BB6B537B /* StoreKitTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E1050DC44AAE6BE1FEA78AD = {
+			isa = PBXGroup;
+			children = (
+				BCD8E2E94BA063A13510D184 /* Products */,
+				B55766C8C81920379171A005 /* Frameworks */,
+				B17D99D40F3E0A7D4B70D78A /* App */,
+			);
+			sourceTree = "<group>";
+		};
+		B17D99D40F3E0A7D4B70D78A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				833934024E80333E1EE1EA0F /* main.m */,
+				082AA5000D2FB0B00B062013 /* AppDelegate.m */,
+				9DD77629A6AA33E4365091CF /* H5LocalServer.m */,
+				80DBA9D76D131798D2C06806 /* AppleLogin.m */,
+				1F35C0C57317179F804C944D /* LocalStore.m */,
+				709FA9D05843F60EA6D65BF2 /* StoreKitBackend.swift */,
+				C854E9AD04D3B9654C480CDE /* AppDelegate.h */,
+				21140AEF03DAFD750C486761 /* H5LocalServer.h */,
+				E02AB434AFFF8ED0B705539C /* AppleLogin.h */,
+				B2BBBAC35FAA5AEB6EFA9459 /* LocalStore.h */,
+				E8899281AB67826DAFC1C97A /* FortuneTreasury.entitlements */,
+				7E719519111B7A5921019EC5 /* Info.plist.in */,
+				14C37C350333ABFB42D37410 /* CopyWebAssets.sh */,
+				94502971DE0A7ADA869C5858 /* Assets.xcassets */,
+				46150660AD2F4177405E891B /* PrivacyInfo.xcprivacy */,
+				C963A1BB996125920D6B4728 /* StoreTests.swift */,
+				73D8923ACE62963A08E30BFE /* FortuneTreasury.storekit */,
+			);
+			name = App;
+			path = "../F19_H5/ios-wrapper/App";
+			sourceTree = "<group>";
+		};
+		B55766C8C81920379171A005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F32F4336A7985E7D82B7895E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCD8E2E94BA063A13510D184 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89E2F6F7F2E7468C97AAB75F /* FortuneTreasuryH5Host.app */,
+				84822DF809F640D73EC925CE /* FortuneTreasuryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F32F4336A7985E7D82B7895E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D46B58990983A27C15C9449 /* Foundation.framework */,
+				B59A20BF47A72C55C1005A98 /* UIKit.framework */,
+				FF45E7F8B3A2BA344F2A6A6D /* WebKit.framework */,
+				899C067C4E538DC1CAB5F948 /* StoreKit.framework */,
+				E7C5C7A7C29E0793932D4F3B /* AuthenticationServices.framework */,
+				84C42A64449AB26FF71D2FE5 /* XCTest.framework */,
+				F51E2C47519D2FC59D5F31DE /* StoreKitTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53F75474ED83A562124468D9 /* FortuneTreasuryH5Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD89A0C4244C88A8EAFA343 /* Build configuration list for PBXNativeTarget "FortuneTreasuryH5Host" */;
+			buildPhases = (
+				F98B0898822805F8EFC8F160 /* Sources */,
+				8A12E81A54C0478793F7FFE4 /* Frameworks */,
+				185D10E237022F33F114E9BC /* Resources */,
+				E1C5462A76A03A4876920043 /* Copy bundled H5 resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FortuneTreasuryH5Host;
+			productName = FortuneTreasuryH5Host;
+			productReference = 89E2F6F7F2E7468C97AAB75F /* FortuneTreasuryH5Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC7601B2E8CD463D4B555AB2 /* FortuneTreasuryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379492EC064AF385F55B0361 /* Build configuration list for PBXNativeTarget "FortuneTreasuryTests" */;
+			buildPhases = (
+				FCF59A56FE03F8AB23DA7AFD /* Sources */,
+				D542C105D29585FD2B9E4E41 /* Frameworks */,
+				BE029F7CFE8509984C0F4986 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEE5627ED325E811C810D3C4 /* PBXTargetDependency */,
+			);
+			name = FortuneTreasuryTests;
+			productName = FortuneTreasuryTests;
+			productReference = 84822DF809F640D73EC925CE /* FortuneTreasuryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		888AEDC191D1949CBBF0FF6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 1C3E850394C102DF571253EC /* Build configuration list for PBXProject "FortuneTreasuryH5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E1050DC44AAE6BE1FEA78AD;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BCD8E2E94BA063A13510D184 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53F75474ED83A562124468D9 /* FortuneTreasuryH5Host */,
+				BC7601B2E8CD463D4B555AB2 /* FortuneTreasuryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		185D10E237022F33F114E9BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDDE2BE92C01E7918B35E0E /* Assets.xcassets in Resources */,
+				4E04BD46F16E4FBBC86BF89C /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE029F7CFE8509984C0F4986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB03DF70A1E73F440C34991 /* FortuneTreasury.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1C5462A76A03A4876920043 /* Copy bundled H5 resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled H5 resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\ntest -n \"${TARGET_BUILD_DIR:-}\" && test \"${WRAPPER_NAME:-}\" = \"FortuneTreasuryH5.app\"\n/bin/sh \"${SRCROOT}/../F19_H5/ios-wrapper/App/CopyWebAssets.sh\" \"${SRCROOT}/../F19_H5\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F98B0898822805F8EFC8F160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BBCC5B320A8DC1D546B73F0 /* main.m in Sources */,
+				404196EABB214F88F2A9FE9F /* AppDelegate.m in Sources */,
+				58C686C5843BCDD6561C23EE /* H5LocalServer.m in Sources */,
+				C675D6ABA8A1612D00246173 /* AppleLogin.m in Sources */,
+				DD196C032F7B3212DA54586E /* LocalStore.m in Sources */,
+				3F70591A2DA435D6168F06CF /* StoreKitBackend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCF59A56FE03F8AB23DA7AFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E461F83B209051814631DBDE /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEE5627ED325E811C810D3C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FortuneTreasuryH5Host;
+			target = 53F75474ED83A562124468D9 /* FortuneTreasuryH5Host */;
+			targetProxy = AB9CF2C74FE7351D3FCF22B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		31E08E903819F5F03E76E561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F19_H5/ios-wrapper/App/FortuneTreasury.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F19_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.fortunetreasuryh5;
+				PRODUCT_MODULE_NAME = FortuneTreasuryH5;
+				PRODUCT_NAME = FortuneTreasuryH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "FortuneTreasuryH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68F3C02523216525B8EC38B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.fortunetreasuryh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortuneTreasuryH5.app/FortuneTreasuryH5";
+			};
+			name = Debug;
+		};
+		73A01EC7323760561525E598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7AD01856F66BD04CB9A3347E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F19_H5/ios-wrapper/App/FortuneTreasury.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F19_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.fortunetreasuryh5;
+				PRODUCT_MODULE_NAME = FortuneTreasuryH5;
+				PRODUCT_NAME = FortuneTreasuryH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "FortuneTreasuryH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0746843D90D481302950E70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.fortunetreasuryh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortuneTreasuryH5.app/FortuneTreasuryH5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8BF1A76BDF1A1F7BF662500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C3E850394C102DF571253EC /* Build configuration list for PBXProject "FortuneTreasuryH5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73A01EC7323760561525E598 /* Debug */,
+				D8BF1A76BDF1A1F7BF662500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379492EC064AF385F55B0361 /* Build configuration list for PBXNativeTarget "FortuneTreasuryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0746843D90D481302950E70 /* Release */,
+				68F3C02523216525B8EC38B9 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD89A0C4244C88A8EAFA343 /* Build configuration list for PBXNativeTarget "FortuneTreasuryH5Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AD01856F66BD04CB9A3347E /* Release */,
+				31E08E903819F5F03E76E561 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 888AEDC191D1949CBBF0FF6C /* Project object */;
+}

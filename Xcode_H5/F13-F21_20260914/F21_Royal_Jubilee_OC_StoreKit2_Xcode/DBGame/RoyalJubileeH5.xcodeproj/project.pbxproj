@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F502A2B76FEECA7AE2C7E63 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A9DB3E67092788AD5677D546 /* PrivacyInfo.xcprivacy */; };
+		3328D0852E48C52C8172A24B /* AppleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E610058B1D231D64773706 /* AppleLogin.m */; };
+		708068461B13D82944B21780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67626231B3A0B4446CA2720F /* AppDelegate.m */; };
+		744DAF515B39C44416F00DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC89380D39934D471A4C9241 /* Assets.xcassets */; };
+		860D7CD86097E4E796CE4EEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351760E7CB7457732E1A77A9 /* Foundation.framework */; };
+		868091DC730803725D8061DD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7BB4444764E99D0E7D49C8 /* StoreKit.framework */; };
+		989BF471BAF875E9A5024B2C /* RoyalJubilee.storekit in Resources */ = {isa = PBXBuildFile; fileRef = C10D83D83641E1E54939657A /* RoyalJubilee.storekit */; };
+		9AECBBC3DFB0181EEAC708C5 /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6988BD3CA4B4B91298E70E57 /* LocalStore.m */; };
+		A9D23CAC6C250AD058B42971 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351760E7CB7457732E1A77A9 /* Foundation.framework */; };
+		B238FCC3A5B425F6156E909B /* StoreKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868843100F7AAB67DD31F61F /* StoreKitTest.framework */; };
+		B635A86ABEFCB7E0B866C9A1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF82F29BF27B7DD0E5DD1AE2 /* WebKit.framework */; };
+		B64CE3641810761FEB7B8B06 /* StoreKitBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F160044E6AF1CD574F44F15D /* StoreKitBackend.swift */; };
+		CCC7B63C41AA96609E234273 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510E5A3B9E089D409A516301 /* AuthenticationServices.framework */; };
+		DF0AC2AFCC3AC740F30446CD /* H5LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6B405453003A71703B8C8E /* H5LocalServer.m */; };
+		E676BCDE44BCD723790E4293 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB123A039455FA0D3CB28A10 /* XCTest.framework */; };
+		EBF6D349830A6C91FB7846E1 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E033F35A2EC46A6C25E7B1 /* StoreTests.swift */; };
+		EFB3B2DA5D4E2634CB1E97DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6A7B1C14886EA77537E16 /* main.m */; };
+		FC529F90565AAC3CAD843AD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDA8C7AA67AD27E7A260F1 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB3ADA145F6808B6AAAE12F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CAED34153441E2967433E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 461D9C3145BEF603864D987C;
+			remoteInfo = RoyalJubileeH5Host;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17E033F35A2EC46A6C25E7B1 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		311F46A5FD86B533790CB2AD /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		34EA419D9AD407AD96E7E7AE /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		351760E7CB7457732E1A77A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		36E610058B1D231D64773706 /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
+		4B7BB4444764E99D0E7D49C8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		510E5A3B9E089D409A516301 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		536DCD07B886EB437E1C9D1D /* RoyalJubileeH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoyalJubileeH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFDA8C7AA67AD27E7A260F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		67626231B3A0B4446CA2720F /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6988BD3CA4B4B91298E70E57 /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+		6BB09BCA2DF693956EA0C7CA /* RoyalJubilee.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = RoyalJubilee.entitlements; sourceTree = "<group>"; };
+		7D2FB27CACD0AF786767F6BE /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
+		807A1067FC5021CA1D5A600B /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
+		868843100F7AAB67DD31F61F /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
+		9DD6A7B1C14886EA77537E16 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9DB3E67092788AD5677D546 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		AC89380D39934D471A4C9241 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF82F29BF27B7DD0E5DD1AE2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		C10D83D83641E1E54939657A /* RoyalJubilee.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = RoyalJubilee.storekit; sourceTree = "<group>"; };
+		CB123A039455FA0D3CB28A10 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CF645C97C713FC9BEDF41408 /* RoyalJubileeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoyalJubileeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06E930DAAF90D1447921A52 /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		E35BFED870D658C7886B7EFA /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
+		F160044E6AF1CD574F44F15D /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
+		FF6B405453003A71703B8C8E /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2165F6577402435DCCB86DA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D23CAC6C250AD058B42971 /* Foundation.framework in Frameworks */,
+				E676BCDE44BCD723790E4293 /* XCTest.framework in Frameworks */,
+				B238FCC3A5B425F6156E909B /* StoreKitTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9295654AC58CCE92E2EE2981 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860D7CD86097E4E796CE4EEC /* Foundation.framework in Frameworks */,
+				FC529F90565AAC3CAD843AD4 /* UIKit.framework in Frameworks */,
+				B635A86ABEFCB7E0B866C9A1 /* WebKit.framework in Frameworks */,
+				868091DC730803725D8061DD /* StoreKit.framework in Frameworks */,
+				CCC7B63C41AA96609E234273 /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29AE8CC0B2E1817465D0D048 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9DD6A7B1C14886EA77537E16 /* main.m */,
+				67626231B3A0B4446CA2720F /* AppDelegate.m */,
+				FF6B405453003A71703B8C8E /* H5LocalServer.m */,
+				36E610058B1D231D64773706 /* AppleLogin.m */,
+				6988BD3CA4B4B91298E70E57 /* LocalStore.m */,
+				F160044E6AF1CD574F44F15D /* StoreKitBackend.swift */,
+				34EA419D9AD407AD96E7E7AE /* AppDelegate.h */,
+				807A1067FC5021CA1D5A600B /* H5LocalServer.h */,
+				E35BFED870D658C7886B7EFA /* AppleLogin.h */,
+				D06E930DAAF90D1447921A52 /* LocalStore.h */,
+				6BB09BCA2DF693956EA0C7CA /* RoyalJubilee.entitlements */,
+				311F46A5FD86B533790CB2AD /* Info.plist.in */,
+				7D2FB27CACD0AF786767F6BE /* CopyWebAssets.sh */,
+				AC89380D39934D471A4C9241 /* Assets.xcassets */,
+				A9DB3E67092788AD5677D546 /* PrivacyInfo.xcprivacy */,
+				17E033F35A2EC46A6C25E7B1 /* StoreTests.swift */,
+				C10D83D83641E1E54939657A /* RoyalJubilee.storekit */,
+			);
+			name = App;
+			path = "../F21_H5/ios-wrapper/App";
+			sourceTree = "<group>";
+		};
+		57E3DEE0500D9BE91CD378FF = {
+			isa = PBXGroup;
+			children = (
+				60BEA4F349D3A8D947550479 /* Products */,
+				CCD0FF1810C9CF32A367F687 /* Frameworks */,
+				29AE8CC0B2E1817465D0D048 /* App */,
+			);
+			sourceTree = "<group>";
+		};
+		60BEA4F349D3A8D947550479 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				536DCD07B886EB437E1C9D1D /* RoyalJubileeH5Host.app */,
+				CF645C97C713FC9BEDF41408 /* RoyalJubileeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9049466D94D0243914D1D540 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				351760E7CB7457732E1A77A9 /* Foundation.framework */,
+				5AFDA8C7AA67AD27E7A260F1 /* UIKit.framework */,
+				AF82F29BF27B7DD0E5DD1AE2 /* WebKit.framework */,
+				4B7BB4444764E99D0E7D49C8 /* StoreKit.framework */,
+				510E5A3B9E089D409A516301 /* AuthenticationServices.framework */,
+				CB123A039455FA0D3CB28A10 /* XCTest.framework */,
+				868843100F7AAB67DD31F61F /* StoreKitTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CCD0FF1810C9CF32A367F687 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9049466D94D0243914D1D540 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		461D9C3145BEF603864D987C /* RoyalJubileeH5Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91EEA598A98DA6326B5FF1B2 /* Build configuration list for PBXNativeTarget "RoyalJubileeH5Host" */;
+			buildPhases = (
+				A1EE7824AB444EDCBAEC137B /* Sources */,
+				9295654AC58CCE92E2EE2981 /* Frameworks */,
+				1C5DE1095F21B3656C6C64C1 /* Resources */,
+				E5F0538A6E44397D4547A73E /* Copy bundled H5 resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoyalJubileeH5Host;
+			productName = RoyalJubileeH5Host;
+			productReference = 536DCD07B886EB437E1C9D1D /* RoyalJubileeH5Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC8B932450C4F7514EAA1D52 /* RoyalJubileeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833902C1C622CB4F030C69D8 /* Build configuration list for PBXNativeTarget "RoyalJubileeTests" */;
+			buildPhases = (
+				62C384EB8A4E579C48677A73 /* Sources */,
+				2165F6577402435DCCB86DA7 /* Frameworks */,
+				6F10BB90EBC694BE2183E7AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B366EFF86BC74D6BD9B5484C /* PBXTargetDependency */,
+			);
+			name = RoyalJubileeTests;
+			productName = RoyalJubileeTests;
+			productReference = CF645C97C713FC9BEDF41408 /* RoyalJubileeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CAED34153441E2967433E14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = A06556D4BC1A9E6DA29AE467 /* Build configuration list for PBXProject "RoyalJubileeH5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57E3DEE0500D9BE91CD378FF;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 60BEA4F349D3A8D947550479 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				461D9C3145BEF603864D987C /* RoyalJubileeH5Host */,
+				BC8B932450C4F7514EAA1D52 /* RoyalJubileeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C5DE1095F21B3656C6C64C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744DAF515B39C44416F00DEB /* Assets.xcassets in Resources */,
+				1F502A2B76FEECA7AE2C7E63 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F10BB90EBC694BE2183E7AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989BF471BAF875E9A5024B2C /* RoyalJubilee.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E5F0538A6E44397D4547A73E /* Copy bundled H5 resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled H5 resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\ntest -n \"${TARGET_BUILD_DIR:-}\" && test \"${WRAPPER_NAME:-}\" = \"RoyalJubileeH5.app\"\n/bin/sh \"${SRCROOT}/../F21_H5/ios-wrapper/App/CopyWebAssets.sh\" \"${SRCROOT}/../F21_H5\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62C384EB8A4E579C48677A73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBF6D349830A6C91FB7846E1 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EE7824AB444EDCBAEC137B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB3B2DA5D4E2634CB1E97DE /* main.m in Sources */,
+				708068461B13D82944B21780 /* AppDelegate.m in Sources */,
+				DF0AC2AFCC3AC740F30446CD /* H5LocalServer.m in Sources */,
+				3328D0852E48C52C8172A24B /* AppleLogin.m in Sources */,
+				9AECBBC3DFB0181EEAC708C5 /* LocalStore.m in Sources */,
+				B64CE3641810761FEB7B8B06 /* StoreKitBackend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B366EFF86BC74D6BD9B5484C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RoyalJubileeH5Host;
+			target = 461D9C3145BEF603864D987C /* RoyalJubileeH5Host */;
+			targetProxy = BB3ADA145F6808B6AAAE12F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		31219A503A477D13DAED9B07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3E1ACDE5ED66A408964C0FF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F21_H5/ios-wrapper/App/RoyalJubilee.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F21_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.royaljubileeh5;
+				PRODUCT_MODULE_NAME = RoyalJubileeH5;
+				PRODUCT_NAME = RoyalJubileeH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RoyalJubileeH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		477FB81D11D6B73F0EA11C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4849D7D692C960DFC70423DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.royaljubileeh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoyalJubileeH5.app/RoyalJubileeH5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5E467E6DD45D43B4BD27078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F21_H5/ios-wrapper/App/RoyalJubilee.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F21_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.royaljubileeh5;
+				PRODUCT_MODULE_NAME = RoyalJubileeH5;
+				PRODUCT_NAME = RoyalJubileeH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RoyalJubileeH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC08029CC5D979BFACA2A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.royaljubileeh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoyalJubileeH5.app/RoyalJubileeH5";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		833902C1C622CB4F030C69D8 /* Build configuration list for PBXNativeTarget "RoyalJubileeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4849D7D692C960DFC70423DF /* Release */,
+				EC08029CC5D979BFACA2A041 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91EEA598A98DA6326B5FF1B2 /* Build configuration list for PBXNativeTarget "RoyalJubileeH5Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E1ACDE5ED66A408964C0FF6 /* Release */,
+				B5E467E6DD45D43B4BD27078 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A06556D4BC1A9E6DA29AE467 /* Build configuration list for PBXProject "RoyalJubileeH5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31219A503A477D13DAED9B07 /* Debug */,
+				477FB81D11D6B73F0EA11C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CAED34153441E2967433E14 /* Project object */;
+}

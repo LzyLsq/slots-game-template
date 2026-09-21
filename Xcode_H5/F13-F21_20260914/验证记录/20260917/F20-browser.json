@@ -1,0 +1,80 @@
+{
+  "info": {
+    "page": "login",
+    "nodes": [
+      "Canvas"
+    ],
+    "storeAvailable": true
+  },
+  "checks": [
+    "Apple agreement before authorization",
+    "Agreement policy links",
+    "Apple local profile created",
+    "Apple identity persisted",
+    "Apple session resume",
+    "Nickname save",
+    "Nickname readback",
+    "Language persisted",
+    "Four legacy StoreKit products available",
+    "Purchase delivery purse",
+    "Duplicate purchase idempotent purse",
+    "Purchase delivery bullion",
+    "Duplicate purchase idempotent bullion",
+    "Purchase delivery chest",
+    "Duplicate purchase idempotent chest",
+    "Purchase delivery vault",
+    "Duplicate purchase idempotent vault",
+    "No grant for cancelled",
+    "No grant for pending",
+    "No grant for failed",
+    "Debug grants disabled",
+    "Short StoreKit transaction accepted",
+    "Short transaction duplicate rejected",
+    "Daily grant",
+    "Daily duplicate rejected",
+    "Local registration",
+    "Password login",
+    "Guest login",
+    "Guest cannot purchase",
+    "Apple returns to same local account",
+    "Store UI loaded"
+  ],
+  "catalog": [
+    {
+      "id": "com.publisher.goldencanopy.coins.purse",
+      "amount": 10000
+    },
+    {
+      "id": "com.publisher.goldencanopy.coins.bullion",
+      "amount": 55000
+    },
+    {
+      "id": "com.publisher.goldencanopy.coins.chest",
+      "amount": 138000
+    },
+    {
+      "id": "com.publisher.goldencanopy.coins.vault",
+      "amount": 360000
+    }
+  ],
+  "balance": 590910,
+  "cabinets": [
+    "golden-hour",
+    "jade-treasury",
+    "pearl-palace",
+    "ruby-revel"
+  ],
+  "backButton": {
+    "top": 49.749999999999886,
+    "x": 42.16666666666667,
+    "y": 80.41666666666674
+  },
+  "persisted": {
+    "page": "home",
+    "nickname": "新昵称 QA",
+    "appleUserIdentifier": "qa-apple-user"
+  },
+  "errors": [],
+  "failed": [],
+  "note": "Apple and purchase bridges mocked: not a real authorization/payment test. Safe-area insets simulated at 44/34 CSS pixels."
+}

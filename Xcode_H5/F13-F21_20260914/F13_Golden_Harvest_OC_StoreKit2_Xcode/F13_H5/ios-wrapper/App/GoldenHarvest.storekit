@@ -1,0 +1,79 @@
+{
+  "identifier": "F13-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "2000",
+      "localizations": [
+        {
+          "description": "10000 virtual coins. No cash value.",
+          "displayName": "Golden Harvest purse",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.goldenharvest.coins.purse",
+      "referenceName": "purse 10000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "2001",
+      "localizations": [
+        {
+          "description": "55000 virtual coins. No cash value.",
+          "displayName": "Golden Harvest bullion",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.goldenharvest.coins.bullion",
+      "referenceName": "bullion 55000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "2002",
+      "localizations": [
+        {
+          "description": "138000 virtual coins. No cash value.",
+          "displayName": "Golden Harvest chest",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.goldenharvest.coins.chest",
+      "referenceName": "chest 138000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "2003",
+      "localizations": [
+        {
+          "description": "360000 virtual coins. No cash value.",
+          "displayName": "Golden Harvest vault",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.goldenharvest.coins.vault",
+      "referenceName": "vault 360000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

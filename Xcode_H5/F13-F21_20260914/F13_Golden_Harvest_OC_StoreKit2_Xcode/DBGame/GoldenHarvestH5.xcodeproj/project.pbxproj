@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D4A9B77FFD370759E649E5F /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB7D7925987EB4FDCB37E3 /* AuthenticationServices.framework */; };
+		159952173792F40ECCF782AD /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9BF987225326B151D3365 /* LocalStore.m */; };
+		192AA23431F95C7D9564FD5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD494ED9DD920B6DEB88E4F /* UIKit.framework */; };
+		212E66A86A24819E14D6576E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086E70465FE017700FF6A97 /* Foundation.framework */; };
+		2B86C0158FBB2765CA1ED0B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28ACA26D96B4B994BAE39A26 /* XCTest.framework */; };
+		386AB056F511D21DBF5BBAF5 /* StoreKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC44C98DF3E738A529A4F60 /* StoreKitTest.framework */; };
+		3B96A6941A98FA6773A638A1 /* StoreKitBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F86BAF5DCB7D24BB2CC528 /* StoreKitBackend.swift */; };
+		458E78DA01F45C702BEC3EF4 /* AppleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 370EBC8CB3ED61B433DC2782 /* AppleLogin.m */; };
+		509514749C37FB909B6935C2 /* H5LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E02FE13F5CCD3A64E2FE762 /* H5LocalServer.m */; };
+		522FEDFDF2D1DB79E75503EA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6A5B0100F6B87F36AF0DEA /* StoreKit.framework */; };
+		6068859D722E302CE8A1B39D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C3BCBE9DBB0AC5C5E964 /* AppDelegate.m */; };
+		83A10FE137DEA698F817E575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7164A451CBD2C6A5BD3570 /* main.m */; };
+		84B2F51175813589BF4F3B3A /* GoldenHarvest.storekit in Resources */ = {isa = PBXBuildFile; fileRef = D7434B7B9E25D6EB4CAB6BD0 /* GoldenHarvest.storekit */; };
+		B5EB353A9F233A80C7789F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1502A20746CB6735251A5876 /* Assets.xcassets */; };
+		BE59527B1F8106207AE06495 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8B16754E3197C583FB981387 /* PrivacyInfo.xcprivacy */; };
+		C0520E818A58B9CE4322A74C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086E70465FE017700FF6A97 /* Foundation.framework */; };
+		CDC2AD06C00990E1417EF248 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555A1D6225477339DBF1DA8 /* StoreTests.swift */; };
+		E094C9C4795685A71F431913 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD4E5FFAE2E7D9C2C8E56B /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE3C79FE31356D1499D059B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5877815E9DE3BFA1BE6D717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EE48856FD69DD31B0838FDD;
+			remoteInfo = GoldenHarvestH5Host;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0086E70465FE017700FF6A97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1502A20746CB6735251A5876 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenHarvestH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA3833A3A0F190E0DDBBF53 /* GoldenHarvest.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = GoldenHarvest.entitlements; sourceTree = "<group>"; };
+		1F6A5B0100F6B87F36AF0DEA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		28ACA26D96B4B994BAE39A26 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		33F86BAF5DCB7D24BB2CC528 /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
+		370EBC8CB3ED61B433DC2782 /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
+		40EE627C29042DF99DD6CA3D /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		5AFD4E5FFAE2E7D9C2C8E56B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		5E02FE13F5CCD3A64E2FE762 /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
+		6AC44C98DF3E738A529A4F60 /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
+		6C7164A451CBD2C6A5BD3570 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B889C315E2A8587770A6B32 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B16754E3197C583FB981387 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		8F686FFC45001EBC5F5B1B21 /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
+		95BB7D7925987EB4FDCB37E3 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		9A69C3BCBE9DBB0AC5C5E964 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ACD494ED9DD920B6DEB88E4F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B555A1D6225477339DBF1DA8 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		BDF4D154B218881CA57096FB /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		D3B8D028003D44FF68076329 /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
+		D7434B7B9E25D6EB4CAB6BD0 /* GoldenHarvest.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = GoldenHarvest.storekit; sourceTree = "<group>"; };
+		E986BA9BCFFCEEFE0A431F32 /* GoldenHarvestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenHarvestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F867D633A4D61CC42C77A116 /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
+		FBD9BF987225326B151D3365 /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F39AF0B92DDAB2B59705443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0520E818A58B9CE4322A74C /* Foundation.framework in Frameworks */,
+				192AA23431F95C7D9564FD5E /* UIKit.framework in Frameworks */,
+				E094C9C4795685A71F431913 /* WebKit.framework in Frameworks */,
+				522FEDFDF2D1DB79E75503EA /* StoreKit.framework in Frameworks */,
+				0D4A9B77FFD370759E649E5F /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610437E8AA3699ECECE5F49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212E66A86A24819E14D6576E /* Foundation.framework in Frameworks */,
+				2B86C0158FBB2765CA1ED0B4 /* XCTest.framework in Frameworks */,
+				386AB056F511D21DBF5BBAF5 /* StoreKitTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BAB2A957D3196102C334D7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C49E3359DFF1704C121CAA9A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41613314CB9309995874D0AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5Host.app */,
+				E986BA9BCFFCEEFE0A431F32 /* GoldenHarvestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D192AE4B52B81B33F7D0B14 = {
+			isa = PBXGroup;
+			children = (
+				41613314CB9309995874D0AA /* Products */,
+				1BAB2A957D3196102C334D7D /* Frameworks */,
+				AA2278CE5BDE8734437E4ED2 /* App */,
+			);
+			sourceTree = "<group>";
+		};
+		AA2278CE5BDE8734437E4ED2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6C7164A451CBD2C6A5BD3570 /* main.m */,
+				9A69C3BCBE9DBB0AC5C5E964 /* AppDelegate.m */,
+				5E02FE13F5CCD3A64E2FE762 /* H5LocalServer.m */,
+				370EBC8CB3ED61B433DC2782 /* AppleLogin.m */,
+				FBD9BF987225326B151D3365 /* LocalStore.m */,
+				33F86BAF5DCB7D24BB2CC528 /* StoreKitBackend.swift */,
+				7B889C315E2A8587770A6B32 /* AppDelegate.h */,
+				F867D633A4D61CC42C77A116 /* H5LocalServer.h */,
+				D3B8D028003D44FF68076329 /* AppleLogin.h */,
+				BDF4D154B218881CA57096FB /* LocalStore.h */,
+				1DA3833A3A0F190E0DDBBF53 /* GoldenHarvest.entitlements */,
+				40EE627C29042DF99DD6CA3D /* Info.plist.in */,
+				8F686FFC45001EBC5F5B1B21 /* CopyWebAssets.sh */,
+				1502A20746CB6735251A5876 /* Assets.xcassets */,
+				8B16754E3197C583FB981387 /* PrivacyInfo.xcprivacy */,
+				B555A1D6225477339DBF1DA8 /* StoreTests.swift */,
+				D7434B7B9E25D6EB4CAB6BD0 /* GoldenHarvest.storekit */,
+			);
+			name = App;
+			path = "../F13_H5/ios-wrapper/App";
+			sourceTree = "<group>";
+		};
+		C49E3359DFF1704C121CAA9A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0086E70465FE017700FF6A97 /* Foundation.framework */,
+				ACD494ED9DD920B6DEB88E4F /* UIKit.framework */,
+				5AFD4E5FFAE2E7D9C2C8E56B /* WebKit.framework */,
+				1F6A5B0100F6B87F36AF0DEA /* StoreKit.framework */,
+				95BB7D7925987EB4FDCB37E3 /* AuthenticationServices.framework */,
+				28ACA26D96B4B994BAE39A26 /* XCTest.framework */,
+				6AC44C98DF3E738A529A4F60 /* StoreKitTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C8E0DB5C30DFED72331E20C /* GoldenHarvestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54D4E078007EDAA111D7BB74 /* Build configuration list for PBXNativeTarget "GoldenHarvestTests" */;
+			buildPhases = (
+				9CAD3766999072EF5894BE7D /* Sources */,
+				2610437E8AA3699ECECE5F49 /* Frameworks */,
+				8DCE7004BFD82FB3F3A461C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF5ACB268E8F0FEC97C225A /* PBXTargetDependency */,
+			);
+			name = GoldenHarvestTests;
+			productName = GoldenHarvestTests;
+			productReference = E986BA9BCFFCEEFE0A431F32 /* GoldenHarvestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6EE48856FD69DD31B0838FDD /* GoldenHarvestH5Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EA724A2264369D1C855B7A7 /* Build configuration list for PBXNativeTarget "GoldenHarvestH5Host" */;
+			buildPhases = (
+				B24E4A8655373F95AB90FCC0 /* Sources */,
+				0F39AF0B92DDAB2B59705443 /* Frameworks */,
+				C26AB3F2829B7ED420D4D805 /* Resources */,
+				964D81D1EC0C315A545A1F88 /* Copy bundled H5 resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldenHarvestH5Host;
+			productName = GoldenHarvestH5Host;
+			productReference = 1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5877815E9DE3BFA1BE6D717 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 9833C02198090CAFBF3F579C /* Build configuration list for PBXProject "GoldenHarvestH5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D192AE4B52B81B33F7D0B14;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 41613314CB9309995874D0AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EE48856FD69DD31B0838FDD /* GoldenHarvestH5Host */,
+				3C8E0DB5C30DFED72331E20C /* GoldenHarvestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DCE7004BFD82FB3F3A461C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B2F51175813589BF4F3B3A /* GoldenHarvest.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C26AB3F2829B7ED420D4D805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5EB353A9F233A80C7789F2D /* Assets.xcassets in Resources */,
+				BE59527B1F8106207AE06495 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		964D81D1EC0C315A545A1F88 /* Copy bundled H5 resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled H5 resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\ntest -n \"${TARGET_BUILD_DIR:-}\" && test \"${WRAPPER_NAME:-}\" = \"GoldenHarvestH5.app\"\n/bin/sh \"${SRCROOT}/../F13_H5/ios-wrapper/App/CopyWebAssets.sh\" \"${SRCROOT}/../F13_H5\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CAD3766999072EF5894BE7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC2AD06C00990E1417EF248 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24E4A8655373F95AB90FCC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A10FE137DEA698F817E575 /* main.m in Sources */,
+				6068859D722E302CE8A1B39D /* AppDelegate.m in Sources */,
+				509514749C37FB909B6935C2 /* H5LocalServer.m in Sources */,
+				458E78DA01F45C702BEC3EF4 /* AppleLogin.m in Sources */,
+				159952173792F40ECCF782AD /* LocalStore.m in Sources */,
+				3B96A6941A98FA6773A638A1 /* StoreKitBackend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CF5ACB268E8F0FEC97C225A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoldenHarvestH5Host;
+			target = 6EE48856FD69DD31B0838FDD /* GoldenHarvestH5Host */;
+			targetProxy = FE3C79FE31356D1499D059B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0119F40138EB9E5FD0A8AE90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		56426C0038BDAB27DD0E7065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F13_H5/ios-wrapper/App/GoldenHarvest.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F13_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5;
+				PRODUCT_MODULE_NAME = GoldenHarvestH5;
+				PRODUCT_NAME = GoldenHarvestH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GoldenHarvestH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE358AE586AD10AE9C50709F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenHarvestH5.app/GoldenHarvestH5";
+			};
+			name = Debug;
+		};
+		D63EC25BBD163C684F10FA03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenHarvestH5.app/GoldenHarvestH5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBB5AC91037BAE896FAA8C5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E2ACD376E09A8775D5902FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F13_H5/ios-wrapper/App/GoldenHarvest.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F13_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5;
+				PRODUCT_MODULE_NAME = GoldenHarvestH5;
+				PRODUCT_NAME = GoldenHarvestH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GoldenHarvestH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EA724A2264369D1C855B7A7 /* Build configuration list for PBXNativeTarget "GoldenHarvestH5Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56426C0038BDAB27DD0E7065 /* Release */,
+				E2ACD376E09A8775D5902FD3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54D4E078007EDAA111D7BB74 /* Build configuration list for PBXNativeTarget "GoldenHarvestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D63EC25BBD163C684F10FA03 /* Release */,
+				AE358AE586AD10AE9C50709F /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9833C02198090CAFBF3F579C /* Build configuration list for PBXProject "GoldenHarvestH5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB5AC91037BAE896FAA8C5C /* Debug */,
+				0119F40138EB9E5FD0A8AE90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5877815E9DE3BFA1BE6D717 /* Project object */;
+}

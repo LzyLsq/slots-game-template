@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33784C0BFAA5676114843A5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D338E9CE40CC482530AA5F /* XCTest.framework */; };
+		42719BDC79A49A2B697E27AC /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B89967B82CA7378343CCBB /* AuthenticationServices.framework */; };
+		5C4BF3F88797E4EDF7709786 /* StoreKitBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F8D6A6A3238055A03EC13 /* StoreKitBackend.swift */; };
+		6DEEA42C8428817C7F47CB7C /* HoneyParade.storekit in Resources */ = {isa = PBXBuildFile; fileRef = F7FDCD2B0FE39F01AEC3F918 /* HoneyParade.storekit */; };
+		7EE0DA8E3E8A2B4052E910A9 /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0FE435CA1C85937DEA8A38 /* LocalStore.m */; };
+		895E4F5858A0CF14B6F3CBCC /* AppleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6878B08FC894F3F7E7184474 /* AppleLogin.m */; };
+		8BEA696C6AAE6FA75BDCFE13 /* StoreKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D229D17FF366FEF16B12813 /* StoreKitTest.framework */; };
+		AB41D8EF11E49BD49ED3CCCD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 80D20A22C8372BD69083588C /* PrivacyInfo.xcprivacy */; };
+		B1353E3D933A01494F6CBDF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE542E2D1CC50F11CDA7D33C /* Foundation.framework */; };
+		B1708CCD1DA1A4E4CFDBC1FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE542E2D1CC50F11CDA7D33C /* Foundation.framework */; };
+		B80F8CB62FC1A5AB4C1846C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA0489150FAFAA7C25B8A3 /* AppDelegate.m */; };
+		B92DFD79E2D5B5CEF84EE094 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45530CF20E803F38EF2A677 /* WebKit.framework */; };
+		C8D1EFFD10FFFE595C200185 /* H5LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 902F84A3ED66C9DDCBDD59E1 /* H5LocalServer.m */; };
+		DF09245E7E2A77D9DB5E1607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6AFD5B16DAD1026CE6FD01 /* Assets.xcassets */; };
+		E2B7B7197A8D0B22A1DEF2F7 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE3CB13D215A0E4D22D4B3 /* StoreTests.swift */; };
+		EAC91D95D1FCA0C377C8423C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC92F449E5E1131034F079 /* main.m */; };
+		F41E85531DBB3A1F50F04593 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDC91E91DDB94A0F4945335 /* StoreKit.framework */; };
+		F8DD02708B628FC6620F9533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853E1519FD4DAEF1323B8B9C /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04708D2A2B20DA04D2BCFCD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCD6B5083477DF98589255EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 910A7F31E34938229D21A5E8;
+			remoteInfo = HoneyParadeH5Host;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03D79C78FA1914888BA5E200 /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
+		0B4A2E5E75CD34AEE99169CC /* HoneyParadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoneyParadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ECA0489150FAFAA7C25B8A3 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D229D17FF366FEF16B12813 /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
+		1E7A1AF5BD459A343173DD45 /* HoneyParadeH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyParadeH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC639ACC47772B59D4176DF /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		249F8D6A6A3238055A03EC13 /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
+		44D613BF27843C417896B792 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		45789B3F53B5454B2A1194A9 /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		5B0FE435CA1C85937DEA8A38 /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+		5CBE3CB13D215A0E4D22D4B3 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		6878B08FC894F3F7E7184474 /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
+		6DE0298FBB2A7801E950670A /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
+		80D20A22C8372BD69083588C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		853E1519FD4DAEF1323B8B9C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		85D338E9CE40CC482530AA5F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9006CBC59DBEBD9386366B6C /* HoneyParade.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = HoneyParade.entitlements; sourceTree = "<group>"; };
+		902F84A3ED66C9DDCBDD59E1 /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
+		9F6AFD5B16DAD1026CE6FD01 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A45530CF20E803F38EF2A677 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		AE542E2D1CC50F11CDA7D33C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B5B89967B82CA7378343CCBB /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		B779F493C03663082D36B10A /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
+		DCDC91E91DDB94A0F4945335 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		EAFC92F449E5E1131034F079 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7FDCD2B0FE39F01AEC3F918 /* HoneyParade.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = HoneyParade.storekit; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69F23D75F7A56A78AE8D5674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1353E3D933A01494F6CBDF2 /* Foundation.framework in Frameworks */,
+				F8DD02708B628FC6620F9533 /* UIKit.framework in Frameworks */,
+				B92DFD79E2D5B5CEF84EE094 /* WebKit.framework in Frameworks */,
+				F41E85531DBB3A1F50F04593 /* StoreKit.framework in Frameworks */,
+				42719BDC79A49A2B697E27AC /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B08CC689A271118452CDB93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1708CCD1DA1A4E4CFDBC1FE /* Foundation.framework in Frameworks */,
+				33784C0BFAA5676114843A5B /* XCTest.framework in Frameworks */,
+				8BEA696C6AAE6FA75BDCFE13 /* StoreKitTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14248BECF70521EAA7E9F4B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2A91ECC3EACC48D3E8ABE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAF2A91ECC3EACC48D3E8ABE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AE542E2D1CC50F11CDA7D33C /* Foundation.framework */,
+				853E1519FD4DAEF1323B8B9C /* UIKit.framework */,
+				A45530CF20E803F38EF2A677 /* WebKit.framework */,
+				DCDC91E91DDB94A0F4945335 /* StoreKit.framework */,
+				B5B89967B82CA7378343CCBB /* AuthenticationServices.framework */,
+				85D338E9CE40CC482530AA5F /* XCTest.framework */,
+				1D229D17FF366FEF16B12813 /* StoreKitTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CBB4BB92137C0E758162EDAA = {
+			isa = PBXGroup;
+			children = (
+				CE54D8F58E4A336F40A85188 /* Products */,
+				14248BECF70521EAA7E9F4B0 /* Frameworks */,
+				F546A7FFAF5B07AD71EB0ABD /* App */,
+			);
+			sourceTree = "<group>";
+		};
+		CE54D8F58E4A336F40A85188 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E7A1AF5BD459A343173DD45 /* HoneyParadeH5Host.app */,
+				0B4A2E5E75CD34AEE99169CC /* HoneyParadeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F546A7FFAF5B07AD71EB0ABD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC92F449E5E1131034F079 /* main.m */,
+				0ECA0489150FAFAA7C25B8A3 /* AppDelegate.m */,
+				902F84A3ED66C9DDCBDD59E1 /* H5LocalServer.m */,
+				6878B08FC894F3F7E7184474 /* AppleLogin.m */,
+				5B0FE435CA1C85937DEA8A38 /* LocalStore.m */,
+				249F8D6A6A3238055A03EC13 /* StoreKitBackend.swift */,
+				44D613BF27843C417896B792 /* AppDelegate.h */,
+				6DE0298FBB2A7801E950670A /* H5LocalServer.h */,
+				B779F493C03663082D36B10A /* AppleLogin.h */,
+				45789B3F53B5454B2A1194A9 /* LocalStore.h */,
+				9006CBC59DBEBD9386366B6C /* HoneyParade.entitlements */,
+				1EC639ACC47772B59D4176DF /* Info.plist.in */,
+				03D79C78FA1914888BA5E200 /* CopyWebAssets.sh */,
+				9F6AFD5B16DAD1026CE6FD01 /* Assets.xcassets */,
+				80D20A22C8372BD69083588C /* PrivacyInfo.xcprivacy */,
+				5CBE3CB13D215A0E4D22D4B3 /* StoreTests.swift */,
+				F7FDCD2B0FE39F01AEC3F918 /* HoneyParade.storekit */,
+			);
+			name = App;
+			path = "../F15_H5/ios-wrapper/App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		481EC46BF667890A9282C2FC /* HoneyParadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F52D194D88A3C698ED1C31BF /* Build configuration list for PBXNativeTarget "HoneyParadeTests" */;
+			buildPhases = (
+				1E94EA75E147314BB1196D4B /* Sources */,
+				7B08CC689A271118452CDB93 /* Frameworks */,
+				C05F6DD1D4E854545E6D43C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C45A67C037898C99E3BC467 /* PBXTargetDependency */,
+			);
+			name = HoneyParadeTests;
+			productName = HoneyParadeTests;
+			productReference = 0B4A2E5E75CD34AEE99169CC /* HoneyParadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		910A7F31E34938229D21A5E8 /* HoneyParadeH5Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61FC1765AB7AB9D5CEBD8BD7 /* Build configuration list for PBXNativeTarget "HoneyParadeH5Host" */;
+			buildPhases = (
+				7186B4E7127DC63EA75B1C43 /* Sources */,
+				69F23D75F7A56A78AE8D5674 /* Frameworks */,
+				F3EFE6D08C069A649A0390DA /* Resources */,
+				F1161ACCECB275DF919C40C8 /* Copy bundled H5 resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoneyParadeH5Host;
+			productName = HoneyParadeH5Host;
+			productReference = 1E7A1AF5BD459A343173DD45 /* HoneyParadeH5Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCD6B5083477DF98589255EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 8E4D8561E0727052AD23EE1C /* Build configuration list for PBXProject "HoneyParadeH5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBB4BB92137C0E758162EDAA;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CE54D8F58E4A336F40A85188 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				910A7F31E34938229D21A5E8 /* HoneyParadeH5Host */,
+				481EC46BF667890A9282C2FC /* HoneyParadeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C05F6DD1D4E854545E6D43C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DEEA42C8428817C7F47CB7C /* HoneyParade.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EFE6D08C069A649A0390DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF09245E7E2A77D9DB5E1607 /* Assets.xcassets in Resources */,
+				AB41D8EF11E49BD49ED3CCCD /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F1161ACCECB275DF919C40C8 /* Copy bundled H5 resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled H5 resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\ntest -n \"${TARGET_BUILD_DIR:-}\" && test \"${WRAPPER_NAME:-}\" = \"HoneyParadeH5.app\"\n/bin/sh \"${SRCROOT}/../F15_H5/ios-wrapper/App/CopyWebAssets.sh\" \"${SRCROOT}/../F15_H5\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E94EA75E147314BB1196D4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B7B7197A8D0B22A1DEF2F7 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7186B4E7127DC63EA75B1C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC91D95D1FCA0C377C8423C /* main.m in Sources */,
+				B80F8CB62FC1A5AB4C1846C8 /* AppDelegate.m in Sources */,
+				C8D1EFFD10FFFE595C200185 /* H5LocalServer.m in Sources */,
+				895E4F5858A0CF14B6F3CBCC /* AppleLogin.m in Sources */,
+				7EE0DA8E3E8A2B4052E910A9 /* LocalStore.m in Sources */,
+				5C4BF3F88797E4EDF7709786 /* StoreKitBackend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C45A67C037898C99E3BC467 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HoneyParadeH5Host;
+			target = 910A7F31E34938229D21A5E8 /* HoneyParadeH5Host */;
+			targetProxy = 04708D2A2B20DA04D2BCFCD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		163709981B41BE8DA7DCF629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.honeyparadeh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoneyParadeH5.app/HoneyParadeH5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		684B8BD45F757A6218EEED57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F15_H5/ios-wrapper/App/HoneyParade.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F15_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.honeyparadeh5;
+				PRODUCT_MODULE_NAME = HoneyParadeH5;
+				PRODUCT_NAME = HoneyParadeH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "HoneyParadeH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99056B89B91206E7784AA792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CBE7F483DE4BC6C1C0F94148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F15_H5/ios-wrapper/App/HoneyParade.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F15_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.honeyparadeh5;
+				PRODUCT_MODULE_NAME = HoneyParadeH5;
+				PRODUCT_NAME = HoneyParadeH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "HoneyParadeH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDA3ED60BEFC89F154787270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FF4540AA21D02D0C53791D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.honeyparadeh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoneyParadeH5.app/HoneyParadeH5";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61FC1765AB7AB9D5CEBD8BD7 /* Build configuration list for PBXNativeTarget "HoneyParadeH5Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684B8BD45F757A6218EEED57 /* Release */,
+				CBE7F483DE4BC6C1C0F94148 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E4D8561E0727052AD23EE1C /* Build configuration list for PBXProject "HoneyParadeH5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99056B89B91206E7784AA792 /* Debug */,
+				CDA3ED60BEFC89F154787270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F52D194D88A3C698ED1C31BF /* Build configuration list for PBXNativeTarget "HoneyParadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163709981B41BE8DA7DCF629 /* Release */,
+				FF4540AA21D02D0C53791D52 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCD6B5083477DF98589255EA /* Project object */;
+}

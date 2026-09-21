@@ -1,0 +1,162 @@
+{
+  "game": 21,
+  "baseline": false,
+  "checks": [
+    {
+      "ok": true,
+      "name": "self center",
+      "data": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    {
+      "ok": true,
+      "name": "self top-left",
+      "data": {
+        "before": 1,
+        "after": 2
+      }
+    },
+    {
+      "ok": true,
+      "name": "self top-right",
+      "data": {
+        "before": 2,
+        "after": 3
+      }
+    },
+    {
+      "ok": true,
+      "name": "self bottom-left",
+      "data": {
+        "before": 3,
+        "after": 4
+      }
+    },
+    {
+      "ok": true,
+      "name": "self bottom-right",
+      "data": {
+        "before": 4,
+        "after": 5
+      }
+    },
+    {
+      "ok": true,
+      "name": "self finger drift"
+    },
+    {
+      "ok": true,
+      "name": "self drag cancels"
+    },
+    {
+      "ok": true,
+      "name": "child center",
+      "data": {
+        "before": 0,
+        "after": 1
+      }
+    },
+    {
+      "ok": true,
+      "name": "child top-left",
+      "data": {
+        "before": 1,
+        "after": 2
+      }
+    },
+    {
+      "ok": true,
+      "name": "child top-right",
+      "data": {
+        "before": 2,
+        "after": 3
+      }
+    },
+    {
+      "ok": true,
+      "name": "child bottom-left",
+      "data": {
+        "before": 3,
+        "after": 4
+      }
+    },
+    {
+      "ok": true,
+      "name": "child bottom-right",
+      "data": {
+        "before": 4,
+        "after": 5
+      }
+    },
+    {
+      "ok": true,
+      "name": "child finger drift"
+    },
+    {
+      "ok": true,
+      "name": "child drag cancels"
+    },
+    {
+      "ok": true,
+      "name": "rapid navigation store",
+      "data": {
+        "page": "store",
+        "busy": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "rapid navigation rewards",
+      "data": {
+        "page": "rewards",
+        "busy": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "rapid navigation rank",
+      "data": {
+        "page": "rank",
+        "busy": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "rapid navigation profile",
+      "data": {
+        "page": "profile",
+        "busy": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "rapid navigation home",
+      "data": {
+        "page": "home",
+        "busy": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "mail opens"
+    },
+    {
+      "ok": true,
+      "name": "modal closes"
+    },
+    {
+      "ok": true,
+      "name": "input works after modal closes"
+    },
+    {
+      "ok": true,
+      "name": "no JavaScript errors",
+      "data": []
+    }
+  ],
+  "passed": 23,
+  "total": 23,
+  "errors": []
+}

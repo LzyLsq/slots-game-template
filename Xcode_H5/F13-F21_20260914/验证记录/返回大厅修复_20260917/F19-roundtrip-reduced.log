@@ -1,0 +1,15 @@
+SPIN 0 0
+SETTLED { state: 'idle', frames: 48, modal: undefined }
+SPIN 0 1
+SETTLED { state: 'idle', frames: 80, modal: undefined }
+SPIN 0 2
+SETTLED { state: 'idle', frames: 111, modal: undefined }
+HOME 0 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 161,
+  nodes: [ 'Camera', 'Fortune-Treasury-interface', 'RotateDeviceOverlay' ],
+  memory: 39419435
+}
+ROUNDTRIP PASS 19 loops 1

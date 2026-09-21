@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2631D394C17CEB04F6175BF9 /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF64B5B6052482DA9CCB15E /* LocalStore.m */; };
+		338147CBA8A4A150AC9A5D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718F219EE876BB81CC5C022 /* Assets.xcassets */; };
+		6289D56040810499BA9C546B /* StoreKitBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3AEDD0E7246AA0E434A2A5 /* StoreKitBackend.swift */; };
+		62AB029A941DCFFA65CD6737 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E51B2B7FD11EFA9BA8CC111 /* WebKit.framework */; };
+		633F49C905DE688188B97BF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BC521D516AF7E3856475BF /* UIKit.framework */; };
+		644C662C5C3E59F3069D5C7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF9E6728C561729E4538B09 /* Foundation.framework */; };
+		7822372D8D357EEFFACE5C9C /* AppleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F433DD741642D34435E6528 /* AppleLogin.m */; };
+		79F4B461468A4AD8EF10F59C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF9E6728C561729E4538B09 /* Foundation.framework */; };
+		874B2BBA15A2C1955E521AC1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B1FD55DDF9745E5502F31D /* XCTest.framework */; };
+		907E8137DC166DD29D263C3E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1C1D24313FDAA51C3FBA3B /* StoreKit.framework */; };
+		9F8403C632F15000BEA3EA92 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD73151BBC2865B365DAF1 /* StoreTests.swift */; };
+		ADEE1AC002F61E4B89C62169 /* GildedExpress.storekit in Resources */ = {isa = PBXBuildFile; fileRef = FE1A83A8F4FD28D9BBBDDD75 /* GildedExpress.storekit */; };
+		C4E6148AEDAFFD925B193775 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F43D87C06EF83E8E6F68FB7 /* main.m */; };
+		C66FC416841233F092A5CA67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D774CEB74A3533F77AEF495 /* AppDelegate.m */; };
+		DE2A89D6847EF2BE791D3AB3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B0F1F7F4936543153AAD6F50 /* PrivacyInfo.xcprivacy */; };
+		E744C98F0CB8F07D0C3677B7 /* H5LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0E544A3B19D3FA6A7620C8 /* H5LocalServer.m */; };
+		E76E103E39F1313AF949965F /* StoreKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1BB974803E23EF87F296E0 /* StoreKitTest.framework */; };
+		EB0D99AB80B19313384C93BE /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C78961B3486A713D56A7CC3 /* AuthenticationServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		915B3E09FC42424E06256F3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39ADB8A94C44FB679CC4CE24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 618334BAAFBCE8541ED1649E;
+			remoteInfo = GildedExpressH5Host;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		035F6F1F3CEB6719EDFB6DB2 /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
+		163C303786AE5E15B9C9C2F6 /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
+		1718F219EE876BB81CC5C022 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F43D87C06EF83E8E6F68FB7 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		316465F7DE68B1DDB940E861 /* GildedExpress.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = GildedExpress.entitlements; sourceTree = "<group>"; };
+		31BC521D516AF7E3856475BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		52DD73151BBC2865B365DAF1 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		5E51B2B7FD11EFA9BA8CC111 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		6AF705014073CDE6B5D384E8 /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		85548382C1F40BC57EFCBF46 /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		88D305A65666A7B3D4612302 /* GildedExpressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GildedExpressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF9E6728C561729E4538B09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8C3AEDD0E7246AA0E434A2A5 /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
+		8C78961B3486A713D56A7CC3 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		8F433DD741642D34435E6528 /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
+		9D774CEB74A3533F77AEF495 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A10473F38AD1F11B14A7FAD5 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC8FEE89EF0809BD2627B4A3 /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
+		B0B1FD55DDF9745E5502F31D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B0F1F7F4936543153AAD6F50 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		BC0E544A3B19D3FA6A7620C8 /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
+		CC1C1D24313FDAA51C3FBA3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		DCED94065C97DA1D22812927 /* GildedExpressH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GildedExpressH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1BB974803E23EF87F296E0 /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
+		FBF64B5B6052482DA9CCB15E /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+		FE1A83A8F4FD28D9BBBDDD75 /* GildedExpress.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = GildedExpress.storekit; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26B5BA0A1ABDDB7C2F458DF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				644C662C5C3E59F3069D5C7A /* Foundation.framework in Frameworks */,
+				874B2BBA15A2C1955E521AC1 /* XCTest.framework in Frameworks */,
+				E76E103E39F1313AF949965F /* StoreKitTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E858897F248013791EDAF15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F4B461468A4AD8EF10F59C /* Foundation.framework in Frameworks */,
+				633F49C905DE688188B97BF5 /* UIKit.framework in Frameworks */,
+				62AB029A941DCFFA65CD6737 /* WebKit.framework in Frameworks */,
+				907E8137DC166DD29D263C3E /* StoreKit.framework in Frameworks */,
+				EB0D99AB80B19313384C93BE /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27B8DB40ED26407ECDE1E06C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2F43D87C06EF83E8E6F68FB7 /* main.m */,
+				9D774CEB74A3533F77AEF495 /* AppDelegate.m */,
+				BC0E544A3B19D3FA6A7620C8 /* H5LocalServer.m */,
+				8F433DD741642D34435E6528 /* AppleLogin.m */,
+				FBF64B5B6052482DA9CCB15E /* LocalStore.m */,
+				8C3AEDD0E7246AA0E434A2A5 /* StoreKitBackend.swift */,
+				A10473F38AD1F11B14A7FAD5 /* AppDelegate.h */,
+				AC8FEE89EF0809BD2627B4A3 /* H5LocalServer.h */,
+				163C303786AE5E15B9C9C2F6 /* AppleLogin.h */,
+				85548382C1F40BC57EFCBF46 /* LocalStore.h */,
+				316465F7DE68B1DDB940E861 /* GildedExpress.entitlements */,
+				6AF705014073CDE6B5D384E8 /* Info.plist.in */,
+				035F6F1F3CEB6719EDFB6DB2 /* CopyWebAssets.sh */,
+				1718F219EE876BB81CC5C022 /* Assets.xcassets */,
+				B0F1F7F4936543153AAD6F50 /* PrivacyInfo.xcprivacy */,
+				52DD73151BBC2865B365DAF1 /* StoreTests.swift */,
+				FE1A83A8F4FD28D9BBBDDD75 /* GildedExpress.storekit */,
+			);
+			name = App;
+			path = "../F18_H5/ios-wrapper/App";
+			sourceTree = "<group>";
+		};
+		3FD389D0CB3F95E6A3E629AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCED94065C97DA1D22812927 /* GildedExpressH5Host.app */,
+				88D305A65666A7B3D4612302 /* GildedExpressTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66A31BDEDD8ED4B626927E79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E91BF223705A3ED32A448888 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84BE91246D522C37D9DC0E06 = {
+			isa = PBXGroup;
+			children = (
+				3FD389D0CB3F95E6A3E629AD /* Products */,
+				66A31BDEDD8ED4B626927E79 /* Frameworks */,
+				27B8DB40ED26407ECDE1E06C /* App */,
+			);
+			sourceTree = "<group>";
+		};
+		E91BF223705A3ED32A448888 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8AF9E6728C561729E4538B09 /* Foundation.framework */,
+				31BC521D516AF7E3856475BF /* UIKit.framework */,
+				5E51B2B7FD11EFA9BA8CC111 /* WebKit.framework */,
+				CC1C1D24313FDAA51C3FBA3B /* StoreKit.framework */,
+				8C78961B3486A713D56A7CC3 /* AuthenticationServices.framework */,
+				B0B1FD55DDF9745E5502F31D /* XCTest.framework */,
+				EF1BB974803E23EF87F296E0 /* StoreKitTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		618334BAAFBCE8541ED1649E /* GildedExpressH5Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21BA95EB3DAB90ECFAA09219 /* Build configuration list for PBXNativeTarget "GildedExpressH5Host" */;
+			buildPhases = (
+				42EAD8727775D47FD54AB8EC /* Sources */,
+				8E858897F248013791EDAF15 /* Frameworks */,
+				F0E8DA77DD007FC9A6672841 /* Resources */,
+				4F20A6B3575E51EC93A88E54 /* Copy bundled H5 resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GildedExpressH5Host;
+			productName = GildedExpressH5Host;
+			productReference = DCED94065C97DA1D22812927 /* GildedExpressH5Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63E80731C9AED46D3B9CA69E /* GildedExpressTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13A55FB5EED2027C8C934397 /* Build configuration list for PBXNativeTarget "GildedExpressTests" */;
+			buildPhases = (
+				74A052AD90578101FBEC47EA /* Sources */,
+				26B5BA0A1ABDDB7C2F458DF3 /* Frameworks */,
+				D1B5F8E7EA1FAE227B887386 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E073BFCF82D5AF149D8507E /* PBXTargetDependency */,
+			);
+			name = GildedExpressTests;
+			productName = GildedExpressTests;
+			productReference = 88D305A65666A7B3D4612302 /* GildedExpressTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39ADB8A94C44FB679CC4CE24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = A6FB912D624FAE764EBE1F53 /* Build configuration list for PBXProject "GildedExpressH5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84BE91246D522C37D9DC0E06;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3FD389D0CB3F95E6A3E629AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				618334BAAFBCE8541ED1649E /* GildedExpressH5Host */,
+				63E80731C9AED46D3B9CA69E /* GildedExpressTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1B5F8E7EA1FAE227B887386 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEE1AC002F61E4B89C62169 /* GildedExpress.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0E8DA77DD007FC9A6672841 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338147CBA8A4A150AC9A5D85 /* Assets.xcassets in Resources */,
+				DE2A89D6847EF2BE791D3AB3 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F20A6B3575E51EC93A88E54 /* Copy bundled H5 resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled H5 resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\ntest -n \"${TARGET_BUILD_DIR:-}\" && test \"${WRAPPER_NAME:-}\" = \"GildedExpressH5.app\"\n/bin/sh \"${SRCROOT}/../F18_H5/ios-wrapper/App/CopyWebAssets.sh\" \"${SRCROOT}/../F18_H5\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42EAD8727775D47FD54AB8EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4E6148AEDAFFD925B193775 /* main.m in Sources */,
+				C66FC416841233F092A5CA67 /* AppDelegate.m in Sources */,
+				E744C98F0CB8F07D0C3677B7 /* H5LocalServer.m in Sources */,
+				7822372D8D357EEFFACE5C9C /* AppleLogin.m in Sources */,
+				2631D394C17CEB04F6175BF9 /* LocalStore.m in Sources */,
+				6289D56040810499BA9C546B /* StoreKitBackend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A052AD90578101FBEC47EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8403C632F15000BEA3EA92 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E073BFCF82D5AF149D8507E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GildedExpressH5Host;
+			target = 618334BAAFBCE8541ED1649E /* GildedExpressH5Host */;
+			targetProxy = 915B3E09FC42424E06256F3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10CF485CF2000C5303C196B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F18_H5/ios-wrapper/App/GildedExpress.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F18_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.gildedexpressh5;
+				PRODUCT_MODULE_NAME = GildedExpressH5;
+				PRODUCT_NAME = GildedExpressH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GildedExpressH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C0CBD2FC64EB05D0556C33C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5FC9DA154208F967C910F119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		87DBC4E827355BA770AACBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.gildedexpressh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GildedExpressH5.app/GildedExpressH5";
+			};
+			name = Debug;
+		};
+		CC8A633CC6EB75359EDEF48E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F18_H5/ios-wrapper/App/GildedExpress.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F18_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.gildedexpressh5;
+				PRODUCT_MODULE_NAME = GildedExpressH5;
+				PRODUCT_NAME = GildedExpressH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GildedExpressH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F50B2D1FA6F6C30C1FD280B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.gildedexpressh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GildedExpressH5.app/GildedExpressH5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13A55FB5EED2027C8C934397 /* Build configuration list for PBXNativeTarget "GildedExpressTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50B2D1FA6F6C30C1FD280B5 /* Release */,
+				87DBC4E827355BA770AACBCB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21BA95EB3DAB90ECFAA09219 /* Build configuration list for PBXNativeTarget "GildedExpressH5Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CF485CF2000C5303C196B2 /* Release */,
+				CC8A633CC6EB75359EDEF48E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6FB912D624FAE764EBE1F53 /* Build configuration list for PBXProject "GildedExpressH5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FC9DA154208F967C910F119 /* Debug */,
+				1C0CBD2FC64EB05D0556C33C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39ADB8A94C44FB679CC4CE24 /* Project object */;
+}

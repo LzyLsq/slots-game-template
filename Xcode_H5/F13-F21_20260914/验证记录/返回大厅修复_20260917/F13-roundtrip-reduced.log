@@ -1,0 +1,57 @@
+SPIN 0 0
+SETTLED { state: 'idle', frames: 38, modal: undefined }
+SPIN 0 1
+SETTLED { state: 'idle', frames: 59, modal: undefined }
+SPIN 0 2
+SETTLED { state: 'idle', frames: 85, modal: undefined }
+HOME 0 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 90,
+  nodes: [ 'Camera', 'Harvest-interface', 'RotateDeviceOverlay' ],
+  memory: 34122482
+}
+SPIN 1 0
+SETTLED { state: 'idle', frames: 118, modal: undefined }
+SPIN 1 1
+SETTLED { state: 'idle', frames: 142, modal: undefined }
+SPIN 1 2
+SETTLED { state: 'idle', frames: 176, modal: undefined }
+HOME 1 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 184,
+  nodes: [ 'Camera', 'Harvest-interface', 'RotateDeviceOverlay' ],
+  memory: 35761715
+}
+SPIN 2 0
+SETTLED { state: 'idle', frames: 220, modal: undefined }
+SPIN 2 1
+SETTLED { state: 'idle', frames: 251, modal: undefined }
+SPIN 2 2
+SETTLED { state: 'idle', frames: 276, modal: undefined }
+HOME 2 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 284,
+  nodes: [ 'Camera', 'Harvest-interface', 'RotateDeviceOverlay' ],
+  memory: 32585071
+}
+SPIN 3 0
+SETTLED { state: 'idle', frames: 321, modal: undefined }
+SPIN 3 1
+SETTLED { state: 'idle', frames: 353, modal: undefined }
+SPIN 3 2
+SETTLED { state: 'idle', frames: 407, modal: undefined }
+HOME 3 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 422,
+  nodes: [ 'Camera', 'Harvest-interface', 'RotateDeviceOverlay' ],
+  memory: 42847393
+}
+ROUNDTRIP PASS 13 loops 4

@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BF5970973236A9C83C3507F /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C249E2B19E05B88CCF9D19 /* AuthenticationServices.framework */; };
+		268FCBC6AAA1AE902BCC6800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A59CDE4822D5395154248 /* main.m */; };
+		2714487B07B228690BA37CA5 /* H5LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4EACD2E8CEA859842E76B2 /* H5LocalServer.m */; };
+		3BBD9420DBB4BE7800DB7370 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4846577965138C39281FCE /* XCTest.framework */; };
+		4C25942A0BA436AA1808AD8E /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 605B4738EB1533109EC62EC1 /* LocalStore.m */; };
+		4F659F36585521EB4E89BDBE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56F54F946FFA1C2EB56DD21 /* StoreKit.framework */; };
+		63C97EF051FD1739C62AB31E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01678382C1440128163C60CE /* WebKit.framework */; };
+		6890A95383B334B7DE8503F5 /* StoreKitBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F3D8635943C5E2466714A3 /* StoreKitBackend.swift */; };
+		69B2D3C4A822EE730F443544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A321B3430E1FC7C005E35AFF /* Assets.xcassets */; };
+		8015C0977925388A1129779D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D49F9F4C1C00621530FA106 /* AppDelegate.m */; };
+		8159E1AAF0C5F798071B0B39 /* AppleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EDFD4A8B731A9511AD8BCE /* AppleLogin.m */; };
+		94890AE94C90BFDDD301B9D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B3ACA5AAAA61926EB76A8B /* UIKit.framework */; };
+		95F84FFEECD36DC896369EB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B12461E02AA9B54D6F399 /* Foundation.framework */; };
+		9B8B45F501FBE37832124C5B /* StoreKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298B92F2C7126FA44FBEBEEE /* StoreKitTest.framework */; };
+		AF223A6D9E1432D8F84DB02E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B12461E02AA9B54D6F399 /* Foundation.framework */; };
+		C699149575DF633D36E0EA8F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 40A18BFA70A2BCD5BF6EEFC9 /* PrivacyInfo.xcprivacy */; };
+		C76A386DC8E704C2477332E4 /* GoldenCaravan.storekit in Resources */ = {isa = PBXBuildFile; fileRef = BF155C9BD1B4AE92DB06FE97 /* GoldenCaravan.storekit */; };
+		E838E90E55673D9F44402340 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD5562D5C22B53FAE34657A /* StoreTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A39F3A3256A7E2A9C765315 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA600AFAA89B173BF15B809 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7992A0A0FF3D70377305B751;
+			remoteInfo = GoldenCaravanH5Host;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01678382C1440128163C60CE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		08BF00EFE5A4587E57F5B3FF /* GoldenCaravanH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenCaravanH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D49F9F4C1C00621530FA106 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		298B92F2C7126FA44FBEBEEE /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
+		3B4EACD2E8CEA859842E76B2 /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
+		40A18BFA70A2BCD5BF6EEFC9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		4B0A59CDE4822D5395154248 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D8D582564F267FE50C859FE /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		53B3ACA5AAAA61926EB76A8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5DD5562D5C22B53FAE34657A /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		605B4738EB1533109EC62EC1 /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+		65C249E2B19E05B88CCF9D19 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		6BD5500957249C39DF57699D /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6E39ECD8F2CF5575E2057643 /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
+		847B12461E02AA9B54D6F399 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8D994EEBA5A84CF2691C1968 /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
+		A321B3430E1FC7C005E35AFF /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A56F54F946FFA1C2EB56DD21 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		A8F3D8635943C5E2466714A3 /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
+		B4EDFD4A8B731A9511AD8BCE /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
+		BA56D5A90FB45ACF81AF7EC3 /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		BF155C9BD1B4AE92DB06FE97 /* GoldenCaravan.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = GoldenCaravan.storekit; sourceTree = "<group>"; };
+		C3369E29C45874AE782ABCE5 /* GoldenCaravan.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = GoldenCaravan.entitlements; sourceTree = "<group>"; };
+		FA4846577965138C39281FCE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FAF35A1438C59CE56BAF5095 /* GoldenCaravanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenCaravanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBECC5BECB3F8944A3AAEB87 /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF33A9444CAC10684183C654 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF223A6D9E1432D8F84DB02E /* Foundation.framework in Frameworks */,
+				3BBD9420DBB4BE7800DB7370 /* XCTest.framework in Frameworks */,
+				9B8B45F501FBE37832124C5B /* StoreKitTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC114180023200745B2EE195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F84FFEECD36DC896369EB4 /* Foundation.framework in Frameworks */,
+				94890AE94C90BFDDD301B9D3 /* UIKit.framework in Frameworks */,
+				63C97EF051FD1739C62AB31E /* WebKit.framework in Frameworks */,
+				4F659F36585521EB4E89BDBE /* StoreKit.framework in Frameworks */,
+				0BF5970973236A9C83C3507F /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A5663BF61E19E308AD60CA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08BF00EFE5A4587E57F5B3FF /* GoldenCaravanH5Host.app */,
+				FAF35A1438C59CE56BAF5095 /* GoldenCaravanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31946CDC17F20B85CA450E69 = {
+			isa = PBXGroup;
+			children = (
+				2A5663BF61E19E308AD60CA2 /* Products */,
+				AED8F3AF525118F7A2C95088 /* Frameworks */,
+				65E897BA0D35EAB971992852 /* App */,
+			);
+			sourceTree = "<group>";
+		};
+		65E897BA0D35EAB971992852 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4B0A59CDE4822D5395154248 /* main.m */,
+				0D49F9F4C1C00621530FA106 /* AppDelegate.m */,
+				3B4EACD2E8CEA859842E76B2 /* H5LocalServer.m */,
+				B4EDFD4A8B731A9511AD8BCE /* AppleLogin.m */,
+				605B4738EB1533109EC62EC1 /* LocalStore.m */,
+				A8F3D8635943C5E2466714A3 /* StoreKitBackend.swift */,
+				6BD5500957249C39DF57699D /* AppDelegate.h */,
+				6E39ECD8F2CF5575E2057643 /* H5LocalServer.h */,
+				FBECC5BECB3F8944A3AAEB87 /* AppleLogin.h */,
+				4D8D582564F267FE50C859FE /* LocalStore.h */,
+				C3369E29C45874AE782ABCE5 /* GoldenCaravan.entitlements */,
+				BA56D5A90FB45ACF81AF7EC3 /* Info.plist.in */,
+				8D994EEBA5A84CF2691C1968 /* CopyWebAssets.sh */,
+				A321B3430E1FC7C005E35AFF /* Assets.xcassets */,
+				40A18BFA70A2BCD5BF6EEFC9 /* PrivacyInfo.xcprivacy */,
+				5DD5562D5C22B53FAE34657A /* StoreTests.swift */,
+				BF155C9BD1B4AE92DB06FE97 /* GoldenCaravan.storekit */,
+			);
+			name = App;
+			path = "../F17_H5/ios-wrapper/App";
+			sourceTree = "<group>";
+		};
+		A1807632F5514573AF5F46A2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				847B12461E02AA9B54D6F399 /* Foundation.framework */,
+				53B3ACA5AAAA61926EB76A8B /* UIKit.framework */,
+				01678382C1440128163C60CE /* WebKit.framework */,
+				A56F54F946FFA1C2EB56DD21 /* StoreKit.framework */,
+				65C249E2B19E05B88CCF9D19 /* AuthenticationServices.framework */,
+				FA4846577965138C39281FCE /* XCTest.framework */,
+				298B92F2C7126FA44FBEBEEE /* StoreKitTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		AED8F3AF525118F7A2C95088 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1807632F5514573AF5F46A2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7992A0A0FF3D70377305B751 /* GoldenCaravanH5Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23FCC5EC7112FCDA9FFBCAD1 /* Build configuration list for PBXNativeTarget "GoldenCaravanH5Host" */;
+			buildPhases = (
+				2B7B4557ACA35D0FFC9B26FC /* Sources */,
+				FC114180023200745B2EE195 /* Frameworks */,
+				DBB44686B5B7627217CE8027 /* Resources */,
+				2A85E6EEB5AFEF5EC846AF76 /* Copy bundled H5 resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldenCaravanH5Host;
+			productName = GoldenCaravanH5Host;
+			productReference = 08BF00EFE5A4587E57F5B3FF /* GoldenCaravanH5Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2A19E4BEC28160D9ADF0B18 /* GoldenCaravanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7677AC27958326CCC63EB131 /* Build configuration list for PBXNativeTarget "GoldenCaravanTests" */;
+			buildPhases = (
+				49CAB294E3734E5583F3D5A7 /* Sources */,
+				EF33A9444CAC10684183C654 /* Frameworks */,
+				B18700DC69E33824567C6282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA9667AFD439DA924ED5D76 /* PBXTargetDependency */,
+			);
+			name = GoldenCaravanTests;
+			productName = GoldenCaravanTests;
+			productReference = FAF35A1438C59CE56BAF5095 /* GoldenCaravanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BA600AFAA89B173BF15B809 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 9B1B30B367289C5DCFAD75BA /* Build configuration list for PBXProject "GoldenCaravanH5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31946CDC17F20B85CA450E69;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2A5663BF61E19E308AD60CA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7992A0A0FF3D70377305B751 /* GoldenCaravanH5Host */,
+				D2A19E4BEC28160D9ADF0B18 /* GoldenCaravanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B18700DC69E33824567C6282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76A386DC8E704C2477332E4 /* GoldenCaravan.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB44686B5B7627217CE8027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B2D3C4A822EE730F443544 /* Assets.xcassets in Resources */,
+				C699149575DF633D36E0EA8F /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A85E6EEB5AFEF5EC846AF76 /* Copy bundled H5 resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled H5 resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\ntest -n \"${TARGET_BUILD_DIR:-}\" && test \"${WRAPPER_NAME:-}\" = \"GoldenCaravanH5.app\"\n/bin/sh \"${SRCROOT}/../F17_H5/ios-wrapper/App/CopyWebAssets.sh\" \"${SRCROOT}/../F17_H5\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B7B4557ACA35D0FFC9B26FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268FCBC6AAA1AE902BCC6800 /* main.m in Sources */,
+				8015C0977925388A1129779D /* AppDelegate.m in Sources */,
+				2714487B07B228690BA37CA5 /* H5LocalServer.m in Sources */,
+				8159E1AAF0C5F798071B0B39 /* AppleLogin.m in Sources */,
+				4C25942A0BA436AA1808AD8E /* LocalStore.m in Sources */,
+				6890A95383B334B7DE8503F5 /* StoreKitBackend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49CAB294E3734E5583F3D5A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E838E90E55673D9F44402340 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDA9667AFD439DA924ED5D76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoldenCaravanH5Host;
+			target = 7992A0A0FF3D70377305B751 /* GoldenCaravanH5Host */;
+			targetProxy = 9A39F3A3256A7E2A9C765315 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7B2F39D326BB8093A1AF6593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F17_H5/ios-wrapper/App/GoldenCaravan.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F17_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldencaravanh5;
+				PRODUCT_MODULE_NAME = GoldenCaravanH5;
+				PRODUCT_NAME = GoldenCaravanH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GoldenCaravanH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5CD5C428AFFCC174028C07A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldencaravanh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenCaravanH5.app/GoldenCaravanH5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEC15595DF7A3DEFD3F5172D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldencaravanh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenCaravanH5.app/GoldenCaravanH5";
+			};
+			name = Debug;
+		};
+		D9FFE387DF2624C84453C97A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F95E9C22D9E6B91A5EA656F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F17_H5/ios-wrapper/App/GoldenCaravan.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F17_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldencaravanh5;
+				PRODUCT_MODULE_NAME = GoldenCaravanH5;
+				PRODUCT_NAME = GoldenCaravanH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "GoldenCaravanH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE0C8623CDA0371B573F250C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23FCC5EC7112FCDA9FFBCAD1 /* Build configuration list for PBXNativeTarget "GoldenCaravanH5Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2F39D326BB8093A1AF6593 /* Release */,
+				F95E9C22D9E6B91A5EA656F6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7677AC27958326CCC63EB131 /* Build configuration list for PBXNativeTarget "GoldenCaravanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5CD5C428AFFCC174028C07A /* Release */,
+				AEC15595DF7A3DEFD3F5172D /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B1B30B367289C5DCFAD75BA /* Build configuration list for PBXProject "GoldenCaravanH5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9FFE387DF2624C84453C97A /* Debug */,
+				FE0C8623CDA0371B573F250C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BA600AFAA89B173BF15B809 /* Project object */;
+}

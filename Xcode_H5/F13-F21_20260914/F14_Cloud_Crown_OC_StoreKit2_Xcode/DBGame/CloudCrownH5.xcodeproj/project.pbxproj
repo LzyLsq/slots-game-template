@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050AE0763F6F4D3F50641B9A /* CloudCrown.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 6D1C5F3A681C30382A15ABEA /* CloudCrown.storekit */; };
+		079B0EF6C44707EF858FFB05 /* StoreKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49030C4CFDD97F857E8D539E /* StoreKitTest.framework */; };
+		1426A559424B6DDCD193E74E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = BAE2C59BC1651DCD9D3418D7 /* PrivacyInfo.xcprivacy */; };
+		1669C7EF9FE42627AF583588 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141ADB44C74E3B7E241E0A4 /* AppDelegate.m */; };
+		2FB31BA42A866DB8920DC3D6 /* AppleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 409838500E27FD391464AA6B /* AppleLogin.m */; };
+		32405BF6EDF2DEE885AB6CC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BEEFF213269DCBD17672F3 /* Foundation.framework */; };
+		73783CE4B3DD8FB23AE4EBD8 /* LocalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36677296F1C881E9A97422E4 /* LocalStore.m */; };
+		804CCF1FC84BF80333675B51 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A63D746B01F62ADCCEC2413C /* StoreKit.framework */; };
+		862360D0BD38BDC21A1825EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCEE2BF96E00858CA3762AF /* UIKit.framework */; };
+		86E2CC742457F849F53A30CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9AD25D26ED5B2C3C01FE7D /* XCTest.framework */; };
+		8A9A0031C59417665ACC1B90 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BAFFE5AE447BFDE8C96B7F /* WebKit.framework */; };
+		B691670EEDCD8F5F5B2957F5 /* StoreKitBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E0492791D106538CA7DBD /* StoreKitBackend.swift */; };
+		BF3C591791867AA32F465C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA47A86D874BB31D0EC07F /* Assets.xcassets */; };
+		D4B543883C6E14B205780B0F /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D04B167DAC599FC168625F2 /* AuthenticationServices.framework */; };
+		DB84732C7CCDF9A7456B5DBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80132E2876BCB75CC8772205 /* main.m */; };
+		DF5E9FD2806C2C7CCD33B890 /* H5LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C492ACA06D4E4DEFA832B9BA /* H5LocalServer.m */; };
+		F1C6453AC4376C8CF5711180 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD1E317075CE7FCC59E8C2 /* StoreTests.swift */; };
+		F360CAFEE018D0547A2BE789 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BEEFF213269DCBD17672F3 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26E4B1A112D0BBE7F7F95D36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DAE0C20320785531EDA6315 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B92BF7ED31A1DD0CA9DD089A;
+			remoteInfo = CloudCrownH5Host;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		063EEA2A1BEEADFEABBAAD08 /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
+		0B12962953BCB025C568099F /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
+		1E71DE9BC90A0BEF6A2EC731 /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		36677296F1C881E9A97422E4 /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
+		38A01472767433546B383F60 /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
+		409838500E27FD391464AA6B /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
+		49030C4CFDD97F857E8D539E /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
+		5B596CB18CBB14AA0B2CD365 /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
+		6D1C5F3A681C30382A15ABEA /* CloudCrown.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = CloudCrown.storekit; sourceTree = "<group>"; };
+		6FCEE2BF96E00858CA3762AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		80132E2876BCB75CC8772205 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80FD1E317075CE7FCC59E8C2 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		8141ADB44C74E3B7E241E0A4 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		845891955FBF2A4103C4C566 /* CloudCrownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCrownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FBA47A86D874BB31D0EC07F /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D04B167DAC599FC168625F2 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		A4BEEFF213269DCBD17672F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A63D746B01F62ADCCEC2413C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		BAE2C59BC1651DCD9D3418D7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C3BAFFE5AE447BFDE8C96B7F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		C492ACA06D4E4DEFA832B9BA /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
+		CF9AD25D26ED5B2C3C01FE7D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D29E0492791D106538CA7DBD /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
+		D5ED022CE71A2A21E5CA34F2 /* CloudCrownH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCrownH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F232D2889176D429CB4A4B /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F9013774EEC8CB266AAA7299 /* CloudCrown.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = CloudCrown.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4B15BCC21E40B93AF549925 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F360CAFEE018D0547A2BE789 /* Foundation.framework in Frameworks */,
+				862360D0BD38BDC21A1825EB /* UIKit.framework in Frameworks */,
+				8A9A0031C59417665ACC1B90 /* WebKit.framework in Frameworks */,
+				804CCF1FC84BF80333675B51 /* StoreKit.framework in Frameworks */,
+				D4B543883C6E14B205780B0F /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA85BC87ABAEDEDC375397E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32405BF6EDF2DEE885AB6CC0 /* Foundation.framework in Frameworks */,
+				86E2CC742457F849F53A30CB /* XCTest.framework in Frameworks */,
+				079B0EF6C44707EF858FFB05 /* StoreKitTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D36E07863D9E56E36F04073 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED022CE71A2A21E5CA34F2 /* CloudCrownH5Host.app */,
+				845891955FBF2A4103C4C566 /* CloudCrownTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5179C6A9159F734688429565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C3CA6C6CE7F2503600921D3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E7457E31083F35B7695C4D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				80132E2876BCB75CC8772205 /* main.m */,
+				8141ADB44C74E3B7E241E0A4 /* AppDelegate.m */,
+				C492ACA06D4E4DEFA832B9BA /* H5LocalServer.m */,
+				409838500E27FD391464AA6B /* AppleLogin.m */,
+				36677296F1C881E9A97422E4 /* LocalStore.m */,
+				D29E0492791D106538CA7DBD /* StoreKitBackend.swift */,
+				D9F232D2889176D429CB4A4B /* AppDelegate.h */,
+				5B596CB18CBB14AA0B2CD365 /* H5LocalServer.h */,
+				063EEA2A1BEEADFEABBAAD08 /* AppleLogin.h */,
+				0B12962953BCB025C568099F /* LocalStore.h */,
+				F9013774EEC8CB266AAA7299 /* CloudCrown.entitlements */,
+				1E71DE9BC90A0BEF6A2EC731 /* Info.plist.in */,
+				38A01472767433546B383F60 /* CopyWebAssets.sh */,
+				8FBA47A86D874BB31D0EC07F /* Assets.xcassets */,
+				BAE2C59BC1651DCD9D3418D7 /* PrivacyInfo.xcprivacy */,
+				80FD1E317075CE7FCC59E8C2 /* StoreTests.swift */,
+				6D1C5F3A681C30382A15ABEA /* CloudCrown.storekit */,
+			);
+			name = App;
+			path = "../F14_H5/ios-wrapper/App";
+			sourceTree = "<group>";
+		};
+		8C3CA6C6CE7F2503600921D3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A4BEEFF213269DCBD17672F3 /* Foundation.framework */,
+				6FCEE2BF96E00858CA3762AF /* UIKit.framework */,
+				C3BAFFE5AE447BFDE8C96B7F /* WebKit.framework */,
+				A63D746B01F62ADCCEC2413C /* StoreKit.framework */,
+				9D04B167DAC599FC168625F2 /* AuthenticationServices.framework */,
+				CF9AD25D26ED5B2C3C01FE7D /* XCTest.framework */,
+				49030C4CFDD97F857E8D539E /* StoreKitTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9C77C11DDA39B1515BEC16A9 = {
+			isa = PBXGroup;
+			children = (
+				0D36E07863D9E56E36F04073 /* Products */,
+				5179C6A9159F734688429565 /* Frameworks */,
+				5E7457E31083F35B7695C4D7 /* App */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		866F50D1FDC98AE97A65244F /* CloudCrownTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57A95C9C012D87401D89F964 /* Build configuration list for PBXNativeTarget "CloudCrownTests" */;
+			buildPhases = (
+				EEED8F776FFE8770B0E75007 /* Sources */,
+				CA85BC87ABAEDEDC375397E1 /* Frameworks */,
+				E8BC361D1C85D3B9B6A523B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EB0FFAD754B41E5BE653472 /* PBXTargetDependency */,
+			);
+			name = CloudCrownTests;
+			productName = CloudCrownTests;
+			productReference = 845891955FBF2A4103C4C566 /* CloudCrownTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B92BF7ED31A1DD0CA9DD089A /* CloudCrownH5Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 357E5F413CE24C9B56893872 /* Build configuration list for PBXNativeTarget "CloudCrownH5Host" */;
+			buildPhases = (
+				A77887CFEB37576DDFA2A703 /* Sources */,
+				A4B15BCC21E40B93AF549925 /* Frameworks */,
+				582C5B3B1C14FC1536DA721F /* Resources */,
+				2471130DFB27B86C6F717E2C /* Copy bundled H5 resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudCrownH5Host;
+			productName = CloudCrownH5Host;
+			productReference = D5ED022CE71A2A21E5CA34F2 /* CloudCrownH5Host.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DAE0C20320785531EDA6315 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = E3A25538084FF5D74A6DCC34 /* Build configuration list for PBXProject "CloudCrownH5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C77C11DDA39B1515BEC16A9;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0D36E07863D9E56E36F04073 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B92BF7ED31A1DD0CA9DD089A /* CloudCrownH5Host */,
+				866F50D1FDC98AE97A65244F /* CloudCrownTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		582C5B3B1C14FC1536DA721F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3C591791867AA32F465C40 /* Assets.xcassets in Resources */,
+				1426A559424B6DDCD193E74E /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8BC361D1C85D3B9B6A523B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050AE0763F6F4D3F50641B9A /* CloudCrown.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2471130DFB27B86C6F717E2C /* Copy bundled H5 resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled H5 resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\ntest -n \"${TARGET_BUILD_DIR:-}\" && test \"${WRAPPER_NAME:-}\" = \"CloudCrownH5.app\"\n/bin/sh \"${SRCROOT}/../F14_H5/ios-wrapper/App/CopyWebAssets.sh\" \"${SRCROOT}/../F14_H5\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A77887CFEB37576DDFA2A703 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB84732C7CCDF9A7456B5DBF /* main.m in Sources */,
+				1669C7EF9FE42627AF583588 /* AppDelegate.m in Sources */,
+				DF5E9FD2806C2C7CCD33B890 /* H5LocalServer.m in Sources */,
+				2FB31BA42A866DB8920DC3D6 /* AppleLogin.m in Sources */,
+				73783CE4B3DD8FB23AE4EBD8 /* LocalStore.m in Sources */,
+				B691670EEDCD8F5F5B2957F5 /* StoreKitBackend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEED8F776FFE8770B0E75007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C6453AC4376C8CF5711180 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EB0FFAD754B41E5BE653472 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CloudCrownH5Host;
+			target = B92BF7ED31A1DD0CA9DD089A /* CloudCrownH5Host */;
+			targetProxy = 26E4B1A112D0BBE7F7F95D36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4B8F69969E0A25FA39888664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F14_H5/ios-wrapper/App/CloudCrown.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F14_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.cloudcrownh5;
+				PRODUCT_MODULE_NAME = CloudCrownH5;
+				PRODUCT_NAME = CloudCrownH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "CloudCrownH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		571BDD697DB5BB4F209BCFE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9A751EE48F70D0D70AFD52B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.cloudcrownh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCrownH5.app/CloudCrownH5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C186DEEB9F8B3DEB09FF1D89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CFE50734A6C3B1BB1F841C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F14_H5/ios-wrapper/App/CloudCrown.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/../F14_H5/ios-wrapper/App/Info.plist.in";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.cloudcrownh5;
+				PRODUCT_MODULE_NAME = CloudCrownH5;
+				PRODUCT_NAME = CloudCrownH5;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "CloudCrownH5Host-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E383C33BCE0CD8D547363268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.cloudcrownh5.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCrownH5.app/CloudCrownH5";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		357E5F413CE24C9B56893872 /* Build configuration list for PBXNativeTarget "CloudCrownH5Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B8F69969E0A25FA39888664 /* Release */,
+				CFE50734A6C3B1BB1F841C62 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57A95C9C012D87401D89F964 /* Build configuration list for PBXNativeTarget "CloudCrownTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A751EE48F70D0D70AFD52B4 /* Release */,
+				E383C33BCE0CD8D547363268 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A25538084FF5D74A6DCC34 /* Build configuration list for PBXProject "CloudCrownH5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C186DEEB9F8B3DEB09FF1D89 /* Debug */,
+				571BDD697DB5BB4F209BCFE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0DAE0C20320785531EDA6315 /* Project object */;
+}

@@ -1,0 +1,15 @@
+SPIN 0 0
+SETTLED { state: 'idle', frames: 41, modal: undefined }
+SPIN 0 1
+SETTLED { state: 'idle', frames: 66, modal: undefined }
+SPIN 0 2
+SETTLED { state: 'idle', frames: 89, modal: undefined }
+HOME 0 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 118,
+  nodes: [ 'Camera', 'Golden-Express-interface', 'RotateDeviceOverlay' ],
+  memory: 34462201
+}
+ROUNDTRIP PASS 18 loops 1

@@ -1,0 +1,57 @@
+SPIN 0 0
+SETTLED { state: 'idle', frames: 61, modal: undefined }
+SPIN 0 1
+SETTLED { state: 'idle', frames: 94, modal: undefined }
+SPIN 0 2
+SETTLED { state: 'idle', frames: 131, modal: undefined }
+HOME 0 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 142,
+  nodes: [ 'Camera', 'Golden-Canopy-interface', 'RotateDeviceOverlay' ],
+  memory: 40316059
+}
+SPIN 1 0
+SETTLED { state: 'idle', frames: 215, modal: undefined }
+SPIN 1 1
+SETTLED { state: 'idle', frames: 262, modal: undefined }
+SPIN 1 2
+SETTLED { state: 'idle', frames: 289, modal: undefined }
+HOME 1 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 296,
+  nodes: [ 'Camera', 'Golden-Canopy-interface', 'RotateDeviceOverlay' ],
+  memory: 40303152
+}
+SPIN 2 0
+SETTLED { state: 'idle', frames: 338, modal: undefined }
+SPIN 2 1
+SETTLED { state: 'idle', frames: 371, modal: undefined }
+SPIN 2 2
+SETTLED { state: 'idle', frames: 572, modal: undefined }
+HOME 2 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 575,
+  nodes: [ 'Camera', 'Golden-Canopy-interface', 'RotateDeviceOverlay' ],
+  memory: 49535124
+}
+SPIN 3 0
+SETTLED { state: 'idle', frames: 610, modal: undefined }
+SPIN 3 1
+SETTLED { state: 'idle', frames: 635, modal: undefined }
+SPIN 3 2
+SETTLED { state: 'idle', frames: 660, modal: undefined }
+HOME 3 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 665,
+  nodes: [ 'Camera', 'Golden-Canopy-interface', 'RotateDeviceOverlay' ],
+  memory: 32937429
+}
+ROUNDTRIP PASS 20 loops 4

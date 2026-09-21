@@ -1,0 +1,57 @@
+SPIN 0 0
+SETTLED { state: 'idle', frames: 44, modal: undefined }
+SPIN 0 1
+SETTLED { state: 'idle', frames: 76, modal: undefined }
+SPIN 0 2
+SETTLED { state: 'idle', frames: 127, modal: undefined }
+HOME 0 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 146,
+  nodes: [ 'Camera', 'Cloud-Crown-interface', 'RotateDeviceOverlay' ],
+  memory: 39492914
+}
+SPIN 1 0
+SETTLED { state: 'idle', frames: 192, modal: undefined }
+SPIN 1 1
+SETTLED { state: 'idle', frames: 248, modal: undefined }
+SPIN 1 2
+SETTLED { state: 'idle', frames: 292, modal: undefined }
+HOME 1 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 322,
+  nodes: [ 'Camera', 'Cloud-Crown-interface', 'RotateDeviceOverlay' ],
+  memory: 38900095
+}
+SPIN 2 0
+SETTLED { state: 'idle', frames: 377, modal: undefined }
+SPIN 2 1
+SETTLED { state: 'idle', frames: 427, modal: undefined }
+SPIN 2 2
+SETTLED { state: 'idle', frames: 483, modal: undefined }
+HOME 2 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 506,
+  nodes: [ 'Camera', 'Cloud-Crown-interface', 'RotateDeviceOverlay' ],
+  memory: 54456575
+}
+SPIN 3 0
+SETTLED { state: 'idle', frames: 567, modal: undefined }
+SPIN 3 1
+SETTLED { state: 'idle', frames: 627, modal: undefined }
+SPIN 3 2
+SETTLED { state: 'idle', frames: 694, modal: undefined }
+HOME 3 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 724,
+  nodes: [ 'Camera', 'Cloud-Crown-interface', 'RotateDeviceOverlay' ],
+  memory: 32808851
+}
+ROUNDTRIP PASS 14 loops 4

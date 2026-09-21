@@ -1,0 +1,15 @@
+SPIN 0 0
+SETTLED { state: 'idle', frames: 46, modal: undefined }
+SPIN 0 1
+SETTLED { state: 'idle', frames: 81, modal: undefined }
+SPIN 0 2
+SETTLED { state: 'idle', frames: 111, modal: undefined }
+HOME 0 {
+  page: 'home',
+  busy: false,
+  state: 'idle',
+  frames: 143,
+  nodes: [ 'Camera', 'Royal-Jubilee-interface', 'RotateDeviceOverlay' ],
+  memory: 32142960
+}
+ROUNDTRIP PASS 21 loops 1
