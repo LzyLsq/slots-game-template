@@ -62,9 +62,9 @@ const phrases={
   total:['Total return','总返还','總返還','返還合計','총 반환'],
   stake:['× stake','× 本局下注','× 本局下注','× ベット','× 베팅'],
   below:['Return below stake','返还低于下注','返還低於下注','返還はベット未満','반환액이 베팅보다 적음'],
-  tiers:['Normal award: positive return below 5×. BIG ≥5× · SUPER BIG ≥10× · MEGA ≥50× · EPIC ≥100× stake. New accounts: round 5 ≥5× and round 10 ≥10× across all modes; any shortfall is a separate credited newcomer bonus.','普通奖为不足5倍的正返还；大奖≥5倍、超级大奖≥10倍、巨奖≥50倍、史诗≥100倍下注。新账户跨模式累计第5局至少5倍、第10局至少10倍；不足部分作为独立新人奖金真实入账。','普通獎為不足5倍的正返還；大獎≥5倍、超級大獎≥10倍、巨獎≥50倍、史詩≥100倍下注。新帳戶跨模式累計第5局至少5倍、第10局至少10倍；不足部分作為獨立新人獎金入帳。','通常賞は5倍未満の正の返還。BIG ≥5倍・SUPER BIG ≥10倍・MEGA ≥50倍・EPIC ≥100倍。新規アカウントの全モード合計5回目は最低5倍、10回目は最低10倍。不足分は別枠特典として入金。','일반상은 5배 미만의 양수 반환. BIG ≥5배 · SUPER BIG ≥10배 · MEGA ≥50배 · EPIC ≥100배. 신규 계정의 모든 모드 합산 5번째는 최소 5배, 10번째는 최소 10배. 부족분은 별도 보너스로 지급.'],
+  tiers:['Normal award: positive return below 5×. BIG ≥5× · SUPER BIG ≥10× · MEGA ≥50× · EPIC ≥100× stake. New accounts: the fifth settled spin across all modes returns at least 10×; any shortfall is a separate credited newcomer bonus, not a reel win.','普通奖为不足5倍的正返还；大奖≥5倍、超级大奖≥10倍、巨奖≥50倍、史诗≥100倍下注。新账户跨模式累计第5局至少10倍；不足部分作为独立新人奖金真实入账，不伪装为转轴中奖。','普通獎為不足5倍的正返還；大獎≥5倍、超級大獎≥10倍、巨獎≥50倍、史詩≥100倍下注。新帳戶跨模式累計第5局至少10倍；不足部分作為獨立新人獎金入帳，不偽裝為轉軸中獎。','通常賞は5倍未満の正の返還。BIG ≥5倍・SUPER BIG ≥10倍・MEGA ≥50倍・EPIC ≥100倍。新規アカウントの全モード合計5回目は最低10倍。不足分はリール配当とは別枠で入金。','일반상은 5배 미만의 양수 반환. BIG ≥5배 · SUPER BIG ≥10배 · MEGA ≥50배 · EPIC ≥100배. 신규 계정의 모든 모드 합산 5번째는 최소 10배. 부족분은 릴 당첨과 구분된 보너스로 지급.'],
   tier:['Total return ≥ {n}× stake · presentation tier','总返还 ≥ {n}倍下注 · 演出档位','總返還 ≥ {n}倍下注 · 演出檔位','返還合計 ≥ ベット{n}倍・演出区分','총 반환액 ≥ 베팅 {n}배 · 연출 단계'],
-  newcomer:['New player {n}/10 · BIG by round 5, SUPER BIG by round 10','新人 {n}/10 · 第5局保底大奖、第10局保底超级大奖','新人 {n}/10 · 第5局保底大獎、第10局保底超級大獎','初心者 {n}/10・5回目BIG、10回目SUPER BIGを保証','신규 {n}/10 · 5회 BIG, 10회 SUPER BIG 보장'],
+  newcomer:['New player {n}/5 · SUPER BIG by round 5','新人 {n}/5 · 第5局保底超级大奖','新人 {n}/5 · 第5局保底超級大獎','初心者 {n}/5・5回目にSUPER BIGを保証','신규 {n}/5 · 5회 SUPER BIG 보장'],
   newcomerAward:['New player guarantee (separate bonus)','新手保底补足（单独奖励）','新手保底補足（單獨獎勵）','初心者保証（別枠特典）','신규 보장 (별도 보너스)'],
 } as const;
 function p(key:keyof typeof phrases):string{const i=['en','zh-CN','zh-TW','ja','ko'].indexOf(language());return phrases[key][Math.max(0,i)];}
@@ -82,18 +82,18 @@ export function celebrationCaption(multiplier:number,welcomeBonus=false):string 
   ];
   return captions[i];
 }
-export function newcomerBenefitCaption(round:number):string{return p('newcomer').replace('{n}',String(Math.max(1,Math.min(10,Math.floor(round)))));}
+export function newcomerBenefitCaption(round:number):string{return p('newcomer').replace('{n}',String(Math.max(1,Math.min(5,Math.floor(round)))));}
 export function newcomerAwardCaption():string{return p('newcomerAward');}
 /** Short, honest cabinet status keeps the result legible at 320px wide.
  * The full itemised explanation remains available in roundEvidence/rules. */
 export function cabinetNewcomerCaption(round:number):string {
-  const n=String(Math.max(1,Math.min(10,Math.floor(round))));
+  const n=String(Math.max(1,Math.min(5,Math.floor(round))));
   const captions=[
-    `WELCOME ${n}/10 · BIG BY 5 · SUPER BY 10`,
-    `新人 ${n}/10 · 5局大奖 · 10局超级大奖`,
-    `新人 ${n}/10 · 5局大獎 · 10局超級大獎`,
-    `初心者 ${n}/10 · 5回BIG · 10回SUPER`,
-    `신규 ${n}/10 · 5회 BIG · 10회 SUPER`,
+    `WELCOME ${n}/5 · SUPER BY 5`,
+    `新人 ${n}/5 · 5局保底超级大奖`,
+    `新人 ${n}/5 · 5局保底超級大獎`,
+    `初心者 ${n}/5 · 5回SUPER`,
+    `신규 ${n}/5 · 5회 SUPER`,
   ];
   return captions[Math.max(0,['en','zh-CN','zh-TW','ja','ko'].indexOf(language()))];
 }

@@ -114,5 +114,5 @@ export interface ForceResult {
   readonly jackpot?: 'mini' | 'minor' | 'major' | 'grand';
   readonly winTier?: 'ordinary' | 'big' | 'super' | 'mega' | 'epic';
   /** Authoritative, separately itemised newcomer minimum return; never a reel symbol. */
-  readonly newcomerMinimum?: 5 | 10;
+  readonly newcomerMinimum?: 10;
 }

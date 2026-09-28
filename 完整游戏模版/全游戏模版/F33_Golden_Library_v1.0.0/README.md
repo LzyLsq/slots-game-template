@@ -13,24 +13,26 @@ The client includes initial and cabinet loading, guest and local account flows, 
 
 ## Run and verify
 
-Open this folder in Cocos Creator 3.8.8. For the existing browser preview build, run `python3 tools/preview_server.py --directory build/web-mobile --port 6033` and visit `http://127.0.0.1:6033/`. To regenerate that build, use the Cocos Creator build task with `tools/web-mobile-release-build.json`.
+Open this folder in Cocos Creator 3.8.8. For the rebuilt browser preview, run `python3 tools/preview_server.py --directory build/web-mobile --port 6034` and visit `http://127.0.0.1:6034/`. To regenerate that build, use the Cocos Creator build task with `tools/web-mobile-release-build.json`.
 
 From this folder, run `npm ci`, `npm run typecheck:math`, `npm test`, `npm run test:rtp`, and `npm run release:audit`. The release audit intentionally reports blockers while publisher and native credentials are unconfigured. The 2026-09-24 browser pass checked 390 × 844 and 320 × 568 views, all four cabinets' spin-and-return flow, and debug-only tiered award playback. On the same date all unit/contract tests passed, and a 300,000-round seeded sample per cabinet was within the project's 0.93–0.99 simulation tolerance. The simulated RTP is an estimate, not a guarantee of outcomes.
 
-## Current visual review · 2026-09-28
+## Verified local preview · 2026-09-28
 
-Captured from the current local Cocos browser preview at a 390 × 844 mobile viewport (2× device pixel ratio). Each cabinet capture was checked against the selected game ID. The loading capture shows the Gilded Index mode arrival after the hall; its bar reflects that the local resource was already ready. These are still frames and do not establish animation smoothness or native-device performance.
+The four collections remain on one library-hall screen; selecting a collection slides the exhibit, and PLAY NOW enters its distinct cabinet. Ordinary, Big and SUPER BIG awards use distinct staged presentations. For a new local profile, **the fifth settled spin across all four collections returns at least 10× its stake**. Any shortfall is separately credited and labelled as a newcomer bonus; the reel result is not falsified. Server settlement uses the same milestone. This newcomer benefit is excluded from the natural RTP simulation.
 
-| Screen | Current screenshot |
+The isolated Cocos web-mobile build was rendered at 320 × 568, 390 × 844 and 768 × 1024. The captures below came from the rebuilt `6034` preview, not an older copied build. Automated browser checks found no page/console errors on the sampled screens. A five-round browser flow confirmed round 5 at 800 credits on an 80-credit bet, with an 800-credit separately itemised bonus and SUPER BIG presentation. The Big and SUPER presentations were visually inspected; a button tap dismissed the SUPER presentation and returned to the idle cabinet. Hall selection and PLAY NOW were tested by pointer clicks. These are browser checks, **not** native device certification.
+
+| Screen | Verified capture |
 |---|---|
-| Hall | [View](docs/screenshots/current-20260928/390-hall.png) |
-| Gilded Index | [View](docs/screenshots/current-20260928/390-gilded-index.png) |
-| Sapphire Cipher | [View](docs/screenshots/current-20260928/390-sapphire-cipher.png) |
-| Fortune Atlas | [View](docs/screenshots/current-20260928/390-fortune-atlas.png) |
-| Royal Folio | [View](docs/screenshots/current-20260928/390-royal-folio.png) |
-| Gilded Index mode loading | [View](docs/screenshots/current-20260928/390-mode-loading.png) |
+| Hall (390 / 320 / 768) | [390](docs/screenshots/verified-20260928/390-hall.png) · [320](docs/screenshots/verified-20260928/320-hall.png) · [768](docs/screenshots/verified-20260928/768-hall.png) |
+| Hall after switching collection | [Sapphire Cipher](docs/screenshots/verified-20260928/390-hall-cipher.png) |
+| Four cabinets | [Gilded Index](docs/screenshots/verified-20260928/390-index.png) · [Sapphire Cipher](docs/screenshots/verified-20260928/390-cipher.png) · [Fortune Atlas](docs/screenshots/verified-20260928/390-atlas.png) · [Royal Folio](docs/screenshots/verified-20260928/390-folio.png) |
+| Narrow cabinet | [Fortune Atlas at 320](docs/screenshots/verified-20260928/320-atlas.png) |
+| Other screens | [Login](docs/screenshots/verified-20260928/320-login.png) · [Store](docs/screenshots/verified-20260928/390-store.png) · [Rewards](docs/screenshots/verified-20260928/390-rewards.png) · [Rank](docs/screenshots/verified-20260928/390-rank.png) · [Account](docs/screenshots/verified-20260928/390-profile.png) |
+| Reward presentations | [Ordinary](docs/screenshots/verified-20260928/390-ordinary-award.png) · [Big](docs/screenshots/verified-20260928/390-big-award.png) · [SUPER BIG](docs/screenshots/verified-20260928/390-super-award.png) · [Fifth-round guarantee](docs/screenshots/verified-20260928/390-fifth-super.png) |
 
-The capture run completed without browser page errors. Earlier visual iterations remain local and are excluded from this Git delivery.
+`npm run typecheck`, `npm run typecheck:server`, `npm test` and the seeded 100,000-round-per-cabinet `npm run test:rtp` passed on this isolated project. The CLI logged a finished Cocos build but exited with code 36 after its worker SIGTERM diagnostic; the resulting browser artifact was directly served and inspected. `npm run release:audit` passed 21/26 checks, with five release blockers listed below.
 
 ## Release boundary
 

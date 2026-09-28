@@ -15,7 +15,7 @@ const COPY={
 /** Compact paid-result feedback. Caller settles first, hides the underlying hint,
  * and anchors this stage OUTSIDE the reel aperture; no input blocker or veil.
  * setup(art, credits, height, reduced, chargedBet, {y: hintY, width:980}).
- * Resolves after 1.85s, or immediately on destruction. Never labels a loss a win.
+ * Resolves after 2.35s, or immediately on destruction. Never labels a loss a win.
  */
 @ccclass('OrdinaryWinStage')
 export class OrdinaryWinStage extends Component {
@@ -46,7 +46,9 @@ export class OrdinaryWinStage extends Component {
   // The sculpted plate is ivory only through its centre; the upper shoulder
   // is dark enamel. Give the title its own high-contrast metal lettering.
   const titleLabel=outlined(text(plate,phrase(title),0,43,this.width*.80,48,43,COLORS.cream,true),COLORS.ink,2);
-  this.count=text(plate,'0',0,-22,this.width*.81,73,58,COLORS.ink);
+  // The award plate has a dark timber/enamel centre. Dark ink hid the
+  // payout on phones even though the small WIN register had updated.
+  this.count=outlined(text(plate,'+0',0,-24,this.width*.81,79,67,'#FFF3D1',true),'#281407',3);
   // Two generous lines keep translated titles and exact amounts readable on phones.
   for(const label of [titleLabel,this.count]){label.enableWrapText=false;label.overflow=Label.Overflow.SHRINK;}
   this.alpha=opacity(this.group,reduced?255:0);
@@ -55,7 +57,7 @@ export class OrdinaryWinStage extends Component {
   return new Promise<void>(resolve=>{this.done=resolve;});
  }
  private format(value:number):string{return value.toLocaleString(this.locale,{maximumFractionDigits:3});}
- private setCount(value:number):void{if(this.count&&value!==this.displayed){this.displayed=value;this.count.string=this.format(value);}}
+ private setCount(value:number):void{if(this.count&&value!==this.displayed){this.displayed=value;this.count.string='+'+this.format(value)+'  COINS';}}
  protected update(dt:number):void{
   if(this.finished||!this.group||!this.alpha)return;
   this.elapsed+=Number.isFinite(dt)?Math.max(0,dt):0;
@@ -73,9 +75,9 @@ export class OrdinaryWinStage extends Component {
    if(this.spark2){const p=Math.max(0,Math.min(1,(t-.12)/.95));this.spark2.setPosition(-this.width*(.39-.22*p),4+Math.sin(p*Math.PI)*18);opacity(this.spark2,Math.round(Math.pow(Math.sin(p*Math.PI),2)*92));}
    if(this.spark3){const p=Math.max(0,Math.min(1,(t-.28)/.82));this.spark3.setScale(1+.55*Math.sin(p*Math.PI),1+.55*Math.sin(p*Math.PI),1);opacity(this.spark3,Math.round(Math.pow(Math.sin(p*Math.PI),3)*100));}
   }
-  const enter=this.reduced?1:Math.min(1,t/.14),leave=Math.max(0,Math.min(1,(1.85-t)/.22));
+  const enter=this.reduced?1:Math.min(1,t/.14),leave=Math.max(0,Math.min(1,(2.35-t)/.28));
   this.alpha.opacity=Math.round(255*enter*leave);
-  if(t>=1.85){this.setCount(this.amount);this.complete();}
+  if(t>=2.35){this.setCount(this.amount);this.complete();}
  }
  private complete():void{
   this.finished=true;

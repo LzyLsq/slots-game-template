@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { CABINETS, cabinetLayout, imagePoint, reelAperture } from '../assets/scripts/ui/CabinetGeometry';
+import { CABINETS, CABINET_BUTTON_SEATS, cabinetLayout, imagePoint, reelAperture } from '../assets/scripts/ui/CabinetGeometry';
 import { GAME_CONFIGS } from '../assets/scripts/math/GameConfigs';
 import { SYMBOL_CROPS } from '../assets/scripts/ui/SymbolCrop';
 
@@ -18,6 +18,15 @@ for(const [width,height] of [[320,568],[360,640],[375,667],[390,844],[430,932],[
       assert(x*layout.scale+rect[2]*layout.scale/2<=w/2,`${cfg.id} ${key}: right clipping`);
       assert(y*layout.scale+layout.y+rect[3]*layout.scale/2<=h/2-169,`${cfg.id} ${key}: overlaps toolbar`);
       assert(y*layout.scale+layout.y-rect[3]*layout.scale/2>=-h/2+157,`${cfg.id} ${key}: overlaps footer`);
+    }
+    const controls=['spin','plus','minus','auto'] as const;
+    for(const [i,key] of controls.entries()){
+      const [x,y]=imagePoint(geometry[key]),[dx,dy]=CABINET_BUTTON_SEATS[cfg.id][i];
+      const hitW=Math.max(108,geometry[key][2]),hitH=Math.max(110,geometry[key][3]);
+      assert((x+dx-hitW/2)*layout.scale>=-w/2&&
+        (x+dx+hitW/2)*layout.scale<=w/2,`${cfg.id} ${key}: seated control clipped horizontally`);
+      assert((y+dy-hitH/2)*layout.scale+layout.y>=-h/2+120&&
+        (y+dy+hitH/2)*layout.scale+layout.y<=h/2-140,`${cfg.id} ${key}: seated control clipped vertically`);
     }
     const aperture=reelAperture(geometry,cfg.id);
     assert(aperture[0]>geometry.screen[0]&&aperture[1]>geometry.screen[1],`${cfg.id}: reel crosses top/left bevel`);

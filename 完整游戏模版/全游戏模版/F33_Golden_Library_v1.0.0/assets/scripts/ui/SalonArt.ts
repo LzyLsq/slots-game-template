@@ -181,7 +181,7 @@ export function text(parent: Node, value: string, x: number, y: number, w: numbe
   // Per-label textures cost a few draw calls but keep auth copy deterministic.
   l.overflow = Label.Overflow.SHRINK; l.enableWrapText = true; l.cacheMode = Label.CacheMode.NONE; n.addComponent(TextFit); return l;
 }
-export function bindPress(hit: Node, inner: Node, action: () => void, feel:{depth?:number;compression?:number;release?:number;tilt?:number}={}): void {
+export function bindPress(hit: Node, inner: Node, action: () => void, feel:{depth?:number;compression?:number;release?:number;tilt?:number;instant?:boolean}={}): void {
   let pressed=false,startX=0,startY=0,touchId:number|null|undefined;
   // A stable sibling receives input when the artwork itself was the old target.
   // Its bounds never shrink with the press animation or the idle artwork drift.
@@ -201,13 +201,17 @@ export function bindPress(hit: Node, inner: Node, action: () => void, feel:{dept
   const target=(scale:number,depth=0)=>{const p=inner.position;return {angle:depth>0?(feel.tilt??0):0,scale:new Vec3(scale,scale,1),position:new Vec3(p.x*(1-scale),p.y*(1-scale)-depth,0)};};
   const restore=():void=>{
     pressed=false;touchId=undefined;response?.stop();
-    if(motion.isValid)response=tween(motion).to(.10,target(1.008,-.5),{easing:'quadOut'}).to(Math.max(.16,feel.release??.2),target(1),{easing:'sineInOut'}).start();
+    if(!motion.isValid)return;
+    response=feel.instant?tween(motion).to(feel.release??.12,target(1),{easing:'quadOut'}).start()
+      :tween(motion).to(.10,target(1.008,-.5),{easing:'quadOut'}).to(Math.max(.16,feel.release??.2),target(1),{easing:'sineInOut'}).start();
   };
   surface.on(Node.EventType.TOUCH_START,(event:EventTouch)=>{
     if(event.target!==surface||pressed||!hit.activeInHierarchy)return;
     const point=event.getUILocation();startX=point.x;startY=point.y;touchId=event.getID();
     pressed=true;response?.stop();
-    response=tween(motion).to(.065,target(Math.min(.94,feel.compression??.92),feel.depth??6),{easing:'quadOut'}).start();
+    const down=target(Math.max(.88,Math.min(1,feel.compression??.92)),feel.depth??6);
+    if(feel.instant){motion.setPosition(down.position);motion.setScale(down.scale);motion.angle=down.angle;}
+    else response=tween(motion).to(.065,down,{easing:'quadOut'}).start();
   });
   surface.on(Node.EventType.TOUCH_MOVE,(event:EventTouch)=>{
     if(!pressed||event.getID()!==touchId)return;const point=event.getUILocation();

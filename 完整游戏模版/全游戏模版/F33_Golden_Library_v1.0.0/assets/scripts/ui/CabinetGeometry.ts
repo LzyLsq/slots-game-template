@@ -34,6 +34,14 @@ const STRETCHED_CABINETS:Record<GameId,CabinetGeometry>={
   bet:[420,1043,185,70],balance:[121,1043,245,70],win:[394,1043,236,70],topWin:[656,1043,230,70],
   status:[142,1226,210,48],titleIndex:3,ink:'#F7E3BA', },
 };
+/** Plane-space correction to seat bitmap faces in the four painted console sockets.
+ * Index order: SPIN, +, -, AUTO. The hit target and face move together. */
+export const CABINET_BUTTON_SEATS:Record<GameId,readonly (readonly [number,number])[]>={
+ 'golden-hour': [[0,-43],[-43,-39],[-34,-39],[-36,-39]],
+ 'jade-treasury': [[0,-12],[-56,-32],[-39,-32],[-29,-36]],
+ 'pearl-palace': [[0,-43],[-47,-72],[-35,-72],[-37,-72]],
+ 'ruby-revel': [[0,-43],[-43,-72],[-35,-72],[-36,-72]],
+};
 export const CABINETS:Record<GameId,CabinetGeometry>=Object.fromEntries(
   Object.entries(STRETCHED_CABINETS).map(([id,geometry])=>[
     id,

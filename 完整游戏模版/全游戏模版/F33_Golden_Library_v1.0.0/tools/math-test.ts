@@ -42,15 +42,15 @@ const main = async (): Promise<void> => {
     assert.equal(wins.length,cfg.primaryKind==='twin-boards'?cfg.paylines.length*2:cfg.payMode==='paylines'?cfg.paylines.length:1);
   }
   for(const config of GAME_CONFIGS){const capped = generator.generate(config, 500, new SeededRNG(999), { winTier: 'epic' }); assert(capped.totalWin <= 500 * config.maxWinMultiplier);}
-  // The fifth and tenth settled spins share a cross-mode policy. The benefit
+  // The fifth settled spin across modes guarantees SUPER BIG (10×). The benefit
   // is a separate credited bonus, never a fabricated reel combination.
-  assert.equal(newcomerMinimum(0),undefined);assert.equal(newcomerMinimum(4),5);
-  assert.equal(newcomerMinimum(5),undefined);assert.equal(newcomerMinimum(9),10);
-  assert.equal(newcomerMinimum(10),undefined);assert.equal(newcomerNextRound(9),10);
+  assert.equal(newcomerMinimum(0),undefined);assert.equal(newcomerMinimum(4),10);
+  assert.equal(newcomerMinimum(5),undefined);assert.equal(newcomerMinimum(9),undefined);
+  assert.equal(newcomerMinimum(10),undefined);assert.equal(newcomerNextRound(4),5);assert.equal(newcomerNextRound(5),undefined);
   for(const [index,config] of GAME_CONFIGS.entries()){
     const bet=config.bets[0],seed=997+index;
     const natural=new ResultGenerator().generate(config,bet,new SeededRNG(seed));
-    for(const minimum of [5,10] as const){
+    for(const minimum of [10] as const){
       const welcome=new ResultGenerator().generate(config,bet,new SeededRNG(seed),{newcomerMinimum:minimum});
       const benefit=welcome.wins.filter(w=>w.symbolId==='newcomer-benefit');
       assert.deepEqual(welcome.grid,natural.grid);
@@ -81,8 +81,8 @@ const main = async (): Promise<void> => {
     assert.equal(milestone.economy.settleSpin(id,result.totalWin),false,'a round cannot pay twice');
     assert.equal(milestone.economy.balance(),previous-bet+result.totalWin);
     assert.equal(milestone.profile.current()!.gamesPlayed,spin);
-    if(spin===5||spin===10){
-      assert(result.totalWin>=bet*(spin===5?5:10));
+    if(spin===5){
+      assert(result.totalWin>=bet*10);
       assert.equal(result.wins.filter(w=>w.symbolId==='newcomer-benefit').length<=1,true);
     }else assert.equal(result.wins.some(w=>w.symbolId==='newcomer-benefit'),false);
   }

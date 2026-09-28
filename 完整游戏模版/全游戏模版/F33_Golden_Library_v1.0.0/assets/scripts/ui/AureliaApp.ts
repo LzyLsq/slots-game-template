@@ -32,7 +32,7 @@ import { CanopyLeaves } from '../vfx/CanopyLeaves';
 import { SalonWinStage } from '../vfx/SalonWinStage';
 import { SafeAreaAdapter as Safe } from './SafeAreaAdapter';
 import { SalonArt, box, text, opacity, bindPress, outlined, COLORS } from './SalonArt';
-import { CABINETS, CABINET_ROOM_WIDTH, CABINET_ROOM_HEIGHT, imagePoint, cabinetLayout, reelAperture, type Box } from './CabinetGeometry';
+import { CABINETS, CABINET_BUTTON_SEATS, CABINET_ROOM_WIDTH, CABINET_ROOM_HEIGHT, imagePoint, cabinetLayout, reelAperture, type Box } from './CabinetGeometry';
 import { LEGAL_SECTIONS, type LegalPage } from './LegalContent';
 const { ccclass } = _decorator;
 type Page = 'login'|'register'|'home'|'store'|'rewards'|'rank'|'profile'|'game';
@@ -626,29 +626,30 @@ export class AureliaApp extends Component {
     this.betLabel=outlined(text(betPanel,money(this.bet),compactBet?38:0,compactBet?0:cfg.id==='jade-treasury'?-12:-27,compactBet?88:g.bet[2]*.85,compactBet?48:43,compactBet?39:42,'#FFF2D5'),'#482A16',1);
     this.betLabel.fontFamily='Arial Black';this.betLabel.enableWrapText=false;this.betLabel.overflow=Label.Overflow.SHRINK;
     const ctl=(rect:Box,label:string,index:number,action:()=>void):{hit:Node;face:Node}=>{
-      const pos=imagePoint(rect);const hit=box(this.plane!,label,pos[0],pos[1],Math.max(108,rect[2]),Math.max(110,rect[3]));
+      const pos=imagePoint(rect),seat=CABINET_BUTTON_SEATS[cfg.id][index];
+      const hit=box(this.plane!,label,pos[0]+seat[0],pos[1]+seat[1],Math.max(108,rect[2]),Math.max(110,rect[3]));
       const theme=GAME_CONFIGS.indexOf(cfg);
       const asset='canopy-button-'+(theme*4+[0,2,1,3][index]);
       const face=this.art.image(hit,asset,0,0,rect[2],rect[3]);
-      this.cabinetButtonMotion(face,rect[2],rect[3],theme,index);
+      // The painted metal recess supplies the idle finish; only the face moves on touch.
       bindPress(hit,face,()=>{this.audio.play('tap');ambient.land(-1);action();},[
-        {depth:5,compression:.97,release:.12,tilt:-3},
-        {depth:7,compression:.985,release:.14,tilt:0},
-        {depth:4,compression:.94,release:.23,tilt:2},
-        {depth:4,compression:.96,release:.18,tilt:-2},
+        {depth:3,compression:.968,release:.12,instant:true},
+        {depth:3,compression:.968,release:.12,instant:true},
+        {depth:3,compression:.968,release:.12,instant:true},
+        {depth:3,compression:.968,release:.12,instant:true},
       ][theme]);return {hit,face};
     };
     ctl(g.minus,'Decrease bet',2,()=>this.changeBet(-1));ctl(g.plus,'Increase bet',1,()=>this.changeBet(1));
     const spinControl=ctl(g.spin,'SPIN',0,()=>void this.spin()),spin=spinControl.hit;
     // Lettering is etched into the lower button rim and moves with the metal
     // face. The former full-width ivory bar floated across the round control.
-    const spinCaption=outlined(text(spinControl.face,'SPIN',0,-g.spin[3]*.43,g.spin[2]*.82,52,47,'#FFF4D5'),'#422610',3);
+    const spinCaption=outlined(text(spinControl.face,'SPIN',0,-g.spin[3]*.43-CABINET_BUTTON_SEATS[cfg.id][0][1],g.spin[2]*.82,52,47,'#FFF4D5'),'#422610',3);
     spinCaption.fontFamily='Arial Black';spinCaption.enableWrapText=false;
 
     ctl(g.auto,'AUTO',3,()=>{this.auto=!this.auto;this.updateAuto();this.toast(this.auto?'Auto spin on · Tap AUTO again to stop.':'Auto spin off.');if(this.auto&&this.state.kind==='idle')void this.spin();});
     // Keep AUTO's state beside its physical button. The former low register
     // sat behind the fixed bottom award readout on compact phones.
-    const autoPoint=imagePoint(g.auto),autoStatus:[number,number]=[autoPoint[0],autoPoint[1]-g.auto[3]/2-38];
+    const autoPoint=imagePoint(g.auto),autoSeat=CABINET_BUTTON_SEATS[cfg.id][3],autoStatus:[number,number]=[autoPoint[0]+autoSeat[0],autoPoint[1]-g.auto[3]/2-(cfg.id==='pearl-palace'||cfg.id==='ruby-revel'?68:38)];
     const autoWindow=consoleWindow('AUTO inlaid status',autoStatus[0],autoStatus[1],g.status[2]+4,g.status[3]+8);
     this.autoLamp=outlined(text(autoWindow,'AUTO OFF',0,0,g.status[2]*.82,g.status[3]*.82,35,'#FFF2D5'),'#1D2A39',2);this.autoLamp.enableWrapText=false;this.autoLamp.overflow=Label.Overflow.SHRINK;this.updateAuto();
     const halo=this.art.light(spin,1,0,0,g.spin[2]*1.65,g.spin[2]*1.65,135);halo.setSiblingIndex(0);
@@ -667,7 +668,7 @@ export class AureliaApp extends Component {
       caption.fontFamily='Arial Black';caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
       const state=sound?outlined(text(face,'ON',23,-25,155,37,37,ink),edge,plate===2?2:3):caption;
       state.fontFamily='Arial Black';state.enableWrapText=false;state.overflow=Label.Overflow.SHRINK;
-      bindPress(hit,face,()=>{this.audio.play('tap');action();},{depth:3,compression:.965,release:.18});
+      bindPress(hit,face,()=>{this.audio.play('tap');action();},{depth:2,compression:.975,release:.12,instant:true});
       return state;
     };
     tool('Back to salon',-370,0,'BACK',()=>void this.navigate('home'));
@@ -733,7 +734,7 @@ export class AureliaApp extends Component {
     if(!saved){this.audio.setEffects(previous);this.updateSound(previous);this.toast('Sound setting could not be saved.');return;}
     this.toast(next?'Sound on.':'Sound off.');
   }
-  private newcomerBenefit():{round:number;minimum?:5|10}|undefined{
+  private newcomerBenefit():{round:number;minimum?:10}|undefined{
     const played=this.services.profile.current()?.gamesPlayed;
     const round=newcomerNextRound(played??-1);
     return round?{round,minimum:newcomerMinimum(played!)}:undefined;
@@ -925,19 +926,6 @@ export class AureliaApp extends Component {
   private edgeJewels(parent:Node,w:number,h:number,phase=0):void{
     if(this.reduced)return;const points=[[-w*.44,h*.34],[w*.44,-h*.34],[w*.40,h*.38],[-w*.40,-h*.38]];
     points.forEach(([x,y],i)=>{const n=this.art.light(parent,3,x,y,42,42,0);n.name='Crafted edge glint';const alpha=n.getComponent(UIOpacity)!;tween(alpha).delay(phase+i*.65).to(.55,{opacity:175},{easing:'sineOut'}).to(1.1,{opacity:0},{easing:'sineInOut'}).delay(3.3).union().repeatForever().start();});
-  }
-  private cabinetButtonMotion(face:Node,w:number,h:number,theme:number,index:number):void{
-    if(this.reduced)return;
-    // The visual breathes independently of the fixed input target and press spring.
-    const phase=theme*.37+index*.61;
-    tween(face).delay(phase).repeatForever(tween().to(2.1+theme*.2,{scale:new Vec3(1.026,1.026,1)},{easing:'sineInOut'}).to(2.7,{scale:new Vec3(1,1,1)},{easing:'sineInOut'})).start();
-    this.sheen(face,w*.76,h*.72,phase);
-    for(let i=0;i<2;i++){
-      const glint=this.art.light(face,3,(i?1:-1)*w*.29,(i?-.24:.25)*h,Math.min(w,h)*.28,Math.min(w,h)*.28,0);glint.name='Button enamel glint';
-      const alpha=glint.getComponent(UIOpacity)!;
-      tween(alpha).delay(phase+i*1.8).repeatForever(tween().to(.65,{opacity:205},{easing:'sineInOut'}).to(.95,{opacity:0},{easing:'sineInOut'}).delay(2.2)).start();
-      tween(glint).repeatForever(tween().to(3.4,{angle:85}).to(3.4,{angle:0})).start();
-    }
   }
   /** Let the painted letters move gently while the engraved metal stays fixed. */
   private artTitleMotion(n:Node,phase=0):void{
