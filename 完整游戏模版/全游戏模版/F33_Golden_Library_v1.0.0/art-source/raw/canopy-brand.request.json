@@ -1,0 +1,27 @@
+{
+  "model": "gpt-5.6-sol",
+  "input": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "input_text",
+          "text": "Original premium mobile game art asset: a distinct horizontal ornate GOLDEN LIBRARY insignia, sharp readable engraved title lettering \"GOLDEN LIBRARY\" in refined antique bookplate serif, warm gold foil on deep lapis enamel, elegant illuminated manuscript corners, subtle treasure coin motif and amber glass jewels, tactile relief, crisp polished edges, centered, transparent background, no surrounding scene, no extra letters, no watermark. A coherent luxury storybook game aesthetic, not a web logo, no flat vector art.\n"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "type": "image_generation",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1536x1024",
+      "output_format": "png",
+      "background": "transparent"
+    }
+  ],
+  "tool_choice": {
+    "type": "image_generation"
+  }
+}
