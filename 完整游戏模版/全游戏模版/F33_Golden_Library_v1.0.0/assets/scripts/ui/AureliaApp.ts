@@ -99,7 +99,10 @@ export class AureliaApp extends Component {
       this.audio.setEffects(this.services.profile.current()?.settings.sound??true);
       this.restoreRemoteRound();
       if(this.page==='game')await this.art.load([this.config.id+'-tall']);
-      this.render();loading.destroy();
+      this.render();
+      await new Promise<void>(resolve=>tween(opacity(loading,255))
+        .to(this.reduced?.01:.26,{opacity:0},{easing:'sineInOut'}).call(()=>resolve()).start());
+      loading.destroy();
       globalThis.dispatchEvent?.(new Event('aurelia-app-ready'));
     }catch(error){progress.string=tr('Could not open the library. Tap to retry.');loading.on(Node.EventType.TOUCH_END,()=>{loading.destroy();void this.boot();});globalThis.dispatchEvent?.(new Event('aurelia-load-error'));console.error(error);}
   }
@@ -145,17 +148,23 @@ export class AureliaApp extends Component {
     if(crossfade)tween(o).to(.38,{opacity:255},{easing:'sineInOut'}).call(complete).start();else complete();
   }
   private loadingProgress?: (value:number,caption:string)=>void;
+  private loadingArrival?:Promise<void>;
   private async navigate(page:Page,config?:GameConfig):Promise<void>{
     if(this.state.kind!=='idle'&&this.page==='game'){this.toast('Finish the current round before leaving.');return;}
     if(this.busy)return;this.busy=true;this.auto=false;this.updateAuto();
     let loading:Node|undefined;
     try{
-      if(config){loading=this.gameLoading(config);await this.art.load([config.id+'-tall'],(done,total)=>this.loadingProgress?.(done/total,'Preparing your game…'));}
+      if(config){
+        loading=this.gameLoading(config);
+        // Asset readiness drives the percentage. The separate brief entrance
+        // lets even a cached collection settle into the scene before the exit.
+        await Promise.all([this.art.load([config.id+'-tall'],(done,total)=>this.loadingProgress?.(done/total,'Preparing your game…')),this.loadingArrival]);
+      }
       if(config){this.config=config;this.betIndex=Math.min(this.betIndex,config.bets.length-1);}
       this.page=page;this.render();
-      if(loading){loading.setSiblingIndex(this.node.children.length-1);this.loadingProgress?.(1,'Ready');await new Promise<void>(resolve=>tween(opacity(loading!,255)).to(this.reduced?.01:.34,{opacity:0},{easing:'sineInOut'}).call(()=>resolve()).start());loading.destroy();loading=undefined;}
+      if(loading){loading.setSiblingIndex(this.node.children.length-1);this.loadingProgress?.(1,'Ready');await new Promise<void>(resolve=>tween(opacity(loading!,255)).to(this.reduced?.01:.28,{opacity:0},{easing:'sineInOut'}).call(()=>resolve()).start());loading.destroy();loading=undefined;}
     }catch{if(this.content)opacity(this.content,255);this.closeModal();this.toast('The cabinet could not load. Please try again.');}
-    finally{if(loading?.isValid)loading.destroy();this.loadingProgress=undefined;this.busy=false;}
+    finally{if(loading?.isValid)loading.destroy();this.loadingProgress=undefined;this.loadingArrival=undefined;this.busy=false;}
   }
   private gameLoading(config:GameConfig):Node{
     const n=box(this.node,'Game mode loading',0,0,Safe.visibleWidth,this.height);n.addComponent(BlockInputEvents);
@@ -169,9 +178,16 @@ export class AureliaApp extends Component {
     const pool=this.art.light(stage,1,0,-93,600,84,this.reduced?28:52);pool.name='Collection contact reflection';
     if(!this.reduced){const reflection=pool.getComponent(UIOpacity)!;tween(reflection).to(2.8,{opacity:95},{easing:'sineInOut'}).to(3.2,{opacity:48},{easing:'sineInOut'}).union().repeatForever().start();}
     const collection=this.art.image(stage,prizeArt(config.id),0,130,650,620);
+    if(this.reduced)this.loadingArrival=Promise.resolve();
+    else{
+      collection.setScale(.955,.955,1);
+      const collectionAlpha=opacity(collection,195);
+      tween(collection).to(.36,{scale:new Vec3(1,1,1)},{easing:'sineOut'}).start();
+      this.loadingArrival=new Promise<void>(resolve=>tween(collectionAlpha).to(.36,{opacity:255},{easing:'sineOut'}).call(()=>resolve()).start());
+    }
     // Anchor the treasure to the marble rather than floating the whole cutout.
     // Small reflections are attached to the book metal and room lamps.
-    if(!this.reduced){for(const [x,y,phase] of [[-194,40,.2],[207,56,1.7],[-341,352,3.1],[344,355,4.3]] as const){
+    if(!this.reduced){for(const [x,y,phase] of [[-194,40,0],[207,56,.14],[-341,352,.27],[344,355,.38]] as const){
       const glint=this.art.light(stage,3,x,y,57,57,0);glint.name='Collection and sconce reflection';const a=glint.getComponent(UIOpacity)!;
       tween(a).delay(phase).repeatForever(tween().to(.65,{opacity:155},{easing:'sineOut'}).to(1.4,{opacity:0},{easing:'sineInOut'}).delay(3.1)).start();
     }}
@@ -533,7 +549,7 @@ export class AureliaApp extends Component {
   }
   private guestConsent():void{
     const s=this.sheet('Before you enter',650);
-    text(s,'This is a simulated casino for eligible adults.\nCoins have no cash value and cannot be withdrawn.\n\nConfirm that you meet your region’s minimum age\nand accept the Terms and Privacy Policy.',0,20,820,330,36,COLORS.ink);
+    text(s,'Simulated casino for eligible adults.\nCoins have no cash value.\n\nConfirm you meet your region’s age\nrequirement and accept the Terms\nand Privacy Policy.',0,20,820,330,36,COLORS.ink);
     this.art.button(s,'Confirm eligibility',0,-225,760,110,'I am eligible · Continue',14,()=>{this.accept();void this.services.auth.guestLogin().then(r=>{if(r.ok){this.page='home';this.render();}else this.toast(r.message??'Unable to enter.');});});
   }
   private gamePage():void{
@@ -552,7 +568,7 @@ export class AureliaApp extends Component {
     const title=this.art.image(this.plane,'canopy-title-'+titleIndex,titlePoint[0],titlePoint[1]+16,g.title[2]*.94,g.title[3]*.94);
     title.name='Cabinet title · '+cfg.name;
     this.artTitleMotion(title,titleIndex*.42);
-    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,reelAperture(g));this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};
+    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,reelAperture(g,cfg.id));this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};
     // Read the three painted counter windows as three separate instruments.
     // BET belongs to the middle window; WIN/TOP share the right window on
     // separate baselines. No continuous smoked strip can cover the console.
@@ -573,8 +589,11 @@ export class AureliaApp extends Component {
     this.winLabel.enableWrapText=false;this.winLabel.overflow=Label.Overflow.SHRINK;
     this.topWinLabel=outlined(text(this.plane,'TOP '+topWinMoney(this.services.profile.current()?.biggestWin??0),right[0],right[1]+meterTopY-registerDrop,g.topWin[2]*.83,39,31,meterInk),'#382513',1);
     this.topWinLabel.fontFamily='Arial';this.topWinLabel.enableWrapText=false;this.topWinLabel.overflow=Label.Overflow.SHRINK;
-    const recharge=this.art.image(this.plane,'canopy-button-'+(GAME_CONFIGS.indexOf(cfg)*4+2),balance[0]-g.balance[2]*.57,balance[1],54,54);
-    recharge.name='Recharge';bindPress(recharge,recharge,()=>{if(this.state.kind==='idle')void this.navigate('store');else this.toast('Finish the round before opening the shop.');});
+    // Seat the plus ornament inside the painted coin register and make the
+    // full register a stable touch target on narrow phones.
+    const rechargeHit=box(this.plane,'Recharge',balance[0],balance[1],g.balance[2],Math.max(100,g.balance[3]));
+    const recharge=this.art.image(rechargeHit,'canopy-button-'+(GAME_CONFIGS.indexOf(cfg)*4+2),-80,0,70,70);
+    bindPress(rechargeHit,recharge,()=>{if(this.state.kind==='idle')void this.navigate('store');else this.toast('Finish the round before opening the shop.');});
     const themeIndex=GAME_CONFIGS.indexOf(cfg);
 
     const readoutInk='#253D51';
@@ -1089,7 +1108,10 @@ export class AureliaApp extends Component {
         if(r.virtual)this.idleAccent(face,i*.7,3,.2,2);
         this.reveal(row,i*.1);
       });
-      this.art.button(stage,'Explore games',0,-640,838,101,'Try another vault',6,()=>void this.navigate('home'),3);
+      // Compact phones place the shared navigation immediately below the
+      // ranking parchment. Seat this action in its open lower area instead
+      // of letting its touch bounds overlap the Hall and Rank rail keys.
+      this.art.button(stage,'Explore games',0,this.height<1950?-420:-640,838,101,'Try another vault',6,()=>void this.navigate('home'),3);
     };
     if(this.services.remoteMode)void this.services.rank.refresh('all-time').then(render).catch(()=>this.toast('Unable to load honours.'));else render();
   }

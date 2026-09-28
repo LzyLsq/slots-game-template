@@ -19,19 +19,18 @@ From this folder, run `npm ci`, `npm run typecheck:math`, `npm test`, `npm run t
 
 ## Current visual review · 2026-09-28
 
-These screenshots were captured from the latest local Cocos browser preview at fixed mobile viewports. Two hall frames show different phases of the staggered brass, lamp, folio and navigation reflections; a still image cannot establish animation smoothness. The hall was also checked at 320 × 568, and the Shop → Hall → Cipher → Play path was exercised without browser errors.
+Captured from the current local Cocos browser preview at a 390 × 844 mobile viewport (2× device pixel ratio). Each cabinet capture was checked against the selected game ID. The loading capture shows the Gilded Index mode arrival after the hall; its bar reflects that the local resource was already ready. These are still frames and do not establish animation smoothness or native-device performance.
 
 | Screen | Current screenshot |
 |---|---|
-| Hall, 390 × 844 | [View](docs/screenshots/living-hall-20260928/390-home.png) |
-| Hall light phase, 390 × 844 | [View](docs/screenshots/living-hall-20260928/390-home-light-phase.png) |
-| Hall, 320 × 568 | [View](docs/screenshots/living-hall-20260928/320-home.png) |
-| Gilded Index, 390 × 844 | [View](docs/screenshots/living-hall-20260928/390-game-golden-hour.png) |
-| Sapphire Cipher, 390 × 844 | [View](docs/screenshots/living-hall-20260928/390-game-jade-treasury.png) |
-| Fortune Atlas, 390 × 844 | [View](docs/screenshots/living-hall-20260928/390-game-pearl-palace.png) |
-| Royal Folio, 390 × 844 | [View](docs/screenshots/living-hall-20260928/390-game-ruby-revel.png) |
+| Hall | [View](docs/screenshots/current-20260928/390-hall.png) |
+| Gilded Index | [View](docs/screenshots/current-20260928/390-gilded-index.png) |
+| Sapphire Cipher | [View](docs/screenshots/current-20260928/390-sapphire-cipher.png) |
+| Fortune Atlas | [View](docs/screenshots/current-20260928/390-fortune-atlas.png) |
+| Royal Folio | [View](docs/screenshots/current-20260928/390-royal-folio.png) |
+| Gilded Index mode loading | [View](docs/screenshots/current-20260928/390-mode-loading.png) |
 
-These are browser viewport captures, not native-device screenshots. The previous visual set is retained only in the local work folder and is not part of this release snapshot.
+The capture run completed without browser page errors. Earlier visual iterations remain local and are excluded from this Git delivery.
 
 ## Release boundary
 

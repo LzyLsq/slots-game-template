@@ -19,7 +19,7 @@ for(const [width,height] of [[320,568],[360,640],[375,667],[390,844],[430,932],[
       assert(y*layout.scale+layout.y+rect[3]*layout.scale/2<=h/2-169,`${cfg.id} ${key}: overlaps toolbar`);
       assert(y*layout.scale+layout.y-rect[3]*layout.scale/2>=-h/2+157,`${cfg.id} ${key}: overlaps footer`);
     }
-    const aperture=reelAperture(geometry);
+    const aperture=reelAperture(geometry,cfg.id);
     assert(aperture[0]>geometry.screen[0]&&aperture[1]>geometry.screen[1],`${cfg.id}: reel crosses top/left bevel`);
     assert(aperture[0]+aperture[2]<geometry.screen[0]+geometry.screen[2],`${cfg.id}: reel crosses right bevel`);
     assert(aperture[1]+aperture[3]<=geometry.screen[1]+geometry.screen[3]-16,`${cfg.id}: reel touches lower bevel`);

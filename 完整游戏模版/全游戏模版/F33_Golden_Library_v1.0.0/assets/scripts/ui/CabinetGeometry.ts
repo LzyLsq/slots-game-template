@@ -44,9 +44,12 @@ export const CABINETS:Record<GameId,CabinetGeometry>=Object.fromEntries(
 ) as Record<GameId,CabinetGeometry>;
 // The painted glass reaches close to the bevel. Reels, guides and award accents
 // share this slightly smaller aperture so animated art never paints over metal.
-export function reelAperture(g:CabinetGeometry):Box{
+export function reelAperture(g:CabinetGeometry, id?:GameId):Box{
  const [x,y,w,h]=g.screen;
- const left=23,right=23,top=22,bottom=28;
+ // The Atlas glass begins below the compass studs painted into its upper
+ // metal rail. Its four rows need a lower, shallower aperture than the other
+ // cabinets so the first row stays inside the actual glass opening.
+ const left=23,right=23,top=id==='pearl-palace'?87:22,bottom=28;
  return [x+left,y+top,w-left-right,h-top-bottom];
 }
 export function imagePoint(b:Box):readonly[number,number]{return[b[0]+b[2]/2-512,1152-b[1]-b[3]/2];}
