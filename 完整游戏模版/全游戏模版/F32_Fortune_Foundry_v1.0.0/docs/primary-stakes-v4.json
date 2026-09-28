@@ -1,0 +1,159 @@
+{
+  "note": "Development min/max bet sample, not certified RTP.",
+  "samples": [
+    {
+      "status": "PASS",
+      "results": [
+        {
+          "gameId": "coin-press",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 30,
+          "payoutScale": 0.69060416,
+          "targetRtp": 0.952,
+          "rtp": 0.970695,
+          "confidence95": [
+            0.9551292838655869,
+            0.986260716134413
+          ],
+          "baseRtp": 0.602151,
+          "featureRtp": 0.368544,
+          "hitRate": 0.8742,
+          "featureRate": 0.45038,
+          "maxWin": 6123
+        },
+        {
+          "gameId": "lantern-ledger",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 30,
+          "payoutScale": 0.01248554,
+          "targetRtp": 0.952,
+          "rtp": 0.9712423333333333,
+          "confidence95": [
+            0.9623211135492489,
+            0.9801635531174178
+          ],
+          "baseRtp": 0.004302,
+          "featureRtp": 0.9669403333333333,
+          "hitRate": 0.86124,
+          "featureRate": 0.93216,
+          "maxWin": 393
+        },
+        {
+          "gameId": "cloud-conveyor",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 30,
+          "payoutScale": 0.46141199,
+          "targetRtp": 0.952,
+          "rtp": 0.9579396666666666,
+          "confidence95": [
+            0.9420922198578914,
+            0.9737871134754419
+          ],
+          "baseRtp": 0.3162703333333333,
+          "featureRtp": 0.6416693333333333,
+          "hitRate": 0.90421,
+          "featureRate": 0.13767,
+          "maxWin": 2417
+        },
+        {
+          "gameId": "jubilee-vault",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 30,
+          "payoutScale": 0.45770494,
+          "targetRtp": 0.952,
+          "rtp": 0.9670136666666667,
+          "confidence95": [
+            0.9557725174780826,
+            0.9782548158552508
+          ],
+          "baseRtp": 0.24848633333333334,
+          "featureRtp": 0.7185273333333333,
+          "hitRate": 0.92371,
+          "featureRate": 0.97966,
+          "maxWin": 2048
+        }
+      ]
+    },
+    {
+      "status": "PASS",
+      "results": [
+        {
+          "gameId": "coin-press",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 900,
+          "payoutScale": 0.69060416,
+          "targetRtp": 0.952,
+          "rtp": 0.9697085888888889,
+          "confidence95": [
+            0.9541417970072226,
+            0.9852753807705552
+          ],
+          "baseRtp": 0.6004133444444445,
+          "featureRtp": 0.36929524444444445,
+          "hitRate": 0.88615,
+          "featureRate": 0.45038,
+          "maxWin": 183701
+        },
+        {
+          "gameId": "lantern-ledger",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 900,
+          "payoutScale": 0.01248554,
+          "targetRtp": 0.952,
+          "rtp": 0.9716009444444444,
+          "confidence95": [
+            0.9626815692700355,
+            0.9805203196188534
+          ],
+          "baseRtp": 0.006382333333333334,
+          "featureRtp": 0.9652186111111111,
+          "hitRate": 0.93216,
+          "featureRate": 0.93216,
+          "maxWin": 11799
+        },
+        {
+          "gameId": "cloud-conveyor",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 900,
+          "payoutScale": 0.46141199,
+          "targetRtp": 0.952,
+          "rtp": 0.9585233888888889,
+          "confidence95": [
+            0.9426873438605271,
+            0.9743594339172507
+          ],
+          "baseRtp": 0.3169287111111111,
+          "featureRtp": 0.6415946777777778,
+          "hitRate": 0.99795,
+          "featureRate": 0.13767,
+          "maxWin": 72509
+        },
+        {
+          "gameId": "jubilee-vault",
+          "spins": 100000,
+          "seed": 64392817,
+          "bet": 900,
+          "payoutScale": 0.45770494,
+          "targetRtp": 0.952,
+          "rtp": 0.9671834888888889,
+          "confidence95": [
+            0.9559430512526723,
+            0.9784239265251056
+          ],
+          "baseRtp": 0.2490179111111111,
+          "featureRtp": 0.7181655777777778,
+          "hitRate": 0.97966,
+          "featureRate": 0.97966,
+          "maxWin": 61432
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+gameId: f32-fortune-foundry
+displayName: Fortune Foundry
+creatorVersion: 3.8.8
+orientation: portrait
+resultAuthority: production-server; localhost-debug-only-local-simulation
+currency: non-redeemable-virtual-coins
+corePromise: operate four wealth-making machines in one shared foundry
+baseLoop: [choose-machine, set-wager, request-settled-round, present-result, update-wallet]
+playerAgency: pre-spin machine and wager choice; no result-changing mid-spin action
+machines:
+  coin-press:
+    topology: 5x3
+    winEvaluation: 243 left-to-right ways
+    resolution: WILD rises in its own reel up to three steps
+  lantern-ledger:
+    topology: 6x5
+    winEvaluation: orthogonal clusters of at least five
+    resolution: winning cells transform to WILD and pay positive difference
+  cloud-conveyor:
+    topology: 6x5
+    winEvaluation: board-wide count of at least eight matching symbols
+    resolution: scatter-triggered five free spins with up to three drops each
+  jubilee-vault:
+    topology: 5x3
+    winEvaluation: 25 authored paylines
+    resolution: winning cells clear and refill with step multipliers
+progression: daily rewards, account balance and honours standings
+presentationSignature: integrated frontal mint machinery with generated kinetic stages
+releaseGate: compare portfolio mechanics, then validate native commerce, auth, legal and devices
