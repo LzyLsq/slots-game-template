@@ -142,6 +142,12 @@ export const translations:Record<string,readonly string[]> = {
     "ログイン",
     "로그인"
   ],
+  "Apple sign-in unavailable": [
+    "Apple 登录暂不可用",
+    "Apple 登入暫不可用",
+    "Appleサインインは利用できません",
+    "Apple 로그인 사용 불가"
+  ],
   "Sign in with Apple": [
     "通过 Apple 登录",
     "透過 Apple 登入",

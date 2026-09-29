@@ -477,7 +477,17 @@ export class AureliaApp extends Component {
       this.art.button(panel,'Switch account form',0,-477,790,95,'Back to sign in',9,()=>void this.navigate('login'),0);
     }else{
       const primary=this.art.button(panel,'Sign in',0,-72,810,139,'SIGN IN',14,()=>void this.authAction('login'),3);this.metalEdges(primary,778,121,.7);
-      const apple=this.art.panel(panel,0,-216,810,104,1);apple.name='Sign in with Apple';this.art.image(apple,'apple-mark',-242,0,42,50);outlined(text(apple,'Sign in with Apple',0,0,529,75,48,COLORS.cream),'#15213D',2);bindPress(apple,apple,()=>void this.authAction('apple'));
+      const apple=this.art.panel(panel,0,-216,810,104,1);apple.name='Sign in with Apple';
+      const appleMark=this.art.image(apple,'apple-mark',-242,0,42,50);appleMark.active=false;
+      const appleCaption=outlined(text(apple,'Apple sign-in unavailable',0,0,529,75,40,COLORS.cream),'#15213D',2);
+      const appleOpacity=opacity(apple,205);
+      // A browser/local preview has no native Apple bridge. Do not present a
+      // decorative plate as an enabled sign-in method until one is available.
+      void this.services.auth.appleSignInAvailable().then(available=>{
+        if(!available||!apple.isValid||this.page!=='login')return;
+        appleCaption.string=tr('Sign in with Apple');appleCaption.fontSize=48;appleMark.active=true;appleOpacity.opacity=255;
+        bindPress(apple,apple,()=>void this.authAction('apple'));
+      }).catch(()=>{});
       const guest=this.art.button(panel,'Guest',-211,-356,390,98,'Guest play',0,()=>this.guestConsent(),0);const create=this.art.button(panel,'Create account',211,-356,390,98,'Register',4,()=>void this.navigate('register'),0);
       for(const button of [guest,create])button.getComponentsInChildren(Label).forEach(label=>{label.fontSize=50;});
     }
@@ -502,20 +512,18 @@ export class AureliaApp extends Component {
     // Configure off-stage: EditBox onLoad otherwise creates default labels
     // and clears the existing material before our references are assigned.
     const frame=this.art.panel(parent,0,y,778,103,1);
-    // An inset vellum well keeps every locale and typed value clear of the
-    // plate's engraved center rule, while its outer gold artwork remains visible.
-    const inkWell=box(frame,'Input vellum well',154,0,428,75);
-    const well=inkWell.addComponent(Graphics);
-    well.fillColor=new Color(255,247,216,226);well.roundRect(-214,-37,428,74,11);well.fill();
-    well.strokeColor=new Color(132,91,41,165);well.lineWidth=2;well.roundRect(-214,-37,428,74,11);well.stroke();
-    // The plate's left clock is ornamental: start editing inside its clear enamel center.
-    const n=box(frame,'Text entry',190,0,360,85);n.active=false;
-    const focusFrame=box(n,'Focused gold edge',0,0,360,76);const fg=focusFrame.addComponent(Graphics);fg.strokeColor=new Color('#BD8234');fg.lineWidth=3;fg.roundRect(-180,-38,360,76,13);fg.stroke();
+    // The commissioned plate already has a continuous sapphire enamel face.
+    // Keep the editor inside it rather than pasting a second, half-width
+    // vellum rectangle over the artwork.
+    const n=box(frame,'Text entry',0,0,514,82);n.active=false;
+    const focusFrame=box(n,'Focused gold edge',0,0,514,75);
+    const fg=focusFrame.addComponent(Graphics);fg.strokeColor=new Color('#F5D38B');fg.lineWidth=3;
+    fg.roundRect(-257,-37.5,514,75,13);fg.stroke();
     const focusOpacity=opacity(focusFrame,0);const edit=n.addComponent(EditBox);
     edit.backgroundImage=null!;
-    const label=text(n,value,0,0,348,76,43,'#182F29',false,true);label.horizontalAlign=Label.HorizontalAlign.LEFT;label.isBold=true;
+    const label=text(n,value,0,0,490,76,43,'#FFF8E7',false,true);label.horizontalAlign=Label.HorizontalAlign.LEFT;label.isBold=true;
     const hintSize=placeholder.length>24?28:placeholder.length>12?35:40;
-    const hint=text(n,placeholder,0,0,348,76,hintSize,'#394339');hint.horizontalAlign=Label.HorizontalAlign.LEFT;hint.isBold=true;
+    const hint=text(n,placeholder,0,0,490,76,hintSize,'#F5DDA8');hint.horizontalAlign=Label.HorizontalAlign.LEFT;hint.isBold=true;
     // EditBox positions labels by their top-left corner, not their center.
     label.node.getComponent(UITransform)!.setAnchorPoint(0,1);hint.node.getComponent(UITransform)!.setAnchorPoint(0,1);
     edit.textLabel=label;edit.placeholderLabel=hint;edit.placeholder=tr(placeholder);edit.inputMode=EditBox.InputMode.SINGLE_LINE;edit.maxLength=password?72:18;
@@ -987,8 +995,12 @@ export class AureliaApp extends Component {
     // A slim opaque ribbon shields the status from the pendant on the shared
     // service-room artwork, without covering the first supply's engraving.
     this.art.image(stage,'canopy-soft-plate-0',0,485,840,104);
-    text(stage,this.services.remoteMode?'Choose a coin supply':'Purchases unavailable',-92,485,555,50,34,COLORS.cream);
-    this.art.button(stage,'Synchronize purchases',292,485,225,76,'Sync',undefined,()=>void this.restorePurchases(),0);
+    // A restore control is meaningful only when a native purchase bridge and
+    // verification server are present. In browser preview it looked actionable
+    // beside an explicitly unavailable catalog, then produced a dead-end toast.
+    const purchasesReady=this.services.store.purchaseAvailable();
+    text(stage,purchasesReady?'Choose a coin supply':'Purchases unavailable',purchasesReady?-92:0,485,purchasesReady?555:760,50,34,COLORS.cream);
+    if(purchasesReady)this.art.button(stage,'Synchronize purchases',292,485,225,76,'Sync',undefined,()=>void this.restorePurchases(),0);
     // A single wide enamel ledger per supply keeps the amount and purchase
     // status in the calm center of the material, clear of the sculpted ends.
     const positions=[198,43,-112,-267];
@@ -1008,13 +1020,20 @@ export class AureliaApp extends Component {
         const total=item.credits+item.bonus,bonus=Math.round(item.bonus/item.credits*100);
         const art=this.art.image(node,symbolAtlas(GAME_CONFIGS[i].id),-254,0,102,102,[0,1,5,9][i]);
         if(!this.reduced){const alpha=opacity(art,245);tween(alpha).to(2.5+i*.3,{opacity:185},{easing:'sineInOut'}).to(2.5+i*.3,{opacity:245},{easing:'sineInOut'}).union().repeatForever().start();}
-        const amount=text(node,money(total),-17,55,382,62,50,COLORS.ink,true);amount.enableWrapText=false;
-        text(node,bonus?bonus+'% BONUS':'STANDARD',-17,-1,380,45,36,COLORS.ink,true);
-        text(node,'Base '+money(item.credits)+' · Gift '+money(item.bonus),-17,-56,400,48,36,COLORS.ink);
-        const price=item.available?item.displayPrice:'Offline';
-        this.art.image(node,'canopy-button-'+(i*4+2),251,0,47,47);
-        text(node,price,301,0,145,60,35,COLORS.ink,true).enableWrapText=false;
-        bindPress(node,node,()=>void this.purchase(item.id));
+        // A row has only 155 design units before the next engraving. Keep
+        // each line within that band so the next amount cannot cover the base.
+        const amount=text(node,money(total),-17,44,382,48,43,COLORS.ink,true);amount.enableWrapText=false;
+        text(node,bonus?bonus+'% BONUS':'STANDARD',-17,0,380,36,32,COLORS.ink,true);
+        text(node,'Base '+money(item.credits)+' · Gift '+money(item.bonus),-17,-44,400,36,30,COLORS.ink);
+        // A decorative medallion occupied the first letters of "Offline".
+        // Preview supplies must not look like an enabled purchase button.
+        if(item.available){
+          this.art.image(node,'canopy-button-'+(i*4+2),220,0,47,47);
+          text(node,item.displayPrice,305,0,130,52,32,COLORS.ink,true).enableWrapText=false;
+          bindPress(node,node,()=>void this.purchase(item.id));
+        }else{
+          text(node,'Preview',293,0,150,52,31,COLORS.ink,true).enableWrapText=false;
+        }
       });
     }).catch(()=>this.toast('Shop unavailable. Please try again.'));
     this.art.image(stage,'canopy-soft-plate-0',0,-432,766,72);
@@ -1125,9 +1144,9 @@ export class AureliaApp extends Component {
     };
     stat(-222,110,'TREASURY',balance);stat(222,110,'ROUNDS',p.gamesPlayed);
     stat(-222,-66,'BEST WIN',p.biggestWin);stat(222,-66,'TOTAL WON',p.totalWin);
-    text(stage,'COIN JOURNAL',0,-214,750,55,38,COLORS.ink,true);
-    text(stage,ledger.length+' recorded entries · Saved to your account',0,-265,780,49,30,COLORS.ink);
-    this.art.button(stage,'Open coin history',0,-365,656,100,'View history',undefined,()=>this.history(),2);
+    text(stage,'COIN JOURNAL',0,-164,750,55,38,COLORS.ink,true);
+    text(stage,ledger.length+' recorded entries · '+(this.services.remoteMode?'Saved to your account':'Saved on this device'),0,-215,780,49,30,COLORS.ink);
+    this.art.button(stage,'Open coin history',0,-315,656,100,'View history',undefined,()=>this.history(),2);
     // The design width stays at 1024 on phones; use the scaled viewport height.
     const compactProfile=this.height<1950;
     const links:[string,()=>void][]=[['Portrait',()=>this.avatars()],['Language',()=>this.languages()],compactProfile?['Options',()=>this.accountOptions()]:['Privacy',()=>this.legal('privacy')]];
