@@ -36,9 +36,14 @@
     fill.style.transform = 'scaleX(1)';
     copy.textContent = words[6]+' · 100%';
     vault.classList.add('unlocked');
-    window.setTimeout(() => loader.classList.add('is-ready'), 450);
     loader.setAttribute('aria-hidden', 'true');
-    loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+    // Give the newly rendered canvas a frame to paint, then fade the entire
+    // loader at once. No extra hold while the game is already visible.
+    window.requestAnimationFrame(() => window.requestAnimationFrame(() => loader.classList.add('is-ready')));
+    loader.addEventListener('transitionend', event => {
+      if (event.target === loader && event.propertyName === 'opacity') loader.remove();
+    });
+    window.setTimeout(() => loader.remove(), 350); // reduced-motion fallback
   };
   window.addEventListener('aurelia-app-ready', revealApp, { once: true });
   // Accept the pre-Aurelia event during incremental installs so an older

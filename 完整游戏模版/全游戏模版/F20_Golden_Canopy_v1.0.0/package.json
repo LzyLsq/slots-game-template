@@ -9,6 +9,13 @@
   "scripts": {
     "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary",
     "test:layout": "node --import tsx tools/layout-test.ts",
+    "test:effects": "node --import tsx tools/fortune-effects-test.ts",
+    "test:effects:bundle": "node --import tsx tools/fortune-effects-test.ts --bundle",
+    "test:win-presentation": "node --import tsx tools/win-presentation-test.ts",
+    "test:win-presentation:bundle": "node --import tsx tools/win-presentation-test.ts --bundle",
+    "test:audio": "node --import tsx tools/audio-test.ts",
+    "test:audio:bundle": "node --import tsx tools/audio-test.ts --bundle",
+    "music:render": "node --import tsx tools/compose-music.ts",
     "test:math": "node --import tsx tools/math-test.ts",
     "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
     "test:rank": "node --import tsx tools/rank-test.ts",

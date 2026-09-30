@@ -2,7 +2,7 @@ import { OrdinaryWinStage } from '../vfx/OrdinaryWinStage';
 import {LabelOutline} from 'cc';
 import {cabinetToolText} from './CabinetToolText';
 import {drawRulePages} from './RulePages';
-import {awardCredits, awardEvidence, featureAwardEvidence, awardSummary, roundEvidence, tierRules, winTier} from '../vfx/WinPresentation';
+import {awardCredits, awardEvidence, featureAwardEvidence, awardSummary, newcomerBenefitCaption, roundEvidence, tierRules, winTier} from '../vfx/WinPresentation';
 import {primaryRuleText} from '../math/PrimaryRuleText';
 import {drawRuleHelp,helpTitle} from './RuleHelp';
 import {primaryStatus,HAND_NAMES,HAND_FACTORS} from '../math/IndependentCore';
@@ -14,7 +14,7 @@ import {tr,language,setLanguage,initializeLanguage,LANGUAGES} from './Language';
 import { _decorator, BlockInputEvents, Color, Component, EditBox, EventTouch, game, Game, Graphics, Label, Mask, Node, ScrollView, Sprite, sys, tween, Tween, UIOpacity, UITransform, Vec3, Widget } from 'cc';
 import { GameBootstrap } from '../core/GameBootstrap';
 import { SecureRNG } from '../core/SecureRNG';
-import { AudioManager } from '../audio/AudioManager';
+import { AudioManager, type Cue } from '../audio/AudioManager';
 import { complianceCurrent, PRIVACY_VERSION, TERMS_VERSION } from '../core/ReleaseConfig';
 import { GAME_CONFIGS, SYMBOL_ART, symbolAtlas, prizeArt } from '../math/GameConfigs';
 import { ResultGenerator } from '../math/ResultGenerator';
@@ -62,6 +62,7 @@ export class AureliaApp extends Component {
   protected onLoad():void {
     initializeLanguage(sys.localStorage);
     this.audio=this.node.addComponent(AudioManager);this.audio.setMusic(false);
+    this.art.onPress=()=>this.audio.play('tap');
     this.node.addComponent(Safe);this.node.on('csw-layout-changed',this.resize,this);
     game.on(Game.EVENT_HIDE,this.hide,this);game.on(Game.EVENT_SHOW,this.show,this);
     void this.boot();
@@ -79,7 +80,7 @@ export class AureliaApp extends Component {
     text(loading,'GOLDEN CANOPY',0,90,950,160,80,COLORS.gold,true);
     const progress=text(loading,'Unlocking your treasury…',0,-70,950,100,38);
     try{
-      await this.art.load([...GAME_CONFIGS.flatMap(c=>[symbolAtlas(c.id),symbolAtlas(c.id)+'-blur',prizeArt(c.id)]),'salon','symbols','interfaces','portraits','symbols-blur','optics','apple-mark','canopy-brand',...Array.from({length:4},(_,i)=>'canopy-title-'+i),'canopy-services',...Array.from({length:4},(_,i)=>'canopy-frame-'+i),...Array.from({length:16},(_,i)=>'canopy-button-'+i),'canopy-hall-soft','canopy-destinations',...Array.from({length:4},(_,i)=>'canopy-soft-plate-'+i)],(n,t)=>{
+      await this.art.load([...GAME_CONFIGS.flatMap(c=>[symbolAtlas(c.id),symbolAtlas(c.id)+'-blur',prizeArt(c.id)]),'salon-motion-bg','salon-squirrel','symbols','interfaces','portraits','symbols-blur','optics','apple-mark','canopy-brand',...Array.from({length:4},(_,i)=>'canopy-title-'+i),'canopy-services',...Array.from({length:4},(_,i)=>'canopy-frame-'+i),...Array.from({length:16},(_,i)=>'canopy-button-'+i),'canopy-hall-soft','canopy-destinations',...Array.from({length:4},(_,i)=>'canopy-soft-plate-'+i)],(n,t)=>{
         progress.string=tr(`Polishing your treasures  ${Math.round(n/t*100)}%`);
         globalThis.dispatchEvent?.(new CustomEvent('aurelia-load-progress',{detail:{progress:n/t*.9}}));
       });
@@ -89,9 +90,10 @@ export class AureliaApp extends Component {
       this.config=GAME_CONFIGS.find(g=>g.id===query.get('game'))??GAME_CONFIGS[0];
       this.page=(resumed||this.debug)?(requested??'home'):'login';
       if(!['home','login','register','game','store','rewards','rank','profile'].includes(this.page))this.page='home';
-      this.audio.setEffects(this.services.profile.current()?.settings.sound??true);
+      const sound=this.services.profile.current()?.settings.sound??true;
+      this.audio.setEffects(sound);this.audio.setMusic(sound);
       this.restoreRemoteRound();
-      if(this.page==='game')await this.art.load([this.config.id+'-tall']);
+      if(this.page==='game')await this.art.load(this.cabinetArt(this.config.id));
       this.render();loading.destroy();
       globalThis.dispatchEvent?.(new Event('aurelia-app-ready'));
     }catch(error){progress.string=tr('Could not open the treasury. Tap to retry.');loading.on(Node.EventType.TOUCH_END,()=>{loading.destroy();void this.boot();});globalThis.dispatchEvent?.(new Event('aurelia-load-error'));console.error(error);}
@@ -113,6 +115,9 @@ export class AureliaApp extends Component {
     if(this.root&&!this.busy)this.render();
   }
   private render():void{
+    const sound=this.services.profile.current()?.settings.sound??true;
+    this.audio.setEffects(sound);this.audio.setMusic(sound);
+    this.audio.setScene(this.page==='game'?'cabinet':'home');
     this.cancelWinCount?.();this.presentedWin=0;
     this.art.reducedMotion=this.reduced;
     this.generation++;this.modal=undefined;this.notification=undefined;this.reels=undefined;this.plane=undefined;
@@ -121,10 +126,11 @@ export class AureliaApp extends Component {
     if(this.retiring&&this.retiring!==previous)this.retiring.destroy();this.retiring=previous;
     this.height=Safe.visibleHeight;this.top=this.height/2;
     const root=box(this.node,'Golden-Canopy-interface',0,0,Safe.visibleWidth,this.height);this.root=root;root.addComponent(BlockInputEvents);
-    const backdrop=this.page==='home'?'canopy-hall-soft':this.page==='login'||this.page==='register'?'salon':'canopy-services';
+    const backdrop=this.page==='home'?'canopy-hall-soft':this.page==='login'||this.page==='register'?'salon-motion-bg':'canopy-services';
     this.bg=this.page==='game'||this.page==='home'?undefined:this.art.cover(root,backdrop,0,0,Safe.visibleWidth,this.height);
+    if(this.page==='login'||this.page==='register')this.authSquirrel();
 
-    if(this.page!=='game'){box(root,'Canopy leaf atmosphere',0,0,Safe.visibleWidth,this.height).addComponent(CanopyLeaves).setup(this.art,Safe.visibleWidth,this.height,this.reduced);}
+    if(this.page!=='game'&&this.page!=='home'){box(root,'Canopy leaf atmosphere',0,0,Safe.visibleWidth,this.height).addComponent(CanopyLeaves).setup(this.art,Safe.visibleWidth,this.height,this.reduced);}
     this.content=box(root,'Page',0,0,1080,this.height);
     if(this.page==='login'||this.page==='register')this.authPage();
     else if(this.page==='game')this.gamePage();
@@ -132,22 +138,30 @@ export class AureliaApp extends Component {
     if(this.page!=='login'&&this.page!=='register'&&!complianceCurrent(this.services.save.read().compliance))this.policyConsent();
     this.node.getChildByName('RotateDeviceOverlay')?.setSiblingIndex(this.node.children.length-1);
     // Retain an opaque outgoing scene until the new scene is fully visible.
-    const crossfade=!!previous&&!this.reduced&&!this.curtainClosed;
+    // A loading overlay already hides the scene swap. Do not crossfade the old
+    // page underneath it: the overlay may finish before that crossfade does.
+    const crossfade=!!previous&&!this.reduced&&!this.curtainClosed&&!this.loadingProgress;
     const o=opacity(root,crossfade?0:255);
     const complete=()=>{if(previous?.isValid)previous.destroy();if(this.retiring===previous)this.retiring=undefined;};
     if(crossfade)tween(o).to(.38,{opacity:255},{easing:'sineInOut'}).call(complete).start();else complete();
   }
   private loadingProgress?: (value:number,caption:string)=>void;
+  private cabinetArt(id:GameId):string[]{return [id+'-motion-bg',id+'-animal'];}
   private async navigate(page:Page,config?:GameConfig):Promise<void>{
     if(this.state.kind!=='idle'&&this.page==='game'){this.toast('Finish the current round before leaving.');return;}
     if(this.busy)return;this.busy=true;this.auto=false;this.updateAuto();
     let loading:Node|undefined;
     try{
-      if(config){loading=this.gameLoading(config);await Promise.all([this.art.load([config.id+'-tall'],(done,total)=>this.loadingProgress?.(done/total*.8,'Preparing your game…')),this.delay(this.reduced?.15:1.65)]);}
+      if(config){loading=this.gameLoading(config);await this.art.load(this.cabinetArt(config.id),(done,total)=>this.loadingProgress?.(done/total*.9,'Preparing your game…'));}
 
       if(config){this.config=config;this.betIndex=Math.min(this.betIndex,config.bets.length-1);}
-      this.page=page;this.render();if(loading){loading.setSiblingIndex(this.node.children.length-1);this.loadingProgress?.(.9,'Opening your game…');}if(!this.reduced)await this.delay(.4);
-      if(loading){this.loadingProgress?.(1,'Ready');await this.delay(this.reduced?.01:.65);await new Promise<void>(resolve=>tween(opacity(loading!,255)).to(this.reduced?.01:.32,{opacity:0},{easing:'sineInOut'}).call(()=>resolve()).start());loading.destroy();loading=undefined;}
+      this.page=page;this.render();
+      if(loading){
+        loading.setSiblingIndex(this.node.children.length-1);
+        this.loadingProgress?.(1,'Ready');
+        await new Promise<void>(resolve=>tween(opacity(loading!,255)).to(this.reduced?.01:.22,{opacity:0},{easing:'sineInOut'}).call(()=>resolve()).start());
+        loading.destroy();loading=undefined;
+      }
     }catch{if(this.content)opacity(this.content,255);this.closeModal();this.toast('The cabinet could not load. Please try again.');}
     finally{if(loading?.isValid)loading.destroy();this.loadingProgress=undefined;this.busy=false;}
   }
@@ -156,21 +170,21 @@ export class AureliaApp extends Component {
     const veil=box(n,'Soft canopy loading veil',0,0,Safe.visibleWidth,this.height).addComponent(Graphics);veil.fillColor=new Color(50,32,17,200);veil.rect(-Safe.visibleWidth/2,-this.height/2,Safe.visibleWidth,this.height);veil.fill();
     const stage=box(n,'Growing your golden path',0,0,1020,1410);const scale=Math.min(1,(Safe.visibleWidth-65)/1020,(this.height-230)/1410);stage.setScale(scale,scale,1);
     const index=GAME_CONFIGS.indexOf(config),title=this.art.image(stage,'canopy-title-'+index,0,507,840,160);this.sheen(title,725,100);
-    const world=this.art.image(stage,'canopy-destinations',0,139,706,646,index);this.idleAccent(world,0,8,.3,1.7);
+    const world=this.art.image(stage,'canopy-destinations',0,139,706,646,index);this.idleAccent(world,0,12,.55,1.25);
     const buds:Node[]=[];for(let i=0;i<4;i++){const bud=this.art.image(stage,'symbols',(i-1.5)*180,-306,72,72,[8,2,3,6][i]);opacity(bud,45);buds.push(bud);}
     const rail=this.art.panel(stage,0,-421,820,88,1);const fill=box(rail,'Loading bar fill',0,0,750,24).addComponent(Graphics);
     const percentage=text(stage,'0%',0,-513,250,64,40,COLORS.cream);percentage.node.name='Loading percentage';const status=text(stage,'Preparing your woodland journey…',0,-606,900,61,33,COLORS.cream);
     const progress={value:0};let target=0;const draw=()=>{if(!n.isValid)return;const width=740*progress.value;fill.clear();if(width>0){fill.fillColor=new Color('#FFE5A1');fill.roundRect(-370,-10,width,20,Math.min(10,width/2));fill.fill();}buds.forEach((bud,i)=>{bud.getComponent(UIOpacity)!.opacity=progress.value>=(i+1)/4?255:60;});percentage.string=tr(Math.round(progress.value*100)+'%');};
-    this.loadingProgress=(value,caption)=>{target=Math.max(target,Math.min(1,value));status.string=tr(target===1?'Your garden is ready':caption);Tween.stopAllByTarget(progress);if(this.reduced){progress.value=target;draw();}else tween(progress).to(.45,{value:target},{easing:'sineInOut',onUpdate:draw}).start();};draw();return n;
+    this.loadingProgress=(value,caption)=>{target=Math.max(target,Math.min(1,value));status.string=tr(target===1?'Your garden is ready':caption);Tween.stopAllByTarget(progress);if(this.reduced||target===1){progress.value=target;draw();}else tween(progress).to(.16,{value:target},{easing:'sineInOut',onUpdate:draw}).start();};draw();return n;
   }
   private header():void{
     const p=this.services.profile.current(),y=this.top-92-Safe.safeTop;
     const wallet=this.art.panel(this.content!,-235,y,525,107,2);
     this.art.image(wallet,'symbols',-194,0,70,70,0);
     this.balanceLabel=text(wallet,money(this.services.economy.balance()),-4,0,298,76,46,COLORS.cream);
-    const topup=this.art.image(wallet,'canopy-button-2',202,0,74,74);topup.name='Top up';bindPress(topup,topup,()=>void this.navigate('store'));
+    const topup=this.art.image(wallet,'canopy-button-2',202,0,74,74);topup.name='Top up';bindPress(topup,topup,()=>{this.audio.play('tap');void this.navigate('store');});
     const mailboxButton=this.art.button(this.content!,'Mail',95,y,87,87,'',5,()=>this.mail());const unreadMail=INBOX_MESSAGES.filter(m=>{const state=this.services.mail.state(m.id);return !state.read&&!state.deleted;}).length;if(unreadMail)text(mailboxButton,String(unreadMail),33,33,40,40,27,COLORS.cream,true);
-    const avatar=this.art.image(this.content!,'portraits',431,y,109,109,p?.avatar??0);bindPress(avatar,avatar,()=>void this.navigate('profile'));
+    const avatar=this.art.image(this.content!,'portraits',431,y,109,109,p?.avatar??0);bindPress(avatar,avatar,()=>{this.audio.play('tap');void this.navigate('profile');});this.idleAccent(avatar,.4,2,1.5,1.6);
     outlined(text(this.content!,p?.nickname??'Guest',266,y,208,69,27,COLORS.cream,false,true),'#173F49',2).enableWrapText=false;
   }
   private navigation():void{
@@ -182,7 +196,7 @@ export class AureliaApp extends Component {
       if(active)this.art.light(hit,1,0,21,155,140,90).setSiblingIndex(0);
       const icon=this.art.image(hit,'interfaces',0,center?23:16,center?135:86,center?123:86,icons[i]);
       text(hit,labels[i],0,center?-54:-40,183,44,26,active?COLORS.jade:COLORS.ink);
-      this.idleAccent(icon,i*.65,5,3);bindPress(hit,icon,()=>void this.navigate(page));
+      this.idleAccent(icon,i*.65,5,3);bindPress(hit,icon,()=>{this.audio.play('tap');void this.navigate(page);});
     });
   }
   private metalEdges(parent:Node,w:number,h:number,phase:number):void{
@@ -198,14 +212,33 @@ export class AureliaApp extends Component {
     const stage=box(this.content!,'Golden canopy pavilion',0,0,1024,1792);stage.setSiblingIndex(0);
     const scale=Math.min(Safe.visibleWidth/1024,this.height/1792);stage.setScale(scale,scale,1);
     this.art.cover(stage,'canopy-hall-soft',0,0,Math.max(1024,Safe.visibleWidth/scale),this.height/scale);
+    // Put the leaf layer ABOVE the opaque hall painting, but below the exhibit,
+    // labels and fixed touch targets. It used to be hidden behind the painting.
+    box(stage,'Visible canopy leaf atmosphere',0,0,1024,this.height/scale).addComponent(CanopyLeaves)
+      .setup(this.art,Safe.visibleWidth/scale,this.height/scale,this.reduced,true);
+    const festivity=box(stage,'Living hall lanterns and jewels',0,0,1024,1792).addComponent(SalonAtmosphere);
+    festivity.reducedMotion=this.reduced;festivity.hallFestivity(this.art);
     const brand=this.art.image(this.content!,'canopy-brand',0,this.top-282-Safe.safeTop,760,235);this.idleAccent(brand,0,14,.2,1.8);this.sheen(brand,650,170);
     const exhibit=box(stage,'Canopy destination exhibit',0,0,870,910);
     const draw=()=>{
       const cfg=GAME_CONFIGS[this.selectedRoute];const piece=box(exhibit,'Destination '+cfg.id,0,0,870,910);
-      const island=this.art.image(piece,'canopy-destinations',0,88,790,730,this.selectedRoute);this.idleAccent(island,0,8,.2,1.9);this.edgeJewels(island,620,500,this.selectedRoute*.4);
+      // The mascot and pedestal share one image. A short squash-and-release
+      // around the base reads as soft jelly without rocking the scenery.
+      const islandFoot=box(piece,'Destination grounded pivot',0,88-365,1,1);
+      const island=this.art.image(islandFoot,'canopy-destinations',0,365,790,730,this.selectedRoute);
+      if(!this.reduced)tween(islandFoot)
+        .delay(1.35)
+        .to(.18,{scale:new Vec3(1.012,.985,1)},{easing:'sineOut'})
+        .to(.27,{scale:new Vec3(.991,1.011,1)},{easing:'sineInOut'})
+        .to(.26,{scale:new Vec3(1.005,.995,1)},{easing:'sineInOut'})
+        .to(.37,{scale:new Vec3(1,1,1)},{easing:'sineOut'})
+        .delay(2.1)
+        .union().repeatForever().start();
+      this.edgeJewels(island,620,500,this.selectedRoute*.4);
+      this.homeFortuneEffects(piece);
       const title=this.art.image(piece,'canopy-title-'+this.selectedRoute,0,-279,720,116);this.sheen(title,630,84,.5);
       const caption=this.art.panel(piece,0,-369,760,70,1);text(caption,MODES[this.selectedRoute],0,0,690,51,30,COLORS.ink);
-      const play=this.art.button(piece,'Enter '+cfg.name,0,-475,663,112,'PLAY · '+['ACORN VAULT','RUBY ORCHARD','PEARL BROOK','CROWN NEST'][this.selectedRoute],6,()=>void this.navigate('game',cfg),3);this.metalEdges(play,630,96,.4);
+      const play=this.art.button(piece,'Enter '+cfg.name,0,-475,663,112,'PLAY · '+['ACORN VAULT','RUBY ORCHARD','PEARL BROOK','CROWN NEST'][this.selectedRoute],6,()=>void this.navigate('game',cfg),3);this.metalEdges(play,630,96,.4);this.sheen(play,620,88,1.1);
       return piece;
     };
     let current=draw();
@@ -213,7 +246,7 @@ export class AureliaApp extends Component {
     const markers:Node[]=[];
     // Keep gestures that begin during the crossfade; apply the latest destination when it finishes.
     let pendingChoice:{index:number;direction:number}|undefined;
-    const choose=(index:number,direction=1)=>{if(this.homeChanging){pendingChoice={index,direction};return;}if(index===this.selectedRoute)return;this.homeChanging=true;this.selectedRoute=index;this.audio.play('tap');
+    const choose=(index:number,direction=1)=>{if(this.homeChanging){pendingChoice={index,direction};return;}if(index===this.selectedRoute)return;this.homeChanging=true;this.selectedRoute=index;this.audio.play('select');
       const old=current;Tween.stopAllByTarget(old);current=draw();exhibit.getChildByName('Swipe destination')?.setSiblingIndex(exhibit.children.length-1);const duration=this.reduced?.01:.35;const a=opacity(current,0);current.setPosition(direction*60,0);
       tween(a).to(duration,{opacity:255}).start();tween(current).to(duration,{position:new Vec3(0,0,0)},{easing:'sineOut'}).start();
       tween(old).to(duration,{position:new Vec3(old.position.x-direction*70,0,0)},{easing:'sineInOut'}).start();
@@ -244,9 +277,9 @@ export class AureliaApp extends Component {
       if(event.getEventCode()===Node.EventType.TOUCH_END){finishSwipe(event);return;}
       if(tracking&&event.getID()===touchId){tracking=false;touchId=undefined;settle();}
     });
-    GAME_CONFIGS.forEach((cfg,i)=>{const x=(i-1.5)*222,hit=box(selection,'Choose destination '+i,x,0,210,166);const face=this.art.image(hit,'portraits',0,18,109,109,i);const marker=this.art.image(hit,'interfaces',44,-20,35,35,14);opacity(marker,i===this.selectedRoute?255:95);markers.push(marker);text(hit,['ACORN','RUBY','PEARL','CROWN'][i],0,-56,208,46,27,COLORS.ink);bindPress(hit,face,()=>choose(i));});
-    this.art.button(stage,'Previous destination',-438,-188,95,108,'',9,()=>choose((this.selectedRoute+3)%4,-1));
-    const next=this.art.button(stage,'Next destination',438,-188,95,108,'',9,()=>choose((this.selectedRoute+1)%4));next.angle=180;
+    GAME_CONFIGS.forEach((cfg,i)=>{const x=(i-1.5)*222,hit=box(selection,'Choose destination '+i,x,0,210,166);const face=this.art.image(hit,'portraits',0,18,109,109,i);const marker=this.art.image(hit,'interfaces',44,-20,35,35,14);opacity(marker,i===this.selectedRoute?255:95);markers.push(marker);text(hit,['ACORN','RUBY','PEARL','CROWN'][i],0,-56,208,46,27,COLORS.ink);bindPress(hit,face,()=>choose(i));this.idleAccent(face,i*.44,8,5,1.05);});
+    this.art.button(stage,'Previous destination',-438,-188,95,108,'',9,()=>choose((this.selectedRoute+3)%4,-1),3,false);
+    const next=this.art.button(stage,'Next destination',438,-188,95,108,'',9,()=>choose((this.selectedRoute+1)%4),3,false);next.angle=180;
     this.festivalDrift(stage);
   }
 
@@ -261,6 +294,19 @@ export class AureliaApp extends Component {
     }
     for(let i=0;i<18;i++){const side=i%2?-1:1,x=side*(447+(i%3)*24),y=-this.top+260+(i/18)*(this.height-420);const star=this.art.light(layer,3,x,y,39+(i%3)*16,39+(i%3)*16,155);const alpha=star.getComponent(UIOpacity)!;tween(star).delay(i*.17).repeatForever(tween().by(2.3,{position:new Vec3(-side*22,48,0),angle:55},{easing:'sineInOut'}).by(2.3,{position:new Vec3(side*22,-48,0),angle:-55},{easing:'sineInOut'})).start();tween(alpha).delay(i*.17).to(1.3,{opacity:245}).to(1.8,{opacity:35}).union().repeatForever().start();}
     for(let i=0;i<2;i++){const halo=this.art.light(layer,1,i?355:-355,this.top-405,510,510,75);tween(halo).delay(i).to(3,{scale:new Vec3(1.22,1.22,1)},{easing:'sineInOut'}).to(3,{scale:new Vec3(.9,.9,1)},{easing:'sineInOut'}).union().repeatForever().start();}
+  }
+  private authSquirrel():void{
+    // Anchor the extracted squirrel at its feet in the source 941x1672 art.
+    // Attach it to the cover's image so cropping and device scaling stay exact.
+    const background=this.bg?.children[0];if(!background)return;
+    const unit=background.getComponent(UITransform)!.contentSize.width/941;
+    const pivot=box(background,'Squirrel gentle sway',(320-941/2)*unit,(1672/2-433)*unit,1,1);
+    this.art.image(pivot,'salon-squirrel',-30*unit,159.5*unit,350*unit,383*unit);
+    if(this.reduced)return;
+    tween(pivot).to(2.05,{angle:1.2,scale:new Vec3(.999,1.006,1)},{easing:'sineInOut'})
+      .to(2.35,{angle:-.8,scale:new Vec3(1.002,1.001,1)},{easing:'sineInOut'})
+      .to(1.15,{angle:0,scale:new Vec3(1,1,1)},{easing:'sineInOut'})
+      .union().repeatForever().start();
   }
   private authPage():void{
     const register=this.page==='register';this.authDecor();
@@ -280,7 +326,7 @@ export class AureliaApp extends Component {
       this.art.button(panel,'Switch account form',0,-477,790,95,'Back to sign in',9,()=>void this.navigate('login'),0);
     }else{
       const primary=this.art.button(panel,'Sign in',0,-72,810,139,'SIGN IN',14,()=>void this.authAction('login'),3);this.metalEdges(primary,778,121,.7);
-      const apple=this.art.panel(panel,0,-216,810,104,1);apple.name='Sign in with Apple';this.art.image(apple,'apple-mark',-242,0,42,50);text(apple,'Sign in with Apple',0,0,529,75,36,COLORS.ink);bindPress(apple,apple,()=>void this.authAction('apple'));
+      const apple=this.art.panel(panel,0,-216,810,104,1);apple.name='Sign in with Apple';this.art.image(apple,'apple-mark',-242,0,42,50);text(apple,'Sign in with Apple',0,0,529,75,36,COLORS.ink);bindPress(apple,apple,()=>{this.audio.play('tap');void this.authAction('apple');});
       this.art.button(panel,'Guest',-211,-356,390,98,'Guest play',0,()=>this.guestConsent(),0);this.art.button(panel,'Create account',211,-356,390,98,'Register',4,()=>void this.navigate('register'),0);
     }
     const links=box(this.content!,'Legal links',0,-this.top+151+Safe.safeBottom,990,86);['Terms','Privacy','Support'].forEach((t,i)=>this.art.button(links,t,(i-1)*320,0,305,78,t,7,()=>this.legal(['terms','privacy','support'][i] as LegalPage),0));
@@ -317,7 +363,7 @@ export class AureliaApp extends Component {
     try{
       if(kind==='register'&&this.draft.acceptedTerms)this.accept();
       const result:AuthResult=kind==='register'?await this.services.auth.register(this.draft):kind==='apple'?await this.services.auth.signInWithApple():await this.services.auth.login({username:this.draft.username,password:this.draft.password,remember:true});
-      if(result.ok){this.draft.password=this.draft.confirmPassword='';this.page='home';if(this.restoreRemoteRound())await this.art.load([this.config.id+'-tall']);this.render();}else this.toast(result.message??'Unable to sign in.');
+      if(result.ok){this.draft.password=this.draft.confirmPassword='';this.page='home';if(this.restoreRemoteRound())await this.art.load(this.cabinetArt(this.config.id));this.render();}else this.toast(result.message??'Unable to sign in.');
     }catch{this.toast('Unable to connect. Your form has been kept.');}finally{this.busy=false;}
   }
   private policyConsent():void{
@@ -336,20 +382,43 @@ export class AureliaApp extends Component {
   private gamePage():void{
     const cfg=this.config,g=CABINETS[cfg.id];
     this.plane=box(this.content!,'Cabinet-coordinate-plane',0,0,1024,2304);
-    this.art.image(this.plane,cfg.id+'-tall',0,0,CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT);
+    this.art.image(this.plane,cfg.id+'-motion-bg',0,0,CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT);
+    // The background has its baked mascot removed. Animate only the extracted
+    // animal; the reels, frame and controls stay entirely stationary.
+    const mascotCrop:Record<GameId,readonly [number,number,number,number,number,number]>={
+      'golden-hour':[337,351,640,616,450,595],
+      'jade-treasury':[405,394,620,636,515,615],
+      'pearl-palace':[351,431,681,633,508,595],
+      'ruby-revel':[355,337,671,537,512,518],
+    };
+    const [left,top,right,bottom,footX,footY]=mascotCrop[cfg.id];
+    const pivot=box(this.plane,'Mascot foot pivot',footX*2-1024,2048-footY*2,1,1);
+    this.art.image(pivot,cfg.id+'-animal',(left+right-2*footX),2*footY-top-bottom,
+      (right-left)*2,(bottom-top)*2);
+    // Keep the feet fixed. Small, slow asymmetric rocking limits exposed
+    // cutout edges while still giving the mascots a welcoming idle motion.
+    const sway:Record<GameId,number>={
+      'golden-hour':1.0,'jade-treasury':.9,'pearl-palace':.8,'ruby-revel':1.0,
+    };
+    const angle=sway[cfg.id];
+    if(!this.reduced)tween(pivot)
+      .to(2.1,{angle,scale:new Vec3(.999,1.005,1)},{easing:'sineInOut'})
+      .to(2.4,{angle:-angle*.65,scale:new Vec3(1.002,1.001,1)},{easing:'sineInOut'})
+      .to(1.2,{angle:0,scale:new Vec3(1,1,1)},{easing:'sineInOut'})
+      .union().repeatForever().start();
     // Ambient light must render over the opaque integrated environment plate.
     // It shares the cabinet's coordinate plane with the reels and controls.
     const ambient=box(this.plane,'Cabinet reflections',0,0,1024,2304).addComponent(SalonAtmosphere);
-    ambient.setup(this.art,1024,2304);ambient.cabinet(this.art,g);ambient.reducedMotion=this.reduced;
+    ambient.setup(this.art,1024,2304);ambient.cabinet(this.art,g,cfg.columns);ambient.reducedMotion=this.reduced;
 
     const titlePoint=imagePoint(g.title),title=this.art.image(this.plane,'canopy-title-'+GAME_CONFIGS.indexOf(cfg),titlePoint[0],titlePoint[1],g.title[2]*.96,g.title[3]*.94);
     title.name='Animated cabinet title · '+cfg.name;
     this.idleAccent(title,GAME_CONFIGS.indexOf(cfg)*.8,11,.35,1.5);
     this.sheen(title,title.getComponent(UITransform)!.width,title.getComponent(UITransform)!.height,GAME_CONFIGS.indexOf(cfg)*.65);
-    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};
+    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.playReelStop(column);ambient.land(column);};
     const summary=[g.balance[0]-24,g.balance[1]-25,g.topWin[0]+g.topWin[2]-g.balance[0]+48,g.balance[3]+50] as const;const summaryPoint=imagePoint(summary);const fascia=this.art.panel(this.plane,summaryPoint[0],summaryPoint[1],summary[2],summary[3],1);fascia.name='Integrated treasury readouts';this.metalEdges(fascia,summary[2]-22,summary[3]-14,.9);const balance=imagePoint(g.balance);
     this.balanceLabel=text(this.plane,money(this.services.economy.balance()),balance[0]-g.balance[2]*.065,balance[1],g.balance[2]*.76,Math.max(80,g.balance[3]*.88),58,'#59351B');this.balanceLabel.enableWrapText=false;this.balanceLabel.overflow=Label.Overflow.SHRINK;this.balanceLabel.lineHeight=51;
-    const recharge=this.art.image(this.plane,'canopy-button-'+(GAME_CONFIGS.indexOf(cfg)*4+2),balance[0]+g.balance[2]*.41,balance[1],60,60);recharge.name='Recharge';bindPress(recharge,recharge,()=>{if(this.state.kind==='idle')void this.navigate('store');else this.toast('Finish the round before opening the shop.');});
+    const recharge=this.art.image(this.plane,'canopy-button-'+(GAME_CONFIGS.indexOf(cfg)*4+2),balance[0]+g.balance[2]*.41,balance[1],60,60);recharge.name='Recharge';bindPress(recharge,recharge,()=>{this.audio.play('tap');if(this.state.kind==='idle')void this.navigate('store');else this.toast('Finish the round before opening the shop.');});
     const win=imagePoint(g.win);this.winLabel=text(this.plane,'WIN  0',win[0],win[1],g.win[2]*.86,Math.max(80,g.win[3]*.88),58,'#803F25');this.winLabel.enableWrapText=false;this.winLabel.overflow=Label.Overflow.SHRINK;
     const winReadout=this.winLabel.node.getComponent(UITransform)!;winReadout.setContentSize(Math.min(winReadout.width,g.win[2]-2*Math.max(16,g.win[2]*.06)),winReadout.height);
     const themeIndex=GAME_CONFIGS.indexOf(cfg);
@@ -368,20 +437,20 @@ export class AureliaApp extends Component {
     betCaption.fontFamily='Arial Black';betCaption.enableWrapText=false;betCaption.overflow=Label.Overflow.SHRINK;
     this.betLabel=outlined(text(betPanel,money(this.bet),0,0,g.bet[2]*.96,Math.max(80,g.bet[3]*.96),58,readoutInk),readoutOutline,1);
     this.betLabel.fontFamily='Arial Black';this.betLabel.enableWrapText=false;this.betLabel.overflow=Label.Overflow.SHRINK;
-    const ctl=(rect:Box,label:string,index:number,action:()=>void):Node=>{
+    const ctl=(rect:Box,label:string,index:number,action:()=>void,cue:Cue='tap'):Node=>{
       const pos=imagePoint(rect);const hit=box(this.plane!,label,pos[0],pos[1],Math.max(108,rect[2]),Math.max(110,rect[3]));
       const theme=GAME_CONFIGS.indexOf(cfg);
       const asset='canopy-button-'+(theme*4+[0,2,1,3][index]);
       const face=this.art.image(hit,asset,0,0,rect[2],rect[3]);
       this.cabinetButtonMotion(face,rect[2],rect[3],theme,index);
-      bindPress(hit,face,()=>{this.audio.play('tap');ambient.land(-1);action();},[
+      bindPress(hit,face,()=>{this.audio.play(cue);ambient.land(-1);action();},[
         {depth:5,compression:.97,release:.12,tilt:-3},
         {depth:7,compression:.985,release:.14,tilt:0},
         {depth:4,compression:.94,release:.23,tilt:2},
         {depth:4,compression:.96,release:.18,tilt:-2},
       ][theme]);return hit;
     };
-    ctl(g.minus,'Decrease bet',2,()=>this.changeBet(-1));ctl(g.plus,'Increase bet',1,()=>this.changeBet(1));
+    ctl(g.minus,'Decrease bet',2,()=>this.changeBet(-1),'bet-down');ctl(g.plus,'Increase bet',1,()=>this.changeBet(1),'bet-up');
     const spin=ctl(g.spin,'SPIN',0,()=>void this.spin());
     const spinLabel=this.art.panel(spin,0,-g.spin[3]/2+26,205,58,1);
     text(spinLabel,'SPIN',0,0,176,48,42,'#59351B');
@@ -395,19 +464,21 @@ export class AureliaApp extends Component {
     this.topWinLabel=outlined(text(topPanel,topWinMoney(this.services.profile.current()?.biggestWin??0),g.topWin[2]*.16,0,g.topWin[2]*.62,Math.max(80,g.topWin[3]*.88),58,readoutInk),readoutOutline,1);
     this.topWinLabel.fontFamily='Arial';this.topWinLabel.lineHeight=44;this.topWinLabel.enableWrapText=false;this.topWinLabel.overflow=Label.Overflow.SHRINK;
     const toolbar=box(this.content!,'Safe top tools',0,this.top-95-Safe.safeTop,1000,154);
-    const tool=(name:string,x:number,icon:number,label:string,action:()=>void):Label=>{
+    const tool=(name:string,x:number,icon:number,label:string,action:()=>void,cue:Cue='tap'):Label=>{
       const hit=box(toolbar,name,x,0,180,160),face=box(hit,name+' face',0,0,180,154);
       this.art.image(face,'interfaces',0,36,64,64,icon);
       const caption=outlined(text(face,cabinetToolText(label),0,-36,172,82,38,COLORS.cream),'#15352F',2);
       const fit=caption.node.getComponent('TextFit');if(fit)fit.enabled=false;
       caption.fontFamily='Arial';caption.lineHeight=40;caption.enableWrapText=false;caption.overflow=Label.Overflow.CLAMP;
-      bindPress(hit,face,()=>{this.audio.play('tap');action();});return caption;
+      bindPress(hit,face,()=>{this.audio.play(cue);action();});return caption;
     };
-    tool('Back to salon',-427,9,'BACK',()=>void this.navigate('home'));
+    tool('Back to salon',-427,9,'BACK',()=>void this.navigate('home'),'back');
     tool('Rules',290,7,'RULES',()=>this.rules());
     this.soundLamp=tool('Audio',436,8,'SOUND ON',()=>void this.toggleSound());this.updateSound();
     this.hintLabel=outlined(text(this.content!,MODES[GAME_CONFIGS.indexOf(cfg)],0,-this.top+88+Safe.safeBottom,980,110,38,COLORS.cream));
     this.hintLabel.node.getComponent(LabelOutline)!.width=4;this.hintLabel.node.getComponent('TextFit')!.enabled=false;this.hintLabel.fontSize=42;this.hintLabel.lineHeight=46;this.hintLabel.enableWrapText=false;this.hintLabel.overflow=Label.Overflow.SHRINK;this.hintLabel.getComponent(UITransform)!.setContentSize(980,148);
+    const newcomer=!this.services.api?this.newcomerBenefit():undefined;
+    if(newcomer)this.hintLabel.string=newcomerBenefitCaption(newcomer.round);
     this.layoutPlane();
     if(this.force){this.scheduleOnce(()=>void this.spin(),1);}
   }
@@ -458,10 +529,19 @@ export class AureliaApp extends Component {
   private updateSound(enabled=this.services.profile.current()?.settings.sound??true):void{if(this.soundLamp){this.soundLamp.string=cabinetToolText(enabled?'SOUND ON':'SOUND OFF');this.soundLamp.color=new Color(enabled?'#FFF4D8':'#D8B79A');}}
   private async toggleSound():Promise<void>{
     const settings=this.services.profile.current()?.settings;if(!settings){this.toast('Sound settings are unavailable.');return;}
-    const previous=settings.sound,next=!previous;this.audio.setEffects(next);this.updateSound(next);if(next)this.audio.play('tap');
+    const previous=settings.sound,next=!previous;this.audio.setEffects(next);this.audio.setMusic(next);this.updateSound(next);if(next)this.audio.play('tap');
     const saved=await this.services.profile.updateSettings({sound:next});
-    if(!saved){this.audio.setEffects(previous);this.updateSound(previous);this.toast('Sound setting could not be saved.');return;}
+    if(!saved){this.audio.setEffects(previous);this.audio.setMusic(previous);this.updateSound(previous);this.toast('Sound setting could not be saved.');return;}
     this.toast(next?'Sound on.':'Sound off.');
+  }
+  private newcomerBenefit():{round:number;guaranteeSuper:boolean}|undefined{
+    const player=this.services.profile.current(),userId=this.services.save.read().currentUserId;
+    const played=player?.gamesPlayed;
+    if(!userId||played===undefined||!Number.isSafeInteger(played)||played<0||played>=5)return undefined;
+    let hash=2166136261;
+    for(let i=0;i<userId.length;i++)hash=Math.imul(hash^userId.charCodeAt(i),16777619)>>>0;
+    const round=played+1,superRound=hash%5+1;
+    return {round,guaranteeSuper:round===superRound};
   }
   private async spin():Promise<void>{
     if(this.page!=='game'||!this.reels||this.modal||this.busy)return;
@@ -471,25 +551,28 @@ export class AureliaApp extends Component {
     const requestId=this.state.kind==='retry'?this.state.requestId:SecureRNG.id('salon-spin');
     const api=this.services.api;
     const recovering=this.state.kind==='retry';
+    const newcomer=!api&&!recovering?this.newcomerBenefit():undefined;
     if(api){try{this.journal.begin(requestId,this.config.id,this.bet);}catch{this.toast('Unable to save the round. Free device storage, then try again.');return;}}
     if(!api&&!this.services.economy.reserveSpin(requestId,this.bet)){this.auto=false;this.updateAuto();this.toast('Not enough coins. Visit Rewards or the Coin Shop.');return;}
     this.resetWinAmount();
+    this.plane?.getChildByName('Cabinet reflections')?.getComponent(SalonAtmosphere)?.spinPulse();
     this.state={kind:'spinning',requestId};this.reels.lockCoins({});this.reels.begin();this.audio.play('spin');this.refreshBalance();if(this.hintLabel)this.hintLabel.string=tr('Treasures in motion…');
     let settled=false;
     try{
       let result:SpinResult;
       if(api){const response=await api.spin(this.config.id,this.bet,requestId);result=response.result;this.journal.settle(requestId,result,response.balance);}
       else {
-        result=this.generator.generate(this.config,this.bet,this.rng,this.force?{winTier:this.force as 'big'|'mega'|'epic'}:undefined);this.force=undefined;
+        const forcedTier=this.force as 'big'|'super'|'mega'|'epic'|undefined;
+        result=this.generator.generate(this.config,this.bet,this.rng,{winTier:forcedTier,newcomerSuper:!!newcomer?.guaranteeSuper});this.force=undefined;
         if(!this.services.economy.settleSpin(requestId,result.totalWin))throw new Error('Settlement failed');
       }
       settled=true;await this.reels.finish(result);
       this.state={kind:'presenting',result};this.reels.highlight(result.wins.flatMap(w=>[...w.positions]));
       await this.presentAwardEvidence(result);
       if(result.featureResult)await this.presentFeature(result);
-      if(result.totalWin>0)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0);
+      if(result.totalWin>0)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0,result.wins.some(w=>w.symbolId==='newcomer-benefit'));
       this.resetWinAmount(result.totalWin);
-      if(this.hintLabel)this.hintLabel.string=roundEvidence(result,this.bet);
+      if(this.hintLabel){const next=!api?this.newcomerBenefit():undefined;const evidence=roundEvidence(result,this.bet);this.hintLabel.string=next?newcomerBenefitCaption(next.round)+'\n'+evidence:evidence;}
       this.state={kind:'idle'};this.refreshBalance();this.refreshTopWin();this.autoWait=.8;
     }catch(error){
       this.auto=false;this.updateAuto();console.error(error);
@@ -508,10 +591,11 @@ export class AureliaApp extends Component {
     if(!awards.length)return;
     // A bounded sample avoids a long presentation on hundreds of Ways. The
     // denominator remains the full award count; the final total includes all.
-    const shown=awards.slice(0,3);
+    const benefit=awards.find(w=>w.symbolId==='newcomer-benefit');
+    const shown=benefit&&!awards.slice(0,3).includes(benefit)?[...awards.slice(0,2),benefit]:awards.slice(0,3);
     for(let i=0;i<shown.length;i++){
       this.reels?.highlight(shown[i].positions);
-      if(this.hintLabel)this.hintLabel.string=awardEvidence(this.config,shown[i],i+1,awards.length);
+      if(this.hintLabel)this.hintLabel.string=awardEvidence(this.config,shown[i],awards.indexOf(shown[i])+1,awards.length);
       if(i===0)this.audio.playAward(0);
       await Promise.all([this.countWinAmount(result.baseWin,result.totalWin),this.delay(this.reduced?.35:1.2)]);
     }
@@ -600,31 +684,37 @@ export class AureliaApp extends Component {
       }}).call(()=>{if(label.isValid&&label===this.winLabel)this.writeWinAmount(amount,total);finish();}).start();
     });
   }
-  private async presentWin(amount:number,big:boolean):Promise<void>{
+  private async presentWin(amount:number,big:boolean,welcomeBonus=false):Promise<void>{
+    this.plane?.getChildByName('Cabinet reflections')?.getComponent(SalonAtmosphere)?.celebrate(big?Math.max(1,winTier(amount/this.bet)):0);
     if(big){
       const stage=box(this.root!,'Treasure celebration',0,0,1080,this.height);this.modal=stage;stage.addComponent(BlockInputEvents);
       // Keep the integrated scene visible, but do not let cabinet readouts and
       // controls show through the transparent celebration artwork.
-      const hidden=(this.plane?.children??[]).filter(n=>n.active&&!['Cabinet reflections','Reels',this.config.id+'-tall'].includes(n.name));
+      const hidden=(this.plane?.children??[]).filter(n=>n.active&&!['Cabinet reflections','Reels',this.config.id+'-motion-bg','Mascot foot pivot'].includes(n.name));
       for(const n of [this.hintLabel?.node,this.content?.getChildByName('Award hint material'),this.content?.getChildByName('Safe top tools')])if(n?.active)hidden.push(n);
       const fades=hidden.map(n=>({node:n,alpha:n.getComponent(UIOpacity)??n.addComponent(UIOpacity)}));
       const prior=fades.map(f=>f.alpha.opacity);
       try{
         fades.forEach(f=>tween(f.alpha).to(this.reduced?.01:.22,{opacity:0},{easing:'sineInOut'}).start());
         await this.delay(.22);
-        this.audio.play('reward');await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config));
+        const tier=winTier(amount/this.bet);
+        this.audio.playWinFanfare(tier);await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config),welcomeBonus,undefined,(cue,progress)=>this.audio.playWinDetail(cue,progress,tier));
       }finally{
+        this.audio.finishWinPresentation();
         fades.forEach((f,i)=>{if(f.node.isValid)tween(f.alpha).to(this.reduced?.01:.3,{opacity:prior[i]},{easing:'sineInOut'}).start();});
         if(this.modal===stage)this.closeModal();
       }
     }else{
-      if(amount>this.presentedWin)this.audio.playAward(0);
+      // The award counter may already show the full amount before this stage.
+      // Every paid ordinary win still gets its own audible celebration.
+      this.audio.playSmallWinJingle();
       const stage=box(this.content!,'Ordinary win presentation',0,0,1080,this.height);
       const hidden=[this.hintLabel?.node,this.content?.getChildByName('Award hint material')].filter((n):n is Node=>!!n&&n.active);
       hidden.forEach(n=>n.active=false);
       try{
-        await Promise.all([this.countWinAmount(amount),stage.addComponent(OrdinaryWinStage).setup(this.art,amount,Safe.visibleHeight,this.reduced,this.bet,{y:-Safe.visibleHeight/2+88+Safe.safeBottom,width:980})]);
+        await Promise.all([this.countWinAmount(amount),stage.addComponent(OrdinaryWinStage).setup(this.art,amount,Safe.visibleHeight,this.reduced,this.bet,{y:-Safe.visibleHeight/2+88+Safe.safeBottom,width:980},(cue,progress)=>this.audio.playWinDetail(cue,progress,0))]);
       }finally{
+        this.audio.finishWinPresentation();
         if(stage.isValid)stage.destroy();
         hidden.forEach(n=>{if(n.isValid)n.active=true;});
       }
@@ -647,6 +737,36 @@ export class AureliaApp extends Component {
   private edgeJewels(parent:Node,w:number,h:number,phase=0):void{
     if(this.reduced)return;const points=[[-w*.44,h*.34],[w*.44,-h*.34],[w*.40,h*.38],[-w*.40,-h*.38]];
     points.forEach(([x,y],i)=>{const n=this.art.light(parent,3,x,y,42,42,0);n.name='Crafted edge glint';const alpha=n.getComponent(UIOpacity)!;tween(alpha).delay(phase+i*.65).to(.55,{opacity:175},{easing:'sineOut'}).to(1.1,{opacity:0},{easing:'sineInOut'}).delay(3.3).union().repeatForever().start();});
+  }
+  private homeFortuneEffects(piece:Node):void{
+    if(this.reduced)return;
+    // Sparkles live around the exhibit, not on the background or the touch targets.
+    const layer=box(piece,'Fortune glimmers',0,0,870,910);
+    const orbit=box(layer,'Living treasury pedestal',0,0,870,910).addComponent(SalonAtmosphere);orbit.reducedMotion=this.reduced;orbit.fortunePedestal(this.art);
+    const rim:[number,number,number][]=[[-330,-132,0],[328,-121,.55],[-312,86,1.1],[303,128,1.65],[-272,245,.85],[265,266,2.05]];
+    rim.forEach(([x,y,phase],i)=>{
+      const glint=this.art.light(layer,3,x,y,i<2?105:82,i<2?105:82,0);
+      glint.name='Pedestal gold sparkle';glint.setScale(.65,.65,1);
+      tween(glint).delay(phase).repeatForever(tween()
+        .to(.32,{scale:new Vec3(1.22,1.22,1),angle:35},{easing:'sineOut'})
+        .to(.62,{scale:new Vec3(.65,.65,1),angle:0},{easing:'sineInOut'}).delay(1.6)).start();
+      tween(glint.getComponent(UIOpacity)!).delay(phase).repeatForever(tween()
+        .to(.28,{opacity:225},{easing:'sineOut'})
+        .to(.66,{opacity:0},{easing:'sineInOut'}).delay(1.6)).start();
+    });
+    // Tiny acorns rise from the treasury; the plinth and labels stay still.
+    for(let i=0;i<6;i++){
+      const side=i%2?1:-1,x=side*(260+(i%3)*24),y=-137,phase=.2+i*.48;
+      const token=this.art.image(layer,'symbols',x,y,72,72,0);
+      token.name='Rising fortune token';token.setScale(.65,.65,1);
+      const alpha=opacity(token,0);
+      tween(token).delay(phase).repeatForever(tween()
+        .to(1.55,{position:new Vec3(x+side*30,y+165,0),scale:new Vec3(.96,.96,1),angle:side*34},{easing:'sineOut'})
+        .call(()=>{token.setPosition(x,y);token.setScale(.65,.65,1);token.angle=0;}).delay(1.8)).start();
+      tween(alpha).delay(phase).repeatForever(tween()
+        .to(.35,{opacity:235},{easing:'sineOut'})
+        .to(1.2,{opacity:0},{easing:'sineInOut'}).delay(1.8)).start();
+    }
   }
   private cabinetButtonMotion(face:Node,w:number,h:number,theme:number,index:number):void{
     if(this.reduced)return;
@@ -738,7 +858,7 @@ export class AureliaApp extends Component {
     this.services.checkIn.rewards.forEach((amount,i)=>{const [x,y]=spots[i],current=i===active,done=i<active||(current&&claimed),node=box(stage,'Check-in day '+(i+1),x,y,274,205);const face=node.addComponent(Graphics);face.fillColor=new Color('#FFF2D2');face.strokeColor=new Color('#B88738');face.lineWidth=4;face.roundRect(-131,-96,262,192,21);face.fill();face.stroke();face.strokeColor=new Color('#E7C882');face.lineWidth=2;face.roundRect(-120,-85,240,170,15);face.stroke();
       text(node,'DAY '+(i+1),0,62,232,48,34,COLORS.ink,true);text(node,money(amount),0,8,234,53,35,COLORS.ink,true);text(node,done?'COLLECTED':current?'TODAY':'UPCOMING',0,-53,235,44,32,COLORS.ink,true);
       if(current){const g=box(node,'Today outline',0,0,274,205).addComponent(Graphics);g.strokeColor=new Color('#B78C37');g.lineWidth=3;g.roundRect(-120,-83,240,166,18);g.stroke();if(!this.reduced){const alpha=opacity(g.node,240);tween(alpha).to(1.8,{opacity:85},{easing:'sineInOut'}).to(1.8,{opacity:240},{easing:'sineInOut'}).union().repeatForever().start();}}
-      bindPress(node,node,()=>{if(current&&!claimed)void this.claim('check-in');else this.toast('Day '+(i+1)+' · '+money(amount)+' coins · '+(done?'Collected':'Upcoming'));});
+      bindPress(node,node,()=>{this.audio.play('tap');if(current&&!claimed)void this.claim('check-in');else this.toast('Day '+(i+1)+' · '+money(amount)+' coins · '+(done?'Collected':'Upcoming'));});
     });
     this.art.button(stage,'Check in',0,-322,836,94,claimed?'DAY '+(active+1)+' COLLECTED':'CLAIM DAY '+(active+1)+' · '+money(this.services.checkIn.rewards[active]),undefined,()=>{if(!claimed)void this.claim('check-in');else this.toast('Next reward after 00:00 UTC.');},0);
     const daily=this.art.panel(stage,0,-534,912,230,0),collected=!!scope?.claims['daily-free:'+today];
@@ -784,9 +904,9 @@ export class AureliaApp extends Component {
     const plate=(name:string,x:number,y:number,w:number,h:number):Node=>{const node=this.art.panel(stage,x,y,w,h,0);node.name=name;return node;};
     const stat=(x:number,y:number,w:number,h:number,label:string,value:number):void=>{const node=plate(label,x,y,w,h);text(node,label,0,h*.14,w*.8,43,29,COLORS.ink,true);const v=text(node,money(value),0,-h*.14,w*.8,61,39,COLORS.ink,true);v.enableWrapText=false;};
     const identity=(x:number,y:number,w:number,h:number):void=>{const node=plate('Editable identity',x,y,w,h),wide=w>600;
-      const portrait=this.art.image(node,'portraits',wide?-w*.33:0,wide?0:h*.23,wide?164:118,wide?164:118,p.avatar);bindPress(portrait,portrait,()=>this.avatars());
+      const portrait=this.art.image(node,'portraits',wide?-w*.33:0,wide?0:h*.23,wide?164:118,wide?164:118,p.avatar);bindPress(portrait,portrait,()=>{this.audio.play('tap');this.avatars();});this.idleAccent(portrait,.3,2,1.5,1.6);
       const tx=wide?w*.13:0,tw=wide?w*.57:w*.85;
-      const name=text(node,p.nickname,tx,wide?54:-h*.013,tw,55,35,COLORS.ink,true);name.enableWrapText=false;bindPress(name.node,name.node,()=>this.editNickname());
+      const name=text(node,p.nickname,tx,wide?54:-h*.013,tw,55,35,COLORS.ink,true);name.enableWrapText=false;bindPress(name.node,name.node,()=>{this.audio.play('tap');this.editNickname();});
       text(node,p.isGuest?'GUEST · LEVEL '+p.level:'MEMBER · LEVEL '+p.level,tx,wide?0:-h*.16,tw,37,23,COLORS.ink);
       this.art.button(node,'Edit nickname',tx,wide?-66:-h*.30,Math.min(tw,350),61,'Edit name',undefined,()=>this.editNickname(),0);
     };
@@ -828,7 +948,7 @@ export class AureliaApp extends Component {
   }
 
 
-  private avatars():void{const s=this.sheet('Choose your portrait',1270);for(let i=0;i<16;i++){const n=this.art.image(s,'portraits',(i%4-1.5)*210,350-Math.floor(i/4)*248,183,183,i);n.name='Choose avatar '+i;if(this.services.profile.current()?.avatar===i)this.art.image(n,'interfaces',65,-65,43,43,14);bindPress(n,n,()=>void this.selectPortrait(n,i));}}
+  private avatars():void{const s=this.sheet('Choose your portrait',1270);for(let i=0;i<16;i++){const n=this.art.image(s,'portraits',(i%4-1.5)*210,350-Math.floor(i/4)*248,183,183,i);n.name='Choose avatar '+i;if(this.services.profile.current()?.avatar===i)this.art.image(n,'interfaces',65,-65,43,43,14);bindPress(n,n,()=>{this.audio.play('select');void this.selectPortrait(n,i);});}}
   private async selectPortrait(portrait:Node,index:number):Promise<void>{
     if(this.busy)return;this.busy=true;const generation=this.generation;
     try{
@@ -853,7 +973,7 @@ export class AureliaApp extends Component {
       const icon=this.art.image(row,'interfaces',-293,0,94,94,state.read?5:2);
       text(row,m.title,45,24,540,48,31,COLORS.ink).enableWrapText=false;
       text(row,state.claimed?'Attachment collected':m.credits?money(m.credits)+' COINS':state.read?'Read':'Unread',45,-27,530,42,28,COLORS.ink);
-      bindPress(row,icon,()=>this.openMail(m.id));row.name='Mail item '+m.id;
+      bindPress(row,icon,()=>{this.audio.play('tap');this.openMail(m.id);});row.name='Mail item '+m.id;
     });
     if(!items.length)text(panel,'Your mailbox is empty',0,90,740,110,39);
     this.art.button(panel,'Claim all mail',-200,-391,390,100,'Collect all',14,()=>{if(this.services.remoteMode){this.toast('Mail rewards require the event server.');return;}const amount=this.services.mail.claimAll();this.render();this.mail();this.toast(amount?money(amount)+' coins collected':'No attachments to collect');},0);
@@ -935,5 +1055,5 @@ export class AureliaApp extends Component {
     if(!this.reduced){const alpha=opacity(n,0);tween(alpha).to(.2,{opacity:255}).delay(3.8).to(.3,{opacity:0}).start();}
     this.scheduleOnce(()=>{if(n.isValid)n.destroy();if(this.notification===n)this.notification=undefined;},4.4);
   }
-  protected onDestroy():void{this.cancelWinCount?.();game.off(Game.EVENT_HIDE,this.hide,this);game.off(Game.EVENT_SHOW,this.show,this);}
+  protected onDestroy():void{this.art.onPress=undefined;this.cancelWinCount?.();game.off(Game.EVENT_HIDE,this.hide,this);game.off(Game.EVENT_SHOW,this.show,this);}
 }

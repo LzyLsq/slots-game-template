@@ -4,6 +4,8 @@ import { Color, EventTouch, gfx, Graphics, Label, LabelOutline, Layers, Mask, No
 export const COLORS = { cream: '#FFF8E7', gold: '#FFD988', jade: '#214D57', ink: '#4B362A', coral: '#ED967C' };
 export class SalonArt {
   public reducedMotion=false;
+  /** Feedback only for an accepted press, never a cancelled scroll gesture. */
+  public onPress?:()=>void;
   private textures = new Map<string, Texture2D>();
   private frames = new Map<string, SpriteFrame>();
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
@@ -80,7 +82,7 @@ export class SalonArt {
     opacity(n,alpha);return n;
   }
   public panel(parent: Node, x: number, y: number, w: number, h: number, style = 0): Node { return this.image(parent, (h>w*.5?'canopy-frame-':'canopy-soft-plate-')+[0,1,2,3][style], x,y,w,h); }
-  public button(parent: Node, name: string, x: number, y: number, w: number, h: number, label: string, icon: number | undefined, action: () => void, style = 3): Node {
+  public button(parent: Node, name: string, x: number, y: number, w: number, h: number, label: string, icon: number | undefined, action: () => void, style = 3, feedback = true): Node {
     const hit = box(parent, name, x, y, w, h);
     // The image icon already includes a sculpted gold rim. A second square
     // panel underneath produced stacked, distorted button frames.
@@ -97,7 +99,7 @@ export class SalonArt {
         glints.forEach((alpha,i)=>{Tween.stopAllByTarget(alpha);alpha.opacity=0;tween(alpha).delay(i*.045).to(.09,{opacity:220}).to(.38,{opacity:0},{easing:'sineOut'}).start();});
       });
     }
-    bindPress(hit, inner, action); return hit;
+    bindPress(hit, inner, ()=>{if(feedback)this.onPress?.();action();}); return hit;
   }
 }
 export function box(parent: Node, name: string, x: number, y: number, w: number, h: number): Node {
