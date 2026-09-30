@@ -101,6 +101,9 @@ static NSString *const H5ServerErrorDomain = @"com.xzkj.royaljubileeh5.localserv
         if (client < 0) {
             break;
         }
+        // Media requests may be cancelled during scene crossfades.
+        int noSigPipe = 1;
+        setsockopt(client, SOL_SOCKET, SO_NOSIGPIPE, &noSigPipe, sizeof(noSigPipe));
         int flags = fcntl(client, F_GETFL, 0);
         if (flags >= 0) {
             fcntl(client, F_SETFL, flags & ~O_NONBLOCK);
@@ -169,8 +172,49 @@ static NSString *const H5ServerErrorDomain = @"com.xzkj.royaljubileeh5.localserv
     }
 
     NSString *mime = [self mimeTypeForPath:filePath data:body];
-    [self sendStatus:200 body:body mime:mime client:client head:isHead];
+    NSString *rangeHeader = nil;
+    for (NSString *line in [request componentsSeparatedByString:@"\r\n"]) {
+        NSRange colon = [line rangeOfString:@":"];
+        if (colon.location == NSNotFound) continue;
+        if ([[line substringToIndex:colon.location].lowercaseString isEqualToString:@"range"]) {
+            rangeHeader = [[line substringFromIndex:colon.location + 1] stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet];
+            break;
+        }
+    }
+    // Safari/WKWebView probes bytes=0-1 before starting local AAC playback.
+    // Support a single byte range. Ignore multipart/unknown units as HTTP permits.
+    if (isGet && [rangeHeader.lowercaseString hasPrefix:@"bytes="] && ![rangeHeader containsString:@","]) {
+        NSArray<NSString *> *bounds = [[rangeHeader substringFromIndex:6] componentsSeparatedByString:@"-"];
+        unsigned long long start = 0, end = body.length ? body.length - 1 : 0, value = 0;
+        BOOL valid = bounds.count == 2 && body.length > 0;
+        if (valid && bounds[0].length == 0) {
+            valid = [self readRangeNumber:bounds[1] value:&value] && value > 0;
+            start = valid && value < body.length ? body.length - value : 0;
+        } else if (valid) {
+            valid = [self readRangeNumber:bounds[0] value:&start] && start < body.length;
+            if (valid && bounds[1].length) {
+                valid = [self readRangeNumber:bounds[1] value:&value] && value >= start;
+                end = MIN(value, end);
+            }
+        }
+        if (!valid) {
+            NSString *headers = [NSString stringWithFormat:@"Accept-Ranges: bytes\r\nContent-Range: bytes */%lu\r\n", (unsigned long)body.length];
+            [self sendStatus:416 body:NSData.data mime:mime extraHeaders:headers client:client head:NO];
+        } else {
+            NSString *headers = [NSString stringWithFormat:@"Accept-Ranges: bytes\r\nContent-Range: bytes %llu-%llu/%lu\r\n", start, end, (unsigned long)body.length];
+            NSData *partial = [body subdataWithRange:NSMakeRange((NSUInteger)start, (NSUInteger)(end - start + 1))];
+            [self sendStatus:206 body:partial mime:mime extraHeaders:headers client:client head:NO];
+        }
+    } else {
+        [self sendStatus:200 body:body mime:mime extraHeaders:@"Accept-Ranges: bytes\r\n" client:client head:isHead];
+    }
     close(client);
+}
+
+- (BOOL)readRangeNumber:(NSString *)text value:(unsigned long long *)value {
+    if (text.length == 0 || text.length > 19 || [text rangeOfCharacterFromSet:NSCharacterSet.decimalDigitCharacterSet.invertedSet].location != NSNotFound) return NO;
+    NSScanner *scanner = [NSScanner scannerWithString:text];
+    return [scanner scanUnsignedLongLong:value] && scanner.isAtEnd;
 }
 
 - (NSString *)mimeTypeForPath:(NSString *)path data:(NSData *)data {
@@ -193,6 +237,8 @@ static NSString *const H5ServerErrorDomain = @"com.xzkj.royaljubileeh5.localserv
         @"mp3": @"audio/mpeg",
         @"ogg": @"audio/ogg",
         @"wav": @"audio/wav",
+        @"m4a": @"audio/mp4",
+        @"aac": @"audio/aac",
         @"bin": @"application/octet-stream",
         @"wasm": @"application/wasm"
     };
@@ -200,10 +246,14 @@ static NSString *const H5ServerErrorDomain = @"com.xzkj.royaljubileeh5.localserv
 }
 
 - (void)sendStatus:(NSInteger)status body:(NSData *)body mime:(NSString *)mime client:(int)client head:(BOOL)head {
-    NSString *reason = status == 200 ? @"OK" : (status == 404 ? @"Not Found" : (status == 403 ? @"Forbidden" : @"Method Not Allowed"));
+    [self sendStatus:status body:body mime:mime extraHeaders:@"" client:client head:head];
+}
+
+- (void)sendStatus:(NSInteger)status body:(NSData *)body mime:(NSString *)mime extraHeaders:(NSString *)extraHeaders client:(int)client head:(BOOL)head {
+    NSString *reason = @{@200: @"OK", @206: @"Partial Content", @403: @"Forbidden", @404: @"Not Found", @405: @"Method Not Allowed", @416: @"Range Not Satisfiable"}[@(status)] ?: @"Error";
     NSString *header = [NSString stringWithFormat:
-        @"HTTP/1.1 %ld %@\r\nContent-Type: %@\r\nContent-Length: %lu\r\nCache-Control: no-cache\r\nConnection: close\r\n\r\n",
-        (long)status, reason, mime, (unsigned long)body.length];
+        @"HTTP/1.1 %ld %@\r\nContent-Type: %@\r\nContent-Length: %lu\r\n%@Cache-Control: no-cache\r\nConnection: close\r\n\r\n",
+        (long)status, reason, mime, (unsigned long)body.length, extraHeaders];
     [self sendData:[header dataUsingEncoding:NSUTF8StringEncoding] client:client];
     if (!head) {
         [self sendData:body client:client];

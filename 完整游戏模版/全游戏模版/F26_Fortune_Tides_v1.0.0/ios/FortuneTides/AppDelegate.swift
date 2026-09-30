@@ -49,6 +49,9 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
         configuration.userContentController.addScriptMessageHandler(StoreCatalogBridge(), contentWorld: .page, name: "fortuneStore")
         configuration.userContentController.addScriptMessageHandler(AppleSignInBridge(presenter: self), contentWorld: .page, name: "fortuneApple")
         configuration.allowsInlineMediaPlayback = true
+        // The web soundtrack still waits for a real user gesture. Allow the
+        // unlocked player to switch tracks without requesting another gesture.
+        configuration.mediaTypesRequiringUserActionForPlayback = []
         let bridge = """
         (() => {
           let inactive = false;
@@ -124,6 +127,7 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
                 NSLog("F26_WEB_SMOKE %@ %@", String(describing: result), String(describing: error))
                 if ProcessInfo.processInfo.arguments.contains("--native-smoke") { self?.runGameplaySmoke() }
                 if ProcessInfo.processInfo.arguments.contains("--native-verify") { self?.verifyPersistedSmoke() }
+                if ProcessInfo.processInfo.arguments.contains("--native-media-smoke") { self?.runMediaSmoke() }
                 if ProcessInfo.processInfo.arguments.contains("--native-background") {
                     self?.webView.evaluateJavaScript("f26.navigate('game','mint'); f26.spinRound(); JSON.stringify({busy:f26.busy,coins:f26.store.state.coins,spins:f26.store.state.spins})") { value, error in
                         NSLog("F26_BACKGROUND_READY %@ %@", String(describing: value), String(describing: error))
@@ -153,6 +157,31 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
         callSmokeScript(script) { value, error in
             let result: Result<Any, Error> = error.map { .failure($0) } ?? .success(value ?? "null")
             NSLog("F26_PERSISTENCE_SMOKE %@", String(describing: result))
+        }
+    }
+    private func runMediaSmoke() {
+        let script = """
+        const audio = new Audio('fortune://game/audio/music-home.m4a');
+        const outcome = {};
+        try {
+          const file = await fetch(audio.src);
+          outcome.bytes = (await file.arrayBuffer()).byteLength;
+          await Promise.race([audio.play(), new Promise((_, reject) => setTimeout(() => reject(new Error('AAC play timeout')), 10000))]);
+          await new Promise(resolve => setTimeout(resolve, 600));
+          if (audio.paused || audio.currentTime <= 0 || audio.readyState < 2) throw new Error('AAC did not advance');
+          outcome.duration = audio.duration;
+          outcome.time = audio.currentTime;
+          outcome.motionPath = CSS.supports('offset-path', 'inset(0 round 12px)');
+          outcome.passed = true;
+        } catch (error) {
+          outcome.passed = false;
+          outcome.error = String(error);
+          outcome.mediaError = audio.error?.code;
+        } finally { audio.pause(); audio.removeAttribute('src'); audio.load(); }
+        return JSON.stringify(outcome);
+        """
+        callSmokeScript(script) { value, error in
+            NSLog("F26_MEDIA_SMOKE %@ %@", String(describing: value), String(describing: error))
         }
     }
     private func runGameplaySmoke() {

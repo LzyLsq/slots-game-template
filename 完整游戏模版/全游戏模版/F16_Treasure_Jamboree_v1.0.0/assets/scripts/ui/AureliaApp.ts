@@ -17,6 +17,7 @@ import { INBOX_MESSAGES } from '../services/MailService';
 import { STORE_PRODUCTS } from '../services/StoreService';
 import { SalonReels } from '../reels/SalonReels';
 import { SalonAtmosphere } from '../vfx/SalonAtmosphere';
+import { ThemeFestivity } from '../vfx/ThemeFestivity';
 import { CanopyLeaves } from '../vfx/CanopyLeaves';
 import { HallConsoleLights } from '../vfx/HallConsoleLights';
 import { SalonWinStage } from '../vfx/SalonWinStage';
@@ -100,6 +101,7 @@ export class AureliaApp extends Component {
     if(this.root&&!this.busy)this.render();
   }
   private render():void{
+    this.audio.setScene(this.page==='game'?'cabinet':'home');
     this.cabinetControls=[];this.spinActivity=undefined;
     this.art.reducedMotion=this.reduced;
     this.generation++;this.modal=undefined;this.notification=undefined;this.reels=undefined;this.plane=undefined;
@@ -225,6 +227,7 @@ export class AureliaApp extends Component {
     const stage=box(this.content!,'Continuous treasure plaza',0,0,1024,2048);stage.setSiblingIndex(0);
     const scale=Math.max(Safe.visibleWidth/1024,this.height/2048);stage.setScale(scale,scale,1);
     this.art.image(stage,'jamboree-plaza',0,0,1024,2048);
+    ThemeFestivity.hall(stage,1024,2048,this.reduced);
     const brand=this.art.image(this.content!,'canopy-brand',0,this.top-Safe.safeTop-318,760,238);this.sheen(brand,650,155);
     // Landmarks belong to the same camera plane as the painting; there are no
     // floating destination cards. A separate, safe-area rail carries controls.
@@ -383,7 +386,9 @@ export class AureliaApp extends Component {
     title.name='Animated cabinet title · '+cfg.name;
     this.idleAccent(title,GAME_CONFIGS.indexOf(cfg)*.8,11,.35,1.5);
     this.sheen(title,title.getComponent(UITransform)!.width,title.getComponent(UITransform)!.height,GAME_CONFIGS.indexOf(cfg)*.65);
-    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};
+    const trimRect=g.screen,trimPoint=imagePoint(trimRect);
+    const trim=ThemeFestivity.cabinet(this.plane,trimPoint[0],trimPoint[1],trimRect[2],trimRect[3],cfg.columns,this.reduced);
+    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.playReelStop(column);ambient.land(column);trim.land(column);};
     // Readouts belong to the ivory recesses already painted into the room.
     // No additional rectangular fascia obscures the material or its bevels.
     const balance=imagePoint(g.balance);
@@ -649,20 +654,22 @@ export class AureliaApp extends Component {
       try{
         fades.forEach(f=>tween(f.alpha).to(this.reduced?.01:.22,{opacity:65},{easing:'sineInOut'}).start());
         await this.delay(.22);
+        this.audio.playWinFanfare(amount/this.bet>=40?3:amount/this.bet>=15?2:1);
         const celebration=stage.addComponent(SalonWinStage);
         celebration.onCue=(cue)=>{
-          this.audio.play(cue==='complete'?'reward':cue==='count'?'tap':'win');
+          this.audio.playWinDetail(cue==='complete'?'collect':cue==='count'?'count':'burst',cue==='count'?.5:1,1);
           if(cue==='complete')for(let i=0;i<fades.length;i++)if(fades[i].node===this.balanceLabel?.node)
             tween(fades[i].alpha).to(.3,{opacity:prior[i]},{easing:'sineOut'}).start();
         };
         const destination=this.balanceLabel?stage.getComponent(UITransform)!.convertToNodeSpaceAR(this.balanceLabel.node.worldPosition):undefined;
         await celebration.setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config),destination);
       }finally{
+        this.audio.finishWinPresentation();
         fades.forEach((f,i)=>{if(f.node.isValid)tween(f.alpha).to(this.reduced?.01:.3,{opacity:prior[i]},{easing:'sineInOut'}).start();});
         if(this.modal===stage)this.closeModal();
       }
     }else{
-      this.audio.play('win');const label=this.winLabel;
+      this.audio.playSmallWinJingle();const label=this.winLabel;
       const g=CABINETS[this.config.id],screen=imagePoint(g.screen);
       const banner=this.art.panel(this.plane!,screen[0],screen[1]-g.screen[3]/2+120,Math.min(680,g.screen[2]-24),204,0);banner.name='Ordinary win celebration';
       const badge=this.art.image(banner,symbolAtlas(this.config.id),-230,0,134,134,[8,14,7,2][GAME_CONFIGS.indexOf(this.config)]);this.sheen(badge,108,108,.1);
@@ -675,7 +682,7 @@ export class AureliaApp extends Component {
         tween(total.node).to(.12,{scale:new Vec3(1.065,1.065,1)},{easing:'sineOut'}).to(.24,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();
         for(const side of [-1,1]){const glint=this.art.light(banner,3,side*285,side*74,78,26,0);glint.name='Win amount settled glint';tween(glint.getComponent(UIOpacity)!).to(.1,{opacity:220}).to(.4,{opacity:0},{easing:'sineOut'}).start();}
         await this.delay(.65);tween(opacity(banner,255)).to(.2,{opacity:0}).start();await this.delay(.2);}}
-      finally{if(banner.isValid)banner.destroy();}
+      finally{this.audio.finishWinPresentation();if(banner.isValid)banner.destroy();}
     }
   }
 

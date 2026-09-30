@@ -1,3 +1,4 @@
+import type { WinSoundCue } from '../audio/AudioManager';
 import {tr} from '../ui/Language';
 import {formatWinAmount, tierCaption, winTier} from './WinPresentation';
 import { _decorator, Color, Component, EventTouch, Graphics, Label, Node, tween, Tween, UIOpacity, Vec3 } from 'cc';
@@ -14,8 +15,9 @@ export class SalonWinStage extends Component {
   private countDuration=3.3;private holdUntil=5.5;private tier=0;private revealed=false;private amount=0; private elapsed=0; private lastTick=-1; private finished=false;
   private count!:Label; private hint!:Label; private group!:Node; private veil!:UIOpacity;
   private rays!:Node; private halo!:Node; private done?:()=>void; private reduced=false;
-  public setup(art:SalonArt, amount:number, height:number, reduced:boolean,multiplier=20,theme=0):Promise<void> {
-    this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=Math.max(0,winTier(multiplier)-1);
+  private onSound?:(cue:WinSoundCue,progress:number)=>void;
+  public setup(art:SalonArt, amount:number, height:number, reduced:boolean,multiplier=20,theme=0,onSound?:(cue:WinSoundCue,progress:number)=>void):Promise<void> {
+    this.onSound=onSound;this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=Math.max(0,winTier(multiplier)-1);
     this.countDuration=[3.3,4.1,4.9][this.tier];this.holdUntil=this.countDuration+(reduced?1.2:2.2);
     const shade=box(this.node,'Warm celebration veil',0,0,1600,height);const dim=shade.addComponent(Graphics);dim.fillColor=new Color(29,48,40,85);dim.rect(-800,-height/2,1600,height);dim.fill();
     this.group=box(this.node,'Celebration choreography',0,0,1080,1920);
@@ -66,14 +68,14 @@ export class SalonWinStage extends Component {
   private reveal():void {
     if(!this.revealed&&!this.reduced){tween(this.count.node).to(.09,{scale:new Vec3(.97,.97,1)},{easing:'sineOut'}).to(.22,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();}
     if(!this.revealed)this.revealAge=0;
-    this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=formatWinAmount(this.amount);
+    this.revealed=true;this.onSound?.('reveal',1);this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=formatWinAmount(this.amount);
     this.hint.string=tr('Added to your wallet · Tap to continue');
   }
   private advance():void {
     if(this.finished)return;
     if(this.elapsed<this.countDuration){this.reveal();return;}
     if(this.revealed&&this.revealAge<.3&&!this.reduced)return;
-    this.finished=true;
+    this.onSound?.('collect',1);this.finished=true;
     tween(this.veil).to(this.reduced?.01:.36,{opacity:0},{easing:'sineInOut'}).call(()=>{this.done?.();this.done=undefined;}).start();
   }
   protected update(dt:number):void {
@@ -101,11 +103,11 @@ export class SalonWinStage extends Component {
     const tick=Math.floor(this.elapsed*24);
     if(tick!==this.lastTick&&this.elapsed<this.countDuration){
       this.lastTick=tick;const p=Math.min(1,Math.max(0,(this.elapsed-.55)/(this.countDuration-.55)));
-      this.count.string=Math.floor(this.amount*(1-Math.pow(1-p,2.4))).toLocaleString('en-US');
+      this.onSound?.('count',p);this.count.string=Math.floor(this.amount*(1-Math.pow(1-p,2.4))).toLocaleString('en-US');
     }
     if(this.elapsed>=this.countDuration&&!this.revealed)this.reveal();
     // Hold the complete amount for 2.2 seconds (1.2 with reduced motion).
     if(this.elapsed>=this.holdUntil)this.advance();
   }
-  protected onDestroy():void {if(this.veil)Tween.stopAllByTarget(this.veil);this.done?.();this.done=undefined;}
+  protected onDestroy():void {this.onSound=undefined;if(this.veil)Tween.stopAllByTarget(this.veil);this.done?.();this.done=undefined;}
 }

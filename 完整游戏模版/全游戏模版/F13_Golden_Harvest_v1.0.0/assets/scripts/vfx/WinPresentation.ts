@@ -1,8 +1,8 @@
 import {GameConfig, SpinResult, WinResult} from '../math/types';
 import {language, tr} from '../ui/Language';
 /** Display tiers only. They neither draw prizes nor alter settlement. */
-export const WIN_TIERS = [10,50,100] as const;
-export function winTier(multiplier:number):number{return multiplier>=WIN_TIERS[2]?3:multiplier>=WIN_TIERS[1]?2:multiplier>=WIN_TIERS[0]?1:0;}
+export const WIN_TIERS = [5,10,50,100] as const;
+export function winTier(multiplier:number):number{return multiplier>=WIN_TIERS[3]?4:multiplier>=WIN_TIERS[2]?3:multiplier>=WIN_TIERS[1]?2:multiplier>=WIN_TIERS[0]?1:0;}
 const phrases={
   "line-left":["Left-edge line", "左起赔付线", "左起賠付線", "左端ライン", "왼쪽 시작 라인"],
   "line-right":["Right-edge line", "右起赔付线", "右起賠付線", "右端ライン", "오른쪽 시작 라인"],
@@ -62,17 +62,22 @@ const phrases={
   total:['Total return','总返还','總返還','返還合計','총 반환'],
   stake:['× stake','× 本局下注','× 本局下注','× ベット','× 베팅'],
   below:['Return below stake','返还低于下注','返還低於下注','返還はベット未満','반환액이 베팅보다 적음'],
-  tiers:['Win tiers: BIG 10× · MEGA 50× · EPIC 100× stake. Total return, not extra prizes.','大奖分级：大奖10倍 · 巨奖50倍 · 史诗100倍下注。按总返还分级，不额外发奖。','大獎分級：大獎10倍 · 巨獎50倍 · 史詩100倍下注。按總返還分級，不額外發獎。','演出基準：BIG 10倍・MEGA 50倍・EPIC 100倍ベット。返還合計の区分で、追加賞ではありません。','연출 기준: BIG 10배 · MEGA 50배 · EPIC 100배 베팅. 총 반환액 기준이며 추가 보상이 아닙니다.'],
-  tier:['Total return ≥ {n}× stake · no extra prize','总返还 ≥ {n}倍下注 · 非额外奖金','總返還 ≥ {n}倍下注 · 非額外獎金','返還合計 ≥ ベット{n}倍・追加賞なし','총 반환액 ≥ 베팅 {n}배 · 추가 보상 아님'],
+  tiers:['Win tiers: BIG 5× · SUPER BIG 10× · MEGA 50× · EPIC 100× stake. Total return, not extra prizes.','大奖分级：大奖5倍 · 超级大奖10倍 · 巨奖50倍 · 史诗100倍下注。按总返还分级，不额外发奖。','大獎分級：大獎5倍 · 超級大獎10倍 · 巨獎50倍 · 史詩100倍下注。按總返還分級，不額外發獎。','演出基準：BIG 5倍・SUPER BIG 10倍・MEGA 50倍・EPIC 100倍ベット。返還合計の区分で、追加賞ではありません。','연출 기준: BIG 5배 · SUPER BIG 10배 · MEGA 50배 · EPIC 100배 베팅. 총 반환액 기준이며 추가 보상이 아닙니다.'],
+  tier:['Total return ≥ {n}× stake · presentation tier','总返还 ≥ {n}倍下注 · 演出档位','總返還 ≥ {n}倍下注 · 演出檔位','返還合計 ≥ ベット{n}倍・演出区分','총 반환액 ≥ 베팅 {n}배 · 연출 단계'],
+  newcomer:['New player benefit {n}/5 · One SUPER BIG WIN is guaranteed within the first five rounds','新手福利 {n}/5 · 前五局至少保底一次超级大奖','新手福利 {n}/5 · 前五局至少保底一次超級大獎','初心者特典 {n}/5・最初の5回以内にSUPER BIGを1回保証','신규 혜택 {n}/5 · 첫 5회 안에 SUPER BIG 1회 보장'],
+  newcomerAward:['New player guarantee (separate bonus)','新手保底补足（单独奖励）','新手保底補足（單獨獎勵）','初心者保証（別枠特典）','신규 보장 (별도 보너스)'],
 } as const;
 function p(key:keyof typeof phrases):string{const i=['en','zh-CN','zh-TW','ja','ko'].indexOf(language());return phrases[key][Math.max(0,i)];}
 function amount(n:number):string{return n.toLocaleString('en-US',{maximumFractionDigits:3});}
 export function tierRules():string{return p('tiers');}
 export function tierCaption(multiplier:number):string{return p('tier').replace('{n}',String(WIN_TIERS[Math.max(0,winTier(multiplier)-1)]));}
+export function newcomerBenefitCaption(round:number):string{return p('newcomer').replace('{n}',String(Math.max(1,Math.min(5,Math.floor(round)))));}
+export function newcomerAwardCaption():string{return p('newcomerAward');}
 /** credits is the settled allocation AFTER round-level rounding and cap.
  * rawCredits is diagnostic pre-settlement math and must never be displayed here. */
 export function awardCredits(w:WinResult):number{return w.credits;}
 export function awardReason(c:GameConfig,w:WinResult):string{
+  if(w.symbolId==='newcomer-benefit')return p('newcomerAward');
   if(w.kind==='scatter')return p('scatter');
   const line=Number.isInteger(w.lineIndex)?w.lineIndex!+1:undefined;
   if(c.primaryKind==='twin-boards'&&line!==undefined&&c.paylines.length)return p('board')+' '+(Math.floor((line-1)/c.paylines.length)+1)+' · '+p('line')+' '+((line-1)%c.paylines.length+1);
@@ -104,6 +109,7 @@ export function awardSummary(wins:readonly WinResult[],credits:number):string{
 }
 export function roundEvidence(result:SpinResult,bet:number):string{
   if(result.totalWin<=0)return p('noWin');
+  const benefit=result.wins.find(w=>w.symbolId==='newcomer-benefit');
   const detail=p('base')+' '+amount(result.baseWin)+(result.featureWin>0?' + '+p('bonus')+' '+amount(result.featureWin):'');
-  return detail+' · '+p('total')+' '+amount(result.totalWin)+'\n'+(result.totalWin<bet?p('below')+' · ':'')+(result.totalWin/bet).toFixed(2)+p('stake');
+  return (benefit?p('newcomerAward')+' +'+amount(benefit.credits)+' '+p('coins')+'\n':'')+detail+' · '+p('total')+' '+amount(result.totalWin)+'\n'+(result.totalWin<bet?p('below')+' · ':'')+(result.totalWin/bet).toFixed(2)+p('stake');
 }

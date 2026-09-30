@@ -1,3 +1,4 @@
+import { ThemeFestivity } from './vfx/ThemeFestivity';
 import { _decorator, Component, Node, Canvas, Camera, UITransform, Layers, view, ResolutionPolicy, resources,
   SpriteFrame, Texture2D, Rect, Color, Label, Graphics, UIOpacity, tween, Tween, Vec3, sys, game, Game, EditBox, Sprite, AudioClip, AudioSource, EffectAsset, JsonAsset } from 'cc';
 import { MODES, modeRules } from './core/Modes';
@@ -634,6 +635,7 @@ export class RegattaApp extends Component {
     // clear color at tall or narrow aspect ratios.
     harbor.setScale(1.025, 1.025, 1); this.harborBackground = harbor;
     this.addHarborReflections(login);
+    if(!login)ThemeFestivity.hall(this.content,this.width,this.height,this.reduced);
     const compactViewport = this.height < 1000;
     const titleY = this.height / 2 - this.safeTop - (login ? 210 : (compactViewport ? 112 : 160));
     const titleFrame = this.f('title');
@@ -934,7 +936,8 @@ export class RegattaApp extends Component {
     this.scene = node(this.content, 'Cabinet and world'); this.scene.setScale(scale, scale, 1);
     image(this.scene, f, 0, 0, 1024, 2048);
     const [left, top, width, height] = spec.aperture;
-    this.reels = new ReelView(this.scene, MODES[this.mode], this.symbols.get(this.mode)!, (left + width / 2 - .5) * 1024, (.5 - top - height / 2) * 2048, width * 1024, height * 2048, () => this.sound('stop'));
+    const trim=ThemeFestivity.cabinet(this.scene,(left+width/2-.5)*1024,(.5-top-height/2)*2048,width*1024,height*2048,MODES[this.mode].columns,this.reduced);
+    this.reels = new ReelView(this.scene, MODES[this.mode], this.symbols.get(this.mode)!, (left + width / 2 - .5) * 1024, (.5 - top - height / 2) * 2048, width * 1024, height * 2048, column => {this.sound('stop');trim.land(column);});
     this.buildCabinetAmbience(left, top, width, height);
     const consoleY = (.5 - spec.console) * 2048;
     const layout = CONSOLE_LAYOUTS[this.mode];

@@ -41,6 +41,21 @@ const main = async (): Promise<void> => {
     assert.equal(wins.length,cfg.primaryKind==='twin-boards'?cfg.paylines.length*2:cfg.payMode==='paylines'?cfg.paylines.length:1);
   }
   for(const config of GAME_CONFIGS){const capped = generator.generate(config, 500, new SeededRNG(999), { winTier: 'epic' }); assert(capped.totalWin <= 500 * config.maxWinMultiplier);}
+  // A new player's guarantee never changes the reel draw or invents a symbol win.
+  for(const [index,config] of GAME_CONFIGS.entries()){
+    const bet=config.bets[0],seed=997+index;
+    const natural=new ResultGenerator().generate(config,bet,new SeededRNG(seed));
+    const welcome=new ResultGenerator().generate(config,bet,new SeededRNG(seed),{newcomerSuper:true});
+    const benefit=welcome.wins.filter(w=>w.symbolId==='newcomer-benefit');
+    assert.deepEqual(welcome.grid,natural.grid);
+    assert.deepEqual(welcome.wins.filter(w=>w.symbolId!=='newcomer-benefit'),natural.wins);
+    assert.deepEqual(welcome.featureResult,natural.featureResult);
+    assert.equal(welcome.totalWin,Math.max(natural.totalWin,bet*10));
+    assert.equal(benefit.reduce((sum,w)=>sum+w.credits,0),welcome.totalWin-natural.totalWin);
+    assert(benefit.every(w=>w.kind==='bonus'&&w.positions.length===0));
+    assert.equal(welcome.totalWin,welcome.baseWin+welcome.featureWin);
+    assert(welcome.totalWin<=bet*config.maxWinMultiplier);
+  }
 
   const malformed = new MemoryStorage(); malformed.setItem('golden-harvest-f13.cocos.save.v1', '{"currentUserId":"missing","players":{"broken":{"username":42}},"playerData":"bad"}');
   const recovered = new SaveService(malformed); assert.equal(recovered.read().currentUserId, null); assert.deepEqual(recovered.read().players, {});

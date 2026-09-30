@@ -1,3 +1,4 @@
+import { ThemeFestivity } from '../vfx/ThemeFestivity';
 import {Color,Graphics,Label,Node,EventTouch,tween,Tween,Vec3,UITransform,Sprite} from 'cc';
 import {box,text,bindPress,opacity,COLORS} from './SalonArt';
 import {SafeAreaAdapter as Safe} from './SafeAreaAdapter';
@@ -109,6 +110,7 @@ export function atelierHome(a:any):void{
  atelierRoomLight(a);
  const available=a.height-410-Safe.safeTop-Safe.safeBottom,scale=Math.min((Safe.visibleWidth-60)/1020,available/1540);
  const stage=box(a.content,'Atelier exhibition',0,-8,1020,1540);stage.setScale(scale,scale,1);
+ ThemeFestivity.hall(stage,1020,1540,a.reduced);
  const identity=plate(a,stage,-125,675,735,125,true);
  const profile=a.services.profile.current(),avatar=atelierPortrait(a,identity,-295,0,108,profile?.avatar??0);bindPress(avatar,avatar,()=>void a.navigate('profile'));
  atelierGlint(a,avatar,-34,36,40,2.1);

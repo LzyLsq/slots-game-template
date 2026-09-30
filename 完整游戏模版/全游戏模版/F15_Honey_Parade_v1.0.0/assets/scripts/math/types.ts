@@ -110,5 +110,7 @@ export interface ForceResult {
   readonly scatterCount?: 3 | 4 | 5;
   readonly holdAndSpin?: boolean;
   readonly jackpot?: 'mini' | 'minor' | 'major' | 'grand';
-  readonly winTier?: 'big' | 'mega' | 'epic';
+  readonly winTier?: 'big' | 'super' | 'mega' | 'epic';
+  /** Local-only, separately itemised welcome benefit; never a reel symbol. */
+  readonly newcomerSuper?: boolean;
 }

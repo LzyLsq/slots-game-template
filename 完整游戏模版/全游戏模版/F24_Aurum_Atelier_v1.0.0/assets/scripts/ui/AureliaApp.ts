@@ -32,6 +32,7 @@ import { INBOX_MESSAGES } from '../services/MailService';
 import { STORE_PRODUCTS } from '../services/StoreService';
 import { SalonReels } from '../reels/SalonReels';
 import { SalonAtmosphere } from '../vfx/SalonAtmosphere';
+import { ThemeFestivity } from '../vfx/ThemeFestivity';
 import { CanopyLeaves } from '../vfx/CanopyLeaves';
 import { SalonWinStage } from '../vfx/SalonWinStage';
 import { SafeAreaAdapter as Safe } from './SafeAreaAdapter';
@@ -118,6 +119,7 @@ export class AureliaApp extends Component {
     if(this.root&&!this.busy)this.render();
   }
   private render():void{
+    this.audio.setScene(this.page==='game'?'cabinet':'home');
     this.cancelWinCount?.();this.presentedWin=0;
     this.art.reducedMotion=this.reduced;
     this.generation++;this.modal=undefined;this.notification=undefined;this.reels=undefined;this.plane=undefined;
@@ -401,7 +403,9 @@ export class AureliaApp extends Component {
     title.name='Animated cabinet title · '+cfg.name;
 
     this.sheen(title,title.getComponent(UITransform)!.width,title.getComponent(UITransform)!.height,GAME_CONFIGS.indexOf(cfg)*.65);
-    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onMotion=(energy)=>{ambient.motionEnergy=energy;};this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};this.reels.onWinAccent=(column)=>ambient.land(column,true);
+    const trimRect=g.screen,trimPoint=imagePoint(trimRect);
+    const trim=ThemeFestivity.cabinet(this.plane,trimPoint[0],trimPoint[1],trimRect[2],trimRect[3],cfg.columns,this.reduced);
+    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onMotion=(energy)=>{ambient.motionEnergy=energy;};this.reels.onStop=(column)=>{this.audio.playReelStop(column);ambient.land(column);trim.land(column);};this.reels.onWinAccent=(column)=>ambient.land(column,true);
     const balance=imagePoint(g.balance);
     this.balanceLabel=text(this.plane,exactMoney(this.services.economy.balance()),balance[0],balance[1],g.balance[2]*.94,g.balance[3]*.94,44,'#442810');outlined(this.balanceLabel,'#FFF4DD',1.5);this.balanceLabel.enableWrapText=false;this.balanceLabel.overflow=Label.Overflow.SHRINK;this.balanceLabel.lineHeight=48;this.balanceLabel.node.getComponent('TextFit')!.enabled=false;
 
@@ -670,6 +674,7 @@ export class AureliaApp extends Component {
     });
   }
   private async presentWin(amount:number,big:boolean):Promise<void>{
+    this.plane?.getComponentInChildren(ThemeFestivity)?.celebrate(winTier(amount/this.bet));
     if(big){
       const stage=box(this.root!,'Treasure celebration',0,0,1080,this.height);this.modal=stage;stage.addComponent(BlockInputEvents);
       // Keep the integrated scene visible, but do not let cabinet readouts and
@@ -681,19 +686,21 @@ export class AureliaApp extends Component {
       try{
         fades.forEach(f=>tween(f.alpha).to(this.reduced?.01:.22,{opacity:0},{easing:'sineInOut'}).start());
         await this.delay(.22);
-        this.audio.play('reward');await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config));
+        this.audio.playWinFanfare(winTier(amount/this.bet));await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config),(cue,progress)=>this.audio.playWinDetail(cue,progress,winTier(amount/this.bet)));
       }finally{
+        this.audio.finishWinPresentation();
         fades.forEach((f,i)=>{if(f.node.isValid)tween(f.alpha).to(this.reduced?.01:.3,{opacity:prior[i]},{easing:'sineInOut'}).start();});
         if(this.modal===stage)this.closeModal();
       }
     }else{
-      if(amount>this.presentedWin)this.audio.playAward(0);
+      if(amount>this.presentedWin)this.audio.playSmallWinJingle();
       const stage=box(this.content!,'Ordinary win presentation',0,0,1080,this.height);
       const hidden=[this.hintLabel?.node,this.content?.getChildByName('Award hint material')].filter((n):n is Node=>!!n&&n.active);
       hidden.forEach(n=>n.active=false);
       try{
         await Promise.all([this.countWinAmount(amount),stage.addComponent(OrdinaryWinStage).setup(this.art,amount,Safe.visibleHeight,this.reduced,this.bet,{y:-Safe.visibleHeight/2+88+Safe.safeBottom,width:980})]);
       }finally{
+        this.audio.finishWinPresentation();
         if(stage.isValid)stage.destroy();
         hidden.forEach(n=>{if(n.isValid)n.active=true;});
       }

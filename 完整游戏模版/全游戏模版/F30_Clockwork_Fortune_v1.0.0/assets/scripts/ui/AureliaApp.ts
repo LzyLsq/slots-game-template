@@ -28,6 +28,7 @@ import { hallStandings } from '../services/RankService';
 import { STORE_PRODUCTS } from '../services/StoreService';
 import { SalonReels } from '../reels/SalonReels';
 import { SalonAtmosphere } from '../vfx/SalonAtmosphere';
+import { ThemeFestivity } from '../vfx/ThemeFestivity';
 import { CanopyLeaves } from '../vfx/CanopyLeaves';
 import { SalonWinStage } from '../vfx/SalonWinStage';
 import { SafeAreaAdapter as Safe } from './SafeAreaAdapter';
@@ -120,6 +121,7 @@ export class AureliaApp extends Component {
     if(this.root&&!this.busy)this.render();
   }
   private render():void{
+    this.audio.setScene(this.page==='game'?'cabinet':'home');
     this.cancelWinCount?.();this.presentedWin=0;
     this.art.reducedMotion=this.reduced;
     this.generation++;this.modal=undefined;this.notification=undefined;this.reels=undefined;this.plane=undefined;
@@ -262,6 +264,7 @@ export class AureliaApp extends Component {
     // The clear clockwork vault supplies real depth behind the exhibit; avoid
     // tinting or blurring the whole scene just to support short labels.
     this.art.cover(stage,'salon',0,0,Math.max(1024,Safe.visibleWidth/scale),this.height/scale);
+    ThemeFestivity.hall(stage,1024,1792,this.reduced);
     this.homeAmbient(stage);
     const brand=this.art.image(this.content!,'canopy-brand',0,this.top-282-Safe.safeTop,700,216);this.idleAccent(brand,0,14,.2,1.8);this.sheen(brand,650,170);
     const exhibit=box(stage,'Clockwork destination exhibit',0,0,870,910);
@@ -467,7 +470,9 @@ export class AureliaApp extends Component {
     const title=this.art.image(this.plane,'canopy-title-'+titleIndex,titlePoint[0],titlePoint[1]+16,g.title[2]*.90,176);
     title.name='Cabinet title · '+cfg.name;
     this.artTitleMotion(title,titleIndex*.42);
-    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,reelAperture(g));this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};
+    const trimRect=reelAperture(g),trimPoint=imagePoint(trimRect);
+    const trim=ThemeFestivity.cabinet(this.plane,trimPoint[0],trimPoint[1],trimRect[2],trimRect[3],cfg.columns,this.reduced);
+    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,reelAperture(g));this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.playReelStop(column);ambient.land(column);trim.land(column);};
     // Dark translucent enamel lets each cabinet's engraved material show
     // through the register instead of laying a cream card across its face.
     const balance=imagePoint(g.balance);
@@ -777,6 +782,7 @@ export class AureliaApp extends Component {
     });
   }
   private async presentWin(amount:number,big:boolean,welcomeBonus=false):Promise<void>{
+    this.plane?.getComponentInChildren(ThemeFestivity)?.celebrate(winTier(amount/this.bet));
     if(big){
       const stage=box(this.root!,'Treasure celebration',0,0,1080,this.height);this.modal=stage;stage.addComponent(BlockInputEvents);
       // Keep the integrated scene visible, but do not let cabinet readouts and
@@ -788,19 +794,21 @@ export class AureliaApp extends Component {
       try{
         fades.forEach(f=>tween(f.alpha).to(this.reduced?.01:.22,{opacity:0},{easing:'sineInOut'}).start());
         await this.delay(.22);
-        this.audio.play('reward');await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config),welcomeBonus);
+        this.audio.playWinFanfare(winTier(amount/this.bet));await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config),welcomeBonus,(cue,progress)=>this.audio.playWinDetail(cue,progress,winTier(amount/this.bet)));
       }finally{
+        this.audio.finishWinPresentation();
         fades.forEach((f,i)=>{if(f.node.isValid)tween(f.alpha).to(this.reduced?.01:.3,{opacity:prior[i]},{easing:'sineInOut'}).start();});
         if(this.modal===stage)this.closeModal();
       }
     }else{
-      if(amount>this.presentedWin)this.audio.playAward(0);
+      if(amount>this.presentedWin)this.audio.playSmallWinJingle();
       const stage=box(this.content!,'Ordinary win presentation',0,0,1080,this.height);
       const hidden=[this.hintLabel?.node,this.content?.getChildByName('Award hint material')].filter((n):n is Node=>!!n&&n.active);
       hidden.forEach(n=>n.active=false);
       try{
         await Promise.all([this.countWinAmount(amount),stage.addComponent(OrdinaryWinStage).setup(this.art,amount,Safe.visibleHeight,this.reduced,this.bet,{y:-Safe.visibleHeight/2+290+Safe.safeBottom,width:980})]);
       }finally{
+        this.audio.finishWinPresentation();
         if(stage.isValid)stage.destroy();
         hidden.forEach(n=>{if(n.isValid)n.active=true;});
       }

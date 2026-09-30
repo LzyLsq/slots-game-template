@@ -2,7 +2,7 @@ import { OrdinaryWinStage } from '../vfx/OrdinaryWinStage';
 import {LabelOutline} from 'cc';
 import {cabinetToolText} from './CabinetToolText';
 import {drawRulePages} from './RulePages';
-import {awardCredits, awardEvidence, featureAwardEvidence, awardSummary, roundEvidence, tierRules, winTier} from '../vfx/WinPresentation';
+import {awardCredits, awardEvidence, featureAwardEvidence, awardSummary, newcomerBenefitCaption, roundEvidence, tierRules, winTier} from '../vfx/WinPresentation';
 import {primaryRuleText} from '../math/PrimaryRuleText';
 import {drawRuleHelp,helpTitle} from './RuleHelp';
 import {primaryStatus,HAND_NAMES,HAND_FACTORS} from '../math/IndependentCore';
@@ -25,6 +25,7 @@ import { RemoteSpinJournal } from '../services/RemoteSpinJournal';
 import { STORE_PRODUCTS } from '../services/StoreService';
 import { SalonReels } from '../reels/SalonReels';
 import { SalonAtmosphere } from '../vfx/SalonAtmosphere';
+import { ThemeFestivity } from '../vfx/ThemeFestivity';
 import { SalonWinStage } from '../vfx/SalonWinStage';
 import { SafeAreaAdapter as Safe } from './SafeAreaAdapter';
 import { SalonArt, box, text, opacity, bindPress, outlined, COLORS } from './SalonArt';
@@ -109,6 +110,7 @@ export class AureliaApp extends Component {
     if(this.root&&!this.busy)this.render();
   }
   private render():void{
+    this.audio.setScene(this.page==='game'?'cabinet':'home');
     this.cancelWinCount?.();this.presentedWin=0;
     this.generation++;this.modal=undefined;this.notification=undefined;this.reels=undefined;this.plane=undefined;
     this.balanceLabel=this.betLabel=this.winLabel=this.topWinLabel=this.hintLabel=this.autoLamp=this.soundLamp=undefined;
@@ -171,6 +173,7 @@ export class AureliaApp extends Component {
     const world=box(this.root!,'Living treasure archipelago',0,0,1000,2000);world.setSiblingIndex(0);
     const scale=Math.max(Safe.visibleWidth/1000,this.height/2000);world.setScale(scale,scale,1);
     this.art.image(world,'harvest-hall-soft',0,0,1000,2000);
+    ThemeFestivity.hall(world,1000,2000,this.reduced);
     // Coordinates are measured on the continuous world illustration, not on separate cards.
     const ports=[[-197,413],[260,81],[-231,-267],[192,-593]];
     GAME_CONFIGS.forEach((cfg,i)=>{
@@ -313,7 +316,9 @@ export class AureliaApp extends Component {
     const ambient=box(this.plane,'Cabinet reflections',0,0,1024,2304).addComponent(SalonAtmosphere);
     ambient.setup(this.art,1024,2304);ambient.cabinet(this.art,g);ambient.reducedMotion=this.reduced;
 
-    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.play('reel-stop');ambient.land(column);};
+    const trimRect=g.screen,trimPoint=imagePoint(trimRect);
+    const trim=ThemeFestivity.cabinet(this.plane,trimPoint[0],trimPoint[1],trimRect[2],trimRect[3],cfg.columns,this.reduced);
+    const reelNode=box(this.plane,'Reels',0,0,g.screen[2],g.screen[3]);this.reels=reelNode.addComponent(SalonReels);this.reels.setup(this.art,cfg,g.screen);this.reels.reducedMotion=this.reduced;this.reels.onStop=(column)=>{this.audio.playReelStop(column);ambient.land(column);trim.land(column);};
     const balance=imagePoint(g.balance);this.art.image(this.plane,'symbols',balance[0]-g.balance[2]*.39,balance[1],52,52,0);
     this.balanceLabel=text(this.plane,money(this.services.economy.balance()),balance[0]-4,balance[1],g.balance[2]*.66,g.balance[3],43,'#59351B');
     this.art.button(this.plane,'Recharge',balance[0]+g.balance[2]*.41,balance[1],65,67,'',8,()=>{if(this.state.kind==='idle')void this.navigate('store');else this.toast('Finish the round before opening the shop.');});
@@ -379,6 +384,8 @@ export class AureliaApp extends Component {
     this.soundLamp=tool('Audio',436,6,'SOUND ON',()=>void this.toggleSound());this.updateSound();
     this.hintLabel=outlined(text(this.content!,MODES[GAME_CONFIGS.indexOf(cfg)],0,-this.top+88+Safe.safeBottom,980,110,38,COLORS.cream));
     this.hintLabel.node.getComponent(LabelOutline)!.width=4;this.hintLabel.node.getComponent('TextFit')!.enabled=false;this.hintLabel.fontSize=42;this.hintLabel.lineHeight=46;this.hintLabel.enableWrapText=false;this.hintLabel.overflow=Label.Overflow.SHRINK;this.hintLabel.getComponent(UITransform)!.setContentSize(980,148);
+    const newcomer=!this.services.api?this.newcomerBenefit():undefined;
+    if(newcomer)this.hintLabel.string=newcomerBenefitCaption(newcomer.round);
     this.layoutPlane();
     if(this.force){this.scheduleOnce(()=>void this.spin(),1);}
   }
@@ -434,6 +441,15 @@ export class AureliaApp extends Component {
     if(!saved){this.audio.setEffects(previous);this.updateSound(previous);this.toast('Sound setting could not be saved.');return;}
     this.toast(next?'Sound on.':'Sound off.');
   }
+  private newcomerBenefit():{round:number;guaranteeSuper:boolean}|undefined{
+    const player=this.services.profile.current(),userId=this.services.save.read().currentUserId;
+    const played=player?.gamesPlayed;
+    if(!userId||played===undefined||!Number.isSafeInteger(played)||played<0||played>=5)return undefined;
+    let hash=2166136261;
+    for(let i=0;i<userId.length;i++)hash=Math.imul(hash^userId.charCodeAt(i),16777619)>>>0;
+    const round=played+1,superRound=hash%5+1;
+    return {round,guaranteeSuper:round===superRound};
+  }
   private async spin():Promise<void>{
     if(this.page!=='game'||!this.reels||this.modal||this.busy)return;
     if(!complianceCurrent(this.services.save.read().compliance)){this.policyConsent();return;}
@@ -442,6 +458,7 @@ export class AureliaApp extends Component {
     const requestId=this.state.kind==='retry'?this.state.requestId:SecureRNG.id('salon-spin');
     const api=this.services.api;
     const recovering=this.state.kind==='retry';
+    const newcomer=!api&&!recovering?this.newcomerBenefit():undefined;
     if(api){try{this.journal.begin(requestId,this.config.id,this.bet);}catch{this.toast('Unable to save the round. Free device storage, then try again.');return;}}
     if(!api&&!this.services.economy.reserveSpin(requestId,this.bet)){this.auto=false;this.updateAuto();this.toast('Not enough coins. Visit Rewards or the Coin Shop.');return;}
     this.resetWinAmount();
@@ -451,16 +468,17 @@ export class AureliaApp extends Component {
       let result:SpinResult;
       if(api){const response=await api.spin(this.config.id,this.bet,requestId);result=response.result;this.journal.settle(requestId,result,response.balance);}
       else {
-        result=this.generator.generate(this.config,this.bet,this.rng,this.force?{winTier:this.force as 'big'|'mega'|'epic'}:undefined);this.force=undefined;
+        const forcedTier=this.force as 'big'|'super'|'mega'|'epic'|undefined;
+        result=this.generator.generate(this.config,this.bet,this.rng,{winTier:forcedTier,newcomerSuper:!!newcomer?.guaranteeSuper});this.force=undefined;
         if(!this.services.economy.settleSpin(requestId,result.totalWin))throw new Error('Settlement failed');
       }
       settled=true;await this.reels.finish(result);
       this.state={kind:'presenting',result};this.reels.highlight(result.wins.flatMap(w=>[...w.positions]));
       await this.presentAwardEvidence(result);
       if(result.featureResult)await this.presentFeature(result);
-      if(result.totalWin>0)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0);
+      if(result.totalWin>0)await this.presentWin(result.totalWin,winTier(result.totalWin/this.bet)>0,result.wins.some(w=>w.symbolId==='newcomer-benefit'));
       this.resetWinAmount(result.totalWin);
-      if(this.hintLabel)this.hintLabel.string=roundEvidence(result,this.bet);
+      if(this.hintLabel){const next=!api?this.newcomerBenefit():undefined;const evidence=roundEvidence(result,this.bet);this.hintLabel.string=next?newcomerBenefitCaption(next.round)+'\n'+evidence:evidence;}
       this.state={kind:'idle'};this.refreshBalance();this.refreshTopWin();this.autoWait=.8;
     }catch(error){
       this.auto=false;this.updateAuto();console.error(error);
@@ -479,10 +497,11 @@ export class AureliaApp extends Component {
     if(!awards.length)return;
     // A bounded sample avoids a long presentation on hundreds of Ways. The
     // denominator remains the full award count; the final total includes all.
-    const shown=awards.slice(0,3);
+    const benefit=awards.find(w=>w.symbolId==='newcomer-benefit');
+    const shown=benefit&&!awards.slice(0,3).includes(benefit)?[...awards.slice(0,2),benefit]:awards.slice(0,3);
     for(let i=0;i<shown.length;i++){
       this.reels?.highlight(shown[i].positions);
-      if(this.hintLabel)this.hintLabel.string=awardEvidence(this.config,shown[i],i+1,awards.length);
+      if(this.hintLabel)this.hintLabel.string=awardEvidence(this.config,shown[i],awards.indexOf(shown[i])+1,awards.length);
       if(i===0)this.audio.playAward(0);
       await Promise.all([this.countWinAmount(result.baseWin,result.totalWin),this.delay(this.reduced?.35:1.2)]);
     }
@@ -570,7 +589,8 @@ export class AureliaApp extends Component {
       }}).call(()=>{if(label.isValid&&label===this.winLabel)this.writeWinAmount(amount,total);finish();}).start();
     });
   }
-  private async presentWin(amount:number,big:boolean):Promise<void>{
+  private async presentWin(amount:number,big:boolean,welcomeBonus=false):Promise<void>{
+    this.plane?.getComponentInChildren(ThemeFestivity)?.celebrate(winTier(amount/this.bet));
     if(big){
       const stage=box(this.root!,'Treasure celebration',0,0,1080,this.height);this.modal=stage;stage.addComponent(BlockInputEvents);
       // Keep the integrated scene visible, but do not let cabinet readouts and
@@ -582,19 +602,21 @@ export class AureliaApp extends Component {
       try{
         fades.forEach(f=>tween(f.alpha).to(this.reduced?.01:.22,{opacity:0},{easing:'sineInOut'}).start());
         await this.delay(.22);
-        this.audio.play('reward');await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config));
+        this.audio.playWinFanfare(winTier(amount/this.bet));await stage.addComponent(SalonWinStage).setup(this.art,amount,this.height,this.reduced,amount/this.bet,GAME_CONFIGS.indexOf(this.config),welcomeBonus,(cue,progress)=>this.audio.playWinDetail(cue,progress,winTier(amount/this.bet)));
       }finally{
+        this.audio.finishWinPresentation();
         fades.forEach((f,i)=>{if(f.node.isValid)tween(f.alpha).to(this.reduced?.01:.3,{opacity:prior[i]},{easing:'sineInOut'}).start();});
         if(this.modal===stage)this.closeModal();
       }
     }else{
-      if(amount>this.presentedWin)this.audio.playAward(0);
+      if(amount>this.presentedWin)this.audio.playSmallWinJingle();
       const stage=box(this.content!,'Ordinary win presentation',0,0,1080,this.height);
       const hidden=[this.hintLabel?.node,this.content?.getChildByName('Award hint material')].filter((n):n is Node=>!!n&&n.active);
       hidden.forEach(n=>n.active=false);
       try{
         await Promise.all([this.countWinAmount(amount),stage.addComponent(OrdinaryWinStage).setup(this.art,amount,Safe.visibleHeight,this.reduced,this.bet,{y:-Safe.visibleHeight/2+88+Safe.safeBottom,width:980})]);
       }finally{
+        this.audio.finishWinPresentation();
         if(stage.isValid)stage.destroy();
         hidden.forEach(n=>{if(n.isValid)n.active=true;});
       }

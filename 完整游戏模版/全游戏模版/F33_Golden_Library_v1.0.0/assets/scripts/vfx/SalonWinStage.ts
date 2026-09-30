@@ -1,3 +1,4 @@
+import type { WinSoundCue } from '../audio/AudioManager';
 import {celebrationCaption, winTier} from './WinPresentation';
 import {tr} from '../ui/Language';
 import { _decorator, Color, Component, EventTouch, Graphics, Label, Node, tween, UIOpacity, Vec3 } from 'cc';
@@ -16,8 +17,9 @@ export class SalonWinStage extends Component {
   private count!:Label; private hint!:Label; private group!:Node; private veil!:UIOpacity;
   private rays!:Node; private halo!:Node; private done?:()=>void; private reduced=false;
   private superCrown?:Node; private superSparks:Node[]=[]; private titleSweep?:UIOpacity;
-  public setup(art:SalonArt, amount:number, height:number, reduced:boolean,multiplier=20,theme=0,welcomeBonus=false):Promise<void> {
-    this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=Math.max(0,winTier(multiplier)-1);
+  private onSound?:(cue:WinSoundCue,progress:number)=>void;
+  public setup(art:SalonArt, amount:number, height:number, reduced:boolean,multiplier=20,theme=0,welcomeBonus=false,onSound?:(cue:WinSoundCue,progress:number)=>void):Promise<void> {
+    this.onSound=onSound;this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=Math.max(0,winTier(multiplier)-1);
     this.countDuration=[3.3,4.2,4.7,5.1][this.tier];this.holdUntil=this.countDuration+2.2;
     const shade=box(this.node,'Warm celebration veil',0,0,1600,height);const dim=shade.addComponent(Graphics);dim.fillColor=new Color(49,24,15,150);dim.rect(-800,-height/2,1600,height);dim.fill();this.shadeAlpha=opacity(shade,255);
     this.group=box(this.node,'Celebration choreography',0,0,1080,1920);
@@ -74,13 +76,13 @@ export class SalonWinStage extends Component {
   }
   private reveal():void {
     if(!this.revealed&&!this.reduced){this.finale.forEach((alpha,i)=>tween(alpha).delay(i*.06).to(.12,{opacity:225}).to(.5,{opacity:0},{easing:'sineOut'}).start());tween(this.count.node).to(.09,{scale:new Vec3(.97,.97,1)},{easing:'sineOut'}).to(.22,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();}
-    this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=tr(formatWinAmount(this.amount));
+    this.revealed=true;this.onSound?.('reveal',1);this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=tr(formatWinAmount(this.amount));
     this.hint.string=tr('Added to your wallet · Tap to continue');
   }
   private advance():void {
     if(this.finished)return;
     if(this.elapsed<this.countDuration){this.reveal();return;}
-    this.finished=true;
+    this.onSound?.('collect',1);this.finished=true;
     tween(this.shadeAlpha).to(this.reduced?.01:.36,{opacity:0},{easing:'sineInOut'}).start();
     tween(this.veil).to(this.reduced?.01:.36,{opacity:0},{easing:'sineInOut'}).call(()=>{this.done?.();this.done=undefined;}).start();
   }
@@ -100,5 +102,5 @@ export class SalonWinStage extends Component {
     // A completed amount is held for at least 2 seconds before auto-dismissal.
     if(this.elapsed>=this.holdUntil)this.advance();
   }
-  protected onDestroy():void {this.done?.();this.done=undefined;}
+  protected onDestroy():void {this.onSound=undefined;this.done?.();this.done=undefined;}
 }

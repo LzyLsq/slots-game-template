@@ -1,0 +1,63 @@
+# F13–F33 主题动态与音频优化
+
+2026-09-30。优化范围与实际验证见 `verification/REPORT.md`。
+
+## 范围
+
+- 本轮：F13、14、15、16、17、18、19、21、22、23、24、25、26、27、28、29、30、31、33，共 19 款。
+- F20 保留上一轮版本，不重写。F32 在本次本地与远端检索中不存在，未创建替代。
+- 18 款 Cocos 的源工程位于 `完整游戏模版/全游戏模版`；F14 使用 `_good` 工程。
+- F26 原本就是 HTML/JavaScript 项目，使用独立 DOM/WebAudio 实现，不伪称重新从 Cocos 转换。
+- 同步了已有的 7 个 OC 壳：F13、14、15、17、18、19、21，位于 `Xcode_H5/F13-F21_20260914`。
+- F26 同步自带 `ios/FortuneTides`。F16 没有对应 OC 壳；本轮没有复制其他游戏的原生壳。
+- F26 在其工程目录运行 `node tools/build.mjs --sync-ios` 可同步完整网页资源到原生包；普通构建只生成 dist，不改原生壳或签名。
+
+## 改动
+
+`ThemeFestivity.ts` 是小型装饰层，不接管游戏状态。星光、灯笼、海浪、纸屑等配色、形状、速度及摆幅按 `profiles.mjs` 分主题配置；保留原有美术和演出。
+
+- Cocos 大厅 28 个装饰节点；柜机 `24 + 2 × 列数` 个，固定池更新，不在每帧新增节点。
+- 共用一张 256×64 RGBA 小图集。动态生成的 SpriteFrame 设为 `packable=false`，避免上传到动态合图时发生 WebGL 类型错误；没有关闭全局动态合图。
+- 按实际转轴开孔布置边缘装饰，不覆盖转轴，也不注册触摸拦截。
+- 响应后台暂停、减少动态效果和销毁清理。
+- F26 使用大厅 22 / 柜机 16 个固定 DOM 装饰节点，独立清理和暂停。
+
+17 款增加 7 段离线编曲 AAC：大厅、柜机、small/big/mega/epic/super。各主题修改旋律、配器与节奏，不仅改变播放速度。约 0.81–0.93 MiB/款，44.1 kHz 双声道 96 kbps。F25/F28 保留原有 AudioSource/音乐，避免两套背景音乐同时播放。
+
+- 16 款 Cocos 共用流式 AudioManager 的生命周期/并发控制；F26 使用独立 HTMLAudio + WebAudio 实现。
+- 背景音乐在实际用户手势后启动；领奖时降低背景音乐音量，结束/跳过后恢复。
+- 停轴按列反馈，点击与中奖反馈保留上限，避免持续累积音频节点或 PCM。
+- OC 本地服务器补充 AAC MIME、Range/HEAD/416 支持和 socket 防 SIGPIPE；原生后台状态传递给 Web 层。
+- DEBUG 媒体冒烟参数仅检测音频能否读取和播放，结束后释放，不自动登录或购买。
+
+本轮没有新增概率、充值、登录、账户或内购业务逻辑。部分较早工作区修改是当前 UI 的依赖，也随对应源码发布；其中已有公开展示的新手奖励机制，不属于本轮新设定。
+
+## 构建与回归
+
+在仓库根目录运行。需要各工程 npm 依赖、Cocos Creator、macOS/Xcode；WebP 工具需要 sharp。脚本默认 Creator 路径为 `/Applications/CocosCreator.app/Contents/MacOS/CocosCreator`。
+
+```sh
+# 仅在需要重新生成音乐或安装优化时运行；先检查当前工作区差异。
+node tools/lively-optimization/compose-music.mjs 13
+node tools/lively-optimization/install.mjs
+node tools/lively-optimization/install-special.mjs
+node tools/lively-optimization/install-tides.mjs
+
+# 构建，可指定编号；不指定则构建本轮全部 18 款 Cocos。
+SHARP_MODULE=/absolute/path/to/node_modules/sharp node tools/lively-optimization/build-all.mjs 13 22
+node tools/lively-optimization/regression.mjs
+node tools/lively-optimization/test-theme.mjs
+node tools/lively-optimization/test-audio.mjs --bundle
+node tools/lively-optimization/verify-native.mjs
+
+# 对独立导出的待发布树验证资源、源码引用与原生构建。
+node tools/lively-optimization/verify-export.mjs /absolute/path/to/exported-tree
+```
+
+WebP 压缩复用 F20 的发布压缩器：只有转换后更小时才替换，校验尺寸/alpha，同步资源引用，并保留必要 PNG。不能据此声称所有图片都是 WebP；F26 仍含原有 PNG/JPEG/SVG 资源。
+
+预览需 HTTP 服务，不能直接双击 `index.html`：`node tools/lively-optimization/preview.mjs` 会输出本地访问地址。F26 的 public/art 按其项目映射预览，不能套用 Cocos 的构建目录。
+
+## 验证边界
+
+构建、固定池/音频回归、浏览器冒烟和模拟器媒体测试不等同于真机帧率、峰值内存、主观试听或 StoreKit Sandbox 验收。本轮不作稳定 60 FPS、内存下降或可直接上架的保证。

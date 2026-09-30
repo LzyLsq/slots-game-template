@@ -20,7 +20,7 @@ const COPY={
 @ccclass('OrdinaryWinStage')
 export class OrdinaryWinStage extends Component {
  private amount=0;private elapsed=0;private reduced=false;private finished=true;
- private group?:Node;private alpha?:UIOpacity;private count?:Label;private gleam?:Node;private spark?:Node;
+ private group?:Node;private alpha?:UIOpacity;private count?:Label;private gleam?:Node;private spark?:Node;private spark2?:Node;private spark3?:Node;
  private done?:()=>void;private locale='en-US';private width=980;private displayed=-1;private baseY=0;
  public setup(art:SalonArt,amount:number,height:number,reduced:boolean,bet=0,placement:OrdinaryWinPlacement={}):Promise<void>{
   this.complete();
@@ -40,6 +40,8 @@ export class OrdinaryWinStage extends Component {
   // Reflection stays within the plate's inner rim; text is drawn on top.
   this.gleam=art.light(plate,1,-this.width*.22,0,this.width*.35,108,0);
   this.spark=art.light(plate,0,this.width*.39,0,66,66,0);
+  this.spark2=art.light(plate,0,-this.width*.39,4,52,52,0);
+  this.spark3=art.light(plate,0,this.width*.05,18,42,42,0);
   const title=stake===0?'award':this.amount<stake?'partial':this.amount===stake?'even':'win';
   const titleLabel=text(plate,phrase(title),0,39,this.width*.80,48,40,COLORS.ink,true);
   this.count=text(plate,'0',0,-22,this.width*.81,73,58,COLORS.ink);
@@ -58,12 +60,16 @@ export class OrdinaryWinStage extends Component {
   const t=this.elapsed;
   if(!this.reduced){
    const p=Math.min(1,t/.34),q=p-1,settle=1+2.2*q*q*q+1.2*q*q;
-   const scale=.965+.035*settle;this.group.setScale(scale,scale,1);
+   const pulse=t>.34?1+Math.sin(Math.min(1,(t-.34)/1.25)*Math.PI)*.018:1;
+   const scale=(.965+.035*settle)*pulse;this.group.setScale(scale,scale,1);
    this.group.setPosition(0,this.baseY-5*(1-p)*(1-p));
    this.setCount(t>=.72?this.amount:Math.floor(this.amount*(1-Math.pow(1-t/.72,3))));
    const sweep=Math.max(0,Math.min(1,(t-.18)/1.05));
    if(this.gleam){this.gleam.setPosition(this.width*(-.22+.44*sweep),0);opacity(this.gleam,Math.round(Math.sin(sweep*Math.PI)*44));}
-   if(this.spark)opacity(this.spark,Math.round(Math.pow(Math.max(0,Math.sin(Math.min(1,t/1.1)*Math.PI)),4)*68));
+   const glow=Math.pow(Math.max(0,Math.sin(Math.min(1,t/1.1)*Math.PI)),4);
+   if(this.spark)opacity(this.spark,Math.round(glow*110));
+   if(this.spark2){const p=Math.max(0,Math.min(1,(t-.12)/.95));this.spark2.setPosition(-this.width*(.39-.22*p),4+Math.sin(p*Math.PI)*18);opacity(this.spark2,Math.round(Math.pow(Math.sin(p*Math.PI),2)*92));}
+   if(this.spark3){const p=Math.max(0,Math.min(1,(t-.28)/.82));this.spark3.setScale(1+.55*Math.sin(p*Math.PI),1+.55*Math.sin(p*Math.PI),1);opacity(this.spark3,Math.round(Math.pow(Math.sin(p*Math.PI),3)*100));}
   }
   const enter=this.reduced?1:Math.min(1,t/.14),leave=Math.max(0,Math.min(1,(1.85-t)/.22));
   this.alpha.opacity=Math.round(255*enter*leave);
@@ -72,7 +78,7 @@ export class OrdinaryWinStage extends Component {
  private complete():void{
   this.finished=true;
   if(this.group?.isValid)this.group.destroy();
-  this.group=undefined;this.alpha=undefined;this.count=undefined;this.gleam=undefined;this.spark=undefined;
+  this.group=undefined;this.alpha=undefined;this.count=undefined;this.gleam=undefined;this.spark=undefined;this.spark2=undefined;this.spark3=undefined;
   const done=this.done;this.done=undefined;done?.();
  }
  protected onDestroy():void{this.complete();}

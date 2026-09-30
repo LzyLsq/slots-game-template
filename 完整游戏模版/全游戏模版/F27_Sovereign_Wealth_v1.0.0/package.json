@@ -1,0 +1,13 @@
+{
+  "name": "f27-sovereign-wealth-cocos",
+  "uuid": "0d5bea30-e770-46b0-8c44-2255d3fb6f27",
+  "version": "1.0.0",
+  "description": "F27 Sovereign Wealth — native Cocos Creator 3.8.8 slot game",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "node --test tests-native/*.test.mjs",
+    "audit": "node tools-native/audit.mjs"
+  }
+}
