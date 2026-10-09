@@ -1,0 +1,43 @@
+[
+  {
+    "id": "caravan-gold",
+    "core": "lines",
+    "feature": "travelling-wild",
+    "samples": 6000,
+    "features": 660,
+    "motions": [
+      "move"
+    ]
+  },
+  {
+    "id": "sapphire-oasis",
+    "core": "ways",
+    "feature": "sticky-free",
+    "samples": 6000,
+    "features": 221,
+    "motions": [
+      "respin"
+    ]
+  },
+  {
+    "id": "ruby-bazaar",
+    "core": "lines",
+    "feature": "mystery-free",
+    "samples": 6000,
+    "features": 211,
+    "motions": [
+      "respin",
+      "transform"
+    ]
+  },
+  {
+    "id": "crown-voyage",
+    "core": "clusters",
+    "feature": "cluster-bomb",
+    "samples": 6000,
+    "features": 3214,
+    "motions": [
+      "drop"
+    ]
+  }
+]
