@@ -1,3 +1,4 @@
+import { ThemeMotion } from './vfx/ThemeMotion';
 import { ThemeFestivity } from './vfx/ThemeFestivity';
 import { _decorator, Component, Node, Canvas, Camera, UITransform, Layers, view, ResolutionPolicy, resources,
   SpriteFrame, Texture2D, Rect, Color, Label, Graphics, UIOpacity, tween, Tween, Vec3, sys, game, Game, EditBox, Sprite, AudioClip, AudioSource, EffectAsset, JsonAsset } from 'cc';
@@ -209,6 +210,7 @@ export class RegattaApp extends Component {
       if (this.loadingView) this.loadingView.target = Math.max(this.loadingView.target, count / total);
     };
     try {
+      await ThemeMotion.prepare();
       configureControlLustre(await new Promise<EffectAsset>((resolve, reject) => resources.load('effects/control-lustre', EffectAsset, (e, effect) => e ? reject(e) : resolve(effect))));
       report();
       for (const key of coreKeys) {
@@ -554,7 +556,9 @@ export class RegattaApp extends Component {
   private background(parent: Node, key: string): Node {
     const f = this.f(key), ratio = f.originalSize.width / f.originalSize.height;
     const h = Math.max(this.height, this.width / ratio), w = h * ratio;
-    return image(parent, f, 0, 0, w, h, 'Continuous scene');
+    const n = image(parent, f, 0, 0, w, h, 'Continuous scene');
+    ThemeMotion.attach(n.getComponent(Sprite)!,key);
+    return n;
   }
   private safe(action: () => void): void { try { action(); } catch (e) { this.dialog('Action not completed', e instanceof Error ? e.message : String(e)); } }
   private action(parent: Node, caption: string, x: number, y: number, w: number, h: number, callback: () => void, color = 'control-log', enabled: () => boolean = () => true, face: ControlFace = {}): Node {

@@ -1,3 +1,4 @@
+import { ThemeMotion } from '../vfx/ThemeMotion';
 import {TextFit} from './TextFit';
 import {tr,language} from './Language';
 import { Color, EventTouch, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
@@ -7,6 +8,7 @@ export class SalonArt {
   private textures = new Map<string, Texture2D>();
   private frames = new Map<string, SpriteFrame>();
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
+    await ThemeMotion.prepare();
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
@@ -65,6 +67,7 @@ export class SalonArt {
       w = frame.rect.width * scale; h = frame.rect.height * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
+    ThemeMotion.attach(s,name,index);
     if(name==='canopy-destinations'&&index===0){
       // Theme ornaments share the card transform in the hall and loading view.
       this.image(n,'symbols',0,h*.403,w*.205,h*.205,13).name='Solar crown crest';

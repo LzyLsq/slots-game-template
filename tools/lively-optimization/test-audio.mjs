@@ -19,7 +19,10 @@ for(const p of profiles.filter(p=>![25,26,28].includes(p.id)&&(!ids.length||ids.
  const context=vm.createContext(sandbox);vm.runInContext(test,context,{filename:'audio-lifecycle-regression.js'});await context.testDone;
  const resource=join(project,bundle?'build/web-mobile/audio':'build-templates/web-mobile/audio'),manifest=JSON.parse(readFileSync(join(resource,'music-manifest.json'),'utf8'));
  assert.equal(manifest.tracks.length,7);assert.equal(new Set(manifest.tracks.map(t=>t.sha256)).size,7);assert.equal(new Set(manifest.tracks.map(t=>t.scoreSha256)).size,7);
- for(const t of manifest.tracks){const bytes=readFileSync(join(resource,t.file));assert.equal(bytes.length,t.bytes);assert.equal(bytes.toString('ascii',4,8),'ftyp');assert.equal(createHash('sha256').update(bytes).digest('hex'),t.sha256);assert(t.rms>.035&&t.rms<.2&&t.peak<=.8);assert(t.loop?t.duration>=15:t.duration<7);assert(t.programs.length>=3&&t.notes>=8);}
- assert(manifest.tracks.reduce((n,t)=>n+t.bytes,0)<1.1*1024*1024);
+ assert.equal(manifest.render,'warm-v2-low-air-5200Hz');
+ // Fast 12-bar scores can be shorter than 12 seconds; the budget is 10–50s.
+ for(const t of manifest.tracks){const bytes=readFileSync(join(resource,t.file));assert.equal(bytes.length,t.bytes);assert.equal(bytes.toString('ascii',4,8),'ftyp');assert.equal(createHash('sha256').update(bytes).digest('hex'),t.sha256);assert(t.rms>.035&&t.rms<.2&&t.peak<=.8);assert(t.loop?t.duration>=10&&t.duration<=50:t.duration<16);assert(t.programs.length>=3&&t.notes>=8);}
+ // Up to 16 bars of independent 96kbps music + five theme-specific award cues.
+ assert(manifest.tracks.reduce((n,t)=>n+t.bytes,0)<1.6*1024*1024);
  console.log(`F${p.id} PASS ${bundle?'release bundle':'source'} audio lifecycle, mute/skip/background, bounded voices/PCM, duck/restore, 7 verified recordings`);
 }

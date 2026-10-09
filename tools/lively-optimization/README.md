@@ -1,6 +1,6 @@
 # F13–F33 主题动态与音频优化
 
-2026-09-30。优化范围与实际验证见 `verification/REPORT.md`。
+2026-10-09 更新。最新验证见 `verification/REPORT_20261009.md`；`verification/REPORT.md` 保留 2026-09-30 的历史记录，不代表当前版本的验收结果。
 
 ## 范围
 
@@ -22,7 +22,11 @@
 - 响应后台暂停、减少动态效果和销毁清理。
 - F26 使用大厅 22 / 柜机 16 个固定 DOM 装饰节点，独立清理和暂停。
 
-17 款增加 7 段离线编曲 AAC：大厅、柜机、small/big/mega/epic/super。各主题修改旋律、配器与节奏，不仅改变播放速度。约 0.81–0.93 MiB/款，44.1 kHz 双声道 96 kbps。F25/F28 保留原有 AudioSource/音乐，避免两套背景音乐同时播放。
+17 款各有 7 段独立离线编曲 AAC：大厅、柜机、small/big/mega/epic/super。各主题使用不同旋律、配器与节拍，不仅改变播放速度。最新每款约 564–1434 KiB，44.1 kHz 双声道 96 kbps。`warm-v2-low-air-5200Hz` 渲染降低部分旋律音区，并使用高频搁架和低通控制刺耳高频；点击、停轴和中奖合成提示也降低音区。
+
+F25/F28 保留原有编曲和 AudioSource，对原 WAV 进行暖化处理，不改变路径、通道数或时长。`audio-originals` 只存放工具的原始备份，不进入游戏资源或 App；重复执行从原始备份处理，避免反复滤波。
+
+`ThemeMotion.ts` 在同一张图内做局部 UV 形变，为已有吉祥物、主题船只或宝物添加轻微摆动，不抠图、不叠加复制层。区域按原图分别配置，最多四个，底部固定并柔和衰减，尽量避开标题与转轴。每个 Sprite 复用一个材质，后台/减少动态时暂停，加载失败静态降级。已有自定义修复 shader 优先；F25 柜机显式组合原灯光材质，保留金属反射和帷幕效果。F27 保留原有主题宝物动态，F26 使用 DOM 装饰；不能将这两款称为新增动物骨骼动画。
 
 - 16 款 Cocos 共用流式 AudioManager 的生命周期/并发控制；F26 使用独立 HTMLAudio + WebAudio 实现。
 - 背景音乐在实际用户手势后启动；领奖时降低背景音乐音量，结束/跳过后恢复。
@@ -30,7 +34,7 @@
 - OC 本地服务器补充 AAC MIME、Range/HEAD/416 支持和 socket 防 SIGPIPE；原生后台状态传递给 Web 层。
 - DEBUG 媒体冒烟参数仅检测音频能否读取和播放，结束后释放，不自动登录或购买。
 
-本轮没有新增概率、充值、登录、账户或内购业务逻辑。部分较早工作区修改是当前 UI 的依赖，也随对应源码发布；其中已有公开展示的新手奖励机制，不属于本轮新设定。
+本次更新没有新增或修改概率、结算、充值、登录、账户或内购业务逻辑。发布从远端既有版本建立独立暂存树，只加入本次白名单文件，不覆盖其他工作区修改或原生签名配置。
 
 ## 构建与回归
 
@@ -42,11 +46,15 @@ node tools/lively-optimization/compose-music.mjs 13
 node tools/lively-optimization/install.mjs
 node tools/lively-optimization/install-special.mjs
 node tools/lively-optimization/install-tides.mjs
+node tools/lively-optimization/install-motion.mjs
+node tools/lively-optimization/warm-original-audio.mjs
 
 # 构建，可指定编号；不指定则构建本轮全部 18 款 Cocos。
 SHARP_MODULE=/absolute/path/to/node_modules/sharp node tools/lively-optimization/build-all.mjs 13 22
 node tools/lively-optimization/regression.mjs
 node tools/lively-optimization/test-theme.mjs
+node tools/lively-optimization/test-motion.mjs
+node tools/lively-optimization/test-warmth.mjs
 node tools/lively-optimization/test-audio.mjs --bundle
 node tools/lively-optimization/verify-native.mjs
 
@@ -56,7 +64,7 @@ node tools/lively-optimization/verify-export.mjs /absolute/path/to/exported-tree
 
 WebP 压缩复用 F20 的发布压缩器：只有转换后更小时才替换，校验尺寸/alpha，同步资源引用，并保留必要 PNG。不能据此声称所有图片都是 WebP；F26 仍含原有 PNG/JPEG/SVG 资源。
 
-预览需 HTTP 服务，不能直接双击 `index.html`：`node tools/lively-optimization/preview.mjs` 会输出本地访问地址。F26 的 public/art 按其项目映射预览，不能套用 Cocos 的构建目录。
+预览需 HTTP 服务，不能直接双击 `index.html`：`node tools/lively-optimization/preview-all.mjs` 会输出 20 款（含未改动的 F20）的统一切换入口，各游戏使用独立 origin。大厅/柜机选择从当前源码读取实际 ID，F25/F26/F27 走原有正常入口，年龄确认由用户本人操作。F26 需要先生成 dist。`preview.mjs` 是另一种按源资源映射的预览方式，不应将其当作完整 release 验证。
 
 ## 验证边界
 

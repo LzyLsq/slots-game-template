@@ -1,3 +1,4 @@
+import { ThemeMotion } from '../vfx/ThemeMotion';
 import {TextFit} from './TextFit';
 import {tr,language} from './Language';
 import { Color, EffectAsset, EventTouch, gfx, Graphics, Label, LabelOutline, Layers, Mask, Material, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec2, Vec3, Vec4 } from 'cc';
@@ -12,6 +13,7 @@ export class SalonArt {
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
     if(!this.roomFeather)this.roomFeather=await new Promise<EffectAsset>((resolve,reject)=>resources.load('effects/atelier-room-feather',EffectAsset,(error,asset)=>error?reject(error):resolve(asset)));
     if(!this.glassRepair)this.glassRepair=await new Promise<EffectAsset>((resolve,reject)=>resources.load('effects/atelier-glass-repair',EffectAsset,(error,asset)=>error?reject(error):resolve(asset)));
+    await ThemeMotion.prepare();
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
@@ -112,6 +114,7 @@ export class SalonArt {
       w = fw * scale; h = fh * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
+    ThemeMotion.attach(s,name,index);
     return n;
   }
   /** Keep the existing painted room, feathering its outer pixels into the cabinet. */

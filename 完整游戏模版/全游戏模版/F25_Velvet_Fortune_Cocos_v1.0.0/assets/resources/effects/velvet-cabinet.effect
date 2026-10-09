@@ -19,6 +19,16 @@ CCEffect %{
         alphaThreshold: { value: 0.5 }
         cabinet: { value: [0.0, 0.32, 0.0, 0.0] }
         response: { value: [0.0, 0.0, 0.0, 0.0] }
+        frameUV: { value: [0, 0, 1, 1] }
+        motionClock: { value: [0, 0, 1, 0] }
+        region0: { value: [0, 0, 0, 0] }
+        region1: { value: [0, 0, 0, 0] }
+        region2: { value: [0, 0, 0, 0] }
+        region3: { value: [0, 0, 0, 0] }
+        pose0: { value: [0, 0, 0, 0] }
+        pose1: { value: [0, 0, 0, 0] }
+        pose2: { value: [0, 0, 0, 0] }
+        pose3: { value: [0, 0, 0, 0] }
 }%
 
 CCProgram sprite-vs %{
@@ -77,12 +87,32 @@ CCProgram sprite-fs %{
     layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
   #endif
 
+  uniform PaintedMotion {
+    vec4 frameUV;
+    vec4 motionClock;
+    vec4 region0;vec4 region1;vec4 region2;vec4 region3;
+    vec4 pose0;vec4 pose1;vec4 pose2;vec4 pose3;
+  };
+  vec2 drift(vec2 uv,vec4 r,vec4 pose) {
+    if(r.z<=0.0||r.w<=0.0)return vec2(0);
+    vec2 d=abs(uv-r.xy)/r.zw;
+    float weight=(1.0-smoothstep(0.68,1.0,d.x))*(1.0-smoothstep(0.64,1.0,d.y));
+    float aspect=max(0.1,motionClock.z);
+    vec2 pivot=r.xy+vec2(0,r.w*0.54);
+    vec2 v=(uv-pivot)*vec2(aspect,1);
+    vec2 delta=vec2(pose.y*v.x-pose.x*v.y,pose.x*v.x+pose.y*v.y)/vec2(aspect,1);
+    delta.y-=pose.z;
+    return delta*weight*motionClock.y;
+  }
+
   vec4 frag () {
     vec4 o = vec4(1, 1, 1, 1);
 
     #if USE_TEXTURE
-      // Only the upper side drapery breathes; the character, screen and controls stay anchored.
-      vec2 sampleUV = uv0;
+      // Only the upper side drapery breathes; character motion is localized above the anchored screen and controls.
+      vec2 local=(uv0-frameUV.xy)/frameUV.zw;
+      vec2 moved=local+drift(local,region0,pose0)+drift(local,region1,pose1)+drift(local,region2,pose2)+drift(local,region3,pose3);
+      vec2 sampleUV=frameUV.xy+clamp(moved,vec2(0.0001),vec2(0.9999))*frameUV.zw;
       vec4 original = CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
       float velvet = smoothstep(0.10, 0.28, original.r - original.g) * (1.0 - smoothstep(0.32, 0.55, original.g));
       float upper = smoothstep(0.025, 0.07, uv0.y) * (1.0 - smoothstep(0.23, 0.32, uv0.y));

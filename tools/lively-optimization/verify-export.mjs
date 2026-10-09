@@ -26,8 +26,11 @@ function entryReferences(web,id){
 }
 function manifest(dir){const m=JSON.parse(readFileSync(join(dir,'music-manifest.json'),'utf8'));assert.equal(m.tracks.length,7);for(const t of m.tracks){const b=readFileSync(join(dir,t.file));assert.equal(b.length,t.bytes);assert.equal(createHash('sha256').update(b).digest('hex'),t.sha256);}return m.tracks.reduce((n,t)=>n+t.bytes,0);}
 for(const p of profiles){
-  const src=project(p);let imports=0,audioBytes=null;
+  const src=project(p),localSource=project(p,localBase);let imports=0,audioBytes=null;
   if(p.id!==26){
+    // A release built from one source set must not be published with another.
+    // Compare scripts individually, including files untracked by the old local HEAD.
+    for(const f of files(join(localSource,'assets/scripts')).filter(f=>/\.ts(?:\.meta)?$/.test(f)))same(f,join(src,f.slice(localSource.length+1)));
     const scenes=files(join(src,'assets/scenes')).filter(f=>f.endsWith('.scene'));assert(scenes.length>0);
     for(const f of scenes){assert(JSON.parse(readFileSync(f+'.meta','utf8')).uuid);JSON.parse(readFileSync(f,'utf8'));}
     for(const f of files(join(src,'assets/scripts')).filter(f=>f.endsWith('.ts'))){
@@ -37,6 +40,12 @@ for(const p of profiles){
       }
     }
     const theme=join(src,'assets/scripts/vfx/ThemeFestivity.ts');assert(existsSync(theme));assert(JSON.parse(readFileSync(theme+'.meta','utf8')).uuid);
+    if(p.id!==27){
+      for(const sub of ['assets/scripts/vfx/ThemeMotion.ts','assets/scripts/vfx/ThemeMotionRegions.ts','assets/resources/effects/theme-motion.effect']){
+        const f=join(src,sub);same(join(localSource,sub),f);assert(JSON.parse(readFileSync(f+'.meta','utf8')).uuid);
+      }
+    }
+    if([25,28].includes(p.id))for(const f of files(join(localSource,'assets/resources/audio')).filter(f=>f.endsWith('.wav')))same(f,join(src,f.slice(localSource.length+1)));
     if(![25,28].includes(p.id))audioBytes=manifest(join(src,'build-templates/web-mobile/audio'));
     if(p.id===29){
       const app=readFileSync(join(src,'assets/scripts/ui/AureliaApp.ts'),'utf8'),preload=app.slice(app.indexOf('await this.art.load('),app.indexOf('const resumed='));
@@ -44,6 +53,8 @@ for(const p of profiles){
     }
   }else{
     audioBytes=manifest(join(src,'audio'));
+    for(const f of files(join(localSource,'src')))same(f,join(src,f.slice(localSource.length+1)));
+    for(const f of files(join(localSource,'audio')))same(f,join(src,f.slice(localSource.length+1)));
     for(const f of files(join(src,'src')))same(f,join(src,'ios/FortuneTides/Web/src',f.slice(join(src,'src').length+1)));
     for(const f of files(join(src,'audio')))same(f,join(src,'ios/FortuneTides/Web/audio',f.slice(join(src,'audio').length+1)));
     for(const f of files(join(src,'public/art')))same(f,join(src,'ios/FortuneTides/Web/art',f.slice(join(src,'public/art').length+1)));

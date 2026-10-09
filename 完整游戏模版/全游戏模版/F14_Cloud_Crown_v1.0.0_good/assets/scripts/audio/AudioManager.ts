@@ -75,30 +75,32 @@ export class AudioManager extends Component {
       return;
     }
     const notes: Record<Exclude<Cue, 'spin' | 'reel-stop'>, readonly [number, number, OscillatorType, number][]> = {
-      tap: [[1046.5, .065, 'sine', 0], [1567.98, .075, 'sine', .024]],
-      back: [[783.99, .085, 'triangle', 0], [523.25, .13, 'sine', .055]],
-      select: [[659.25, .08, 'triangle', 0], [1046.5, .13, 'sine', .065]],
-      'bet-up': [[880, .07, 'sine', 0], [1174.66, .095, 'sine', .045]],
-      'bet-down': [[880, .07, 'sine', 0], [659.25, .095, 'sine', .045]],
-      win: [[523.25, .14, 'triangle', 0], [659.25, .16, 'triangle', .10], [783.99, .30, 'sine', .20]],
-      reward: [[659.25, .14, 'triangle', 0], [783.99, .18, 'triangle', .095], [1046.5, .36, 'sine', .19]],
+      // Keep UI feedback in a warm middle register; avoid piercing 1–2 kHz
+      // peaks on phone speakers while retaining clear pitch identity.
+      tap: [[783.99, .065, 'triangle', 0], [1174.66, .075, 'triangle', .024]],
+      back: [[659.25, .085, 'triangle', 0], [440, .13, 'sine', .055]],
+      select: [[587.33, .08, 'triangle', 0], [880, .13, 'sine', .065]],
+      'bet-up': [[659.25, .07, 'triangle', 0], [880, .095, 'sine', .045]],
+      'bet-down': [[659.25, .07, 'triangle', 0], [493.88, .095, 'sine', .045]],
+      win: [[440, .14, 'triangle', 0], [554.37, .16, 'triangle', .10], [659.25, .30, 'sine', .20]],
+      reward: [[554.37, .14, 'triangle', 0], [659.25, .18, 'triangle', .095], [880, .36, 'sine', .19]],
     };
     notes[cue].forEach(([f, duration, type, delay], i) => this.tone(f, duration, type, delay, cue === 'tap' ? (i ? .026 : .05) : .04));
   }
 
   public playReelStop(column = 0): void {
     if (!this.effectsEnabled || this.hidden || this.disposed) return;
-    const pitches = [523.25, 659.25, 783.99, 880, 1046.5, 1174.66];
+    const pitches = [392, 493.88, 587.33, 659.25, 739.99, 830.61];
     const f = pitches[Math.max(0, Math.min(pitches.length - 1, Math.floor(column)))];
     this.tone(f, .105, 'triangle', 0, .037);
-    this.tone(f * 2, .085, 'sine', .018, .009);
+    this.tone(f * 1.5, .085, 'sine', .018, .009);
   }
 
   /** Only paid feature rounds receive award cues, never silent misses. */
   public playAward(step = 0): void {
     if (!this.effectsEnabled) return;
     const pitch = [1, 1.05946, 1.12246, 1.18921, 1.25992][Math.max(0, Math.min(4, Math.floor(step)))];
-    for (const [f, duration, delay] of [[523.25, .10, 0], [659.25, .12, .065], [783.99, .19, .13]]) this.tone(f * pitch, duration, 'triangle', delay, .028);
+    for (const [f, duration, delay] of [[440, .10, 0], [554.37, .12, .065], [659.25, .19, .13]]) this.tone(f * pitch, duration, 'triangle', delay, .028);
   }
 
   public playSmallWinJingle(): void {
@@ -245,7 +247,7 @@ export class AudioManager extends Component {
     }
     const source = context.createBufferSource(), filter = context.createBiquadFilter(), envelope = context.createGain();
     const duration = kind === 'shaker' ? .035 : .085;
-    source.buffer = this.noise; filter.type = 'highpass'; filter.frequency.value = kind === 'shaker' ? 5200 : 2200; filter.Q.value = .55;
+    source.buffer = this.noise; filter.type = 'highpass'; filter.frequency.value = kind === 'shaker' ? 2800 : 1500; filter.Q.value = .45;
     envelope.gain.setValueAtTime(.0001, start); envelope.gain.linearRampToValueAtTime(volume, start + .003);
     envelope.gain.exponentialRampToValueAtTime(.0001, start + duration);
     source.connect(filter).connect(envelope).connect(target); this.track(source, [filter, envelope], pool, pool === this.winDetailVoices ? 24 : 72);

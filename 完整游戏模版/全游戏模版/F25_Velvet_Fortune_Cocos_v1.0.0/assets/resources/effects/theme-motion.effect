@@ -1,0 +1,96 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: motion-vs:vert
+      frag: motion-fs:frag
+      depthStencilState: { depthTest: false, depthWrite: false }
+      blendState:
+        targets:
+        - { blend: true, blendSrc: src_alpha, blendDst: one_minus_src_alpha, blendDstAlpha: one_minus_src_alpha }
+      rasterizerState: { cullMode: none }
+      properties:
+        alphaThreshold: { value: 0.5 }
+        frameUV: { value: [0, 0, 1, 1] }
+        motionClock: { value: [0, 0, 1, 0] }
+        region0: { value: [0, 0, 0, 0] }
+        region1: { value: [0, 0, 0, 0] }
+        region2: { value: [0, 0, 0, 0] }
+        region3: { value: [0, 0, 0, 0] }
+        pose0: { value: [0, 0, 0, 0] }
+        pose1: { value: [0, 0, 0, 0] }
+        pose2: { value: [0, 0, 0, 0] }
+        pose3: { value: [0, 0, 0, 0] }
+}%
+CCProgram motion-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec2 uv0;
+  out vec4 color;
+  vec4 vert () {
+    vec4 pos=vec4(a_position,1);
+    #if USE_LOCAL
+      pos=cc_matWorld*pos;
+    #endif
+    #if USE_PIXEL_ALIGNMENT
+      pos=cc_matView*pos;pos.xyz=floor(pos.xyz);pos=cc_matProj*pos;
+    #else
+      pos=cc_matViewProj*pos;
+    #endif
+    uv0=a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color=a_color;return pos;
+  }
+}%
+CCProgram motion-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  in vec4 color;
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+  #endif
+  uniform PaintedMotion {
+    vec4 frameUV;
+    vec4 motionClock;
+    vec4 region0;vec4 region1;vec4 region2;vec4 region3;
+    vec4 pose0;vec4 pose1;vec4 pose2;vec4 pose3;
+  };
+  vec2 drift(vec2 uv,vec4 r,vec4 pose) {
+    if(r.z<=0.0||r.w<=0.0)return vec2(0);
+    vec2 d=abs(uv-r.xy)/r.zw;
+    float weight=(1.0-smoothstep(0.68,1.0,d.x))*(1.0-smoothstep(0.64,1.0,d.y));
+    float aspect=max(0.1,motionClock.z);
+    vec2 pivot=r.xy+vec2(0,r.w*0.54);
+    vec2 v=(uv-pivot)*vec2(aspect,1);
+    vec2 delta=vec2(pose.y*v.x-pose.x*v.y,pose.x*v.x+pose.y*v.y)/vec2(aspect,1);
+    delta.y-=pose.z;
+    return delta*weight*motionClock.y;
+  }
+  vec4 frag () {
+    vec4 o=vec4(1);
+    #if USE_TEXTURE
+      vec2 local=(uv0-frameUV.xy)/frameUV.zw;
+      vec2 moved=local+drift(local,region0,pose0)+drift(local,region1,pose1)+drift(local,region2,pose2)+drift(local,region3,pose3);
+      // Clamp to this frame, never into neighbouring symbols in an atlas.
+      vec2 sampleUV=frameUV.xy+clamp(moved,vec2(0.0001),vec2(0.9999))*frameUV.zw;
+      o*=CCSampleWithAlphaSeparated(cc_spriteTexture,sampleUV);
+      #if IS_GRAY
+        o.rgb=vec3(dot(o.rgb,vec3(0.2126,0.7152,0.0722)));
+      #endif
+    #endif
+    o*=color;ALPHA_TEST(o);return o;
+  }
+}%
