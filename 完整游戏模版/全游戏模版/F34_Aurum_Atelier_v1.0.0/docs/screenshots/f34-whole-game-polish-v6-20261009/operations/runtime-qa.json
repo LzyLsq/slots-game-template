@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-09T05:12:26.817Z",
+  "scope": "Disposable Cocos preview contexts; real touch and EditBox input. Loading failures are injected only in the test page. No user save touched.",
+  "checks": [
+    {
+      "name": "All five service navigation buttons",
+      "passed": true
+    },
+    {
+      "name": "Rapid forward/reverse destination buttons and all four choices",
+      "passed": true
+    },
+    {
+      "name": "Bidirectional repeated touch swipes",
+      "passed": true
+    },
+    {
+      "name": "Daily check-in credits exactly once",
+      "passed": true
+    },
+    {
+      "name": "Daily gift credits exactly once",
+      "passed": true
+    },
+    {
+      "name": "Individual mailbox attachment and repeated collect",
+      "passed": true
+    },
+    {
+      "name": "Collect-all mail and clear-read retain single credit",
+      "passed": true
+    },
+    {
+      "name": "Unavailable four purchases and restore do not grant coins",
+      "passed": true
+    },
+    {
+      "name": "Portrait choice persists after returning",
+      "passed": true
+    },
+    {
+      "name": "Nickname rejects too-short input and saves full 18 characters",
+      "passed": true
+    },
+    {
+      "name": "History and rapidly repeated close/reopen leave no input shield",
+      "passed": true
+    },
+    {
+      "name": "Privacy paging and return",
+      "passed": true
+    },
+    {
+      "name": "Apple unavailable state and invalid local sign-in",
+      "passed": true
+    },
+    {
+      "name": "Actual local registration input, eligibility and account creation",
+      "passed": true
+    },
+    {
+      "name": "Sign-out and sign-in retain saved account",
+      "passed": true
+    },
+    {
+      "name": "Guest eligibility enters a truthful guest profile",
+      "passed": true
+    },
+    {
+      "name": "Mode loading failure, retry, failure return and repeated entry",
+      "passed": true
+    },
+    {
+      "name": "Delete guest only in disposable context",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

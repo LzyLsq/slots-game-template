@@ -1,0 +1,49 @@
+export const FEATURE_PROFILES:Record<string,{feature:string;title:string;steps:number;notes:readonly string[]}>={
+  "golden-hour": {
+    "feature": "coin-vault",
+    "title": "MINT RESERVE",
+    "steps": 3,
+    "notes": [
+      "Three or more minting dies start the Mint Reserve.",
+      "The dies hold in place for three respins. New dies reset the counter to three; each collected die receives a virtual coin value and the total pays once after the feature.",
+      "Bonus rounds require no additional bet. The round win limit applies to the combined base and bonus awards."
+    ]
+  },
+  "jade-treasury": {
+    "feature": "mystery-cross",
+    "title": "FACET CROSS",
+    "steps": 1,
+    "notes": [
+      "A WILD sapphire starts the Facet Cross.",
+      "The WILD’s row and reel become WILD for one transform. Re-evaluate the 243 active ways and pay only any increase over the original board award.",
+      "Bonus rounds require no additional bet. The round win limit applies to the combined base and bonus awards."
+    ]
+  },
+  "pearl-palace": {
+    "feature": "free-count-cascade",
+    "title": "PEARL FREE TUMBLES",
+    "steps": 5,
+    "notes": [
+      "Three or more Scatters start five free spins with changing-way wins.",
+      "Each spin starts at 1x. Winning symbols clear and survivors fall; up to three extra drops pay at 2x, 3x and 4x. A losing board ends that spin; the next spin resets to 1x. Free spins cannot retrigger.",
+      "Bonus rounds require no additional bet. The round win limit applies to the combined base and bonus awards."
+    ]
+  },
+  "ruby-revel": {
+    "feature": "reel-expand",
+    "title": "CROWN CASTING",
+    "steps": 1,
+    "notes": [
+      "A WILD crown starts the Crown Casting.",
+      "Each reel containing a WILD crown becomes fully WILD for one transform. Count all qualifying 8+ symbol totals again, paying only the increase over the base award.",
+      "Bonus rounds require no additional bet. The round win limit applies to the combined base and bonus awards."
+    ]
+  }
+};
+export function makeLines(columns:number,rows:number,count:number):number[][]{
+ const result:number[][]=[];const add=(line:number[])=>{if(!result.some(r=>r.join(',')===line.join(',')))result.push(line);};
+ add(Array(columns).fill(Math.floor(rows/2)));for(let y=0;y<rows;y++)add(Array(columns).fill(y));
+ add(Array.from({length:columns},(_,x)=>x%rows));add(Array.from({length:columns},(_,x)=>rows-1-x%rows));
+ for(let k=0;result.length<count&&k<rows**columns;k++){let value=k;add(Array.from({length:columns},()=>{const y=value%rows;value=Math.floor(value/rows);return y;}));}
+ return result.slice(0,count);
+}
