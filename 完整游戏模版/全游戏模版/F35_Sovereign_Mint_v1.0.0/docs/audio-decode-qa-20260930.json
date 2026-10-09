@@ -1,0 +1,425 @@
+{
+  "date": "2026-09-30",
+  "test": "59 actual AAC files decoded by afconvert, stereo/44100Hz, duration, non-silence, peak headroom, loop seam and unique payload checks. This is technical QA, not speaker listening.",
+  "tracks": [
+    {
+      "name": "music-lobby",
+      "decodedSeconds": 46.82927,
+      "rmsDb": -23.22,
+      "peakDb": -6.3,
+      "sha256": "4dba09b11e93fede39f762475c8706c99492d2105e04ed145add9a2a8cfa2e67",
+      "loopSeamAmplitude": 0.0023804
+    },
+    {
+      "name": "music-golden-hour",
+      "decodedSeconds": 43.63637,
+      "rmsDb": -22.5,
+      "peakDb": -6.31,
+      "sha256": "683e3c58c9817934f862f2a38409435603ed729168827b8a65c2f8759019db3f",
+      "loopSeamAmplitude": 0.0003967
+    },
+    {
+      "name": "award-golden-hour-0",
+      "decodedSeconds": 1.57,
+      "rmsDb": -22.38,
+      "peakDb": -3.88,
+      "sha256": "f5366a115bf37a60fb2815e8acaf2b6784db2f610b2dd8e00ab82a1deca9e1ba"
+    },
+    {
+      "name": "award-golden-hour-0-resolve",
+      "decodedSeconds": 0.65,
+      "rmsDb": -17.74,
+      "peakDb": -3.72,
+      "sha256": "8b0b664ae3b89faae393b459e4d00ef5310d622d008e3361022c9b14df7525ec"
+    },
+    {
+      "name": "award-golden-hour-1",
+      "decodedSeconds": 4.95,
+      "rmsDb": -19.96,
+      "peakDb": -3.82,
+      "sha256": "82c194eeaf1f7a89c0a92a487896ecbda3a360273d8f481f674f0b6493f1211d"
+    },
+    {
+      "name": "award-golden-hour-1-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -19.98,
+      "peakDb": -3.97,
+      "sha256": "b781a37dd69b84bc567fa2e1672369e764a3e7be3de0acd6824591b1623e64c6"
+    },
+    {
+      "name": "award-golden-hour-2",
+      "decodedSeconds": 5.95,
+      "rmsDb": -19.69,
+      "peakDb": -3.82,
+      "sha256": "19448c5f669484a3638edeaa87727081ae992d86c24fa9277bea4830d7e39e2d"
+    },
+    {
+      "name": "award-golden-hour-2-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -19.96,
+      "peakDb": -3.96,
+      "sha256": "89b84924c13efd7f235b9d22f72e94402926fd7d9025b6659db7c142fc4f3eb0"
+    },
+    {
+      "name": "award-golden-hour-3",
+      "decodedSeconds": 6.5,
+      "rmsDb": -20.03,
+      "peakDb": -3.85,
+      "sha256": "89d20a787e4afcc1a7cbe361ec7a613b67b0110f4b9211cb92aac928132034b1"
+    },
+    {
+      "name": "award-golden-hour-3-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -20.0,
+      "peakDb": -3.96,
+      "sha256": "3d67fec7da9caff999bafa51fe3cec8ce18c75ed3b17399141749e1be8a51061"
+    },
+    {
+      "name": "award-golden-hour-4",
+      "decodedSeconds": 7.05,
+      "rmsDb": -19.92,
+      "peakDb": -3.98,
+      "sha256": "3d4283fef4668d9cf78c230480946a5249f430c3c3bdffc01397350583aa7536"
+    },
+    {
+      "name": "award-golden-hour-4-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -20.11,
+      "peakDb": -3.63,
+      "sha256": "20323341e9e284dcf514d75bc4dd1c08aa23d2801e72be4e3f842d24f49851c2"
+    },
+    {
+      "name": "music-jade-treasury",
+      "decodedSeconds": 49.23077,
+      "rmsDb": -24.64,
+      "peakDb": -6.4,
+      "sha256": "9cab57f62894bdbf7d846c55c3e25ea0466cadfdbe2940618d8338cbf227738e",
+      "loopSeamAmplitude": 0.0102539
+    },
+    {
+      "name": "award-jade-treasury-0",
+      "decodedSeconds": 1.57,
+      "rmsDb": -21.93,
+      "peakDb": -3.82,
+      "sha256": "fb5d2b9eea2a9e14ed37c5eedb63742478068a48c8553b39c93af51cc0f8748d"
+    },
+    {
+      "name": "award-jade-treasury-0-resolve",
+      "decodedSeconds": 0.65,
+      "rmsDb": -17.74,
+      "peakDb": -3.72,
+      "sha256": "acbdd6d3cdc8fa81f7f14fbec53c6ad5b287f303d7cbcb9773d41ecbc6fbe134"
+    },
+    {
+      "name": "award-jade-treasury-1",
+      "decodedSeconds": 4.95,
+      "rmsDb": -18.09,
+      "peakDb": -3.65,
+      "sha256": "87aa26a0aff6df277bdb3f19169670270c70467a9f1ee96234172683dbccc481"
+    },
+    {
+      "name": "award-jade-treasury-1-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -18.02,
+      "peakDb": -4.18,
+      "sha256": "f1505d802a3520dc2e231cd5b1f5e0729ebad20a96a0e22cdfbd9ff036793d6c"
+    },
+    {
+      "name": "award-jade-treasury-2",
+      "decodedSeconds": 5.95,
+      "rmsDb": -18.06,
+      "peakDb": -3.91,
+      "sha256": "d9f76170839afa5c04ef86d1a1b473db74f58e97ff572935f65004f223736734"
+    },
+    {
+      "name": "award-jade-treasury-2-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -18.07,
+      "peakDb": -3.8,
+      "sha256": "bb7bf181107c3b1631ef69ac0f223c2444e02bea75cf07ee8f03800c33fae2cd"
+    },
+    {
+      "name": "award-jade-treasury-3",
+      "decodedSeconds": 6.5,
+      "rmsDb": -19.62,
+      "peakDb": -3.93,
+      "sha256": "259ad3b16b7ad74f623085ec53b23fd4a13e5fe1543c6f01f45fb813fb0d4eba"
+    },
+    {
+      "name": "award-jade-treasury-3-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -18.03,
+      "peakDb": -3.8,
+      "sha256": "31e5138762c6f49a06a4df47149882553677cdbe89c65fa23237309b7bdeb2f7"
+    },
+    {
+      "name": "award-jade-treasury-4",
+      "decodedSeconds": 7.05,
+      "rmsDb": -19.44,
+      "peakDb": -3.79,
+      "sha256": "0bd4474e7bf6f9337c3a76559d5cef652a83028b2c08276a600d1895b6e4d67c"
+    },
+    {
+      "name": "award-jade-treasury-4-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -17.99,
+      "peakDb": -3.8,
+      "sha256": "61f4a13fee57f16ee8222d27e5d0548d293d1ecebccc2b1263b7a5942995ebcb"
+    },
+    {
+      "name": "music-pearl-palace",
+      "decodedSeconds": 37.89474,
+      "rmsDb": -22.59,
+      "peakDb": -6.24,
+      "sha256": "e63153ad8974f0f73c3b122d3ecc469c6f5012debaefe5f3715734b81fef2e44",
+      "loopSeamAmplitude": 0.0020447
+    },
+    {
+      "name": "award-pearl-palace-0",
+      "decodedSeconds": 1.57,
+      "rmsDb": -21.3,
+      "peakDb": -3.86,
+      "sha256": "0759d2ca943593a0e640441aae5461fb64ad31419d5c93f1605b1e0e493e65aa"
+    },
+    {
+      "name": "award-pearl-palace-0-resolve",
+      "decodedSeconds": 0.65,
+      "rmsDb": -18.21,
+      "peakDb": -3.93,
+      "sha256": "0f9d56e055db3b889f7ea0f823e0b0ae70653747df4aec7ec8022b538f6c9c67"
+    },
+    {
+      "name": "award-pearl-palace-1",
+      "decodedSeconds": 4.95,
+      "rmsDb": -18.44,
+      "peakDb": -4.01,
+      "sha256": "b463538bed2908bb6191a77741858593550a0288c4478aa19b89a970baa128ce"
+    },
+    {
+      "name": "award-pearl-palace-1-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -21.36,
+      "peakDb": -3.88,
+      "sha256": "f6be4704357223f7ff90b07c2ac5b949855400f4d69f5f85649ced64359d3653"
+    },
+    {
+      "name": "award-pearl-palace-2",
+      "decodedSeconds": 5.95,
+      "rmsDb": -18.11,
+      "peakDb": -3.89,
+      "sha256": "6ff2fe7c1418864580d9cf07b16681adf9663a6192be85fc8cfee0cf33d13bbb"
+    },
+    {
+      "name": "award-pearl-palace-2-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -20.32,
+      "peakDb": -4.43,
+      "sha256": "d065004a5d03b840f6acaed2c0f0f8f685b5acdfdf8af67c7d0a3803871ad121"
+    },
+    {
+      "name": "award-pearl-palace-3",
+      "decodedSeconds": 6.5,
+      "rmsDb": -19.22,
+      "peakDb": -4.21,
+      "sha256": "4883d5fc417044325d525438e73ac1478b3fc8015de816aa59889d8ff34e066c"
+    },
+    {
+      "name": "award-pearl-palace-3-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -20.21,
+      "peakDb": -4.1,
+      "sha256": "01e44466a1f03b9a11d639c8d6d7e7cbb41918ece06aa7b08e296bd7d937331b"
+    },
+    {
+      "name": "award-pearl-palace-4",
+      "decodedSeconds": 7.05,
+      "rmsDb": -19.08,
+      "peakDb": -4.05,
+      "sha256": "43aa6404dea6d77e7de0016977a8e10bdabf22ba2693fc6ee53978e01dcb904a"
+    },
+    {
+      "name": "award-pearl-palace-4-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -20.1,
+      "peakDb": -3.96,
+      "sha256": "fec5e9117821f0fa04fecc04d627ee37179539680fb7038d8a7fce7eb98ca3e4"
+    },
+    {
+      "name": "music-ruby-revel",
+      "decodedSeconds": 40.85107,
+      "rmsDb": -21.39,
+      "peakDb": -6.26,
+      "sha256": "bfe897d6ccf0204c5c8209ddfbfee7ec4be43f7a9fbaeb9bae24dd96cf0d41e1",
+      "loopSeamAmplitude": 0.0004883
+    },
+    {
+      "name": "award-ruby-revel-0",
+      "decodedSeconds": 1.57,
+      "rmsDb": -20.51,
+      "peakDb": -3.95,
+      "sha256": "ceb6b923486764b3119880a4e87cbe4d56ca16bba2c172a4d26a4dc4af4d0182"
+    },
+    {
+      "name": "award-ruby-revel-0-resolve",
+      "decodedSeconds": 0.65,
+      "rmsDb": -18.78,
+      "peakDb": -3.95,
+      "sha256": "e8159519c3df90ccad74299913a7f49e5de058a3466bfbc7c0d6ab1cc255ff4a"
+    },
+    {
+      "name": "award-ruby-revel-1",
+      "decodedSeconds": 4.95,
+      "rmsDb": -18.5,
+      "peakDb": -3.72,
+      "sha256": "1500b0115ba11d00c92a6fd97586b8fef2beaa3e5f54125adefe2315fef9a5bc"
+    },
+    {
+      "name": "award-ruby-revel-1-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -17.09,
+      "peakDb": -4.06,
+      "sha256": "28f28eec80443d47495f1db18afcdd19f73b60f7a2d5b77c0cbf6471b3c8c4c2"
+    },
+    {
+      "name": "award-ruby-revel-2",
+      "decodedSeconds": 5.95,
+      "rmsDb": -17.78,
+      "peakDb": -4.04,
+      "sha256": "4bebb15a93e0dbab9c9a4f2cb4ef508437504a8f2365d5e09a1f14336a49cc7c"
+    },
+    {
+      "name": "award-ruby-revel-2-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -18.0,
+      "peakDb": -3.95,
+      "sha256": "d42187590d799ef415cc22f314c0597052ffe279e43fa6d022aa085a8e3c3283"
+    },
+    {
+      "name": "award-ruby-revel-3",
+      "decodedSeconds": 6.5,
+      "rmsDb": -19.12,
+      "peakDb": -3.66,
+      "sha256": "491249ab428ef589e245815daca8ec8caee604e4fdcf2c4f098781a112ecbaa7"
+    },
+    {
+      "name": "award-ruby-revel-3-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -17.94,
+      "peakDb": -3.93,
+      "sha256": "a6a1399b243fd3215b59ab653f15b95ef02e91b6c5094de70498ceaa781a9bd0"
+    },
+    {
+      "name": "award-ruby-revel-4",
+      "decodedSeconds": 7.05,
+      "rmsDb": -18.14,
+      "peakDb": -3.86,
+      "sha256": "6dfebe0173a29f5614aad10a45af36ed99068924dd84fed46fa3178556976eb5"
+    },
+    {
+      "name": "award-ruby-revel-4-resolve",
+      "decodedSeconds": 2.25,
+      "rmsDb": -17.86,
+      "peakDb": -3.99,
+      "sha256": "e834bc384e2f2ebd407e20dbe0ce622598040882d8ff10df95031040d398059e"
+    },
+    {
+      "name": "fx-tap",
+      "decodedSeconds": 0.16,
+      "rmsDb": -25.73,
+      "peakDb": -8.36,
+      "sha256": "cd34eb06e4a587a9f7679b5e506514ff42f7cfa0e94f2666186987b2eae14ecb"
+    },
+    {
+      "name": "fx-bet",
+      "decodedSeconds": 0.23,
+      "rmsDb": -26.17,
+      "peakDb": -9.43,
+      "sha256": "59113d381899c2aa66b89d844d767b633a65990b14ea7a85835c53752df2f616"
+    },
+    {
+      "name": "fx-toggle",
+      "decodedSeconds": 0.2,
+      "rmsDb": -25.97,
+      "peakDb": -9.74,
+      "sha256": "5527e673bf669e2c08cf6dc8f86a2be9dfa6c7dd62f310c1d02ad056a7615b8b"
+    },
+    {
+      "name": "fx-navigate",
+      "decodedSeconds": 0.24,
+      "rmsDb": -25.36,
+      "peakDb": -7.15,
+      "sha256": "7965c4ffd48a100bb9b2aade3496e051fd5b646f5ebafe31724c616b18ea3217"
+    },
+    {
+      "name": "fx-confirm",
+      "decodedSeconds": 0.44,
+      "rmsDb": -25.5,
+      "peakDb": -10.5,
+      "sha256": "6b19e8e3a8eee77ea9111a756217172bae15a4c1fe64168073f81fde9e9f288d"
+    },
+    {
+      "name": "fx-spin",
+      "decodedSeconds": 0.48,
+      "rmsDb": -25.33,
+      "peakDb": -15.3,
+      "sha256": "ae52ed6e444995f489e28969d2bc89a6063c3736c3827ea46db477b3e9fe3b2d"
+    },
+    {
+      "name": "fx-reel-stop",
+      "decodedSeconds": 0.2,
+      "rmsDb": -26.08,
+      "peakDb": -10.71,
+      "sha256": "f76e5ae9c242c83da1e29824b56ac80b9982c0a58a161b53f3e143dc508efe19"
+    },
+    {
+      "name": "fx-win",
+      "decodedSeconds": 0.499,
+      "rmsDb": -25.42,
+      "peakDb": -10.28,
+      "sha256": "4a961f4388f6af631573596fbe5d96f741d2ae7362f19abca298679d14db7a94"
+    },
+    {
+      "name": "fx-reward",
+      "decodedSeconds": 0.831,
+      "rmsDb": -25.29,
+      "peakDb": -11.36,
+      "sha256": "73f4b56921ea7294f14ab674baaad6fcee8a0be69f47060136606c7dc7708e3e"
+    },
+    {
+      "name": "fx-big-win",
+      "decodedSeconds": 0.831,
+      "rmsDb": -25.28,
+      "peakDb": -11.59,
+      "sha256": "126ea2746f24217297af0ffa919de14ae5ad0b2e5a1655ec5001dbdae53535b0"
+    },
+    {
+      "name": "fx-epic-win",
+      "decodedSeconds": 1.16299,
+      "rmsDb": -25.25,
+      "peakDb": -11.57,
+      "sha256": "9689ebadeec033bd6939a0f6fb540f606937e5e4b880c232039b8488ae024e64"
+    },
+    {
+      "name": "fx-collect",
+      "decodedSeconds": 0.66499,
+      "rmsDb": -25.3,
+      "peakDb": -10.95,
+      "sha256": "6038527670802e04c6d4505e1061e1602ee254baeda9b08b7f676b7900a8d99d"
+    },
+    {
+      "name": "fx-error",
+      "decodedSeconds": 0.27,
+      "rmsDb": -25.74,
+      "peakDb": -11.37,
+      "sha256": "7a1086479eb02c2e875280f6f3c68860c1633bae040b8afcc5e76f9a260ae37e"
+    },
+    {
+      "name": "fx-reel-roll",
+      "decodedSeconds": 1.1,
+      "rmsDb": -25.2,
+      "peakDb": -18.98,
+      "sha256": "4057c40483e636317a345d77fc60819e8661ee218f14d3a719454304d8dca13d",
+      "loopSeamAmplitude": 0.0006409
+    }
+  ]
+}

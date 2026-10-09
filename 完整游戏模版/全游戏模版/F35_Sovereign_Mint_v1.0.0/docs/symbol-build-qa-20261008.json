@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-08",
+  "atlasChecks": [
+    {
+      "source": "assets/resources/art/symbols-golden-hour.png",
+      "native": "assets/resources/native/4c/4c18bc93-44c9-463f-bcbf-01f5b64f2588.bf597.png",
+      "sha256": "3c4f07b27615f4e914f14bdd2d19ebd136913a8d77b327838cf934f5dc38dd02"
+    },
+    {
+      "source": "assets/resources/art/symbols-golden-hour-blur.png",
+      "native": "assets/resources/native/e5/e52a482a-1080-4472-843a-9dab628b1d27.fb735.png",
+      "sha256": "3cce5b58279c79f93ae27a75a3f7e338a44c0f82a1159fbf1b4edca77663f0b2"
+    },
+    {
+      "source": "assets/resources/art/symbols-jade-treasury.png",
+      "native": "assets/resources/native/f8/f84a47ef-a35f-4804-8681-cff818e24375.de2db.png",
+      "sha256": "c8855d30dd17888356a9c30a8ab01694d018b2d6e7ad86e596f70ea34259ca34"
+    },
+    {
+      "source": "assets/resources/art/symbols-jade-treasury-blur.png",
+      "native": "assets/resources/native/d1/d12af7fb-3724-4c72-960f-dd00ec65300b.746e7.png",
+      "sha256": "46f9ac9bd3b03ffb13d82f3f9947c974211249f8cf326a9076263fa67c929a63"
+    },
+    {
+      "source": "assets/resources/art/symbols-pearl-palace.png",
+      "native": "assets/resources/native/de/dea24673-42e6-4fe4-ab08-370aee20db3a.4ec26.png",
+      "sha256": "8686b30fa198ba7793b835640c3bce443ff6629ffd01beb91e3f1e2a1f153e96"
+    },
+    {
+      "source": "assets/resources/art/symbols-pearl-palace-blur.png",
+      "native": "assets/resources/native/d1/d1b10d99-3738-494f-8505-39e480bdbf01.975d0.png",
+      "sha256": "98ced00761db9de8ffc1d1d1aedf9f2b7a6f51d287d557e472c9b09f1e0c27ae"
+    },
+    {
+      "source": "assets/resources/art/symbols-ruby-revel.png",
+      "native": "assets/resources/native/c7/c7043c9f-f50d-4099-8ba9-b84ce1dbaa42.10cba.png",
+      "sha256": "91a66581cc6972c5d040206ad634017ffb705cc3b150268456d0fbff241c324e"
+    },
+    {
+      "source": "assets/resources/art/symbols-ruby-revel-blur.png",
+      "native": "assets/resources/native/9e/9e2d1ee5-1554-4bb5-8f64-9c6322909415.b06cb.png",
+      "sha256": "dab61b6beafc12dd34c9fc30b7deda9c46bc2901f50792ab473e90cb5212e3d1"
+    }
+  ],
+  "fingerprintedAtlases": 8,
+  "publicLegalPathsPreserved": true,
+  "audioFileCount": 59,
+  "audioSourcesAndMixingPreserved": true,
+  "bootstrapResolvesHashedEntry": true,
+  "pythonRegressionTests": 7,
+  "typescriptChecks": "client and server passed",
+  "npmSuite": "passed",
+  "releaseAudit": "21/27 passed; existing identity/product/legal/native/device/distinctiveness gates remain blocked",
+  "preview": "http://127.0.0.1:6038/?debug=1&screen=game&game=golden-hour",
+  "visualAcceptance": "passed: fresh hashed build observed in the in-app browser; Golden/Jade/Pearl/Ruby actual spins, 320x568 and 390x844 viewports, ordinary and super award displays checked",
+  "reelPresentation": {
+    "speedHysteresis": {
+      "enterAbove": 0.68,
+      "leaveAtOrBelow": 0.44
+    },
+    "fullyOffscreenBuffersSkipped": true,
+    "minimumCulledBuffersPerColumn": 2,
+    "motionCurveTests": 40,
+    "cropSamples": 18631,
+    "newRegressionCommand": "npm run test:reel-presentation",
+    "mathAndAudioUnchanged": true
+  },
+  "visualEvidence": {
+    "directory": "docs/qa/20261008-reels",
+    "loadedMainScript": "assets/main/index.cfb47.js",
+    "consoleWarningsAndErrorsObserved": [],
+    "loaderRemovedAfterStartup": true,
+    "nativeDeviceTesting": false,
+    "fpsMeasured": false,
+    "musicListeningReviewPerformed": false,
+    "goldenAudioAfterClick": {
+      "recorded": true,
+      "state": "running",
+      "voices": 1,
+      "failures": 0
+    },
+    "consecutiveGoldenSpinsChecked": 2,
+    "screenshots": [
+      "golden-final-390.jpg",
+      "golden-narrow-320.jpg",
+      "jade-motion-320.jpg",
+      "jade-narrow-320.jpg",
+      "pearl-ordinary-390.jpg",
+      "ruby-idle-390.jpg",
+      "ruby-narrow-320.jpg",
+      "ruby-super-390.jpg"
+    ]
+  }
+}
