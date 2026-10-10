@@ -45,3 +45,14 @@ assert(runtime.includes('Array.from(new Set'),'Cocos production iterator compati
 assert(!runtime.slice(runtime.indexOf('private paint()'),runtime.indexOf('private proof()')).includes('art.image'),'No render-loop node creation');
 assert(runtime.includes('game.off(Game.EVENT_HIDE')&&runtime.includes('game.off(Game.EVENT_SHOW'),'Dispose lifecycle listeners');
 console.log(`PASS treasury life: ${samples} bounded bitmap poses, lobby captions and 4 cabinet keepouts, 64-node cap, 30Hz pooled motion, cue cooldown, background/reduced-motion freeze and listener cleanup.`);
+
+// Closed paths must also close their orientation, depth, coin flip and opacity.
+for(const zones of [lobbyLifeZones(false),...Object.values(CABINETS).map(cabinetLifeZones)])for(const z of zones){
+ if(!['orbit','tide','lamp'].includes(z.path))continue;
+ for(let index=0;index<z.count;index++){
+  const seed=lifeSeed(z,index),start=z.period*(1-seed.phase),a=lifePose(seed,start-1e-7,0,0,emptyLifePose()),b=lifePose(seed,start+1e-7,0,0,emptyLifePose());
+  for(const key of ['x','y','angle','scaleX','scaleY','alpha'] as const)assert(Math.abs(a[key]-b[key])<.001,`${z.name}: ${key} pops at a loop seam`);
+ }
+}
+assert(!lobbyLifeZones(false).some(z=>z.name==='Merchant jewellery'),'face is not covered by wandering environmental sparks');
+console.log('PASS detail life loops: closed rotation, coin flip, depth and opacity; measured character highlights instead of wandering facial sparkle.');

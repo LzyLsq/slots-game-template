@@ -42,5 +42,5 @@ export function drawRulePages(parent:Node,c:GameConfig,art:SalonArt,bet:number,r
   ids.forEach((id,i)=>{const y=125-i*118;art.image(parent,symbolAtlas(c.id),-244,y,90,90,symbolArt(c.id,id));counts.forEach((count,j)=>copy(parent,ruleAwardText(c,id,count,bet),xs[j],y,cellWidth,80,44));});
  }
  readableRuleArrow(parent,art,'Previous rule page',-255,-516,230,72,-1,()=>change(index-1));readableRuleArrow(parent,art,'Next rule page',255,-516,230,72,1,()=>change(index+1));
- outlined(copy(parent,`${index+1} / ${pages.length}`,0,-516,330,66,38,COLORS.cream),'#352011',3);
+ outlined(copy(parent,`${index+1} / ${pages.length}`,0,-516,180,66,38,COLORS.cream),'#352011',3);
 }

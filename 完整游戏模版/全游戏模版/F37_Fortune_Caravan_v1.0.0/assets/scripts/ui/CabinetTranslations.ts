@@ -1,4 +1,5 @@
 export const CABINET_TRANSLATIONS:Record<string,readonly string[]>={
+ "25 LINES": ["25 条赔付线","25 條賠付線","25ライン","25개 라인"],
  "HARVEST NUDGE": [
   "丰收微调",
   "豐收微調",

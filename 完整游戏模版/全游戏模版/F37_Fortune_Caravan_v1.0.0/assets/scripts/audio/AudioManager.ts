@@ -1,6 +1,7 @@
 import {themeMusic} from './MusicTheme';
 import {_decorator,Component,game,Game} from 'cc';
 import {SoundscapeEngine} from './SoundscapeEngine';
+import type {FeatureSoundStage} from './FeedbackCatalog';
 import type {Cue} from './AudioScore';
 import type {AwardSoundtrack} from './AwardScore';
 const {ccclass}=_decorator;
@@ -29,7 +30,7 @@ export class AudioManager extends Component {
   protected update(dt:number):void{
     if(!this.qa)return;this.proofWait-=dt;if(this.proofWait>0)return;this.proofWait=.7;
     const canvas=globalThis.document?.getElementById('GameCanvas');if(!canvas)return;
-    const s=this.engine.snapshot(),proof:Record<string,string|number|boolean>={scene:s.scene,bpm:themeMusic(s.scene).bpm,track:s.musicTrack,recorded:s.recordedMusic,voices:s.musicVoices,state:s.state,music:s.music,effects:s.sound,ready:s.readyRecordings,failures:s.recordingFailures,'cue-sequence':s.cuePlays,cue:s.lastPlayedCue,'cue-source':s.lastCueSource,'cue-rate':s.lastCueRate,'press-voices':s.pressVoices,'cue-counts':JSON.stringify(s.cueCounts)};
+    const s=this.engine.snapshot(),proof:Record<string,string|number|boolean>={scene:s.scene,bpm:themeMusic(s.scene).bpm,track:s.musicTrack,recorded:s.recordedMusic,voices:s.musicVoices,state:s.state,music:s.music,effects:s.sound,ready:s.readyRecordings,failures:s.recordingFailures,'cue-sequence':s.cuePlays,cue:s.lastPlayedCue,'cue-source':s.lastCueSource,'cue-rate':s.lastCueRate,'press-voices':s.pressVoices,'cue-counts':JSON.stringify(s.cueCounts),'music-level':s.musicLevel,'music-trim':s.musicTrim.toFixed(4),'music-position':s.musicPosition.toFixed(3),'award-active':s.awardActive,'award-voices':s.awardVoices,'success-voices':s.celebrationVoices,'guardian-voices':s.guardianVoices,'feature-voices':s.featureVoices,'feature-sequence':s.featurePlays,'feature-stage':s.lastFeatureStage,'feature-source':s.lastFeatureSource};
     for(const key of Object.keys(proof))canvas.setAttribute('data-soundtrack-'+key,String(proof[key]));
   }
   public setMusic(enabled:boolean):void{this.engine.configure({music:enabled});}
@@ -42,6 +43,7 @@ export class AudioManager extends Component {
   public awardDiagnostics():{voices:number;state:string;audible:boolean;scene:string;musicBpm:number;scheduled:number;hidden:boolean;recordedMusic:boolean;recordedAward:boolean;musicTrack:string;readyRecordings:number;recordingFailures:number;recordingError:string}{const s=this.engine.snapshot();return {voices:s.awardVoices,state:s.state,audible:s.sound&&s.state==='running'&&!s.hidden,scene:s.scene,musicBpm:themeMusic(s.scene).bpm,scheduled:s.awardScheduledNotes,hidden:s.hidden,recordedMusic:s.recordedMusic,recordedAward:s.recordedAward,musicTrack:s.musicTrack,readyRecordings:s.readyRecordings,recordingFailures:s.recordingFailures,recordingError:s.recordingError};}
   public beginAward(tier:number,countEnd:number,profitable=true):AwardSoundtrack{return this.engine.beginAward(tier,countEnd,profitable);}
   public playGuardian(theme:number):void{this.engine.guardian(theme);}
+  public playFeature(stage:FeatureSoundStage):void{this.engine.feature(stage);}
   public playAward(step=0):void{this.engine.award(step);}
   public vibrate(pattern:number|number[]=9):void{this.engine.vibrate(pattern);}
 }

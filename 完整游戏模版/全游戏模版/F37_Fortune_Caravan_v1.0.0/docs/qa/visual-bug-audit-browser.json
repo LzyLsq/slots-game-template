@@ -1,0 +1,5625 @@
+{
+  "project": "F37 Fortune Caravan",
+  "date": "2026-10-10",
+  "reviewStarted": "2026-10-10T03:44:50.272Z",
+  "initialBuildReloadAt": "2026-10-10T03:57:32.169Z",
+  "finalBuildLoadedAt": "2026-10-10T04:04:37.259Z",
+  "finishedAt": "2026-10-10T04:09:48.329Z",
+  "fixes": [
+    "Preserve service-page dialogs and input focus across resize; defer page rebuild until close",
+    "Translate new shop/account/journey/rank/dialog copy into the four supported Asian locales",
+    "Use Caravan-themed names for virtual ranks without translating actual player nicknames",
+    "Dark compact shop disclaimer with light outline over sunlit marble"
+  ],
+  "finalBuild": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/qa/visual-bug-audit-final-artifact.json",
+  "consoleWarnError": [],
+  "finalDom": {
+    "dialogShield": null,
+    "inputs": [],
+    "preloaderPresent": false,
+    "viewport": {
+      "height": 879,
+      "width": 794
+    }
+  },
+  "balances": {
+    "before": 40311,
+    "after": 40311
+  },
+  "rounds": {
+    "before": 31,
+    "after": 31
+  },
+  "actionsNotPerformed": [
+    "spin",
+    "purchase",
+    "claim",
+    "profile-save",
+    "sign-out"
+  ],
+  "audioLimits": "Read DOM diagnostics only; no subjective headphone/speaker listening. Some navigations remain audio-suspended until user gesture, as expected.",
+  "deviceLimits": "Browser viewport checks only; no physical iPhone/iPad performance or TestFlight acceptance.",
+  "records": [
+    {
+      "name": "home-390",
+      "at": "2026-10-10T03:44:50.310Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "5"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":3,\"toggle\":1,\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "30.677"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":47.661,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-0.724,4.209,-0.006,0,1.281,0.212,2.123]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-home-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "oasis-home-390",
+      "at": "2026-10-10T03:44:57.793Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "6"
+        ],
+        [
+          "data-soundtrack-cue",
+          "navigate"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-navigate"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":3,\"toggle\":1,\"navigate\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.820"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":7.215,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.166,0.12,0.023,0,0.552,0.272,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-oasis-home-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "oasis-game-390",
+      "at": "2026-10-10T03:45:03.537Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "100"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "7"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":4,\"toggle\":1,\"navigate\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "4.171"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"cabinet\",\"clip\":\"elephant-ingot-blessing-and-inward-palm\",\"time\":5.133,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[187.407,222.084],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.085,-0.143,0.024,0,-0.119,0.198,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-oasis-game-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "oasis-rules-390",
+      "at": "2026-10-10T03:45:11.327Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "100"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "8"
+        ],
+        [
+          "data-soundtrack-cue",
+          "navigate"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-navigate"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":4,\"toggle\":1,\"navigate\":3}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "12.651"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"cabinet\",\"clip\":\"elephant-ingot-blessing-and-inward-palm\",\"time\":12.902,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[187.407,222.084],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.007,-0.087,0.035,0,0.141,0.327,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-oasis-rules-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "shop-390",
+      "at": "2026-10-10T03:45:32.498Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "11"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":5,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "16.404"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-shop-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "account-390",
+      "at": "2026-10-10T03:45:49.906Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "12"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":6,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "34.106"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-account-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "rank-390",
+      "at": "2026-10-10T03:46:04.741Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "13"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":7,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "12.031"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-rank-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "journey-390",
+      "at": "2026-10-10T03:46:21.568Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "14"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":8,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "29.017"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-journey-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "journey-320",
+      "at": "2026-10-10T03:46:43.206Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "14"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":8,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "13.310"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-journey-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "account-320",
+      "at": "2026-10-10T03:47:28.530Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "15"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":9,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "21.752"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-account-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "settings-before-resize-320",
+      "at": "2026-10-10T03:47:49.893Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "16"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":10,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "6.083"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1081.6901408450703,\"height\":1920}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-settings-before-resize-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "settings-lost-after-resize-390",
+      "at": "2026-10-10T03:48:03.847Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "16"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "16"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":10,\"toggle\":1,\"navigate\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "20.264"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"lobby\",\"clip\":\"elephant-wealth-palm-and-trunk-welcome\",\"time\":0.501,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[390,462.165],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.17,0.159,0.008,0,-0.548,0.13,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-settings-lost-after-resize-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-home-390",
+      "at": "2026-10-10T03:53:50.839Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":3.883,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.061,0.036,-0.067,0,-0.527,-0.284,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-home-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-account-320",
+      "at": "2026-10-10T03:54:02.578Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "1"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "5.859"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-account-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-settings-320",
+      "at": "2026-10-10T03:54:13.977Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "2"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "17.208"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1081.6901408450703,\"height\":1920}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-settings-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-settings-after-resize-390",
+      "at": "2026-10-10T03:54:20.296Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "2"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "23.576"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-settings-after-resize-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-settings-after-resize-768",
+      "at": "2026-10-10T03:54:32.827Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "2"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "36.291"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1440,\"height\":1920}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-settings-after-resize-768.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-sound-after-resize-320",
+      "at": "2026-10-10T03:54:40.310Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "2"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "6.472"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1081.6901408450703,\"height\":1920}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-sound-after-resize-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-account-after-dialog-close-320",
+      "at": "2026-10-10T03:54:56.390Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "4"
+        ],
+        [
+          "data-soundtrack-cue",
+          "navigate"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-navigate"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2,\"toggle\":1,\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "22.770"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-account-after-dialog-close-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "fixed-nickname-before-resize-320",
+      "at": "2026-10-10T03:54:56.726Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "4"
+        ],
+        [
+          "data-soundtrack-cue",
+          "navigate"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-navigate"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2,\"toggle\":1,\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "22.770"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1081.6901408450703,\"height\":1920}"
+        ]
+      ],
+      "inputs": [
+        {
+          "placeholder": "",
+          "type": "text",
+          "visible": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-fixed-nickname-before-resize-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "nickname-input-preserved-390",
+      "at": "2026-10-10T03:55:48.262Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "5"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":3,\"toggle\":1,\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.721"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [
+        {
+          "placeholder": "",
+          "type": "text",
+          "visible": {
+            "bottom": 418.2805480957031,
+            "height": 20.22222900390625,
+            "left": 90.47222137451172,
+            "right": 303.5277633666992,
+            "top": 398.0583190917969,
+            "width": 213.0555419921875,
+            "x": 90.47222137451172,
+            "y": 398.0583190917969
+          }
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-nickname-input-preserved-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "account-close-input-390",
+      "at": "2026-10-10T03:56:24.175Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "6"
+        ],
+        [
+          "data-soundtrack-cue",
+          "navigate"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-navigate"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":3,\"toggle\":1,\"navigate\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "36.892"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":9.866,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1,2.648,0.036,0,-0.47,-0.283,0.193]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-account-close-input-390.jpg",
+      "deliverable": false
+    },
+    {
+      "name": "audit-caravan-game-390",
+      "at": "2026-10-10T03:57:00.983Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "caravan-gold"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "110"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-caravan-gold"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "8"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":5,\"toggle\":1,\"navigate\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "5.275"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"cabinet\",\"clip\":\"lion-wealth-two-palm-collections\",\"time\":6.428,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[191.081,269.092],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.158,-0.189,0,0,0.157,-0.066,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"caravan-gold\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.04832884729356,\"y\":192.43640397532124,\"perimeter\":[\"centre-left\",\"bottom-left\",\"bottom-centre\",\"centre-right\",\"bottom-right\"]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "earlier-review",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-audit-caravan-game-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-home-390",
+      "at": "2026-10-10T03:59:01.151Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":83.794,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.197,0.144,0.056,0,0.294,0.298,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-home-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-shop-390",
+      "at": "2026-10-10T03:59:06.569Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "1"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "4.952"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":84.569,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-1.854,9.39,0.021,0,0.001,0.161,6.966]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-shop-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-journey-390",
+      "at": "2026-10-10T03:59:41.135Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "2"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "2.200"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":84.569,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-1.854,9.39,0.021,0,0.001,0.161,6.966]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-journey-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-rank-390",
+      "at": "2026-10-10T03:59:51.153Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "3"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":3}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "12.130"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":84.569,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-1.854,9.39,0.021,0,0.001,0.161,6.966]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-rank-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-account-390",
+      "at": "2026-10-10T04:00:02.036Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "4"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":4}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "23.544"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":84.569,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-1.854,9.39,0.021,0,0.001,0.161,6.966]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-account-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-settings-390",
+      "at": "2026-10-10T04:00:11.662Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "5"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "32.781"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":84.569,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-1.854,9.39,0.021,0,0.001,0.161,6.966]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-settings-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-settings-resize-320",
+      "at": "2026-10-10T04:00:18.095Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "5"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":5}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "2.237"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":84.569,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-1.854,9.39,0.021,0,0.001,0.161,6.966]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1081.6901408450703,\"height\":1920}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-settings-resize-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "final-nickname-390",
+      "at": "2026-10-10T04:00:56.864Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "7"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":6,\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "4.433"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":84.569,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-1.854,9.39,0.021,0,0.001,0.161,6.966]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [
+        {
+          "placeholder": "",
+          "type": "text",
+          "visible": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-final-nickname-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "audit-bazaar-game-390",
+      "at": "2026-10-10T04:01:23.659Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "ruby-bazaar"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "96"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"ruby-bazaar\",\"context\":\"cabinet\",\"clip\":\"peacock-wing-drawing-wealth-to-chest\",\"time\":6.949,\"cue\":\"idle\",\"reduced\":false,\"source\":[431,620],\"rendered\":[162.634,233.952],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.113,0.183,-0.032,0,-0.212,-0.107,0]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"ruby-bazaar\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2049592699818346,\"y\":111.20666526933564,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-audit-bazaar-game-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "audit-voyage-game-390",
+      "at": "2026-10-10T04:01:38.984Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "crown-voyage"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "108"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"crown-voyage\",\"context\":\"cabinet\",\"clip\":\"parrot-two-inward-treasure-sweeps\",\"time\":2.843,\"cue\":\"idle\",\"reduced\":false,\"source\":[507,612],\"rendered\":[193.531,233.612],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.041,-0.153,0.038,0,0.216,0.194,0.132]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"crown-voyage\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-audit-voyage-game-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "audit-login-390",
+      "at": "2026-10-10T04:01:52.642Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":2.064,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[201.668,284],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-0.402,4.505,0.012,0,1.07,0.41,2.008]}"
+        ]
+      ],
+      "inputs": [
+        {
+          "placeholder": "",
+          "type": "text",
+          "visible": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "visible": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-audit-login-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "audit-login-320",
+      "at": "2026-10-10T04:02:09.234Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":18.682,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[201.668,284],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.171,0.192,0.008,0,-0.154,0.102,0]}"
+        ]
+      ],
+      "inputs": [
+        {
+          "placeholder": "",
+          "type": "text",
+          "visible": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "visible": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "initial-036a1",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-audit-login-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-shop-390",
+      "at": "2026-10-10T04:05:17.811Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-shop-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-shop-320",
+      "at": "2026-10-10T04:05:34.774Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-shop-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-oasis-game-390",
+      "at": "2026-10-10T04:06:09.178Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "100"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"cabinet\",\"clip\":\"elephant-ingot-blessing-and-inward-palm\",\"time\":2.108,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[187.407,222.084],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-1.399,0.082,-0.036,0,-4.959,1.092,6]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-oasis-game-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-oasis-rules-390",
+      "at": "2026-10-10T04:06:21.831Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "100"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "1"
+        ],
+        [
+          "data-soundtrack-cue",
+          "navigate"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-navigate"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "5.651"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"cabinet\",\"clip\":\"elephant-ingot-blessing-and-inward-palm\",\"time\":14.747,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[187.407,222.084],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.173,0.147,0.014,0,0.529,0.19,0]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-oasis-rules-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-sound-options-390",
+      "at": "2026-10-10T04:06:36.871Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "100"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-sapphire-oasis"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "3"
+        ],
+        [
+          "data-soundtrack-cue",
+          "toggle"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-toggle"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"navigate\":2,\"toggle\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "20.568"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"sapphire-oasis\",\"context\":\"cabinet\",\"clip\":\"elephant-ingot-blessing-and-inward-palm\",\"time\":29.73,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[187.407,222.084],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.155,0.168,-0.003,0,0.259,0.019,0]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-sound-options-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-home-390",
+      "at": "2026-10-10T04:08:32.664Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":27.734,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.081,0.152,-0.034,0,-0.374,-0.095,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-home-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-caravan-game-390",
+      "at": "2026-10-10T04:07:12.316Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "caravan-gold"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "110"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-caravan-gold"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "6"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"navigate\":4,\"toggle\":1,\"tap\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "6.048"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"cabinet\",\"clip\":\"lion-wealth-two-palm-collections\",\"time\":6.741,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[191.081,269.092],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.124,-0.176,0.017,0,0.272,0.014,0]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"caravan-gold\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.04832884729356,\"y\":192.43640397532124,\"perimeter\":[\"centre-left\",\"bottom-left\",\"bottom-centre\",\"centre-right\",\"bottom-right\"]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-caravan-game-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-bazaar-game-320",
+      "at": "2026-10-10T04:07:32.268Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "ruby-bazaar"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "96"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"ruby-bazaar\",\"context\":\"cabinet\",\"clip\":\"peacock-wing-drawing-wealth-to-chest\",\"time\":2.333,\"cue\":\"idle\",\"reduced\":false,\"source\":[431,620],\"rendered\":[162.634,233.952],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":1,\"degrees\":[-1.518,5.854,-0.041,0,-1.673,-1.009,7.2]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"ruby-bazaar\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1081.6901408450703,\"height\":1920,\"scale\":1.2069174919807215,\"y\":141.56037724987482,\"perimeter\":[]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-bazaar-game-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-voyage-game-768",
+      "at": "2026-10-10T04:07:47.303Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "crown-voyage"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "108"
+        ],
+        [
+          "data-soundtrack-track",
+          "fallback"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "false"
+        ],
+        [
+          "data-soundtrack-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-state",
+          "suspended"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "26"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-source",
+          ""
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "0.000"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"crown-voyage\",\"context\":\"cabinet\",\"clip\":\"parrot-two-inward-treasure-sweeps\",\"time\":3.394,\"cue\":\"idle\",\"reduced\":false,\"source\":[507,612],\"rendered\":[193.531,233.612],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[0.101,-0.039,0.056,0,0.359,0.437,0]}"
+        ],
+        [
+          "data-cabinet-scene",
+          "{\"id\":\"crown-voyage\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1440,\"height\":1920,\"scale\":1.1462393116969012,\"y\":8.493008314436793,\"perimeter\":[\"centre-left\",\"centre-right\"]}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-voyage-game-768.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-account-390",
+      "at": "2026-10-10T04:08:39.967Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "1"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "6.323"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":28.515,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.036,0.06,-0.063,0,-0.518,-0.259,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-account-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-settings-390",
+      "at": "2026-10-10T04:08:47.084Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "2"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "13.405"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":28.515,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.036,0.06,-0.063,0,-0.518,-0.259,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1080,\"height\":2337.230769230769}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-settings-390.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-settings-resize-320",
+      "at": "2026-10-10T04:08:54.556Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "2"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "21.192"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":28.515,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.036,0.06,-0.063,0,-0.518,-0.259,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ],
+        [
+          "data-dialog-shield",
+          "{\"width\":1081.6901408450703,\"height\":1920}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-settings-resize-320.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-account-default",
+      "at": "2026-10-10T04:09:10.081Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "3"
+        ],
+        [
+          "data-soundtrack-cue",
+          "navigate"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-navigate"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":2,\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "36.739"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":28.515,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.036,0.06,-0.063,0,-0.518,-0.259,0]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 879,
+        "width": 794
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-account-default.jpg",
+      "deliverable": true
+    },
+    {
+      "name": "release-home-default",
+      "at": "2026-10-10T04:09:30.050Z",
+      "attributes": [
+        [
+          "data-soundtrack-scene",
+          "lobby"
+        ],
+        [
+          "data-soundtrack-bpm",
+          "104"
+        ],
+        [
+          "data-soundtrack-track",
+          "music-lobby"
+        ],
+        [
+          "data-soundtrack-recorded",
+          "true"
+        ],
+        [
+          "data-soundtrack-voices",
+          "1"
+        ],
+        [
+          "data-soundtrack-state",
+          "running"
+        ],
+        [
+          "data-soundtrack-music",
+          "true"
+        ],
+        [
+          "data-soundtrack-effects",
+          "true"
+        ],
+        [
+          "data-soundtrack-ready",
+          "15"
+        ],
+        [
+          "data-soundtrack-failures",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-sequence",
+          "4"
+        ],
+        [
+          "data-soundtrack-cue",
+          "tap"
+        ],
+        [
+          "data-soundtrack-cue-source",
+          "fx-tap"
+        ],
+        [
+          "data-soundtrack-cue-rate",
+          "1"
+        ],
+        [
+          "data-soundtrack-press-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-cue-counts",
+          "{\"tap\":3,\"navigate\":1}"
+        ],
+        [
+          "data-soundtrack-music-level",
+          "0.48"
+        ],
+        [
+          "data-soundtrack-music-position",
+          "19.666"
+        ],
+        [
+          "data-soundtrack-award-active",
+          "false"
+        ],
+        [
+          "data-soundtrack-award-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-success-voices",
+          "0"
+        ],
+        [
+          "data-soundtrack-guardian-voices",
+          "0"
+        ],
+        [
+          "data-guardian-motion",
+          "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":10.8,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[0.132,0.531,-0.013,0,-0.661,-0.072,0.557]}"
+        ],
+        [
+          "data-lobby-selection",
+          "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}"
+        ]
+      ],
+      "inputs": [],
+      "viewport": {
+        "height": 879,
+        "width": 794
+      },
+      "buildPhase": "final-59d93",
+      "screenshot": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0/docs/screenshots/visual-audit-release-home-default.jpg",
+      "deliverable": true
+    }
+  ]
+}

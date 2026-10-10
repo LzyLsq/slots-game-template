@@ -18,3 +18,23 @@ for(const {code} of LANGUAGES.filter(l=>l.code!=='en')){setLanguage(code);
  for(const source of ['Sign in to the Fortune Caravan','Begin your treasure journey','APPLE · UNAVAILABLE','Virtual coins · No cash prizes · Adults only'])assert.notEqual(tr(source),source,'F37 auth copy translated in '+code);
 }
 setLanguage('en');console.log('PASS F37 boarding subtitle, Apple availability and adult virtual-coin notice translations.');
+
+const serviceCopy=['Edit nickname','Nickname could not be saved.','Treasury membership terms','Letter','Slots','WALLET','Coin journal','Account options','VIRTUAL COIN SUPPLIES','PREVIEW · PURCHASES NOT CONNECTED','PREVIEW ONLY','Virtual coins only · No withdrawals or cash prizes','Native purchases and server verification are not configured.','VIRTUAL FRIENDS · TOTAL COINS WON','PLAYERS · TOTAL COINS WON','BACK TO THE CARAVAN','DEPARTURE','OASIS','BAZAAR','CROWN PORT','COLLECT','DAILY GIFT COLLECTED','Journey rewards never change slot odds · No cash value','Journey rewards are available in local preview only.','Already collected.','Next daily gift at 00:00 UTC.'];
+const friendCopy=['Caravan Captain','Oasis Treasurer','Bazaar Goldsmith','Crown Navigator','Desert Prospector','Vault Curator','Ruby Collector','Harbour Merchant'];
+for(const {code} of LANGUAGES){setLanguage(code);
+ for(const source of [...serviceCopy,...friendCopy]){
+  const result=tr(source);if(code==='en')assert.equal(result,source);else assert.notEqual(result,source,'F37 services localized: '+code+' '+source);
+ }
+ for(const [source,numbers] of [
+  ['CARAVAN PASSPORT · 3 / 4 STAMPS',['3','4']],
+  ['+1,600 virtual coins',['1,600']],
+  ['+1,600 coins · Journey reward',['1,600']],
+  ['Complete 12 rounds and visit 2 lands. No extra bet required.',['12','2']],
+ ] as const){const result=tr(source);for(const number of numbers)assert(result.includes(number));if(code!=='en')assert.notEqual(result,source);}
+}
+setLanguage('zh-CN');
+assert.equal(tr('PREVIEW · PURCHASES NOT CONNECTED'),'预览模式 · 尚未接入购买');
+assert.equal(tr('CARAVAN PASSPORT · 3 / 4 STAMPS'),'商队护照 · 3 / 4 枚印章');
+assert(tr('Virtual coins only · No withdrawals or cash prizes').includes('不可提现'));
+assert(tr('Journey rewards never change slot odds · No cash value').includes('不改变转轴概率'));
+setLanguage('en');console.log('PASS F37 service pages, journey counts, honest preview/no-cash copy and localized virtual caravan companions.');

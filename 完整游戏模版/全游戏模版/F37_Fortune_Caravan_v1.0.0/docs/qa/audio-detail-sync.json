@@ -1,0 +1,476 @@
+{
+  "startedAt": "2026-10-10T03:28:51.222360+00:00",
+  "work": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0",
+  "formal": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F37_Fortune_Caravan_v1.0.0",
+  "files": [
+    {
+      "path": "assets/scripts/audio/SoundscapeEngine.ts",
+      "workBefore": "546d9e7d22d497b52d593e6b24b4ad09bebc25f4d91e05be5a6f181a34d1d417",
+      "formalBefore": "546d9e7d22d497b52d593e6b24b4ad09bebc25f4d91e05be5a6f181a34d1d417",
+      "workAfter": "7f7f32e4e8182714a3f43010a602efb1f83612ca2d01a961910a9b06410caca6",
+      "formalAfter": "7f7f32e4e8182714a3f43010a602efb1f83612ca2d01a961910a9b06410caca6"
+    },
+    {
+      "path": "assets/scripts/audio/AudioManager.ts",
+      "workBefore": "c1115249f3698db8ac8e1b0ca50706108dd9c090e2bb6a223deb13af4ea5bea1",
+      "formalBefore": "c1115249f3698db8ac8e1b0ca50706108dd9c090e2bb6a223deb13af4ea5bea1",
+      "workAfter": "11e0ee1a534fdfc9452a6e38a9a647cb42f21c8ac985f54e245847e951939194",
+      "formalAfter": "11e0ee1a534fdfc9452a6e38a9a647cb42f21c8ac985f54e245847e951939194"
+    },
+    {
+      "path": "tools/master-audio.py",
+      "workBefore": "1d18cc7cbcf4567c9a1eb98f3a8e421f9ee19135f7828748d775e6df71f0a4c0",
+      "formalBefore": "1d18cc7cbcf4567c9a1eb98f3a8e421f9ee19135f7828748d775e6df71f0a4c0",
+      "workAfter": "781b15496396e33f758d807b13d37785f2d3dc78ed789738d3f6c0dcbd3b309a",
+      "formalAfter": "781b15496396e33f758d807b13d37785f2d3dc78ed789738d3f6c0dcbd3b309a"
+    },
+    {
+      "path": "tools/audio-recording-test.ts",
+      "workBefore": "cccb53e32b5594253f292b5dfeefe685a4d95eb384055337e944744914e54a46",
+      "formalBefore": "cccb53e32b5594253f292b5dfeefe685a4d95eb384055337e944744914e54a46",
+      "workAfter": "14148054c6e0970180e866a6aa8f36739c18f387851f04267accd1799d7d0ef0",
+      "formalAfter": "14148054c6e0970180e866a6aa8f36739c18f387851f04267accd1799d7d0ef0"
+    },
+    {
+      "path": "tools/audio-test.ts",
+      "workBefore": "acc39f6774040a6425345a048aa4855fca85f2933f7180587a6b7d00d8380e7d",
+      "formalBefore": "acc39f6774040a6425345a048aa4855fca85f2933f7180587a6b7d00d8380e7d",
+      "workAfter": "789430072780da8ef938bcd9040572ee6734f26f58c6101cdd342f0716454ef6",
+      "formalAfter": "789430072780da8ef938bcd9040572ee6734f26f58c6101cdd342f0716454ef6"
+    },
+    {
+      "path": "docs/QA.md",
+      "workBefore": "91a845c52d2b3d06a30161ea5136baf94264dd9e61436c238eb8fa7dc0e76604",
+      "formalBefore": "91a845c52d2b3d06a30161ea5136baf94264dd9e61436c238eb8fa7dc0e76604",
+      "workAfter": "7d772b70b646e890a65a5cdc7c59bb6447833187c1d6d7bd983645a2783d7b11",
+      "formalAfter": "7d772b70b646e890a65a5cdc7c59bb6447833187c1d6d7bd983645a2783d7b11"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/manifest.json",
+      "workBefore": "6b474727b64d04592b3c14e485519cef06374c7a45ab67af2754f80f57016dcb",
+      "formalBefore": "6b474727b64d04592b3c14e485519cef06374c7a45ab67af2754f80f57016dcb",
+      "workAfter": "7fc46a63404698ab9a5f27a1b3062857f5e89811643be7749b689f9bc417ac81",
+      "formalAfter": "7fc46a63404698ab9a5f27a1b3062857f5e89811643be7749b689f9bc417ac81"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-tap.m4a",
+      "workBefore": "7f638ef04254b0c7f608a4f73ab9d5bac7eff60dc8491ba38f49f89ab5485698",
+      "formalBefore": "7f638ef04254b0c7f608a4f73ab9d5bac7eff60dc8491ba38f49f89ab5485698",
+      "workAfter": "2712c133eb68903539b4eb003571e6b5650606070668679e02d29edc36d6ffaf",
+      "formalAfter": "2712c133eb68903539b4eb003571e6b5650606070668679e02d29edc36d6ffaf"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-2-resolve.m4a",
+      "workBefore": "7d37894df435f33a63356ab41f275e8c97dba28bb9f1f53e317d7a5a3b6a74fc",
+      "formalBefore": "7d37894df435f33a63356ab41f275e8c97dba28bb9f1f53e317d7a5a3b6a74fc"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-win.m4a",
+      "workBefore": "6d87aa311d0a093ca6d015cbad07515775a7b0d2421cb6f8491c5865d4e75e45",
+      "formalBefore": "6d87aa311d0a093ca6d015cbad07515775a7b0d2421cb6f8491c5865d4e75e45",
+      "workAfter": "999303fde0d90a0b932e4093e578133bd6ea040447655eb3a60bf8ea13427e35",
+      "formalAfter": "999303fde0d90a0b932e4093e578133bd6ea040447655eb3a60bf8ea13427e35"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-bet.m4a",
+      "workBefore": "135c460a5f5f8a167ef8b4438067368e2b8434f606bde949e2e793e7cedf5a54",
+      "formalBefore": "135c460a5f5f8a167ef8b4438067368e2b8434f606bde949e2e793e7cedf5a54",
+      "workAfter": "54d59cc5c5b9c0878af60bb53885c0dac76754f40dd27e331937497b9030a075",
+      "formalAfter": "54d59cc5c5b9c0878af60bb53885c0dac76754f40dd27e331937497b9030a075"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-4.m4a",
+      "workBefore": "8a81afed2cf5744b890335ec898b944a70b5b89d176dc73ed988833734e43b85",
+      "formalBefore": "8a81afed2cf5744b890335ec898b944a70b5b89d176dc73ed988833734e43b85"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-reel-stop.m4a",
+      "workBefore": "46169f318192be70e3fc1e76413ea0ec3b2f5d41234d101478934ab9cff3485b",
+      "formalBefore": "46169f318192be70e3fc1e76413ea0ec3b2f5d41234d101478934ab9cff3485b",
+      "workAfter": "c0f97fabc5188472ad028a555c46f96e40834faad741ce4d82757e25935d51c3",
+      "formalAfter": "c0f97fabc5188472ad028a555c46f96e40834faad741ce4d82757e25935d51c3"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-navigate.m4a",
+      "workBefore": "5df84e8b8a23de1c88e36c8be5ea525863fa548bfc881f8d01932e9b0b9ff6d9",
+      "formalBefore": "5df84e8b8a23de1c88e36c8be5ea525863fa548bfc881f8d01932e9b0b9ff6d9",
+      "workAfter": "188ebdf216e5c4a2e1d7f801747d4a6517c8d58626f5872b3bf4127893fc82bd",
+      "formalAfter": "188ebdf216e5c4a2e1d7f801747d4a6517c8d58626f5872b3bf4127893fc82bd"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-3-resolve.m4a",
+      "workBefore": "f75f6d26f1d7c3f94fd25455ceb42caeb8f995fb1406f4602b558e97e3686078",
+      "formalBefore": "f75f6d26f1d7c3f94fd25455ceb42caeb8f995fb1406f4602b558e97e3686078"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-3-resolve.m4a",
+      "workBefore": "e1e8a4abdd61bca9d3c52026a10b49a71cc36e5eb983037a49ba86f58f6b59a9",
+      "formalBefore": "e1e8a4abdd61bca9d3c52026a10b49a71cc36e5eb983037a49ba86f58f6b59a9"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-1.m4a",
+      "workBefore": "14db0b9f707602c08360f0df10d6d8726e6ea048738d433481de8e7b182ee426",
+      "formalBefore": "14db0b9f707602c08360f0df10d6d8726e6ea048738d433481de8e7b182ee426"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-0.m4a",
+      "workBefore": "5a90ad72431b94b73c5f740c071a885ccde4e0af53a3f9d8ff0d63c1bf4f150f",
+      "formalBefore": "5a90ad72431b94b73c5f740c071a885ccde4e0af53a3f9d8ff0d63c1bf4f150f"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-collect.m4a",
+      "workBefore": "2e903f07ebe239dce07b0c99c9fa172917937f326648f9ce66cb22a1206714ed",
+      "formalBefore": "2e903f07ebe239dce07b0c99c9fa172917937f326648f9ce66cb22a1206714ed",
+      "workAfter": "e6849cccd911c3e66d93a418f360b86c2a871519ba57070eb87ed3fec1a75213",
+      "formalAfter": "e6849cccd911c3e66d93a418f360b86c2a871519ba57070eb87ed3fec1a75213"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-spin.m4a",
+      "workBefore": "043aff81d11ac818d4f94c593a534757561fa5739ceb07e1f80c38f43902e7bb",
+      "formalBefore": "043aff81d11ac818d4f94c593a534757561fa5739ceb07e1f80c38f43902e7bb",
+      "workAfter": "87397d0ad501e255548ee48a0d05de1c103ca105044432b682c89b1c4d7ae5bd",
+      "formalAfter": "87397d0ad501e255548ee48a0d05de1c103ca105044432b682c89b1c4d7ae5bd"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-2.m4a",
+      "workBefore": "a58630788c753046e5b82feb67e556622a5ad2023538ce64ddf1a3dc9772ed9b",
+      "formalBefore": "a58630788c753046e5b82feb67e556622a5ad2023538ce64ddf1a3dc9772ed9b"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-3-resolve.m4a",
+      "workBefore": "7e34ccb4a1ab261a6bf47e5cbf025dee8ecf4044326b2b35281ca376040b5d15",
+      "formalBefore": "7e34ccb4a1ab261a6bf47e5cbf025dee8ecf4044326b2b35281ca376040b5d15"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-3.m4a",
+      "workBefore": "1613936d76f6e68a0804a31164dc7fa1f2407f52a8b62924bd60399d917c4a35",
+      "formalBefore": "1613936d76f6e68a0804a31164dc7fa1f2407f52a8b62924bd60399d917c4a35"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/music-caravan-gold.m4a",
+      "workBefore": "8553200273d52c8bea8c2834a17dded88070f148b9f2b5f497b120735b5d6a98",
+      "formalBefore": "8553200273d52c8bea8c2834a17dded88070f148b9f2b5f497b120735b5d6a98"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-0-resolve.m4a",
+      "workBefore": "5a8ffd37455005cc1890383e8ae30950dc49d5c746aec64329faff0c0c4eae8c",
+      "formalBefore": "5a8ffd37455005cc1890383e8ae30950dc49d5c746aec64329faff0c0c4eae8c"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-4-resolve.m4a",
+      "workBefore": "bccad75a7e35e96d147cedf4709d7853f8fbdfc90477bf72489eb886428ab317",
+      "formalBefore": "bccad75a7e35e96d147cedf4709d7853f8fbdfc90477bf72489eb886428ab317"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-4.m4a",
+      "workBefore": "329e4717c427b722c7141064be323010687f6c13406897bb8b9152740ae847b7",
+      "formalBefore": "329e4717c427b722c7141064be323010687f6c13406897bb8b9152740ae847b7"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/music-crown-voyage.m4a",
+      "workBefore": "945189ec84ac12fd95cc26bc5a88030d579589a7caf0faa56bdc53e26e3de555",
+      "formalBefore": "945189ec84ac12fd95cc26bc5a88030d579589a7caf0faa56bdc53e26e3de555"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-0-resolve.m4a",
+      "workBefore": "d2aa80d229401df31bbf76c95a56636e6a078e26bdc6d5c7b987fb1ed903266c",
+      "formalBefore": "d2aa80d229401df31bbf76c95a56636e6a078e26bdc6d5c7b987fb1ed903266c"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-3.m4a",
+      "workBefore": "1a0e1f178546a6cd32dc0308221b7b8da3040fe16d0a04102b3ba77a73196b26",
+      "formalBefore": "1a0e1f178546a6cd32dc0308221b7b8da3040fe16d0a04102b3ba77a73196b26"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-reward.m4a",
+      "workBefore": "58ed9575acc1bfa1d0aa8cd3e0be7e377275ebdad1f44315a2ac0afa29186dca",
+      "formalBefore": "58ed9575acc1bfa1d0aa8cd3e0be7e377275ebdad1f44315a2ac0afa29186dca",
+      "workAfter": "0bfdac42aaa31b0cde10f9505815050eaea2b33d58387d8dffc4f645be7a2c0a",
+      "formalAfter": "0bfdac42aaa31b0cde10f9505815050eaea2b33d58387d8dffc4f645be7a2c0a"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-0-resolve.m4a",
+      "workBefore": "9b20ae4a1acf5bec7e05e41bae4773b71390bcb08b0bde9fa973b8ecb34bc70e",
+      "formalBefore": "9b20ae4a1acf5bec7e05e41bae4773b71390bcb08b0bde9fa973b8ecb34bc70e"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-2.m4a",
+      "workBefore": "6f24af7bd4015085f58e53dffdbd03f2ed95215d9c1348e5ac673e4519f4a92e",
+      "formalBefore": "6f24af7bd4015085f58e53dffdbd03f2ed95215d9c1348e5ac673e4519f4a92e"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-0.m4a",
+      "workBefore": "a6abf2f66f4fc7ed381cb1ae654d1cea49c4726556a22d151f2e73b1be00cea3",
+      "formalBefore": "a6abf2f66f4fc7ed381cb1ae654d1cea49c4726556a22d151f2e73b1be00cea3"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/music-lobby.m4a",
+      "workBefore": "ec61fac16157e711763cdb0e8c21bb92cf15717ae6c333cb71034376ccf3b8fe",
+      "formalBefore": "ec61fac16157e711763cdb0e8c21bb92cf15717ae6c333cb71034376ccf3b8fe"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-toggle.m4a",
+      "workBefore": "53d79aa3c5c22461afc30aa13c7d7b1f77d739f71e994177efb0c9abb43f1743",
+      "formalBefore": "53d79aa3c5c22461afc30aa13c7d7b1f77d739f71e994177efb0c9abb43f1743",
+      "workAfter": "a2b262aa0921630e523510f1dd0f779dec7f7949f22a4c1181b030b1c4223e9e",
+      "formalAfter": "a2b262aa0921630e523510f1dd0f779dec7f7949f22a4c1181b030b1c4223e9e"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-1.m4a",
+      "workBefore": "66f85d50583e9c6868b599e7abb760cfe9c0fd993986b75145045765b6830d3a",
+      "formalBefore": "66f85d50583e9c6868b599e7abb760cfe9c0fd993986b75145045765b6830d3a"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-1-resolve.m4a",
+      "workBefore": "74e5c5b516eb95df8bfe7127e4811b097223aeabfa99aa81390ebefc422b1b20",
+      "formalBefore": "74e5c5b516eb95df8bfe7127e4811b097223aeabfa99aa81390ebefc422b1b20"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-2-resolve.m4a",
+      "workBefore": "01777135a8c97327531331b20cf87bdfddcd6bc200bc26ed0569f1a30efd0f14",
+      "formalBefore": "01777135a8c97327531331b20cf87bdfddcd6bc200bc26ed0569f1a30efd0f14"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-confirm.m4a",
+      "workBefore": "b096101700534700e2f864a0effff886ce041fa8f118174d1967ff3b42d453ac",
+      "formalBefore": "b096101700534700e2f864a0effff886ce041fa8f118174d1967ff3b42d453ac",
+      "workAfter": "f0a717819c25b63c53c7224cbbf927ed6602a2b2d66a5862594d88f617fdd8ef",
+      "formalAfter": "f0a717819c25b63c53c7224cbbf927ed6602a2b2d66a5862594d88f617fdd8ef"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-big-win.m4a",
+      "workBefore": "3fec8af0ce4018a798d61bf7117ccd06ece8f3903996bb49cd282eeabf96cc49",
+      "formalBefore": "3fec8af0ce4018a798d61bf7117ccd06ece8f3903996bb49cd282eeabf96cc49",
+      "workAfter": "35136448eaabcd6f0873f44daaedc0b71481710178e0015c5b02f51493bf04d7",
+      "formalAfter": "35136448eaabcd6f0873f44daaedc0b71481710178e0015c5b02f51493bf04d7"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-reel-roll.m4a",
+      "workBefore": "9d50138aa2a1d9543a6c60be6b960cc63d1b206bd28d2ac33a9d8df6d6973a7d",
+      "formalBefore": "9d50138aa2a1d9543a6c60be6b960cc63d1b206bd28d2ac33a9d8df6d6973a7d",
+      "workAfter": "abaa53ce008ddde90f403cebd6f55c1e1620ceceae69f347cb6174004b501b98",
+      "formalAfter": "abaa53ce008ddde90f403cebd6f55c1e1620ceceae69f347cb6174004b501b98"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-2-resolve.m4a",
+      "workBefore": "81713987bdfdd9752abcbe7c57fd95a7305a66d44717bbe632a3d2e6e1c1c1c1",
+      "formalBefore": "81713987bdfdd9752abcbe7c57fd95a7305a66d44717bbe632a3d2e6e1c1c1c1"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-2-resolve.m4a",
+      "workBefore": "bb5afec3f1a7bd9818790a4f595f27b87d8f01c89fe04bef7310fd91027b0ecb",
+      "formalBefore": "bb5afec3f1a7bd9818790a4f595f27b87d8f01c89fe04bef7310fd91027b0ecb"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-3-resolve.m4a",
+      "workBefore": "e9842d49439b43758a52a544325ba1e81fe5758415e111a7f40471e7eb34ea20",
+      "formalBefore": "e9842d49439b43758a52a544325ba1e81fe5758415e111a7f40471e7eb34ea20"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-3.m4a",
+      "workBefore": "e462f9d4867d19195f931a6270e178661b43c94181487d5e29833f66ab9feaac",
+      "formalBefore": "e462f9d4867d19195f931a6270e178661b43c94181487d5e29833f66ab9feaac"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-0.m4a",
+      "workBefore": "c0197af2a0f4a21c99283b3f1ebb96f5f56b032a33001173f18ef5831fd3f83d",
+      "formalBefore": "c0197af2a0f4a21c99283b3f1ebb96f5f56b032a33001173f18ef5831fd3f83d"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-0-resolve.m4a",
+      "workBefore": "f07bc5d268787899d496e50887b966bb9160d670295c222c7cd9fbfb22106f48",
+      "formalBefore": "f07bc5d268787899d496e50887b966bb9160d670295c222c7cd9fbfb22106f48"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-error.m4a",
+      "workBefore": "c5a654f3cdda03cb24e81bfaeb139ccbc61ee535bcd6ca3ae55b380ad473b19e",
+      "formalBefore": "c5a654f3cdda03cb24e81bfaeb139ccbc61ee535bcd6ca3ae55b380ad473b19e",
+      "workAfter": "f5425eb9f85c6ae2179f19614f057a923af933a5ac61cbc50ad33d2d6a958a93",
+      "formalAfter": "f5425eb9f85c6ae2179f19614f057a923af933a5ac61cbc50ad33d2d6a958a93"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-4-resolve.m4a",
+      "workBefore": "96ee05a03b0cfb3661721223c84b81efe9da8dc866862f2a3a2031c329a41c05",
+      "formalBefore": "96ee05a03b0cfb3661721223c84b81efe9da8dc866862f2a3a2031c329a41c05"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-1.m4a",
+      "workBefore": "032db2828be361457b7484a1a7ba65d1d96dff019ef13cb58a0941f40de75c4f",
+      "formalBefore": "032db2828be361457b7484a1a7ba65d1d96dff019ef13cb58a0941f40de75c4f"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-2.m4a",
+      "workBefore": "d54df0b1dd28d28779294e86045d23b13857ba81c177a688e9a124e5e3de9335",
+      "formalBefore": "d54df0b1dd28d28779294e86045d23b13857ba81c177a688e9a124e5e3de9335"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-3.m4a",
+      "workBefore": "64edf3e1a5f060b1f1ae66b1d4946b0063884e710a9a01487fc876eacead469a",
+      "formalBefore": "64edf3e1a5f060b1f1ae66b1d4946b0063884e710a9a01487fc876eacead469a"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-0.m4a",
+      "workBefore": "fb8fe46f9e7f245165810aeb9ae2cce9e5661df31cfbb86a134653611777f458",
+      "formalBefore": "fb8fe46f9e7f245165810aeb9ae2cce9e5661df31cfbb86a134653611777f458"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-1-resolve.m4a",
+      "workBefore": "77f46681a6bf27eca6eb68c7cb0da8a29df84f14a086c0b3609278dab1e7906d",
+      "formalBefore": "77f46681a6bf27eca6eb68c7cb0da8a29df84f14a086c0b3609278dab1e7906d"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-1-resolve.m4a",
+      "workBefore": "736f3de4824bff2a3930660b65e7d5a0e85461c03208c64562610aabafac15fc",
+      "formalBefore": "736f3de4824bff2a3930660b65e7d5a0e85461c03208c64562610aabafac15fc"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-1.m4a",
+      "workBefore": "1b652d8d84f7428f044918d3066a0a6f2517b3497bada1ff21e511a28f0bc5eb",
+      "formalBefore": "1b652d8d84f7428f044918d3066a0a6f2517b3497bada1ff21e511a28f0bc5eb"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-2.m4a",
+      "workBefore": "93b534e58b1c4ae6c99e0b1db33cad72cecb3f2e36be1c5ed34da0e2a6727c5e",
+      "formalBefore": "93b534e58b1c4ae6c99e0b1db33cad72cecb3f2e36be1c5ed34da0e2a6727c5e"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/music-ruby-bazaar.m4a",
+      "workBefore": "15521ecd0d667ff6109431e0f39eb386200ae10b82dd23fbe0078cac14780eb6",
+      "formalBefore": "15521ecd0d667ff6109431e0f39eb386200ae10b82dd23fbe0078cac14780eb6"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-epic-win.m4a",
+      "workBefore": "7e61cff4a8578680d461bf6031e9d661f22cbed20bbdcfc0f92cb94b588d9bf6",
+      "formalBefore": "7e61cff4a8578680d461bf6031e9d661f22cbed20bbdcfc0f92cb94b588d9bf6",
+      "workAfter": "aa32baed735bf71705b430a059990f4aac4228b0176b472ee500562907fb3493",
+      "formalAfter": "aa32baed735bf71705b430a059990f4aac4228b0176b472ee500562907fb3493"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-caravan-gold-4-resolve.m4a",
+      "workBefore": "ae43dde433ceebc25de5627eb8eeced96a032117086d301114bb262a272ab8b7",
+      "formalBefore": "ae43dde433ceebc25de5627eb8eeced96a032117086d301114bb262a272ab8b7"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-4.m4a",
+      "workBefore": "6f70272da668be1269beefdfcb224571ebce231892d94c3912abb339604f5863",
+      "formalBefore": "6f70272da668be1269beefdfcb224571ebce231892d94c3912abb339604f5863"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-ruby-bazaar-4-resolve.m4a",
+      "workBefore": "63351bbd33766adf012829465be7a85dd1b4faa08fc71dc2c0f5198af598e448",
+      "formalBefore": "63351bbd33766adf012829465be7a85dd1b4faa08fc71dc2c0f5198af598e448"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/music-sapphire-oasis.m4a",
+      "workBefore": "a2d0b134bf4a90acc541388192eb380b4c4e2d45795caaab61d82e9554d4f3f2",
+      "formalBefore": "a2d0b134bf4a90acc541388192eb380b4c4e2d45795caaab61d82e9554d4f3f2"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-crown-voyage-4.m4a",
+      "workBefore": "5ed1760a18689ab478b5d659b0b60b421d74788b51c4025f35f5d9e7b27496e3",
+      "formalBefore": "5ed1760a18689ab478b5d659b0b60b421d74788b51c4025f35f5d9e7b27496e3"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/award-sapphire-oasis-1-resolve.m4a",
+      "workBefore": "eb93b6f1a1dc4c40bd27863a17d00965b2b20a30955ee6f45606dc1b52cd068e",
+      "formalBefore": "eb93b6f1a1dc4c40bd27863a17d00965b2b20a30955ee6f45606dc1b52cd068e"
+    }
+  ],
+  "sourceSyncedAt": "2026-10-10T03:31:00.460214+00:00",
+  "unchangedMusicAndAwards": 45,
+  "changedPaths": [
+    "assets/scripts/audio/SoundscapeEngine.ts",
+    "assets/scripts/audio/AudioManager.ts",
+    "tools/master-audio.py",
+    "tools/audio-recording-test.ts",
+    "tools/audio-test.ts",
+    "build-templates/web-mobile/audio/manifest.json",
+    "build-templates/web-mobile/audio/fx-tap.m4a",
+    "build-templates/web-mobile/audio/fx-win.m4a",
+    "build-templates/web-mobile/audio/fx-bet.m4a",
+    "build-templates/web-mobile/audio/fx-reel-stop.m4a",
+    "build-templates/web-mobile/audio/fx-navigate.m4a",
+    "build-templates/web-mobile/audio/fx-collect.m4a",
+    "build-templates/web-mobile/audio/fx-spin.m4a",
+    "build-templates/web-mobile/audio/fx-reward.m4a",
+    "build-templates/web-mobile/audio/fx-toggle.m4a",
+    "build-templates/web-mobile/audio/fx-confirm.m4a",
+    "build-templates/web-mobile/audio/fx-big-win.m4a",
+    "build-templates/web-mobile/audio/fx-reel-roll.m4a",
+    "build-templates/web-mobile/audio/fx-error.m4a",
+    "build-templates/web-mobile/audio/fx-epic-win.m4a"
+  ],
+  "completedAt": "2026-10-10T03:42:52.502530+00:00",
+  "documentationSynced": [
+    {
+      "path": "docs/QA.md",
+      "sha256": "7d772b70b646e890a65a5cdc7c59bb6447833187c1d6d7bd983645a2783d7b11"
+    },
+    {
+      "path": "docs/qa/audio-detail-artifact.json",
+      "sha256": "0b21ce7c17bebd519dbbadc46f2577216263c6f34326973b881d89e45462719d"
+    },
+    {
+      "path": "docs/qa/audio-detail-assets.json",
+      "sha256": "1b81f75359cd695edf38665ed2e46b89f3d10a4db146adb108facfaff3dc704c"
+    },
+    {
+      "path": "docs/qa/audio-detail-browser.json",
+      "sha256": "6b832dc2a052c2456cbb5c746ebd2129ff71aa1377bd516dae19876dda94b7e8"
+    },
+    {
+      "path": "docs/qa/audio-detail-build.log",
+      "sha256": "a03404f578d47593056d6d495cbd57d73e01fd8a92270a3ba0b1fabbeca75745"
+    },
+    {
+      "path": "docs/qa/audio-detail-tests.log",
+      "sha256": "68555a2e70e6746befa14e359f00f5c0e4538d979c8c925410b66e91b25ba320"
+    },
+    {
+      "path": "docs/qa/audio-detail-types.log",
+      "sha256": "96ad054b4f00ff2409f1979c8185ba817770bd7affbea3e24455aafc40f5cd85"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-account.jpg",
+      "sha256": "7e3b2724ed4d79d65951dd2c50ba85662d75fec349564ab85358c9fc50a4836d"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-big-award.jpg",
+      "sha256": "2844dcb7b27a2ec21e5339d7570515e9cea840017345772f1ce1148544b72a03"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-big-settled.jpg",
+      "sha256": "c446944d02f222ace329c4f057890f455885fcf622813f55b4a0329bf2be599e"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-cabinet-settled.jpg",
+      "sha256": "427b0a87306a93e63582cefe7b956ed1b84d7a5a940c5932845b93a2a577b457"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-effects-off.jpg",
+      "sha256": "aa34194b1361b8c5e67d2eee381b4929ca1b0c00213eef1d3c5193e2ce84a63c"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-home.jpg",
+      "sha256": "cfb2a10001436b59f35c846fbf3f1b11e17220eb9f9b19184b76b46b7c13de4d"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-music-off.jpg",
+      "sha256": "ffb3385b565201c22aff87f12b09212ab70c850eb42f2cb5ae6b43599ae67a33"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-settings.jpg",
+      "sha256": "a8d6190d78bfe0e69f00cd5f4a544155c126e570fef0a28a2c7cf3bdfe04b67e"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-super-award.jpg",
+      "sha256": "8473325ded0b87254e89e5ed7dca6b26adc70c63593702e07f5aef9241056805"
+    },
+    {
+      "path": "docs/screenshots/audio-detail-super-settled.jpg",
+      "sha256": "e11ba332bbb57329cbeee94a2ccd62d85f7e2aa235c14cbe832b896ae9c9c4a7"
+    }
+  ],
+  "finalVerifiedSourceAndAudioFiles": 65,
+  "publishedFilesVerified": 60
+}

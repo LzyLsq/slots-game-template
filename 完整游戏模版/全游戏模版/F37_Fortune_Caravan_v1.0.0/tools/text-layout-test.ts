@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {containTextBox,fittedText,plateSections,plateTextBox,textGlyphs,type TextBox} from '../assets/scripts/ui/TextLayout';
+import {journeyCounts} from '../assets/scripts/ui/LobbyDetails';
+import {CABINETS} from '../assets/scripts/ui/CabinetGeometry';
 import {LANGUAGES,setLanguage,tr} from '../assets/scripts/ui/Language';
 const inside=(rect:TextBox,bounds:TextBox)=>{
  for(const axis of ['x','y'] as const){const size=axis==='x'?'width':'height';assert(rect[axis]-rect[size]/2>=bounds[axis]-bounds[size]/2-1e-8);assert(rect[axis]+rect[size]/2<=bounds[axis]+bounds[size]/2+1e-8);}
@@ -25,6 +27,16 @@ for(const lang of LANGUAGES){setLanguage(lang.code);
   }
  }
 }
+// AUTO captions preserve the exact localized state inside each measured
+// console seat; the state must never wrap into the central SPIN lettering.
+for(const locale of LANGUAGES){
+ setLanguage(locale.code);
+ for(const g of Object.values(CABINETS))for(const source of ['AUTO ON','AUTO OFF']){
+  const value=tr(source),fit=fittedText(value,{width:g.status[2]-8,height:g.status[3]-5,maximum:29,wrap:false,leading:1.05,measure:approximate});
+  assert.equal(fit.text,value);assert(!fit.text.includes('\n'));assert(fit.size>=21,'AUTO state needs readable full text, not just containment');
+ }
+}
+setLanguage('en');
 // Reward day and amount share one caption, not independently clamped boxes
 // that overlap when ornamental shoulders narrow the face.
 const rewardBounds=plateTextBox(430,146);
@@ -146,9 +158,12 @@ assert(appSource.includes('appleCaption.node.getComponent(TextFit)!.compactLine=
 setLanguage('en');console.log('PASS legible single-line login hints within measured enamel.');
 
 // Journey completion never shows misleading over-target fractions.
-assert(appSource.includes('${Math.min(next.modesDone,next.modes)}/${next.modes} lands'));
-assert(appSource.includes('${Math.min(stop.modesDone,stop.modes)}/${stop.modes} lands'));
-for(const done of [0,1,2,3,4])for(const target of [1,2,3,4])assert(Math.min(done,target)<=target);
+assert(appSource.includes('line=lobbyJourneyCaption(next,this.services.remoteMode)'));
+assert(appSource.includes('journeyStopCaption(stop)'));
+for(const done of [0,1,2,3,4])for(const target of [1,2,3,4]){
+ const counts=journeyCounts({roundsDone:done,rounds:target,modesDone:done,modes:target});
+ assert.equal(counts.rounds,`${Math.min(done,target)}/${target}`);assert.equal(counts.modes,counts.rounds);
+}
 // A live login resize changes the cover, not the EditBox tree. Keyboard/IME
 // input remains intact; normal responsive changes reposition the legal rail.
 assert(appSource.includes('room?.getComponent(UITransform)?.setContentSize(frame.rect.width*cover,frame.rect.height*cover)'));

@@ -5,6 +5,7 @@ import {containTextBox,plateSections,plateTextBox,type TextBox} from './TextLayo
 const artworkTextBounds=new WeakMap<Node,TextBox>();
 import {CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT,cabinetRoomStrips,type CabinetGeometry} from './CabinetGeometry';
 import {SYMBOL_CROPS} from './SymbolCrop';
+import {cabinetSceneTiles,type SceneTransform} from './CabinetScene';
 import {tr,language} from './Language';
 import { Color, EventTouch, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
 export const COLORS = { cream: '#FFF8E7', gold: '#FFD988', jade: '#214D57', ink: '#4B362A', coral: '#ED967C' };
@@ -89,6 +90,8 @@ export class SalonArt {
   public cabinetRoom(parent:Node,name:string,base:CabinetGeometry,extension:number):Node {
     const room=box(parent,'Continuous cabinet room',0,0,CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT);
     const texture=this.frame(name).texture;
+    // No section seams at all for the authored, unextended cabinet.
+    if(extension===0){this.image(room,name,0,0,CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT);return room;}
     for(const [i,part] of cabinetRoomStrips(base,extension).entries()){
       const key=`${name}:glass-section-${i}`;let frame=this.frames.get(key);
       if(!frame){frame=new SpriteFrame();frame.texture=texture;
@@ -98,6 +101,28 @@ export class SalonArt {
       const sprite=n.addComponent(Sprite);sprite.sizeMode=Sprite.SizeMode.CUSTOM;sprite.spriteFrame=frame;
     }
     return room;
+  }
+  /** Fill only the uncovered perimeter of the single authored room. These
+   * sprites inherit the cabinet transform: no second full-screen machine,
+   * blur, detached background camera or scale change on the interactive art. */
+  public fitCabinetRoom(room:Node,name:string,w:number,h:number,transform:SceneTransform):void {
+    let perimeter=room.getChildByName('Continuous scene perimeter');
+    if(!perimeter){perimeter=box(room,'Continuous scene perimeter',0,0,CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT);perimeter.setSiblingIndex(0);}
+    const tiles=cabinetSceneTiles(w,h,transform);
+    for(const existing of perimeter.children)existing.active=false;
+    for(const tile of tiles){
+      let n=perimeter.getChildByName(tile.name);
+      if(!n){n=box(perimeter,tile.name,0,0,1,1);const sprite=n.addComponent(Sprite);sprite.sizeMode=Sprite.SizeMode.CUSTOM;
+        const frame=new SpriteFrame();frame.texture=this.frame(name).texture;frame.packable=false;sprite.spriteFrame=frame;
+        n.once(Node.EventType.NODE_DESTROYED,()=>frame.destroy());}
+      n.active=true;
+      const [sx,sy,sw,sh]=tile.source,[dx,dy,dw,dh]=tile.destination;
+      const frame=n.getComponent(Sprite)!.spriteFrame!;
+      frame.rect=new Rect(sx,sy,sw,sh);frame.originalSize=new Size(sw,sh);
+      n.getComponent(UITransform)!.setContentSize(dw,dh);
+      n.setPosition(dx+dw/2-CABINET_ROOM_WIDTH/2,CABINET_ROOM_HEIGHT/2-dy-dh/2);
+      n.setScale(tile.flipX?-1:1,tile.flipY?-1:1,1);
+    }
   }
   public light(parent: Node, index:number, x:number,y:number,w:number,h:number,alpha=120,atlas='optics'):Node {
     const n=this.image(parent,atlas,x,y,w,h,index);const s=n.getComponent(Sprite)!;

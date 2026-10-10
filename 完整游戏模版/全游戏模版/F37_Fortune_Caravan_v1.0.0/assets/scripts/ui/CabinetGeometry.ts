@@ -23,8 +23,9 @@ export interface CabinetGeometry {
 // Measured on the FINAL 1024×2304 room composition; cabinet pixels stay 1:1. The dark interior, each molded
 // console socket and each inlaid register have different positions by theme.
 const measured=(index:number,screen:Box,title:Box,balance:Box,bet:Box,win:Box,spin:Box,minus:Box,plus:Box,auto:Box):CabinetGeometry=>{
+ // AUTO state belongs above its own engraved switch, never under SPIN.
  const scale=(box:Box):Box=>box.map(v=>v*K) as unknown as Box;
- return {screen:scale(screen),title:scale(title),balance:scale(balance),bet:scale(bet),win:scale(win),topWin:scale(win),spin:scale(spin),minus:scale(minus),plus:scale(plus),auto:scale(auto),status:scale([auto[0]+auto[2]+14,auto[1]+8,270,37]),screenExtension:0,ink:'#FFF4DE',titleIndex:index,guardian:GUARDIANS[index]};
+ return {screen:scale(screen),title:scale(title),balance:scale(balance),bet:scale(bet),win:scale(win),topWin:scale(win),spin:scale(spin),minus:scale(minus),plus:scale(plus),auto:scale(auto),status:scale([auto[0]-6,auto[1]-30,auto[2]+12,28]),screenExtension:0,ink:'#FFF4DE',titleIndex:index,guardian:GUARDIANS[index]};
 };
 /** Measured in original 836x1881 generated renders, not prompt coordinates. */
 export const CABINETS:Record<GameId,CabinetGeometry>={
@@ -63,7 +64,11 @@ export function cabinetFooter(width:number,height:number,bottomInset=0):{reserve
  return {reserve:awardOffset+130,hintY:-height/2+bottomInset+140,awardY:-height/2+bottomInset+awardOffset};
 }
 export function cabinetLayout(width:number,height:number,g:CabinetGeometry,topInset=0,bottomInset=0,leftInset=0,rightInset=0):{scale:number;y:number}{
- const boxes=[g.title,g.balance,g.screen,g.win,g.spin,g.minus,g.plus,g.auto,g.bet,g.topWin,g.status,guardianMotionBounds(g.guardian)];
+ // Retain the measured lower touch clearance even when the AUTO caption
+ // moves above the switch. Otherwise short screens zoom in and push its
+ // larger invisible touch target into the award/footer area.
+ const autoDock:Box=[g.auto[0],g.auto[1],g.auto[2],Math.max(g.auto[3],45*K)];
+ const boxes=[g.title,g.balance,g.screen,g.win,g.spin,g.minus,g.plus,autoDock,g.bet,g.topWin,g.status,guardianMotionBounds(g.guardian)];
  const top=1152-Math.min(...boxes.map(b=>b[1]));
  const bottom=1152-Math.max(...boxes.map(b=>b[1]+b[3]));
  const left=Math.min(...boxes.map(b=>b[0])),right=Math.max(...boxes.map(b=>b[0]+b[2]));

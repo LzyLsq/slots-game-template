@@ -29,7 +29,7 @@ export class RankService {
 export interface HallRankEntry extends RankEntry { virtual: boolean; }
 /** Mixed display standings; never writes character scores into saved player records. */
 export function hallStandings(players: readonly RankEntry[]): HallRankEntry[] {
-  const friends = [{"nickname": "Pendulum Keeper", "winnings": 78844, "avatar": 0}, {"nickname": "Amber Tick", "winnings": 58976, "avatar": 1}, {"nickname": "Coin Mintmaster", "winnings": 43608, "avatar": 2}, {"nickname": "Hourglass Rider", "winnings": 30940, "avatar": 3}, {"nickname": "Crown Gearsmith", "winnings": 19172, "avatar": 4}, {"nickname": "Vault Curator", "winnings": 11004, "avatar": 5}, {"nickname": "Ruby Escapement", "winnings": 5536, "avatar": 6}, {"nickname": "Midnight Chime", "winnings": 1868, "avatar": 7}];
+  const friends = [{"nickname": "Caravan Captain", "winnings": 78844, "avatar": 0}, {"nickname": "Oasis Treasurer", "winnings": 58976, "avatar": 1}, {"nickname": "Bazaar Goldsmith", "winnings": 43608, "avatar": 2}, {"nickname": "Crown Navigator", "winnings": 30940, "avatar": 3}, {"nickname": "Desert Prospector", "winnings": 19172, "avatar": 4}, {"nickname": "Vault Curator", "winnings": 11004, "avatar": 5}, {"nickname": "Ruby Collector", "winnings": 5536, "avatar": 6}, {"nickname": "Harbour Merchant", "winnings": 1868, "avatar": 7}];
   return [...players.map(p=>({...p,virtual:false})),...friends.map(p=>({...p,rank:0,current:false,virtual:true}))]
     .sort((a,b)=>b.winnings-a.winnings||Number(a.virtual)-Number(b.virtual)||a.rank-b.rank||a.nickname.localeCompare(b.nickname))
     .map((p,i)=>({...p,rank:i+1}));

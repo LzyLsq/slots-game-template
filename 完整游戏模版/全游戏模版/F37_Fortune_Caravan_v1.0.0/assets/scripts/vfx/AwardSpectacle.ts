@@ -21,12 +21,17 @@ export function spectacleSeed(kind:SpectacleKind,index:number):SpectacleSeed{
   life:kind==='rain'?2.15+seed*1.55:1.6+seed*.85,delay:kind==='rain'?.15+seed*1.7:.27+(index%16)*.046};
 }
 /** Gold has its own space: nothing is permitted across the title, rules or coin register. */
-export function spectacleKeepout(p:SpectaclePose,size:number,side:number):void{
+export function spectacleKeepout(p:SpectaclePose,size:number,_side:number):void{
  const radius=size*Math.max(p.scaleX,p.scaleY)*.72;
- if((p.y+radius>396&&p.y-radius<776)||(p.y+radius>-825&&p.y-radius<-354)){
-  const boundary=516+radius;p.x=side*Math.max(Math.abs(p.x),boundary);
- }
+ // Keep the physical trajectory intact. Fade BEFORE reaching the expanded
+ // readable rectangle; teleporting to a side lane looked like a pasted sprite.
+ const dx=Math.abs(p.x)-(516+radius);
+ const titleDistance=Math.max(dx,396-radius-p.y,p.y-(776+radius));
+ const registerDistance=Math.max(dx,-825-radius-p.y,p.y-(-354+radius));
+ p.alpha*=smooth(Math.min(titleDistance,registerDistance)/88);
 }
+/** The two crescendos resolve into a calmer treasure hold, not endless peak brightness. */
+export function spectacleQuiet(time:number,plan:AwardTiming):number{return smooth((time-plan.climaxEnd)/.8);}
 export function spectaclePulse(time:number,plan:AwardTiming):number{
  const age=time-plan.countEnd;
  if(age<0)return 0;
@@ -36,7 +41,7 @@ export function spectaclePulse(time:number,plan:AwardTiming):number{
 export function spectaclePose(s:SpectacleSeed,time:number,plan:AwardTiming,out:SpectaclePose):SpectaclePose{
  out.x=out.y=out.angle=out.alpha=out.scaleX=out.scaleY=0;
  if(!Number.isFinite(time)||time<s.delay)return out;
- const {seed,side,index,kind}=s,age=time-s.delay,p=(age%s.life)/s.life;
+ const {seed,side,index,kind}=s,age=time-s.delay,p=(age%s.life)/s.life,quiet=spectacleQuiet(time,plan);
  const entrance=smooth((time-s.delay)/.32),pulse=spectaclePulse(time,plan);
  const fade=Math.min(1,p*9,(1-p)*7);
  if(kind==='fountain'){
@@ -65,8 +70,11 @@ export function spectaclePose(s:SpectacleSeed,time:number,plan:AwardTiming,out:S
   out.x=Math.cos(angle)*radius;out.y=80+Math.sin(angle)*radius*.68;
   out.scaleY=active?.45+q*1.15:.42+.5*Math.sin(q*Math.PI);out.scaleX=out.scaleY;
   out.angle=index*17-time*side*18;
-  out.alpha=(active?245*Math.sin(q*Math.PI):140*Math.pow(Math.max(0,Math.sin(q*Math.PI)),8))*entrance;
+  // Switch choreography only while invisible, including both burst boundaries.
+  const ambientGate=burstAge<0?1-smooth((burstAge+.20)/.20):smooth((burstAge-1.22)/.20);
+  out.alpha=(active?245*Math.sin(q*Math.PI):140*Math.pow(Math.max(0,Math.sin(q*Math.PI)),8)*ambientGate)*entrance;
  }
  if(kind!=='spark')out.alpha=Math.min(255,out.alpha*(.92+.15*pulse));
+ out.alpha*=1-.38*quiet;
  spectacleKeepout(out,s.size,side);return out;
 }

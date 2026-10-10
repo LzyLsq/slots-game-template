@@ -1,0 +1,105 @@
+{
+  "work": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0",
+  "formal": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F37_Fortune_Caravan_v1.0.0",
+  "files": [
+    {
+      "path": "assets/scripts/ui/AureliaApp.ts",
+      "before": "210b9803821eaa96b68dd974505b50f340207b6d5847a414169fbf20d334c5e1",
+      "after": "5333e1b49a9d46852fd7564426c0d6bdd94ada4ebfac31a17b28bd52c4b89aad",
+      "beforeContrastRefinement": "3d92060344f35fdd4d535d316bcdb9b02779dadd6c573f115a08f5d87325f581"
+    },
+    {
+      "path": "assets/scripts/ui/ClockworkLocale.ts",
+      "before": "0dab1816d2917c87aabb280d63117421a5ddaa3e35639472478c3191a549f9e2",
+      "after": "3d6a222ec505f6f092f71a2a192ef17f984638173846295ac4e4b07c9618366b"
+    },
+    {
+      "path": "assets/scripts/services/RankService.ts",
+      "before": "e616fe0fdd3671cc55b846adce210b2218371339b6a4bd71b95f0010a2309abb",
+      "after": "1bcc105efa4b5d66e585fd9cc45b4e500cd46dc105eb440b4f54729742a26429"
+    },
+    {
+      "path": "tools/rank-test.ts",
+      "before": "d08c6b7362e9fe8d4e554c6ab2703d879954d7ee0c9efc37487af56ea5a19c60",
+      "after": "92180646b6eceb796e9d0ef3df952130e697fadb532f29ec5006d542561eb351"
+    },
+    {
+      "path": "tools/language-test.ts",
+      "before": "b4e305aa9307d3c4b5e445df57959f3c4d330ce7606c24037f92c52e257ecb84",
+      "after": "b20ad797058d620ff61beced96e376fff9698a034cd94f6ba2154fd2ef823078"
+    },
+    {
+      "path": "tools/lobby-detail-test.ts",
+      "before": "99c1f500505b5bbe54fcc0647a253d2e3e2e3d071bd8cec6f92cab257bcdb5a9",
+      "after": "0ae5bbf45194dbf2fa1d59fdb9b72eeabaa30dfac0e2dab61da7c6dd19774d8b",
+      "beforeContrastRefinement": "49d542db80d280970887cb6a163dae3e9ec218c6a34bf07a5f14edae115672f9"
+    },
+    {
+      "path": "docs/QA.md",
+      "before": "7d772b70b646e890a65a5cdc7c59bb6447833187c1d6d7bd983645a2783d7b11",
+      "after": "7561cbb68de132e718bbf7d3643b6636043716d8119133e92273e255fa5fe5ee"
+    }
+  ],
+  "sourceSynced": true,
+  "docsPending": false,
+  "evidenceSynced": [
+    "docs/qa/visual-bug-audit-browser.json",
+    "docs/qa/visual-bug-audit-build-initial.log",
+    "docs/qa/visual-bug-audit-build.log",
+    "docs/qa/visual-bug-audit-final-artifact.json",
+    "docs/qa/visual-bug-audit-initial-artifact.json",
+    "docs/qa/visual-bug-audit-release.log",
+    "docs/qa/visual-bug-audit-sync.json",
+    "docs/qa/visual-bug-audit-tests.log",
+    "docs/qa/visual-bug-audit-types.log",
+    "docs/screenshots/visual-audit-account-320.jpg",
+    "docs/screenshots/visual-audit-account-390.jpg",
+    "docs/screenshots/visual-audit-account-close-input-390.jpg",
+    "docs/screenshots/visual-audit-audit-bazaar-game-390.jpg",
+    "docs/screenshots/visual-audit-audit-caravan-game-390.jpg",
+    "docs/screenshots/visual-audit-audit-login-320.jpg",
+    "docs/screenshots/visual-audit-audit-login-390.jpg",
+    "docs/screenshots/visual-audit-audit-voyage-game-390.jpg",
+    "docs/screenshots/visual-audit-final-account-390.jpg",
+    "docs/screenshots/visual-audit-final-home-390.jpg",
+    "docs/screenshots/visual-audit-final-journey-390.jpg",
+    "docs/screenshots/visual-audit-final-nickname-390.jpg",
+    "docs/screenshots/visual-audit-final-rank-390.jpg",
+    "docs/screenshots/visual-audit-final-settings-390.jpg",
+    "docs/screenshots/visual-audit-final-settings-resize-320.jpg",
+    "docs/screenshots/visual-audit-final-shop-390.jpg",
+    "docs/screenshots/visual-audit-fixed-account-320.jpg",
+    "docs/screenshots/visual-audit-fixed-account-after-dialog-close-320.jpg",
+    "docs/screenshots/visual-audit-fixed-home-390.jpg",
+    "docs/screenshots/visual-audit-fixed-nickname-before-resize-320.jpg",
+    "docs/screenshots/visual-audit-fixed-settings-320.jpg",
+    "docs/screenshots/visual-audit-fixed-settings-after-resize-390.jpg",
+    "docs/screenshots/visual-audit-fixed-settings-after-resize-768.jpg",
+    "docs/screenshots/visual-audit-fixed-sound-after-resize-320.jpg",
+    "docs/screenshots/visual-audit-home-390.jpg",
+    "docs/screenshots/visual-audit-journey-320.jpg",
+    "docs/screenshots/visual-audit-journey-390.jpg",
+    "docs/screenshots/visual-audit-nickname-input-preserved-390.jpg",
+    "docs/screenshots/visual-audit-oasis-game-390.jpg",
+    "docs/screenshots/visual-audit-oasis-home-390.jpg",
+    "docs/screenshots/visual-audit-oasis-rules-390.jpg",
+    "docs/screenshots/visual-audit-rank-390.jpg",
+    "docs/screenshots/visual-audit-release-account-390.jpg",
+    "docs/screenshots/visual-audit-release-account-default.jpg",
+    "docs/screenshots/visual-audit-release-bazaar-game-320.jpg",
+    "docs/screenshots/visual-audit-release-caravan-game-390.jpg",
+    "docs/screenshots/visual-audit-release-home-390.jpg",
+    "docs/screenshots/visual-audit-release-home-default.jpg",
+    "docs/screenshots/visual-audit-release-oasis-game-390.jpg",
+    "docs/screenshots/visual-audit-release-oasis-rules-390.jpg",
+    "docs/screenshots/visual-audit-release-settings-390.jpg",
+    "docs/screenshots/visual-audit-release-settings-resize-320.jpg",
+    "docs/screenshots/visual-audit-release-shop-320.jpg",
+    "docs/screenshots/visual-audit-release-shop-390.jpg",
+    "docs/screenshots/visual-audit-release-sound-options-390.jpg",
+    "docs/screenshots/visual-audit-release-voyage-game-768.jpg",
+    "docs/screenshots/visual-audit-settings-before-resize-320.jpg",
+    "docs/screenshots/visual-audit-settings-lost-after-resize-390.jpg",
+    "docs/screenshots/visual-audit-shop-390.jpg"
+  ]
+}

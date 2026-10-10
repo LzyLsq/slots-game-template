@@ -1,0 +1,257 @@
+{
+  "buildFinishedAt": "2026-10-10T02:15:16Z",
+  "checks": [
+    {
+      "screen": "gold-390",
+      "scene": {
+        "id": "caravan-gold",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.04832884729356,
+        "y": 192.43640397532124,
+        "perimeter": [
+          "centre-left",
+          "bottom-left",
+          "bottom-centre",
+          "centre-right",
+          "bottom-right"
+        ]
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "screenshot": "screenshots/continuous-scene-gold-390.jpg"
+    },
+    {
+      "screen": "gold-320",
+      "scene": {
+        "id": "caravan-gold",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1081.6901408450703,
+        "height": 1920,
+        "scale": 1.0476508527633852,
+        "y": -15.653713298791104,
+        "perimeter": [
+          "centre-left",
+          "centre-right"
+        ]
+      },
+      "viewport": [
+        320,
+        568
+      ],
+      "screenshot": "screenshots/continuous-scene-gold-320.jpg"
+    },
+    {
+      "screen": "gold-tablet",
+      "scene": {
+        "id": "caravan-gold",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1440,
+        "height": 1920,
+        "scale": 1.0476508527633852,
+        "y": -15.653713298791104,
+        "perimeter": [
+          "centre-left",
+          "centre-right"
+        ]
+      },
+      "viewport": [
+        768,
+        1024
+      ],
+      "screenshot": "screenshots/continuous-scene-gold-tablet.jpg"
+    },
+    {
+      "screen": "oasis-390",
+      "scene": {
+        "id": "sapphire-oasis",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2445312499999999,
+        "y": 80.81538461538457,
+        "perimeter": []
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "screenshot": "screenshots/continuous-scene-oasis-390.jpg"
+    },
+    {
+      "screen": "bazaar-390",
+      "scene": {
+        "id": "ruby-bazaar",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2049592699818346,
+        "y": 111.20666526933564,
+        "perimeter": []
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "screenshot": "screenshots/continuous-scene-bazaar-390.jpg"
+    },
+    {
+      "screen": "voyage-390",
+      "scene": {
+        "id": "crown-voyage",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2445312499999999,
+        "y": 80.81538461538457,
+        "perimeter": []
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "screenshot": "screenshots/continuous-scene-voyage-390.jpg"
+    },
+    {
+      "screen": "voyage-default",
+      "viewport": [
+        794,
+        881
+      ],
+      "scene": {
+        "id": "crown-voyage",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1730.3972758229283,
+        "height": 1920,
+        "scale": 1.1462393116969012,
+        "y": 8.493008314436793,
+        "perimeter": [
+          "centre-left",
+          "centre-right"
+        ]
+      },
+      "screenshot": "screenshots/continuous-scene-voyage-default.jpg"
+    }
+  ],
+  "postBuildWarningsErrors": [],
+  "rebuildTransientErrors": [
+    {
+      "level": "error",
+      "message": "download failed: assets/resources/import/71/71162107-825f-478f-a2e7-4da3b74da13d.a2533.json, status: 404(no response) Error: download failed: assets/resources/import/71/71162107-825f-478f-a2e7-4da3b74da13d.a2533.json, status: 404(no response)\n    at r.onload (http://127.0.0.1:6037/cocos-js/_virtual_cc-CArsJ5Rl.js:1:445646)",
+      "timestamp": "2026-10-10T02:14:47.530Z",
+      "url": "http://127.0.0.1:6037/cocos-js/_virtual_cc-CArsJ5Rl.js"
+    },
+    {
+      "level": "error",
+      "message": "download failed: assets/resources/import/71/71162107-825f-478f-a2e7-4da3b74da13d.a2533.json, status: 404(no response) Error: download failed: assets/resources/import/71/71162107-825f-478f-a2e7-4da3b74da13d.a2533.json, status: 404(no response)\n    at r.onload (http://127.0.0.1:6037/cocos-js/_virtual_cc-CArsJ5Rl.js:1:445646)",
+      "timestamp": "2026-10-10T02:14:47.546Z",
+      "url": "http://127.0.0.1:6037/cocos-js/_virtual_cc-CArsJ5Rl.js"
+    }
+  ],
+  "audioAndGuardian": {
+    "data-guardian-motion": "{\"id\":\"crown-voyage\",\"context\":\"cabinet\",\"clip\":\"parrot-two-inward-treasure-sweeps\",\"time\":91.028,\"cue\":\"idle\",\"reduced\":false,\"wealthCoins\":2,\"degrees\":[0.654,0.216,0.03,0,-0.811,0.402,3.386]}",
+    "data-soundtrack-award-active": "false",
+    "data-soundtrack-award-voices": "0",
+    "data-soundtrack-bpm": "108",
+    "data-soundtrack-cue": "tap",
+    "data-soundtrack-cue-counts": "{\"tap\":7,\"navigate\":3}",
+    "data-soundtrack-cue-rate": "1",
+    "data-soundtrack-cue-sequence": "10",
+    "data-soundtrack-cue-source": "fx-tap",
+    "data-soundtrack-effects": "true",
+    "data-soundtrack-failures": "0",
+    "data-soundtrack-guardian-voices": "0",
+    "data-soundtrack-music": "true",
+    "data-soundtrack-music-level": "0.48",
+    "data-soundtrack-press-voices": "0",
+    "data-soundtrack-ready": "26",
+    "data-soundtrack-recorded": "true",
+    "data-soundtrack-scene": "crown-voyage",
+    "data-soundtrack-state": "running",
+    "data-soundtrack-success-voices": "0",
+    "data-soundtrack-track": "music-crown-voyage",
+    "data-soundtrack-voices": "1"
+  },
+  "spinsDuringThisVerification": 0,
+  "walletUnchanged": 37039,
+  "betUnchanged": 80,
+  "temporaryViewportReset": true,
+  "finalPreview": "crown-voyage",
+  "finalConsoleWarningsErrors": [],
+  "screenshots": {
+    "continuous-scene-bazaar-390": {
+      "path": "screenshots/continuous-scene-bazaar-390.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "format": "JPEG"
+    },
+    "continuous-scene-before-gold": {
+      "path": "screenshots/continuous-scene-before-gold.jpg",
+      "viewport": [
+        529,
+        881
+      ],
+      "format": "JPEG"
+    },
+    "continuous-scene-gold-320": {
+      "path": "screenshots/continuous-scene-gold-320.jpg",
+      "viewport": [
+        320,
+        568
+      ],
+      "format": "JPEG"
+    },
+    "continuous-scene-gold-390": {
+      "path": "screenshots/continuous-scene-gold-390.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "format": "JPEG"
+    },
+    "continuous-scene-gold-tablet": {
+      "path": "screenshots/continuous-scene-gold-tablet.jpg",
+      "viewport": [
+        768,
+        1024
+      ],
+      "format": "JPEG"
+    },
+    "continuous-scene-oasis-390": {
+      "path": "screenshots/continuous-scene-oasis-390.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "format": "JPEG"
+    },
+    "continuous-scene-voyage-390": {
+      "path": "screenshots/continuous-scene-voyage-390.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "format": "JPEG"
+    },
+    "continuous-scene-voyage-default": {
+      "path": "screenshots/continuous-scene-voyage-default.jpg",
+      "viewport": [
+        794,
+        881
+      ],
+      "format": "JPEG"
+    }
+  }
+}

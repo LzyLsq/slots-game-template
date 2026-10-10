@@ -1,9 +1,14 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
-import {SoundscapeEngine,SOFT_MIX,SOFT_TONE,CUE_LEVELS} from '../assets/scripts/audio/SoundscapeEngine';
+import {SoundscapeEngine,SOFT_MIX,SOFT_TONE,CUE_LEVELS,CONTACT_LEVELS,MUSIC_FADES} from '../assets/scripts/audio/SoundscapeEngine';
 import {FileRecordingLibrary,type RecordingLibrary} from '../assets/scripts/audio/RecordedAudio';
-import {ALL_RECORDINGS,RECORDING_THEMES,musicKey,musicDuration,awardKey,finaleKey,cueKey} from '../assets/scripts/audio/SoundtrackCatalog';
+import {ALL_RECORDINGS,recordingKeys,RECORDING_THEMES,musicKey,musicDuration,awardKey,finaleKey,cueKey,MUSIC_BALANCE,recordedMusicTrim} from '../assets/scripts/audio/SoundtrackCatalog';
+import {buttonKey,cabinetFeedbackKey,FEEDBACK_SCENES,CABINET_FEEDBACK,BUTTON_CUES,hasFeatureStep} from '../assets/scripts/audio/FeedbackCatalog';
+import {GAME_CONFIGS} from '../assets/scripts/math/GameConfigs';
+import {ResultGenerator} from '../assets/scripts/math/ResultGenerator';
+import {SeededRNG} from '../assets/scripts/core/SeededRNG';
+import type {FeatureRound} from '../assets/scripts/math/types';
 import {recordedCueRate} from '../assets/scripts/audio/AudioScore';
 import {MUSIC_SCENES} from '../assets/scripts/audio/MusicTheme';
 import {awardTiming} from '../assets/scripts/vfx/AwardTimeline';
@@ -23,8 +28,8 @@ class AudioNodeMock {
 }
 class SourceMock extends AudioNodeMock {
  playbackRate=new Param();buffer?:AudioBuffer;loop=false;loopStart=0;loopEnd=0;
- end=Infinity;startAt=-1;onended?:()=>void;ended=false;
- setPeriodicWave(_wave:unknown){}start(time:number){this.startAt=time;}stop(time:number){this.end=time;}
+ end=Infinity;startAt=-1;offset=0;onended?:()=>void;ended=false;
+ setPeriodicWave(_wave:unknown){}start(time:number,offset=0){this.startAt=time;this.offset=offset;}stop(time:number){this.end=time;}
 }
 class ContextMock {
  sampleRate=44100;state='running';currentTime=0;destination=new AudioNodeMock();sources:SourceMock[]=[];oscillators:SourceMock[]=[];nodes:AudioNodeMock[]=[];
@@ -39,9 +44,10 @@ class ContextMock {
 }
 const buffer=(name:string,duration=.6)=>({name,duration}) as unknown as AudioBuffer;
 class LibraryMock implements RecordingLibrary {
- buffers=new Map(ALL_RECORDINGS.map(k=>[k,buffer(k,k.startsWith('music-')?musicDuration(k.slice(6)):k==='fx-reel-roll'?1.1:6)]));
+ buffers=new Map(ALL_RECORDINGS.map(k=>[k,buffer(k,k.startsWith('music-')?musicDuration(k.slice(6)):k==='fx-reel-roll'?1.1:k.endsWith('-reel-roll')?({ 'caravan-gold':1,'sapphire-oasis':1.2,'ruby-bazaar':1.1,'crown-voyage':1.25 } as Record<string,number>)[FEEDBACK_SCENES.find(scene=>k.includes(scene))!]:6)]));
  cleared=false;get(key:string){return this.buffers.get(key);}async warm(_scene:string,_context?:AudioContext,_ready?:()=>void){}clear(){this.cleared=true;this.buffers.clear();}
 }
+const recordingKeysForLobby=recordingKeys('lobby').length;
 const flush=()=>new Promise<void>(r=>setImmediate(r));
 const named=(source:SourceMock)=>(source.buffer as unknown as {name?:string})?.name;
 const clipGraph=(source:SourceMock)=>{
@@ -55,17 +61,22 @@ async function main(){
   const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.unlock();await flush();
   const music=c.sources[0],graph=clipGraph(music);
   assert.equal(music.playbackRate.value,1,'gentler timbre must not slow down or repitch the music');
-  assert.equal(peakGain(music),SOFT_MIX.musicClip);assert.equal(graph.bus.gain.value,SOFT_MIX.music);
+  assert.equal(peakGain(music),SOFT_MIX.musicClip*recordedMusicTrim('lobby'));assert.equal(graph.bus.gain.value,SOFT_MIX.music);
   assert.equal(graph.filter.frequency.value,SOFT_TONE.music.cutoff);assert.equal(graph.filter.Q.value,.707);
   assert.equal(graph.presence.type,'peaking');assert.equal(graph.presence.frequency.value,2800);assert.equal(graph.presence.gain.value,SOFT_TONE.music.presence);
   assert.equal(graph.shelf.type,'highshelf');assert.equal(graph.shelf.gain.value,SOFT_TONE.music.shelf);
   assert(SOFT_MIX.music<=.56&&SOFT_MIX.musicRoom<=.04,'background stays below cues with a short restrained room send');
+  assert(SOFT_TONE.music.cutoff<=8500&&SOFT_TONE.music.presence<=-2.5&&SOFT_TONE.music.shelf<=-5,'warm BGM keeps upper-mid / treble glare restrained without detuning');
+  assert(SOFT_MIX.award<=.70&&CUE_LEVELS.tap<=.64&&CUE_LEVELS['epic-win']<=.56,'button and award feedback remains gentle, never boosted to compete with the soundtrack');
   const compressor=c.nodes.find(n=>n.threshold.value<0)!;
   assert.equal(compressor.threshold.value,-16);assert.equal(compressor.ratio.value,4);assert(compressor.release.value>=.2);
+  let contactIndex=0;
   for(const cue of Object.keys(CUE_LEVELS) as (keyof typeof CUE_LEVELS)[]){
    c.advance(7);e.play(cue);
    const source=c.sources.findLast(source=>named(source)===cueKey(cue))!,fx=clipGraph(source);
-   assert.equal(peakGain(source),CUE_LEVELS[cue]);assert.equal(source.playbackRate.value,1);
+   const press=['tap','bet','navigate','toggle','confirm'].includes(cue);
+   assert.equal(peakGain(source),CUE_LEVELS[cue]*(press?CONTACT_LEVELS[contactIndex++%3]:1));
+   if(press)assert(fx.gain.gain.events.some(x=>x.time===source.startAt+.003),'physical contact has a 3ms attack, not a faded jingle');assert.equal(source.playbackRate.value,1);
    assert.equal(fx.bus.gain.value,SOFT_MIX.effects);assert.equal(fx.filter.frequency.value,SOFT_TONE.effects.cutoff);
    assert.equal(fx.presence.gain.value,SOFT_TONE.effects.presence);assert.equal(fx.shelf.gain.value,SOFT_TONE.effects.shelf);
    if(cue==='spin'){assert.equal(peakGain(c.sources.at(-1)!),SOFT_MIX.spinRoll);e.stopSpin();}
@@ -93,11 +104,80 @@ async function main(){
   e.destroy();assert(eq.every(n=>n.disconnects===1),'all persistent EQ nodes disconnect on teardown');
  }
 
+ // Attenuation-only scene balance preserves five compositions and their pitch.
+ {
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.unlock();await flush();
+  for(const scene of MUSIC_SCENES){
+   e.setScene(scene);c.advance(.6);const source=c.sources.findLast(s=>named(s)===musicKey(scene))!;
+   const trim=recordedMusicTrim(scene),rms=MUSIC_BALANCE.decodedRmsDb[scene as keyof typeof MUSIC_BALANCE.decodedRmsDb];
+   assert(trim>0&&trim<=1,'matching energy must never boost master peaks');
+   assert.equal(source.playbackRate.value,1,'balance does not repitch or speed the song');
+   assert.equal(peakGain(source),SOFT_MIX.musicClip*trim);assert.equal(e.snapshot().musicTrim,trim);
+   assert(Math.abs(rms+20*Math.log10(trim)-MUSIC_BALANCE.targetRmsDb)<.001);
+   assert.equal(e.snapshot().musicVoices,1);
+  }
+  assert.equal(recordedMusicTrim('unknown'),recordedMusicTrim('lobby'));
+  assert.equal(recordedMusicTrim('toString'),recordedMusicTrim('lobby'),'inherited keys are not valid tracks');e.destroy();
+ }
+ // Currency duck follows its real, tuned duration. Replacement, mute, hide and
+ // next-spin/scene takeover cannot leave dead tails or stale duck automation.
+ {
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.setScene('sapphire-oasis');e.unlock();await flush();
+  lib.buffers.set(cabinetFeedbackKey('sapphire-oasis','collect'),buffer('fx-cabinet-sapphire-oasis-collect',1.20));lib.buffers.set(cueKey('win'),buffer('fx-win',.49));
+  const bus=clipGraph(c.sources[0]).bus;
+  e.play('collect');const collect=c.sources.at(-1)!,hold=1.20+.008;
+  assert(bus.gain.events.some(x=>Math.abs(x.time-hold)<1e-9&&x.value===SOFT_MIX.duck),'background remains below the entire tuned currency clip');
+  assert(bus.gain.events.some(x=>Math.abs(x.time-(hold+.55))<1e-9&&x.value===SOFT_MIX.music),'a gentle recovery follows the actual tail');
+  c.advance(.15);e.play('win');assert(collect.end<=c.currentTime+.025);
+  const newHold=c.currentTime+.49/recordedCueRate('win','sapphire-oasis')+.008;
+  assert(bus.gain.events.some(x=>Math.abs(x.time-newHold)<1e-9&&x.value===SOFT_MIX.duck),'short replacement does not inherit long dead-tail duck');
+  const win=c.sources.at(-1)!;e.guardian(1);const guardian=c.sources.at(-1)!;e.play('spin');
+  assert(win.end<=c.currentTime+.025&&guardian.end<=c.currentTime+.025);
+  assert.equal(e.snapshot().celebrationVoices,0);assert.equal(e.snapshot().guardianVoices,0);assert.equal(e.snapshot().musicLevel,SOFT_MIX.music);
+  e.stopSpin();c.advance(.2);e.play('collect');e.configure({sound:false});
+  assert.equal(e.snapshot().musicLevel,SOFT_MIX.music,'muting an effect releases its duck immediately');
+  assert.equal(bus.gain.events.at(-1)!.time,c.currentTime+.18,'mute recovery cancels the old future automation');
+  c.advance(.2);e.configure({sound:true});e.play('collect');e.pause();
+  assert.equal(bus.gain.events.at(-1)!.value,SOFT_MIX.music);assert(bus.gain.events.every(x=>x.time<=c.currentTime));
+  e.resume();await flush();assert.equal(e.snapshot().musicLevel,SOFT_MIX.music);
+  c.advance(.2);e.play('collect');const oldTune=c.sources.at(-1)!;e.guardian(2);const oldGuardian=c.sources.at(-1)!;
+  e.setScene('ruby-bazaar');assert(oldTune.end<=c.currentTime+.025&&oldGuardian.end<=c.currentTime+.025);
+  assert.equal(e.snapshot().celebrationVoices,0);assert.equal(e.snapshot().guardianVoices,0);
+  c.advance(.6);assert.equal(e.snapshot().voices,1,'only the new background remains after scene takeover');e.destroy();
+ }
+
+ // Musical clarity: short character contacts, exclusive success lane, silent BGM
+ // during a jackpot, and no overlapping different-key music on rapid navigation.
+ {
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.unlock();await flush();
+  const lobby=c.sources[0];e.setScene('caravan-gold');const caravan=c.sources.at(-1)!;
+  assert(caravan.startAt>=lobby.end,'new key starts after old score has faded');
+  c.advance(.06);e.setScene('sapphire-oasis');const oasis=c.sources.at(-1)!;
+  assert(oasis.startAt>=caravan.end,'rapid switch cancels the pending previous key');
+  c.advance(.3);e.guardian(3);const contact=c.sources.at(-1)!;
+  assert.equal(named(contact),'fx-bet','touching a mascot must not play an award in another scene key');
+  assert.equal(e.snapshot().guardianVoices,1);
+  const before=c.sources.length;for(let i=0;i<10;i++){c.advance(.03);e.guardian(i%4);}
+  assert.equal(c.sources.length,before,'repeat character taps do not build a chorus');
+  c.advance(.5);e.guardian(0);assert.equal(e.snapshot().guardianVoices,1);assert(contact.end<=c.currentTime+.026);
+  e.award(0);const sting=c.sources.at(-1)!;
+  assert.equal(sting.playbackRate.value,recordedCueRate('win','sapphire-oasis'),'feature acknowledgement matches the active key');
+  assert.equal(e.snapshot().celebrationVoices,1);c.advance(.7);e.play('reward');assert(sting.end<=c.currentTime+.026);
+  assert.equal(e.snapshot().celebrationVoices,1);c.advance(.7);e.play('collect');assert.equal(e.snapshot().celebrationVoices,1);
+  const show=e.beginAward(2,awardTiming(2).countEnd),count=c.sources.length;
+  for(const cue of ['win','big-win','epic-win','reward','collect'] as const)e.play(cue);
+  e.guardian(2);e.award(4);assert.equal(c.sources.length,count,'full presentation suppresses extra character/feature/reward tunes');
+  assert.equal(e.snapshot().musicLevel,0,'jackpot score owns the musical stage, not two unsynchronized melodies');
+  show.finish();show.stop();assert.equal(e.snapshot().musicLevel,SOFT_MIX.music);
+  e.configure({sound:false});const muted=c.sources.length;e.guardian(1);e.award(1);assert.equal(c.sources.length,muted);
+  e.pause();c.advance(.1);assert.equal(e.snapshot().voices,0);e.destroy();
+ }
+
  // Button contact is immediate, recorded and clear without sharpening the EQ.
  {
   const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.unlock();await flush();
   const music=clipGraph(c.sources[0]),gate=music.shelf.connections[0];
-  assert.equal(gate.gain.value,1);assert(SOFT_MIX.pressDuck>=.65,'brief modest music dip, not a blackout');
+  assert.equal(gate.gain.value,1);assert(SOFT_MIX.pressDuck>=.9,'button contacts do not rhythmically pump the whole soundtrack');
   e.play('tap');assert.equal(e.snapshot().cuePlays,1);assert.equal(e.snapshot().lastCueSource,'fx-tap');
   assert.equal(c.sources.at(-1)!.startAt,c.currentTime+.008,'no async file/decode wait on button contact');
   assert(gate.gain.events.some(x=>x.value===SOFT_MIX.pressDuck&&x.time===c.currentTime+.012));
@@ -114,6 +194,48 @@ async function main(){
   e.destroy();assert.equal(gate.disconnects,1);
  }
 
+ // Phrase continuity: each scene retains a cursor, paused time does not advance it,
+ // and a source cancelled before its scheduled start must retain its old offset.
+ {
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);
+  e.unlock();await flush();const opening=c.sources.at(-1)!;
+  c.advance(4.5);const lobbyCursor=e.snapshot().musicPosition;
+  assert(Math.abs(lobbyCursor-(c.currentTime-opening.startAt))<1e-9);
+  e.setScene('caravan-gold');const caravan=c.sources.at(-1)!;assert.equal(caravan.offset,0);
+  assert(caravan.startAt>=opening.end,'no simultaneous different-key phrase');
+  c.advance(2);const gameCursor=e.snapshot().musicPosition;e.setScene('lobby');
+  const lobby=c.sources.at(-1)!;assert.equal(lobby.offset,lobbyCursor,'return to lobby continues the phrase');
+  c.advance(1);const beforeMute=e.snapshot().musicPosition;e.configure({music:false});
+  c.advance(10);assert.equal(e.snapshot().musicPosition,beforeMute,'disabled music does not silently advance');
+  e.configure({music:true});const restored=c.sources.at(-1)!;
+  assert.equal(restored.offset,beforeMute);assert.equal(restored.playbackRate.value,1);
+  c.advance(.5);const beforeHide=e.snapshot().musicPosition;e.pause();c.advance(20);
+  assert.equal(e.snapshot().musicPosition,beforeHide,'hidden time does not advance the music cursor');
+  e.resume();await flush();assert.equal(c.sources.at(-1)!.offset,beforeHide);
+  c.advance(.4);e.setScene('caravan-gold');const pending=c.sources.at(-1)!;
+  assert.equal(pending.offset,gameCursor);assert(pending.startAt>c.currentTime);
+  e.setScene('sapphire-oasis');e.setScene('caravan-gold');const restoredPending=c.sources.at(-1)!;
+  assert.equal(restoredPending.offset,gameCursor,'cancelled pre-start source cannot advance or erase the phrase');
+  assert(restoredPending.startAt>=pending.end);
+  c.advance(musicDuration('caravan-gold')*2+1.1);
+  const loopCursor=e.snapshot().musicPosition;assert(loopCursor>=0&&loopCursor<musicDuration('caravan-gold'));
+  e.configure({music:false});e.configure({music:true});assert.equal(c.sources.at(-1)!.offset,loopCursor,'resume offset wraps inside the exact loop');
+  c.advance(.4);assert.equal(e.snapshot().musicVoices,1);e.destroy();
+  assert(c.sources.every(source=>source.disconnects===1),'pending and loop sources are reclaimed exactly once');
+ }
+ // Main -> same-key finale -> BGM uses bounded musical releases, not hard cuts.
+ {
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.unlock();await flush();
+  const music=clipGraph(c.sources[0]);const show=e.beginAward(2,awardTiming(2).countEnd),main=c.sources.at(-1)!;
+  c.advance(2);show.update(2);show.finish();const finale=c.sources.at(-1)!;
+  assert.equal(main.end,c.currentTime+MUSIC_FADES.finaleOut);
+  assert(clipGraph(finale).gain.gain.events.some(x=>x.time===finale.startAt+MUSIC_FADES.finaleIn));
+  c.advance(MUSIC_FADES.finaleOut+.001);assert.equal(main.disconnects,1);assert.equal(e.snapshot().awardVoices,1);
+  show.stop();assert.equal(finale.end,c.currentTime+MUSIC_FADES.awardOut);
+  assert(music.bus.gain.events.some(x=>x.value===SOFT_MIX.music&&x.time===c.currentTime+MUSIC_FADES.musicReturn));
+  c.advance(MUSIC_FADES.awardOut+.001);assert.equal(e.snapshot().awardVoices,0);assert.equal(finale.disconnects,1);
+  e.destroy();assert.equal(e.snapshot().voices,0);
+ }
  // Preparatory decode is silent even where the browser creates a running context.
  {
   const c=new ContextMock(),lib=new LibraryMock();let warmed=false;
@@ -136,7 +258,7 @@ async function main(){
   let prior:SourceMock|undefined;
   for(let i=0;i<40;i++){
    const cue=(['tap','bet','navigate','toggle','confirm'] as const)[i%5];e.play(cue);
-   const current=c.sources.at(-1)!;assert.equal(named(current),cueKey(cue));
+   const current=c.sources.at(-1)!;assert.equal(named(current),buttonKey(cue,Math.floor(i/5)%3));
    if(prior)assert(prior.end<=c.currentTime+.012,'old contact fades out instead of layering');
    assert.equal(e.snapshot().pressVoices,1);assert(e.snapshot().voices<=2,'one contact plus its short outgoing fade');
    prior=current;if(i<39)c.advance(.035);
@@ -152,9 +274,10 @@ async function main(){
   for(const scene of MUSIC_SCENES){
    e.setScene(scene);c.advance(7);
    for(const cue of ['tap','bet','navigate','toggle','confirm','spin','reel-stop','error','win','reward','collect','big-win','epic-win'] as const){
-    e.play(cue);const source=c.sources.findLast(s=>named(s)===cueKey(cue))!;
-    assert.equal(source.playbackRate.value,recordedCueRate(cue,scene));
-    assert.equal(e.snapshot().lastCueRate,recordedCueRate(cue,scene));c.advance(7);
+    e.play(cue);const source=c.sources.findLast(s=>named(s)===e.snapshot().lastCueSource)!;
+    const rate=named(source)?.startsWith('fx-cabinet-')?1:recordedCueRate(cue,scene);
+    assert.equal(source.playbackRate.value,rate);
+    assert.equal(e.snapshot().lastCueRate,rate);c.advance(7);
    }
    const show=e.beginAward(0,awardTiming(0).countEnd,false);show.finish();show.stop();c.advance(7);
   }
@@ -174,7 +297,7 @@ async function main(){
   e.configure({sound:false});c.advance(.1);assert.equal(e.snapshot().recordedMusic,true);assert.equal(tap.disconnects,1);
   e.configure({music:false,sound:true});c.advance(.2);e.play('bet');assert.equal(e.snapshot().recordedMusic,false);assert.equal(named(c.sources.at(-1)!),cueKey('bet'));
   c.advance(7);assert.equal(e.snapshot().voices,0);e.configure({music:true});
-  e.play('spin');assert.equal(named(c.sources.at(-1)!),'fx-reel-roll');assert(c.sources.at(-1)!.loop);
+  e.play('spin');assert.equal(named(c.sources.at(-1)!),'fx-cabinet-crown-voyage-reel-roll');assert(c.sources.at(-1)!.loop);
   e.stopSpin();c.advance(7);assert.equal(e.snapshot().voices,1,'roll is gone after landing; only background remains');
   e.pause();assert.equal(e.snapshot().voices,0);e.resume();await flush();assert(e.snapshot().recordedMusic);
   e.destroy();assert(lib.cleared);assert.equal(e.snapshot().voices,0);assert(c.sources.every(s=>s.disconnects===1));
@@ -214,10 +337,11 @@ async function main(){
   const requests=new Map<string,number>();let fail=true,decodes=0;const read=(async(url:unknown)=>{const key=String(url).split('/').pop()!.slice(0,-4);requests.set(key,(requests.get(key)??0)+1);return {ok:!(key==='fx-tap'&&fail),arrayBuffer:async()=>new TextEncoder().encode(key).buffer};}) as typeof fetch;
   const context={decodeAudioData:async(data:ArrayBuffer)=>{decodes++;return buffer(new TextDecoder().decode(data));}} as unknown as AudioContext;
   const lib=new FileRecordingLibrary('https://local.invalid/audio/',read);let musicReady=0;
-  await Promise.all([lib.warm('lobby',context,()=>musicReady++),lib.warm('lobby',context)]);assert.equal(requests.get('music-lobby'),1);assert.equal(decodes,14);assert.equal(musicReady,1);assert(!lib.get('fx-tap'));
+  await Promise.all([lib.warm('lobby',context,()=>musicReady++),lib.warm('lobby',context)]);assert.equal(requests.get('music-lobby'),1);assert.equal(decodes,recordingKeysForLobby-1);assert.equal(musicReady,1);assert(!lib.get('fx-tap'));
   fail=false;await lib.warm('lobby',context);assert(lib.get('fx-tap'));assert.equal(requests.get('fx-tap'),2);
   for(const scene of MUSIC_SCENES.slice(1))await lib.warm(scene,context);
   assert.equal(MUSIC_SCENES.filter(s=>lib.get(musicKey(s))).length,2);assert(lib.get(musicKey('crown-voyage')));assert(!lib.get(awardKey('sapphire-oasis',1)));assert(lib.get(awardKey('crown-voyage',1)));
+  for(const scene of FEEDBACK_SCENES)for(const role of CABINET_FEEDBACK)assert.equal(!!lib.get(cabinetFeedbackKey(scene,role)),scene==='crown-voyage','cache contains only active cabinet material bank');
   const before=decodes;await lib.warm('crown-voyage',context);assert.equal(decodes,before);lib.clear();assert(!lib.get(musicKey('crown-voyage')));
  }
  {
@@ -225,6 +349,103 @@ async function main(){
   const lib=new FileRecordingLibrary('',read),context={decodeAudioData:async()=>{calls++;return buffer('disposed');}} as unknown as AudioContext;
   const task=lib.warm('lobby',context);assert.equal(releases.length,3);lib.clear();for(const release of releases)release();await task;
   assert.equal(calls,0);assert(!lib.get('music-lobby'));assert.equal(lib.diagnostics().decoded,0);
+ }
+ // Real multisample contacts: per-family rotation, no detuning, no network wait.
+ {
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.configure({music:false});
+  for(const cue of BUTTON_CUES){
+   for(let i=0;i<7;i++){
+    c.advance(.1);e.play(cue);const source=c.sources.at(-1)!;
+    assert.equal(named(source),buttonKey(cue,i%3));assert.equal(source.playbackRate.value,1);
+    assert.equal(source.startAt,c.currentTime+.008);
+    const played=e.snapshot().cuePlays;e.play(cue);assert.equal(e.snapshot().cuePlays,played,'debounced duplicate does not advance sample');
+    e.configure({sound:false});c.advance(.1);e.play(cue);e.configure({sound:true});
+    e.pause();e.play(cue);e.resume();await flush();
+   }
+  }
+  c.advance(.2);lib.buffers.delete('fx-confirm-v1');e.play('confirm');assert.equal(e.snapshot().lastCueSource,'fx-confirm','missing variant immediately uses recorded base');
+  c.advance(.1);lib.buffers.delete('fx-confirm-v2');lib.buffers.delete('fx-confirm');e.play('confirm');assert.equal(e.snapshot().lastCueSource,'fallback','missing base still gets immediate physical fallback');
+  e.destroy();
+ }
+ // Cabinet motors/landings/treasury are genuinely scene-specific, 1x and leased.
+ for(const scene of FEEDBACK_SCENES){
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.configure({music:false});e.setScene(scene);
+  e.play('spin');const roll=c.sources.at(-1)!,pickup=c.sources.at(-2)!;
+  assert.equal(named(pickup),cabinetFeedbackKey(scene,'spin'));assert.equal(named(roll),cabinetFeedbackKey(scene,'reel-roll'));assert.equal(roll.playbackRate.value,1);
+  assert.equal(roll.loopEnd,lib.get(cabinetFeedbackKey(scene,'reel-roll'))!.duration,'bearing loop uses actual decoded end');
+  c.advance(.2);e.play('reel-stop');assert.equal(named(c.sources.at(-1)!),cabinetFeedbackKey(scene,'reel-stop'));e.stopSpin();assert(roll.end<=c.currentTime+.11);
+  c.advance(.2);e.play('collect');assert.equal(named(c.sources.at(-1)!),cabinetFeedbackKey(scene,'collect'));assert.equal(c.sources.at(-1)!.playbackRate.value,1);
+  c.advance(.7);lib.buffers.delete(cabinetFeedbackKey(scene,'spin'));lib.buffers.delete(cabinetFeedbackKey(scene,'reel-roll'));lib.buffers.delete(cabinetFeedbackKey(scene,'reel-stop'));lib.buffers.delete(cabinetFeedbackKey(scene,'collect'));
+  e.play('spin');assert.equal(named(c.sources.at(-2)!),'fx-spin');assert.equal(named(c.sources.at(-1)!),'fx-reel-roll');e.stopSpin();
+  c.advance(.2);e.play('reel-stop');assert.equal(named(c.sources.at(-1)!),'fx-reel-stop');
+  c.advance(.2);e.play('collect');assert.equal(named(c.sources.at(-1)!),'fx-collect');assert.equal(c.sources.at(-1)!.playbackRate.value,recordedCueRate('collect',scene));e.destroy();
+ }
+ // Only actions present in the authoritative feature result emit an accent.
+ {
+  const round=(patch:Partial<FeatureRound>):FeatureRound=>({index:1,grid:['W','a','a'],wins:[],credits:0,...patch});
+  assert(hasFeatureStep('caravan-gold',round({motion:'move',moved:[{from:0,to:3}]}),'W'));
+  assert(!hasFeatureStep('caravan-gold',round({motion:'move',moved:[{from:0,to:0}]}),'W'));
+  assert(hasFeatureStep('sapphire-oasis',round({motion:'respin',held:[]}),'W'),'new WILD is in grid, not locked map');
+  assert(!hasFeatureStep('sapphire-oasis',round({motion:'respin',held:[0]}),'W'),'already held WILD is not a new lock');
+  assert(!hasFeatureStep('sapphire-oasis',round({motion:'respin',grid:['a','a']}),'W'));
+  assert(hasFeatureStep('ruby-bazaar',round({motion:'transform',focus:[1]}),'W'));
+  assert(!hasFeatureStep('ruby-bazaar',round({motion:'respin',focus:[1]}),'W'));
+  assert(!hasFeatureStep('ruby-bazaar',round({motion:'transform',focus:[]}),'W'));
+  assert(hasFeatureStep('crown-voyage',round({motion:'drop',removed:[1]}),'W'));
+  assert(!hasFeatureStep('crown-voyage',round({motion:'drop',removed:[]}),'W'));
+  assert(!hasFeatureStep('lobby',round({motion:'drop',removed:[1]}),'W'));
+  const app=fs.readFileSync(new URL('../assets/scripts/ui/AureliaApp.ts',import.meta.url),'utf8');
+  assert(app.includes("if(feature.rounds.length&&isFeedbackScene(this.config.id)){this.audio.playFeature('entry')"));
+  assert(app.includes('hasFeatureStep(this.config.id,round,this.config.wildId)'));
+  assert(app.includes('finally{this.audio.stopSpin();}'),'cell respins have no normal stop callback; always release bearing');
+ }
+ // Verify the event selector against real settled F37 results, not old feature names.
+ {
+  const gen=new ResultGenerator(),evidence:unknown[]=[];
+  for(const [i,config] of GAME_CONFIGS.entries()){
+   const rng=new SeededRNG(370041+i);let sampled=0,features=0,actions=0;
+   for(;sampled<800&&(!features||!actions);sampled++){
+    const result=gen.generate(config,config.bets[1],rng),feature=result.featureResult;
+    if(!feature)continue;assert.equal(feature.type,'cabinet-feature');features++;
+    for(const round of feature.rounds){
+     const accent=hasFeatureStep(config.id,round,config.wildId);if(accent)actions++;
+     if(config.id==='sapphire-oasis')assert.equal(accent,round.motion==='respin'&&round.grid.some((id,p)=>id===config.wildId&&!round.held?.includes(p)));
+     if(config.id==='ruby-bazaar'&&round.motion==='respin')assert(!accent,'mystery free board is not yet revealed');
+    }
+   }
+   assert(features>0&&actions>0,'actual '+config.id+' feature and action sampled');
+   evidence.push({scene:config.id,sampled,features,actions,seed:370041+i});
+  }
+  fs.writeFileSync(new URL('../docs/qa/feedback-completion-features.json',import.meta.url),JSON.stringify({source:'Unmodified authoritative generator / settled rounds; no live wallet changes',cabinets:evidence},null,2)+'\n');
+ }
+ // One feature lane, immediate fallback, no extra fanfare underneath a jackpot.
+ for(const scene of FEEDBACK_SCENES){
+  const c=new ContextMock(),lib=new LibraryMock(),e=new SoundscapeEngine(()=>c.audio(),lib);e.configure({music:false});e.setScene(scene);
+  e.feature('entry');assert.equal(e.snapshot().lastFeatureSource,cabinetFeedbackKey(scene,'feature-entry'));assert.equal(e.snapshot().featurePlays,1);
+  const entry=c.sources.at(-1)!;e.feature('step');assert.equal(e.snapshot().featurePlays,1,'duplicate action cooldown');
+  c.advance(.2);e.feature('step');assert(entry.end<=c.currentTime+.025);assert.equal(e.snapshot().featureVoices,1);assert.equal(e.snapshot().lastFeatureSource,cabinetFeedbackKey(scene,'feature-step'));
+  const show=e.beginAward(2,awardTiming(2).countEnd);const count=e.snapshot().featurePlays;e.feature('entry');assert.equal(e.snapshot().featurePlays,count);assert.equal(e.snapshot().featureVoices,0);show.stop();
+  c.advance(.2);e.configure({sound:false});e.feature('entry');assert.equal(e.snapshot().featurePlays,count);e.configure({sound:true});
+  e.feature('entry');e.pause();assert.equal(e.snapshot().featureVoices,0);e.feature('step');e.resume();await flush();
+  c.advance(.2);e.feature('step');e.play('spin');assert.equal(e.snapshot().featureVoices,0);e.stopSpin();
+  c.advance(.2);e.feature('entry');e.setScene('lobby');assert.equal(e.snapshot().featureVoices,0);const last=e.snapshot().featurePlays;e.feature('entry');assert.equal(e.snapshot().featurePlays,last);
+  e.setScene(scene);c.advance(.2);lib.buffers.delete(cabinetFeedbackKey(scene,'feature-step'));e.feature('step');assert.equal(e.snapshot().lastFeatureSource,'fx-reel-stop');assert.equal(e.snapshot().featureVoices,1);
+  c.advance(.2);lib.buffers.delete('fx-reel-stop');e.feature('step');assert.equal(e.snapshot().lastFeatureSource,'fallback');assert.equal(e.snapshot().featureVoices,1);e.destroy();assert.equal(e.snapshot().voices,0);
+ }
+ // Rapid cabinet loading must not retain a stale feature or motor bank.
+ {
+  let releaseOld:()=>void=()=>{};let active=0,maxActive=0;
+  const read=(async(url:unknown)=>{const key=String(url).split('/').pop()!.slice(0,-4);active++;maxActive=Math.max(active,maxActive);
+   if(key==='fx-cabinet-caravan-gold-spin')await new Promise<void>(r=>releaseOld=r);
+   active--;return {ok:true,arrayBuffer:async()=>new TextEncoder().encode(key).buffer};}) as typeof fetch;
+  const context={decodeAudioData:async(data:ArrayBuffer)=>buffer(new TextDecoder().decode(data))} as unknown as AudioContext;
+  const lib=new FileRecordingLibrary('',read);await lib.warm('lobby',context);const old=lib.warm('caravan-gold',context);await flush();
+  await lib.warm('sapphire-oasis',context);releaseOld();await old;
+  for(const role of CABINET_FEEDBACK){assert(!lib.get(cabinetFeedbackKey('caravan-gold',role)));assert(lib.get(cabinetFeedbackKey('sapphire-oasis',role)));}
+  assert(!lib.get(awardKey('caravan-gold',0)));assert(lib.get(awardKey('sapphire-oasis',0)));
+  assert(MUSIC_SCENES.filter(scene=>lib.get(musicKey(scene))).length<=2);lib.clear();
+  // One global limiter across old and new scene calls.
+  assert(maxActive<=3);
  }
  // Cocos's production transpiler does not expand Map/Set iterator spreads.
  // Array.from is required here; Node-only tests otherwise miss this browser failure.
@@ -234,16 +455,22 @@ async function main(){
  assert(!/ALL_RECORDINGS\s*=\s*\[\s*\.\.\./.test(audioSource('SoundtrackCatalog.ts')),'catalog Set must use Array.from in web-mobile');
  // All catalog assets are shipped; distinct music/grade files are not renamed copies.
  const dir=new URL('../build-templates/web-mobile/audio/',import.meta.url),manifest=JSON.parse(fs.readFileSync(new URL('manifest.json',dir),'utf8'));
- assert.equal(ALL_RECORDINGS.length,59);assert.deepEqual(manifest.recordings.map((r:{name:string})=>r.name).sort(),[...ALL_RECORDINGS].sort());
- assert.equal(fs.readdirSync(dir).filter(f=>f.endsWith('.m4a')).length,59);const hashes=new Set<string>();
+ assert.equal(ALL_RECORDINGS.length,93);assert.deepEqual(manifest.recordings.map((r:{name:string})=>r.name).sort(),[...ALL_RECORDINGS].sort());
+ assert.equal(fs.readdirSync(dir).filter(f=>f.endsWith('.m4a')).length,93);const hashes=new Set<string>();
  for(const r of manifest.recordings){const data=fs.readFileSync(new URL(r.name+'.m4a',dir));assert.equal(data.length,r.bytes);assert(data.length>1000);assert(r.rmsDb>-55&&r.peakDb<-.9);assert(r.seconds>.09);hashes.add(crypto.createHash('sha256').update(data).digest('hex'));}
  for(const name of ['tap','bet','toggle','navigate','confirm']){
-  const item=manifest.recordings.find((r:{name:string})=>r.name===cueKey(name as 'tap'));
-  assert(item.seconds<=.20,'physical button tails are short, not success fanfares');
+  for(const variant of [0,1,2]){const item=manifest.recordings.find((r:{name:string})=>r.name===buttonKey(name as 'tap',variant));
+  assert(item.seconds<=.20,'physical button tails are short, not success fanfares');}
  }
+ for(const scene of MUSIC_SCENES){
+  const item=manifest.recordings.find((r:{name:string})=>r.name===musicKey(scene));
+  assert(Math.abs(item.rmsDb-MUSIC_BALANCE.decodedRmsDb[scene as keyof typeof MUSIC_BALANCE.decodedRmsDb])<=.02,'balance metadata tracks the shipped masters');
+ }
+ const previous=JSON.parse(fs.readFileSync(new URL('../docs/qa/music-balance-assets.json',import.meta.url),'utf8'));
+ for(const item of previous.tracks){assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL(item.name+'.m4a',dir))).digest('hex'),item.sha256,'all original 59 masters remain byte-identical');}
  assert(SOFT_MIX.returnDuck>SOFT_MIX.awardDuck,'small returns do not hush the background like a jackpot');
- assert.equal(hashes.size,59,'every cue and performance has a distinct actual AAC payload');
+ assert.equal(hashes.size,93,'every cue and performance has a distinct actual AAC payload');
  assert.equal(new Set(Object.values(RECORDING_THEMES).map(t=>t.programs.join(','))).size,5,'independent instrument ensembles');
- console.log('PASS recorded audio: restrained EQ/gains, quiet duck/toggle recovery, no overlapping fanfare, mixer cleanup; 59 distinct AAC assets; decoded-source playback, loops/crossfade, fast toggle, effects/music independence, spin cleanup, five grades + one finale, stale/late/hidden handling, loading dedup/retry/cache/dispose');
+ console.log('PASS recorded audio: five scene energy trims, real-duration currency duck, scene/spin/mute/background tail cleanup; restrained EQ/gains, quiet duck/toggle recovery, no overlapping fanfare, mixer cleanup; 34 new cabinet/material/feature recordings plus 59 unchanged masters; true per-family multisample contacts; authoritative feature event selection; shared three-job loader and stale cabinet bank eviction; decoded-source playback, loops/crossfade, fast toggle, effects/music independence, spin cleanup, five grades + one finale, stale/late/hidden handling, loading dedup/retry/cache/dispose');
 }
 void main().catch(e=>{console.error(e);process.exitCode=1;});

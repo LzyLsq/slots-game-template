@@ -29,8 +29,8 @@ export function cueNotes(cue:Cue,scene:string):readonly Note[]{
     return [tuned,duration,delay,volume,wave,mechanical?'wood':tactile?'coin':theme.lead,i%2===0?-.10:.10] as Note;
   });
 }
-/** Short melodic coin cues are mastered in C; tune only those cues into the
- * cabinet key. Physical clicks and entire background/performance tracks stay at 1x. */
+/** Open-fifth currency cascades are mastered in C (no conflicting major third);
+ * tune only those cues into the cabinet key. Physical clicks and entire background/performance tracks stay at 1x. */
 export function recordedCueRate(cue:Cue,scene:string):number{
   if(!['win','big-win','epic-win','reward','collect'].includes(cue))return 1;
   const semitones=(themeMusic(scene).chords[0][0]%12+6)%12-6;

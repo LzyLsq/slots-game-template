@@ -7,7 +7,7 @@ import {GAME_CONFIGS,prizeArt} from '../math/GameConfigs';
 import {AudioManager} from '../audio/AudioManager';
 import type {AwardSoundtrack} from '../audio/AwardScore';
 import {awardTiming,awardValue,awardPhase,awardFormat,smooth,clamp01,type AwardTiming} from './AwardTimeline';
-import {spectacleProfile,spectaclePulse} from './AwardSpectacle';
+import {spectacleProfile,spectaclePulse,spectacleQuiet} from './AwardSpectacle';
 import {AwardSpectacleField} from './AwardSpectacleField';
 import {awardProbe,clearAwardProbe,awardShowcase} from './AwardProbe';
 const {ccclass}=_decorator;
@@ -80,19 +80,19 @@ export class SalonWinStage extends Component{
   if(tick!==this.lastTick){this.lastTick=tick;this.count.string=tr(awardFormat(value,this.locale));awardProbe(this.plan.tier,this.showcase&&t>=this.plan.climaxEnd?'hold':awardPhase(t,this.plan),value,this.audio?.awardDiagnostics());}
   this.groupAlpha.opacity=this.reduced?255:255*smooth(t/.28);this.shade.opacity=this.groupAlpha.opacity;
   if(!this.reduced){
-   const entrance=smooth(t/.78),reveal=smooth((t-.22)/.48),pulse=spectaclePulse(t,this.plan);
+   const entrance=smooth(t/.78),reveal=smooth((t-.22)/.48),pulse=spectaclePulse(t,this.plan),calm=1-.28*spectacleQuiet(t,this.plan);
    const scale=.87+.13*entrance+.012*Math.sin(t*1.3)*entrance+.052*pulse;
    this.treasure.setScale(scale,scale,1);this.treasure.setPosition(0,10-64*(1-entrance)+Math.sin(t*1.3)*4);
    // The image title lands with a restrained overshoot; its authored width still stays on-screen.
    const titlePop=Math.sin(clamp01((t-.25)/.7)*Math.PI)*.042;
    this.titleAlpha.opacity=255*reveal;this.title.setPosition(0,610+52*(1-reveal));const titleScale=.91+.09*reveal+titlePop+.022*pulse;this.title.setScale(titleScale,titleScale,1);
-   this.rays.node.angle=t*9;this.rays.alpha.opacity=78*entrance+55*pulse;
-   this.halo.node.angle=-t*5;this.halo.alpha.opacity=130*entrance+70*pulse;
-   this.heart.node.angle=-t*12;this.heart.alpha.opacity=48*entrance+48*pulse;
-   if(this.crown){this.crown.node.angle=-t*7;this.crown.alpha.opacity=26*entrance+45*pulse;}
+   this.rays.node.angle=t*9;this.rays.alpha.opacity=78*entrance*calm+55*pulse;
+   this.halo.node.angle=-t*5;this.halo.alpha.opacity=130*entrance*calm+70*pulse;
+   this.heart.node.angle=-t*12;this.heart.alpha.opacity=48*entrance*calm+48*pulse;
+   if(this.crown){this.crown.node.angle=-t*7;this.crown.alpha.opacity=26*entrance*calm+45*pulse;}
    for(let i=0;i<this.beams.length;i++){
     const beam=this.beams[i];beam.node.angle=-66+i*132/Math.max(1,this.beams.length-1)+Math.sin(t*.7+i)*9;
-    beam.alpha.opacity=(30+18*Math.sin(t*1.4+i)+50*pulse)*entrance;
+    beam.alpha.opacity=((30+18*Math.sin(t*1.4+i))*calm+50*pulse)*entrance;
    }
    for(let i=0;i<this.rings.length;i++){
     const age=t-this.plan.countEnd-i*.52,p=clamp01(age/1.15),ring=this.rings[i],size=.3+p*1.32;

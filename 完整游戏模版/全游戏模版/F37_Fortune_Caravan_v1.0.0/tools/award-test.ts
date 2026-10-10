@@ -1,7 +1,7 @@
 import {awardProbe,clearAwardProbe,awardShowcase} from '../assets/scripts/vfx/AwardProbe';
 import {winTier,celebrationCaption,tierRules} from '../assets/scripts/vfx/WinPresentation';
 import assert from 'node:assert/strict';
-import {spectacleProfile,spectacleSeed,spectaclePose,spectaclePulse,emptySpectaclePose} from '../assets/scripts/vfx/AwardSpectacle';
+import {spectacleProfile,spectacleSeed,spectaclePose,spectaclePulse,spectacleKeepout,spectacleQuiet,emptySpectaclePose} from '../assets/scripts/vfx/AwardSpectacle';
 import {awardTiming,awardPhase,awardValue,awardCoinPose,awardFormat} from '../assets/scripts/vfx/AwardTimeline';
 for(let tier=0;tier<5;tier++)for(const reduced of [true,false]){
  const plan=awardTiming(tier,reduced);assert.equal(plan.tier,tier);assert(plan.end-plan.countEnd>=1.6);
@@ -63,3 +63,23 @@ for(let tier=1;tier<=4;tier++){
 }
 assert.equal(spectacleProfile(NaN).fountain,28);assert.equal(spectacleProfile(99).fountain,60);
 console.log('PASS spectacle: four escalating fixed pools, 176-particle cap, reusable poses, deterministic paths, title/register keepouts, double climax, reduced-motion zero pools');
+
+// A fading coin must never suddenly jump to a new x/y lane around a title.
+const coin={x:180,y:0,scaleX:1,scaleY:1,angle:0,alpha:255},size=80,r=size*.72;
+let fadeBefore=false,lastAlpha=255;
+for(let y=396-r-100;y<396-r+10;y+=.5){
+ coin.x=180;coin.y=y;coin.alpha=255;spectacleKeepout(coin,size,1);
+ assert.equal(coin.x,180);assert.equal(coin.y,y);assert(coin.alpha<=lastAlpha+1e-8);
+ assert(Math.abs(coin.alpha-lastAlpha)<3,'keepout fade has no visible discontinuity');
+ if(y<396-r&&coin.alpha>0&&coin.alpha<255)fadeBefore=true;
+ if(y>=396-r)assert.equal(coin.alpha,0,'title coverage is zero, not merely translucent');lastAlpha=coin.alpha;
+}
+assert(fadeBefore,'fade begins before the bitmap touches text');
+const hold=awardTiming(2);assert.equal(spectacleQuiet(hold.climaxEnd,hold),0);assert.equal(spectacleQuiet(hold.climaxEnd+1,hold),1);
+for(let index=0;index<60;index++){
+ const seed=spectacleSeed('spark',index),start=hold.countEnd+(index%2)*.52+(index%6)*.025;
+ for(const boundary of [start,start+1.22])for(const t of [boundary-1e-7,boundary,boundary+1e-7]){
+  const pose=spectaclePose(seed,t,hold,emptySpectaclePose());assert(pose.alpha<.001,'choreography changes only while invisible');
+ }
+}
+console.log('PASS spectacle polish: unchanged physical paths, advance smooth text keepouts, invisible cascade handoffs and quieter post-climax hold.');

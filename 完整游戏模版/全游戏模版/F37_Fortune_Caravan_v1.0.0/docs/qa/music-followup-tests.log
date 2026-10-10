@@ -1,0 +1,15 @@
+
+> f37-fortune-caravan@1.0.0 test:audio
+> node --import tsx tools/audio-test.ts
+
+PASS audio: full award score / percussion, visual-clock cadence, skip/mute/background/gesture-lock/stale-lease cleanup; independent settings, persistence/rollback, 5 distinct compositions / tempos, theme timbres and stereo envelopes, cue debounce, bounded hitch recovery, voice cleanup/cap, mobile resume + background races, tactile categories
+
+> f37-fortune-caravan@1.0.0 test:audio:recordings
+> node --import tsx tools/audio-recording-test.ts
+
+PASS recorded audio: restrained EQ/gains, quiet duck/toggle recovery, no overlapping fanfare, mixer cleanup; 59 distinct AAC assets; decoded-source playback, loops/crossfade, fast toggle, effects/music independence, spin cleanup, five grades + one finale, stale/late/hidden handling, loading dedup/retry/cache/dispose
+
+> f37-fortune-caravan@1.0.0 test:audio:festive
+> node --import tsx tools/festive-audio-test.ts
+
+PASS festive audio: five original scores with declared major / harmonic-minor harmony, full ensembles + distinct dedicated drum grooves, 45 performances, grade-specific cadences and unchanged visual timing

@@ -7,7 +7,7 @@
     "version": "3.8.8"
   },
   "scripts": {
-    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:guardians && npm run test:audio && npm run test:audio:recordings && npm run test:audio:festive && npm run test:award && npm run test:life && npm run test:reel-presentation && npm run test:text-layout && npm run test:caravan && npm run test:guardian-renderer",
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:guardians && npm run test:audio && npm run test:audio:recordings && npm run test:audio:festive && npm run test:award && npm run test:life && npm run test:reel-presentation && npm run test:text-layout && npm run test:caravan && npm run test:guardian-renderer && npm run test:lobby-details && npm run test:page-arrival",
     "test:layout": "node --import tsx tools/layout-test.ts",
     "test:math": "node --import tsx tools/math-test.ts",
     "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
@@ -34,7 +34,9 @@
     "test:reel-presentation": "node --import tsx tools/reel-presentation-test.ts",
     "test:text-layout": "node --import tsx tools/text-layout-test.ts",
     "test:caravan": "node --import tsx tools/caravan-test.ts",
-    "test:guardian-renderer": "node --import tsx tools/guardian-renderer-test.ts"
+    "test:guardian-renderer": "node --import tsx tools/guardian-renderer-test.ts",
+    "test:lobby-details": "node --import tsx tools/lobby-detail-test.ts",
+    "test:page-arrival": "node --import tsx tools/page-arrival-test.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

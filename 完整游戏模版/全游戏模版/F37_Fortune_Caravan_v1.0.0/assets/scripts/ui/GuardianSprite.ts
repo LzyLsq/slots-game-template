@@ -1,16 +1,14 @@
-import {_decorator,EventTouch,game,Game,Node,RenderData,Sprite,SpriteFrame,Tween,tween,UIOpacity,UITransform,Vec3,type IAssembler} from 'cc';
+import {_decorator,EventTouch,game,Game,Node,RenderData,Sprite,SpriteFrame,Tween,tween,UIOpacity,UITransform,type IAssembler} from 'cc';
 import type {GameId} from '../math/types';
 import {AudioManager} from '../audio/AudioManager';
-import {SalonArt,opacity} from './SalonArt';
-import {GuardianRig,GUARDIAN_GRID_X as NX,GUARDIAN_GRID_Y as NY,type GuardianCue} from './GuardianMotion';
+import {SalonArt} from './SalonArt';
+import {GuardianRig,GUARDIAN_CHOREOGRAPHY,GUARDIAN_CUE_SECONDS,GUARDIAN_GRID_X as NX,GUARDIAN_GRID_Y as NY,type GuardianCue,type GuardianContext,type GuardianPoint} from './GuardianMotion';
+import {GUARDIAN_JEWELS,GUARDIAN_SOURCE,fitGuardianSeat,type GuardianJewel} from './GuardianDetails';
+import {emptyGuardianCoinPose,guardianWealthCoin,type GuardianCoinPose} from './GuardianProsperity';
 import {guardianGridIndices,appendGuardianIndices} from './GuardianIndices';
 const {ccclass}=_decorator;
-const JEWELS:readonly (readonly (readonly [number,number,number])[])[]=[
- [[0,.85,.47],[3,.58,.13],[0,.665,.555]],
- [[0,.22,.68],[3,.40,.18],[0,.35,.48]],
- [[0,.46,.14],[3,.65,.57],[0,.46,.91]],
- [[0,.66,.27],[3,.40,.39],[0,.32,.92]],
-];
+interface WealthCoin {node:Node;alpha:UIOpacity;pose:GuardianCoinPose;point:GuardianPoint;}
+interface JewelReflection {node:Node;alpha:UIOpacity;jewel:GuardianJewel;point:GuardianPoint;tangent:GuardianPoint;}
 const INDICES=guardianGridIndices(NX,NY);
 const mappedIndices=new WeakMap<RenderData,Uint16Array>();
 // Cocos 3.8 Sprite assembler, preserving Sprite's stock alpha, world transform,
@@ -62,7 +60,9 @@ const ASSEMBLER:IAssembler={
 @ccclass('GuardianSprite')
 export class GuardianSprite extends Sprite {
  public onReact?:(cue:GuardianCue)=>void;
- private rig?:GuardianRig;private art?:SalonArt;private audio?:AudioManager;private glints:Node[]=[];private shown=true;
+ private rig?:GuardianRig;private audio?:AudioManager;private glints:JewelReflection[]=[];private shown=true;
+ private wealthCoins:WealthCoin[]=[];private wealthNotBefore=0;
+ private debugMotion=false;private markerElapsed=0;
  private touchStart?:{x:number;y:number};private touchMoved=false;
  public get points():Float32Array|undefined{return this.rig?.vertices;}
  protected _flushAssembler():void{
@@ -72,13 +72,22 @@ export class GuardianSprite extends Sprite {
    this.markForUpdateRenderData();if(this.spriteFrame)ASSEMBLER.updateUVs!(this);this._updateColor();
   }
  }
- public setup(art:SalonArt,id:GameId,frame:SpriteFrame,width:number,height:number,reduced:boolean,audio:AudioManager):void{
-  this.art=art;this.audio=audio;this.rig=new GuardianRig(id,width,height,reduced);
+ public setup(art:SalonArt,id:GameId,frame:SpriteFrame,width:number,height:number,reduced:boolean,audio:AudioManager,context:GuardianContext):void{
+  const fit=fitGuardianSeat(id,width,height),position=this.node.position;
+  this.node.setPosition(position.x,position.y+fit.offsetY,position.z);
+  width=fit.width;height=fit.height;
+  this.audio=audio;this.rig=new GuardianRig(id,width,height,reduced,context);
   this.sizeMode=Sprite.SizeMode.CUSTOM;this.spriteFrame=frame;
   this.node.getComponent(UITransform)!.setContentSize(width,height);
   if(!reduced){
-   for(const [i,x,y] of JEWELS[this.rig.theme]){
-    const n=art.light(this.node,i,(x-.5)*width,(.5-y)*height,20,20,0);n.name='Guardian jewel reflection';this.glints.push(n);
+   for(const jewel of GUARDIAN_JEWELS[this.rig.theme]){
+    const size=width*jewel.diameter,n=art.light(this.node,jewel.atlas,(jewel.u-.5)*width,(.5-jewel.v)*height,size,size,0);
+    n.name='Guardian anchored jewel reflection';this.glints.push({node:n,alpha:n.getComponent(UIOpacity)!,jewel,point:{x:jewel.u,y:jewel.v},tangent:{x:jewel.u+.01,y:jewel.v}});
+   }
+   for(let i=0;i<2;i++){
+    const n=art.image(this.node,'award-coin-detail',0,0,width*.075,width*.075);n.name='Inward prosperity coin '+i;
+    const alpha=n.addComponent(UIOpacity);alpha.opacity=0;
+    this.wealthCoins.push({node:n,alpha,pose:emptyGuardianCoinPose(),point:{x:0,y:0}});
    }
   }
   this.node.on(Node.EventType.TOUCH_START,this.onTouchStart,this);
@@ -86,10 +95,12 @@ export class GuardianSprite extends Sprite {
   this.node.on(Node.EventType.TOUCH_CANCEL,this.cancelTouch,this);
   this.node.on(Node.EventType.TOUCH_END,this.onTouchEnd,this);
   game.on(Game.EVENT_HIDE,this.hideMotion,this);game.on(Game.EVENT_SHOW,this.showMotion,this);
-  this.markForUpdateRenderData();
+  this.debugMotion=typeof document!=='undefined'&&new URLSearchParams(globalThis.location?.search??'').get('debug')==='1';
+  this.publishMotion();this.markForUpdateRenderData();
  }
  public react(cue:GuardianCue):boolean{
   if(!this.rig?.trigger(cue))return false;
+  this.wealthNotBefore=this.rig.time+GUARDIAN_CUE_SECONDS[cue];
   this.onReact?.(cue);
   if(cue==='touch'){this.audio?.playGuardian(this.rig.theme);this.audio?.vibrate(12);}
   if(!this.rig.reduced&&cue!=='spin')this.jewelResponse(cue);
@@ -98,20 +109,37 @@ export class GuardianSprite extends Sprite {
  protected update(dt:number):void{
   if(!this.rig||!this.shown||this.rig.reduced)return;
   this.rig.advance(dt);
+  if(this.debugMotion){this.markerElapsed+=Math.min(dt,.05);if(this.markerElapsed>=.25){this.markerElapsed=0;this.publishMotion();}}
   const alpha=this.node.getComponent(UIOpacity);if(alpha&&alpha.opacity===0)return;
   if(this.renderData)this.renderData.vertDirty=true;this.markForUpdateRenderData();
-  // Slow tiny reflected jewels, not a flashing light over the character.
-  for(let i=0;i<this.glints.length;i++){
-   const n=this.glints[i],a=n.getComponent(UIOpacity)!,[,u,v]=JEWELS[this.rig.theme][i];
-   // Follow the SAME skin vertices as the pearl/gold underneath the reflection.
-   const col=u*NX,row=v*NY,x=Math.floor(col),y=Math.floor(row),fx=col-x,fy=row-y,p=this.rig.vertices;
-   const ia=(y*(NX+1)+x)*2,ib=ia+2,ic=ia+(NX+1)*2,id=ic+2;
-   const sx=(p[ia]*(1-fx)+p[ib]*fx)*(1-fy)+(p[ic]*(1-fx)+p[id]*fx)*fy;
-   const sy=(p[ia+1]*(1-fx)+p[ib+1]*fx)*(1-fy)+(p[ic+1]*(1-fx)+p[id+1]*fx)*fy;
-   n.setPosition((sx-.5)*this.rig.width,(.5-sy)*this.rig.height);
-
-   if(Tween.getRunningCount(a)===0)a.opacity=Math.round(Math.pow(Math.max(0,Math.sin(this.rig.time*.9+i*1.9)),8)*65);
+  // One preallocated point per reflection, following the same deformed mesh.
+  for(const item of this.glints){
+   const p=this.rig.sample(item.jewel.u,item.jewel.v,item.point);
+   item.node.setPosition((p.x-.5)*this.rig.width,(.5-p.y)*this.rig.height);
+   const tangent=this.rig.sample(item.jewel.u+.01,item.jewel.v,item.tangent);
+   item.node.setRotationFromEuler(0,0,Math.atan2(-(tangent.y-p.y)*this.rig.height,(tangent.x-p.x)*this.rig.width)*180/Math.PI);
+   if(Tween.getRunningCount(item.alpha)===0)item.alpha.opacity=Math.round(Math.pow(Math.max(0,Math.sin(this.rig.time*.72+item.jewel.phase)),10)*54);
   }
+  for(let i=0;i<this.wealthCoins.length;i++){
+   const item=this.wealthCoins[i],p=guardianWealthCoin(this.rig.id,this.rig.context,this.rig.time,i,this.rig.cue,this.rig.cueTime,this.rig.reduced,item.pose,this.wealthNotBefore);
+   item.alpha.opacity=p.opacity;if(p.opacity===0)continue;
+   const point=this.rig.sample(p.u,p.v,item.point);
+   item.node.setPosition((point.x-.5)*this.rig.width,(.5-point.y)*this.rig.height);
+   item.node.setScale(p.scale,p.scale,1);item.node.setRotationFromEuler(0,0,p.angle);
+  }
+ }
+
+ private publishMotion():void{
+  if(!this.debugMotion||!this.rig)return;
+  const r=this.rig;document.querySelector('#GameCanvas')?.setAttribute('data-guardian-motion',JSON.stringify({
+   id:r.id,context:r.context,clip:GUARDIAN_CHOREOGRAPHY[r.context][r.theme].name,
+   time:+r.time.toFixed(3),cue:r.cue??'idle',reduced:r.reduced,
+   source:GUARDIAN_SOURCE[r.id],rendered:[+r.width.toFixed(3),+r.height.toFixed(3)],
+   ratioError:+(r.width/r.height/(GUARDIAN_SOURCE[r.id][0]/GUARDIAN_SOURCE[r.id][1])-1).toFixed(8),
+   rigidFaceAndTreasure:true,
+   wealthCoins:this.wealthCoins.filter(c=>c.alpha.opacity>0).length,
+   degrees:r.currentPose.angles.map(a=>+(a*180/Math.PI).toFixed(3)),
+  }));
  }
  private onTouchStart(e:EventTouch):void{const p=e.getUILocation();this.touchStart={x:p.x,y:p.y};this.touchMoved=false;}
  private onTouchMove(e:EventTouch):void{const p=e.getUILocation();if(this.touchStart&&Math.hypot(p.x-this.touchStart.x,p.y-this.touchStart.y)>20)this.touchMoved=true;}
@@ -120,20 +148,16 @@ export class GuardianSprite extends Sprite {
  private hideMotion():void{this.shown=false;this.cancelTouch();}
  private showMotion():void{this.shown=true;}
  private jewelResponse(cue:GuardianCue):void{
-  const strength=cue==='super'?155:cue==='big'?135:cue==='touch'?100:85;
-  this.glints.forEach((n,i)=>{
-   const a=opacity(n,0);Tween.stopAllByTarget(a);
-   tween(a).delay(i*.10).to(.22,{opacity:strength},{easing:'sineOut'}).to(.62,{opacity:0},{easing:'sineInOut'}).start();
-  });
-  // All highlights stay on the sculpture. No fake coin award on tapping it,
-  // no particle spray into the reels or into readable cabinet registers.
-  const ui=this.node.getComponent(UITransform)!,w=ui.width,h=ui.height;
-  const sheen=this.art!.light(this.node,1,w*.13,h*.05,w*.24,h*.24,0);sheen.name='Guardian blessing reflection';
-  const a=sheen.getComponent(UIOpacity)!;
-  tween(a).to(.20,{opacity:cue==='touch'?40:55}).to(.7,{opacity:0}).call(()=>{if(sheen.isValid)sheen.destroy();}).start();
-  tween(sheen).to(.9,{position:new Vec3(w*.10,h*.13,0)},{easing:'sineOut'}).start();
+  const strength=cue==='super'?138:cue==='big'?118:cue==='touch'?91:76;
+  // Reuse the three measured reflections. No new node or drifting facial sheen
+  // is created when repeatedly touching the guardian or receiving an award.
+  for(let i=0;i<this.glints.length;i++){
+   const a=this.glints[i].alpha;Tween.stopAllByTarget(a);
+   tween(a).delay(i*.16).to(.26,{opacity:strength},{easing:'sineOut'}).to(.78,{opacity:0},{easing:'sineInOut'}).start();
+  }
  }
  public onDestroy():void{
+  for(const item of this.glints)Tween.stopAllByTarget(item.alpha);this.glints.length=0;this.wealthCoins.length=0;
   game.off(Game.EVENT_HIDE,this.hideMotion,this);game.off(Game.EVENT_SHOW,this.showMotion,this);
   this.node.off(Node.EventType.TOUCH_START,this.onTouchStart,this);this.node.off(Node.EventType.TOUCH_MOVE,this.onTouchMove,this);
   this.node.off(Node.EventType.TOUCH_CANCEL,this.cancelTouch,this);this.node.off(Node.EventType.TOUCH_END,this.onTouchEnd,this);

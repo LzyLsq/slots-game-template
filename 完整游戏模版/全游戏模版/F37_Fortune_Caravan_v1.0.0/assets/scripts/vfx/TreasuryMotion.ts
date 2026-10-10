@@ -11,7 +11,7 @@ const zone=(name:string,x:number,y:number,w:number,h:number,kind:LifeKind,path:L
  * A closed path and its sprite extent remain inside each measured zone. */
 export function lobbyLifeZones(_tall:boolean):LifeZone[]{
  return [
-  zone('Merchant jewellery',-152,68,320,358,'spark','orbit',7,21,130,7.8),
+  // The guardian owns its measured jewellery reflections; no wandering spark over its face.
   zone('Treasure coins',170,-100,310,126,'coin','fountain',10,36,206,6.8),
   zone('Treasure reflections',170,-105,300,142,'spark','tide',7,23,146,8.1),
   zone('Left arcade lantern',-448,125,68,250,'glow','lamp',2,49,45,6.7),
@@ -40,7 +40,7 @@ export function lifePose(s:LifeSeed,time:number,energy:number,impulse:number,out
  // Max half-extent includes rotation + scale; never clip sprite corners.
  const margin=s.size*.86,rx=Math.max(0,width/2-margin),ry=Math.max(0,height/2-margin);
  let x=0,y=0,fade=Math.sin(Math.PI*p),angle=0;
- if(z.path==='orbit'){x=Math.cos(t)*rx;y=Math.sin(t)*ry;fade=.5+.5*Math.sin(t+s.lane*TAU)**2;angle=t*25;}
+ if(z.path==='orbit'){x=Math.cos(t)*rx;y=Math.sin(t)*ry;fade=.5+.5*Math.sin(t+s.lane*TAU)**2;angle=Math.sin(t+s.lane*TAU)*25;}
  else if(z.path==='river'){x=(p*2-1)*rx;y=Math.sin(t*1.5+s.lane*TAU)*ry*.65;angle=Math.sin(t)*24;}
  else if(z.path==='rise'||z.path==='ember'){x=(s.lane*2-1)*rx*.73+Math.sin(t*1.5)*rx*.22;y=(p*2-1)*ry;angle=z.path==='ember'?Math.sin(t)*38:t*15;}
  else if(z.path==='tide'){x=Math.sin(t)*rx;y=Math.cos(t+s.lane*2)*ry*.76;fade=.3+.7*Math.sin(t/2)**2;angle=Math.sin(t)*22;}
@@ -48,7 +48,7 @@ export function lifePose(s:LifeSeed,time:number,energy:number,impulse:number,out
  else {x=Math.sin(t)*rx*.04;y=Math.cos(t)*ry*.04;fade=.48+.52*Math.sin(t/2)**2;}
  const depth=.82+.14*Math.sin(t+s.lane);
  out.x=left+width/2+x;out.y=bottom+height/2+y;out.angle=angle;
- out.scaleY=depth;out.scaleX=z.kind==='coin'?depth*(.42+.58*Math.abs(Math.cos(t*1.2+s.lane))):depth;
+ out.scaleY=depth;out.scaleX=z.kind==='coin'?depth*(.42+.58*Math.abs(Math.cos(t+s.lane*TAU))):depth;
  out.alpha=Math.min(245,z.alpha*fade*(1+Math.min(1,Math.max(0,energy))*.12+Math.min(1,Math.max(0,impulse))*.30));
  return out;
 }

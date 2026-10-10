@@ -31,7 +31,7 @@ export function awardScore(tier:number,countEnd:number,scene:string,profitable=t
   const step=(countEnd-.74)/phrase.length;
   phrase.forEach((pitch,i)=>{
    const at=.67+i*step;add(pitch,at,Math.min(.43,step*1.35),.021,theme.lead,.16);
-   if(i%3===0)add(pitch+12,at+.065,.19,.0037,'bell',.3);
+   if(i%6===0)add(pitch+12,at+.065,.19,.0037,'bell',.3);
    if(i%4===0){
     const chord=theme.chords[Math.floor(i/4)%theme.chords.length];
     add(chord[0],at,.64,.018,'bass',-.15);add(chord[2],at+.035,.52,.009,theme.backing,-.24);add(chord[3],at+.065,.47,.008,theme.backing,.24);
@@ -43,8 +43,8 @@ export function awardScore(tier:number,countEnd:number,scene:string,profitable=t
   });
   // An ascending pickup leads into the visible double-bloom cadence.
   if(t>=2)for(let i=0;i<6;i++){const pitch=theme.award[(theme.award.length-6+i+theme.award.length)%theme.award.length];add(pitch+12,countEnd-.82+i*.11,.20,.010,theme.lead,(i%2?1:-1)*.3);}
-  const ticks=10+t*3;
-  for(let i=0;i<ticks;i++){const p=i/ticks,at=1+(countEnd-1)*Math.pow(p,.82);add(theme.award[i%3]+12,at,.075,.006,'coin',(i%2?1:-1)*.28);}
+  const ticks=4+t*2;
+  for(let i=0;i<ticks;i++){const p=i/ticks,at=1+(countEnd-1)*Math.pow(p,.82);add(theme.award[2]+12,at,.065,.004,'coin',(i%2?1:-1)*.28);}
  }
  return notes.filter(n=>n.at<countEnd).sort((a,b)=>a.at-b.at);
 }

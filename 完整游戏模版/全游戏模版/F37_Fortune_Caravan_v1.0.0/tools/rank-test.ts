@@ -45,3 +45,12 @@ assert(hallStandings([player])[0].current,'Real player wins score ties');
 assert.equal(hallStandings([{...player,winnings:0}]).find(r=>r.current)?.rank,9);
 assert.equal(player.rank,1,'Display must not mutate real standings');
 assert(hallStandings([player]).every((r,i,a)=>r.rank===i+1&&(!i||a[i-1].winnings>=r.winnings)));
+
+assert.deepEqual(characters.map(r=>r.nickname),['Caravan Captain','Oasis Treasurer','Bazaar Goldsmith','Crown Navigator','Desert Prospector','Vault Curator','Ruby Collector','Harbour Merchant']);
+assert.deepEqual(characters.map(r=>r.winnings),[78844,58976,43608,30940,19172,11004,5536,1868]);
+assert(characters.every(r=>r.virtual&&!r.current));
+const sameName={...player,nickname:'Caravan Captain'};
+const matching=hallStandings([sameName]).filter(r=>r.nickname===sameName.nickname);
+assert.equal(matching.length,2);assert.equal(matching[0].virtual,false);assert.equal(matching[1].virtual,true);
+assert.equal(sameName.nickname,'Caravan Captain','Do not localize or mutate saved user names');
+console.log('PASS caravan-themed virtual names, unchanged scores and separate real player identities.');

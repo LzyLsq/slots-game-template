@@ -1,6 +1,8 @@
 import {Label,Node} from 'cc';
 import {SalonArt,box,bindPress,text,COLORS} from './SalonArt';
 import {tr} from './Language';
+import {ruleNavigationCaption} from './LobbyDetails';
+import {TextFit} from './TextFit';
 // Pre-wrap before pagination; readable text never shrinks to fit an oversized paragraph.
 export function ruleTextPages(value:string,linesPerPage=10,width=760,size=38):string[]{
  const localized=tr(value),canvas=typeof document!=='undefined'?document.createElement('canvas'):undefined,ctx=canvas?.getContext('2d');
@@ -19,11 +21,12 @@ export function readableRuleText(parent:Node,value:string,x:number,y:number,w:nu
  const label=text(parent,value,x,y,w,h,size,color,false);label.string=value;const fit=label.node.getComponent('TextFit');if(fit)fit.enabled=false;label.fontFamily='Arial';label.enableWrapText=false;label.overflow=Label.Overflow.CLAMP;label.lineHeight=size*1.28;return label;
 }
 
-// Use the commissioned enamel arrow directly; stretching the long material
-// plate into this short footer slot reduced it to a thin, illegible shard.
+// Match the real engraved dialog controls. The old atlas tile was a key,
+// not an arrow; clear localised page labels remove that ambiguous affordance.
 export function readableRuleArrow(parent:Node,art:SalonArt,name:string,x:number,y:number,w:number,h:number,direction:-1|1,action:()=>void):void{
- const hit=box(parent,name,x,y,w,Math.max(116,h));
- const face=art.image(hit,'interfaces',0,0,116,116,9);
- if(direction>0)face.setRotationFromEuler(0,0,180);
- bindPress(hit,face,action,{depth:3,compression:.96,release:.18});
+ const hit=box(parent,name,x,y,w,Math.max(152,h));
+ const face=art.image(hit,'caravan-soft-plate-0',0,0,w,110);
+ const caption=text(face,ruleNavigationCaption(direction),0,-4.4,150,54,42,COLORS.cream);
+ caption.enableWrapText=false;caption.node.getComponent(TextFit)!.compactLine=true;caption.node.getComponent(TextFit)!.fit();
+ bindPress(hit,face,action,{depth:3,compression:.96,release:.18,cue:'navigate'});
 }

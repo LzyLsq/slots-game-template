@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-10",
+  "scope": "Attenuation-only PCM RMS engineering balance of unchanged recorded masters. Not LUFS matching, subjective listening, headphones/speaker or native-device latency certification. Music/effects retain independent settings; tempo/pitch unchanged. Automated mocks additionally exercise currency-duration ducking, takeover and mute/background cleanup.",
+  "tracks": [
+    {
+      "track": "music-lobby",
+      "decodedRmsDb": -25.25,
+      "attenuationDb": -0.25,
+      "trim": 0.971628,
+      "trimmedRmsDbBeforeCommonMixer": -25.5,
+      "sha256": "54640a9cf833237bcead70bc0e22cc5cbcfff6eeb3cbdebf70df4338f0e44cdc"
+    },
+    {
+      "track": "music-caravan-gold",
+      "decodedRmsDb": -23.42,
+      "attenuationDb": -2.08,
+      "trim": 0.7870458,
+      "trimmedRmsDbBeforeCommonMixer": -25.5,
+      "sha256": "59de934082548fb8ceacfce6cdb7d1a8d819f66b0bd66f806b355e37d042c9a2"
+    },
+    {
+      "track": "music-sapphire-oasis",
+      "decodedRmsDb": -23.46,
+      "attenuationDb": -2.04,
+      "trim": 0.7906786,
+      "trimmedRmsDbBeforeCommonMixer": -25.5,
+      "sha256": "ecc9b36f9a32e8f8ecb4c1748b832b06b6d653933fe89fd3672db383a0488788"
+    },
+    {
+      "track": "music-ruby-bazaar",
+      "decodedRmsDb": -25.5,
+      "attenuationDb": 0.0,
+      "trim": 1,
+      "trimmedRmsDbBeforeCommonMixer": -25.5,
+      "sha256": "f1d2d43ab8db1371fc57f6cfa1c216a156da5a58c226afa33b946de599fc49c2"
+    },
+    {
+      "track": "music-crown-voyage",
+      "decodedRmsDb": -22.22,
+      "attenuationDb": -3.28,
+      "trim": 0.6854882,
+      "trimmedRmsDbBeforeCommonMixer": -25.5,
+      "sha256": "af75d40c8dd783c5d8459384cc162b728439db86f330d9b7296f541b466ac5e4"
+    }
+  ],
+  "rmsRangeBeforeDb": 3.28,
+  "rmsRangeAfterTrimDb": 0.0,
+  "assetsReencoded": false
+}

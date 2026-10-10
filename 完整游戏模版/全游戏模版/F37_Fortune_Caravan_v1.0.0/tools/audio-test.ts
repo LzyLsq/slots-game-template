@@ -156,7 +156,7 @@ const main=async()=>{
     for(let t=.8;t<5;t+=.1){c.advance(.1);show.update(t);assert(engine.snapshot().voices<48);}
     assert(engine.snapshot().awardScheduledNotes>30,'real oscillator / percussion scheduling, not just score metadata');show.finish();const afterFinal=c.oscillators.length;show.finish();show.update(5.2);
     assert.equal(c.oscillators.length,afterFinal,'skip/natural reveal must play one cadence only');
-    c.advance(1.6);show.stop();assert.equal(engine.snapshot().awardActive,false);assert.equal(engine.snapshot().awardScheduledNotes,0);c.advance(.1);assert.equal(engine.snapshot().awardVoices,0);
+    c.advance(1.6);show.stop();assert.equal(engine.snapshot().awardActive,false);assert.equal(engine.snapshot().awardScheduledNotes,0);c.advance(.16);assert.equal(engine.snapshot().awardVoices,0);
     assert(c.oscillators.every(o=>o.disconnects===1),'all music and percussion sources disconnect exactly once');
     const old=engine.beginAward(1,4.1),next=engine.beginAward(4,6.2);old.stop();old.finish();assert(engine.snapshot().awardActive,'stale handles cannot end a newer presentation');
     engine.configure({sound:false});c.advance(.1);assert.equal(engine.snapshot().awardVoices,0);c.advance(2);next.update(2);

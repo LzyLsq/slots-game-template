@@ -2,24 +2,29 @@ import {VOICE_SHAPES,themeMusic,midi,type Instrument} from './MusicTheme';
 import {CUES,cueNotes,recordedCueRate,musicNotes,musicWindow,type Cue,type Note} from './AudioScore';
 import {awardScore,awardFinale,type AwardNote,type AwardSoundtrack} from './AwardScore';
 import {FileRecordingLibrary,type RecordingLibrary} from './RecordedAudio';
-import {musicKey,cueKey,awardKey,finaleKey,musicDuration} from './SoundtrackCatalog';
+import {musicKey,cueKey,awardKey,finaleKey,musicDuration,recordedMusicTrim} from './SoundtrackCatalog';
+import {preferredCueKey,cabinetFeedbackKey,isFeedbackScene,type FeatureSoundStage} from './FeedbackCatalog';
 import {awardTiming} from '../vfx/AwardTimeline';
 type Bus = 'music'|'effects'|'award';
 /** One restrained mix for recorded tracks, fallback voices, toggles and duck recovery. */
-export const SOFT_MIX={music:.54,duck:.25,awardDuck:.18,returnDuck:.38,effects:.76,award:.78,master:.82,musicRoom:.035,awardRoom:.10,musicClip:.80,spinRoll:.12,pressDuck:.82} as const;
+export const SOFT_MIX={music:.48,duck:.27,awardDuck:0,returnDuck:.34,effects:.66,award:.70,master:.82,musicRoom:.012,awardRoom:.045,musicClip:.80,spinRoll:.10,pressDuck:.94} as const;
 export const CUE_LEVELS:Readonly<Record<Cue,number>>={
-  tap:.68,bet:.62,navigate:.60,toggle:.62,confirm:.62,spin:.42,'reel-stop':.32,
-  win:.42,'big-win':.54,'epic-win':.60,reward:.48,collect:.40,error:.38
+  tap:.64,bet:.58,navigate:.56,toggle:.58,confirm:.58,spin:.42,'reel-stop':.32,
+  win:.40,'big-win':.50,'epic-win':.56,reward:.44,collect:.38,error:.34
 };
 /** Broad, non-resonant cuts leave the melody intact but soften brass, bells and coin hiss. */
 export const SOFT_TONE={
-  music:{cutoff:9200,presence:-2.2,shelf:-4.5},
-  effects:{cutoff:7200,presence:-3.0,shelf:-5.5},
-  award:{cutoff:9000,presence:-2.0,shelf:-4.0}
+  music:{cutoff:8200,presence:-2.8,shelf:-5.2},
+  effects:{cutoff:6800,presence:-3.4,shelf:-6.0},
+  award:{cutoff:8200,presence:-2.8,shelf:-4.8}
 } as const;
+/** Resume a phrase rather than restart its opening on every menu/toggle. */
+export const MUSIC_FADES={sceneOut:.20,sceneIn:.42,finaleOut:.12,finaleIn:.10,awardOut:.14,musicReturn:.72} as const;
+export const CONTACT_LEVELS=[1,.965,.985] as const;
 const PRESS_CUES:ReadonlySet<Cue>=new Set(['tap','bet','navigate','toggle','confirm']);
-type VoiceGroup='press';
-type Voice = {oscillator:OscillatorNode|AudioBufferSourceNode;gain:GainNode;filter:BiquadFilterNode;bus:Bus;end:number;panner?:StereoPannerNode;awardId?:number;group?:VoiceGroup;retiring?:boolean};
+type VoiceGroup='press'|'celebration'|'guardian'|'feature';
+const CELEBRATION_CUES:ReadonlySet<Cue>=new Set(['win','big-win','epic-win','reward','collect']);
+type Voice = {oscillator:OscillatorNode|AudioBufferSourceNode;gain:GainNode;filter:BiquadFilterNode;bus:Bus;end:number;panner?:StereoPannerNode;awardId?:number;group?:VoiceGroup;retiring?:boolean;music?:{key:string;start:number;offset:number;length:number;rate:number}};
 export interface SoundSettings {music:boolean;sound:boolean;vibration:boolean}
 const browserContext=():AudioContext|undefined=>{
   if(typeof window==='undefined')return undefined;
@@ -35,7 +40,9 @@ export class SoundscapeEngine {
   private unlocked=false;private hidden=false;private destroyed=false;private resuming?:Promise<void>;
   private timer?:ReturnType<typeof setInterval>;private nextBeat=0;private beat=0;private scene='lobby';
   private lastCueRate=1;private cuePlays=0;private lastPlayedCue='';private lastCueSource='';private cueCounts:Partial<Record<Cue,number>>={};
+  private featurePlays=0;private lastFeatureSource='';private lastFeatureStage='';
   private voices=new Set<Voice>();private lastCue=new Map<string,number>();private duckUntil=0;
+  private readonly musicPositions=new Map<string,number>();private contactIndex=0;private contactVariants=new Map<Cue,number>();
   private musicVoice?:Voice;private musicVoiceKey='';private rollVoice?:Voice;private warmingScene='';private warmingContext?:AudioContext;
   private awardSerial=0;private activeAward?:{id:number;tier:number;scene:string;profitable:boolean;score:AwardNote[];cursor:number;elapsed:number;finalized:boolean;scheduled:number;recorded:boolean;countEnd:number};
   constructor(private readonly createContext:()=>AudioContext|undefined=browserContext,
@@ -44,18 +51,18 @@ export class SoundscapeEngine {
     const previous={...this.settings};Object.assign(this.settings,settings);
     if(this.destroyed||!this.context)return;
     if(settings.music!==undefined&&settings.music!==previous.music){
-      if(settings.music){this.fade(this.musicRoomGain,SOFT_MIX.musicRoom,.14);this.fade(this.musicBus,this.musicLevel(),.14);if(this.duckUntil>this.context.currentTime){this.musicBus?.gain.setValueAtTime(SOFT_MIX.duck,this.context.currentTime);this.musicBus?.gain.linearRampToValueAtTime(SOFT_MIX.music,this.duckUntil+.55);}this.startMusic();}
+      if(settings.music){this.fade(this.musicRoomGain,SOFT_MIX.musicRoom,.14);this.fade(this.musicBus,this.musicLevel(),.14);if(!this.activeAward&&this.duckUntil>this.context.currentTime){this.musicBus?.gain.setValueAtTime(SOFT_MIX.duck,this.context.currentTime);this.musicBus?.gain.linearRampToValueAtTime(SOFT_MIX.music,this.duckUntil+.55);}this.startMusic();}
       else {this.stopMusic();this.fade(this.musicRoomGain,0,.10);this.fade(this.musicBus,0,.10);this.stopVoices('music',.11);}
     }
-    if(settings.sound!==undefined&&settings.sound!==previous.sound){this.fade(this.effectsBus,settings.sound?SOFT_MIX.effects:0,.035);this.fade(this.awardBus,settings.sound?SOFT_MIX.award:0,.035);this.fade(this.roomGain,settings.sound?SOFT_MIX.awardRoom:0,.035);if(!settings.sound){this.stopVoices('effects',.04);this.stopVoices('award',.04);}if(this.activeAward)this.fade(this.musicBus,this.settings.music?this.musicLevel():0,.15);}
+    if(settings.sound!==undefined&&settings.sound!==previous.sound){this.fade(this.effectsBus,settings.sound?SOFT_MIX.effects:0,.035);this.fade(this.awardBus,settings.sound?SOFT_MIX.award:0,.035);this.fade(this.roomGain,settings.sound?SOFT_MIX.awardRoom:0,.035);if(!settings.sound){this.stopVoices('effects',.04);this.stopVoices('award',.04);this.duckUntil=0;this.resetPressGate();if(!this.activeAward)this.fade(this.musicBus,this.settings.music?SOFT_MIX.music:0,.18);}if(this.activeAward)this.fade(this.musicBus,this.settings.music?this.musicLevel():0,.15);}
   }
   public setScene(scene:string):void{
-    if(this.scene===scene){if(!this.context)void this.recordings?.warm(scene);return;}this.endAward();this.stopSpin();this.scene=scene;
+    if(this.scene===scene){if(!this.context)void this.recordings?.warm(scene);return;}this.endAward();this.stopSpin();this.retireGroup('celebration');this.retireGroup('guardian');this.retireGroup('feature');this.scene=scene;
     if(!this.context){void this.recordings?.warm(scene);return;}
-    this.stopMusic();this.stopVoices('music',.48);this.musicVoice=undefined;this.musicVoiceKey='';
+    this.resetPressGate();this.duckUntil=0;this.stopMusic();this.stopVoices('music',MUSIC_FADES.sceneOut);this.musicVoice=undefined;this.musicVoiceKey='';
     this.beat=0;this.nextBeat=this.context.currentTime+.15;
     this.warmRecordings();
-    if(this.settings.music){this.fade(this.musicBus,this.musicLevel(),.55);this.startMusic();}
+    if(this.settings.music){this.fade(this.musicBus,this.musicLevel(),MUSIC_FADES.sceneIn);this.startMusic();}
   }
   /** Decode during scene loading, but never resume or play before a real gesture.
    * A first contact can then use the same physical recording as later contacts. */
@@ -78,7 +85,7 @@ export class SoundscapeEngine {
   }
   public play(cue:Cue):void{
     if(this.hidden||this.destroyed||!this.settings.sound)return;
-    if(this.activeAward&&['win','big-win','epic-win'].includes(cue))return;
+    if(this.activeAward&&CELEBRATION_CUES.has(cue))return;
     this.unlock();const c=this.context;if(!c||!CUES[cue])return;
     const now=c.currentTime,last=this.lastCue.get(cue);
     if(last!==undefined&&now-last<(cue==='reel-stop'?.045:.06))return;
@@ -91,11 +98,21 @@ export class SoundscapeEngine {
       for(const voice of this.voices)if(voice.group==='press'&&!voice.retiring)this.retireVoice(voice,.012);
     }
     this.lastCue.set(cue,now);
-    if(['win','big-win','epic-win','reward','collect'].includes(cue))this.duck(cue==='epic-win'?1.8:cue==='big-win'?1.3:.7);
-    const recorded=this.recordings?.get(cueKey(cue));
-    const played=recorded?!!this.clip(recorded,'effects',CUE_LEVELS[cue],{group:press?'press':undefined,rate:recordedCueRate(cue,this.scene)}):this.pattern(cueNotes(cue,this.scene),press?1.35:1,press?'press':undefined);
+    const group:VoiceGroup|undefined=press?'press':CELEBRATION_CUES.has(cue)?'celebration':undefined;
+    const preferred=preferredCueKey(cue,this.scene,this.contactVariants.get(cue)??0);
+    const key=this.recordings?.get(preferred)?preferred:cueKey(cue),recorded=this.recordings?.get(key);
+    const rate=key.startsWith('fx-cabinet-')?1:recordedCueRate(cue,this.scene);
+    if(group==='celebration'){this.retireGroup(group);this.duckUntil=0;this.duck(this.cueDuration(cue,recorded,rate));}
+    if(cue==='spin'){
+      // The next action owns the stage: no leftover coin tune or character tail.
+      this.retireGroup('celebration');this.retireGroup('guardian');this.retireGroup('feature');this.duckUntil=0;
+      this.fade(this.musicBus,this.settings.music?this.musicLevel():0,.22);
+    }
+    const contactLevel=press?CONTACT_LEVELS[this.contactIndex%CONTACT_LEVELS.length]:1;
+    const played=recorded?!!this.clip(recorded,'effects',CUE_LEVELS[cue]*contactLevel,{group,rate,attack:press?.003:.012}):this.pattern(cueNotes(cue,this.scene),press?1.35:1,group);
     if(played){
-      this.lastCueRate=recorded?recordedCueRate(cue,this.scene):1;this.cuePlays++;this.lastPlayedCue=cue;this.lastCueSource=recorded?cueKey(cue):'fallback';this.cueCounts[cue]=(this.cueCounts[cue]??0)+1;
+      if(press){this.contactIndex++;this.contactVariants.set(cue,((this.contactVariants.get(cue)??0)+1)%3);}
+      this.lastCueRate=recorded?rate:1;this.cuePlays++;this.lastPlayedCue=cue;this.lastCueSource=recorded?key:'fallback';this.cueCounts[cue]=(this.cueCounts[cue]??0)+1;
       if(PRESS_CUES.has(cue))this.duckPressMusic();
     }
     if(cue==='spin')this.startSpin();
@@ -130,16 +147,16 @@ export class SoundscapeEngine {
   }
   private finishAward(id:number):void{
     const a=this.activeAward;if(!a||a.id!==id||a.finalized)return;a.finalized=true;
-    this.stopVoices('award',.045);
+    this.stopVoices('award',MUSIC_FADES.finaleOut);
     const c=this.context;if(!c||c.state!=='running'||!this.settings.sound||this.hidden||this.destroyed)return;
     const recorded=this.recordings?.get(finaleKey(a.scene,a.tier));
-    if(recorded)this.clip(recorded,'award',a.tier===0?.30:a.tier===1?.60:.68,{awardId:id});
+    if(recorded)this.clip(recorded,'award',a.tier===0?.30:a.tier===1?.60:.68,{awardId:id,attack:MUSIC_FADES.finaleIn});
     else for(const n of awardFinale(a.tier,a.scene,a.profitable))this.awardNote(n,c.currentTime+.055+n.at,id);
   }
   private endAward(id?:number):void{
     if(!this.activeAward||(id!==undefined&&this.activeAward.id!==id))return;
-    this.activeAward=undefined;this.stopVoices('award',.065);
-    this.fade(this.musicBus,this.settings.music?this.musicLevel():0,.35);
+    this.activeAward=undefined;this.stopVoices('award',MUSIC_FADES.awardOut);
+    this.fade(this.musicBus,this.settings.music?this.musicLevel():0,MUSIC_FADES.musicReturn);
   }
   private awardNote(n:AwardNote,start:number,id:number):void{
     if(!n.noise){this.note(n.pitch,start,n.duration,n.volume,n.wave,'award',id,n.instrument,n.pan);return;}
@@ -155,19 +172,40 @@ export class SoundscapeEngine {
     const voice:Voice={oscillator:source,gain:g,filter,bus:'award',awardId:id,end:start+n.duration+.025};this.trackVoice(voice);
     source.connect(filter).connect(g).connect(this.awardBus);source.start(start);source.stop(voice.end);
   }
-  public guardian(theme:number):void{
-    if(!this.readyEffect('guardian',.25))return;
-    this.duck(.6);
-    const scene=['caravan-gold','sapphire-oasis','ruby-bazaar','crown-voyage'][Math.max(0,Math.min(3,Math.floor(theme)))];
-    const score=themeMusic(scene);
-    const recorded=this.recordings?.get(awardKey(scene,0));
-    if(recorded)this.clip(recorded,'effects',.34);else this.pattern(score.award.slice(0,3).map((p,i)=>[midi(p),.17+i*.07,i*.115,.018-i*.003,'sine',score.lead] as Note));
+  /** Character touch is a single coin contact, not an unrelated mini-fanfare. */
+  public guardian(_theme:number):void{
+    if(this.activeAward||!this.readyEffect('guardian',.75))return;
+    this.retireGroup('guardian');
+    const recorded=this.recordings?.get(cueKey('bet'));
+    if(recorded)this.clip(recorded,'effects',.44,{group:'guardian',attack:.003});
+    else this.pattern(cueNotes('bet',this.scene),.75,'guardian');
   }
-  public award(step:number):void{
-    if(!this.readyEffect('award',.18))return;this.duck(.5);
-    const score=themeMusic(this.scene),lift=Math.min(4,Math.max(0,Math.floor(step)));
-    const recorded=this.recordings?.get(cueKey('win'));
-    if(recorded)this.clip(recorded,'effects',.26+lift*.025);else this.pattern(score.award.slice(0,3).map((p,i)=>[midi(p+lift),.15+i*.035,i*.075,.022,'sine',score.lead] as Note));
+  /** Feature-round acknowledgement shares the success lane and current key. */
+  public award(_step:number):void{
+    if(this.activeAward||!this.readyEffect('award',.60))return;
+    this.retireGroup('celebration');this.duckUntil=0;
+    const recorded=this.recordings?.get(cueKey('win'));this.duck(this.cueDuration('win',recorded));
+    if(recorded)this.clip(recorded,'effects',.28,{group:'celebration',rate:recordedCueRate('win',this.scene)});
+    else this.pattern(cueNotes('win',this.scene),.7,'celebration');
+  }
+  public feature(stage:FeatureSoundStage):void{
+    if(this.activeAward||!isFeedbackScene(this.scene)||!this.readyEffect('feature',.12))return;
+    this.retireGroup('feature');
+    const preferred=cabinetFeedbackKey(this.scene,stage==='entry'?'feature-entry':'feature-step');
+    // Immediate, quiet physical fallback: never wait for a download mid-action.
+    const fallback=stage==='entry'?'confirm':'reel-stop';
+    const key=this.recordings?.get(preferred)?preferred:cueKey(fallback),recorded=this.recordings?.get(key);
+    const played=recorded?!!this.clip(recorded,'effects',stage==='entry'?.36:.30,{group:'feature',attack:.005}):this.pattern(cueNotes(fallback,this.scene).slice(0,1),.70,'feature');
+    if(played){this.featurePlays++;this.lastFeatureStage=stage;this.lastFeatureSource=recorded?key:'fallback';}
+  }
+  /** Hold the background for the real tuned clip length, not a fixed timer that
+   * can end before the coins or outlive a replaced acknowledgement. */
+  private cueDuration(cue:Cue,recorded?:AudioBuffer,rate=recordedCueRate(cue,this.scene)):number{
+    const duration=recorded?recorded.duration/rate:Math.max(...cueNotes(cue,this.scene).map(n=>n[1]+n[2]));
+    return Math.max(.35,Math.min(3,duration+.008));
+  }
+  private retireGroup(group:VoiceGroup):void{
+    for(const voice of this.voices)if(voice.group===group&&!voice.retiring)this.retireVoice(voice,.025);
   }
   public vibrate(pattern:number|number[]=9):void{
     if(!this.settings.vibration||this.hidden||this.destroyed||typeof navigator==='undefined')return;
@@ -175,6 +213,8 @@ export class SoundscapeEngine {
   }
   public pause():void{
     this.hidden=true;this.resetPressGate();this.stopSpin();this.stopMusic();this.stopVoices(undefined,0);this.lastCue.clear();
+    // The effect was stopped; its scheduled duck must not survive suspension.
+    this.duckUntil=0;this.fade(this.musicBus,this.settings.music?this.musicLevel():0,0);
     void this.context?.suspend().catch(()=>{});
   }
   public resume():void{
@@ -185,11 +225,11 @@ export class SoundscapeEngine {
   public destroy():void{
     this.destroyed=true;this.recordings?.clear();this.stopSpin();this.endAward();this.stopMusic();this.stopVoices(undefined,0);
     void this.context?.close().catch(()=>{});
-    this.pressMusicGate?.disconnect();this.musicBus?.disconnect();this.effectsBus?.disconnect();this.awardBus?.disconnect();this.room?.disconnect();this.roomGain?.disconnect();this.musicRoomGain?.disconnect();this.waveCache.clear();this.noiseBuffer=undefined;this.master?.disconnect();this.limiter?.disconnect();for(const filter of this.toneFilters)filter.disconnect();this.toneFilters=[];
+    this.pressMusicGate?.disconnect();this.musicBus?.disconnect();this.effectsBus?.disconnect();this.awardBus?.disconnect();this.room?.disconnect();this.roomGain?.disconnect();this.musicRoomGain?.disconnect();this.waveCache.clear();this.noiseBuffer=undefined;this.master?.disconnect();this.limiter?.disconnect();for(const filter of this.toneFilters)filter.disconnect();this.toneFilters=[];this.musicPositions.clear();
   }
   /** Compact read-only diagnostics for tests; no session or player data. */
-  public snapshot():Readonly<SoundSettings>&{voices:number;musicTimer:boolean;scene:string;state:string;awardActive:boolean;awardVoices:number;awardScheduledNotes:number;hidden:boolean;recordedMusic:boolean;recordedAward:boolean;musicVoices:number;musicTrack:string;readyRecordings:number;recordingFailures:number;recordingError:string;lastCueRate:number;pressVoices:number;cuePlays:number;lastPlayedCue:string;lastCueSource:string;cueCounts:Partial<Record<Cue,number>>}{
-    return {...this.settings,lastCueRate:this.lastCueRate,pressVoices:Array.from(this.voices).filter(v=>v.group==='press'&&!v.retiring).length,cuePlays:this.cuePlays,lastPlayedCue:this.lastPlayedCue,lastCueSource:this.lastCueSource,cueCounts:{...this.cueCounts},voices:this.voices.size,musicTimer:this.timer!==undefined,scene:this.scene,state:this.context?.state??'locked',awardActive:!!this.activeAward,awardScheduledNotes:this.activeAward?.scheduled??0,hidden:this.hidden,awardVoices:Array.from(this.voices).filter(v=>v.bus==='award').length,musicVoices:Array.from(this.voices).filter(v=>v.bus==='music').length,recordedMusic:!!this.musicVoice,recordedAward:this.activeAward?.recorded??false,musicTrack:this.musicVoice?this.musicVoiceKey:'fallback',readyRecordings:this.recordings?.diagnostics?.().decoded??0,recordingFailures:this.recordings?.diagnostics?.().failures??0,recordingError:this.recordings?.diagnostics?.().lastError??''};
+  public snapshot():Readonly<SoundSettings>&{voices:number;musicTimer:boolean;scene:string;state:string;awardActive:boolean;awardVoices:number;awardScheduledNotes:number;hidden:boolean;recordedMusic:boolean;recordedAward:boolean;musicVoices:number;musicTrack:string;musicPosition:number;readyRecordings:number;recordingFailures:number;recordingError:string;lastCueRate:number;pressVoices:number;cuePlays:number;lastPlayedCue:string;lastCueSource:string;cueCounts:Partial<Record<Cue,number>>;musicLevel:number;musicTrim:number;celebrationVoices:number;guardianVoices:number;featureVoices:number;featurePlays:number;lastFeatureStage:string;lastFeatureSource:string}{
+    return {...this.settings,featureVoices:Array.from(this.voices).filter(v=>v.group==='feature'&&!v.retiring).length,featurePlays:this.featurePlays,lastFeatureStage:this.lastFeatureStage,lastFeatureSource:this.lastFeatureSource,musicTrim:this.musicVoice?recordedMusicTrim(this.scene):1,musicLevel:this.settings.music?this.musicLevel():0,celebrationVoices:Array.from(this.voices).filter(v=>v.group==='celebration'&&!v.retiring).length,guardianVoices:Array.from(this.voices).filter(v=>v.group==='guardian'&&!v.retiring).length,lastCueRate:this.lastCueRate,pressVoices:Array.from(this.voices).filter(v=>v.group==='press'&&!v.retiring).length,cuePlays:this.cuePlays,lastPlayedCue:this.lastPlayedCue,lastCueSource:this.lastCueSource,cueCounts:{...this.cueCounts},voices:this.voices.size,musicTimer:this.timer!==undefined,scene:this.scene,state:this.context?.state??'locked',awardActive:!!this.activeAward,awardScheduledNotes:this.activeAward?.scheduled??0,hidden:this.hidden,awardVoices:Array.from(this.voices).filter(v=>v.bus==='award').length,musicVoices:Array.from(this.voices).filter(v=>v.bus==='music').length,recordedMusic:!!this.musicVoice,recordedAward:this.activeAward?.recorded??false,musicTrack:this.musicVoice?this.musicVoiceKey:'fallback',musicPosition:this.musicVoice?this.positionOf(this.musicVoice):(this.musicPositions.get(musicKey(this.scene))??0),readyRecordings:this.recordings?.diagnostics?.().decoded??0,recordingFailures:this.recordings?.diagnostics?.().failures??0,recordingError:this.recordings?.diagnostics?.().lastError??''};
   }
   private warmRecordings():void{
     const c=this.context,scene=this.scene;if(!c||!this.recordings||this.destroyed)return;
@@ -198,26 +238,26 @@ export class SoundscapeEngine {
     const ready=()=>{if(!this.destroyed&&this.scene===scene&&!this.hidden&&this.settings.music&&c.state==='running'&&this.recordings?.get(musicKey(scene)))this.startMusic();};
     void this.recordings.warm(scene,c,ready).then(ready).catch(()=>{/* A bad/offline file leaves the quiet fallback available. */}).finally(()=>{if(this.warmingScene===scene&&this.warmingContext===c)this.warmingScene='';});
   }
-  private clip(buffer:AudioBuffer,bus:Bus,volume:number,options:{loop?:number;rate?:number;awardId?:number;attack?:number;group?:VoiceGroup}={}):Voice|undefined{
+  private clip(buffer:AudioBuffer,bus:Bus,volume:number,options:{loop?:number;rate?:number;awardId?:number;attack?:number;group?:VoiceGroup;delay?:number;offset?:number;musicKey?:string}={}):Voice|undefined{
     const c=this.context,target=bus==='music'?this.musicBus:bus==='award'?this.awardBus:this.effectsBus;
     if(!c||!target||this.hidden||this.destroyed||this.voices.size>=48)return;
     const source=c.createBufferSource(),gain=c.createGain(),filter=c.createBiquadFilter();source.buffer=buffer;
-    const start=c.currentTime+.008,rate=options.rate??1;source.playbackRate.setValueAtTime(rate,start);
+    const start=c.currentTime+.008+(options.delay??0),rate=options.rate??1;source.playbackRate.setValueAtTime(rate,start);
     if(options.loop){source.loop=true;source.loopStart=0;source.loopEnd=Math.min(options.loop,buffer.duration);}
     filter.type='lowpass';filter.frequency.value=SOFT_TONE[bus].cutoff;filter.Q.value=.707;
-    const duration=buffer.duration/rate,end=options.loop?Infinity:start+duration;
+    const offset=Math.max(0,Math.min(options.offset??0,buffer.duration)),duration=(buffer.duration-offset)/rate,end=options.loop?Infinity:start+duration;
     gain.gain.setValueAtTime(.0001,start);gain.gain.linearRampToValueAtTime(volume,start+(options.attack??.012));
     if(!options.loop){gain.gain.setValueAtTime(volume,start+Math.max(.015,duration-.045));gain.gain.linearRampToValueAtTime(.0001,end);}
-    const voice:Voice={oscillator:source,gain,filter,bus,end,awardId:options.awardId,group:options.group};this.trackVoice(voice);
-    source.connect(filter).connect(gain).connect(target);source.start(start);if(!options.loop)source.stop(end+.01);
+    const voice:Voice={oscillator:source,gain,filter,bus,end,awardId:options.awardId,group:options.group,music:options.musicKey?{key:options.musicKey,start,offset,length:Math.min(options.loop??buffer.duration,buffer.duration),rate}:undefined};this.trackVoice(voice);
+    source.connect(filter).connect(gain).connect(target);source.start(start,offset);if(!options.loop)source.stop(end+.01);
     return voice;
   }
   private startSpin():void{
-    this.stopSpin();const buffer=this.recordings?.get('fx-reel-roll');if(buffer)this.rollVoice=this.clip(buffer,'effects',SOFT_MIX.spinRoll,{loop:1.1,attack:.09});
+    this.stopSpin();const buffer=this.recordings?.get(cabinetFeedbackKey(this.scene,'reel-roll'))??this.recordings?.get('fx-reel-roll');if(buffer)this.rollVoice=this.clip(buffer,'effects',SOFT_MIX.spinRoll,{loop:buffer.duration,attack:.09});
   }
   public stopSpin():void{
     const voice=this.rollVoice,c=this.context;this.rollVoice=undefined;if(!voice||!c)return;
-    voice.gain.gain.cancelScheduledValues(c.currentTime);voice.gain.gain.setValueAtTime(voice.gain.gain.value,c.currentTime);voice.gain.gain.linearRampToValueAtTime(.0001,c.currentTime+.10);
+    this.fade(voice.gain,.0001,.10);
     voice.end=Math.min(voice.end,c.currentTime+.11);try{voice.oscillator.stop(voice.end);}catch{/* Already landed. */}
   }
   private createMixer(c:AudioContext):void{
@@ -233,7 +273,7 @@ export class SoundscapeEngine {
     // Generated once; the dry cue remains clear, not washed out by a long hall tail.
     if(typeof c.createConvolver==='function'){
       this.room=c.createConvolver();this.roomGain=c.createGain();this.roomGain.gain.value=this.settings.sound?SOFT_MIX.awardRoom:0;
-      const impulse=c.createBuffer(2,Math.ceil(c.sampleRate*1.1),c.sampleRate);
+      const impulse=c.createBuffer(2,Math.ceil(c.sampleRate*.65),c.sampleRate);
       for(let channel=0;channel<2;channel++){
         const data=impulse.getChannelData(channel);let seed=103+channel*37;
         for(let i=0;i<data.length;i++){seed=(seed*1664525+1013904223)>>>0;const p=i/data.length;data[i]=(seed/4294967296*2-1)*Math.pow(1-p,3.8)*(i<c.sampleRate*.018?0:.22);}
@@ -322,12 +362,27 @@ export class SoundscapeEngine {
     const key=musicKey(this.scene),buffer=this.recordings?.get(key);
     if(buffer){
       if(this.musicVoice&&this.musicVoiceKey===key)return;
-      this.stopMusic();this.stopVoices('music',.40);this.musicVoiceKey=key;
-      this.musicVoice=this.clip(buffer,'music',SOFT_MIX.musicClip,{loop:musicDuration(this.scene),attack:.60});return;
+      // Fade old harmony out before introducing a different key (including
+      // fallback -> recording); fast scene changes also cancel pending sources.
+      this.stopMusic();this.stopVoices('music',MUSIC_FADES.sceneOut);
+      const wait=this.musicTailWait(),length=Math.min(musicDuration(this.scene),buffer.duration);
+      this.musicVoiceKey=key;
+      this.musicVoice=this.clip(buffer,'music',SOFT_MIX.musicClip*recordedMusicTrim(this.scene),{loop:length,attack:MUSIC_FADES.sceneIn,delay:wait,offset:(this.musicPositions.get(key)??0)%length,musicKey:key});return;
     }
     if(this.timer!==undefined)return;
-    this.nextBeat=Math.max(c.currentTime+.08,this.nextBeat);
+    const wait=Math.max(.08,this.musicTailWait());
+    this.nextBeat=Math.max(c.currentTime+wait,this.nextBeat);
     this.timer=setInterval(()=>this.scheduleMusic(),130);this.scheduleMusic();
+  }
+  /** Only elapsed audible-clock time advances a phrase; cancelled pending sources
+   * and outgoing fades must not overwrite the saved cursor a second time. */
+  private positionOf(voice:Voice):number{
+    const m=voice.music;if(!m||!this.context)return 0;
+    return (m.offset+Math.max(0,Math.min(this.context.currentTime,voice.end)-m.start)*m.rate)%m.length;
+  }
+  private musicTailWait():number{
+    const c=this.context;if(!c)return 0;
+    return Math.max(0,...Array.from(this.voices).filter(v=>v.bus==='music'&&Number.isFinite(v.end)).map(v=>v.end-c.currentTime));
   }
   private scheduleMusic():void{
     const c=this.context;if(!c||this.hidden||!this.settings.music||c.state!=='running')return;
@@ -346,8 +401,9 @@ export class SoundscapeEngine {
     const c=this.context;if(!c)return;
     for(const voice of this.voices){
       if(bus&&voice.bus!==bus)continue;
-      voice.end=Math.min(voice.end,c.currentTime+fade);
-      if(fade>0){voice.gain.gain.cancelScheduledValues(c.currentTime);voice.gain.gain.setValueAtTime(voice.gain.gain.value,c.currentTime);voice.gain.gain.linearRampToValueAtTime(.0001,voice.end);}
+      if(voice.music&&!voice.retiring)this.musicPositions.set(voice.music.key,this.positionOf(voice));
+      voice.retiring=true;voice.end=Math.min(voice.end,c.currentTime+fade);
+      if(fade>0)this.fade(voice.gain,.0001,Math.max(0,voice.end-c.currentTime));
       try{voice.oscillator.stop(voice.end);}catch{/* Already ended. */}
       if(fade===0){voice.oscillator.onended?.(new Event('ended'));}
     }
