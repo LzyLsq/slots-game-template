@@ -1,0 +1,28 @@
+{
+  "project": "F36_Golden_Wilds_v1.0.0",
+  "updatedAt": "2026-10-09",
+  "engine": "Cocos Creator 3.8.8",
+  "localGameImplemented": true,
+  "readyForSubmission": false,
+  "requiresImplementation": [
+    "Executable native Sign in with Apple bridge and verified account flow",
+    "Executable StoreKit 2 bridge and production transaction lifecycle",
+    "Server-authoritative expedition passport persistence and claims",
+    "F36 production deployment and end-to-end service acceptance"
+  ],
+  "requiresPublisherConfiguration": [
+    "Unique bundle identifier and signing",
+    "App Store Connect consumable product IDs",
+    "Publisher legal name, support address and public HTTPS URLs",
+    "Final legal/privacy content and resource licensing records"
+  ],
+  "notVerified": [
+    "Native iOS build/signature/install",
+    "Real device GPU, safe area, keyboard, performance and audio",
+    "Sign in with Apple on device",
+    "StoreKit Sandbox/TestFlight",
+    "Production service acceptance",
+    "App Store submission and review"
+  ],
+  "gitStatus": "Local F36 project only; not pushed"
+}

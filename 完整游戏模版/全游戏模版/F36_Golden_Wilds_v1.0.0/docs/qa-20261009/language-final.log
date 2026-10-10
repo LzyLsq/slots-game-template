@@ -1,0 +1,7 @@
+
+> f36-golden-wilds@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+All four feature rule sets translated in all five interface languages.
