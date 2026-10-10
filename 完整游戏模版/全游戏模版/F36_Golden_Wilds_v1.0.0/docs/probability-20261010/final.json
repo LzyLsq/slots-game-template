@@ -1,0 +1,597 @@
+{
+  "naturalOnly": true,
+  "newcomerIncluded": false,
+  "forcedResultsIncluded": false,
+  "method": "Independent xorshift32 seeds; real ResultGenerator and integer settlement. Fox exact enumeration verifies base and independent mystery free spins.",
+  "results": [
+    {
+      "gameId": "sun-lion",
+      "bet": 180,
+      "spins": 1500000,
+      "seeds": [
+        721984557,
+        2367745199,
+        3751892043
+      ],
+      "targetRtp": 0.96,
+      "payoutScale": 0.4133,
+      "featurePayoutScale": 0.4133,
+      "rtp": 0.961126925924842,
+      "confidence95": [
+        0.9570183994669132,
+        0.9652354523827706
+      ],
+      "targetWithinConfidence95": true,
+      "hitRate": 0.593134,
+      "netProfitRate": 0.225096,
+      "superOrHigherRate": 0.013146,
+      "baseRtp": 0.6236592296277019,
+      "featureRtp": 0.3374676962962924,
+      "featureRate": 0.047183333333333334,
+      "rate": {
+        "zero": 0.406866,
+        "partialReturn": 0.36794266666666664,
+        "breakEven": 9.533333333333334e-05,
+        "big": 0.21195,
+        "super": 0.012967333333333334,
+        "mega": 0.00017133333333333334,
+        "epic": 7.333333333333333e-06
+      },
+      "longestDryRun": 16,
+      "maxWin": 23013,
+      "runs": [
+        {
+          "seed": 721984557,
+          "spins": 500000,
+          "rtp": 0.9599100666650747,
+          "confidence95": [
+            0.9527991676198411,
+            0.9670209657103084
+          ],
+          "hitRate": 0.592206,
+          "netProfitRate": 0.224598
+        },
+        {
+          "seed": 2367745199,
+          "spins": 500000,
+          "rtp": 0.966150155554004,
+          "confidence95": [
+            0.9589822841561955,
+            0.9733180269518125
+          ],
+          "hitRate": 0.593584,
+          "netProfitRate": 0.22567
+        },
+        {
+          "seed": 3751892043,
+          "spins": 500000,
+          "rtp": 0.9573205555539891,
+          "confidence95": [
+            0.9502511477082866,
+            0.9643899633996916
+          ],
+          "hitRate": 0.593612,
+          "netProfitRate": 0.22502
+        }
+      ],
+      "milestones": [
+        {
+          "round": 1,
+          "minimum": 0,
+          "totalWin": 37,
+          "benefit": 0
+        },
+        {
+          "round": 2,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 3,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 4,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 5,
+          "minimum": 5,
+          "totalWin": 900,
+          "benefit": 900
+        },
+        {
+          "round": 6,
+          "minimum": 0,
+          "totalWin": 67,
+          "benefit": 0
+        },
+        {
+          "round": 7,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 8,
+          "minimum": 0,
+          "totalWin": 19,
+          "benefit": 0
+        },
+        {
+          "round": 9,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 10,
+          "minimum": 10,
+          "totalWin": 1800,
+          "benefit": 1590
+        },
+        {
+          "round": 11,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 12,
+          "minimum": 0,
+          "totalWin": 56,
+          "benefit": 0
+        }
+      ]
+    },
+    {
+      "gameId": "emerald-elephant",
+      "bet": 180,
+      "spins": 1500000,
+      "seeds": [
+        721984557,
+        2367745199,
+        3751892043
+      ],
+      "targetRtp": 0.96,
+      "payoutScale": 1.8534,
+      "featurePayoutScale": 1.8534,
+      "rtp": 0.9616103888892316,
+      "confidence95": [
+        0.9584733380707564,
+        0.9647474397077067
+      ],
+      "targetWithinConfidence95": true,
+      "hitRate": 0.4802533333333333,
+      "netProfitRate": 0.3744693333333333,
+      "superOrHigherRate": 0.015447333333333334,
+      "baseRtp": 0.5838654444446797,
+      "featureRtp": 0.3777449444444673,
+      "featureRate": 0.047374,
+      "rate": {
+        "zero": 0.5197466666666667,
+        "partialReturn": 0.105784,
+        "breakEven": 0,
+        "big": 0.359022,
+        "super": 0.015447333333333334,
+        "mega": 0,
+        "epic": 0
+      },
+      "longestDryRun": 20,
+      "maxWin": 4287,
+      "runs": [
+        {
+          "seed": 721984557,
+          "spins": 500000,
+          "rtp": 0.9606003333333891,
+          "confidence95": [
+            0.9551801945417714,
+            0.9660204721250069
+          ],
+          "hitRate": 0.480906,
+          "netProfitRate": 0.374896
+        },
+        {
+          "seed": 2367745199,
+          "spins": 500000,
+          "rtp": 0.9622731555556332,
+          "confidence95": [
+            0.9568230197274911,
+            0.9677232913837753
+          ],
+          "hitRate": 0.478888,
+          "netProfitRate": 0.373744
+        },
+        {
+          "seed": 3751892043,
+          "spins": 500000,
+          "rtp": 0.961957677777837,
+          "confidence95": [
+            0.9565273912820361,
+            0.9673879642736379
+          ],
+          "hitRate": 0.480966,
+          "netProfitRate": 0.374768
+        }
+      ],
+      "milestones": [
+        {
+          "round": 1,
+          "minimum": 0,
+          "totalWin": 250,
+          "benefit": 0
+        },
+        {
+          "round": 2,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 3,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 4,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 5,
+          "minimum": 5,
+          "totalWin": 900,
+          "benefit": 900
+        },
+        {
+          "round": 6,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 7,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 8,
+          "minimum": 0,
+          "totalWin": 250,
+          "benefit": 0
+        },
+        {
+          "round": 9,
+          "minimum": 0,
+          "totalWin": 200,
+          "benefit": 0
+        },
+        {
+          "round": 10,
+          "minimum": 10,
+          "totalWin": 1800,
+          "benefit": 1500
+        },
+        {
+          "round": 11,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 12,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        }
+      ]
+    },
+    {
+      "gameId": "lotus-koi",
+      "bet": 180,
+      "spins": 1500000,
+      "seeds": [
+        721984557,
+        2367745199,
+        3751892043
+      ],
+      "targetRtp": 0.96,
+      "payoutScale": 1.7933,
+      "featurePayoutScale": 1.7933,
+      "rtp": 0.9598530000019779,
+      "confidence95": [
+        0.9572515859891104,
+        0.9624544140148454
+      ],
+      "targetWithinConfidence95": true,
+      "hitRate": 0.57683,
+      "netProfitRate": 0.31366,
+      "superOrHigherRate": 0.003824,
+      "baseRtp": 0.6635278074105171,
+      "featureRtp": 0.2963251925928557,
+      "featureRate": 0.5358213333333334,
+      "rate": {
+        "zero": 0.42317,
+        "partialReturn": 0.26299,
+        "breakEven": 0.00018,
+        "big": 0.309836,
+        "super": 0.003824,
+        "mega": 0,
+        "epic": 0
+      },
+      "longestDryRun": 15,
+      "maxWin": 8698,
+      "runs": [
+        {
+          "seed": 721984557,
+          "spins": 500000,
+          "rtp": 0.9611383777785154,
+          "confidence95": [
+            0.9566375156745429,
+            0.9656392398824879
+          ],
+          "hitRate": 0.577048,
+          "netProfitRate": 0.314914
+        },
+        {
+          "seed": 2367745199,
+          "spins": 500000,
+          "rtp": 0.9567264444451977,
+          "confidence95": [
+            0.9522382479469874,
+            0.961214640943408
+          ],
+          "hitRate": 0.576402,
+          "netProfitRate": 0.31236
+        },
+        {
+          "seed": 3751892043,
+          "spins": 500000,
+          "rtp": 0.9616941777785213,
+          "confidence95": [
+            0.9571659889933649,
+            0.9662223665636777
+          ],
+          "hitRate": 0.57704,
+          "netProfitRate": 0.313706
+        }
+      ],
+      "milestones": [
+        {
+          "round": 1,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 2,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 3,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 4,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 5,
+          "minimum": 5,
+          "totalWin": 900,
+          "benefit": 520
+        },
+        {
+          "round": 6,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 7,
+          "minimum": 0,
+          "totalWin": 207,
+          "benefit": 0
+        },
+        {
+          "round": 8,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 9,
+          "minimum": 0,
+          "totalWin": 52,
+          "benefit": 0
+        },
+        {
+          "round": 10,
+          "minimum": 10,
+          "totalWin": 1800,
+          "benefit": 1800
+        },
+        {
+          "round": 11,
+          "minimum": 0,
+          "totalWin": 26,
+          "benefit": 0
+        },
+        {
+          "round": 12,
+          "minimum": 0,
+          "totalWin": 494,
+          "benefit": 0
+        }
+      ]
+    },
+    {
+      "gameId": "moon-fox",
+      "bet": 180,
+      "spins": 1500000,
+      "seeds": [
+        721984557,
+        2367745199,
+        3751892043
+      ],
+      "targetRtp": 0.96,
+      "payoutScale": 1.5916,
+      "featurePayoutScale": 1.5916,
+      "rtp": 0.9576752296301138,
+      "confidence95": [
+        0.9511743533550885,
+        0.964176105905139
+      ],
+      "targetWithinConfidence95": true,
+      "hitRate": 0.07352333333333338,
+      "netProfitRate": 0.07352333333333333,
+      "superOrHigherRate": 0.026975333333333334,
+      "baseRtp": 0.940376351852262,
+      "featureRtp": 0.017298877777777992,
+      "featureRate": 0.004982,
+      "rate": {
+        "zero": 0.9264766666666666,
+        "partialReturn": 0,
+        "breakEven": 0,
+        "big": 0.046548,
+        "super": 0.026919333333333333,
+        "mega": 5.6e-05,
+        "epic": 0
+      },
+      "longestDryRun": 158,
+      "maxWin": 14324,
+      "runs": [
+        {
+          "seed": 721984557,
+          "spins": 500000,
+          "rtp": 0.9586824999994626,
+          "confidence95": [
+            0.9474156504324525,
+            0.9699493495664728
+          ],
+          "hitRate": 0.073664,
+          "netProfitRate": 0.073664
+        },
+        {
+          "seed": 2367745199,
+          "spins": 500000,
+          "rtp": 0.9566777555550179,
+          "confidence95": [
+            0.9454335340314963,
+            0.9679219770785394
+          ],
+          "hitRate": 0.073576,
+          "netProfitRate": 0.073576
+        },
+        {
+          "seed": 3751892043,
+          "spins": 500000,
+          "rtp": 0.9576654333327943,
+          "confidence95": [
+            0.9463969549106162,
+            0.9689339117549725
+          ],
+          "hitRate": 0.07333,
+          "netProfitRate": 0.07333
+        }
+      ],
+      "exact": {
+        "combinations": 148877,
+        "baseHitRate": 0.07259684168810494,
+        "baseRtp": 0.943504182796686,
+        "featureRate": 0.004896659658644384,
+        "featureRtp": 0.016306295415947827,
+        "rtp": 0.9598104782126339
+      },
+      "milestones": [
+        {
+          "round": 1,
+          "minimum": 0,
+          "totalWin": 2865,
+          "benefit": 0
+        },
+        {
+          "round": 2,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 3,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 4,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 5,
+          "minimum": 5,
+          "totalWin": 900,
+          "benefit": 900
+        },
+        {
+          "round": 6,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 7,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 8,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 9,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 10,
+          "minimum": 10,
+          "totalWin": 1800,
+          "benefit": 1800
+        },
+        {
+          "round": 11,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 12,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        }
+      ]
+    }
+  ],
+  "validation": "All modes use final factors. Sun rerun with final factor and identical independent seeds replaces the prior Sun samples; it is not counted twice."
+}

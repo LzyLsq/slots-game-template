@@ -1,0 +1,141 @@
+{
+  "naturalOnly": true,
+  "newcomerIncluded": false,
+  "forcedResultsIncluded": false,
+  "method": "Independent xorshift32 seeds; real ResultGenerator and integer settlement. Fox exact enumeration verifies base and independent mystery free spins.",
+  "results": [
+    {
+      "gameId": "lotus-koi",
+      "bet": 180,
+      "spins": 500000,
+      "seeds": [
+        1947165523,
+        3827841047
+      ],
+      "targetRtp": 0.96,
+      "payoutScale": 1.7714,
+      "featurePayoutScale": 1.7714,
+      "rtp": 0.9536628777790614,
+      "confidence95": [
+        0.949161626985376,
+        0.9581641285727469
+      ],
+      "targetWithinConfidence95": false,
+      "hitRate": 0.577196,
+      "netProfitRate": 0.313164,
+      "superOrHigherRate": 0.003892,
+      "baseRtp": 0.6579252111116772,
+      "featureRtp": 0.29573766666665374,
+      "featureRate": 0.536028,
+      "rate": {
+        "zero": 0.422804,
+        "partialReturn": 0.263848,
+        "breakEven": 0.000184,
+        "big": 0.309272,
+        "super": 0.003892,
+        "mega": 0,
+        "epic": 0
+      },
+      "longestDryRun": 18,
+      "maxWin": 8027,
+      "runs": [
+        {
+          "seed": 1947165523,
+          "spins": 250000,
+          "rtp": 0.9527071333332904,
+          "confidence95": [
+            0.9463509610315276,
+            0.9590633056350532
+          ],
+          "hitRate": 0.577912,
+          "netProfitRate": 0.313408
+        },
+        {
+          "seed": 3827841047,
+          "spins": 250000,
+          "rtp": 0.9546186222221908,
+          "confidence95": [
+            0.9482433385015272,
+            0.9609939059428545
+          ],
+          "hitRate": 0.57648,
+          "netProfitRate": 0.31292
+        }
+      ],
+      "milestones": [
+        {
+          "round": 1,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 2,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 3,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 4,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 5,
+          "minimum": 5,
+          "totalWin": 900,
+          "benefit": 525
+        },
+        {
+          "round": 6,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 7,
+          "minimum": 0,
+          "totalWin": 204,
+          "benefit": 0
+        },
+        {
+          "round": 8,
+          "minimum": 0,
+          "totalWin": 0,
+          "benefit": 0
+        },
+        {
+          "round": 9,
+          "minimum": 0,
+          "totalWin": 51,
+          "benefit": 0
+        },
+        {
+          "round": 10,
+          "minimum": 10,
+          "totalWin": 1800,
+          "benefit": 1800
+        },
+        {
+          "round": 11,
+          "minimum": 0,
+          "totalWin": 26,
+          "benefit": 0
+        },
+        {
+          "round": 12,
+          "minimum": 0,
+          "totalWin": 489,
+          "benefit": 0
+        }
+      ]
+    }
+  ]
+}

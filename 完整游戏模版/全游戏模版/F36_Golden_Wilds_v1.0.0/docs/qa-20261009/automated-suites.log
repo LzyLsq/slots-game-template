@@ -1,0 +1,252 @@
+
+> f36-golden-wilds@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:win-presentation && npm run test:expedition
+
+
+> f36-golden-wilds@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "sun-lion": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 165878,
+      "wins": 639,
+      "features": 49,
+      "maxWin": 4344
+    },
+    "emerald-elephant": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 167511,
+      "wins": 465,
+      "features": 44,
+      "maxWin": 4169
+    },
+    "lotus-koi": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 173982,
+      "wins": 558,
+      "features": 525,
+      "maxWin": 2753
+    },
+    "moon-fox": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 153663,
+      "wins": 74,
+      "features": 5,
+      "maxWin": 7048
+    }
+  }
+}
+
+> f36-golden-wilds@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f36-golden-wilds@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f36-golden-wilds@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 32 cabinet/viewport combinations: enlarged glass, essential bounds, symbol crop and breathing room.
+
+> f36-golden-wilds@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+
+> f36-golden-wilds@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+All four feature rule sets translated in all five interface languages.
+
+> f36-golden-wilds@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f36-golden-wilds@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'sun-lion',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 125,
+    featurePaidHits: 122,
+    coreHits: 1686,
+    coreReturn: 0.5888907407407408,
+    hits: 1758,
+    sampleReturn: 0.8681277777777778,
+    layoutVariants: 1
+  },
+  {
+    id: 'emerald-elephant',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 146,
+    featurePaidHits: 146,
+    coreHits: 1337,
+    coreReturn: 0.5776166666666667,
+    hits: 1439,
+    sampleReturn: 0.9764092592592593,
+    layoutVariants: 1
+  },
+  {
+    id: 'lotus-koi',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1596,
+    featurePaidHits: 526,
+    coreHits: 1596,
+    coreReturn: 0.5336018518518518,
+    hits: 1716,
+    sampleReturn: 0.9207351851851852,
+    layoutVariants: 1
+  },
+  {
+    id: 'moon-fox',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 14,
+    featurePaidHits: 2,
+    coreHits: 223,
+    coreReturn: 0.9998518518518519,
+    hits: 225,
+    sampleReturn: 1.0155148148148148,
+    layoutVariants: 1
+  }
+]
+
+> f36-golden-wilds@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'sun-lion',
+    core: 'lines',
+    feature: 'sticky-free',
+    samples: 6000,
+    features: 291,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'emerald-elephant',
+    core: 'clusters',
+    feature: 'coin-vault',
+    samples: 6000,
+    features: 283,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'lotus-koi',
+    core: 'clusters',
+    feature: 'waterfall',
+    samples: 6000,
+    features: 3280,
+    motions: [ 'drop' ]
+  },
+  {
+    id: 'moon-fox',
+    core: 'lines',
+    feature: 'mystery-free',
+    samples: 6000,
+    features: 28,
+    motions: [ 'respin', 'transform' ]
+  }
+]
+
+> f36-golden-wilds@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'sun-lion',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 125,
+    featurePaidHits: 122,
+    coreHits: 1686,
+    coreReturn: 0.5888907407407408,
+    hits: 1758,
+    sampleReturn: 0.8681277777777778,
+    layoutVariants: 1
+  },
+  {
+    id: 'emerald-elephant',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 146,
+    featurePaidHits: 146,
+    coreHits: 1337,
+    coreReturn: 0.5776166666666667,
+    hits: 1439,
+    sampleReturn: 0.9764092592592593,
+    layoutVariants: 1
+  },
+  {
+    id: 'lotus-koi',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1596,
+    featurePaidHits: 526,
+    coreHits: 1596,
+    coreReturn: 0.5336018518518518,
+    hits: 1716,
+    sampleReturn: 0.9207351851851852,
+    layoutVariants: 1
+  },
+  {
+    id: 'moon-fox',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 14,
+    featurePaidHits: 2,
+    coreHits: 223,
+    coreReturn: 0.9998518518518519,
+    hits: 225,
+    sampleReturn: 1.0155148148148148,
+    layoutVariants: 1
+  }
+]
+
+> f36-golden-wilds@1.0.0 test:win-presentation
+> node --import tsx tools/win-presentation-test.ts
+
+PASS strict charged-bet boundary, retained higher tiers, five-language captions and four authored award plinth layouts.
+PASS all three coin layers across four tiers and four rooms: rotated bounds clear captions, amounts and buttons; both reveal volleys finish before exit.
+PASS paired light crests after early and automatic reveals; all opacity values remain in the render range.
+
+> f36-golden-wilds@1.0.0 test:expedition
+> node --import tsx tools/expedition-test.ts
+
+PASS passport: four mode settlements, refunds, duplicate payout/stamps/claims, reload and account isolation.

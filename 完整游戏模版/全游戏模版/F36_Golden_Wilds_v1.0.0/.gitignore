@@ -1,0 +1,40 @@
+/library/
+/temp/
+/local/
+/profiles/
+/build/
+/node_modules
+/.creator/
+/.playwright-cli/
+/output/
+/work/generated/
+/work/imagegen/
+/work/ccswitch/
+/work/prompts/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+/.CocosCreator/
+
+# Superseded local review captures
+/docs/screenshots/final-20260924/
+/docs/screenshots/input-*-input-fixed.png
+
+# Earlier visual iterations kept locally, not part of current delivery
+/docs/screenshots/living-hall-20260928/
+
+/tmp/
+__pycache__/
+
+# Source commissions are retained locally; shipping raster assets live in assets/resources.
+/art-source/**/*.png
+/art-source/**/*.jpg
+/art-source/**/*.webp
+# Superseded iteration captures and large raw recordings remain local.
+/docs/screenshots/*
+!/docs/screenshots/f36-git-final-20261010/
+/docs/**/*.webm
+/docs/**/*.mp4
+/docs/**/*.gif

@@ -1,0 +1,26 @@
+{
+  "method": "Pooled training samples normalized to current payout factor; linear approximation for rounded awards, followed by independent validation. Old buggy Koi excluded.",
+  "results": [
+    {
+      "gameId": "sun-lion",
+      "trainingSpins": 2250000,
+      "normalizedRtpEstimate": 0.9580265871569402,
+      "oldScale": 0.4125,
+      "newScale": 0.4133
+    },
+    {
+      "gameId": "emerald-elephant",
+      "trainingSpins": 2250000,
+      "normalizedRtpEstimate": 0.9559308074043447,
+      "oldScale": 1.8455,
+      "newScale": 1.8534
+    },
+    {
+      "gameId": "lotus-koi",
+      "trainingSpins": 1700000,
+      "normalizedRtpEstimate": 0.9545999852896968,
+      "oldScale": 1.7832,
+      "newScale": 1.7933
+    }
+  ]
+}

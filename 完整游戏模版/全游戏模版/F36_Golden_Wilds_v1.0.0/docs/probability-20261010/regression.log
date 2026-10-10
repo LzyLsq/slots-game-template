@@ -1,0 +1,315 @@
+
+> f36-golden-wilds@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:win-presentation && npm run test:expedition && npm run test:probability
+
+
+> f36-golden-wilds@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "sun-lion": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 168866,
+      "wins": 639,
+      "features": 49,
+      "maxWin": 4412
+    },
+    "emerald-elephant": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 168187,
+      "wins": 465,
+      "features": 44,
+      "maxWin": 4187
+    },
+    "lotus-koi": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 172948,
+      "wins": 559,
+      "features": 530,
+      "maxWin": 2788
+    },
+    "moon-fox": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 156115,
+      "wins": 74,
+      "features": 5,
+      "maxWin": 7162
+    }
+  }
+}
+
+> f36-golden-wilds@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f36-golden-wilds@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f36-golden-wilds@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 40 cabinet/viewport combinations: enlarged glass, essential bounds, symbol crop and breathing room.
+
+> f36-golden-wilds@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+
+> f36-golden-wilds@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+All four feature rule sets translated in all five interface languages.
+
+> f36-golden-wilds@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f36-golden-wilds@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'sun-lion',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 125,
+    featurePaidHits: 122,
+    coreHits: 1686,
+    coreReturn: 0.5996092592592592,
+    hits: 1758,
+    sampleReturn: 0.8834425925925926,
+    layoutVariants: 1
+  },
+  {
+    id: 'emerald-elephant',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 146,
+    featurePaidHits: 146,
+    coreHits: 1337,
+    coreReturn: 0.5799074074074074,
+    hits: 1439,
+    sampleReturn: 0.9803833333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'lotus-koi',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1567,
+    featurePaidHits: 555,
+    coreHits: 1567,
+    coreReturn: 0.5104111111111111,
+    hits: 1687,
+    sampleReturn: 0.9327203703703704,
+    layoutVariants: 1
+  },
+  {
+    id: 'moon-fox',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 14,
+    featurePaidHits: 2,
+    coreHits: 223,
+    coreReturn: 1.015862962962963,
+    hits: 225,
+    sampleReturn: 1.0317777777777777,
+    layoutVariants: 1
+  }
+]
+
+> f36-golden-wilds@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'sun-lion',
+    core: 'lines',
+    feature: 'sticky-free',
+    samples: 6000,
+    features: 291,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'emerald-elephant',
+    core: 'clusters',
+    feature: 'coin-vault',
+    samples: 6000,
+    features: 283,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'lotus-koi',
+    core: 'clusters',
+    feature: 'waterfall',
+    samples: 6000,
+    features: 3265,
+    motions: [ 'drop' ]
+  },
+  {
+    id: 'moon-fox',
+    core: 'lines',
+    feature: 'mystery-free',
+    samples: 6000,
+    features: 28,
+    motions: [ 'respin', 'transform' ]
+  }
+]
+
+> f36-golden-wilds@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'sun-lion',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 125,
+    featurePaidHits: 122,
+    coreHits: 1686,
+    coreReturn: 0.5996092592592592,
+    hits: 1758,
+    sampleReturn: 0.8834425925925926,
+    layoutVariants: 1
+  },
+  {
+    id: 'emerald-elephant',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 146,
+    featurePaidHits: 146,
+    coreHits: 1337,
+    coreReturn: 0.5799074074074074,
+    hits: 1439,
+    sampleReturn: 0.9803833333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'lotus-koi',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1567,
+    featurePaidHits: 555,
+    coreHits: 1567,
+    coreReturn: 0.5104111111111111,
+    hits: 1687,
+    sampleReturn: 0.9327203703703704,
+    layoutVariants: 1
+  },
+  {
+    id: 'moon-fox',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 14,
+    featurePaidHits: 2,
+    coreHits: 223,
+    coreReturn: 1.015862962962963,
+    hits: 225,
+    sampleReturn: 1.0317777777777777,
+    layoutVariants: 1
+  }
+]
+
+> f36-golden-wilds@1.0.0 test:win-presentation
+> node --import tsx tools/win-presentation-test.ts
+
+PASS strict charged-bet boundaries, retained tiers, translated captions and cabinet-anchored award text across phone proportions.
+PASS all three coin layers across four tiers and cabinets: full rotated bounds clear the award copy; both volleys finish before exit.
+PASS paired light crests after early and automatic reveals; all opacity values remain in the render range.
+
+> f36-golden-wilds@1.0.0 test:expedition
+> node --import tsx tools/expedition-test.ts
+
+PASS passport: four mode settlements, refunds, duplicate payout/stamps/claims, reload and account isolation.
+
+> f36-golden-wilds@1.0.0 test:probability
+> node --import tsx tools/probability-test.ts && node --import tsx tools/exact-fox-audit.ts
+
+PASS shared-WILD conflicts, surviving natural clusters, all-WILD and disconnected groups, 21440 natural Koi boards, stake-independent draws
+{
+  "gameId": "moon-fox",
+  "naturalOnly": true,
+  "combinations": 148877,
+  "featureTriggerRate": 0.004896659658644384,
+  "baseHitRate": 0.07259684168810498,
+  "method": "All stop combinations and all equally likely mystery replacements; actual per-award integer rounding at all supported stakes; three independent free spins.",
+  "results": [
+    {
+      "bet": 30,
+      "baseRtp": 0.9437423734581791,
+      "featureRtp": 0.01630987419154679,
+      "rtp": 0.960052247649726,
+      "targetRtp": 0.96,
+      "difference": 0.00005224764972600049
+    },
+    {
+      "bet": 80,
+      "baseRtp": 0.9437928625643988,
+      "featureRtp": 0.016310937792584638,
+      "rtp": 0.9601038003569834,
+      "targetRtp": 0.96,
+      "difference": 0.00010380035698343004
+    },
+    {
+      "bet": 180,
+      "baseRtp": 0.943504182796686,
+      "featureRtp": 0.01630629541593768,
+      "rtp": 0.9598104782126237,
+      "targetRtp": 0.96,
+      "difference": -0.0001895217873763011
+    },
+    {
+      "bet": 400,
+      "baseRtp": 0.9435854262243328,
+      "featureRtp": 0.0163075993516154,
+      "rtp": 0.9598930255759482,
+      "targetRtp": 0.96,
+      "difference": -0.00010697442405172009
+    },
+    {
+      "bet": 500,
+      "baseRtp": 0.9436150244832983,
+      "featureRtp": 0.016308072409453117,
+      "rtp": 0.9599230968927513,
+      "targetRtp": 0.96,
+      "difference": -0.00007690310724861593
+    },
+    {
+      "bet": 900,
+      "baseRtp": 0.9436018697015359,
+      "featureRtp": 0.01630786216152524,
+      "rtp": 0.9599097318630612,
+      "targetRtp": 0.96,
+      "difference": -0.0000902681369387981
+    }
+  ]
+}

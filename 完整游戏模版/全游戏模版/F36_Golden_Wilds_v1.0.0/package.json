@@ -1,0 +1,42 @@
+{
+  "name": "f36-golden-wilds",
+  "uuid": "5e352f75-36b1-45dd-8748-0ed5379fa40e",
+  "version": "1.0.0",
+  "description": "F36 Golden Wilds \u2014 original fortune wildlife expedition with four distinct traditional slot sanctuaries",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:win-presentation && npm run test:expedition && npm run test:probability",
+    "test:layout": "node --import tsx tools/layout-test.ts",
+    "test:math": "node --import tsx tools/math-test.ts",
+    "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
+    "test:rank": "node --import tsx tools/rank-test.ts",
+    "test:rtp": "node --import tsx tools/rtp-simulation.ts 1000000",
+    "release:audit": "node --import tsx tools/release-audit.ts",
+    "typecheck:math": "tsc -p tsconfig.math.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
+    "server:dev": "node --import tsx server/ProductionServer.ts",
+    "server:production": "NODE_ENV=production node --import tsx server/PostgresProductionServer.ts",
+    "test:rules": "node --import tsx tools/rules-test.ts",
+    "test:language": "node --import tsx tools/language-test.ts",
+    "test:signature": "node --import tsx tools/signature-test.ts",
+    "test:core": "node --import tsx tools/core-test.ts",
+    "test:cabinets": "node --import tsx tools/cabinet-test.ts",
+    "test:primary": "node --import tsx tools/primary-test.ts",
+    "test:win-presentation": "node --import tsx tools/win-presentation-test.ts",
+    "test:expedition": "node --import tsx tools/expedition-test.ts",
+    "test:probability": "node --import tsx tools/probability-test.ts && node --import tsx tools/exact-fox-audit.ts",
+    "audit:probability": "node --import tsx tools/probability-audit.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "8.15.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}
