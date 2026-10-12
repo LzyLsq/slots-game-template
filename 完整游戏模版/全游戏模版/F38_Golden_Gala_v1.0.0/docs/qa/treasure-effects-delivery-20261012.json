@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "testsExit": 0,
+  "fullNpmTest": true,
+  "testsLog": "/tmp/f38-treasure-effects-tests-20261012.log",
+  "typechecks": [
+    "UI",
+    "math",
+    "server"
+  ],
+  "buildExit": 36,
+  "buildFinished": true,
+  "buildLog": "/tmp/f38-treasure-effects-build-20261012.log",
+  "buildWarning": "Worker SIGTERM retained in raw build log",
+  "jsSyntaxChecks": 18,
+  "buildFiles": 510,
+  "bundle": "assets/main/index.a6ba0.js",
+  "allDeployedFilesByteVerified": true,
+  "mediaFilesUnchanged": 283,
+  "previousBuildBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/f38-before-treasure-effects-_4qjiroe",
+  "sourceHashes": {
+    "assets/scripts/vfx/TreasuryMotion.ts": "a68c54ec48fe3675cb4b6d91b3a8e8f232cc3b8630635244f9b0daac1fad7f4c",
+    "assets/scripts/vfx/TreasuryLife.ts": "e46f2d0386707bb77bfce8f74030001c500f1dd730293d97bc9ceacf18c4bbb2",
+    "assets/scripts/ui/GuardianProsperity.ts": "639c72b621b1c4a6b5799922fe06e3b533aa3e4d224f7245a05f96f4129532b3",
+    "assets/scripts/ui/GuardianSprite.ts": "3d4298ecdeee89bad3be12b28172fb2a0491ed68856fd4754fdcb15e8d377c09",
+    "assets/scripts/ui/CabinetControlMotion.ts": "6b24f9e7852dcc5e88c7678eb135a36f91abb4a4c348477ea04c2024d72cf9e5",
+    "package.json": "d13e1822559074b722f9e74d42663f3abfcb290f8688c4d653239e1caeb43ebf",
+    "tools/treasure-effects-test.ts": "a55e099a919e2e305194f6d1685eace46c4d269ade4638305405c1b7f1479135"
+  },
+  "browserEvidence": "docs/qa/treasure-effects-browser-20261012.json",
+  "browserConsoleWarningsOrErrors": 0,
+  "browserViewportChecks": [
+    "320x568",
+    "390x844",
+    "default viewport restored"
+  ],
+  "screenshots": [
+    "treasure-effects-lobby-20261012.jpg",
+    "treasure-effects-lobby-320-20261012.jpg",
+    "treasure-effects-vault-20261012.jpg",
+    "treasure-effects-vault-320-20261012.jpg",
+    "treasure-effects-vault-390-20261012.jpg"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-12",
+  "scope": "Local HTTP availability and served-byte integrity only; not browser rendering or interaction validation",
+  "status": "PASS",
+  "resources": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "6acb10b8ab070f0454e1bc7e658d842c6c97eb9b946cd3c003171141362638c6",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/main/index.f710e.js",
+      "status": 200,
+      "sha256": "e6577dcc0165fc705df86b2d96df16ae0ed9ee7604b6de0b23c7bf5ab63f9b71",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/main/config.f710e.json",
+      "status": 200,
+      "sha256": "c71b3f382a3f27f2c9aaf49c1010ba9395e88764b6b8fd21c20580dc01832066",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/resources/index.8330c.js",
+      "status": 200,
+      "sha256": "51a07ab61ee49561d29734ff6ee095b0d8a47998bbe30a6f1973bf3c8b7faa25",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/resources/config.8330c.json",
+      "status": 200,
+      "sha256": "0936c2829e1eac997c72fd59bf2f8ed218523e8fb42a843310349ef42038bb61",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/resources/native/35/35d7254b-737e-4208-9669-47b5ab77545d.7b4bb.png",
+      "status": 200,
+      "sha256": "567e6150e7c61640e9441f134f90e642932da9f77f5a4c7a2d90063e711fa8e9",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/resources/native/ba/ba9d062d-3c4f-46e0-aeff-e1677ec59ca5.a1510.png",
+      "status": 200,
+      "sha256": "3321ca767b29f079367023a0ad09e1de2b5e0ada2a7bc927c2d8885d24376d86",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/resources/native/9b/9b7dcc6f-ed64-47d2-bbc7-ec6e924a9fce.ce8dd.png",
+      "status": 200,
+      "sha256": "db9d5dfc30501c44c8d0f22bb0a12654e3c8660bf866cfe4a8a9936b6ac70fe4",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/resources/native/64/643bd4b4-57d4-47f3-a705-9326ed54cca9.80afa.png",
+      "status": 200,
+      "sha256": "8927402d4f5b2ddba72318333cd902cce5b58701bb55b80de329ce81b9e53861",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "assets/resources/native/98/982dd07a-f159-4dbf-8986-d80747bdc0f2.aa0de.png",
+      "status": 200,
+      "sha256": "ed813b424ffd417f206dc4bf853a55758b123ff25a6a726463770256abea7f08",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "audio/music-lobby.m4a",
+      "status": 200,
+      "sha256": "4ff7624c532c960700872cc5c17b6932325ed59d8a7c722558ba2326d91afa6f",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "path": "audio/music-ruby-royale.m4a",
+      "status": 200,
+      "sha256": "8a2f784f9f601302bcc4ff55a19842c7579bccd749dcdb0b95cb76de384c24e4",
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "origin": "http://127.0.0.1:6138/",
+  "resources": [
+    {
+      "resource": "index.html",
+      "status": 200,
+      "bytes": 2146,
+      "sha256": "458b2d1cd617ed98e6b4859304dc05df50815416801ca95549f7d490a0ac4f94",
+      "deployedBytesMatch": true
+    },
+    {
+      "resource": "assets/main/index.547f9.js",
+      "status": 200,
+      "bytes": 702813,
+      "sha256": "72edf342fb47ceee3c7de6764ca18be792e558bc29664fe3c512cf7408627afb",
+      "deployedBytesMatch": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-12",
+  "url": "http://127.0.0.1:6138/?debug=1&screen=profile",
+  "bundle": "assets/main/index.b79f3.js",
+  "observations": [
+    "Four unique animal portraits in a 2×2 picker, no repeated rows",
+    "320×568 and 390×844: full portraits, readable names/current marker; hint stays above carved lower rim",
+    "Selected treasury bull; account updated; reload retained it; self row in rankings matched",
+    "Selected fortune fox; account and top bar updated to the same fox",
+    "Restored original golden lion; account and top bar matched; final picker shows exactly one current portrait",
+    "Resized with picker open; modal remained usable; temporary viewport override reset",
+    "No browser console warning/error observed in returned latest 100 entries"
+  ],
+  "screenshots": [
+    "portrait-picker-320-20261012.jpg",
+    "portrait-picker-390-20261012.jpg",
+    "portrait-persistence-320-20261012.jpg",
+    "portrait-rank-320-20261012.jpg",
+    "portrait-restored-account-320-20261012.jpg"
+  ],
+  "notes": [
+    "Persistence/rank evidence captured on the first successful avatar fix build; final build only moved the bottom hint upward",
+    "No production server session or physical iOS device tested",
+    "No Git push requested for this task"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "f38-golden-gala",
+  "uuid": "a269c72a-e276-48c1-9b10-7f54335b8ac9",
+  "version": "1.0.0",
+  "description": "F38 Golden Gala \u2014 four original casino slots, direct-entry gallery and engraved treasure collection",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:guardians && npm run test:audio && npm run test:audio:recordings && npm run test:audio:festive && npm run test:award && npm run test:life && npm run test:reel-presentation && npm run test:text-layout && npm run test:caravan && npm run test:guardian-renderer && npm run test:lobby-details && npm run test:page-arrival && npm run test:guardian-continuity && npm run test:cabinet-polish && npm run test:portraits && npm run test:bull-cutout && npm run test:guardian-cadence && npm run test:treasure-effects && npm run test:title-relief",
+    "test:layout": "node --import tsx tools/layout-test.ts",
+    "test:math": "node --import tsx tools/math-test.ts",
+    "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",
+    "test:rank": "node --import tsx tools/rank-test.ts",
+    "test:rtp": "node --import tsx tools/rtp-simulation.ts 100000",
+    "release:audit": "node --import tsx tools/release-audit.ts",
+    "typecheck:math": "tsc -p tsconfig.math.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
+    "server:dev": "node --import tsx server/ProductionServer.ts",
+    "server:production": "NODE_ENV=production node --import tsx server/PostgresProductionServer.ts",
+    "test:rules": "node --import tsx tools/rules-test.ts",
+    "test:language": "node --import tsx tools/language-test.ts",
+    "test:signature": "node --import tsx tools/signature-test.ts",
+    "test:core": "node --import tsx tools/core-test.ts",
+    "test:cabinets": "node --import tsx tools/cabinet-test.ts",
+    "test:primary": "node --import tsx tools/primary-test.ts",
+    "test:guardians": "node --import tsx tools/guardian-test.ts",
+    "test:audio": "node --import tsx tools/audio-test.ts",
+    "test:award": "node --import tsx tools/award-test.ts",
+    "test:audio:recordings": "node --import tsx tools/audio-recording-test.ts",
+    "test:life": "node --import tsx tools/treasury-life-test.ts",
+    "test:audio:festive": "node --import tsx tools/festive-audio-test.ts",
+    "test:reel-presentation": "node --import tsx tools/reel-presentation-test.ts",
+    "test:text-layout": "node --import tsx tools/text-layout-test.ts",
+    "test:caravan": "node --import tsx tools/caravan-test.ts",
+    "test:guardian-renderer": "node --import tsx tools/guardian-renderer-test.ts",
+    "test:lobby-details": "node --import tsx tools/lobby-detail-test.ts",
+    "test:page-arrival": "node --import tsx tools/page-arrival-test.ts",
+    "test:guardian-continuity": "node --import tsx tools/guardian-continuity-test.ts",
+    "test:cabinet-polish": "node --import tsx tools/cabinet-polish-test.ts",
+    "test:portraits": "node --import tsx tools/portrait-test.ts",
+    "test:bull-cutout": "node --import tsx tools/bull-cutout-test.ts",
+    "test:guardian-cadence": "node --import tsx tools/guardian-cadence-test.ts",
+    "test:treasure-effects": "node --import tsx tools/treasure-effects-test.ts",
+    "test:title-relief": "node --import tsx tools/title-relief-test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "8.15.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}

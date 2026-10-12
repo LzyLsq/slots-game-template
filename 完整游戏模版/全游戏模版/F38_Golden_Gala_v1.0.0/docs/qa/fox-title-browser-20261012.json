@@ -1,0 +1,489 @@
+{
+  "date": "2026-10-12",
+  "samples": [
+    {
+      "id": "ruby-royale",
+      "owner": "Node.332",
+      "time": 21.366,
+      "size": [
+        368.444,
+        149.68
+      ],
+      "scale": 1.018,
+      "lift": 1.997,
+      "sheenAlpha": 35.79,
+      "pool": 5,
+      "sourceAlpha": true,
+      "opaqueTitle": true,
+      "reduced": false,
+      "quiet": false
+    },
+    {
+      "id": "ruby-royale",
+      "owner": "Node.332",
+      "time": 51.583,
+      "size": [
+        368.444,
+        149.68
+      ],
+      "scale": 1.003,
+      "lift": 0.329,
+      "sheenAlpha": 0,
+      "pool": 5,
+      "sourceAlpha": true,
+      "opaqueTitle": true,
+      "reduced": false,
+      "quiet": false
+    }
+  ],
+  "guardianSamples": [
+    {
+      "id": "ruby-royale",
+      "context": "cabinet",
+      "clip": "fox-table-paw-and-tail-collect",
+      "loopSeconds": 4.65,
+      "recoverySeconds": 0.8,
+      "owner": "Node.320",
+      "time": 21.366,
+      "ambientTime": 21.366,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        721,
+        1040
+      ],
+      "rendered": [
+        159.234,
+        229.686
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 2,
+      "wealthEffects": {
+        "pool": 5,
+        "active": 5,
+        "opacity": [
+          32,
+          30,
+          54,
+          30,
+          13
+        ]
+      },
+      "degrees": [
+        0.37,
+        4.898,
+        0,
+        0,
+        -0.864,
+        -0.06,
+        4.707
+      ]
+    },
+    {
+      "id": "ruby-royale",
+      "context": "cabinet",
+      "clip": "fox-table-paw-and-tail-collect",
+      "loopSeconds": 4.65,
+      "recoverySeconds": 0.8,
+      "owner": "Node.320",
+      "time": 51.583,
+      "ambientTime": 51.583,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        721,
+        1040
+      ],
+      "rendered": [
+        159.234,
+        229.686
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "wealthEffects": {
+        "pool": 5,
+        "active": 0,
+        "opacity": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "degrees": [
+        0.062,
+        0.008,
+        0,
+        0,
+        0.107,
+        0.001,
+        0.008
+      ]
+    }
+  ],
+  "checks": {
+    "sameTitleOwner": true,
+    "titleTimeAdvanced": true,
+    "titlePoseChanged": true,
+    "sameGuardianOwner": true,
+    "guardianMoved": true
+  },
+  "scenes": [
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "id": "ruby-royale",
+      "scene": {
+        "id": "ruby-royale",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1081.6901408450703,
+        "height": 1920,
+        "scale": 1.0608426788212661,
+        "y": -183.88160195872695,
+        "perimeter": []
+      },
+      "title": {
+        "id": "ruby-royale",
+        "owner": "Node.332",
+        "time": 79.316,
+        "size": [
+          368.444,
+          149.68
+        ],
+        "scale": 1.0022,
+        "lift": 0.244,
+        "sheenAlpha": 0,
+        "pool": 5,
+        "sourceAlpha": true,
+        "opaqueTitle": true,
+        "reduced": false,
+        "quiet": false
+      },
+      "guardian": {
+        "id": "ruby-royale",
+        "context": "cabinet",
+        "clip": "fox-table-paw-and-tail-collect",
+        "loopSeconds": 4.65,
+        "recoverySeconds": 0.8,
+        "owner": "Node.320",
+        "time": 79.316,
+        "ambientTime": 79.316,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          721,
+          1040
+        ],
+        "rendered": [
+          159.234,
+          229.686
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "wealthEffects": {
+          "pool": 5,
+          "active": 0,
+          "opacity": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "degrees": [
+          -0.086,
+          -0.107,
+          0,
+          0,
+          -0.064,
+          -0.055,
+          0.071
+        ]
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "id": "ruby-royale",
+      "scene": {
+        "id": "ruby-royale",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.0975471820062048,
+        "y": -118.00425085514303,
+        "perimeter": [
+          "top-0-centre"
+        ]
+      },
+      "title": {
+        "id": "ruby-royale",
+        "owner": "Node.332",
+        "time": 86.316,
+        "size": [
+          368.444,
+          149.68
+        ],
+        "scale": 1.0017,
+        "lift": 0.188,
+        "sheenAlpha": 0,
+        "pool": 5,
+        "sourceAlpha": true,
+        "opaqueTitle": true,
+        "reduced": false,
+        "quiet": false
+      },
+      "guardian": {
+        "id": "ruby-royale",
+        "context": "cabinet",
+        "clip": "fox-table-paw-and-tail-collect",
+        "loopSeconds": 4.65,
+        "recoverySeconds": 0.8,
+        "owner": "Node.320",
+        "time": 86.316,
+        "ambientTime": 86.316,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          721,
+          1040
+        ],
+        "rendered": [
+          159.234,
+          229.686
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 2,
+        "wealthEffects": {
+          "pool": 5,
+          "active": 4,
+          "opacity": [
+            54,
+            30,
+            54,
+            30,
+            0
+          ]
+        },
+        "degrees": [
+          -0.005,
+          5.048,
+          0,
+          0,
+          -0.992,
+          -0.095,
+          5.338
+        ]
+      }
+    },
+    {
+      "viewport": "default",
+      "id": "crown-club",
+      "title": {
+        "id": "crown-club",
+        "owner": "Node.1148",
+        "time": 0.501,
+        "size": [
+          310.977,
+          135.864
+        ],
+        "scale": 1.0031,
+        "lift": 0.346,
+        "sheenAlpha": 0,
+        "pool": 5,
+        "sourceAlpha": true,
+        "opaqueTitle": true,
+        "reduced": false,
+        "quiet": false
+      },
+      "scene": {
+        "id": "crown-club",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 1974.9892933618844,
+        "scale": 1.0970293776453834,
+        "y": -157.8311999725147,
+        "perimeter": []
+      }
+    },
+    {
+      "viewport": "default",
+      "id": "emerald-fortune",
+      "title": {
+        "id": "emerald-fortune",
+        "owner": "Node.1916",
+        "time": 0.781,
+        "size": [
+          296.765,
+          110.533
+        ],
+        "scale": 1.0129,
+        "lift": 1.436,
+        "sheenAlpha": 0.01,
+        "pool": 5,
+        "sourceAlpha": true,
+        "opaqueTitle": true,
+        "reduced": false,
+        "quiet": false
+      },
+      "scene": {
+        "id": "emerald-fortune",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 1974.9892933618844,
+        "scale": 1.0232397643625264,
+        "y": -194.22256048445047,
+        "perimeter": [
+          "top-0-left-0",
+          "centre-left-0",
+          "top-0-centre",
+          "top-0-right-0",
+          "centre-right-0"
+        ]
+      }
+    },
+    {
+      "viewport": "default",
+      "id": "vault-reserve",
+      "title": {
+        "id": "vault-reserve",
+        "owner": "Node.2764",
+        "time": 0.533,
+        "size": [
+          244.723,
+          101.322
+        ],
+        "scale": 1.0172,
+        "lift": 1.909,
+        "sheenAlpha": 15.06,
+        "pool": 5,
+        "sourceAlpha": true,
+        "opaqueTitle": true,
+        "reduced": false,
+        "quiet": false
+      },
+      "scene": {
+        "id": "vault-reserve",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 1974.9892933618844,
+        "scale": 1.0446510755490541,
+        "y": -129.53103271450027,
+        "perimeter": [
+          "centre-left-0",
+          "centre-right-0"
+        ]
+      }
+    }
+  ],
+  "touchObserved": {
+    "id": "ruby-royale",
+    "owner": "Node.3573",
+    "cue": "touch",
+    "cueTime": 0.199,
+    "cueDuration": 2.8
+  },
+  "final": {
+    "title": {
+      "id": "ruby-royale",
+      "owner": "Node.3585",
+      "time": 106.29,
+      "size": [
+        368.444,
+        149.68
+      ],
+      "scale": 1.0065,
+      "lift": 0.717,
+      "sheenAlpha": 0,
+      "pool": 5,
+      "sourceAlpha": true,
+      "opaqueTitle": true,
+      "reduced": false,
+      "quiet": false
+    },
+    "guardian": {
+      "id": "ruby-royale",
+      "context": "cabinet",
+      "clip": "fox-table-paw-and-tail-collect",
+      "loopSeconds": 4.65,
+      "recoverySeconds": 0.8,
+      "owner": "Node.3573",
+      "time": 106.29,
+      "ambientTime": 103.167,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        721,
+        1040
+      ],
+      "rendered": [
+        159.234,
+        229.686
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "wealthEffects": {
+        "pool": 5,
+        "active": 0,
+        "opacity": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "degrees": [
+        -0.8,
+        0.11,
+        0,
+        0,
+        2.092,
+        0.012,
+        0.284
+      ]
+    },
+    "scene": {
+      "id": "ruby-royale",
+      "rooms": 1,
+      "independentBackdrop": false,
+      "width": 1080,
+      "height": 1974.9892933618844,
+      "scale": 1.0975471820062048,
+      "y": -193.8648638474366,
+      "perimeter": []
+    },
+    "observedBalance": 34574,
+    "observedBet": 100,
+    "observedAuto": "OFF"
+  },
+  "console": [],
+  "viewportOverrideReset": true,
+  "note": "Screenshots are final settled views, not resize-first-frame captures or animation videos. Verified UI BACK / PLAY and fox touch; no SPIN, purchases, avatar or sound-setting changes. Browser-only inspection, not physical-device performance certification."
+}

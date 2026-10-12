@@ -1,0 +1,498 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "url": "http://127.0.0.1:6138/?debug=1&screen=game&game=vault-reserve",
+  "scope": "Actual desktop browser render and touch checks; no physical-device certification",
+  "observations": [
+    "Actual cabinet bull samples on owner Node.908 advanced and changed pose.",
+    "Touch triggered the touch cue and a prosperity coin; later idle resumed.",
+    "All four current lobby roles have independent choreography, advancing elapsed times and differing poses.",
+    "Window and scene changed during inspection. Samples with different owners are not treated as continuity evidence.",
+    "Bull horn tips and transparent edges remain intact; source 477x663, ratioError 0.",
+    "Visible balance stayed 35,123; no SPIN, profile, wallet or audio settings changes."
+  ],
+  "cabinetSamples": [
+    {
+      "id": "vault-reserve",
+      "context": "cabinet",
+      "clip": "bull-vault-two-hoof-sweeps",
+      "loopSeconds": 3.75,
+      "recoverySeconds": 0.8,
+      "owner": "Node.908",
+      "time": 14.458,
+      "ambientTime": 14.458,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        477,
+        663
+      ],
+      "rendered": [
+        170.081,
+        236.402
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        -0.012,
+        -0.043,
+        0,
+        0,
+        0.183,
+        0.02,
+        0.154
+      ]
+    },
+    {
+      "id": "vault-reserve",
+      "context": "cabinet",
+      "clip": "bull-vault-two-hoof-sweeps",
+      "loopSeconds": 3.75,
+      "recoverySeconds": 0.8,
+      "owner": "Node.908",
+      "time": 40.608,
+      "ambientTime": 40.608,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        477,
+        663
+      ],
+      "rendered": [
+        170.081,
+        236.402
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        -0.018,
+        0.119,
+        0,
+        0,
+        -0.204,
+        -0.028,
+        0.192
+      ]
+    },
+    {
+      "id": "vault-reserve",
+      "context": "cabinet",
+      "clip": "bull-vault-two-hoof-sweeps",
+      "loopSeconds": 3.75,
+      "recoverySeconds": 0.8,
+      "owner": "Node.908",
+      "time": 43.759,
+      "ambientTime": 44.55,
+      "cue": "touch",
+      "cueTime": 2.435,
+      "cueDuration": 2.8,
+      "reduced": false,
+      "source": [
+        477,
+        663
+      ],
+      "rendered": [
+        170.081,
+        236.402
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 1,
+      "degrees": [
+        0.823,
+        0.158,
+        0,
+        0,
+        0.905,
+        0.011,
+        0.158
+      ]
+    },
+    {
+      "id": "vault-reserve",
+      "context": "cabinet",
+      "clip": "bull-vault-two-hoof-sweeps",
+      "loopSeconds": 3.75,
+      "recoverySeconds": 0.8,
+      "owner": "Node.908",
+      "time": 55.108,
+      "ambientTime": 55.534,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        477,
+        663
+      ],
+      "rendered": [
+        170.081,
+        236.402
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        0.03,
+        0.153,
+        0,
+        0,
+        0.21,
+        0.031,
+        0.285
+      ]
+    },
+    {
+      "id": "vault-reserve",
+      "context": "cabinet",
+      "clip": "bull-vault-two-hoof-sweeps",
+      "loopSeconds": 3.75,
+      "recoverySeconds": 0.8,
+      "owner": "Node.2079",
+      "time": 32.918,
+      "ambientTime": 32.918,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        477,
+        663
+      ],
+      "rendered": [
+        170.081,
+        236.402
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        0.12,
+        0.191,
+        0,
+        0,
+        0.162,
+        0.043,
+        0.251
+      ]
+    }
+  ],
+  "lobbySamples": [
+    {
+      "lobby:crown-club": {
+        "id": "crown-club",
+        "context": "lobby",
+        "clip": "lion-prosperity-three-inward-invitations",
+        "loopSeconds": 4.5,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3214",
+        "time": 68.726,
+        "ambientTime": 68.726,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          463,
+          580
+        ],
+        "rendered": [
+          244.272,
+          306
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 2,
+        "degrees": [
+          -2.186,
+          6.448,
+          0,
+          0,
+          0.256,
+          0.333,
+          1.719
+        ]
+      },
+      "lobby:emerald-fortune": {
+        "id": "emerald-fortune",
+        "context": "lobby",
+        "clip": "elephant-coin-trunk-and-ear-welcome",
+        "loopSeconds": 5.2,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3241",
+        "time": 68.726,
+        "ambientTime": 68.726,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          542,
+          579
+        ],
+        "rendered": [
+          262,
+          279.886
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -1.021,
+          -0.11,
+          0,
+          0,
+          -2.909,
+          2.209,
+          1.662
+        ]
+      },
+      "lobby:ruby-royale": {
+        "id": "ruby-royale",
+        "context": "lobby",
+        "clip": "fox-prosperity-palm-and-tail-welcome",
+        "loopSeconds": 5.6,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3268",
+        "time": 68.726,
+        "ambientTime": 68.726,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          721,
+          1040
+        ],
+        "rendered": [
+          212.14,
+          306
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          1.9,
+          5.565,
+          0,
+          0,
+          2.755,
+          -0.125,
+          2.397
+        ]
+      },
+      "lobby:vault-reserve": {
+        "id": "vault-reserve",
+        "context": "lobby",
+        "clip": "bull-three-wealth-hoof-invitations",
+        "loopSeconds": 4.1,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3295",
+        "time": 68.726,
+        "ambientTime": 68.726,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          477,
+          663
+        ],
+        "rendered": [
+          220.154,
+          306
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          0.076,
+          0.371,
+          0,
+          0,
+          -0.143,
+          0.003,
+          0.331
+        ]
+      }
+    },
+    {
+      "lobby:crown-club": {
+        "id": "crown-club",
+        "context": "lobby",
+        "clip": "lion-prosperity-three-inward-invitations",
+        "loopSeconds": 4.5,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3214",
+        "time": 130.959,
+        "ambientTime": 130.959,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          463,
+          580
+        ],
+        "rendered": [
+          244.272,
+          306
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.088,
+          2.893,
+          0,
+          0,
+          0.197,
+          0.008,
+          0.199
+        ]
+      },
+      "lobby:emerald-fortune": {
+        "id": "emerald-fortune",
+        "context": "lobby",
+        "clip": "elephant-coin-trunk-and-ear-welcome",
+        "loopSeconds": 5.2,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3241",
+        "time": 130.959,
+        "ambientTime": 130.959,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          542,
+          579
+        ],
+        "rendered": [
+          262,
+          279.886
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.366,
+          0.14,
+          0,
+          0,
+          -2.503,
+          1.801,
+          0.504
+        ]
+      },
+      "lobby:ruby-royale": {
+        "id": "ruby-royale",
+        "context": "lobby",
+        "clip": "fox-prosperity-palm-and-tail-welcome",
+        "loopSeconds": 5.6,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3268",
+        "time": 130.959,
+        "ambientTime": 130.959,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          721,
+          1040
+        ],
+        "rendered": [
+          212.14,
+          306
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 2,
+        "degrees": [
+          1.78,
+          5.419,
+          0,
+          0,
+          2.612,
+          0.997,
+          5.391
+        ]
+      },
+      "lobby:vault-reserve": {
+        "id": "vault-reserve",
+        "context": "lobby",
+        "clip": "bull-three-wealth-hoof-invitations",
+        "loopSeconds": 4.1,
+        "recoverySeconds": 0.8,
+        "owner": "Node.3295",
+        "time": 130.959,
+        "ambientTime": 130.959,
+        "cue": "idle",
+        "cueTime": 0,
+        "cueDuration": 0,
+        "reduced": false,
+        "source": [
+          477,
+          663
+        ],
+        "rendered": [
+          220.154,
+          306
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          0.122,
+          0.15,
+          0,
+          0,
+          0.156,
+          0.042,
+          0.23
+        ]
+      }
+    }
+  ],
+  "lobbyContinuity": [
+    {
+      "key": "lobby:crown-club",
+      "sameOwner": true,
+      "advanced": true,
+      "poseChanged": true
+    },
+    {
+      "key": "lobby:emerald-fortune",
+      "sameOwner": true,
+      "advanced": true,
+      "poseChanged": true
+    },
+    {
+      "key": "lobby:ruby-royale",
+      "sameOwner": true,
+      "advanced": true,
+      "poseChanged": true
+    },
+    {
+      "key": "lobby:vault-reserve",
+      "sameOwner": true,
+      "advanced": true,
+      "poseChanged": true
+    }
+  ],
+  "consoleWarningsAndErrors": [],
+  "screenshots": [
+    "guardian-cadence-lobby-20261012.jpg",
+    "guardian-cadence-vault-20261012.jpg"
+  ],
+  "finalScene": "lobby",
+  "viewportOverrideSet": false,
+  "mediaChanged": false
+}

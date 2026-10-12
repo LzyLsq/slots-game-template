@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-12T14:01:15.156451+08:00",
+  "template": "F38_Golden_Gala_v1.0.0",
+  "repository": "LzyLsq/slots-game-template",
+  "branch": "main",
+  "scope": "Only F38 template, source art, runtime assets, tests, documentation and screenshots; unrelated repository edits excluded.",
+  "verification": {
+    "typecheck": "PASS (exit 0)",
+    "typecheck:math": "PASS (exit 0)",
+    "typecheck:server": "PASS (exit 0)",
+    "npm test": "PASS (exit 0)",
+    "testCommands": 29,
+    "sourceParity": {
+      "status": "PASS",
+      "filesCompared": 788,
+      "scope": [
+        "assets",
+        "art-source",
+        "build-templates",
+        "tools",
+        "server",
+        "settings",
+        "package/tsconfig/env/ignore"
+      ]
+    },
+    "browser": "Fresh lobby and Ruby Royale screenshots; Ruby balance 34574, BET 100, WIN 0, AUTO OFF; no observed warning/error.",
+    "interaction": "No SPIN, purchase, avatar or audio settings changes in this upload check."
+  },
+  "screenshots": {
+    "lobby.jpg": {
+      "sha256": "9771bc50c554ad71314be175e3c3a8621b338a34a5a28eb548b94ca2cf5346e1",
+      "bytes": 146567,
+      "kind": "Unaltered browser JPEG screenshot"
+    },
+    "ruby-royale.jpg": {
+      "sha256": "2af687a54da527cf77320dc73c8d4b3f24095ad03523df35eb822ee7250b522c",
+      "bytes": 133928,
+      "kind": "Unaltered browser JPEG screenshot"
+    }
+  },
+  "releaseBoundary": "Existing native, production, licensing, subjective audio and App Store review blockers remain. This Git upload is not release certification."
+}

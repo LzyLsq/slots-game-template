@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "testsExit": 0,
+  "testsLog": "/tmp/f38-cadence-tests-20261012.log",
+  "typechecks": [
+    "UI",
+    "math",
+    "server"
+  ],
+  "fullNpmTest": true,
+  "buildExit": 36,
+  "buildFinished": true,
+  "buildWarning": "Worker SIGTERM retained in raw build log; overall Finished and CLI exit36",
+  "buildLog": "/tmp/f38-cadence-build-20261012.log",
+  "jsSyntaxChecks": 18,
+  "buildFiles": 510,
+  "bundle": "assets/main/index.55159.js",
+  "allDeployedFilesByteVerified": true,
+  "previousBuildBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/f38-before-cadence-ky0bd26e",
+  "sourceHashes": {
+    "assets/scripts/ui/GuardianMotion.ts": "9476f7550e45ffe954c4f4037858763d089e569c05bccb5d141d56ed9e9ada45",
+    "assets/scripts/ui/GuardianSprite.ts": "faf95e2412cccd2ed49db6e5814154cad63d8caba110d48f24bd130266bac7ef",
+    "tools/guardian-test.ts": "f7b7393d11ff62be76fcec1d8a807f32362976e9b53ed924053f2badd1552f9a",
+    "tools/guardian-cadence-test.ts": "0f3bd198d1c53accb7aeeb4f0928d4285cdbea5c716dd00dd4df257a234fbf28",
+    "package.json": "e9eb48aaf5c4efaa031fc66baa1f1b6e81c8d16ee9b4496eba144c9e080b48cb"
+  },
+  "mediaFilesUnchanged": 190
+}

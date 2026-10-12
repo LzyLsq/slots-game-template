@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-10",
+  "note": "Only newly outpainted architectural sides used. Original central cabinet and interactive geometry remain unchanged. Provider returned 1448x1086, not the requested 3072x2304. The generated cabinet silhouette drifted and is excluded with measured join bounds. Side crops preserve uniform scale; only extreme exterior scenery is reflected when source width is insufficient. Resampling does not create extra detail.",
+  "assets": [
+    {
+      "id": "crown-club",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "runtimePackedSides": [
+        1024,
+        1152
+      ],
+      "source": "art-source/expanded/crown-club.png",
+      "runtimeSha256": "dfc8ab8460fe10830fcb69555eec83cf63804279466a2736f5bc2397659e9bae",
+      "unchangedCabinetSha256": "e0f3f6f7bafc63d107170065607020e0f2d934889a54ad715c20b6435d84737c",
+      "centralGeneratedRegionUsed": false,
+      "generatedCabinetExcludedBounds": [
+        435,
+        1043
+      ],
+      "visuallyCheckedViewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "emerald-fortune",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "runtimePackedSides": [
+        1024,
+        1152
+      ],
+      "source": "art-source/expanded/emerald-fortune.png",
+      "runtimeSha256": "7099995327b2be6f12e7643af9fbea1cb75ae1fb56098ec07d52a2626a111b54",
+      "unchangedCabinetSha256": "b9ed696e3e4a04dc6ac9ff2b0f5e42913bcc2459a292dbc799ac0c8938c4b554",
+      "centralGeneratedRegionUsed": false,
+      "generatedCabinetExcludedBounds": [
+        403,
+        1094
+      ],
+      "visuallyCheckedViewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "ruby-royale",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "runtimePackedSides": [
+        1024,
+        1152
+      ],
+      "source": "art-source/expanded/ruby-royale.png",
+      "runtimeSha256": "e6c15fe6cbb021a380f6305eb357aa08fb84f96d7b86384f9a05721135571686",
+      "unchangedCabinetSha256": "b66eb9e3f1edc3e9e8229b0a698c495ec899e1cc006bd3df289d133c60e76a54",
+      "centralGeneratedRegionUsed": false,
+      "generatedCabinetExcludedBounds": [
+        398,
+        974
+      ],
+      "visuallyCheckedViewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "vault-reserve",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "runtimePackedSides": [
+        1024,
+        1152
+      ],
+      "source": "art-source/expanded/vault-reserve.png",
+      "runtimeSha256": "a331eb90f0226107b0b4add8b89ff254e5a21b926d954850c328d90eba61ca6b",
+      "unchangedCabinetSha256": "61db42913375273d169147b1b3b5ed3f19ba4fee78a1c0368735d210acf9c771",
+      "centralGeneratedRegionUsed": false,
+      "generatedCabinetExcludedBounds": [
+        434,
+        974
+      ],
+      "visuallyCheckedViewport": [
+        768,
+        1024
+      ]
+    }
+  ]
+}

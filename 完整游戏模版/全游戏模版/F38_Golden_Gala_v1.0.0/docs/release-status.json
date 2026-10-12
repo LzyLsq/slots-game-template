@@ -1,0 +1,19 @@
+{
+  "project": "F38 Golden Gala",
+  "date": "2026-10-10",
+  "readyForSubmission": false,
+  "requiresImplementation": [
+    "Publisher legal name, finalized policies, support and public HTTPS API URLs",
+    "Executable native StoreKit and Apple sign-in bridges, registered product IDs and receipts",
+    "Production PostgreSQL deployment and authoritative remote collection-reward endpoint",
+    "Generated art and sampled-instrument audio licensing clearance",
+    "Physical iPhone/iPad, speaker/headphone listening, Sandbox and TestFlight acceptance",
+    "Independent product and metadata review followed by App Store submission"
+  ],
+  "notes": "Web preview and source tests do not establish a shipping native binary. No real money purchases, cash prizes or cash-out in the local preview.",
+  "buildStatusCorrection": {
+    "date": "2026-10-12",
+    "status": "Cocos CLI exit 36 is the documented build-success code.",
+    "evidence": "docs/qa/cocos-cli-exit-code-20261012.json"
+  }
+}

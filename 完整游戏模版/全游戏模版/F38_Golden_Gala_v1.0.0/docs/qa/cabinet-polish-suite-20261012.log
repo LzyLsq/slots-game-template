@@ -1,0 +1,347 @@
+
+> f38-golden-gala@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:guardians && npm run test:audio && npm run test:audio:recordings && npm run test:audio:festive && npm run test:award && npm run test:life && npm run test:reel-presentation && npm run test:text-layout && npm run test:caravan && npm run test:guardian-renderer && npm run test:lobby-details && npm run test:page-arrival && npm run test:guardian-continuity && npm run test:cabinet-polish
+
+
+> f38-golden-gala@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "crown-club": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 208468,
+      "wins": 344,
+      "features": 302,
+      "maxWin": 5480
+    },
+    "emerald-fortune": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 187519,
+      "wins": 856,
+      "features": 83,
+      "maxWin": 3022
+    },
+    "ruby-royale": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 187901,
+      "wins": 479,
+      "features": 451,
+      "maxWin": 4208
+    },
+    "vault-reserve": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 219972,
+      "wins": 521,
+      "features": 43,
+      "maxWin": 5116
+    }
+  }
+}
+
+> f38-golden-gala@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f38-golden-gala@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS gala-themed virtual names, unchanged scores and separate real player identities.
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f38-golden-gala@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 132 cabinet/viewport combinations: safe insets, full guardian animation sweep, toolbar/footer clearance, reels and controls.
+PASS desktop portrait framing; phone landscape guard and portrait geometry unchanged.
+PASS art queue: ordered unique loads survive Creator ES5 lowering
+PASS single cabinet scene: one camera, uncut original, continuous architectural margins, no repeated glass/buttons/registers
+
+> f38-golden-gala@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+
+> f38-golden-gala@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+PASS F38 boarding subtitle, Apple availability and adult virtual-coin notice translations.
+PASS F38 service pages, journey counts, honest preview/no-cash copy and localized virtual caravan companions.
+
+> f38-golden-gala@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f38-golden-gala@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'crown-club',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 846,
+    featurePaidHits: 417,
+    coreHits: 726,
+    coreReturn: 0.402785,
+    hits: 966,
+    sampleReturn: 0.8982616666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'emerald-fortune',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 248,
+    featurePaidHits: 248,
+    coreHits: 2511,
+    coreReturn: 0.4866916666666667,
+    hits: 2543,
+    sampleReturn: 0.94062,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-royale',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1413,
+    featurePaidHits: 1413,
+    coreHits: 1425,
+    coreReturn: 0.419915,
+    hits: 1469,
+    sampleReturn: 0.8606866666666667,
+    layoutVariants: 1
+  },
+  {
+    id: 'vault-reserve',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 94,
+    featurePaidHits: 94,
+    coreHits: 1357,
+    coreReturn: 0.8672716666666667,
+    hits: 1404,
+    sampleReturn: 0.981795,
+    layoutVariants: 1
+  }
+]
+
+> f38-golden-gala@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'crown-club',
+    core: undefined,
+    feature: 'reel-expand',
+    samples: 6000,
+    features: 1749,
+    motions: [ 'transform' ]
+  },
+  {
+    id: 'emerald-fortune',
+    core: undefined,
+    feature: 'emerald-free',
+    samples: 6000,
+    features: 479,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'ruby-royale',
+    core: undefined,
+    feature: 'ruby-upgrade',
+    samples: 6000,
+    features: 2860,
+    motions: [ 'transform' ]
+  },
+  {
+    id: 'vault-reserve',
+    core: undefined,
+    feature: 'coin-vault',
+    samples: 6000,
+    features: 197,
+    motions: [ 'collect', 'respin' ]
+  }
+]
+
+> f38-golden-gala@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'crown-club',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 846,
+    featurePaidHits: 417,
+    coreHits: 726,
+    coreReturn: 0.402785,
+    hits: 966,
+    sampleReturn: 0.8982616666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'emerald-fortune',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 248,
+    featurePaidHits: 248,
+    coreHits: 2511,
+    coreReturn: 0.4866916666666667,
+    hits: 2543,
+    sampleReturn: 0.94062,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-royale',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1413,
+    featurePaidHits: 1413,
+    coreHits: 1425,
+    coreReturn: 0.419915,
+    hits: 1469,
+    sampleReturn: 0.8606866666666667,
+    layoutVariants: 1
+  },
+  {
+    id: 'vault-reserve',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 94,
+    featurePaidHits: 94,
+    coreHits: 1357,
+    coreReturn: 0.8672716666666667,
+    hits: 1404,
+    sampleReturn: 0.981795,
+    layoutVariants: 1
+  }
+]
+
+> f38-golden-gala@1.0.0 test:guardians
+> node --import tsx tools/guardian-test.ts
+
+PASS 11568 guardian poses, 2140080 planted-point checks, 36647424 non-inverting triangles; cue priority, tap cooldown, pause and reduced motion.
+PASS guardian detail polish: 6660 edge-safe mesh samples, reusable poses, cue crossfade, no repeated-cue reset, measured/pooled jewel reflections and cleanup.
+PASS 9632 authored choreography checks: eight scene-specific clips, distinct wave counts/holds/reversals, resting intervals, runtime cue continuity, and actual lobby/cabinet routing.
+PASS prosperity: eight inward palm/feather tracks; measured high-quality coin art, pooled runtime invitation and no new audio.
+PASS 21344 prosperity coin samples: character-specific hand-to-treasure arcs, complete coin seat bounds, reuse, rest, cue suppression, reduced motion and safe handoff.
+PASS character refinement: 12 original-ratio/foot-anchored seats, 12168 rigid facial/held-treasure checks, bounded anatomy and alpha-safe clamped textures.
+
+> f38-golden-gala@1.0.0 test:audio
+> node --import tsx tools/audio-test.ts
+
+PASS audio: full award score / percussion, visual-clock cadence, skip/mute/background/gesture-lock/stale-lease cleanup; independent settings, persistence/rollback, 5 distinct compositions / tempos, theme timbres and stereo envelopes, cue debounce, bounded hitch recovery, voice cleanup/cap, mobile resume + background races, tactile categories
+
+> f38-golden-gala@1.0.0 test:audio:recordings
+> node --import tsx tools/audio-recording-test.ts
+
+PASS recorded audio: five scene energy trims, real-duration currency duck, scene/spin/mute/background tail cleanup; restrained EQ/gains, quiet duck/toggle recovery, no overlapping fanfare, mixer cleanup; 93 original F38 score/material/feature recordings; true per-family multisample contacts; authoritative feature event selection; shared three-job loader and stale cabinet bank eviction; decoded-source playback, loops/crossfade, fast toggle, effects/music independence, spin cleanup, five grades + one finale, stale/late/hidden handling, loading dedup/retry/cache/dispose
+
+> f38-golden-gala@1.0.0 test:audio:festive
+> node --import tsx tools/festive-audio-test.ts
+
+PASS festive audio: five original scores with joyful major harmony, single melodic lane + breathing phrases + soft bass + restrained distinct grooves, 45 performances, grade-specific cadences and unchanged visual timing
+
+> f38-golden-gala@1.0.0 test:award
+> node --import tsx tools/award-test.ts
+
+PASS award: 5 tiers, reduced motion, count/hold phases, deterministic bounded coin paths, exact payout decimals, local-only QA markers and cleanup
+PASS spectacle: four escalating fixed pools, 176-particle cap, reusable poses, deterministic paths, title/register keepouts, double climax, reduced-motion zero pools
+PASS spectacle polish: unchanged physical paths, advance smooth text keepouts, invisible cascade handoffs and quieter post-climax hold.
+
+> f38-golden-gala@1.0.0 test:life
+> node --import tsx tools/treasury-life-test.ts
+
+PASS treasury life: 169840 bounded bitmap poses, lobby captions and 4 cabinet keepouts, 64-node cap, 30Hz pooled motion, cue cooldown, background/reduced-motion freeze and listener cleanup.
+PASS detail life loops: closed rotation, coin flip, depth and opacity; measured character highlights instead of wandering facial sparkle.
+
+> f38-golden-gala@1.0.0 test:reel-presentation
+> node --import tsx tools/reel-presentation-test.ts
+
+PASS reel presentation: blur hysteresis, 40 motion curves, 17429 crop samples, >=2 culled buffers/column
+PASS awarded-cell raster rim preserves open symbol area and pulse scaling.
+
+> f38-golden-gala@1.0.0 test:text-layout
+> node --import tsx tools/text-layout-test.ts
+
+PASS centered rule paragraphs / diagrams and bottom-carving clearance.
+PASS 500 text fits: five languages, long exact balances, joined emoji, multiline height, measured enamel seats and non-overlapping award lines.
+PASS F38 measured service actions, 320px copy, in-place hall selection lanes, journey ledger, shop showroom, rank honesty and separated account touch targets.
+PASS visible translated modal exit and bright-background podium contrast.
+PASS legible single-line login hints within measured enamel.
+PASS capped route fractions and non-destructive login room resize.
+PASS continuous marble service displays and account copy clears the actual folio carving.
+PASS ordinary award has two distinct high-contrast enamel seats inside the reserved footer.
+
+> f38-golden-gala@1.0.0 test:caravan
+> node --import tsx tools/caravan-test.ts
+
+PASS caravan: 40 atomic settled rounds, duplicate/cancel/recovery protection, 4 account-scoped claims, persistence, remote authority guard and storage failure rollback.
+
+> f38-golden-gala@1.0.0 test:guardian-renderer
+> node --import tsx tools/guardian-renderer-test.ts
+
+PASS guardian renderer: 18000 completed shared-buffer frames, peak 40116 indices, bounded 50145 capacity, no upload overrun
+
+> f38-golden-gala@1.0.0 test:lobby-details
+> node --import tsx tools/lobby-detail-test.ts
+
+PASS four direct-entry exhibits, compact >=44px PLAY and non-overlapping physical seats.
+PASS five-language detail copy, carved rule controls, >=44px hit seats, translated SOUND and persistent resize shield.
+PASS modal resize preservation, deferred page layout, diagnostic cleanup and raw player names.
+PASS shop notice uses compact dark copy with a light contrast edge.
+PASS four PLAY material cues, reduced motion and clipped slow CTA sheen.
+PASS all four initial rule summaries localized in five languages inside the original cabinet footer.
+
+> f38-golden-gala@1.0.0 test:page-arrival
+> node --import tsx tools/page-arrival-test.ts
+
+PASS full-tree gesture protection, opaque outgoing scene retained, exact once entry/cleanup.
+PASS interrupted fades settle waits, stale completion isolation, teardown never resumes destroyed/retiring nodes.
+PASS 500 repeated/replaced scene entries, no unresolved waits; instant reduced-motion entry.
+PASS actual UI hookup: 380ms existing fade, transparent resize-aware shield, await entry before unlocking, teardown and diagnostic cleanup.
+
+> f38-golden-gala@1.0.0 test:guardian-continuity
+> node --import tsx tools/guardian-continuity-test.ts
+
+PASS guardian refinement: 120 velocity-preserving cue handoffs, 2800 quiet settle samples, 5760 triangle-exact accessory contacts, max onset Δv 0.0178°/s, hierarchical wrists, paused prosperity clock, local feedback and UV cache routing.
+
+> f38-golden-gala@1.0.0 test:cabinet-polish
+> node --import tsx tools/cabinet-polish-test.ts
+
+{
+  status: 'PASS',
+  reflections: 19200,
+  themes: 4,
+  rolesPerTheme: 4,
+  latch: 'monotonic, contained, settled',
+  recordings: 'scene-warmed, native-rate, single guardian lane',
+  integration: 'pooled optics, cleanup, immediate contact, fixed text and touch seats'
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-12",
+  "scope": "Native-alpha/source/provenance/portrait pixel regression; animal identities manually inspected on source images, not browser or device verification",
+  "status": "PASS",
+  "assets": [
+    {
+      "id": "crown-club",
+      "role": "lion",
+      "size": [
+        463,
+        580
+      ],
+      "sha256": "27f3a1cadfdd7e262b7d57e3072d29c777e325fecb174e16c05fff59283f7501"
+    },
+    {
+      "id": "emerald-fortune",
+      "role": "elephant",
+      "size": [
+        542,
+        579
+      ],
+      "sha256": "1aa0acbc16da39aaa1ec12230f2c29b1c6e203e2ad0d05115e67f92b63ae5452"
+    },
+    {
+      "id": "ruby-royale",
+      "role": "lucky fox",
+      "size": [
+        721,
+        1040
+      ],
+      "sha256": "7016e31cca5c51fdb3833f893b79f2cc4eb0a17a828761169e0ae0b676f2fffd"
+    },
+    {
+      "id": "vault-reserve",
+      "role": "bull",
+      "size": [
+        477,
+        623
+      ],
+      "sha256": "1f41a2a17c4434229121f48016e0ee397aa0cf1bc6f436888300cad46606c926"
+    }
+  ],
+  "avatarCells": 16,
+  "rubyFoxAvatarCells": 4,
+  "removedHumanSourceCell": true,
+  "rebuildUsesAnimalOverride": true
+}

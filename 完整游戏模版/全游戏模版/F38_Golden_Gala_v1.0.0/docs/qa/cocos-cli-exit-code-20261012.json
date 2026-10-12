@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-12",
+  "officialDocumentation": "https://docs.cocos.com/creator/3.8/manual/en/editor/publish/publish-in-command-line.html#exit-code",
+  "documentedBuildExitCodes": {
+    "32": "build failed",
+    "36": "build succeeded"
+  },
+  "correction": "Cocos Creator uses 36 for a successful CLI build; this is not an unresolved release failure. Worker SIGTERM remains recorded in the raw log."
+}

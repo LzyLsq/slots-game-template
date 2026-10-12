@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "gameId": "crown-club",
+      "spins": 150000,
+      "seed": 2427808441,
+      "bet": 200,
+      "payoutScale": 0.979,
+      "targetRtp": 0.95,
+      "rtp": 0.9457438,
+      "confidence95": [
+        0.9340761897724623,
+        0.9574114102275377
+      ],
+      "baseRtp": 0.4393949,
+      "featureRtp": 0.5063489,
+      "hitRate": 0.33157333333333333,
+      "featureRate": 0.28632,
+      "maxWin": 5480
+    },
+    {
+      "gameId": "emerald-fortune",
+      "spins": 150000,
+      "seed": 2427808441,
+      "bet": 200,
+      "payoutScale": 1.345,
+      "targetRtp": 0.95,
+      "rtp": 0.9473659666666666,
+      "confidence95": [
+        0.937552040078145,
+        0.9571798932551883
+      ],
+      "baseRtp": 0.6288336,
+      "featureRtp": 0.3185323666666667,
+      "hitRate": 0.84026,
+      "featureRate": 0.07951333333333334,
+      "maxWin": 9973
+    },
+    {
+      "gameId": "ruby-royale",
+      "spins": 150000,
+      "seed": 2427808441,
+      "bet": 200,
+      "payoutScale": 0.478,
+      "targetRtp": 0.95,
+      "rtp": 0.9473598666666667,
+      "confidence95": [
+        0.9374896379051041,
+        0.9572300954282293
+      ],
+      "baseRtp": 0.47493413333333334,
+      "featureRtp": 0.4724257333333333,
+      "hitRate": 0.50758,
+      "featureRate": 0.4843866666666667,
+      "maxWin": 8088
+    },
+    {
+      "gameId": "vault-reserve",
+      "spins": 150000,
+      "seed": 2427808441,
+      "bet": 200,
+      "payoutScale": 0.872,
+      "targetRtp": 0.95,
+      "rtp": 0.9624527666666667,
+      "confidence95": [
+        0.9518021158428861,
+        0.9731034174904473
+      ],
+      "baseRtp": 0.8435119666666666,
+      "featureRtp": 0.1189408,
+      "hitRate": 0.4789466666666667,
+      "featureRate": 0.03278,
+      "maxWin": 10325
+    }
+  ]
+}

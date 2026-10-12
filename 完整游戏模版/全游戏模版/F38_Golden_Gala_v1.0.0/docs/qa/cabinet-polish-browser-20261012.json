@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "project": "F38 Golden Gala",
+  "server": "http://127.0.0.1:6138/",
+  "scenes": [
+    "crown-club",
+    "emerald-fortune",
+    "ruby-royale",
+    "vault-reserve"
+  ],
+  "checks": [
+    "All four cabinets retain proportional original art and integrated scenery; animal guardians remain visible in their authored alcoves.",
+    "Animal touches trigger separate local responses; faces, treasury items and planted feet retain their rigid anchors.",
+    "Actual plus/minus bet actions, AUTO on/off, SPIN, rules modal and collect were exercised.",
+    "Ordinary award 24 for bet 100 is visible in the reserved footer; no removed small awards.",
+    "Local debug super fixture pays 2500 for bet 100; actual SUPER animation was rendered and collected. This is not natural probability evidence.",
+    "Background music and button/win effects toggled independently, then both restored ON. Touch vibration retained ON.",
+    "Recordings decoded and playback resumed after a real gesture; four scene observations reported zero audio failures.",
+    "Small portrait and tablet views checked for readable balances, bet, controls, rule copy, symbol clipping and full cabinet proportions.",
+    "Temporary viewport override reset; user tab left on crown-club, AUTO OFF, without forced award parameter."
+  ],
+  "responsiveCoverage": [
+    {
+      "viewport": [
+        467,
+        854
+      ],
+      "scenes": [
+        "crown-club",
+        "emerald-fortune",
+        "ruby-royale",
+        "vault-reserve"
+      ]
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "scenes": [
+        "ruby-royale",
+        "crown-club"
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "scenes": [
+        "emerald-fortune"
+      ]
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "scenes": [
+        "vault-reserve"
+      ]
+    }
+  ],
+  "consoleWarningsOrErrorsObserved": 0,
+  "screenshots": [
+    {
+      "file": "docs/qa/cabinet-polish-crown-20261012.jpg",
+      "viewport": [
+        467,
+        854
+      ],
+      "sha256": "ad8ce663b99ba345dd3610141c6d3dcf824c3260fe510db4fcf0820cd61404b5",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-emerald-20261012.jpg",
+      "viewport": [
+        467,
+        854
+      ],
+      "sha256": "7094f9bc7b0ec72bb6047517e12f583c4e5a8258c0f7d2389eb14559f014ed27",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-emerald-390-20261012.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "sha256": "33a0b897974e82be9f9ae0237ae08e9e4c8f15babbc8299810f1c4f44d1e6fce",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-final-20261012.jpg",
+      "viewport": [
+        320,
+        568
+      ],
+      "sha256": "16cf332fdcd0ce0de4faced2dd04ab421f82e0f803aabd2fe319dc44cb918fe1",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-ruby-20261012.jpg",
+      "viewport": [
+        467,
+        854
+      ],
+      "sha256": "e7a31be0a7130bd856f4821ff41b6e9d078deb5ad0bd271afeb13bf2a7f6a758",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-ruby-320-20261012.jpg",
+      "viewport": [
+        320,
+        568
+      ],
+      "sha256": "401a67422dfc46079c559658ee78d8b0c4f171d9667f037f7c19cf6bb9b9d327",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-super-20261012.jpg",
+      "viewport": [
+        467,
+        854
+      ],
+      "sha256": "8d1a35066d2249477bbaa3051cf68facd1912755d52332811e54b7a8df9a7ea3",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-vault-20261012.jpg",
+      "viewport": [
+        467,
+        854
+      ],
+      "sha256": "946552ab7d524cf6defd2749e5dd9a378ab10ebe7339e6c245f97e720c481ac4",
+      "kind": "actual browser render"
+    },
+    {
+      "file": "docs/qa/cabinet-polish-vault-768-20261012.jpg",
+      "viewport": [
+        768,
+        1024
+      ],
+      "sha256": "a3171569b7637412122338f19681f392345ccac73bf2a87cdea099b4b3471528",
+      "kind": "actual browser render"
+    }
+  ],
+  "observations": "docs/qa/cabinet-polish-browser-observations-20261012.json",
+  "testEvidence": "docs/qa/cabinet-polish-tests-20261012.json",
+  "buildEvidence": "docs/qa/cabinet-polish-build-20261012.json",
+  "limitations": [
+    "Desktop browser responsive checks, not physical iPhone/iPad performance certification.",
+    "Playback and scheduling were verified; no speaker/headphone subjective listening certification.",
+    "Native release, commercial asset/audio rights, production integrations and App Store approval remain outside this cabinet refinement."
+  ],
+  "compiledBundle": {
+    "file": "build/web-mobile/assets/main/index.be355.js",
+    "sha256": "a195499a9517bffb6d867e37ae34792de950333ec849167de17b5d5e435dc795"
+  }
+}

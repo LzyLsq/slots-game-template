@@ -1,0 +1,22 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exit": 0,
+    "log": "docs/qa/cabinet-polish-ui-20261012.log"
+  },
+  {
+    "command": "npm run typecheck:math",
+    "exit": 0,
+    "log": "docs/qa/cabinet-polish-math-20261012.log"
+  },
+  {
+    "command": "npm run typecheck:server",
+    "exit": 0,
+    "log": "docs/qa/cabinet-polish-server-20261012.log"
+  },
+  {
+    "command": "npm test",
+    "exit": 0,
+    "log": "docs/qa/cabinet-polish-suite-20261012.log"
+  }
+]

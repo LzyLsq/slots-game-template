@@ -1,0 +1,1350 @@
+{
+  "date": "2026-10-10",
+  "test": "Actual native-alpha gutters, no opaque rectangular backdrop, transparent portrait perimeter. Emerald green preserved by design. This pixel audit supplements, not replaces, final render inspection.",
+  "assets": [
+    {
+      "name": "symbols",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "2cf77443bb73a17caaa34be16cb924050395ba2c8edd9cdd0c4a8af3149d2815",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            60,
+            65,
+            61,
+            66
+          ],
+          "visiblePixels": 52760
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            67,
+            50,
+            67,
+            50
+          ],
+          "visiblePixels": 40561
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            42,
+            55,
+            43,
+            55
+          ],
+          "visiblePixels": 49967
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            65,
+            56,
+            66,
+            57
+          ],
+          "visiblePixels": 43667
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            50,
+            49,
+            50,
+            49
+          ],
+          "visiblePixels": 63317
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            54,
+            54,
+            54,
+            54
+          ],
+          "visiblePixels": 50134
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            53,
+            43,
+            54,
+            43
+          ],
+          "visiblePixels": 67249
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            60,
+            52,
+            60,
+            53
+          ],
+          "visiblePixels": 67605
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            50,
+            50,
+            51,
+            49
+          ],
+          "visiblePixels": 59951
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            61,
+            53,
+            61,
+            53
+          ],
+          "visiblePixels": 22977
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            85,
+            68,
+            85,
+            69
+          ],
+          "visiblePixels": 49442
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            64,
+            54,
+            64,
+            55
+          ],
+          "visiblePixels": 53291
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            79,
+            65,
+            79,
+            65
+          ],
+          "visiblePixels": 51086
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            56,
+            51,
+            56,
+            52
+          ],
+          "visiblePixels": 43162
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            52,
+            54,
+            53,
+            54
+          ],
+          "visiblePixels": 55880
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            55,
+            56,
+            56,
+            57
+          ],
+          "visiblePixels": 58598
+        }
+      ]
+    },
+    {
+      "name": "symbols-blur",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "d8662b7ddc52af3e3aa04434d99bd0214a05be6901ba5dc0069f801b1aee61b5",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            52,
+            57,
+            53,
+            58
+          ],
+          "visiblePixels": 59588
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            60,
+            42,
+            59,
+            42
+          ],
+          "visiblePixels": 47786
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            35,
+            48,
+            36,
+            48
+          ],
+          "visiblePixels": 57163
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            58,
+            49,
+            59,
+            49
+          ],
+          "visiblePixels": 53525
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            42,
+            41,
+            42,
+            42
+          ],
+          "visiblePixels": 72357
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            47,
+            46,
+            48,
+            45
+          ],
+          "visiblePixels": 58509
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            45,
+            35,
+            46,
+            37
+          ],
+          "visiblePixels": 75089
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            52,
+            45,
+            53,
+            47
+          ],
+          "visiblePixels": 75907
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            42,
+            43,
+            43,
+            41
+          ],
+          "visiblePixels": 68192
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            54,
+            46,
+            53,
+            46
+          ],
+          "visiblePixels": 31765
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            78,
+            60,
+            78,
+            61
+          ],
+          "visiblePixels": 56317
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            57,
+            46,
+            56,
+            47
+          ],
+          "visiblePixels": 61294
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            70,
+            58,
+            71,
+            56
+          ],
+          "visiblePixels": 58115
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            48,
+            42,
+            49,
+            44
+          ],
+          "visiblePixels": 54932
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            45,
+            45,
+            45,
+            45
+          ],
+          "visiblePixels": 66977
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            47,
+            47,
+            50,
+            49
+          ],
+          "visiblePixels": 65846
+        }
+      ]
+    },
+    {
+      "name": "interfaces",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "2cf77443bb73a17caaa34be16cb924050395ba2c8edd9cdd0c4a8af3149d2815",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            60,
+            65,
+            61,
+            66
+          ],
+          "visiblePixels": 52760
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            67,
+            50,
+            67,
+            50
+          ],
+          "visiblePixels": 40561
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            42,
+            55,
+            43,
+            55
+          ],
+          "visiblePixels": 49967
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            65,
+            56,
+            66,
+            57
+          ],
+          "visiblePixels": 43667
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            50,
+            49,
+            50,
+            49
+          ],
+          "visiblePixels": 63317
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            54,
+            54,
+            54,
+            54
+          ],
+          "visiblePixels": 50134
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            53,
+            43,
+            54,
+            43
+          ],
+          "visiblePixels": 67249
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            60,
+            52,
+            60,
+            53
+          ],
+          "visiblePixels": 67605
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            50,
+            50,
+            51,
+            49
+          ],
+          "visiblePixels": 59951
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            61,
+            53,
+            61,
+            53
+          ],
+          "visiblePixels": 22977
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            85,
+            68,
+            85,
+            69
+          ],
+          "visiblePixels": 49442
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            64,
+            54,
+            64,
+            55
+          ],
+          "visiblePixels": 53291
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            79,
+            65,
+            79,
+            65
+          ],
+          "visiblePixels": 51086
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            56,
+            51,
+            56,
+            52
+          ],
+          "visiblePixels": 43162
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            52,
+            54,
+            53,
+            54
+          ],
+          "visiblePixels": 55880
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            55,
+            56,
+            56,
+            57
+          ],
+          "visiblePixels": 58598
+        }
+      ]
+    },
+    {
+      "name": "portraits",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "d80ec2370761c777e4cae7047308842e72dfcc15a8d682fd57c93cbe1c418a23",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            20,
+            38,
+            20,
+            39
+          ],
+          "visiblePixels": 32112
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            20,
+            56,
+            20,
+            57
+          ],
+          "visiblePixels": 25816
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            39,
+            48,
+            40,
+            48
+          ],
+          "visiblePixels": 18316
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            20,
+            55,
+            20,
+            56
+          ],
+          "visiblePixels": 22972
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            20,
+            38,
+            20,
+            39
+          ],
+          "visiblePixels": 32112
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            20,
+            56,
+            20,
+            57
+          ],
+          "visiblePixels": 25816
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            39,
+            48,
+            40,
+            48
+          ],
+          "visiblePixels": 18316
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            20,
+            55,
+            20,
+            56
+          ],
+          "visiblePixels": 22972
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            20,
+            38,
+            20,
+            39
+          ],
+          "visiblePixels": 32112
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            20,
+            56,
+            20,
+            57
+          ],
+          "visiblePixels": 25816
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            39,
+            48,
+            40,
+            48
+          ],
+          "visiblePixels": 18316
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            20,
+            55,
+            20,
+            56
+          ],
+          "visiblePixels": 22972
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            20,
+            38,
+            20,
+            39
+          ],
+          "visiblePixels": 32112
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            20,
+            56,
+            20,
+            57
+          ],
+          "visiblePixels": 25816
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            39,
+            48,
+            40,
+            48
+          ],
+          "visiblePixels": 18316
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            20,
+            55,
+            20,
+            56
+          ],
+          "visiblePixels": 22972
+        }
+      ]
+    },
+    {
+      "name": "guardian-crown-club",
+      "width": 463,
+      "height": 580,
+      "sha256": "27f3a1cadfdd7e262b7d57e3072d29c777e325fecb174e16c05fff59283f7501",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 148197
+        }
+      ]
+    },
+    {
+      "name": "guardian-emerald-fortune",
+      "width": 542,
+      "height": 579,
+      "sha256": "1aa0acbc16da39aaa1ec12230f2c29b1c6e203e2ad0d05115e67f92b63ae5452",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 192741
+        }
+      ]
+    },
+    {
+      "name": "guardian-ruby-royale",
+      "width": 432,
+      "height": 629,
+      "sha256": "f87b5eda3df6037952e70900264518bc9a5cfeebec5c1a87ece49fe449384330",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 154286
+        }
+      ]
+    },
+    {
+      "name": "guardian-vault-reserve",
+      "width": 477,
+      "height": 623,
+      "sha256": "1f41a2a17c4434229121f48016e0ee397aa0cf1bc6f436888300cad46606c926",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 158461
+        }
+      ]
+    },
+    {
+      "name": "gala-button-0",
+      "width": 307,
+      "height": 303,
+      "sha256": "5f89be44e56b8159f4a3f329aa8867b6a7e02f2553eff9c4aca5ae6df989cee3",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 63008
+        }
+      ]
+    },
+    {
+      "name": "gala-button-1",
+      "width": 234,
+      "height": 243,
+      "sha256": "bdd1ddb693e00c9cd07cdd67f70c8a8b28685748a5c16842e50e17cc000e8ae0",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 35300
+        }
+      ]
+    },
+    {
+      "name": "gala-button-2",
+      "width": 234,
+      "height": 242,
+      "sha256": "268874ded19399a284965447f72cff957f6f64dedf1774156e58f41e0b83c33b",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 35387
+        }
+      ]
+    },
+    {
+      "name": "gala-button-3",
+      "width": 307,
+      "height": 173,
+      "sha256": "587e40c7ae011b8be7c1a0d9cdcb8d706acb2eeee70006876564c3d7cc801295",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 41503
+        }
+      ]
+    },
+    {
+      "name": "gala-button-4",
+      "width": 312,
+      "height": 225,
+      "sha256": "669b9f1e46a91b610ed1062df45922273dfda53af5249b7fd4ac3a3440b61f18",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            7,
+            6,
+            6
+          ],
+          "visiblePixels": 45592
+        }
+      ]
+    },
+    {
+      "name": "gala-button-5",
+      "width": 299,
+      "height": 237,
+      "sha256": "75d0c3cac076e4bb8a8c443fb64a47875771c8a392ac5b0d30e9d7d60b0dfa88",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 43196
+        }
+      ]
+    },
+    {
+      "name": "gala-button-6",
+      "width": 308,
+      "height": 241,
+      "sha256": "cebbf062295876df3bdf60781d4422da3f232a07427526a81b490ab8660f70b5",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 45973
+        }
+      ]
+    },
+    {
+      "name": "gala-button-7",
+      "width": 309,
+      "height": 241,
+      "sha256": "0b8626941123ee9cf1d00a84e8bb3f742f14ad6f586f2d41d2fc6bdd26b778f0",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 46015
+        }
+      ]
+    },
+    {
+      "name": "gala-button-8",
+      "width": 303,
+      "height": 307,
+      "sha256": "a41b8c2fbe539d295ac7a7e8ff56a46e9f416e428eaf4169db37d4ad4e0affa6",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 57410
+        }
+      ]
+    },
+    {
+      "name": "gala-button-9",
+      "width": 301,
+      "height": 307,
+      "sha256": "160da3b0985a552b8fdb64d1131cb3b44749bc002e06460584114f01ffe95742",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 56971
+        }
+      ]
+    },
+    {
+      "name": "gala-button-10",
+      "width": 303,
+      "height": 306,
+      "sha256": "b2bc03217c842942dcf6f085d11718177bde9438538b16b6f5eda59329f3901f",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 57513
+        }
+      ]
+    },
+    {
+      "name": "gala-button-11",
+      "width": 280,
+      "height": 303,
+      "sha256": "9d761d95493136db57041808a3440468a6ab56a6f152f6db3b5a137b89a5c629",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 54246
+        }
+      ]
+    },
+    {
+      "name": "gala-button-12",
+      "width": 280,
+      "height": 284,
+      "sha256": "0b9728d33f137b1c3ddeba3f0463a62652145b473991a342c16469ea566042cf",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 50878
+        }
+      ]
+    },
+    {
+      "name": "gala-button-13",
+      "width": 278,
+      "height": 280,
+      "sha256": "c73994e4bbc8782443d52e79d509d5949f250f18e229f602d573c0b39a04adc0",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 49806
+        }
+      ]
+    },
+    {
+      "name": "gala-button-14",
+      "width": 280,
+      "height": 284,
+      "sha256": "1cc0a6ed140c7409556a3c3c8c8c8008937c3f71b3e3da7944055c3a361a7db5",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 50817
+        }
+      ]
+    },
+    {
+      "name": "gala-button-15",
+      "width": 278,
+      "height": 283,
+      "sha256": "e5535003d0ffecb2494d9d92356282c5ccd6751133e28e77728c4d67c253974b",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "visiblePixels": 50326
+        }
+      ]
+    },
+    {
+      "name": "gala-brand",
+      "width": 454,
+      "height": 196,
+      "sha256": "651fc1582a712326da5f210f6541d84fe6c7064ad3d802aebf655cae1c6458ed",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 45180
+        }
+      ]
+    },
+    {
+      "name": "heading-login",
+      "width": 408,
+      "height": 207,
+      "sha256": "8c8b83086766088e5466d3d0d7a577efa97f11e32eab106368c5e74151257f05",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            11,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 44985
+        }
+      ]
+    },
+    {
+      "name": "heading-shop",
+      "width": 421,
+      "height": 195,
+      "sha256": "8dd1fe5c4b8e7e3ca1bb841d66887c497155aac94430c132e562f968cccf08ab",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 47551
+        }
+      ]
+    },
+    {
+      "name": "heading-rewards",
+      "width": 458,
+      "height": 198,
+      "sha256": "74e6baf954fcba0274c0753d3a1df760bf2d90cf17291413048c9565e66bd50b",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 49539
+        }
+      ]
+    },
+    {
+      "name": "heading-rank",
+      "width": 457,
+      "height": 197,
+      "sha256": "7ea5ed4a92789ec9d83aae38972cdb0ba487a09443cc30ac13ab9e42938fb872",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            11,
+            11,
+            10,
+            10
+          ],
+          "visiblePixels": 49257
+        }
+      ]
+    },
+    {
+      "name": "heading-account",
+      "width": 441,
+      "height": 200,
+      "sha256": "1b071e8aef2d410d096caf2b76fe903c63bc6b5b2037ea2e362484aff60949bc",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 48404
+        }
+      ]
+    },
+    {
+      "name": "award-title-big",
+      "width": 442,
+      "height": 201,
+      "sha256": "96c6fa85b773cbcf7e3bd1aa590bb25d957126e43974111de8e3fb2b86d59a9a",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 50877
+        }
+      ]
+    },
+    {
+      "name": "award-title-super",
+      "width": 456,
+      "height": 205,
+      "sha256": "7791917a6000d8c52edee3ac48968a60aee58f1831b0ae1b3147205a0f2afc29",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 54535
+        }
+      ]
+    },
+    {
+      "name": "award-title-mega",
+      "width": 435,
+      "height": 204,
+      "sha256": "0915619daa0d2fbf86b0e3cbabb76fbd3711574bd01a3bb8371b804fa21e69ef",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 51131
+        }
+      ]
+    },
+    {
+      "name": "award-title-epic",
+      "width": 422,
+      "height": 204,
+      "sha256": "355328aed3af3a79d127c16a72c89702e25bde9e78d3e8f84e5428a9e3597da9",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 51617
+        }
+      ]
+    },
+    {
+      "name": "heading-collection",
+      "width": 469,
+      "height": 217,
+      "sha256": "837941268722d93a15a1a88887abba818081d0eb71308181c06fa31f7cb461d3",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 58300
+        }
+      ]
+    },
+    {
+      "name": "heading-rules",
+      "width": 413,
+      "height": 210,
+      "sha256": "2579854d94c8453f38676fce3c875152f14ab90b52a351689f92f9504b0cc13d",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 53090
+        }
+      ]
+    },
+    {
+      "name": "gala-title-0",
+      "width": 432,
+      "height": 200,
+      "sha256": "b2786d1c28095fe1e16c39b02f1b785a5b935a0947b4301cec1e6e0988ac2335",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            11,
+            10
+          ],
+          "visiblePixels": 47272
+        }
+      ]
+    },
+    {
+      "name": "gala-title-1",
+      "width": 463,
+      "height": 185,
+      "sha256": "ec477f90d5ca5935f48206aa6cc8c8b5935dcd60d8329d8b8b312182703859bd",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 46642
+        }
+      ]
+    },
+    {
+      "name": "gala-title-2",
+      "width": 436,
+      "height": 189,
+      "sha256": "ba2edcf11e37309125f7fe0c9123ec132a9938f6c2dbfa7674143e958b5d2237",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            11,
+            10
+          ],
+          "visiblePixels": 44135
+        }
+      ]
+    },
+    {
+      "name": "gala-title-3",
+      "width": 462,
+      "height": 203,
+      "sha256": "edd62d9cc10f6848c8bd4963098de2a52451b91ec9c965c4e167fa2545e8cd15",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "visiblePixels": 53155
+        }
+      ]
+    },
+    {
+      "name": "win-frame-0",
+      "transparentCentre": true,
+      "width": 754,
+      "height": 440
+    },
+    {
+      "name": "win-frame-1",
+      "transparentCentre": true,
+      "width": 754,
+      "height": 440
+    },
+    {
+      "name": "win-frame-2",
+      "transparentCentre": true,
+      "width": 754,
+      "height": 440
+    },
+    {
+      "name": "win-frame-3",
+      "transparentCentre": true,
+      "width": 754,
+      "height": 440
+    }
+  ]
+}

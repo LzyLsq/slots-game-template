@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "scope": "Actual desktop in-app browser rendering at two emulated viewport sizes; not physical-device or App Store approval",
+  "url": "http://127.0.0.1:6138/?debug=1&screen=profile",
+  "finalScreen": "home (canvas routing does not rewrite the initial profile URL)",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 568,
+      "verified": [
+        "lobby",
+        "portrait picker",
+        "vault-reserve cabinet"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "verified": [
+        "lobby",
+        "portrait picker",
+        "vault-reserve cabinet"
+      ]
+    }
+  ],
+  "observations": [
+    "Both original bull horn tips visible without rectangular dark backing or hard cut at former atlas boundary",
+    "Complete bull portrait silhouette with native alpha; four animal choices remain selectable",
+    "Cabinet bull stays within its seat during ambient beckoning and direct touch interaction",
+    "Default viewport restored before final handoff"
+  ],
+  "lobbyMotion": {
+    "lobby:crown-club": {
+      "id": "crown-club",
+      "context": "lobby",
+      "clip": "lion-prosperity-three-inward-invitations",
+      "owner": "Node.2460",
+      "time": 34.291,
+      "ambientTime": 34.291,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        463,
+        580
+      ],
+      "rendered": [
+        244.272,
+        306
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        0.181,
+        0.105,
+        0,
+        0,
+        0.15,
+        0.037,
+        0
+      ]
+    },
+    "lobby:emerald-fortune": {
+      "id": "emerald-fortune",
+      "context": "lobby",
+      "clip": "elephant-coin-trunk-and-ear-welcome",
+      "owner": "Node.2487",
+      "time": 34.291,
+      "ambientTime": 34.291,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        542,
+        579
+      ],
+      "rendered": [
+        262,
+        279.886
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        -0.03,
+        -0.099,
+        0,
+        0,
+        0.25,
+        0.12,
+        0
+      ]
+    },
+    "lobby:ruby-royale": {
+      "id": "ruby-royale",
+      "context": "lobby",
+      "clip": "fox-prosperity-palm-and-tail-welcome",
+      "owner": "Node.2514",
+      "time": 34.291,
+      "ambientTime": 34.291,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        721,
+        1040
+      ],
+      "rendered": [
+        212.14,
+        306
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        -0.082,
+        -0.059,
+        0,
+        0,
+        -0.077,
+        -0.058,
+        0
+      ]
+    },
+    "lobby:vault-reserve": {
+      "id": "vault-reserve",
+      "context": "lobby",
+      "clip": "bull-three-wealth-hoof-invitations",
+      "owner": "Node.2541",
+      "time": 34.291,
+      "ambientTime": 34.291,
+      "cue": "idle",
+      "cueTime": 0,
+      "cueDuration": 0,
+      "reduced": false,
+      "source": [
+        477,
+        663
+      ],
+      "rendered": [
+        220.154,
+        306
+      ],
+      "ratioError": 0,
+      "rigidFaceAndTreasure": true,
+      "wealthCoins": 0,
+      "degrees": [
+        -0.397,
+        0.103,
+        0,
+        0,
+        -0.128,
+        -0.004,
+        0
+      ]
+    }
+  },
+  "cabinetMotionObserved": {
+    "id": "vault-reserve",
+    "context": "cabinet",
+    "clip": "bull-vault-two-hoof-sweeps",
+    "source": [
+      477,
+      663
+    ],
+    "ratioError": 0,
+    "rigidFaceAndTreasure": true
+  },
+  "consoleWarningsAndErrors": [],
+  "userState": {
+    "portraitUnchanged": "original Golden Lion (0)",
+    "walletUnchanged": 35123,
+    "roundsUnchanged": 17,
+    "noSpinPerformed": true,
+    "noAudioSettingChanged": true
+  },
+  "screenshots": [
+    "horn-avatar-320x568-20261012.png",
+    "horn-avatar-390x844-20261012.png",
+    "horn-lobby-320x568-20261012.png",
+    "horn-lobby-390x844-20261012.png",
+    "horn-cabinet-320x568-20261012.png",
+    "horn-cabinet-390x844-rest-20261012.png",
+    "horn-cabinet-390x844-motion-20261012.png"
+  ],
+  "screenshotNote": "Motion image captures an ambient idle pose, not a claimed touch-cue moment",
+  "limitations": [
+    "No new physical iPhone/iPad validation",
+    "Existing native/production/App Store release blockers remain",
+    "No Git push requested or performed"
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "project": "F38 Golden Gala",
+  "date": "2026-10-10",
+  "timezone": "Asia/Shanghai",
+  "checks": [
+    {
+      "name": "ui-types",
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "ui-types.log"
+    },
+    {
+      "name": "math-types",
+      "command": "npm run typecheck:math",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "math-types.log"
+    },
+    {
+      "name": "server-types",
+      "command": "npm run typecheck:server",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "server-types.log"
+    },
+    {
+      "name": "suite",
+      "command": "npm test",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "suite.log"
+    },
+    {
+      "name": "asset-crops",
+      "command": "/Users/mengjunzhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/symbol-cutout-test.py docs/qa/art-crops.json",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "asset-crops.log"
+    },
+    {
+      "name": "release-audit",
+      "command": "npm run release:audit",
+      "exitCode": 1,
+      "result": "BLOCK",
+      "log": "release-audit.log"
+    }
+  ],
+  "testGroups": 50,
+  "layoutCombinations": 132,
+  "actualPngCropChecks": 44,
+  "isolatedReelCells": 16,
+  "browserViewports": [
+    [
+      320,
+      568
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      430,
+      932
+    ],
+    [
+      768,
+      1024
+    ]
+  ],
+  "visuallyInspected": [
+    "login",
+    "lobby",
+    "four cabinets",
+    "ordinary win",
+    "BIG",
+    "SUPER",
+    "shop preview",
+    "rewards",
+    "rank",
+    "account",
+    "rules"
+  ],
+  "interactions": {
+    "lobbyPlayButtons": 4,
+    "directGameEntry": true,
+    "modeInterstitial": false,
+    "ordinaryWin": {
+      "bet": 100,
+      "payout": 78,
+      "balanceBefore": 28028,
+      "balanceAfter": 28006,
+      "dismissed": true,
+      "betAfterDismiss": 200
+    },
+    "bigWin": {
+      "bet": 100,
+      "payout": 700,
+      "balanceBefore": 28006,
+      "balanceAfter": 28606,
+      "dismissed": true
+    },
+    "superWin": {
+      "bet": 100,
+      "payout": 2500,
+      "balanceBefore": 28606,
+      "balanceAfter": 31006,
+      "dismissed": true,
+      "betAfterDismiss": 200
+    }
+  },
+  "winFixtureBoundary": "Ordinary/BIG/SUPER browser examples use localhost debug force/showcase fixtures. Not natural probability measurements.",
+  "build": {
+    "platform": "web-mobile",
+    "editor": "3.8.8",
+    "logFinished": true,
+    "observedCliExit": 36,
+    "childSignal": "SIGTERM",
+    "exitZeroVerified": false,
+    "browserReloadVerified": true,
+    "record": "build-summary.txt"
+  },
+  "releaseAudit": {
+    "pass": 21,
+    "total": 27,
+    "blocks": [
+      "Publisher identity and public legal URLs",
+      "App Store product identifiers",
+      "Hosted legal documents finalized",
+      "Independent product experience reviewed",
+      "Native release integration complete",
+      "Device and production acceptance recorded"
+    ],
+    "readyForSubmission": false
+  },
+  "audio": {
+    "assetCount": 93,
+    "technicalReport": "audio-assets.json",
+    "readOnlyBrowserDiagnostics": "browser-diagnostics.json",
+    "subjectiveListeningVerified": false
+  },
+  "screenshots": [
+    {
+      "file": "docs/screenshots/account-390.jpg",
+      "sha256": "68fb34d42a33e0e89c5f8b0d977a53fcb9365122585aed30d5919f45998cd3b0",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/big-win-390.jpg",
+      "sha256": "b905f64d43e0f68e0e792ae297176ae95502078b6357b396162de8f2237935d2",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/crown-club-390.jpg",
+      "sha256": "e9a9ab9067e4bedf8edfca5957ff74935b78bce763e05d6cefe525a38b82d694",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/crown-club-768.jpg",
+      "sha256": "61e51b23312039bfd7fdd026aadbf31d672087de2638ed0267f5f9f011e43283",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/emerald-fortune-390.jpg",
+      "sha256": "64fb96462f4363033c3aa0a43710722af2c20021a045153c2996b14982cca057",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/emerald-fortune-430.jpg",
+      "sha256": "2868d818a21fba427777cbbeb69d96f88866f6bcb545ad575e898f304575786f",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/emerald-fortune-768.jpg",
+      "sha256": "cf72bee01ff0ace31988c9c22b126485022e2ba145731d7053caaf8f397e9330",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/lobby-320.jpg",
+      "sha256": "a1228fccfdefd5edd3717e9eb2493877f292d0a1053009d6c563c22c80e16c45",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/lobby-390.jpg",
+      "sha256": "aca6aec633a8c0cf6770cd12e73ba37a35d1e493a41f82ffaf3963e50fd1dde2",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/lobby-430.jpg",
+      "sha256": "b3d95cbc42dde7ce7159cd9f756333980581f59266b45d64d0377148daa97ccd",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/lobby-768.jpg",
+      "sha256": "133d3518a4da02fd3799e1d0cf618c5f902e3a48b28390e974c8f0c5aacbf517",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/login-390.jpg",
+      "sha256": "774538406d9b573af7e8d0809ded96751732d4b37b049f5e2a220cd392b98a8d",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/ordinary-win-390.jpg",
+      "sha256": "212631516fa3af7192661242c392062d93d1b9e23349e1e7bed37fb4cf419915",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/overview.jpg",
+      "sha256": "b1db4537efa37462175a855f394b4f2868fb39ee8a789a6085ba5b68303aa58a",
+      "kind": "contact-sheet"
+    },
+    {
+      "file": "docs/screenshots/rank-390.jpg",
+      "sha256": "4a9df0b7fc0695abef6142d1bd87d82995784ff8ca90b0dc64e8ddcae6281ac1",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/rewards-390.jpg",
+      "sha256": "041095150a3985038678ab5c39d37be7e7883174e2052c66a2ac67068d765897",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/ruby-royale-320.jpg",
+      "sha256": "3a6cecc4391ee58116bc893be91ee1c7c84764a5fa53101c9db46cff5d4a3241",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/ruby-royale-390.jpg",
+      "sha256": "66744635db1575385ff38ecdb38f6cbdb221bca566f56da35b9f7b357072a994",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/ruby-royale-768.jpg",
+      "sha256": "ea6dee15fc3a21b60bd1362d1a279de23e6c5816d57e4c9f975066be0bd1904e",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/rules-390.jpg",
+      "sha256": "51b78ccfd12a8fb49b3001b61df167d138036ee5f913e4479e6ff153982aba36",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/shop-390.jpg",
+      "sha256": "ca48995e20ed8e95d4fb6ca87ca128759b58524a0efe2928a62777b7e6c971de",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/super-win-390.jpg",
+      "sha256": "0e995e99360743cab2b9d4a0106d65336113ee29f2e679e93adca154cc27914a",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/vault-reserve-390.jpg",
+      "sha256": "9d50556a6f5b8cc55f0afa32ba949cf39c4bf4b554d1d1878c10db048814daf5",
+      "kind": "browser-screenshot"
+    },
+    {
+      "file": "docs/screenshots/vault-reserve-768.jpg",
+      "sha256": "a1c4ce37689350acdb7681c60845565407ce7db0a2e8751a32d5a8615f2d7ca7",
+      "kind": "browser-screenshot"
+    }
+  ],
+  "limitations": [
+    "Browser viewport coverage is not physical iPhone/iPad acceptance.",
+    "Preview purchases are simulated; no executable production StoreKit bridge.",
+    "Production PostgreSQL and remote collection rewards not live-validated.",
+    "Commercial art/audio permissions not cleared.",
+    "App Store/TestFlight and independent submission review incomplete.",
+    "Cocos CLI exit 36 remains unresolved."
+  ],
+  "formalDelivery": {
+    "directory": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F38_Golden_Gala_v1.0.0",
+    "sourceAndBuildHashMatch": true,
+    "previewUrl": "http://127.0.0.1:6138/",
+    "freshConsoleErrors": 0,
+    "directEmeraldPlayVerified": true,
+    "betChangeVerified": [
+      100,
+      200,
+      100
+    ],
+    "loadingOverlayRemoved": true,
+    "transitionCompleted": true,
+    "cacheDirectoriesExcluded": [
+      "node_modules",
+      "library",
+      "temp",
+      "profiles",
+      "output",
+      "tmp"
+    ],
+    "generationTransportToolExcluded": true
+  }
+}

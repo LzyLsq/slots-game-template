@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "scope": "CPU pose/mesh and runtime integration; not GPU/physical-device performance certification",
+  "movingWindows": 1346,
+  "seams": 32,
+  "reactions": 40,
+  "results": [
+    {
+      "id": "crown-club",
+      "context": "lobby",
+      "loopSeconds": 4.5,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.3423
+    },
+    {
+      "id": "emerald-fortune",
+      "context": "lobby",
+      "loopSeconds": 5.2,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.2798
+    },
+    {
+      "id": "ruby-royale",
+      "context": "lobby",
+      "loopSeconds": 5.6,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.1764
+    },
+    {
+      "id": "vault-reserve",
+      "context": "lobby",
+      "loopSeconds": 4.1,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.2736
+    },
+    {
+      "id": "crown-club",
+      "context": "cabinet",
+      "loopSeconds": 3.45,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.4998
+    },
+    {
+      "id": "emerald-fortune",
+      "context": "cabinet",
+      "loopSeconds": 4.6,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.1333
+    },
+    {
+      "id": "ruby-royale",
+      "context": "cabinet",
+      "loopSeconds": 4.65,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.2829
+    },
+    {
+      "id": "vault-reserve",
+      "context": "cabinet",
+      "loopSeconds": 3.75,
+      "recoverySeconds": 0.8,
+      "minimumJointRangeDegreesOver1_2Seconds": 0.4813
+    }
+  ]
+}
