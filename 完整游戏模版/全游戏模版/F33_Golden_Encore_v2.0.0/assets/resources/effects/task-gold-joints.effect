@@ -1,0 +1,108 @@
+// Articulate existing CC Switch-generated textures; this shader paints no art.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: keeper-vs:vert
+      frag: keeper-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        canvas: { value: [590, 732, 590, 732] }
+        origin: { value: [0, 366, 0, 0] }
+        jointA: { value: [0, 235, 0, 1] }
+        jointB: { value: [0, 436, 0, 1] }
+        bands: { value: [170, 365, 400, 461] }
+        axes: { value: [0, 1, 0, 1] }
+}%
+CCProgram keeper-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec4 color;
+  out vec2 uv0;
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1.0);
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+    color = a_color;
+    uv0 = a_texCoord;
+    return cc_matViewProj * pos;
+  }
+}%
+CCProgram keeper-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  in vec4 color;
+  in vec2 uv0;
+  #pragma builtin(local)
+  layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+  uniform KeeperJoints {
+    vec4 canvas;
+    vec4 origin;
+    vec4 jointA;
+    vec4 jointB;
+    vec4 bands;
+    vec4 axes;
+  };
+  // vec4 joint = pivot.xy, sin(angle), cos(angle), calculated once on CPU.
+  mat2 rotation(vec4 joint) { return mat2(joint.w, joint.z, -joint.z, joint.w); }
+  float bandWeight(vec2 p, vec2 axis, vec2 band) {
+    return smoothstep(band.x, band.y, dot(p, axis));
+  }
+  vec2 bandGradient(vec2 p, vec2 axis, vec2 band) {
+    float t = clamp((dot(p, axis) - band.x) / (band.y - band.x), 0.0, 1.0);
+    return axis * (6.0 * t * (1.0 - t) / (band.y - band.x));
+  }
+  vec2 firstJoint(vec2 p) {
+    float w = bandWeight(p, axes.xy, bands.xy);
+    return p + w * (rotation(jointA) * (p - jointA.xy) - (p - jointA.xy));
+  }
+  vec2 forwardPose(vec2 p, out mat2 jacobian) {
+    mat2 ident = mat2(1.0), ra = rotation(jointA), rb = rotation(jointB);
+    float wa = bandWeight(p, axes.xy, bands.xy), wb = bandWeight(p, axes.zw, bands.zw);
+    vec2 ga = bandGradient(p, axes.xy, bands.xy), gb = bandGradient(p, axes.zw, bands.zw);
+    vec2 da = (ra - ident) * (p - jointA.xy);
+    vec2 q = p + wa * da;
+    mat2 ja = ident + wa * (ra - ident) + mat2(da * ga.x, da * ga.y);
+    vec2 neck = firstJoint(jointB.xy);
+    vec2 db = (rb - ident) * (q - neck);
+    jacobian = (ident + wb * (rb - ident)) * ja + mat2(db * gb.x, db * gb.y);
+    return q + wb * db;
+  }
+  vec4 frag () {
+    vec2 point = origin.xy + vec2(uv0.x - 0.5, 0.5 - uv0.y) * canvas.xy;
+    // Analytic inverse keeps collar/cuff pixels registered even in transition
+    // bands. Rigid face and gripping paw; no UV ripple or pose crossfade.
+    vec2 source = point;
+    for (int i = 0; i < 4; i++) {
+      mat2 j;
+      vec2 error = forwardPose(source, j) - point;
+      float determinant = j[0][0] * j[1][1] - j[1][0] * j[0][1];
+      source -= vec2(j[1][1] * error.x - j[1][0] * error.y,
+                     j[0][0] * error.y - j[0][1] * error.x) / max(0.1, determinant);
+    }
+    vec2 sampleUV = vec2((source.x - origin.x) / canvas.z + 0.5,
+                        0.5 - (source.y - origin.y) / canvas.w);
+    if (sampleUV.x < 0.0 || sampleUV.y < 0.0 || sampleUV.x > 1.0 || sampleUV.y > 1.0) discard;
+    vec4 result = CCSampleWithAlphaSeparated(cc_spriteTexture, sampleUV) * color;
+    ALPHA_TEST(result);
+    return result;
+  }
+}%

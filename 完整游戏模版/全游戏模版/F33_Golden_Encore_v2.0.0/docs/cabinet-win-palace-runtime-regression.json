@@ -1,0 +1,488 @@
+{
+  "reviewed_at": "2026-10-10",
+  "request": "Increase BIG as well as SUPER lavish award presentation while retaining original cabinet, readability and economy.",
+  "scope": "Generated decorative art and finite in-cabinet presentation only; no spin math, payout, newcomer guarantee, sound recording or normal-award code changed in this pass.",
+  "build": {
+    "creator": "3.8.8",
+    "web_mobile_finished_at": "2026-10-10 15:37:29 +08:00",
+    "output_actually_run": true,
+    "cli_exit": 36,
+    "caveat": "Existing editor recovery window.json parse / native IPC teardown; Finished web output is verified, not a clean native release/App Store approval."
+  },
+  "tests": {
+    "npm_test": "PASS",
+    "npm_run_typecheck": "PASS",
+    "emitted_texture_hashes": {
+      "pass": true,
+      "assets": 18,
+      "evidence": "output/playwright/palace-emitted-texture-hashes-20261010.json"
+    }
+  },
+  "generation": {
+    "bridge": "Local CC Switch tools/cc-generate.sh",
+    "image_model": "gpt-image-2",
+    "quality": "high",
+    "source_atlases": 9,
+    "replacement_sculptures": 16,
+    "new_generated_light_sprites": 2,
+    "uuid_preserved_for_replacements": true,
+    "manifest": "docs/prize-palace-sources.json",
+    "provenance": "docs/ART_PROVENANCE.json",
+    "extraction": "tools/assemble-prize-palace.py"
+  },
+  "baseline": {
+    "balance": 312728,
+    "spins": 97
+  },
+  "cases": [
+    {
+      "name": "jade-big-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "tier": "big",
+      "mode": 0,
+      "reduced": false,
+      "samples": 90,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 120,
+        "bursts": 4,
+        "capacity": 112,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 0,
+        "sparkles": 12,
+        "tier": "big",
+        "time": 3.4652000000029832,
+        "titleAlpha": 255,
+        "visibleBursts": 4,
+        "visibleCoins": 66
+      },
+      "screenshots": [
+        "output/playwright/palace-jade-big-390-peak.png",
+        "output/playwright/palace-jade-big-390-hold.png"
+      ]
+    },
+    {
+      "name": "dragon-super-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "tier": "super",
+      "mode": 3,
+      "reduced": false,
+      "samples": 79,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 138,
+        "bursts": 6,
+        "capacity": 176,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 20,
+        "tier": "super",
+        "time": 4.582900000005963,
+        "titleAlpha": 255,
+        "visibleBursts": 6,
+        "visibleCoins": 82
+      },
+      "screenshots": [
+        "output/playwright/palace-dragon-super-390-peak.png",
+        "output/playwright/palace-dragon-super-390-hold.png"
+      ]
+    },
+    {
+      "name": "jade-super-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "tier": "super",
+      "mode": 0,
+      "reduced": false,
+      "samples": 96,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 143,
+        "bursts": 6,
+        "capacity": 176,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 0,
+        "sparkles": 20,
+        "tier": "super",
+        "time": 4.56600000000001,
+        "titleAlpha": 255,
+        "visibleBursts": 6,
+        "visibleCoins": 82
+      },
+      "screenshots": [
+        "output/playwright/palace-jade-super-390-peak.png",
+        "output/playwright/palace-jade-super-390-hold.png"
+      ]
+    },
+    {
+      "name": "pearl-big-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "tier": "big",
+      "mode": 1,
+      "reduced": false,
+      "samples": 66,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 111,
+        "bursts": 4,
+        "capacity": 112,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 12,
+        "tier": "big",
+        "time": 3.4995000000000047,
+        "titleAlpha": 255,
+        "visibleBursts": 4,
+        "visibleCoins": 65
+      },
+      "screenshots": [
+        "output/playwright/palace-pearl-big-390-peak.png",
+        "output/playwright/palace-pearl-big-390-hold.png"
+      ]
+    },
+    {
+      "name": "pearl-super-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "tier": "super",
+      "mode": 1,
+      "reduced": false,
+      "samples": 75,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 152,
+        "bursts": 6,
+        "capacity": 176,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 20,
+        "tier": "super",
+        "time": 4.532700000002986,
+        "titleAlpha": 255,
+        "visibleBursts": 6,
+        "visibleCoins": 82
+      },
+      "screenshots": [
+        "output/playwright/palace-pearl-super-390-peak.png",
+        "output/playwright/palace-pearl-super-390-hold.png"
+      ]
+    },
+    {
+      "name": "ember-big-320",
+      "viewport": [
+        320,
+        568
+      ],
+      "tier": "big",
+      "mode": 2,
+      "reduced": false,
+      "samples": 74,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 129,
+        "bursts": 4,
+        "capacity": 112,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 2,
+        "sparkles": 12,
+        "tier": "big",
+        "time": 3.432800000011924,
+        "titleAlpha": 255,
+        "visibleBursts": 4,
+        "visibleCoins": 66
+      },
+      "screenshots": [
+        "output/playwright/palace-ember-big-320-peak.png",
+        "output/playwright/palace-ember-big-320-hold.png"
+      ]
+    },
+    {
+      "name": "ember-super-320",
+      "viewport": [
+        320,
+        568
+      ],
+      "tier": "super",
+      "mode": 2,
+      "reduced": false,
+      "samples": 118,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 152,
+        "bursts": 6,
+        "capacity": 176,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 2,
+        "sparkles": 20,
+        "tier": "super",
+        "time": 4.532599999994047,
+        "titleAlpha": 255,
+        "visibleBursts": 6,
+        "visibleCoins": 82
+      },
+      "screenshots": [
+        "output/playwright/palace-ember-super-320-peak.png",
+        "output/playwright/palace-ember-super-320-hold.png"
+      ]
+    },
+    {
+      "name": "dragon-big-1024",
+      "viewport": [
+        1024,
+        768
+      ],
+      "tier": "big",
+      "mode": 3,
+      "reduced": false,
+      "samples": 63,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 119,
+        "bursts": 4,
+        "capacity": 112,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 12,
+        "tier": "big",
+        "time": 3.465800000011925,
+        "titleAlpha": 255,
+        "visibleBursts": 4,
+        "visibleCoins": 66
+      },
+      "screenshots": [
+        "output/playwright/palace-dragon-big-1024-peak.png",
+        "output/playwright/palace-dragon-big-1024-hold.png"
+      ]
+    },
+    {
+      "name": "dragon-big-reduced-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "tier": "big",
+      "mode": 3,
+      "reduced": true,
+      "samples": 1,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": false,
+        "aureoleAlpha": 0,
+        "bursts": 0,
+        "capacity": 0,
+        "lights": 0,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 0,
+        "reelFactor": 1,
+        "room": 3,
+        "sparkles": 0,
+        "tier": "big",
+        "time": 0,
+        "titleAlpha": 255,
+        "visibleBursts": 0,
+        "visibleCoins": 0
+      },
+      "screenshots": [
+        "output/playwright/palace-dragon-big-reduced-390-peak.png",
+        "output/playwright/palace-dragon-big-reduced-390-hold.png"
+      ]
+    },
+    {
+      "name": "pearl-super-reduced-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "tier": "super",
+      "mode": 1,
+      "reduced": true,
+      "samples": 1,
+      "identity_preserved": true,
+      "overlay_parent_original_cabinet": true,
+      "economy_preserved": true,
+      "hold_observed": true,
+      "collected": true,
+      "music_restored": true,
+      "console_errors_or_warnings": [],
+      "peak": {
+        "aureole": false,
+        "aureoleAlpha": 0,
+        "bursts": 0,
+        "capacity": 0,
+        "lights": 0,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 0,
+        "reelFactor": 1,
+        "room": 1,
+        "sparkles": 0,
+        "tier": "super",
+        "time": 0,
+        "titleAlpha": 255,
+        "visibleBursts": 0,
+        "visibleCoins": 0
+      },
+      "screenshots": [
+        "output/playwright/palace-pearl-super-reduced-390-peak.png",
+        "output/playwright/palace-pearl-super-reduced-390-hold.png"
+      ]
+    }
+  ],
+  "notes": [
+    "Protected preview only; no wager, real purchase, real claim, storage reset or engine injection.",
+    "First bounded ready poll for Ember SUPER returned before loading finished; fresh screenshot and read-only phase confirmed readiness, without reloading or changing application state.",
+    "Pearl reduced SUPER immediately collected; first audio sample still ducked at .084 during exit. After fade the same page restored scene music to .21, no further click or navigation.",
+    "Screenshot capture cadence and QA time samples are not physical-device FPS certification."
+  ],
+  "evidence": "output/playwright/palace-runtime-observations-20261010.json",
+  "limitations": [
+    "Actual browser viewport coverage; not physical handset GPU/FPS measurement.",
+    "Audio source/routing/restoration observed; not a new perceptual listening or loudspeaker certification.",
+    "Protected presentation-only previews; no new real wager/claim/purchase performed."
+  ],
+  "cleanup": {
+    "temporary_viewport_reset": true,
+    "agent_tab_closed": true,
+    "generation_requests_removed": true,
+    "exported_frames_removed": true,
+    "chrome_opened": false
+  },
+  "recordings": [
+    {
+      "file": "output/playwright/palace-jade-big-390-live-20261010.webp",
+      "source_frames": 90,
+      "encoded_frames": 90,
+      "width": 390,
+      "height": 844,
+      "duration_ms": 6794,
+      "qa_time_start": 0.13180000001192094,
+      "qa_time_end": 5.731800000011929,
+      "sha256": "0a899b4a7e8ad17d001c920d2ea69c7f00ffe76426fc7892c374643bae917b59",
+      "bytes": 4918560,
+      "audio_track": false,
+      "timing": "Source screenshots only. Approximate animation timing reconstructed from throttled motion timestamps; not a device FPS measurement."
+    },
+    {
+      "file": "output/playwright/palace-dragon-super-390-live-20261010.webp",
+      "source_frames": 79,
+      "encoded_frames": 78,
+      "width": 390,
+      "height": 844,
+      "duration_ms": 7939,
+      "qa_time_start": 0.2662000000029802,
+      "qa_time_end": 7.016200000002983,
+      "sha256": "c9e1468aa029988e71853e131791da75a760da694ee060336242a0cfbeec561f",
+      "bytes": 4902930,
+      "audio_track": false,
+      "timing": "Source screenshots only. Approximate animation timing reconstructed from throttled motion timestamps; not a device FPS measurement."
+    }
+  ]
+}

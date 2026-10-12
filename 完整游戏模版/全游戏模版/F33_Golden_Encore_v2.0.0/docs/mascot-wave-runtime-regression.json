@@ -1,0 +1,521 @@
+{
+  "date": "2026-10-09",
+  "build": {
+    "creator": "3.8.8",
+    "finished": "2026-10-09 17:14:27 +08:00",
+    "exitCode": 36,
+    "cleanReleaseClaimed": false
+  },
+  "supersedes": "The 14:36 and 16:07 arm/expression descriptions are historical, not the current implementation. This revision removes full-face expression morphs and optical-flow hand-texture blending.",
+  "shippingHallAction": {
+    "method": "Original generated fingers/palm remain one rigid surface; a short proximal wrist bends smoothly into the fixed cuff. Generated clean background is used only inside the old paw footprint. Forward bounds and inverse residual rejection prevent duplicated remote hand samples.",
+    "frames": 64,
+    "fps": 30,
+    "cell": [
+      224,
+      224
+    ],
+    "gutter": 2,
+    "supersampling": 3,
+    "fourIndependentTimingProfiles": true,
+    "neutralAndPatchBoundaryExact": true,
+    "notClaimed": "64 independently generated images; whole-character rigging; real-device 30fps certification"
+  },
+  "shippingExpressionAction": "Removed. No mouth, eyebrow, gaze or full-face expression layer is shipped.",
+  "shippingBlinkAction": {
+    "banks": 12,
+    "scenes": [
+      "hall",
+      "cabinet",
+      "prize"
+    ],
+    "frames": 20,
+    "fps": 30,
+    "independentGentleEyelidTrack": true
+  },
+  "sourceGeneration": {
+    "provider": "local CC Switch",
+    "independentCleanPlates": 4,
+    "requestedQuality": "high",
+    "actualOutputSizes": [
+      "1254x1254"
+    ],
+    "actualQualityByAnimal": {
+      "otter": "medium",
+      "rabbit": "medium",
+      "fox": "low",
+      "dragon": "low"
+    },
+    "rawRepliesOutsideShippingProject": true,
+    "notClaimed": "Backend high-quality output flag or independently generated animation frames"
+  },
+  "resources": {
+    "date": "2026-10-09",
+    "shippingArtPNGs": 155,
+    "provenanceEntries": 149,
+    "verifiedProvenanceHashes": 149,
+    "blinkBanksInSourceAndBuild": 12,
+    "retiredFullFaceBanksInSourceAndBuild": 0,
+    "retiredPosePromptsArchivedOutsideProject": 8,
+    "rawGenerationRepliesShipping": false,
+    "creatorFinished": "2026-10-09T17:14:27+08:00",
+    "creatorExitCode": 36
+  },
+  "recordedHallMotion": [
+    {
+      "animal": "otter",
+      "samples": 366,
+      "uniqueRenderedArmFrameIndices": 64,
+      "uniqueRenderedBlinkFrameIndices": 20,
+      "singleRegisteredKeeperAndNoWholeImageScaleRotation": true
+    },
+    {
+      "animal": "rabbit",
+      "samples": 366,
+      "uniqueRenderedArmFrameIndices": 64,
+      "uniqueRenderedBlinkFrameIndices": 20,
+      "singleRegisteredKeeperAndNoWholeImageScaleRotation": true
+    },
+    {
+      "animal": "fox",
+      "samples": 366,
+      "uniqueRenderedArmFrameIndices": 64,
+      "uniqueRenderedBlinkFrameIndices": 20,
+      "singleRegisteredKeeperAndNoWholeImageScaleRotation": true
+    },
+    {
+      "animal": "dragon",
+      "samples": 366,
+      "uniqueRenderedArmFrameIndices": 64,
+      "uniqueRenderedBlinkFrameIndices": 20,
+      "singleRegisteredKeeperAndNoWholeImageScaleRotation": true
+    }
+  ],
+  "handPixelAndGeometryRegression": [
+    {
+      "animal": "otter",
+      "uniqueFrames": 59,
+      "changedSourcePixels": 2174,
+      "maxAdjacentMeanDelta": 0.22053372130102042,
+      "minimumLocalJacobian": 0.376970107810083,
+      "maximumInverseResidualPixels": 2.9046445502697544e-05,
+      "distalSourceTextureErrorP95": 7.423830730333316,
+      "fixedCuffRigidDigitsNoRemoteHandGhost": true,
+      "exactNeutralBoundaryGutters": true
+    },
+    {
+      "animal": "rabbit",
+      "uniqueFrames": 60,
+      "changedSourcePixels": 1439,
+      "maxAdjacentMeanDelta": 0.12862723214285715,
+      "minimumLocalJacobian": 0.44039910445793007,
+      "maximumInverseResidualPixels": 1.868731828835738e-06,
+      "distalSourceTextureErrorP95": 2.404548144701856,
+      "fixedCuffRigidDigitsNoRemoteHandGhost": true,
+      "exactNeutralBoundaryGutters": true
+    },
+    {
+      "animal": "fox",
+      "uniqueFrames": 60,
+      "changedSourcePixels": 1684,
+      "maxAdjacentMeanDelta": 0.20290577168367346,
+      "minimumLocalJacobian": 0.6949581711172342,
+      "maximumInverseResidualPixels": 2.231697817290032e-10,
+      "distalSourceTextureErrorP95": 12.113918855718513,
+      "fixedCuffRigidDigitsNoRemoteHandGhost": true,
+      "exactNeutralBoundaryGutters": true
+    },
+    {
+      "animal": "dragon",
+      "uniqueFrames": 60,
+      "changedSourcePixels": 2383,
+      "maxAdjacentMeanDelta": 0.272396165497449,
+      "minimumLocalJacobian": 0.34395956619431123,
+      "maximumInverseResidualPixels": 0.00010312929339213998,
+      "distalSourceTextureErrorP95": 9.447515913185917,
+      "fixedCuffRigidDigitsNoRemoteHandGhost": true,
+      "exactNeutralBoundaryGutters": true
+    }
+  ],
+  "responsiveCases": [
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "mode": 0,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "mode": 1,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "mode": 2,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "mode": 3,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 0,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 1,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 2,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 3,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "mode": 0,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "mode": 1,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "mode": 2,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "mode": 3,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        739,
+        766
+      ],
+      "mode": 0,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        739,
+        766
+      ],
+      "mode": 1,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        739,
+        766
+      ],
+      "mode": 2,
+      "registeredArm": true,
+      "registeredEye": true
+    },
+    {
+      "viewport": [
+        739,
+        766
+      ],
+      "mode": 3,
+      "registeredArm": true,
+      "registeredEye": true
+    }
+  ],
+  "cabinetBlinkReview": [
+    {
+      "mode": 0,
+      "samples": 252,
+      "uniqueEyeFrameIndices": 20
+    },
+    {
+      "mode": 1,
+      "samples": 252,
+      "uniqueEyeFrameIndices": 20
+    },
+    {
+      "mode": 2,
+      "samples": 252,
+      "uniqueEyeFrameIndices": 20
+    },
+    {
+      "mode": 3,
+      "samples": 252,
+      "uniqueEyeFrameIndices": 20
+    }
+  ],
+  "syntheticSuperPrizeBlinkReview": [
+    {
+      "mode": 0,
+      "samples": 270,
+      "uniqueEyeFrameIndices": 20
+    },
+    {
+      "mode": 1,
+      "samples": 270,
+      "uniqueEyeFrameIndices": 20
+    },
+    {
+      "mode": 2,
+      "samples": 270,
+      "uniqueEyeFrameIndices": 20
+    },
+    {
+      "mode": 3,
+      "samples": 271,
+      "uniqueEyeFrameIndices": 20
+    }
+  ],
+  "lifecycle": {
+    "browserBackgroundPauseResume": [
+      {
+        "mode": 0,
+        "heldArm": 40,
+        "heldEye": 6,
+        "frozenEye": 6,
+        "resumedEye": 12
+      },
+      {
+        "mode": 1,
+        "heldArm": 50,
+        "heldEye": 6,
+        "frozenEye": 6,
+        "resumedEye": 12
+      },
+      {
+        "mode": 2,
+        "heldArm": 59,
+        "heldEye": 6,
+        "frozenEye": 6,
+        "resumedEye": 12
+      },
+      {
+        "mode": 3,
+        "heldArm": 0,
+        "heldEye": 6,
+        "frozenEye": 6,
+        "resumedEye": 12
+      }
+    ],
+    "overlayPauseDisableCleanupAndReducedMotionCoveredByTests": true
+  },
+  "loadingObservedInBrowser": true,
+  "visualReview": {
+    "method": "Reviewed four original-surface pose sheets, native actual-browser extrema screenshots, and sixteen time-ordered crop samples from each of four 3.6-second browser-recording segments. This is sampled temporal inspection, not physical-device or full-video real-time playback certification.",
+    "reviewedAnimals": [
+      "otter",
+      "rabbit",
+      "fox",
+      "dragon"
+    ],
+    "decodedSegments": [
+      {
+        "animal": "otter",
+        "startSeconds": 9.0,
+        "durationSeconds": 3.6,
+        "decodedFrames": 90,
+        "crop": [
+          223,
+          269,
+          308,
+          351
+        ],
+        "contactSheet": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/hall-hands-v3/video-overview/otter-actual-runtime-review.jpg"
+      },
+      {
+        "animal": "rabbit",
+        "startSeconds": 18.0,
+        "durationSeconds": 3.6,
+        "decodedFrames": 90,
+        "crop": [
+          233,
+          267,
+          318,
+          357
+        ],
+        "contactSheet": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/hall-hands-v3/video-overview/rabbit-actual-runtime-review.jpg"
+      },
+      {
+        "animal": "fox",
+        "startSeconds": 27.0,
+        "durationSeconds": 3.6,
+        "decodedFrames": 90,
+        "crop": [
+          246,
+          280,
+          332,
+          363
+        ],
+        "contactSheet": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/hall-hands-v3/video-overview/fox-actual-runtime-review.jpg"
+      },
+      {
+        "animal": "dragon",
+        "startSeconds": 36.0,
+        "durationSeconds": 3.6,
+        "decodedFrames": 90,
+        "crop": [
+          175,
+          267,
+          275,
+          358
+        ],
+        "contactSheet": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/hall-hands-v3/video-overview/dragon-actual-runtime-review.jpg"
+      }
+    ],
+    "losslessActualPlayingPosesCaptured": [
+      {
+        "mode": 0,
+        "frame": 13,
+        "eyeFrame": 0,
+        "elapsed": 568.6000000089407
+      },
+      {
+        "mode": 0,
+        "frame": 45,
+        "eyeFrame": 0,
+        "elapsed": 1033.1000000089407
+      },
+      {
+        "mode": 1,
+        "frame": 13,
+        "eyeFrame": 0,
+        "elapsed": 872.1999999880791
+      },
+      {
+        "mode": 1,
+        "frame": 45,
+        "eyeFrame": 0,
+        "elapsed": 1051.7000000029802
+      },
+      {
+        "mode": 2,
+        "frame": 13,
+        "eyeFrame": 7,
+        "elapsed": 1120.7999999970198
+      },
+      {
+        "mode": 2,
+        "frame": 45,
+        "eyeFrame": 0,
+        "elapsed": 1062.2000000029802
+      },
+      {
+        "mode": 3,
+        "frame": 13,
+        "eyeFrame": 0,
+        "elapsed": 1369.199999988079
+      },
+      {
+        "mode": 3,
+        "frame": 45,
+        "eyeFrame": 0,
+        "elapsed": 1052.5
+      }
+    ],
+    "losslessPosesWereNotSubstitutedFrames": true,
+    "recording": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/hall-hands-v3/runtime-video/page@f999879e97de39c85e09eab2f091b6c4.webm",
+    "observed": "No obvious second hand, disconnected cuff, whole-face morph or rectangular patch edge in the reviewed evidence. Small local resampling softness remains possible; this does not guarantee zero artifacts in every frame/device."
+  },
+  "errors": {
+    "errors": [],
+    "failed": [],
+    "httpErrors": [],
+    "consoleErrors": []
+  },
+  "independentQAWallet": {
+    "baseline": {
+      "coins": 5000,
+      "spins": 0
+    },
+    "final": {
+      "coins": 5000,
+      "spins": 0
+    },
+    "realSpinClaimPurchaseResetPerformed": false
+  },
+  "userPreview": {
+    "untouched": true,
+    "reloaded": false,
+    "walletWrites": false,
+    "refreshRequiredToLoadNewBuild": true
+  },
+  "tests": {
+    "typecheck": true,
+    "npmFullRegression": true,
+    "fourModesFiveLanguagesWalletOnboardingAudioLoadingAndNavigationPreserved": true
+  },
+  "cleanup": {
+    "independentRecordingContextClosed": true,
+    "namedTestChrome": "f33-static-faces",
+    "namedTestChromeClosed": true,
+    "server41734HTTP": 200,
+    "userOriginalPreviewPreserved": true
+  },
+  "notCertified": [
+    "clean Creator exit",
+    "real-device performance",
+    "speaker listening",
+    "App Store readiness"
+  ]
+}

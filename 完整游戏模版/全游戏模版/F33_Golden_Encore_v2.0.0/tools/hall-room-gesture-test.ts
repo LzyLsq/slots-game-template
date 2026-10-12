@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { HallRoomGesture } from '../assets/scripts/ui/HallRoomGesture';
+const g = new HallRoomGesture();
+assert.equal(g.begin(1, 200, 300), true);
+assert.equal(g.end(1, 205, 307), 'tap');
+assert.equal(g.begin(1, 240, 300), true); g.move(1, 180, 305);
+assert.equal(g.end(1, 95, 306), 'next');
+assert.equal(g.end(1, 300, 300), undefined, 'A swipe cannot also launch the room');
+g.begin(1, 90, 300); assert.equal(g.end(1, 240, 300), 'previous', 'Fast flick without move still works');
+g.begin(1, 200, 300); g.move(1, 201, 340); assert.equal(g.end(1, 80, 350), undefined, 'Initial vertical lock wins');
+g.begin(1, 200, 300); g.move(1, 215, 300); assert.equal(g.end(1, 210, 300), undefined, 'Moved but short or reversed gesture never enters');
+g.begin(1, 200, 300); assert.equal(g.cancel(1), true); assert.equal(g.end(1, 50, 300), undefined);
+g.begin(1, 200, 300); assert.equal(g.begin(2, 50, 50), false); assert.equal(g.owns(2), false);
+assert.equal(g.cancel(2), false); assert.equal(g.end(2, 150, 50), undefined); assert.equal(g.end(1, 190, 302), 'tap');
+assert.equal(g.begin(1, NaN, 0), false); g.begin(1, 200, 300);g.move(1, Infinity, 50);assert.equal(g.end(1, 201, 300), 'tap');
+for (let i = 0; i < 1000; i++) { g.begin(i, 240, 300); assert.equal(g.end(i, 60, 302), 'next'); }
+const app = readFileSync('assets/scripts/ui/GoldenEncoreApp.ts','utf8');
+const hall=app.slice(app.indexOf('private homePage('),app.indexOf('private houseJournal('));
+assert.ok(hall.includes('new HallRoomGesture()') && hall.includes('Previous treasure room') && hall.includes('Next treasure room'));
+assert.ok(!hall.includes('scheduleOnce(cycle') && !hall.includes('lastManualSelection'), 'No timer overrides manual selection');
+assert.ok(hall.includes('() => this.enterMode(room), room.id'), 'Named modes remain one-tap direct entrances');
+assert.ok(hall.includes('retiringBackdrop.active = false') && hall.includes('Tween.stopAllByTarget(opacity(previous))'), 'Interrupted crossfades own only two stages');
+assert.ok(app.includes('this.hallSpotlight = room.id'), 'Returning from a direct-entry room restores its preview');
+console.log('PASS manual hall gestures: both directions, taps, fast flicks, vertical lock, cancellation, multitouch, no accidental enter, no automatic override, bounded fades, direct entry preserved');

@@ -1,0 +1,1250 @@
+{
+  "date": "2026-10-10",
+  "version": "acoustic-lantern-20261010",
+  "scope": "Actual emitted Cocos web playback state and resource verification; not loudspeaker/perceptual certification",
+  "project": "/Users/xzkj/Desktop/slots-game-template/完整游戏模版/全游戏模版/F33_Golden_Encore_v2.0.0",
+  "preview": "http://127.0.0.1:41734/",
+  "audioDelivery": {
+    "sceneMusic": 8,
+    "cues": 30,
+    "sampleRate": 32000,
+    "musicChannels": 2,
+    "cueChannels": 1,
+    "pcmBytes": 40560348,
+    "buildAssetsVerified": 38,
+    "licensedSources": "docs/licenses/audio-sources.json"
+  },
+  "checks": {
+    "typecheck": "PASS",
+    "completeNpmTest": "PASS",
+    "creatorWebOutputFinishedAt": "2026-10-10T14:24:52+08:00",
+    "creatorExit": 36,
+    "creatorExitLimitation": "Existing script-worker/native IPC termination; not a clean release/native/App Store build",
+    "resourceHashMatch": "All 38 emitted native WAV assets equal mastered source",
+    "actualPlayback": "Dragon SUPER cue, coin/finish/collection states, 0.088 reward duck and 0.22 recovery; settled hall and account transitions; mute and unmute without stale reward replay",
+    "signalMeasurements": "PCM/hash/dynamics/high bands/loop seam/mono retention/package budget pass; not speaker listening"
+  },
+  "browser": {
+    "provider": "Codex in-app browser",
+    "temporaryTabId": "9",
+    "temporaryTabClosed": true,
+    "googleChromeOpened": false,
+    "viewportOverrideSetByThisAudioTask": false,
+    "consoleWarnErrorSample": [],
+    "consoleLimit": 50
+  },
+  "dataTransparency": {
+    "initialAccount": {
+      "coins": 311728,
+      "spins": 90,
+      "totalWon": 328522
+    },
+    "laterObserved": {
+      "coins": 312728,
+      "spins": 97
+    },
+    "cause": "Intervening viewport/mode/round changes occurred after a rejected out-of-viewport sound-button attempt. Their cause was not established; do not attribute them to a specific actor or bug. The agent had issued no SPIN/AUTO/purchase/claim UI command before them.",
+    "resetOrRollback": false,
+    "safePreview": "Subsequent SUPER/collect/menu/mute QA used debug=1&screen=game&win=super&mode=3; original preview branch skips wagers and persistence. All captured preview balance/spin counts remained 312728/97. Sound preference was returned ON before closing.",
+    "localStorageOrEngineInjection": false
+  },
+  "evidence": [
+    {
+      "case": "before-gesture",
+      "capturedAt": null,
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "home",
+        "unlocked": false,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "hall",
+          "audible": false,
+          "ducked": false,
+          "voices": [
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": null,
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          },
+          {
+            "clip": null,
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "coins",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "counter",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "collect",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          }
+        ],
+        "click": {
+          "clip": null,
+          "playing": false,
+          "loop": false,
+          "volume": 0.48
+        },
+        "machine": {
+          "audible": false,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "case": "profile-gesture-unlocked",
+      "capturedAt": null,
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "account",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "quiet",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            },
+            {
+              "scene": "quiet",
+              "requested": true,
+              "volume": 0.17,
+              "target": 0.17
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "lantern-house-theme",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          },
+          {
+            "clip": "ledger-interlude",
+            "playing": true,
+            "loop": true,
+            "volume": 0.17
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "coins",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "counter",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "collect",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": false,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "case": "observed-ember-playback",
+      "capturedAt": null,
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "game",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "ember",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            },
+            {
+              "scene": "ember",
+              "requested": true,
+              "volume": 0.22,
+              "target": 0.22
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "lantern-house-theme",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          },
+          {
+            "clip": "ember-foundry-groove",
+            "playing": true,
+            "loop": true,
+            "volume": 0.22
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-2-ordinary",
+            "playing": false,
+            "loop": false,
+            "volume": 0.5
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": false,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-spin-launch",
+          "playing": false,
+          "loop": false,
+          "volume": 0.38
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "case": "super-preview-start",
+      "capturedAt": "2026-10-10T06:31:15.544Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "game",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "dragon",
+          "audible": true,
+          "ducked": true,
+          "voices": [
+            {
+              "scene": "dragon",
+              "requested": true,
+              "volume": 0.08112928018346491,
+              "target": 0.08800000000000001
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "celestial-vault-ceremony",
+            "playing": true,
+            "loop": true,
+            "volume": 0.08112928018346491
+          },
+          {
+            "clip": null,
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": true,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "counter",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          },
+          {
+            "channel": "collect",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          }
+        ],
+        "click": {
+          "clip": "ui-spin-launch",
+          "playing": true,
+          "loop": false,
+          "volume": 0.38
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      },
+      "preview": {
+        "phase": "celebrating",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.963",
+        "backdrop": "Node.964",
+        "reels": [
+          "Node.1008",
+          "Node.1011",
+          "Node.1014",
+          "Node.1017",
+          "Node.1020",
+          "Node.1023",
+          "Node.1026",
+          "Node.1029",
+          "Node.1032",
+          "Node.1035",
+          "Node.1038",
+          "Node.1041",
+          "Node.1044",
+          "Node.1047",
+          "Node.1050"
+        ],
+        "keepers": [
+          "Node.964"
+        ],
+        "overlayParent": "Node.963",
+        "balance": 312728,
+        "spins": 97
+      }
+    },
+    {
+      "case": "super-preview-settled",
+      "capturedAt": "2026-10-10T06:31:20.851Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "game",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "dragon",
+          "audible": true,
+          "ducked": true,
+          "voices": [
+            {
+              "scene": "dragon",
+              "requested": true,
+              "volume": 0.08800000000000001,
+              "target": 0.08800000000000001
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "celestial-vault-ceremony",
+            "playing": true,
+            "loop": true,
+            "volume": 0.08800000000000001
+          },
+          {
+            "clip": null,
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": null,
+            "playing": false,
+            "loop": false,
+            "volume": 1
+          }
+        ],
+        "click": {
+          "clip": "ui-spin-launch",
+          "playing": false,
+          "loop": false,
+          "volume": 0.38
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      },
+      "preview": {
+        "phase": "celebrating",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.963",
+        "backdrop": "Node.964",
+        "reels": [
+          "Node.1008",
+          "Node.1011",
+          "Node.1014",
+          "Node.1017",
+          "Node.1020",
+          "Node.1023",
+          "Node.1026",
+          "Node.1029",
+          "Node.1032",
+          "Node.1035",
+          "Node.1038",
+          "Node.1041",
+          "Node.1044",
+          "Node.1047",
+          "Node.1050"
+        ],
+        "keepers": [
+          "Node.964"
+        ],
+        "overlayParent": "Node.963",
+        "balance": 312728,
+        "spins": 97
+      }
+    },
+    {
+      "case": "collect-start",
+      "capturedAt": "2026-10-10T06:31:32.477Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "game",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "dragon",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "scene": "dragon",
+              "requested": true,
+              "volume": 0.08919032895388415,
+              "target": 0.22
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "celestial-vault-ceremony",
+            "playing": true,
+            "loop": true,
+            "volume": 0.08919032895388415
+          },
+          {
+            "clip": null,
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": true,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": true,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      },
+      "preview": {
+        "phase": "celebrating",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.963",
+        "backdrop": "Node.964",
+        "reels": [
+          "Node.1008",
+          "Node.1011",
+          "Node.1014",
+          "Node.1017",
+          "Node.1020",
+          "Node.1023",
+          "Node.1026",
+          "Node.1029",
+          "Node.1032",
+          "Node.1035",
+          "Node.1038",
+          "Node.1041",
+          "Node.1044",
+          "Node.1047",
+          "Node.1050"
+        ],
+        "keepers": [
+          "Node.964"
+        ],
+        "overlayParent": "Node.963",
+        "balance": 312728,
+        "spins": 97
+      }
+    },
+    {
+      "case": "music-restored",
+      "capturedAt": "2026-10-10T06:31:39.135Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "game",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "dragon",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "scene": "dragon",
+              "requested": true,
+              "volume": 0.22,
+              "target": 0.22
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "celestial-vault-ceremony",
+            "playing": true,
+            "loop": true,
+            "volume": 0.22
+          },
+          {
+            "clip": null,
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": false,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": false,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      },
+      "preview": {
+        "phase": "collected",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.963",
+        "backdrop": "Node.964",
+        "reels": [
+          "Node.1008",
+          "Node.1011",
+          "Node.1014",
+          "Node.1017",
+          "Node.1020",
+          "Node.1023",
+          "Node.1026",
+          "Node.1029",
+          "Node.1032",
+          "Node.1035",
+          "Node.1038",
+          "Node.1041",
+          "Node.1044",
+          "Node.1047",
+          "Node.1050"
+        ],
+        "keepers": [
+          "Node.964"
+        ],
+        "overlayParent": null,
+        "balance": 312728,
+        "spins": 97
+      }
+    },
+    {
+      "case": "hall-settled",
+      "capturedAt": "2026-10-10T06:31:44.424Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "home",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "hall",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            },
+            {
+              "scene": "hall",
+              "requested": true,
+              "volume": 0.23,
+              "target": 0.23
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "celestial-vault-ceremony",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          },
+          {
+            "clip": "lantern-house-theme",
+            "playing": true,
+            "loop": true,
+            "volume": 0.23
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": false,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": false,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "case": "profile-before-mute",
+      "capturedAt": "2026-10-10T06:31:59.224Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "account",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "quiet",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "scene": "quiet",
+              "requested": true,
+              "volume": 0.17,
+              "target": 0.17
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "ledger-interlude",
+            "playing": true,
+            "loop": true,
+            "volume": 0.17
+          },
+          {
+            "clip": "lantern-house-theme",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": false,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": false,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "case": "muted",
+      "capturedAt": "2026-10-10T06:31:59.472Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "account",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": false,
+        "music": {
+          "desired": "quiet",
+          "audible": false,
+          "ducked": false,
+          "voices": [
+            {
+              "scene": "quiet",
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "ledger-interlude",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          },
+          {
+            "clip": "lantern-house-theme",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": false,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": false,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": false,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "case": "unmute-start",
+      "capturedAt": "2026-10-10T06:32:12.096Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "account",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "quiet",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "scene": "quiet",
+              "requested": true,
+              "volume": 0.010217990701175654,
+              "target": 0.17
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "ledger-interlude",
+            "playing": true,
+            "loop": true,
+            "volume": 0.010217990701175654
+          },
+          {
+            "clip": "lantern-house-theme",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": false,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": false,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "case": "unmuted-settled",
+      "capturedAt": "2026-10-10T06:32:48.816Z",
+      "audio": {
+        "version": "acoustic-lantern-20261010",
+        "page": "account",
+        "unlocked": true,
+        "suspended": false,
+        "enabled": true,
+        "music": {
+          "desired": "quiet",
+          "audible": true,
+          "ducked": false,
+          "voices": [
+            {
+              "scene": "quiet",
+              "requested": true,
+              "volume": 0.17,
+              "target": 0.17
+            },
+            {
+              "requested": false,
+              "volume": 0,
+              "target": 0
+            }
+          ]
+        },
+        "musicVoices": [
+          {
+            "clip": "ledger-interlude",
+            "playing": true,
+            "loop": true,
+            "volume": 0.17
+          },
+          {
+            "clip": "lantern-house-theme",
+            "playing": false,
+            "loop": true,
+            "volume": 0
+          }
+        ],
+        "rewardVoices": [
+          {
+            "channel": "score",
+            "clip": "reward-3-super",
+            "playing": false,
+            "loop": false,
+            "volume": 0.56
+          },
+          {
+            "channel": "coins",
+            "clip": "reward-coin-shower",
+            "playing": false,
+            "loop": false,
+            "volume": 0.28
+          },
+          {
+            "channel": "counter",
+            "clip": "reward-count-complete",
+            "playing": false,
+            "loop": false,
+            "volume": 0.35
+          },
+          {
+            "channel": "collect",
+            "clip": "reward-collect",
+            "playing": false,
+            "loop": false,
+            "volume": 0.4
+          }
+        ],
+        "click": {
+          "clip": "ui-jade-tap",
+          "playing": false,
+          "loop": false,
+          "volume": 0.28
+        },
+        "machine": {
+          "audible": true,
+          "running": false,
+          "stopped": [
+            {}
+          ]
+        }
+      },
+      "preview": {
+        "phase": "collected",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.963",
+        "backdrop": "Node.964",
+        "reels": [
+          "Node.1008",
+          "Node.1011",
+          "Node.1014",
+          "Node.1017",
+          "Node.1020",
+          "Node.1023",
+          "Node.1026",
+          "Node.1029",
+          "Node.1032",
+          "Node.1035",
+          "Node.1038",
+          "Node.1041",
+          "Node.1044",
+          "Node.1047",
+          "Node.1050"
+        ],
+        "keepers": [
+          "Node.964"
+        ],
+        "overlayParent": null,
+        "balance": 312728,
+        "spins": 97
+      }
+    }
+  ],
+  "artifacts": [
+    "output/playwright/acoustic-audio-hall-20261010.png",
+    "output/playwright/acoustic-audio-super-settled-20261010.png",
+    "output/playwright/acoustic-audio-muted-20261010.png",
+    "output/playwright/acoustic-audio-runtime-20261010.json",
+    "output/playwright/acoustic-audio-build-assets-20261010.json",
+    "output/playwright/acoustic-audio-render-20261010.log",
+    "output/playwright/acoustic-audio-typecheck-20261010.log",
+    "output/playwright/acoustic-audio-tests-20261010.log",
+    "output/playwright/acoustic-audio-build-20261010.log"
+  ],
+  "limits": [
+    "No perceptual/speaker listening or physical-phone audio/FPS certification",
+    "Actual runtime muted/unmuted and SUPER states verified; other room routing and all 38 cues covered by tests/resource hashes, not individually listened to",
+    "Audio soundtrack and mixing only; no payout/economy/guarantee/art change"
+  ]
+}

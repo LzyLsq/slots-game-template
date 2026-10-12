@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { HALL_LOWER_DECK as d, hallModeRowY } from '../assets/scripts/ui/HallLowerDeck';
+const viewports = [[320,568],[375,667],[390,700],[390,844],[430,932],[739,766],[768,1024],[1024,768]];
+for (const [width,height] of viewports) {
+  const scale = Math.min(width/1024,height/1800);
+  const logicalWidth = width/scale, logicalHeight = height/scale;
+  const backgroundScale = Math.max(logicalWidth/1024,logicalHeight/1536);
+  const row = hallModeRowY(backgroundScale);
+  const deckTop = d.y+d.height/2, deckBottom=d.y-d.height/2;
+  const modeLabelBottom = row+d.modeLabelY-d.modeLabelHeight/2;
+  const modeHitBottom = row-d.modeHitHeight/2;
+  assert.ok(modeHitBottom-deckTop>=17,`${width}x${height}: mode gestures do not reach utilities`);
+  assert.ok(modeLabelBottom-deckTop>=29,`${width}x${height}: lower deck never covers mode names`);
+  assert.ok(deckBottom>=-logicalHeight/2+40,`${width}x${height}: lower frame clears bottom`);
+  assert.ok(d.width<=logicalWidth,`${width}x${height}: lower frame clears sides`);
+  assert.ok(d.utilityY-d.utilityHeight/2 > d.navigationY+d.navigationHeight/2, 'Separate task and destination touch rows');
+  assert.ok(d.utilityY+d.utilityHeight/2 <= d.height/2-10, 'Utility row inside generated frame');
+  assert.ok(d.navigationY-d.navigationHeight/2 >= -d.height/2+16, 'Navigation row inside generated frame');
+  assert.ok(d.utilityXs[1]-d.utilityXs[0]>d.utilityWidth, 'Daily and journal touch targets never overlap');
+  for(let i=1;i<4;i++)assert.ok(d.modeXs[i]-d.modeXs[i-1]>d.modeHitWidth,'Mode touch targets separate');
+  for(let i=1;i<4;i++)assert.ok(d.modeXs[i]-d.modeXs[i-1]>d.navigationWidth,'Destination touch targets separate');
+  // Animated navigation icon at its high endpoint clears utility content.
+  assert.ok(d.navigationY+d.navigationIconY+d.navigationFloatLift+d.navigationIconHeight/2 < d.utilityY-23-19,'Icon float remains below task text');
+  assert.ok(d.navigationY+d.navigationLabelY-21 >= -d.height/2+33, 'Navigation words clear the generated lower rim and corner ornaments');
+  assert.ok(d.navigationLabelY+21 <= d.navigationIconY-d.navigationIconHeight/2-9,'Navigation words stay beneath icons at both float endpoints');
+  assert.ok(d.navigationLabelWidth<=d.navigationWidth-16,'Translated words keep inner side margins');
+}
+assert.equal(hallModeRowY(NaN),-332);assert.equal(hallModeRowY(Infinity),-332);
+for(let s=.01;s<=4;s+=.005)assert.ok(hallModeRowY(s)>=d.modeMinY);
+const app=readFileSync('assets/scripts/ui/GoldenEncoreApp.ts','utf8');
+const hall=app.slice(app.indexOf('private homePage('),app.indexOf('private houseJournal('));
+assert.ok(hall.includes('hallModeRowY(this.hallBackdropScale)'));
+assert.ok(hall.includes('HALL_LOWER_DECK.modeXs[i]'));
+assert.ok(hall.includes('this.navigationDock(root, HALL_LOWER_DECK.y)'));
+assert.ok(!hall.includes('DAILY GIFT ·')&&!hall.includes('HOUSE JOURNAL ·'),'No independent frames compete with mode labels');
+const deck=app.slice(app.indexOf('private navigationDock('),app.indexOf('private ferryMotion('));
+assert.equal((deck.match(/this.image\(root, 'hall-lower-deck-frame'/g)||[]).length,1,'One shared generated background for task/destination rows');
+assert.ok(deck.includes("['HOUSE JOURNAL', 'hall-journal-ledger'"), 'Dedicated generated journal book, never a blank rules panel');
+assert.ok(deck.includes("() => this.navigate('rewards')")&&deck.includes('() => this.houseJournal(root)'),'Daily and journal retain their actions');
+for(const page of ['store','rewards','rank','account'])assert.ok(deck.includes(`'${page}'`),'All four destinations retained');
+const frame=readFileSync('assets/resources/art/hall-lower-deck-frame.png');
+assert.equal(frame[25],6,'Generated lower deck retains transparent RGBA');
+assert.ok(Math.abs(frame.readUInt32BE(16)/frame.readUInt32BE(20)-d.width/d.height)<.01,'Generated ornaments render without aspect distortion');
+console.log('PASS hall lower deck: 8 phone/tablet/square/landscape viewports, source-cover-independent row, separate mode names/task/navigation targets, one generated panel, retained six actions');

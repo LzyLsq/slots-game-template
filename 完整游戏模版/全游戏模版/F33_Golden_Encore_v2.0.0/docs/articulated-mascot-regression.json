@@ -1,0 +1,1202 @@
+{
+  "date": "2026-10-09",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "scope": "Independent generated mascot image sequences and resource-loading animation; no gameplay/math/audio changes.",
+  "mascots": [
+    "otter",
+    "rabbit",
+    "fox",
+    "dragon"
+  ],
+  "format": {
+    "generatedKeyframesPerMascot": 12,
+    "offlineMotionCompensatedInBetweens": true,
+    "runtimeFramesPerMascot": 48,
+    "cell": [
+      256,
+      320
+    ],
+    "atlas": [
+      2048,
+      1920
+    ],
+    "rgba": true,
+    "runtimeFPS": [
+      24,
+      23,
+      24,
+      22
+    ],
+    "restSeconds": {
+      "hall": 2.0,
+      "cabinet": 2.8,
+      "prize": 1.1,
+      "loading": 0.6
+    }
+  },
+  "sceneIntegration": {
+    "cleanGeneratedPlateCount": 13,
+    "wholeBackdropUVWarpRemoved": true,
+    "fixedMascotNodeTransformObserved": true,
+    "cabinetPixelsBelowY350Unchanged": true,
+    "screenPositioning": "source registered contain scale, fixed feet for the entire sequence"
+  },
+  "browser": {
+    "engine": "Chromium",
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ]
+    ],
+    "cabinetRuns": [
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game",
+              "frame": 29,
+              "position": {
+                "x": -370.0615384615385,
+                "y": 699.9503684055408
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-pearl",
+              "frame": 27,
+              "position": {
+                "x": 331.1076923076923,
+                "y": 697.1529683529683
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-ember",
+              "frame": 29,
+              "position": {
+                "x": -370.78290598290596,
+                "y": 700.0249926318892
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-vault",
+              "frame": 27,
+              "position": {
+                "x": 339.04273504273505,
+                "y": 697.1529683529683
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game",
+              "frame": 29,
+              "position": {
+                "x": -303.525,
+                "y": 574.1002873563218
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-pearl",
+              "frame": 27,
+              "position": {
+                "x": 271.575,
+                "y": 571.8058558558558
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-ember",
+              "frame": 28,
+              "position": {
+                "x": -304.1166666666667,
+                "y": 574.1614942528736
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-vault",
+              "frame": 26,
+              "position": {
+                "x": 278.0833333333333,
+                "y": 571.8058558558558
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game",
+              "frame": 29,
+              "position": {
+                "x": -370.63255813953486,
+                "y": 701.030419673884
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-pearl",
+              "frame": 28,
+              "position": {
+                "x": 331.6186046511628,
+                "y": 698.2287031217263
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-ember",
+              "frame": 29,
+              "position": {
+                "x": -371.35503875968993,
+                "y": 701.1051590483828
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 1
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 1,
+          "keepers": [
+            {
+              "node": "Art · game-vault",
+              "frame": 27,
+              "position": {
+                "x": 339.5658914728682,
+                "y": 698.2287031217263
+              },
+              "scale": {
+                "x": 1,
+                "y": 1
+              }
+            }
+          ]
+        },
+        "unchanged": true
+      }
+    ],
+    "prizePresentationPreviews": [
+      {
+        "mode": 0,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          390,
+          844
+        ],
+        "keepers": [
+          {
+            "node": "Art · game",
+            "frame": 13,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-big",
+            "frame": 31,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 1,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          390,
+          844
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-pearl",
+            "frame": 12,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-ordinary",
+            "frame": 30,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 2,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          390,
+          844
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-ember",
+            "frame": 13,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-ember",
+            "frame": 31,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 3,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          390,
+          844
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-vault",
+            "frame": 12,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-super",
+            "frame": 29,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 0,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          320,
+          568
+        ],
+        "keepers": [
+          {
+            "node": "Art · game",
+            "frame": 13,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-big",
+            "frame": 31,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 1,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          320,
+          568
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-pearl",
+            "frame": 13,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-ordinary",
+            "frame": 29,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 2,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          320,
+          568
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-ember",
+            "frame": 13,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-ember",
+            "frame": 31,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 3,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          320,
+          568
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-vault",
+            "frame": 12,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-super",
+            "frame": 28,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 0,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          430,
+          932
+        ],
+        "keepers": [
+          {
+            "node": "Art · game",
+            "frame": 13,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-big",
+            "frame": 31,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 1,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          430,
+          932
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-pearl",
+            "frame": 12,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-ordinary",
+            "frame": 31,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 2,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          430,
+          932
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-ember",
+            "frame": 13,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-ember",
+            "frame": 31,
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "mode": 3,
+        "coins": 5000,
+        "spins": 1,
+        "viewports": [
+          430,
+          932
+        ],
+        "keepers": [
+          {
+            "node": "Art · game-vault",
+            "frame": 12,
+            "hidden": true
+          },
+          {
+            "node": "Art · win-super",
+            "frame": 29,
+            "hidden": false
+          }
+        ]
+      }
+    ],
+    "prizePreviewsNotProbabilityVerification": true,
+    "hallSwipes": [
+      {
+        "spotlight": 0,
+        "keepers": [
+          {
+            "node": "Art · hero-otter-ferry",
+            "frame": 7
+          }
+        ]
+      },
+      {
+        "spotlight": 1,
+        "keepers": [
+          {
+            "node": "Art · hero-pearl-garden",
+            "frame": 22
+          }
+        ]
+      },
+      {
+        "spotlight": 2,
+        "keepers": [
+          {
+            "node": "Art · hero-ember-foundry",
+            "frame": 23
+          }
+        ]
+      },
+      {
+        "spotlight": 3,
+        "keepers": [
+          {
+            "node": "Art · hero-celestial-vault",
+            "frame": 21
+          }
+        ]
+      }
+    ],
+    "scriptErrors": [],
+    "consoleLimit": "favicon.ico 404 only; no runtime script or artwork errors observed"
+  },
+  "loading": {
+    "samples": [
+      {
+        "time": 2219.5,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          0
+        ],
+        "labels": []
+      },
+      {
+        "time": 2407.7999999970198,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          4
+        ],
+        "labels": [
+          "Preparing the treasury 6%"
+        ]
+      },
+      {
+        "time": 2525.89999999851,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          7
+        ],
+        "labels": [
+          "Preparing the treasury 9%"
+        ]
+      },
+      {
+        "time": 2667.89999999851,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          10
+        ],
+        "labels": [
+          "Preparing the treasury 13%"
+        ]
+      },
+      {
+        "time": 2792,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          13
+        ],
+        "labels": [
+          "Preparing the treasury 16%"
+        ]
+      },
+      {
+        "time": 2909.1999999955297,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          16
+        ],
+        "labels": [
+          "Preparing the treasury 19%"
+        ]
+      },
+      {
+        "time": 3007.5999999940395,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          18
+        ],
+        "labels": [
+          "Preparing the treasury 22%"
+        ]
+      },
+      {
+        "time": 3107.6999999955297,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          20
+        ],
+        "labels": [
+          "Preparing the treasury 25%"
+        ]
+      },
+      {
+        "time": 3217.5,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          23
+        ],
+        "labels": [
+          "Preparing the treasury 28%"
+        ]
+      },
+      {
+        "time": 3330.6999999955297,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          26
+        ],
+        "labels": [
+          "Preparing the treasury 34%"
+        ]
+      },
+      {
+        "time": 3446.5999999940395,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          28
+        ],
+        "labels": [
+          "Preparing the treasury 38%"
+        ]
+      },
+      {
+        "time": 3561.39999999851,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          31
+        ],
+        "labels": [
+          "Preparing the treasury 44%"
+        ]
+      },
+      {
+        "time": 3678.1999999955297,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          34
+        ],
+        "labels": [
+          "Preparing the treasury 47%"
+        ]
+      },
+      {
+        "time": 3799.6999999955297,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          37
+        ],
+        "labels": [
+          "Preparing the treasury 50%"
+        ]
+      },
+      {
+        "time": 3908.0999999940395,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          40
+        ],
+        "labels": [
+          "Preparing the treasury 53%"
+        ]
+      },
+      {
+        "time": 4012.5,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          42
+        ],
+        "labels": [
+          "Preparing the treasury 56%"
+        ]
+      },
+      {
+        "time": 4130.29999999702,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          45
+        ],
+        "labels": [
+          "Preparing the treasury 59%"
+        ]
+      },
+      {
+        "time": 4288.69999999553,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          0
+        ],
+        "labels": [
+          "Preparing the treasury 66%"
+        ]
+      },
+      {
+        "time": 4390.0999999940395,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          0
+        ],
+        "labels": [
+          "Preparing the treasury 69%"
+        ]
+      },
+      {
+        "time": 4496.5999999940395,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          0
+        ],
+        "labels": [
+          "Preparing the treasury 72%"
+        ]
+      },
+      {
+        "time": 4610.39999999851,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          0
+        ],
+        "labels": [
+          "Preparing the treasury 78%"
+        ]
+      },
+      {
+        "time": 4712.5999999940395,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          0
+        ],
+        "labels": [
+          "Preparing the treasury 81%"
+        ]
+      },
+      {
+        "time": 4825.39999999851,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          0
+        ],
+        "labels": [
+          "Preparing the treasury 88%"
+        ]
+      },
+      {
+        "time": 4929.89999999851,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          1
+        ],
+        "labels": [
+          "Preparing the treasury 91%"
+        ]
+      },
+      {
+        "time": 5080.5,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          5
+        ],
+        "labels": [
+          "Preparing the treasury 97%"
+        ]
+      },
+      {
+        "time": 5225,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          8
+        ],
+        "labels": [
+          "Preparing the treasury 100%"
+        ]
+      },
+      {
+        "time": 5328.19999999553,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          11
+        ],
+        "labels": [
+          "Every lantern is ready"
+        ]
+      },
+      {
+        "time": 5446.69999999553,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          14
+        ],
+        "labels": [
+          "Every lantern is ready"
+        ]
+      },
+      {
+        "time": 5565.5999999940395,
+        "ready": false,
+        "page": "login",
+        "frames": [
+          17
+        ],
+        "labels": [
+          "Every lantern is ready"
+        ]
+      },
+      {
+        "time": 5681.19999999553,
+        "ready": true,
+        "page": "home",
+        "frames": [
+          19,
+          2
+        ],
+        "labels": [
+          "Every lantern is ready"
+        ]
+      },
+      {
+        "time": 5796.5,
+        "ready": true,
+        "page": "home",
+        "frames": [
+          22,
+          5
+        ],
+        "labels": [
+          "Every lantern is ready"
+        ]
+      },
+      {
+        "time": 5917.5,
+        "ready": true,
+        "page": "home",
+        "frames": [
+          8
+        ],
+        "labels": []
+      },
+      {
+        "time": 6035.0999999940395,
+        "ready": true,
+        "page": "home",
+        "frames": [
+          10
+        ],
+        "labels": []
+      }
+    ],
+    "observed100Percent": true,
+    "progressSource": "completed real generated-art load/decode batches",
+    "minimumStageSeconds": 2.4,
+    "minimumMascotSeconds": 2.1,
+    "completedHoldSeconds": 0.32,
+    "separateEngineSplash": "Existing Cocos engine splash precedes the generated scene."
+  },
+  "lifecycle": {
+    "reducedBefore": [
+      {
+        "node": "Art · hero-otter-ferry",
+        "frame": 0,
+        "reduced": true
+      }
+    ],
+    "reducedAfter": [
+      {
+        "node": "Art · hero-otter-ferry",
+        "frame": 0,
+        "reduced": true
+      }
+    ],
+    "gameHide": {
+      "frame": 6,
+      "paused": true
+    },
+    "frozenAfter550ms": [
+      {
+        "node": "Art · hero-otter-ferry",
+        "frame": 6,
+        "reduced": false
+      }
+    ],
+    "resumedAfter350ms": [
+      {
+        "node": "Art · hero-otter-ferry",
+        "frame": 14,
+        "reduced": false
+      }
+    ],
+    "note": "Emulated OS reduced-motion and emitted Cocos hide/show lifecycle events; not physical app background testing."
+  },
+  "tests": {
+    "fullSuite": "pass, 127 named generated assets",
+    "typecheck": "pass",
+    "build": "Creator 3.8.8 web-mobile reports Finished; CLI exits 36 during existing worker teardown."
+  },
+  "evidence": [
+    {
+      "file": "hall-articulated-runtime.gif",
+      "frames": 42,
+      "durationSeconds": 4.2,
+      "displaySize": [
+        320,
+        692
+      ],
+      "source": "actual Chromium canvas screenshots, not isolated mascot atlas"
+    },
+    {
+      "file": "loading-articulated-runtime.gif",
+      "frames": 29,
+      "durationSeconds": 3.45,
+      "displaySize": [
+        320,
+        692
+      ],
+      "source": "actual Chromium canvas screenshots, not isolated mascot atlas"
+    }
+  ],
+  "limits": [
+    "48-frame raster sequences from generated keyframes and offline interpolation, not a 3D or skeletal rig.",
+    "No physical-device, speaker/perceptual, clean release-build, or App Store certification.",
+    "Prize preview amounts are 0 because they were visual-only calls; they do not write wallet/award state."
+  ]
+}

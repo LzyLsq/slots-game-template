@@ -1,0 +1,121 @@
+{
+  "verifiedAt": "2026-10-09T13:05:52+08:00",
+  "scope": "Hall lower-deck clutter, mode-label placement and navigation readability; no wallet/math/cabinet/reward changes.",
+  "cause": "Cover-scaled mode row moved toward independently fixed daily/journal/navigation controls in wide/short viewports; multiple floating frames compounded the overlap.",
+  "layout": {
+    "sharedGeneratedPanel": 1,
+    "rows": [
+      "daily gifts and house journal",
+      "shop, gifts, rank, profile"
+    ],
+    "modeRowIndependentOfSceneCover": true,
+    "captionCornerClearanceDesignPx": 33,
+    "animatedIconsClearAllCaptions": true,
+    "touchTargetsDisjoint": true,
+    "automaticCarouselStillDisabled": true
+  },
+  "generatedArtwork": {
+    "provider": "local CC Switch",
+    "assets": {
+      "hall-journal-ledger.png": "8b38d65837bd9d94fda360122d64c34c00bbec7c87538ae7cd4dabdbe8d21d35",
+      "hall-lower-deck-frame.png": "b7705c97032cbf281805d1a2e4129759a421fbbbf6d1ffae0908c1ede9e5f4cf"
+    },
+    "processing": "Alpha trimming and disconnected near-transparent speckle cleanup; generated panel uses vertical 3-slice recomposition preserving corner ornament pixels, not hand-drawn replacement art."
+  },
+  "responsive": {
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        375,
+        667
+      ],
+      [
+        390,
+        700
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        739,
+        766
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1024,
+        768
+      ]
+    ],
+    "fourModeScreenshots": 32,
+    "frameFullyVisible": true,
+    "labelsInsideFrame": true,
+    "modeNamesOutsideFooter": true,
+    "overlappingFooterTextOrHits": 0,
+    "responsivePageErrors": [],
+    "responsiveFailedRequests": []
+  },
+  "languages": {
+    "codes": [
+      "en",
+      "zh-CN",
+      "zh-TW",
+      "ja",
+      "ko"
+    ],
+    "twoViewportLayouts": 10,
+    "testedWidths": [
+      320,
+      390
+    ],
+    "lowestMeasuredFooterFontCssPx": 10,
+    "singleLineCaptions": true,
+    "japaneseProfileAdjustedWithoutReducingFont": true
+  },
+  "actions": {
+    "sixEntrancesAcrossThreeSizes": 18,
+    "dailyRewardsDestination": "rewards",
+    "journalOpensAndClosesInHall": true,
+    "shopGiftsRankAccountRetained": true,
+    "entryAndGestureCases": 11,
+    "fourThumbnailsEnterDirectlyWithoutSpinning": true,
+    "heroTapStillEntersDirectly": true,
+    "leftRightManualSwipesRetained": true,
+    "verticalShortDiagonalDragsDoNotEnter": true,
+    "rapidResizeSettlesToOneSceneAndKeeper": true
+  },
+  "economy": {
+    "isolatedQaCoins": 5000,
+    "isolatedQaSpins": 0,
+    "qaNeverClaimedPurchasedOrSpun": true,
+    "userPreviewCoinsBeforeRefresh": 309228,
+    "userPreviewCoinsAfterRefresh": 309228,
+    "userStorageNotReset": true
+  },
+  "validation": {
+    "npmRunTypecheck": "pass",
+    "npmTest": "pass",
+    "creator": "3.8.8",
+    "webMobileBuildFinished": "2026-10-09T12:18:47+08:00",
+    "creatorProcessExit": 36,
+    "exitNote": "Existing Creator worker teardown exit remains despite Finished output; this is not a certified clean release build.",
+    "browserNote": "Initial five-language reload encountered localhost ERR_CONNECTION_RESET and a 30s boot wait timeout; subsequent complete language/action/gesture run passed after waiting for boot readiness up to 60s. No text/geometry assertions were relaxed.",
+    "physicalDeviceAndAppStoreCertified": false
+  },
+  "evidenceDirectory": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/hall-footer",
+  "cleanup": {
+    "testSession": "f33-hall-footer",
+    "testBrowserClosed": true,
+    "existingUserPreviewAndServerPreserved": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "soundfont": {
+    "source": "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1.orig.tar.gz",
+    "archiveSha256": "2621acaa1c78e4abdb24bdd163230cc577e61276936d6aa6e3180582142f0343",
+    "bankSha256": "74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0",
+    "license": "MIT",
+    "copyright": "2000-2002, 2008 Frank Wen; 2008 Toby Smithe",
+    "verification": "Debian source package 3.1-6 copyright; packaging license does not apply to the soundfont"
+  },
+  "renderer": {
+    "source": "https://github.com/schellingb/TinySoundFont",
+    "revision": "853a0a171759f1ddba0de1442133a75912bbeffa",
+    "license": "MIT",
+    "headerSha256": "70d55963c98f60ebb81518eaa1f25d46888d5180eb5f5289fd6b74ffc177d197"
+  },
+  "usage": "Bank cached outside game. Only own arranged and rendered PCM is shipped. No third-party songs or demo MIDI."
+}

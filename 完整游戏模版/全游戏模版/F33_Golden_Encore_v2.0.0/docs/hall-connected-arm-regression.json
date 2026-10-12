@@ -1,0 +1,86 @@
+[
+  {
+    "animal": "otter",
+    "uniqueFrames": 63,
+    "changedSourcePixels": 3287,
+    "maxAdjacentMeanDelta": 0.1734992825255102,
+    "minimumLocalJacobian": 0.45196504422858774,
+    "maximumInverseResidualPixels": 8.129332326598268e-11,
+    "distalSourceTextureErrorP95": 7.409580123240161,
+    "forearmTravelSourcePixels": 5.362322007888391,
+    "neutralCrossings": [
+      {
+        "t": 0.42074074074074075,
+        "angularVelocityDegreesPerNormalizedTime": -37.11623126372118
+      },
+      {
+        "t": 0.7614814814814814,
+        "angularVelocityDegreesPerNormalizedTime": 18.45023195664227
+      }
+    ],
+    "fixedShoulderRigidDigitsNoRemoteArmGhost": true,
+    "delayedWristContinuousNeutralVelocity": true,
+    "exactNeutralBoundaryGutters": true
+  },
+  {
+    "animal": "rabbit",
+    "uniqueFrames": 62,
+    "changedSourcePixels": 3843,
+    "maxAdjacentMeanDelta": 0.21111188616071427,
+    "minimumLocalJacobian": 0.5757398177899535,
+    "maximumInverseResidualPixels": 7.138311351853666e-11,
+    "distalSourceTextureErrorP95": 2.9059888852559417,
+    "forearmTravelSourcePixels": 4.67885624212869,
+    "neutralCrossings": [
+      {
+        "t": 0.41034482758620694,
+        "angularVelocityDegreesPerNormalizedTime": -32.114459341574936
+      },
+      {
+        "t": 0.7206896551724138,
+        "angularVelocityDegreesPerNormalizedTime": 26.40369695167461
+      }
+    ],
+    "fixedShoulderRigidDigitsNoRemoteArmGhost": true,
+    "delayedWristContinuousNeutralVelocity": true,
+    "exactNeutralBoundaryGutters": true
+  },
+  {
+    "animal": "fox",
+    "uniqueFrames": 63,
+    "changedSourcePixels": 3850,
+    "maxAdjacentMeanDelta": 0.24378188775510204,
+    "minimumLocalJacobian": 0.5770245862470202,
+    "maximumInverseResidualPixels": 7.430389422684028e-11,
+    "distalSourceTextureErrorP95": 11.237273978150556,
+    "forearmTravelSourcePixels": 4.701353571123323,
+    "neutralCrossings": [
+      {
+        "t": 0.5082608695652174,
+        "angularVelocityDegreesPerNormalizedTime": -31.180166016850063
+      }
+    ],
+    "fixedShoulderRigidDigitsNoRemoteArmGhost": true,
+    "delayedWristContinuousNeutralVelocity": true,
+    "exactNeutralBoundaryGutters": true
+  },
+  {
+    "animal": "dragon",
+    "uniqueFrames": 63,
+    "changedSourcePixels": 5999,
+    "maxAdjacentMeanDelta": 0.4186264349489796,
+    "minimumLocalJacobian": 0.4990605429472798,
+    "maximumInverseResidualPixels": 1.109244520542872e-10,
+    "distalSourceTextureErrorP95": 8.712518261859485,
+    "forearmTravelSourcePixels": 5.546413479108435,
+    "neutralCrossings": [
+      {
+        "t": 0.472,
+        "angularVelocityDegreesPerNormalizedTime": -32.24597218400621
+      }
+    ],
+    "fixedShoulderRigidDigitsNoRemoteArmGhost": true,
+    "delayedWristContinuousNeutralVelocity": true,
+    "exactNeutralBoundaryGutters": true
+  }
+]

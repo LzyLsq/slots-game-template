@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-12",
+  "version": "acoustic-lantern-20261012",
+  "scope": "Original authored sampled music and tactile cues, matched to existing generated-art staging; no new artwork or probability/wallet policy changes",
+  "assets": {
+    "bgmStereo": 8,
+    "cuesMono": 30,
+    "sampleRate": 32000,
+    "sampleBits": 16,
+    "pcmBytes": 43955288,
+    "pcmMiB": 41.919029235839844,
+    "nativeWavMatches": 38,
+    "uuidPreserved": true
+  },
+  "tests": {
+    "typecheck": "pass",
+    "typecheckMath": "pass",
+    "completeRegression": "pass",
+    "builtArtLifetimePlan": "pass",
+    "composerSyntax": "pass",
+    "eightRoomTierScoresPcmAndProductionAnchors": "pass"
+  },
+  "awardTimingSeconds": {
+    "scoreStart": 0.26,
+    "countingStart": 0.98,
+    "ordinaryScoreDuration": 1.72,
+    "bigScoreDuration": 6.5,
+    "bigFinale": 5.58,
+    "superScoreDuration": 8.35,
+    "superEncore": 6.18,
+    "superFinale": 7.38
+  },
+  "preview": {
+    "viewport": [
+      390,
+      844
+    ],
+    "observationCount": 117,
+    "rooms": [
+      {
+        "mode": 0,
+        "observations": 14,
+        "musicScenes": [
+          "jade"
+        ],
+        "playingScoreTimeRange": [
+          0.666199999988079,
+          6.583000000000007
+        ],
+        "observedQuietHold": true,
+        "fullFinaleTimelineObserved": true
+      },
+      {
+        "mode": 1,
+        "observations": 43,
+        "musicScenes": [
+          "pearl"
+        ],
+        "playingScoreTimeRange": [
+          0.41509999999403957,
+          3.130900000005965
+        ],
+        "observedQuietHold": true,
+        "fullFinaleTimelineObserved": false
+      },
+      {
+        "mode": 2,
+        "observations": 23,
+        "musicScenes": [
+          "ember"
+        ],
+        "playingScoreTimeRange": [
+          0.529699999988079,
+          1.7302999999970194
+        ],
+        "observedQuietHold": true,
+        "fullFinaleTimelineObserved": false
+      },
+      {
+        "mode": 3,
+        "observations": 36,
+        "musicScenes": [
+          "dragon"
+        ],
+        "playingScoreTimeRange": [
+          0.533,
+          8.69969999998809
+        ],
+        "observedQuietHold": true,
+        "fullFinaleTimelineObserved": true
+      }
+    ],
+    "balance": 311828,
+    "spins": 120,
+    "allBalanceSpinObservationsUnchanged": true,
+    "onlyGuardedBigSuperNoCoinChanges": true,
+    "pearlCollectionFinalRegeneratedCueObserved": true,
+    "warningErrorSample": [],
+    "hall": {
+      "generatedArtRenderInspected": true,
+      "actualAudibleHallPlaybackInFinalReload": false,
+      "reason": "Gesture unlock not triggered in the final hall-only screenshot"
+    }
+  },
+  "build": {
+    "finishedAt": "2026-10-12T10:01:01+08:00",
+    "exitCode": 36,
+    "runnableWebOutputVerified": true,
+    "cleanReleaseNativeBuildCertified": false,
+    "diagnostic": "Existing Creator native IPC teardown after web build finished"
+  },
+  "limitations": [
+    "No subjective listening/speaker certification",
+    "No physical-device performance certification",
+    "No new art or mascot-animation production in this pass",
+    "No App Store release certification"
+  ],
+  "browserCleanup": {
+    "temporaryTab3Closed": true,
+    "originalTab1Retained": true,
+    "viewportReset": true,
+    "externalChromeOpened": false
+  },
+  "screenshots": [
+    "music-art-home-390-20261012.png",
+    "music-art-dragon-body-390-20261012.png",
+    "music-art-dragon-encore-390-20261012.png",
+    "music-art-dragon-finale-390-20261012.png",
+    "music-art-jade-finale-390-20261012.png"
+  ],
+  "evidenceFolder": "output/playwright"
+}

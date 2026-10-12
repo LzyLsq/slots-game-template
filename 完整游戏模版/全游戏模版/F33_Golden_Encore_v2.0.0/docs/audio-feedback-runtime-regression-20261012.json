@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-12",
+  "version": "material-feedback-20261012",
+  "verifiedAt": "2026-10-12T10:38:12.849841+08:00",
+  "checks": {
+    "currentVersionAllSnapshots": true,
+    "bgmOffKeepsEffects": true,
+    "effectsOffKeepsMusic": true,
+    "masterOffStopsEverything": true,
+    "finalBuildOriginalFlagsRestored": true,
+    "finalBuildOriginalWallet": true,
+    "hallArrowAndSwipeShareSettle": true,
+    "betDirectionsUseDistinctClips": true,
+    "boundedOwnedVoices": true,
+    "jadeCabinetAndWalletUnchanged": true,
+    "jadeCorrectRewardAndDuck": true,
+    "jadeCollectAndRecovery": true,
+    "dragonCabinetAndWalletUnchanged": true,
+    "dragonCorrectRewardAndDuck": true,
+    "dragonCollectAndRecovery": true,
+    "dragonScoreObservedPlayingDuringCascade": true,
+    "sampledBrowserWarningsErrorsEmpty": true
+  },
+  "observationsCount": 25,
+  "previewRooms": [
+    {
+      "room": "jade",
+      "rewardClip": "reward-0-big",
+      "bgmClip": "jade-ferry-flow",
+      "sameCabinet": true,
+      "balance": 311828,
+      "spins": 120,
+      "holdScoreStopped": true
+    },
+    {
+      "room": "dragon",
+      "rewardClip": "reward-3-super",
+      "bgmClip": "celestial-vault-ceremony",
+      "sameCabinet": true,
+      "balance": 311828,
+      "spins": 120,
+      "holdScoreStopped": true
+    }
+  ],
+  "settingsVisualViewports": [
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 320,
+      "height": 568
+    }
+  ],
+  "settingsVisualLanguages": [
+    "en",
+    "zh",
+    "zh-Hant",
+    "ja",
+    "ko"
+  ],
+  "build": {
+    "finished": "2026-10-12T10:29:56+08:00",
+    "target": "web-mobile",
+    "exitCode": 36,
+    "note": "Web output is runnable; pre-existing native IPC teardown error is not a clean release/native build."
+  },
+  "scopeNotes": [
+    "Initial settings toggle observations precede the final hall-arrow/Set-serialization fixes; final settings/flags/wallet were rechecked after rebuilding.",
+    "Jade BIG was sampled at start, quiet hold and collection/recovery; it was not observed as playing during the mid-score in this pass.",
+    "Dragon SUPER score was observed playing in cascade at 5.032 s, plus quiet hold and collection/recovery; this is not continuous full-timeline or physical-speaker listening certification.",
+    "Paid SPIN/AUTO, purchase, daily claim, save reset/storage injection and probability changes were not performed.",
+    "Original English and all three original audio preferences restored. Temporary tab 4 closed, viewport override reset, user tab 1 preserved; no external Chrome opened."
+  ],
+  "evidence": {
+    "observations": "output/playwright/audio-feedback-runtime-observations-20261012.json",
+    "logs": "output/playwright/audio-feedback-runtime-logs-20261012.json",
+    "emittedAudio": "output/playwright/audio-feedback-emitted-audio-20261012.json"
+  }
+}

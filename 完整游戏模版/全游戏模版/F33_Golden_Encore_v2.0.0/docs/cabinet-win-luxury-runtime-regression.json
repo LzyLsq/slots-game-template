@@ -1,0 +1,3489 @@
+{
+  "date": "2026-10-10",
+  "scope": "Protected BIG/SUPER win previews only; no real rounds, purchases, claims, localStorage reset or engine injection.",
+  "baseline": {
+    "coins": 312728,
+    "spins": 97
+  },
+  "generation": {
+    "provider": "Local CC Switch managed image-generation bridge",
+    "model": "gpt-image-2",
+    "quality": "high",
+    "source_atlases": 4,
+    "shipped_transparent_sculptures": 16,
+    "operations": "Generated images with alpha-component cropping, original alpha retention, aspect-preserving contain. No procedural decorative art."
+  },
+  "tests": {
+    "npm_test": "PASS",
+    "typecheck": "PASS",
+    "ordinary_production_method": "four rooms × normal/reduced: PASS",
+    "pure_motion_cadences": [
+      5,
+      15,
+      30,
+      60,
+      120
+    ],
+    "layout_fixtures": 7,
+    "original_opacity_restoration": "PASS",
+    "emitted_texture_hashes": "all 16 match sources"
+  },
+  "build": {
+    "creator": "3.8.8",
+    "target": "web-mobile",
+    "finished": "2026-10-10 15:12:25 +08:00",
+    "cli_exit": 36,
+    "note": "Web build emitted and actually previewed. Existing editor recovery JSON/native-IPC teardown diagnostics remain; not a clean native/release build."
+  },
+  "cases": [
+    {
+      "name": "jade-big",
+      "tier": "big",
+      "mode": 0,
+      "samples": 103,
+      "phases_observed": [
+        "gather",
+        "reveal",
+        "cascade",
+        "finale",
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 66,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "jade",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "jade",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "jade-ferry-flow",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 112,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "gather",
+          "rays": 2,
+          "reelFactor": 0.8814360529076012,
+          "room": 0,
+          "sparkles": 12,
+          "tier": "big",
+          "time": 0.14929999999701976,
+          "titleAlpha": 0,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.770",
+          "balance": 312728,
+          "keepers": [
+            "Node.770"
+          ],
+          "mode": 0,
+          "overlayParent": "Node.769",
+          "phase": "celebrating",
+          "reels": [
+            "Node.814",
+            "Node.817",
+            "Node.820",
+            "Node.823",
+            "Node.826",
+            "Node.829",
+            "Node.832",
+            "Node.835",
+            "Node.838",
+            "Node.841",
+            "Node.844",
+            "Node.847",
+            "Node.850",
+            "Node.853",
+            "Node.856"
+          ],
+          "spins": 97,
+          "surface": "Node.769",
+          "tier": "big"
+        }
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "jade",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "jade",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "jade-ferry-flow",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-0-big",
+              "loop": false,
+              "playing": false,
+              "volume": 0.53
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 112,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 0,
+          "sparkles": 12,
+          "tier": "big",
+          "time": 6.116099999994042,
+          "titleAlpha": 255,
+          "visibleCoins": 16
+        },
+        "scene": {
+          "backdrop": "Node.770",
+          "balance": 312728,
+          "keepers": [
+            "Node.770"
+          ],
+          "mode": 0,
+          "overlayParent": "Node.769",
+          "phase": "celebrating",
+          "reels": [
+            "Node.814",
+            "Node.817",
+            "Node.820",
+            "Node.823",
+            "Node.826",
+            "Node.829",
+            "Node.832",
+            "Node.835",
+            "Node.838",
+            "Node.841",
+            "Node.844",
+            "Node.847",
+            "Node.850",
+            "Node.853",
+            "Node.856"
+          ],
+          "spins": 97,
+          "surface": "Node.769",
+          "tier": "big"
+        }
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "jade",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "jade",
+                "target": 0.22,
+                "volume": 0.22
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "jade-ferry-flow",
+              "loop": true,
+              "playing": true,
+              "volume": 0.22
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-0-big",
+              "loop": false,
+              "playing": false,
+              "volume": 0.53
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": false,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.770",
+          "balance": 312728,
+          "keepers": [
+            "Node.770"
+          ],
+          "mode": 0,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.814",
+            "Node.817",
+            "Node.820",
+            "Node.823",
+            "Node.826",
+            "Node.829",
+            "Node.832",
+            "Node.835",
+            "Node.838",
+            "Node.841",
+            "Node.844",
+            "Node.847",
+            "Node.850",
+            "Node.853",
+            "Node.856"
+          ],
+          "spins": 97,
+          "surface": "Node.769",
+          "tier": "big"
+        }
+      },
+      "warning_error_logs": "not sampled for this case",
+      "actual_viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "name": "pearl-super",
+      "tier": "super",
+      "mode": 1,
+      "samples": 150,
+      "phases_observed": [
+        "gather",
+        "reveal",
+        "cascade"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 82,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.084,
+                "volume": 0.02143635529168007
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.02143635529168007
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "gather",
+          "rays": 2,
+          "reelFactor": 0.9032564799921377,
+          "room": 1,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 0.13340000000596047,
+          "titleAlpha": 0,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.408",
+          "balance": 312728,
+          "keepers": [
+            "Node.408"
+          ],
+          "mode": 1,
+          "overlayParent": "Node.407",
+          "phase": "celebrating",
+          "reels": [
+            "Node.452",
+            "Node.455",
+            "Node.458",
+            "Node.461",
+            "Node.464",
+            "Node.467",
+            "Node.470",
+            "Node.473",
+            "Node.476",
+            "Node.479",
+            "Node.482",
+            "Node.485",
+            "Node.488",
+            "Node.491",
+            "Node.494"
+          ],
+          "spins": 97,
+          "surface": "Node.407",
+          "tier": "super"
+        }
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.21,
+                "volume": 0.21
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.21
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-1-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-counter",
+              "loop": false,
+              "playing": false,
+              "volume": 0.13
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": false,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "cascade",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 1,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 5.1667000000029875,
+          "titleAlpha": 255,
+          "visibleCoins": 51
+        },
+        "scene": {
+          "backdrop": "Node.408",
+          "balance": 312728,
+          "keepers": [
+            "Node.408"
+          ],
+          "mode": 1,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.452",
+            "Node.455",
+            "Node.458",
+            "Node.461",
+            "Node.464",
+            "Node.467",
+            "Node.470",
+            "Node.473",
+            "Node.476",
+            "Node.479",
+            "Node.482",
+            "Node.485",
+            "Node.488",
+            "Node.491",
+            "Node.494"
+          ],
+          "spins": 97,
+          "surface": "Node.407",
+          "tier": "super"
+        }
+      },
+      "collected": null,
+      "warning_error_logs": "not sampled for this case",
+      "note": "Initial Pearl SUPER capture was locally collected at motion time 5.1667 after ui-jade-tap and reward-collect appeared, before agent-issued collection. Cause unconfirmed. A fresh final-build repeat retained all five stages through 7.5153 and deliberate collect. Neither case reserved a round or changed saved coins/spins.",
+      "actual_viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "name": "pearl-super-final",
+      "tier": "super",
+      "mode": 1,
+      "samples": 87,
+      "phases_observed": [
+        "reveal",
+        "cascade",
+        "finale",
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 82,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.084,
+                "volume": 0.011838695493946071
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.011838695493946071
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "reveal",
+          "rays": 2,
+          "reelFactor": 0.653962403645086,
+          "room": 1,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 0.2825,
+          "titleAlpha": 1,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.290",
+          "balance": 312728,
+          "keepers": [
+            "Node.290"
+          ],
+          "mode": 1,
+          "overlayParent": "Node.289",
+          "phase": "celebrating",
+          "reels": [
+            "Node.334",
+            "Node.337",
+            "Node.340",
+            "Node.343",
+            "Node.346",
+            "Node.349",
+            "Node.352",
+            "Node.355",
+            "Node.358",
+            "Node.361",
+            "Node.364",
+            "Node.367",
+            "Node.370",
+            "Node.373",
+            "Node.376"
+          ],
+          "spins": 97,
+          "surface": "Node.289",
+          "tier": "super"
+        }
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.084,
+                "volume": 0.084
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.084
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-1-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 1,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 7.515300000011923,
+          "titleAlpha": 255,
+          "visibleCoins": 27
+        },
+        "scene": {
+          "backdrop": "Node.290",
+          "balance": 312728,
+          "keepers": [
+            "Node.290"
+          ],
+          "mode": 1,
+          "overlayParent": "Node.289",
+          "phase": "celebrating",
+          "reels": [
+            "Node.334",
+            "Node.337",
+            "Node.340",
+            "Node.343",
+            "Node.346",
+            "Node.349",
+            "Node.352",
+            "Node.355",
+            "Node.358",
+            "Node.361",
+            "Node.364",
+            "Node.367",
+            "Node.370",
+            "Node.373",
+            "Node.376"
+          ],
+          "spins": 97,
+          "surface": "Node.289",
+          "tier": "super"
+        }
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.21,
+                "volume": 0.21
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.21
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-1-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": true,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.290",
+          "balance": 312728,
+          "keepers": [
+            "Node.290"
+          ],
+          "mode": 1,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.334",
+            "Node.337",
+            "Node.340",
+            "Node.343",
+            "Node.346",
+            "Node.349",
+            "Node.352",
+            "Node.355",
+            "Node.358",
+            "Node.361",
+            "Node.364",
+            "Node.367",
+            "Node.370",
+            "Node.373",
+            "Node.376"
+          ],
+          "spins": 97,
+          "surface": "Node.289",
+          "tier": "super"
+        }
+      },
+      "warning_error_logs": [],
+      "actual_viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "name": "ember-super",
+      "tier": "super",
+      "mode": 2,
+      "samples": 84,
+      "phases_observed": [
+        "gather",
+        "reveal",
+        "cascade",
+        "finale",
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 82,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "ember",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "ember",
+                "target": 0.08800000000000001,
+                "volume": 0.08605489265112654
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "ember-foundry-groove",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08605489265112654
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "gather",
+          "rays": 2,
+          "reelFactor": 0.90692258538968,
+          "room": 2,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 0.13059999999403954,
+          "titleAlpha": 0,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.606",
+          "balance": 312728,
+          "keepers": [
+            "Node.606"
+          ],
+          "mode": 2,
+          "overlayParent": "Node.605",
+          "phase": "celebrating",
+          "reels": [
+            "Node.650",
+            "Node.653",
+            "Node.656",
+            "Node.659",
+            "Node.662",
+            "Node.665",
+            "Node.668",
+            "Node.671",
+            "Node.674",
+            "Node.677",
+            "Node.680",
+            "Node.683",
+            "Node.686",
+            "Node.689",
+            "Node.692"
+          ],
+          "spins": 97,
+          "surface": "Node.605",
+          "tier": "super"
+        }
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "ember",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "ember",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "ember-foundry-groove",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-2-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 2,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 7.481000000000011,
+          "titleAlpha": 255,
+          "visibleCoins": 29
+        },
+        "scene": {
+          "backdrop": "Node.606",
+          "balance": 312728,
+          "keepers": [
+            "Node.606"
+          ],
+          "mode": 2,
+          "overlayParent": "Node.605",
+          "phase": "celebrating",
+          "reels": [
+            "Node.650",
+            "Node.653",
+            "Node.656",
+            "Node.659",
+            "Node.662",
+            "Node.665",
+            "Node.668",
+            "Node.671",
+            "Node.674",
+            "Node.677",
+            "Node.680",
+            "Node.683",
+            "Node.686",
+            "Node.689",
+            "Node.692"
+          ],
+          "spins": 97,
+          "surface": "Node.605",
+          "tier": "super"
+        }
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "ember",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "ember",
+                "target": 0.22,
+                "volume": 0.22
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "ember-foundry-groove",
+              "loop": true,
+              "playing": true,
+              "volume": 0.22
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-2-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": false,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.606",
+          "balance": 312728,
+          "keepers": [
+            "Node.606"
+          ],
+          "mode": 2,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.650",
+            "Node.653",
+            "Node.656",
+            "Node.659",
+            "Node.662",
+            "Node.665",
+            "Node.668",
+            "Node.671",
+            "Node.674",
+            "Node.677",
+            "Node.680",
+            "Node.683",
+            "Node.686",
+            "Node.689",
+            "Node.692"
+          ],
+          "spins": 97,
+          "surface": "Node.605",
+          "tier": "super"
+        }
+      },
+      "warning_error_logs": [],
+      "actual_viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "name": "pearl-big-320",
+      "tier": "big",
+      "mode": 1,
+      "samples": 99,
+      "phases_observed": [
+        "reveal",
+        "cascade",
+        "finale",
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 65,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.084,
+                "volume": 0.06347202333408788
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.06347202333408788
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 112,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "reveal",
+          "rays": 2,
+          "reelFactor": 0.6853272696358512,
+          "room": 1,
+          "sparkles": 12,
+          "tier": "big",
+          "time": 0.2655999999940395,
+          "titleAlpha": 0,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.76",
+          "balance": 312728,
+          "keepers": [
+            "Node.76"
+          ],
+          "mode": 1,
+          "overlayParent": "Node.75",
+          "phase": "celebrating",
+          "reels": [
+            "Node.120",
+            "Node.123",
+            "Node.126",
+            "Node.129",
+            "Node.132",
+            "Node.135",
+            "Node.138",
+            "Node.141",
+            "Node.144",
+            "Node.147",
+            "Node.150",
+            "Node.153",
+            "Node.156",
+            "Node.159",
+            "Node.162"
+          ],
+          "spins": 97,
+          "surface": "Node.75",
+          "tier": "big"
+        }
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.084,
+                "volume": 0.084
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.084
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-1-big",
+              "loop": false,
+              "playing": false,
+              "volume": 0.53
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 112,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 1,
+          "sparkles": 12,
+          "tier": "big",
+          "time": 6.166500000000011,
+          "titleAlpha": 255,
+          "visibleCoins": 14
+        },
+        "scene": {
+          "backdrop": "Node.76",
+          "balance": 312728,
+          "keepers": [
+            "Node.76"
+          ],
+          "mode": 1,
+          "overlayParent": "Node.75",
+          "phase": "celebrating",
+          "reels": [
+            "Node.120",
+            "Node.123",
+            "Node.126",
+            "Node.129",
+            "Node.132",
+            "Node.135",
+            "Node.138",
+            "Node.141",
+            "Node.144",
+            "Node.147",
+            "Node.150",
+            "Node.153",
+            "Node.156",
+            "Node.159",
+            "Node.162"
+          ],
+          "spins": 97,
+          "surface": "Node.75",
+          "tier": "big"
+        }
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "pearl",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "pearl",
+                "target": 0.21,
+                "volume": 0.20999995889024609
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "pearl-garden-bloom",
+              "loop": true,
+              "playing": true,
+              "volume": 0.20999995889024609
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-1-big",
+              "loop": false,
+              "playing": false,
+              "volume": 0.53
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": true,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.76",
+          "balance": 312728,
+          "keepers": [
+            "Node.76"
+          ],
+          "mode": 1,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.120",
+            "Node.123",
+            "Node.126",
+            "Node.129",
+            "Node.132",
+            "Node.135",
+            "Node.138",
+            "Node.141",
+            "Node.144",
+            "Node.147",
+            "Node.150",
+            "Node.153",
+            "Node.156",
+            "Node.159",
+            "Node.162"
+          ],
+          "spins": 97,
+          "surface": "Node.75",
+          "tier": "big"
+        }
+      },
+      "warning_error_logs": [],
+      "actual_viewport": [
+        320,
+        568
+      ]
+    },
+    {
+      "name": "jade-super-tablet",
+      "tier": "super",
+      "mode": 0,
+      "samples": 83,
+      "phases_observed": [
+        "reveal",
+        "cascade",
+        "finale",
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 82,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "jade",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "jade",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "jade-ferry-flow",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "reveal",
+          "rays": 2,
+          "reelFactor": 0.684957470647521,
+          "room": 0,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 0.26580000001192094,
+          "titleAlpha": 0,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.758",
+          "balance": 312728,
+          "keepers": [
+            "Node.758"
+          ],
+          "mode": 0,
+          "overlayParent": "Node.756",
+          "phase": "celebrating",
+          "reels": [
+            "Node.802",
+            "Node.805",
+            "Node.808",
+            "Node.811",
+            "Node.814",
+            "Node.817",
+            "Node.820",
+            "Node.823",
+            "Node.826",
+            "Node.829",
+            "Node.832",
+            "Node.835",
+            "Node.838",
+            "Node.841",
+            "Node.844"
+          ],
+          "spins": 97,
+          "surface": "Node.756",
+          "tier": "super"
+        }
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "jade",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "jade",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "jade-ferry-flow",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-0-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 0,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 7.500000000000013,
+          "titleAlpha": 255,
+          "visibleCoins": 28
+        },
+        "scene": {
+          "backdrop": "Node.758",
+          "balance": 312728,
+          "keepers": [
+            "Node.758"
+          ],
+          "mode": 0,
+          "overlayParent": "Node.756",
+          "phase": "celebrating",
+          "reels": [
+            "Node.802",
+            "Node.805",
+            "Node.808",
+            "Node.811",
+            "Node.814",
+            "Node.817",
+            "Node.820",
+            "Node.823",
+            "Node.826",
+            "Node.829",
+            "Node.832",
+            "Node.835",
+            "Node.838",
+            "Node.841",
+            "Node.844"
+          ],
+          "spins": 97,
+          "surface": "Node.756",
+          "tier": "super"
+        }
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "jade",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "jade",
+                "target": 0.22,
+                "volume": 0.21968908271251636
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "jade-ferry-flow",
+              "loop": true,
+              "playing": true,
+              "volume": 0.21968908271251636
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-0-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": true,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.758",
+          "balance": 312728,
+          "keepers": [
+            "Node.758"
+          ],
+          "mode": 0,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.802",
+            "Node.805",
+            "Node.808",
+            "Node.811",
+            "Node.814",
+            "Node.817",
+            "Node.820",
+            "Node.823",
+            "Node.826",
+            "Node.829",
+            "Node.832",
+            "Node.835",
+            "Node.838",
+            "Node.841",
+            "Node.844"
+          ],
+          "spins": 97,
+          "surface": "Node.756",
+          "tier": "super"
+        }
+      },
+      "warning_error_logs": [],
+      "actual_viewport": [
+        1024,
+        768
+      ]
+    },
+    {
+      "name": "dragon-big-observed",
+      "tier": "big",
+      "mode": 3,
+      "samples": 1,
+      "phases_observed": [
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 0,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "dragon",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "dragon",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "celestial-vault-ceremony",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-3-big",
+              "loop": false,
+              "playing": false,
+              "volume": 0.53
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": false,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 112,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 3,
+          "sparkles": 12,
+          "tier": "big",
+          "time": 32.08329999999702,
+          "titleAlpha": 255,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.5318",
+          "balance": 312728,
+          "keepers": [
+            "Node.5318"
+          ],
+          "mode": 3,
+          "overlayParent": "Node.5317",
+          "phase": "celebrating",
+          "reels": [
+            "Node.5362",
+            "Node.5365",
+            "Node.5368",
+            "Node.5371",
+            "Node.5374",
+            "Node.5377",
+            "Node.5380",
+            "Node.5383",
+            "Node.5386",
+            "Node.5389",
+            "Node.5392",
+            "Node.5395",
+            "Node.5398",
+            "Node.5401",
+            "Node.5404"
+          ],
+          "spins": 97,
+          "surface": "Node.5317",
+          "tier": "big"
+        },
+        "size": [
+          739,
+          1439
+        ]
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "dragon",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "dragon",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "celestial-vault-ceremony",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-3-big",
+              "loop": false,
+              "playing": false,
+              "volume": 0.53
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": false,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 112,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 3,
+          "sparkles": 12,
+          "tier": "big",
+          "time": 32.08329999999702,
+          "titleAlpha": 255,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.5318",
+          "balance": 312728,
+          "keepers": [
+            "Node.5318"
+          ],
+          "mode": 3,
+          "overlayParent": "Node.5317",
+          "phase": "celebrating",
+          "reels": [
+            "Node.5362",
+            "Node.5365",
+            "Node.5368",
+            "Node.5371",
+            "Node.5374",
+            "Node.5377",
+            "Node.5380",
+            "Node.5383",
+            "Node.5386",
+            "Node.5389",
+            "Node.5392",
+            "Node.5395",
+            "Node.5398",
+            "Node.5401",
+            "Node.5404"
+          ],
+          "spins": 97,
+          "surface": "Node.5317",
+          "tier": "big"
+        },
+        "size": [
+          739,
+          1439
+        ]
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "dragon",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "dragon",
+                "target": 0.22,
+                "volume": 0.2199999030984552
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "celestial-vault-ceremony",
+              "loop": true,
+              "playing": true,
+              "volume": 0.2199999030984552
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-3-big",
+              "loop": false,
+              "playing": false,
+              "volume": 0.53
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": true,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.5318",
+          "balance": 312728,
+          "keepers": [
+            "Node.5318"
+          ],
+          "mode": 3,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.5362",
+            "Node.5365",
+            "Node.5368",
+            "Node.5371",
+            "Node.5374",
+            "Node.5377",
+            "Node.5380",
+            "Node.5383",
+            "Node.5386",
+            "Node.5389",
+            "Node.5392",
+            "Node.5395",
+            "Node.5398",
+            "Node.5401",
+            "Node.5404"
+          ],
+          "spins": 97,
+          "surface": "Node.5317",
+          "tier": "big"
+        }
+      },
+      "warning_error_logs": [],
+      "note": "Requested 739x766, but actual viewport changed to 739x1439 and preview was already celebrating before agent launch. Only protected presentation observed, no real balance/spin changes.",
+      "actual_viewport": [
+        739,
+        1439
+      ]
+    },
+    {
+      "name": "ember-super-reduced",
+      "tier": "super",
+      "mode": 2,
+      "samples": 1,
+      "phases_observed": [
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 0,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "ember",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "ember",
+                "target": 0.08800000000000001,
+                "volume": 0.08209267131430127
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "ember-foundry-groove",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08209267131430127
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-2-super",
+              "loop": false,
+              "playing": true,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 0,
+          "lights": 0,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 0,
+          "reelFactor": 1,
+          "room": 2,
+          "sparkles": 0,
+          "tier": "super",
+          "time": 0,
+          "titleAlpha": 255,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.901",
+          "balance": 312728,
+          "keepers": [
+            "Node.901"
+          ],
+          "mode": 2,
+          "overlayParent": "Node.900",
+          "phase": "celebrating",
+          "reels": [
+            "Node.917",
+            "Node.920",
+            "Node.923",
+            "Node.926",
+            "Node.929",
+            "Node.932",
+            "Node.935",
+            "Node.938",
+            "Node.941",
+            "Node.944",
+            "Node.947",
+            "Node.950",
+            "Node.953",
+            "Node.956",
+            "Node.959"
+          ],
+          "spins": 97,
+          "surface": "Node.900",
+          "tier": "super"
+        },
+        "size": [
+          390,
+          844
+        ]
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "ember",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "ember",
+                "target": 0.08800000000000001,
+                "volume": 0.08209267131430127
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "ember-foundry-groove",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08209267131430127
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-2-super",
+              "loop": false,
+              "playing": true,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 0,
+          "lights": 0,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 0,
+          "reelFactor": 1,
+          "room": 2,
+          "sparkles": 0,
+          "tier": "super",
+          "time": 0,
+          "titleAlpha": 255,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.901",
+          "balance": 312728,
+          "keepers": [
+            "Node.901"
+          ],
+          "mode": 2,
+          "overlayParent": "Node.900",
+          "phase": "celebrating",
+          "reels": [
+            "Node.917",
+            "Node.920",
+            "Node.923",
+            "Node.926",
+            "Node.929",
+            "Node.932",
+            "Node.935",
+            "Node.938",
+            "Node.941",
+            "Node.944",
+            "Node.947",
+            "Node.950",
+            "Node.953",
+            "Node.956",
+            "Node.959"
+          ],
+          "spins": 97,
+          "surface": "Node.900",
+          "tier": "super"
+        },
+        "size": [
+          390,
+          844
+        ]
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "ember",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "ember",
+                "target": 0.22,
+                "volume": 0.22
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "ember-foundry-groove",
+              "loop": true,
+              "playing": true,
+              "volume": 0.22
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-2-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": false,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.901",
+          "balance": 312728,
+          "keepers": [
+            "Node.901"
+          ],
+          "mode": 2,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.917",
+            "Node.920",
+            "Node.923",
+            "Node.926",
+            "Node.929",
+            "Node.932",
+            "Node.935",
+            "Node.938",
+            "Node.941",
+            "Node.944",
+            "Node.947",
+            "Node.950",
+            "Node.953",
+            "Node.956",
+            "Node.959"
+          ],
+          "spins": 97,
+          "surface": "Node.900",
+          "tier": "super"
+        }
+      },
+      "warning_error_logs": [],
+      "actual_viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "name": "dragon-super-390",
+      "tier": "super",
+      "mode": 3,
+      "samples": 83,
+      "phases_observed": [
+        "reveal",
+        "cascade",
+        "finale",
+        "hold"
+      ],
+      "scene_identity_unchanged": true,
+      "wallet_unchanged": true,
+      "ornaments": 4,
+      "peak_visible_coins": 82,
+      "first": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": true,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "dragon",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "dragon",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "celestial-vault-ceremony",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "coins",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "counter",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "reveal",
+          "rays": 2,
+          "reelFactor": 0.6864364057566936,
+          "room": 3,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 0.26499999999999996,
+          "titleAlpha": 0,
+          "visibleCoins": 0
+        },
+        "scene": {
+          "backdrop": "Node.599",
+          "balance": 312728,
+          "keepers": [
+            "Node.599"
+          ],
+          "mode": 3,
+          "overlayParent": "Node.598",
+          "phase": "celebrating",
+          "reels": [
+            "Node.643",
+            "Node.646",
+            "Node.649",
+            "Node.652",
+            "Node.655",
+            "Node.658",
+            "Node.661",
+            "Node.664",
+            "Node.667",
+            "Node.670",
+            "Node.673",
+            "Node.676",
+            "Node.679",
+            "Node.682",
+            "Node.685"
+          ],
+          "spins": 97,
+          "surface": "Node.598",
+          "tier": "super"
+        },
+        "capture_index": 0
+      },
+      "last": {
+        "audio": {
+          "click": {
+            "clip": "ui-spin-launch",
+            "loop": false,
+            "playing": false,
+            "volume": 0.38
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "dragon",
+            "ducked": true,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "dragon",
+                "target": 0.08800000000000001,
+                "volume": 0.08800000000000001
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "celestial-vault-ceremony",
+              "loop": true,
+              "playing": true,
+              "volume": 0.08800000000000001
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-3-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": null,
+              "loop": false,
+              "playing": false,
+              "volume": 1
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "motion": {
+          "capacity": 176,
+          "lights": 16,
+          "ornaments": 4,
+          "phase": "hold",
+          "rays": 2,
+          "reelFactor": 0.28,
+          "room": 3,
+          "sparkles": 20,
+          "tier": "super",
+          "time": 7.531899999991065,
+          "titleAlpha": 255,
+          "visibleCoins": 26
+        },
+        "scene": {
+          "backdrop": "Node.599",
+          "balance": 312728,
+          "keepers": [
+            "Node.599"
+          ],
+          "mode": 3,
+          "overlayParent": "Node.598",
+          "phase": "celebrating",
+          "reels": [
+            "Node.643",
+            "Node.646",
+            "Node.649",
+            "Node.652",
+            "Node.655",
+            "Node.658",
+            "Node.661",
+            "Node.664",
+            "Node.667",
+            "Node.670",
+            "Node.673",
+            "Node.676",
+            "Node.679",
+            "Node.682",
+            "Node.685"
+          ],
+          "spins": 97,
+          "surface": "Node.598",
+          "tier": "super"
+        },
+        "capture_index": 82
+      },
+      "collected": {
+        "audio": {
+          "click": {
+            "clip": "ui-jade-tap",
+            "loop": false,
+            "playing": false,
+            "volume": 0.28
+          },
+          "enabled": true,
+          "machine": {
+            "audible": true,
+            "running": false,
+            "stopped": [
+              {}
+            ]
+          },
+          "music": {
+            "audible": true,
+            "desired": "dragon",
+            "ducked": false,
+            "voices": [
+              {
+                "requested": true,
+                "scene": "dragon",
+                "target": 0.22,
+                "volume": 0.22
+              },
+              {
+                "requested": false,
+                "target": 0,
+                "volume": 0
+              }
+            ]
+          },
+          "musicVoices": [
+            {
+              "clip": "celestial-vault-ceremony",
+              "loop": true,
+              "playing": true,
+              "volume": 0.22
+            },
+            {
+              "clip": null,
+              "loop": true,
+              "playing": false,
+              "volume": 0
+            }
+          ],
+          "page": "game",
+          "rewardVoices": [
+            {
+              "channel": "score",
+              "clip": "reward-3-super",
+              "loop": false,
+              "playing": false,
+              "volume": 0.56
+            },
+            {
+              "channel": "coins",
+              "clip": "reward-coin-shower",
+              "loop": false,
+              "playing": false,
+              "volume": 0.28
+            },
+            {
+              "channel": "counter",
+              "clip": "reward-count-complete",
+              "loop": false,
+              "playing": false,
+              "volume": 0.35
+            },
+            {
+              "channel": "collect",
+              "clip": "reward-collect",
+              "loop": false,
+              "playing": false,
+              "volume": 0.4
+            }
+          ],
+          "suspended": false,
+          "unlocked": true,
+          "version": "acoustic-lantern-20261010"
+        },
+        "scene": {
+          "backdrop": "Node.599",
+          "balance": 312728,
+          "keepers": [
+            "Node.599"
+          ],
+          "mode": 3,
+          "overlayParent": null,
+          "phase": "collected",
+          "reels": [
+            "Node.643",
+            "Node.646",
+            "Node.649",
+            "Node.652",
+            "Node.655",
+            "Node.658",
+            "Node.661",
+            "Node.664",
+            "Node.667",
+            "Node.670",
+            "Node.673",
+            "Node.676",
+            "Node.679",
+            "Node.682",
+            "Node.685"
+          ],
+          "spins": 97,
+          "surface": "Node.598",
+          "tier": "super"
+        }
+      },
+      "warning_error_logs": "not sampled for this case",
+      "actual_viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "media": {
+    "actual_animation": "output/playwright/luxury-win-dragon-live-20261010.webp",
+    "frames": 83,
+    "audio_track": false,
+    "overview": "output/playwright/luxury-win-four-themes-20261010.jpg"
+  },
+  "limitations": [
+    "Preview sample counts/visible-coins are not FPS, render performance or physical-device smoothness measurements.",
+    "Requested 739x766 runtime viewport changed to 739x1439; only actual size is claimed.",
+    "Ordinary award production method was tested without placing a browser wager.",
+    "No native, Metal, StoreKit, App Store or loudspeaker/perceptual quality certification."
+  ],
+  "cleanup": {
+    "viewport_override": "reset",
+    "agent_created_tabs_remaining": 0,
+    "chrome_opened": false,
+    "final_readonly_snapshot": {
+      "phase": "collected",
+      "mode": 2,
+      "tier": "super",
+      "coins": 312728,
+      "spins": 97,
+      "overlay_parent": null,
+      "scene_music": "ember",
+      "ducked": false,
+      "music_volume": 0.22
+    }
+  }
+}

@@ -1,0 +1,648 @@
+{
+  "date": "2026-10-09",
+  "scope": "PCM signal measurements only, not physical loudspeaker/headphone or perceptual certification",
+  "mastering": {
+    "version": "warm-20261008",
+    "trebleShelfHz": 1500,
+    "trebleShelfDb": -8,
+    "lowPassHzMusic": 3200,
+    "lowPassHzEffects": 3400,
+    "method": "smooth zero-phase spectral shelf and four-pole low-pass magnitude; softened source attacks"
+  },
+  "items": [
+    {
+      "asset": "celestial-vault-ceremony",
+      "sha256": "daebc31bcbf503e0f6d6e9f1145e41f109db058bb494db1e15081461e5290c61",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.15160794917917483,
+        "above1800": 0.02942313528308477,
+        "above3000": 0.0027133676208478228,
+        "centroid": 673.3159103448953
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.1556320891092587,
+        "above1800": 0.003554893744190129,
+        "above3000": 2.3203911702394428e-05,
+        "centroid": 577.1019944880121
+      },
+      "above1800Reduction": 0.8791803215399067
+    },
+    {
+      "asset": "ember-foundry-groove",
+      "sha256": "37db47986d9e651c0871135d50b9196ec237570623e63db383ae4549e74a7194",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.12787947807716094,
+        "above1800": 0.006472386957984786,
+        "above3000": 0.001917604146850545,
+        "centroid": 394.88781084484265
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.13360764517185855,
+        "above1800": 0.0001812201661528718,
+        "above3000": 1.0828129478697734e-05,
+        "centroid": 344.33642356945904
+      },
+      "above1800Reduction": 0.9720010303263302
+    },
+    {
+      "asset": "feature-lantern-rise",
+      "sha256": "ff9ae713f3f92ce73bb71a9478c6419f7c2a714239f98858904f0054a1ede160",
+      "before": {
+        "above1800": 0.13073563080637024,
+        "above3000": 0.03004524746247731,
+        "centroid": 984.2056480143465
+      },
+      "after": {
+        "above1800": 0.007627782558720499,
+        "above3000": 0.00010272510716312056,
+        "centroid": 492.04163802883556
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9416549068400653
+    },
+    {
+      "asset": "jade-ferry-flow",
+      "sha256": "c41289e17dc4801a940b958fd1e1fd3423712ae1850c5194190f3663f24541fe",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.172561770027207,
+        "above1800": 0.003919263348097965,
+        "above3000": 0.0009693359259152559,
+        "centroid": 593.6073869274096
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.17587142915927034,
+        "above1800": 0.0001296380859461939,
+        "above3000": 3.7478798053658747e-06,
+        "centroid": 567.6946434258124
+      },
+      "above1800Reduction": 0.9669228438019845
+    },
+    {
+      "asset": "lantern-house-theme",
+      "sha256": "d460133a1802a5e738d644fd76cbe2a042a2d130bd6ee47800c482f1163e94ff",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.12168218167826318,
+        "above1800": 0.012705301419103811,
+        "above3000": 0.003307785013489285,
+        "centroid": 577.0262805911856
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.12602064056708742,
+        "above1800": 0.0006682917746001683,
+        "above3000": 2.224899642302065e-05,
+        "centroid": 487.66142903329325
+      },
+      "above1800Reduction": 0.9474005572512181
+    },
+    {
+      "asset": "ledger-interlude",
+      "sha256": "f403d6b61960ab5718d21d58f447d202aeea5ef82d7b67e5326b0a967ceb95c0",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.18418624312905668,
+        "above1800": 0.0017058398419780992,
+        "above3000": 0.000381847435032298,
+        "centroid": 533.3349768186686
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.18729368130768081,
+        "above1800": 6.600137294540098e-05,
+        "above3000": 1.7078202772561001e-06,
+        "centroid": 517.4732292471083
+      },
+      "above1800Reduction": 0.9613085757987306
+    },
+    {
+      "asset": "pearl-garden-bloom",
+      "sha256": "b79ccc173303bb393c1420beaace4c717450243e0f9efb9cb617cdee904b3694",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.12441393304638426,
+        "above1800": 0.011802647097398693,
+        "above3000": 0.002399902380130518,
+        "centroid": 532.1935396199128
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.1410024794097177,
+        "above1800": 0.00018231437654963028,
+        "above3000": 7.666838548970664e-06,
+        "centroid": 328.91462900910267
+      },
+      "above1800Reduction": 0.984553094314765
+    },
+    {
+      "asset": "reel-silk-roll",
+      "sha256": "b2e9a6dbb8cadc50f3e93dcfe1827c7ecaa3426941d1c5cd4fa13b0ca895ba0f",
+      "before": {
+        "above1800": 0.002224023618109531,
+        "above3000": 0.0014049885828481396,
+        "centroid": 211.73182346692073
+      },
+      "after": {
+        "above1800": 5.37007436275277e-05,
+        "above3000": 3.2490231201240503e-06,
+        "centroid": 197.8851748512441
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9758542386014882
+    },
+    {
+      "asset": "reel-stop-0",
+      "sha256": "b780dc5c921e129c554038da9d18ad5c936b7d728487372121bf13b1d5234d89",
+      "before": {
+        "above1800": 9.294419698344222e-05,
+        "above3000": 8.347308735531195e-05,
+        "centroid": 300.4969043116722
+      },
+      "after": {
+        "above1800": 4.1571593424209185e-07,
+        "above3000": 5.80978777231669e-08,
+        "centroid": 293.0227411415999
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9955272523973051
+    },
+    {
+      "asset": "reel-stop-1",
+      "sha256": "8386360edcde7e992447bda01e8dfbdbffdee4d873a646d2355b8142cdfe162f",
+      "before": {
+        "above1800": 0.00018843312954854583,
+        "above3000": 0.00013846366212744951,
+        "centroid": 337.2363283713962
+      },
+      "after": {
+        "above1800": 3.029670533941328e-06,
+        "above3000": 1.660105192836575e-07,
+        "centroid": 326.0837356101697
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9839217735161545
+    },
+    {
+      "asset": "reel-stop-2",
+      "sha256": "a9644f916916d2f9e44d7370e2c12522ac4ab2c62f99d19f13a68d2d0369c191",
+      "before": {
+        "above1800": 0.0001772651219936548,
+        "above3000": 0.0001320756341090403,
+        "centroid": 370.980761302895
+      },
+      "after": {
+        "above1800": 1.7021563341092736e-06,
+        "above3000": 9.771024240227692e-08,
+        "centroid": 356.5349174732437
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9903976805196332
+    },
+    {
+      "asset": "reel-stop-3",
+      "sha256": "fa0109a00f7d99ec991bc2dff16ab10b267e1abb77378649762fe27e5c1e41d2",
+      "before": {
+        "above1800": 0.0001090357476411054,
+        "above3000": 9.419413110055909e-05,
+        "centroid": 400.1066889978915
+      },
+      "after": {
+        "above1800": 1.98870489088717e-06,
+        "above3000": 5.504187422174195e-08,
+        "centroid": 381.42573940589716
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9817609826693439
+    },
+    {
+      "asset": "reel-stop-4",
+      "sha256": "13ffdbbfab0eccc730f92439b70717ecee095813d96b1be85196e7f48e9dd578",
+      "before": {
+        "above1800": 0.00037447623371364305,
+        "above3000": 0.00017103771735267988,
+        "centroid": 424.6899368959528
+      },
+      "after": {
+        "above1800": 2.6819577270292486e-05,
+        "above3000": 1.9388529751719703e-07,
+        "centroid": 402.57346852125346
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.928381096433476
+    },
+    {
+      "asset": "reward-coin-shower",
+      "sha256": "8a71faca19e697f483afe6f8026462f3941c050ea275327b2e7cecc43df4e2a7",
+      "before": {
+        "above1800": 0.00048325587796379935,
+        "above3000": 8.163356272787375e-05,
+        "centroid": 525.2843457498391
+      },
+      "after": {
+        "above1800": 4.705209322095261e-05,
+        "above3000": 1.3715819931353303e-07,
+        "centroid": 513.443719514815
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9026352386665077
+    },
+    {
+      "asset": "reward-collect",
+      "sha256": "915d68ea6fb6d35ee10e4f31eba8de917b101eaa2cdd9851d2849c2909f1f621",
+      "before": {
+        "above1800": 0.03077180075899097,
+        "above3000": 0.007008200201285339,
+        "centroid": 574.4912864116409
+      },
+      "after": {
+        "above1800": 0.0013961171798437095,
+        "above3000": 3.876634957669183e-05,
+        "centroid": 469.2498836373805
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9546299811708033
+    },
+    {
+      "asset": "reward-count-complete",
+      "sha256": "dc61b0b8ad3ec28c988662eb7f9caf2b340d38a626a6a96b64ff3fc3240cb2e5",
+      "before": {
+        "above1800": 0.002958674924773975,
+        "above3000": 0.00024322340245109013,
+        "centroid": 481.8478377563534
+      },
+      "after": {
+        "above1800": 0.00021259328805868152,
+        "above3000": 2.4667021639141764e-07,
+        "centroid": 469.2124691606904
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9281457769224436
+    },
+    {
+      "asset": "reward-counter",
+      "sha256": "4e91a6eaddbb03c2ac443f3822fbff73414c5e6363f8343ce99cf1128fa19828",
+      "before": {
+        "above1800": 0.00018763590251237355,
+        "above3000": 0.0001415147843642843,
+        "centroid": 381.6828019233368
+      },
+      "after": {
+        "above1800": 1.597606035605387e-06,
+        "above3000": 6.111250540595613e-08,
+        "centroid": 362.51293257049423
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9914856058237573
+    },
+    {
+      "asset": "reward-gift-open",
+      "sha256": "4022b15a23b2551cd16dc5ad4296940087622a40663a95ff9e821d11a3b3ca0b",
+      "before": {
+        "above1800": 0.017755496326709225,
+        "above3000": 0.003764605051987743,
+        "centroid": 566.6775628926521
+      },
+      "after": {
+        "above1800": 0.0006651216207378116,
+        "above3000": 2.3632427383525366e-05,
+        "centroid": 476.36656379540455
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.962539958979503
+    },
+    {
+      "asset": "reward-win-big",
+      "sha256": "82bf90f79bc050319e92d04e839bee39c0a41082355f0211ba22af8850547d9b",
+      "before": {
+        "above1800": 0.09933898505588745,
+        "above3000": 0.027939816644672294,
+        "centroid": 701.2049524776029
+      },
+      "after": {
+        "above1800": 0.0065786768130950005,
+        "above3000": 0.0001720746052460255,
+        "centroid": 373.8993121188597
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9337754778811774
+    },
+    {
+      "asset": "reward-win-ordinary",
+      "sha256": "13474ade6287763479075de003e82b6b761bd0747178483df054a7779c463d47",
+      "before": {
+        "above1800": 0.07054290735666492,
+        "above3000": 0.022490290530823024,
+        "centroid": 608.9383159008122
+      },
+      "after": {
+        "above1800": 0.004257558086367327,
+        "above3000": 8.726997545894267e-05,
+        "centroid": 360.71480343855853
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9396458376057409
+    },
+    {
+      "asset": "reward-win-super",
+      "sha256": "8b3ae5458d6d0f6843824e60a1e34851183f646bdd1bf8d10c9869bab176759d",
+      "before": {
+        "above1800": 0.08277777761168353,
+        "above3000": 0.03183345995458969,
+        "centroid": 647.1539362877903
+      },
+      "after": {
+        "above1800": 0.003212696133737216,
+        "above3000": 0.00013433174853613516,
+        "centroid": 319.69077339887235
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9611889056890582
+    },
+    {
+      "asset": "treasury-interlude",
+      "sha256": "6a30d46309b053b94082bed1cdb70fae974fa7e848a70d4e60f399b1c186c30e",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.11884736855495563,
+        "above1800": 0.010669738258268776,
+        "above3000": 0.0022629729794577565,
+        "centroid": 561.0307860941106
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.13662634592559111,
+        "above1800": 0.00016403240820747958,
+        "above3000": 7.645846599602483e-06,
+        "centroid": 333.58634026462175
+      },
+      "above1800Reduction": 0.984626388741977
+    },
+    {
+      "asset": "ui-gold-step",
+      "sha256": "06e98be00a74c858a9dffba3f1bb972b6db681f9f6eddd29b5500156cf677940",
+      "before": {
+        "above1800": 0.0011109275148531098,
+        "above3000": 0.0008875109073669044,
+        "centroid": 492.6125331838295
+      },
+      "after": {
+        "above1800": 2.5189066555480384e-05,
+        "above3000": 1.0267260660186737e-05,
+        "centroid": 477.8867724431377
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9773260935401253
+    },
+    {
+      "asset": "ui-jade-tap",
+      "sha256": "acbb3b427af5daea78d695aa608c3a1e068ff7409b5a3d4869a02eb5561903e1",
+      "before": {
+        "above1800": 0.008446531745357831,
+        "above3000": 0.00010266140879962857,
+        "centroid": 449.5139058105807
+      },
+      "after": {
+        "above1800": 0.0010237693330941398,
+        "above3000": 6.590189981217122e-08,
+        "centroid": 420.43028855014563
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.878794117638071
+    },
+    {
+      "asset": "ui-spin-launch",
+      "sha256": "65c6e77314dcc2821860a5983c0cbf0760a3cce8aaa1b83c001e8858cea7f351",
+      "before": {
+        "above1800": 0.016258747818523833,
+        "above3000": 0.004341940912605379,
+        "centroid": 560.8408348310588
+      },
+      "after": {
+        "above1800": 0.0008556513786582806,
+        "above3000": 1.413650168561376e-05,
+        "centroid": 488.93737610756926
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9473728611693316
+    },
+    {
+      "asset": "welcome-foyer",
+      "sha256": "e35f08966d026c62bb46e9124387e28ca3a5e4a38e6656b9aa9ff00c82b7e6c9",
+      "before": {
+        "peak": 0.65997314453125,
+        "rms": 0.18395935567018296,
+        "above1800": 0.0019446450278998743,
+        "above3000": 0.00035523872578207535,
+        "centroid": 585.7027964990008
+      },
+      "after": {
+        "peak": 0.65997314453125,
+        "rms": 0.19031550815598622,
+        "above1800": 8.397099045829293e-05,
+        "above3000": 1.70057087415757e-06,
+        "centroid": 569.4212777634266
+      },
+      "above1800Reduction": 0.9568193735856371
+    },
+    {
+      "asset": "reward-0-ordinary",
+      "sha256": "e21458787756ed4daa45fa2658126f89ec2029861395f78d912b96c307eede25",
+      "before": {
+        "above1800": 0.06803898166063674,
+        "above3000": 0.02082484355614391,
+        "centroid": 626.3290120841402
+      },
+      "after": {
+        "above1800": 0.003221421098870638,
+        "above3000": 8.027759222198706e-05,
+        "centroid": 372.3929309526892
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9526533022651872
+    },
+    {
+      "asset": "reward-0-big",
+      "sha256": "d611370a02ef50aaf3e6dd8720c9c213d48946d41b7effc1cd7c45bb6e4e1b72",
+      "before": {
+        "above1800": 0.07024390059752723,
+        "above3000": 0.01830509036718404,
+        "centroid": 627.9532614438101
+      },
+      "after": {
+        "above1800": 0.0031351093022550735,
+        "above3000": 7.96397497115415e-05,
+        "centroid": 343.1314829409135
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9553682344575631
+    },
+    {
+      "asset": "reward-0-super",
+      "sha256": "501c567772310729f79a56a7f00874e8bfd2212ee57573cdc7fb45dbad281b38",
+      "before": {
+        "above1800": 0.099960944653727,
+        "above3000": 0.032817597461349136,
+        "centroid": 796.1500072033284
+      },
+      "after": {
+        "above1800": 0.004999296596153056,
+        "above3000": 0.00013791710657679883,
+        "centroid": 423.1952805558178
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9499875014839942
+    },
+    {
+      "asset": "reward-1-ordinary",
+      "sha256": "fcef3eeaae6b2319051b36c32de016618eb1cc7eac1ee920ec4d84e6ff43aef5",
+      "before": {
+        "above1800": 4.586761523350769e-05,
+        "above3000": 4.017749591454169e-05,
+        "centroid": 466.81520237833166
+      },
+      "after": {
+        "above1800": 3.7548022978608766e-07,
+        "above3000": 2.995663778880226e-08,
+        "centroid": 457.67453850548156
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9918138270787668
+    },
+    {
+      "asset": "reward-1-big",
+      "sha256": "a3fd352c75967eca1e5561a29c2f4fd5fc83879454433d45e8b7794190ede949",
+      "before": {
+        "above1800": 0.0073176314204895536,
+        "above3000": 0.0014747378309694413,
+        "centroid": 571.8189519613585
+      },
+      "after": {
+        "above1800": 0.0004932145718510751,
+        "above3000": 6.839054442887627e-06,
+        "centroid": 539.633395665928
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9325991508030779
+    },
+    {
+      "asset": "reward-1-super",
+      "sha256": "eba9a75142910f122b7d7569a5aa3d52fae481557e4f2a532d5f24f0ba9e8253",
+      "before": {
+        "above1800": 0.00592230741763756,
+        "above3000": 0.0012627529837119164,
+        "centroid": 631.3918632801947
+      },
+      "after": {
+        "above1800": 0.0004025273695869759,
+        "above3000": 4.8435664651812366e-06,
+        "centroid": 604.4162135580314
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9320320035416962
+    },
+    {
+      "asset": "reward-2-ordinary",
+      "sha256": "5e46186df3b66a126a92f138fe76a96b149131cb54fe79a2766ce66b0604be87",
+      "before": {
+        "above1800": 0.0024637662311194066,
+        "above3000": 8.140776677052896e-05,
+        "centroid": 350.08407938866327
+      },
+      "after": {
+        "above1800": 0.00023715922952029185,
+        "above3000": 5.02464163174418e-08,
+        "centroid": 334.6159476638427
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.903741180261027
+    },
+    {
+      "asset": "reward-2-big",
+      "sha256": "a67d4ae6879f1b1ebed38ecea509872288b15c3bded78c0c4643fdc1da1f8b2f",
+      "before": {
+        "above1800": 0.013462212944699485,
+        "above3000": 0.003209031254910935,
+        "centroid": 446.0978139300606
+      },
+      "after": {
+        "above1800": 0.0008020224680089318,
+        "above3000": 1.2406952513332737e-05,
+        "centroid": 395.60512174630054
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9404241731056027
+    },
+    {
+      "asset": "reward-2-super",
+      "sha256": "d5757a95156c06c9a644dec2ac621ed7c87ace7c1121e6edf085b67ada9d76b2",
+      "before": {
+        "above1800": 0.012780364353397359,
+        "above3000": 0.003319214156655112,
+        "centroid": 486.91472924069933
+      },
+      "after": {
+        "above1800": 0.0006695508553033426,
+        "above3000": 1.6860679387223977e-05,
+        "centroid": 433.95928459459026
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9476109728338568
+    },
+    {
+      "asset": "reward-3-ordinary",
+      "sha256": "15550ef6f7ec7c2feced15e55eee984d8d773bd4fce5a67a9804ebbfa64ff872",
+      "before": {
+        "above1800": 5.8700253035350924e-06,
+        "above3000": 4.161807616216592e-06,
+        "centroid": 307.92847598049536
+      },
+      "after": {
+        "above1800": 1.0569394334659793e-07,
+        "above3000": 9.49981674973916e-09,
+        "centroid": 307.56579644334323
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9819942951041547
+    },
+    {
+      "asset": "reward-3-big",
+      "sha256": "7fd73a8d0c8fc867ea92ede5a14a50a67483322c72150c52fb83eee61da2cd0d",
+      "before": {
+        "above1800": 0.010162198464297615,
+        "above3000": 0.0038282435239224387,
+        "centroid": 402.2779522884444
+      },
+      "after": {
+        "above1800": 0.0004354684577160747,
+        "above3000": 1.6398853651120797e-05,
+        "centroid": 364.6782610844392
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9571482037822834
+    },
+    {
+      "asset": "reward-3-super",
+      "sha256": "ccdf67a8a4b6ea7249cd315071dd3b91e8f867e4845e50a321abac99c8b0af7a",
+      "before": {
+        "above1800": 0.009964543224413218,
+        "above3000": 0.0037526650392349123,
+        "centroid": 440.8302049151402
+      },
+      "after": {
+        "above1800": 0.00038735512856091753,
+        "above3000": 1.617535613591242e-05,
+        "centroid": 403.69443947610813
+      },
+      "baseline": "compose_premium_foley.py; newly composed source, not the October 8 source",
+      "above1800Reduction": 0.9611266547961883
+    }
+  ],
+  "soundDesign": "material-phrases-20261009",
+  "status": "Historical audit of superseded 2026-10-08/09 procedural audio; not current asset hashes. See audio-acoustic-regression.json."
+}

@@ -1,0 +1,1069 @@
+{
+  "date": "2026-10-10",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "feature": "in-cabinet treasure crescendo BIG/SUPER",
+  "generation": "Local CC Switch / high-quality generated raster, crop/rigid rotate/uniform contain only",
+  "build": {
+    "creator": "3.8.8",
+    "web_finished_at": "2026-10-10T16:01:25+08:00",
+    "cli_exit": 36,
+    "limitation": "Existing editor recovery JSON / IPC teardown. Web output reports Finished and was run; not a clean native/App Store certification."
+  },
+  "tests": {
+    "npm_test": "PASS",
+    "typecheck": "PASS",
+    "emitted_texture_hashes": 25,
+    "runtime_cases": 12,
+    "viewport_sizes": [
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ],
+      [
+        1024,
+        768
+      ]
+    ],
+    "rooms_all_big_super": true,
+    "reduced_both_tiers": true,
+    "protected_balance": 312728,
+    "protected_spins": 97,
+    "original_scene_identity_preserved": true,
+    "music_restored_after_collect": true,
+    "warnings_errors": [],
+    "actual_device_fps_measured": false,
+    "speaker_listening_certified": false
+  },
+  "presentation": {
+    "big_gold_waves": 6,
+    "super_gold_waves": 9,
+    "extra_finale_rain": true,
+    "super_encore_seconds": 6.18,
+    "fixed_coin_pools": [
+      192,
+      280
+    ],
+    "foreground_coin_share": 0.75,
+    "treasure_pools": [
+      12,
+      20
+    ],
+    "rigid_generated_plumes": 2,
+    "generated_silk_streamers": 2,
+    "no_full_page_prize_image": true,
+    "no_duplicate_keeper": true,
+    "no_math_change": true
+  },
+  "observations": [
+    "Initial reused preview tab metadata requested dragon but existing UI snapshot was Pearl in hold at 391x714; explicit reload and viewport confirmation returned the correct protected dragon-ready UI. Not counted as a successful dragon case. All subsequent 12 captured cases match requested themes and verified dimensions.",
+    "Reduced SUPER ready poll found an already-collected protected preview, not a loading screen. Fresh screenshot/read-only state confirmed intact balance and cabinet; replay from its existing physical spin button was captured and collected. No storage/engine mutation or attribution of that prior input."
+  ],
+  "cases": [
+    {
+      "name": "dragon-super-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 3,
+      "tier": "super",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 104,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "finale",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.266200000002994,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 5,
+        "visibleCoins": 101,
+        "visibleJets": 2,
+        "visibleTreasures": 14
+      },
+      "encore_observed": true,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 97,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.949400000005978,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 0,
+        "visibleCoins": 88,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "dragon",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "dragon",
+            "target": 0.22,
+            "volume": 0.22
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "jade-big-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 0,
+      "tier": "big",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 141,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 0,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 2.964900000005962,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 4,
+        "visibleCoins": 65,
+        "visibleJets": 2,
+        "visibleTreasures": 11
+      },
+      "encore_observed": false,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 97,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 0,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 7.165600000008947,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 0,
+        "visibleCoins": 54,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "jade",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "jade",
+            "target": 0.22,
+            "volume": 0.22
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "jade-super-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 0,
+      "tier": "super",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 104,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "finale",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 0,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.266699999988093,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 5,
+        "visibleCoins": 101,
+        "visibleJets": 2,
+        "visibleTreasures": 16
+      },
+      "encore_observed": true,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 98,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 0,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.933299999997036,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 0,
+        "visibleCoins": 88,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "jade",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "jade",
+            "target": 0.22,
+            "volume": 0.21511220557758215
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "pearl-big-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 1,
+      "tier": "big",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 98,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 2.683299999997022,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 3,
+        "visibleCoins": 64,
+        "visibleJets": 2,
+        "visibleTreasures": 12
+      },
+      "encore_observed": false,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 97,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 7.1665999999940535,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 0,
+        "visibleCoins": 54,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "pearl",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "pearl",
+            "target": 0.21,
+            "volume": 0.21
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "pearl-super-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 1,
+      "tier": "super",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 115,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "finale",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.14950000000001,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 6,
+        "visibleCoins": 96,
+        "visibleJets": 2,
+        "visibleTreasures": 18
+      },
+      "encore_observed": true,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 97,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.94950000000002,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 0,
+        "visibleCoins": 88,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "pearl",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "pearl",
+            "target": 0.21,
+            "volume": 0.21
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "ember-big-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 2,
+      "tier": "big",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 126,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "finale",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 2,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 6.249899999991067,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 4,
+        "visibleCoins": 74,
+        "visibleJets": 2,
+        "visibleTreasures": 8
+      },
+      "encore_observed": false,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 96,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 2,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 7.216599999994047,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 0,
+        "visibleCoins": 54,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "ember",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "ember",
+            "target": 0.22,
+            "volume": 0.22000000000000003
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "ember-super-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 2,
+      "tier": "super",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 100,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "finale",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 2,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.316599999994056,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 5,
+        "visibleCoins": 102,
+        "visibleJets": 2,
+        "visibleTreasures": 17
+      },
+      "encore_observed": true,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 97,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 2,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.983200000003,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 0,
+        "visibleCoins": 88,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "ember",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "ember",
+            "target": 0.22,
+            "volume": 0.22
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "dragon-big-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 3,
+      "tier": "big",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 168,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 4.866599999994045,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 4,
+        "visibleCoins": 63,
+        "visibleJets": 2,
+        "visibleTreasures": 12
+      },
+      "encore_observed": false,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 96,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 7.1995999999940485,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 0,
+        "visibleCoins": 54,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "dragon",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "dragon",
+            "target": 0.22,
+            "volume": 0.22
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "dragon-super-320",
+      "viewport": [
+        320,
+        568
+      ],
+      "mode": 3,
+      "tier": "super",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 104,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "finale",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.26609999999405,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 5,
+        "visibleCoins": 101,
+        "visibleJets": 2,
+        "visibleTreasures": 14
+      },
+      "encore_observed": true,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 98,
+        "bursts": 6,
+        "capacity": 280,
+        "encoreTime": 6.18,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 3,
+        "sparkles": 20,
+        "streamers": 2,
+        "tier": "super",
+        "time": 8.932799999997036,
+        "titleAlpha": 255,
+        "treasureCapacity": 20,
+        "visibleBursts": 0,
+        "visibleCoins": 88,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "dragon",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "dragon",
+            "target": 0.22,
+            "volume": 0.2152254680635885
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "pearl-big-tablet",
+      "viewport": [
+        1024,
+        768
+      ],
+      "mode": 1,
+      "tier": "big",
+      "peak": {
+        "aureole": true,
+        "aureoleAlpha": 98,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "cascade",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 2.6832999999970224,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 3,
+        "visibleCoins": 64,
+        "visibleJets": 2,
+        "visibleTreasures": 12
+      },
+      "encore_observed": false,
+      "counter_hold": {
+        "aureole": true,
+        "aureoleAlpha": 98,
+        "bursts": 4,
+        "capacity": 192,
+        "encoreTime": null,
+        "jets": 2,
+        "lights": 16,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 2,
+        "reelFactor": 0.28,
+        "room": 1,
+        "sparkles": 12,
+        "streamers": 2,
+        "tier": "big",
+        "time": 7.116599999994048,
+        "titleAlpha": 255,
+        "treasureCapacity": 12,
+        "visibleBursts": 0,
+        "visibleCoins": 54,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "pearl",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "pearl",
+            "target": 0.21,
+            "volume": 0.20286967710033088
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "ember-big-reduced",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 2,
+      "tier": "big",
+      "peak": {
+        "aureole": false,
+        "aureoleAlpha": 0,
+        "bursts": 0,
+        "capacity": 0,
+        "encoreTime": null,
+        "jets": 0,
+        "lights": 0,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 0,
+        "reelFactor": 1,
+        "room": 2,
+        "sparkles": 0,
+        "streamers": 0,
+        "tier": "big",
+        "time": 0,
+        "titleAlpha": 255,
+        "treasureCapacity": 0,
+        "visibleBursts": 0,
+        "visibleCoins": 0,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "encore_observed": false,
+      "counter_hold": {
+        "aureole": false,
+        "aureoleAlpha": 0,
+        "bursts": 0,
+        "capacity": 0,
+        "encoreTime": null,
+        "jets": 0,
+        "lights": 0,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 0,
+        "reelFactor": 1,
+        "room": 2,
+        "sparkles": 0,
+        "streamers": 0,
+        "tier": "big",
+        "time": 0,
+        "titleAlpha": 255,
+        "treasureCapacity": 0,
+        "visibleBursts": 0,
+        "visibleCoins": 0,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "ember",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "ember",
+            "target": 0.22,
+            "volume": 0.21259967030712895
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "pearl-super-reduced",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": 1,
+      "tier": "super",
+      "peak": {
+        "aureole": false,
+        "aureoleAlpha": 0,
+        "bursts": 0,
+        "capacity": 0,
+        "encoreTime": 6.18,
+        "jets": 0,
+        "lights": 0,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 0,
+        "reelFactor": 1,
+        "room": 1,
+        "sparkles": 0,
+        "streamers": 0,
+        "tier": "super",
+        "time": 0,
+        "titleAlpha": 255,
+        "treasureCapacity": 0,
+        "visibleBursts": 0,
+        "visibleCoins": 0,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "encore_observed": false,
+      "counter_hold": {
+        "aureole": false,
+        "aureoleAlpha": 0,
+        "bursts": 0,
+        "capacity": 0,
+        "encoreTime": 6.18,
+        "jets": 0,
+        "lights": 0,
+        "ornaments": 4,
+        "phase": "hold",
+        "rays": 0,
+        "reelFactor": 1,
+        "room": 1,
+        "sparkles": 0,
+        "streamers": 0,
+        "tier": "super",
+        "time": 0,
+        "titleAlpha": 255,
+        "treasureCapacity": 0,
+        "visibleBursts": 0,
+        "visibleCoins": 0,
+        "visibleJets": 0,
+        "visibleTreasures": 0
+      },
+      "baseline_unchanged": true,
+      "original_scene_preserved": true,
+      "collected": true,
+      "music_after": {
+        "audible": true,
+        "desired": "pearl",
+        "ducked": false,
+        "voices": [
+          {
+            "requested": true,
+            "scene": "pearl",
+            "target": 0.21,
+            "volume": 0.21
+          },
+          {
+            "requested": false,
+            "target": 0,
+            "volume": 0
+          }
+        ]
+      }
+    }
+  ],
+  "recordings": [
+    {
+      "name": "jade-big-390",
+      "path": "/Users/xzkj/Desktop/slots-game-template/完整游戏模版/全游戏模版/F33_Golden_Encore_v2.0.0/output/playwright/crescendo-jade-big-390-live-20261010.webp",
+      "source_frames": 96,
+      "duration_ms": 7026,
+      "motion_seconds": [
+        0.2656000000089407,
+        7.165600000008947
+      ],
+      "dimensions": [
+        390,
+        844
+      ],
+      "file_bytes": 6690116,
+      "notes": "Actual unaltered in-app-browser screenshots. Approximate timing reconstructed from throttled motion timestamps; no audio track and not a device-FPS measurement.",
+      "encoded_frames": 96,
+      "decoded_successfully": true
+    },
+    {
+      "name": "dragon-super-390",
+      "path": "/Users/xzkj/Desktop/slots-game-template/完整游戏模版/全游戏模版/F33_Golden_Encore_v2.0.0/output/playwright/crescendo-dragon-super-390-live-20261010.webp",
+      "source_frames": 98,
+      "duration_ms": 8814,
+      "motion_seconds": [
+        0.266,
+        8.949400000005978
+      ],
+      "dimensions": [
+        390,
+        844
+      ],
+      "file_bytes": 7575136,
+      "notes": "Actual unaltered in-app-browser screenshots. Approximate timing reconstructed from throttled motion timestamps; no audio track and not a device-FPS measurement.",
+      "encoded_frames": 97,
+      "decoded_successfully": true
+    }
+  ],
+  "evidence": [
+    "output/playwright/crescendo-runtime-observations-20261010.json",
+    "output/playwright/crescendo-emitted-texture-hashes-20261010.json",
+    "output/playwright/crescendo-full-test-20261010.log",
+    "output/playwright/crescendo-typecheck-20261010.log",
+    "output/playwright/crescendo-build-20261010.log"
+  ],
+  "cleanup": {
+    "viewport_reset": true,
+    "agent_created_tabs_closed": true,
+    "remaining_agent_tabs": 0,
+    "chrome_opened": false,
+    "request_response_payload_removed": true,
+    "exported_png_sequences_removed": true,
+    "source_atlas_prompts_manifest_provenance_preserved": true
+  }
+}

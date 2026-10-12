@@ -1,0 +1,2069 @@
+{
+  "date": "2026-10-09",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "supersedes": "48-frame optical-flow paw/blink sequences in articulated-mascot-regression.json; historical report remains unchanged",
+  "implementation": {
+    "source": "existing independent CC Switch-generated character atlases; no new hand-drawn visible artwork",
+    "method": "small pre-baked 2D wrist/forearm articulation using soft alpha mattes and generated low-paw reveal pixels",
+    "notUsed": [
+      "whole-image body inflation",
+      "face/head morphing",
+      "eye closing between dissimilar generated poses",
+      "optical-flow interpolated ghost paws",
+      "sudden super-win speed-up"
+    ],
+    "atlas": [
+      2048,
+      2560
+    ],
+    "cell": [
+      256,
+      320
+    ],
+    "frames": 64,
+    "gestureFps": 30,
+    "gestureSeconds": 2.1333333333333333,
+    "ease": "C2 quintic eased lift/short hold/return with exact neutral seam",
+    "restSeconds": {
+      "hall": [
+        4,
+        4.12,
+        4.24,
+        4.36
+      ],
+      "cabinet": [
+        5,
+        5.12,
+        5.24,
+        5.36
+      ],
+      "prize": [
+        2.6,
+        2.72,
+        2.84,
+        2.96
+      ],
+      "loading": [
+        1,
+        1.12,
+        1.24,
+        1.36
+      ]
+    },
+    "staticFaceBodyFeet": true
+  },
+  "assetContinuity": {
+    "otter": {
+      "animal": "otter",
+      "frames": 64,
+      "atlas": [
+        2048,
+        2560
+      ],
+      "reveal_source_pose": 1,
+      "moving_region": [
+        35,
+        147,
+        125,
+        248
+      ],
+      "outside_region_exact": true,
+      "maximum_forearm_rotation_degrees": 22,
+      "whole_body_rotation_degrees": 0,
+      "neutral_loop_exact": true,
+      "maximum_adjacent_frame_mean_delta": 0.1223114013671875,
+      "mean_adjacent_frame_delta": 0.053172181144593246,
+      "shippingAtlasSha256": "016edc4246c2af6afe7c00b46d64eb2a93482d40a3aee74fff30925ce30fefea"
+    },
+    "rabbit": {
+      "animal": "rabbit",
+      "frames": 64,
+      "atlas": [
+        2048,
+        2560
+      ],
+      "reveal_source_pose": 1,
+      "moving_region": [
+        40,
+        156,
+        117,
+        272
+      ],
+      "outside_region_exact": true,
+      "maximum_forearm_rotation_degrees": 27,
+      "whole_body_rotation_degrees": 0,
+      "neutral_loop_exact": true,
+      "maximum_adjacent_frame_mean_delta": 0.1075836181640625,
+      "mean_adjacent_frame_delta": 0.04489135742187499,
+      "shippingAtlasSha256": "3bf3c348e733e88508221288651ef156733ba3ae41addf5cc4c67698cd95a811"
+    },
+    "fox": {
+      "animal": "fox",
+      "frames": 64,
+      "atlas": [
+        2048,
+        2560
+      ],
+      "reveal_source_pose": 9,
+      "moving_region": [
+        60,
+        126,
+        126,
+        221
+      ],
+      "outside_region_exact": true,
+      "maximum_forearm_rotation_degrees": 24,
+      "whole_body_rotation_degrees": 0,
+      "neutral_loop_exact": true,
+      "maximum_adjacent_frame_mean_delta": 0.1298553466796875,
+      "mean_adjacent_frame_delta": 0.05377604166666666,
+      "shippingAtlasSha256": "fbd5dbd9323dd02d71c3d0819aaaa1d2d8a0aab1fbf2562fad732f74d72d6ca6"
+    },
+    "dragon": {
+      "animal": "dragon",
+      "frames": 64,
+      "atlas": [
+        2048,
+        2560
+      ],
+      "reveal_source_pose": 1,
+      "moving_region": [
+        59,
+        173,
+        140,
+        263
+      ],
+      "outside_region_exact": true,
+      "maximum_forearm_rotation_degrees": 24,
+      "whole_body_rotation_degrees": 0,
+      "neutral_loop_exact": true,
+      "maximum_adjacent_frame_mean_delta": 0.1348724365234375,
+      "mean_adjacent_frame_delta": 0.05634910946800596,
+      "shippingAtlasSha256": "4ae190d196a40fcd40455f218000133cce8d0fec2ff869aba4901f25a8a769f2"
+    }
+  },
+  "runtime": {
+    "environment": "macOS, isolated desktop Chromium headless browser; mobile-size viewport emulation",
+    "cabinetCases": [
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3000,
+        "renderCallbacks": 180,
+        "rafMedianMs": 16.699999999982538,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.800000000017462,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.600000000006,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.699999999982538,
+        "rafP95Ms": 16.79999999998836,
+        "rafMaxMs": 16.800000000017462,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.5,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.699999999982538,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.800000000017462,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.5,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.699999999982538,
+        "rafP95Ms": 16.79999999998836,
+        "rafMaxMs": 16.800000000017462,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.499999999971,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.699999999982538,
+        "rafP95Ms": 16.79999999998836,
+        "rafMaxMs": 16.800000000017462,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.5,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.70000000001164,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.79999999998836,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.5,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.70000000001164,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.800000000046566,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.5999999999767,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.70000000001164,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.800000000046566,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.5,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.699999999953434,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.800000000046566,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.5,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.70000000001164,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.800000000046566,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3016.600000000035,
+        "renderCallbacks": 181,
+        "rafMedianMs": 16.699999999953434,
+        "rafP95Ms": 16.79999999998836,
+        "rafMaxMs": 16.800000000046566,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "frame": 0
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0
+        },
+        "tapCoinsUnchanged": true,
+        "tapSpinsUnchanged": true,
+        "durationMs": 3000,
+        "renderCallbacks": 180,
+        "rafMedianMs": 16.699999999953434,
+        "rafP95Ms": 16.70000000001164,
+        "rafMaxMs": 16.79999999998836,
+        "framesSeen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "forwardSkipMax": 1,
+        "neutralReturn": true,
+        "fixedTransform": true,
+        "texture": [
+          2048,
+          2560
+        ],
+        "atlasFrameCount": 64
+      }
+    ],
+    "hallScenes": [
+      {
+        "mode": 0,
+        "frame": 23,
+        "coins": 5000,
+        "spins": 0,
+        "restSeconds": 4,
+        "texture": [
+          2048,
+          2560
+        ]
+      },
+      {
+        "mode": 1,
+        "frame": 24,
+        "coins": 5000,
+        "spins": 0,
+        "restSeconds": 4.12,
+        "texture": [
+          2048,
+          2560
+        ]
+      },
+      {
+        "mode": 2,
+        "frame": 23,
+        "coins": 5000,
+        "spins": 0,
+        "restSeconds": 4.24,
+        "texture": [
+          2048,
+          2560
+        ]
+      },
+      {
+        "mode": 3,
+        "frame": 23,
+        "coins": 5000,
+        "spins": 0,
+        "restSeconds": 4.36,
+        "texture": [
+          2048,
+          2560
+        ]
+      }
+    ],
+    "prizePreviews": {
+      "prizes": [
+        {
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "keepers": [
+            {
+              "scene": "cabinet",
+              "mode": 0,
+              "frame": 0,
+              "hidden": true,
+              "atlasFrames": 64,
+              "restSeconds": 5
+            },
+            {
+              "scene": "prize",
+              "mode": 0,
+              "frame": 25,
+              "hidden": false,
+              "atlasFrames": 64,
+              "restSeconds": 2.6
+            }
+          ]
+        },
+        {
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "keepers": [
+            {
+              "scene": "cabinet",
+              "mode": 1,
+              "frame": 0,
+              "hidden": true,
+              "atlasFrames": 64,
+              "restSeconds": 5.12
+            },
+            {
+              "scene": "prize",
+              "mode": 1,
+              "frame": 22,
+              "hidden": false,
+              "atlasFrames": 64,
+              "restSeconds": 2.72
+            }
+          ]
+        },
+        {
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "keepers": [
+            {
+              "scene": "cabinet",
+              "mode": 2,
+              "frame": 0,
+              "hidden": true,
+              "atlasFrames": 64,
+              "restSeconds": 5.24
+            },
+            {
+              "scene": "prize",
+              "mode": 2,
+              "frame": 20,
+              "hidden": false,
+              "atlasFrames": 64,
+              "restSeconds": 2.84
+            }
+          ]
+        },
+        {
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "keepers": [
+            {
+              "scene": "cabinet",
+              "mode": 3,
+              "frame": 0,
+              "hidden": true,
+              "atlasFrames": 64,
+              "restSeconds": 5.36
+            },
+            {
+              "scene": "prize",
+              "mode": 3,
+              "frame": 17,
+              "hidden": false,
+              "atlasFrames": 64,
+              "restSeconds": 2.96
+            }
+          ]
+        }
+      ],
+      "presentationOnly": true,
+      "displayedAward": 0
+    },
+    "loading": {
+      "loading": [
+        {
+          "time": 2241,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": []
+        },
+        {
+          "time": 2324.4,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 3%"
+          ]
+        },
+        {
+          "time": 2407.7,
+          "ready": false,
+          "frames": [
+            1
+          ],
+          "labels": [
+            "Preparing the treasury 6%"
+          ]
+        },
+        {
+          "time": 2491.1,
+          "ready": false,
+          "frames": [
+            3
+          ],
+          "labels": [
+            "Preparing the treasury 6%"
+          ]
+        },
+        {
+          "time": 2574.4,
+          "ready": false,
+          "frames": [
+            6
+          ],
+          "labels": [
+            "Preparing the treasury 9%"
+          ]
+        },
+        {
+          "time": 2657.7,
+          "ready": false,
+          "frames": [
+            9
+          ],
+          "labels": [
+            "Preparing the treasury 13%"
+          ]
+        },
+        {
+          "time": 2741.1,
+          "ready": false,
+          "frames": [
+            11
+          ],
+          "labels": [
+            "Preparing the treasury 13%"
+          ]
+        },
+        {
+          "time": 2824.4,
+          "ready": false,
+          "frames": [
+            13
+          ],
+          "labels": [
+            "Preparing the treasury 16%"
+          ]
+        },
+        {
+          "time": 2924.4,
+          "ready": false,
+          "frames": [
+            17
+          ],
+          "labels": [
+            "Preparing the treasury 19%"
+          ]
+        },
+        {
+          "time": 3007.8,
+          "ready": false,
+          "frames": [
+            18
+          ],
+          "labels": [
+            "Preparing the treasury 19%"
+          ]
+        },
+        {
+          "time": 3091,
+          "ready": false,
+          "frames": [
+            21
+          ],
+          "labels": [
+            "Preparing the treasury 22%"
+          ]
+        },
+        {
+          "time": 3174.3,
+          "ready": false,
+          "frames": [
+            23
+          ],
+          "labels": [
+            "Preparing the treasury 25%"
+          ]
+        },
+        {
+          "time": 3257.7,
+          "ready": false,
+          "frames": [
+            26
+          ],
+          "labels": [
+            "Preparing the treasury 28%"
+          ]
+        },
+        {
+          "time": 3341,
+          "ready": false,
+          "frames": [
+            28
+          ],
+          "labels": [
+            "Preparing the treasury 31%"
+          ]
+        },
+        {
+          "time": 3424.3,
+          "ready": false,
+          "frames": [
+            31
+          ],
+          "labels": [
+            "Preparing the treasury 34%"
+          ]
+        },
+        {
+          "time": 3507.7,
+          "ready": false,
+          "frames": [
+            33
+          ],
+          "labels": [
+            "Preparing the treasury 38%"
+          ]
+        },
+        {
+          "time": 3591,
+          "ready": false,
+          "frames": [
+            36
+          ],
+          "labels": [
+            "Preparing the treasury 41%"
+          ]
+        },
+        {
+          "time": 3674.4,
+          "ready": false,
+          "frames": [
+            38
+          ],
+          "labels": [
+            "Preparing the treasury 44%"
+          ]
+        },
+        {
+          "time": 3757.7,
+          "ready": false,
+          "frames": [
+            41
+          ],
+          "labels": [
+            "Preparing the treasury 47%"
+          ]
+        },
+        {
+          "time": 3841.1,
+          "ready": false,
+          "frames": [
+            44
+          ],
+          "labels": [
+            "Preparing the treasury 50%"
+          ]
+        },
+        {
+          "time": 3924.3,
+          "ready": false,
+          "frames": [
+            46
+          ],
+          "labels": [
+            "Preparing the treasury 50%"
+          ]
+        },
+        {
+          "time": 4007.7,
+          "ready": false,
+          "frames": [
+            49
+          ],
+          "labels": [
+            "Preparing the treasury 56%"
+          ]
+        },
+        {
+          "time": 4091,
+          "ready": false,
+          "frames": [
+            51
+          ],
+          "labels": [
+            "Preparing the treasury 59%"
+          ]
+        },
+        {
+          "time": 4174.3,
+          "ready": false,
+          "frames": [
+            54
+          ],
+          "labels": [
+            "Preparing the treasury 63%"
+          ]
+        },
+        {
+          "time": 4257.7,
+          "ready": false,
+          "frames": [
+            56
+          ],
+          "labels": [
+            "Preparing the treasury 63%"
+          ]
+        },
+        {
+          "time": 4341,
+          "ready": false,
+          "frames": [
+            58
+          ],
+          "labels": [
+            "Preparing the treasury 66%"
+          ]
+        },
+        {
+          "time": 4424.3,
+          "ready": false,
+          "frames": [
+            61
+          ],
+          "labels": [
+            "Preparing the treasury 69%"
+          ]
+        },
+        {
+          "time": 4507.7,
+          "ready": false,
+          "frames": [
+            63
+          ],
+          "labels": [
+            "Preparing the treasury 72%"
+          ]
+        },
+        {
+          "time": 4591,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 75%"
+          ]
+        },
+        {
+          "time": 4674.3,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 81%"
+          ]
+        },
+        {
+          "time": 4757.6,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 84%"
+          ]
+        },
+        {
+          "time": 4841,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 88%"
+          ]
+        },
+        {
+          "time": 4924.3,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 91%"
+          ]
+        },
+        {
+          "time": 5007.7,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 94%"
+          ]
+        },
+        {
+          "time": 5091,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 97%"
+          ]
+        },
+        {
+          "time": 5174.3,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 97%"
+          ]
+        },
+        {
+          "time": 5257.6,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Preparing the treasury 100%"
+          ]
+        },
+        {
+          "time": 5341,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Every lantern is ready"
+          ]
+        },
+        {
+          "time": 5424.3,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Every lantern is ready"
+          ]
+        },
+        {
+          "time": 5507.6,
+          "ready": false,
+          "frames": [
+            0
+          ],
+          "labels": [
+            "Every lantern is ready"
+          ]
+        },
+        {
+          "time": 5591,
+          "ready": false,
+          "frames": [
+            1
+          ],
+          "labels": [
+            "Every lantern is ready"
+          ]
+        },
+        {
+          "time": 5674.2,
+          "ready": true,
+          "frames": [
+            4,
+            1
+          ],
+          "labels": [
+            "Every lantern is ready"
+          ]
+        },
+        {
+          "time": 5757.6,
+          "ready": true,
+          "frames": [
+            6,
+            3
+          ],
+          "labels": [
+            "Every lantern is ready"
+          ]
+        },
+        {
+          "time": 5840.9,
+          "ready": true,
+          "frames": [
+            9,
+            6
+          ],
+          "labels": [
+            "Every lantern is ready"
+          ]
+        }
+      ],
+      "observed100": true,
+      "observedCompletion": true,
+      "loadingFrames": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        9,
+        11,
+        13,
+        17,
+        18,
+        21,
+        23,
+        26,
+        28,
+        31,
+        33,
+        36,
+        38,
+        41,
+        44,
+        46,
+        49,
+        51,
+        54,
+        56,
+        58,
+        61,
+        63
+      ],
+      "lifecycle": {
+        "hide": {
+          "frame": 19,
+          "paused": true
+        },
+        "held": {
+          "frame": 19,
+          "paused": true
+        },
+        "resumed": {
+          "frame": 30,
+          "paused": false
+        }
+      },
+      "reducedMotion": {
+        "before": [
+          {
+            "frame": 0,
+            "reduced": true
+          }
+        ],
+        "after": [
+          {
+            "frame": 0,
+            "reduced": true
+          }
+        ]
+      },
+      "pageErrors": [],
+      "requestFailed": []
+    },
+    "frameCallbackSummary": {
+      "samplesPerCaseSeconds": 3,
+      "rAFp95MaxMs": 16.79999999998836,
+      "rAFworstMs": 16.800000000046566,
+      "note": "rAF callback spacing, not physical-device GPU/CPU frame-time certification; captures excluded from these sampling windows."
+    },
+    "browserVersion": "154.0.8037.98"
+  },
+  "validation": {
+    "npmTest": "pass, including 127 named-art registrations, wallet/reward/audio/five-language/four-mode/loader/clearance regressions",
+    "typecheck": "pass",
+    "webMobileBuild": "Creator3.8.8 reports Finished at2026-10-09 10:50:21+08; CLI exits36 during existing worker teardown",
+    "browserPageErrors": [],
+    "failedRequests": [],
+    "optionalFavicon": "Existing favicon.ico404 is not an artwork or gameplay error."
+  },
+  "evidence": {
+    "runtimeGif": {
+      "source": "actual Chromium canvas video via Playwright CLI, not isolated atlas",
+      "sourceVideoDimensions": [
+        800,
+        450
+      ],
+      "crop": [
+        0,
+        0,
+        232,
+        450
+      ],
+      "startSeconds": 38.22,
+      "durationSeconds": 3.0,
+      "fps": 25,
+      "frames": 75,
+      "note": "Recorder produced a padded landscape video; removed empty right-hand padding. Compressed recording is25fps; actual gesture atlas updates at30fps."
+    },
+    "directory": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/mascot-calm",
+    "screenshots": [
+      "halls-calm-contact.jpg",
+      "prizes-calm-contact.jpg",
+      "loading-calm-390.png",
+      "cabinet-otter-390.png",
+      "cabinet-rabbit-320.png",
+      "cabinet-dragon-430.png"
+    ],
+    "userPreview": "Existing in-app tab reloaded; wallet309728 retained; no user profile reset or spin executed"
+  },
+  "limits": [
+    "Local 2D articulation of generated raster art, not a new fully generated 64-pose film, a skeletal character or3D animation.",
+    "Prize tests used zero-amount presentation-only previews; actual awards/guarantees are covered separately by the existing pure math/wallet tests.",
+    "Reduced-motion and hide/show use browser/engine emulation, not physical iPhone background/resume.",
+    "No real-device performance, clean release-build or App Store certification."
+  ],
+  "cleanup": {
+    "testBrowser": "f33-calm-natural closed successfully",
+    "userInAppPreview": "left open, refreshed",
+    "previewServer": "left running, HTTP200"
+  }
+}

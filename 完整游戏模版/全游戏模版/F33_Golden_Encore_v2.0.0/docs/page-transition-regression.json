@@ -1,0 +1,253 @@
+{
+  "date": "2026-10-08",
+  "runtime": "Chromium headless mobile web",
+  "loading": [
+    {
+      "kind": "first latest-build navigation",
+      "viewport": "390x844",
+      "visibleMs": 3181.4,
+      "minCompositeCoverage": 1,
+      "maxRoots": 2
+    },
+    {
+      "kind": "warm reload",
+      "viewport": "390x844",
+      "visibleMs": 3209.6,
+      "minCompositeCoverage": 1,
+      "maxRoots": 2
+    }
+  ],
+  "transitions": [
+    {
+      "page": "home",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "store",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "account",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "ledger",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "account",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "rewards",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "home",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "rank",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "home",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    },
+    {
+      "page": "game",
+      "minCompositeCoverage": 1,
+      "maxRoots": 2,
+      "finalRoots": 1,
+      "shield": false
+    }
+  ],
+  "screenshots": [
+    "docs/screenshots/loading-transition-390.png",
+    "docs/screenshots/transition-home-390.png",
+    "docs/screenshots/cabinet-warm-music-390.png"
+  ],
+  "audio": {
+    "measuredPCM": "audio-warmth-regression.json",
+    "perceptualLimitation": "No physical speaker/headphone listening certification",
+    "muteCheck": {
+      "enabled": false,
+      "music": {
+        "desired": "quiet",
+        "audible": false,
+        "ducked": false,
+        "voices": [
+          {
+            "scene": "quiet",
+            "requested": false,
+            "volume": 0,
+            "target": 0
+          },
+          {
+            "scene": "hall",
+            "requested": false,
+            "volume": 0,
+            "target": 0
+          }
+        ]
+      }
+    },
+    "unmuteCheck": {
+      "desired": "quiet",
+      "audible": true,
+      "ducked": false,
+      "voices": [
+        {
+          "scene": "quiet",
+          "requested": true,
+          "volume": 0.17,
+          "target": 0.17
+        },
+        {
+          "scene": "hall",
+          "requested": false,
+          "volume": 0,
+          "target": 0
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "dailyReward": {
+    "before": 5000,
+    "after": 5500,
+    "creditedOnce": true,
+    "events": [
+      {
+        "channel": "score",
+        "clip": "reward-gift-open",
+        "volume": 0.48,
+        "t": 649025.3999999985
+      },
+      {
+        "channel": "score",
+        "clip": "reward-gift-open",
+        "volume": 0.48,
+        "t": 649027
+      },
+      {
+        "channel": "coins",
+        "clip": "reward-coin-shower",
+        "volume": 0.36,
+        "t": 649290.3000000007
+      },
+      {
+        "channel": "coins",
+        "clip": "reward-coin-shower",
+        "volume": 0.36,
+        "t": 649293.8999999985
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 649324.3999999985
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 649327
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 649441.8000000007
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 649558.1999999993
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 649674.5999999978
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 649791.6999999993
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 649941.3000000007
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 650089.3000000007
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-counter",
+        "volume": 0.23,
+        "t": 650224.1999999993
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-count-complete",
+        "volume": 0.42,
+        "t": 650308.3999999985
+      },
+      {
+        "channel": "counter",
+        "clip": "reward-count-complete",
+        "volume": 0.42,
+        "t": 650310.3999999985
+      },
+      {
+        "channel": "collect",
+        "clip": "reward-collect",
+        "volume": 0.48,
+        "t": 650330.6999999993
+      },
+      {
+        "channel": "collect",
+        "clip": "reward-collect",
+        "volume": 0.48,
+        "t": 650330.8999999985
+      }
+    ],
+    "musicUnducked": true
+  }
+}

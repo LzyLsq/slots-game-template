@@ -1,0 +1,583 @@
+{
+  "date": "2026-10-10",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "scope": "In-place BIG/SUPER presentation in the existing cabinet; no economy or outcome changes",
+  "implementation": {
+    "localOverlay": true,
+    "sameCabinetReelsKeeper": true,
+    "generatedRasterOnly": true,
+    "bigCoinCapacity": 32,
+    "superCoinCapacity": 48,
+    "continuousIndependentLayers": true,
+    "localCollectFadeSeconds": 0.24,
+    "originalPhysicalControlReused": true,
+    "ordinaryRetained": true,
+    "newCollectTranslations": 4,
+    "featureControlRefreshedWithoutRemount": true
+  },
+  "checks": {
+    "npmTest": "PASS",
+    "typecheck": "PASS",
+    "simulatedAnimationCadences": [
+      5,
+      15,
+      30,
+      60,
+      120
+    ],
+    "mathematicalViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        375,
+        812
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        739,
+        766
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        1280,
+        720
+      ]
+    ],
+    "sceneAdapterCombinations": 16,
+    "runtimeCases": 5,
+    "allRuntimeIdentitiesUnchanged": true,
+    "runtimeCoinAndSpinWrites": false,
+    "runtimeErrorWarnLogs": []
+  },
+  "webBuild": {
+    "finishedAt": "2026-10-10 12:26:58+08:00",
+    "creatorExitCode": 36,
+    "warning": "Cocos script worker emits SIGTERM during build shutdown; the web build is marked Finished and was run successfully, but clean release-build validation remains outstanding."
+  },
+  "evidence": [
+    {
+      "mode": 1,
+      "tier": "big",
+      "viewport": [
+        320,
+        568
+      ],
+      "ready": {
+        "phase": "ready",
+        "tier": "big",
+        "mode": 1,
+        "surface": "Node.937",
+        "backdrop": "Node.938",
+        "reels": [
+          "Node.982",
+          "Node.985",
+          "Node.988",
+          "Node.991",
+          "Node.994",
+          "Node.997",
+          "Node.1000",
+          "Node.1003",
+          "Node.1006",
+          "Node.1009",
+          "Node.1012",
+          "Node.1015",
+          "Node.1018",
+          "Node.1021",
+          "Node.1024"
+        ],
+        "keepers": [
+          "Node.938"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "during": {
+        "phase": "celebrating",
+        "tier": "big",
+        "mode": 1,
+        "surface": "Node.937",
+        "backdrop": "Node.938",
+        "reels": [
+          "Node.982",
+          "Node.985",
+          "Node.988",
+          "Node.991",
+          "Node.994",
+          "Node.997",
+          "Node.1000",
+          "Node.1003",
+          "Node.1006",
+          "Node.1009",
+          "Node.1012",
+          "Node.1015",
+          "Node.1018",
+          "Node.1021",
+          "Node.1024"
+        ],
+        "keepers": [
+          "Node.938"
+        ],
+        "overlayParent": "Node.937",
+        "balance": 310728,
+        "spins": 88
+      },
+      "collected": {
+        "phase": "collected",
+        "tier": "big",
+        "mode": 1,
+        "surface": "Node.937",
+        "backdrop": "Node.938",
+        "reels": [
+          "Node.982",
+          "Node.985",
+          "Node.988",
+          "Node.991",
+          "Node.994",
+          "Node.997",
+          "Node.1000",
+          "Node.1003",
+          "Node.1006",
+          "Node.1009",
+          "Node.1012",
+          "Node.1015",
+          "Node.1018",
+          "Node.1021",
+          "Node.1024"
+        ],
+        "keepers": [
+          "Node.938"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "logs": []
+    },
+    {
+      "mode": 2,
+      "tier": "super",
+      "viewport": [
+        739,
+        766
+      ],
+      "earlyCollect": true,
+      "ready": {
+        "phase": "ready",
+        "tier": "super",
+        "mode": 2,
+        "surface": "Node.336",
+        "backdrop": "Node.338",
+        "reels": [
+          "Node.382",
+          "Node.385",
+          "Node.388",
+          "Node.391",
+          "Node.394",
+          "Node.397",
+          "Node.400",
+          "Node.403",
+          "Node.406",
+          "Node.409",
+          "Node.412",
+          "Node.415",
+          "Node.418",
+          "Node.421",
+          "Node.424"
+        ],
+        "keepers": [
+          "Node.338"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "during": {
+        "phase": "celebrating",
+        "tier": "super",
+        "mode": 2,
+        "surface": "Node.336",
+        "backdrop": "Node.338",
+        "reels": [
+          "Node.382",
+          "Node.385",
+          "Node.388",
+          "Node.391",
+          "Node.394",
+          "Node.397",
+          "Node.400",
+          "Node.403",
+          "Node.406",
+          "Node.409",
+          "Node.412",
+          "Node.415",
+          "Node.418",
+          "Node.421",
+          "Node.424"
+        ],
+        "keepers": [
+          "Node.338"
+        ],
+        "overlayParent": "Node.336",
+        "balance": 310728,
+        "spins": 88
+      },
+      "collected": {
+        "phase": "collected",
+        "tier": "super",
+        "mode": 2,
+        "surface": "Node.336",
+        "backdrop": "Node.338",
+        "reels": [
+          "Node.382",
+          "Node.385",
+          "Node.388",
+          "Node.391",
+          "Node.394",
+          "Node.397",
+          "Node.400",
+          "Node.403",
+          "Node.406",
+          "Node.409",
+          "Node.412",
+          "Node.415",
+          "Node.418",
+          "Node.421",
+          "Node.424"
+        ],
+        "keepers": [
+          "Node.338"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "logs": []
+    },
+    {
+      "mode": 3,
+      "tier": "super",
+      "viewport": [
+        390,
+        844
+      ],
+      "ready": {
+        "phase": "ready",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.900",
+        "backdrop": "Node.901",
+        "reels": [
+          "Node.945",
+          "Node.948",
+          "Node.951",
+          "Node.954",
+          "Node.957",
+          "Node.960",
+          "Node.963",
+          "Node.966",
+          "Node.969",
+          "Node.972",
+          "Node.975",
+          "Node.978",
+          "Node.981",
+          "Node.984",
+          "Node.987"
+        ],
+        "keepers": [
+          "Node.901"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "during": {
+        "phase": "celebrating",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.900",
+        "backdrop": "Node.901",
+        "reels": [
+          "Node.945",
+          "Node.948",
+          "Node.951",
+          "Node.954",
+          "Node.957",
+          "Node.960",
+          "Node.963",
+          "Node.966",
+          "Node.969",
+          "Node.972",
+          "Node.975",
+          "Node.978",
+          "Node.981",
+          "Node.984",
+          "Node.987"
+        ],
+        "keepers": [
+          "Node.901"
+        ],
+        "overlayParent": "Node.900",
+        "balance": 310728,
+        "spins": 88
+      },
+      "collected": {
+        "phase": "collected",
+        "tier": "super",
+        "mode": 3,
+        "surface": "Node.900",
+        "backdrop": "Node.901",
+        "reels": [
+          "Node.945",
+          "Node.948",
+          "Node.951",
+          "Node.954",
+          "Node.957",
+          "Node.960",
+          "Node.963",
+          "Node.966",
+          "Node.969",
+          "Node.972",
+          "Node.975",
+          "Node.978",
+          "Node.981",
+          "Node.984",
+          "Node.987"
+        ],
+        "keepers": [
+          "Node.901"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "logs": []
+    },
+    {
+      "mode": 0,
+      "tier": "big",
+      "viewport": [
+        390,
+        844
+      ],
+      "ready": {
+        "phase": "ready",
+        "tier": "big",
+        "mode": 0,
+        "surface": "Node.74",
+        "backdrop": "Node.75",
+        "reels": [
+          "Node.119",
+          "Node.122",
+          "Node.125",
+          "Node.128",
+          "Node.131",
+          "Node.134",
+          "Node.137",
+          "Node.140",
+          "Node.143",
+          "Node.146",
+          "Node.149",
+          "Node.152",
+          "Node.155",
+          "Node.158",
+          "Node.161"
+        ],
+        "keepers": [
+          "Node.75"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "during": {
+        "phase": "celebrating",
+        "tier": "big",
+        "mode": 0,
+        "surface": "Node.74",
+        "backdrop": "Node.75",
+        "reels": [
+          "Node.119",
+          "Node.122",
+          "Node.125",
+          "Node.128",
+          "Node.131",
+          "Node.134",
+          "Node.137",
+          "Node.140",
+          "Node.143",
+          "Node.146",
+          "Node.149",
+          "Node.152",
+          "Node.155",
+          "Node.158",
+          "Node.161"
+        ],
+        "keepers": [
+          "Node.75"
+        ],
+        "overlayParent": "Node.74",
+        "balance": 310728,
+        "spins": 88
+      },
+      "collected": {
+        "phase": "collected",
+        "tier": "big",
+        "mode": 0,
+        "surface": "Node.74",
+        "backdrop": "Node.75",
+        "reels": [
+          "Node.119",
+          "Node.122",
+          "Node.125",
+          "Node.128",
+          "Node.131",
+          "Node.134",
+          "Node.137",
+          "Node.140",
+          "Node.143",
+          "Node.146",
+          "Node.149",
+          "Node.152",
+          "Node.155",
+          "Node.158",
+          "Node.161"
+        ],
+        "keepers": [
+          "Node.75"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "logs": []
+    },
+    {
+      "mode": 0,
+      "tier": "big",
+      "viewport": [
+        390,
+        844
+      ],
+      "reduced": true,
+      "ready": {
+        "phase": "ready",
+        "tier": "big",
+        "mode": 0,
+        "surface": "Node.319",
+        "backdrop": "Node.320",
+        "reels": [
+          "Node.336",
+          "Node.339",
+          "Node.342",
+          "Node.345",
+          "Node.348",
+          "Node.351",
+          "Node.354",
+          "Node.357",
+          "Node.360",
+          "Node.363",
+          "Node.366",
+          "Node.369",
+          "Node.372",
+          "Node.375",
+          "Node.378"
+        ],
+        "keepers": [
+          "Node.320"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "during": {
+        "phase": "celebrating",
+        "tier": "big",
+        "mode": 0,
+        "surface": "Node.319",
+        "backdrop": "Node.320",
+        "reels": [
+          "Node.336",
+          "Node.339",
+          "Node.342",
+          "Node.345",
+          "Node.348",
+          "Node.351",
+          "Node.354",
+          "Node.357",
+          "Node.360",
+          "Node.363",
+          "Node.366",
+          "Node.369",
+          "Node.372",
+          "Node.375",
+          "Node.378"
+        ],
+        "keepers": [
+          "Node.320"
+        ],
+        "overlayParent": "Node.319",
+        "balance": 310728,
+        "spins": 88
+      },
+      "collected": {
+        "phase": "collected",
+        "tier": "big",
+        "mode": 0,
+        "surface": "Node.319",
+        "backdrop": "Node.320",
+        "reels": [
+          "Node.336",
+          "Node.339",
+          "Node.342",
+          "Node.345",
+          "Node.348",
+          "Node.351",
+          "Node.354",
+          "Node.357",
+          "Node.360",
+          "Node.363",
+          "Node.366",
+          "Node.369",
+          "Node.372",
+          "Node.375",
+          "Node.378"
+        ],
+        "keepers": [
+          "Node.320"
+        ],
+        "overlayParent": null,
+        "balance": 310728,
+        "spins": 88
+      },
+      "logs": []
+    }
+  ],
+  "artifacts": [
+    "output/playwright/cabinet-big-live-390.webp",
+    "output/playwright/cabinet-big-live-390.png",
+    "output/playwright/cabinet-super-live-390.png",
+    "output/playwright/cabinet-super-final-390.png",
+    "output/playwright/cabinet-big-live-320.png",
+    "output/playwright/cabinet-super-live-739.png",
+    "output/playwright/cabinet-reduced-live-390.png"
+  ],
+  "limits": [
+    "Runtime QA used explicit read-only debug previews, not real paid spins.",
+    "Animated WebP is actual browser screenshot sampling with timestamps; it has no audio and is not a device frame-time benchmark.",
+    "Audio routing/resources tested; no perceptual loudspeaker QA was performed in this pass.",
+    "No native phone, Metal, StoreKit or App Store release certification in this pass."
+  ]
+}

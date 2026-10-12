@@ -1,0 +1,304 @@
+{
+  "scope": "LOCAL VIRTUAL-COIN DEMO · fixed-stake post-onboarding simulation, not certified RTP",
+  "implementation": "source VaultMath module",
+  "baseOdds": {
+    "none": 0.576,
+    "ordinary": 0.34,
+    "big": 0.08,
+    "super": 0.004
+  },
+  "baseMultipliers": {
+    "none": 0,
+    "ordinary": 1,
+    "big": 4,
+    "super": 8
+  },
+  "featureMath": {
+    "pearlUpgradeChance": 0.06,
+    "tide": {
+      "target": 100,
+      "gains": {
+        "none": 3,
+        "ordinary": 8,
+        "big": 17,
+        "super": 30
+      },
+      "multiplier": 3
+    },
+    "forge": {
+      "target": 60,
+      "multiplier": 2
+    },
+    "dragon": {
+      "target": 3,
+      "multiplier": 5
+    }
+  },
+  "results": [
+    {
+      "mode": 0,
+      "rounds": 1000000,
+      "seed": 93817,
+      "stake": 100,
+      "board": {
+        "none": 575488,
+        "ordinary": 340162,
+        "big": 80265,
+        "super": 4085
+      },
+      "paid": {
+        "none": 559059,
+        "ordinary": 313842,
+        "big": 123014,
+        "super": 4085
+      },
+      "featureAwards": {
+        "none": 16429,
+        "ordinary": 26320,
+        "big": 13202,
+        "super": 1109
+      },
+      "histogram": {
+        "0": 559059,
+        "1": 313842,
+        "3": 16429,
+        "4": 93383,
+        "7": 13202,
+        "8": 2976,
+        "11": 1109
+      },
+      "observed": {
+        "anyAward": 0.440941,
+        "refund": 0.313842,
+        "big": 0.123014,
+        "super": 0.004085,
+        "profit": 0.127099,
+        "payoutRatio": 0.865082
+      },
+      "expected": {
+        "board": {
+          "none": 0.576,
+          "ordinary": 0.34,
+          "big": 0.08,
+          "super": 0.004
+        },
+        "paid": {
+          "none": 0.5594537229320403,
+          "ordinary": 0.3137736693770038,
+          "big": 0.12277260769095594,
+          "super": 0.004
+        },
+        "histogram": {
+          "0": 0.5594537229320403,
+          "1": 0.3137736693770038,
+          "3": 0.016546277067959688,
+          "4": 0.09316293780194453,
+          "7": 0.013063392821051715,
+          "8": 0.002844108930104554,
+          "11": 0.0011558910698954465
+        },
+        "payoutRatio": 0.8629756747457094
+      }
+    },
+    {
+      "mode": 1,
+      "rounds": 1000000,
+      "seed": 93818,
+      "stake": 100,
+      "board": {
+        "none": 576174,
+        "ordinary": 319466,
+        "big": 94268,
+        "super": 10092
+      },
+      "paid": {
+        "none": 576174,
+        "ordinary": 319466,
+        "big": 94268,
+        "super": 10092
+      },
+      "featureAwards": {
+        "none": 0,
+        "ordinary": 0,
+        "big": 0,
+        "super": 0
+      },
+      "histogram": {
+        "0": 576174,
+        "1": 319466,
+        "4": 94268,
+        "8": 10092
+      },
+      "observed": {
+        "anyAward": 0.42382600000000004,
+        "refund": 0.319466,
+        "big": 0.094268,
+        "super": 0.010092,
+        "profit": 0.10436,
+        "payoutRatio": 0.777274
+      },
+      "expected": {
+        "board": {
+          "none": 0.576,
+          "ordinary": 0.3196,
+          "big": 0.094376,
+          "super": 0.010023999999999998
+        },
+        "paid": {
+          "none": 0.576,
+          "ordinary": 0.3196,
+          "big": 0.094376,
+          "super": 0.010023999999999998
+        },
+        "histogram": {
+          "0": 0.576,
+          "1": 0.3196,
+          "4": 0.094376,
+          "8": 0.010023999999999998
+        },
+        "payoutRatio": 0.777296
+      }
+    },
+    {
+      "mode": 2,
+      "rounds": 1000000,
+      "seed": 93819,
+      "stake": 100,
+      "board": {
+        "none": 576584,
+        "ordinary": 339739,
+        "big": 79777,
+        "super": 3900
+      },
+      "paid": {
+        "none": 538187,
+        "ordinary": 305567,
+        "big": 152346,
+        "super": 3900
+      },
+      "featureAwards": {
+        "none": 38397,
+        "ordinary": 34172,
+        "big": 11824,
+        "super": 766
+      },
+      "histogram": {
+        "0": 538187,
+        "1": 305567,
+        "2": 38397,
+        "3": 34172,
+        "4": 67953,
+        "6": 11824,
+        "8": 3134,
+        "10": 766
+      },
+      "observed": {
+        "anyAward": 0.46181300000000003,
+        "refund": 0.305567,
+        "big": 0.152346,
+        "super": 0.0039,
+        "profit": 0.156246,
+        "payoutRatio": 0.860365
+      },
+      "expected": {
+        "board": {
+          "none": 0.576,
+          "ordinary": 0.34,
+          "big": 0.08,
+          "super": 0.004
+        },
+        "paid": {
+          "none": 0.5376,
+          "ordinary": 0.30600000000000005,
+          "big": 0.1524,
+          "super": 0.004
+        },
+        "histogram": {
+          "0": 0.5376,
+          "1": 0.30600000000000005,
+          "2": 0.0384,
+          "3": 0.034,
+          "4": 0.068,
+          "6": 0.012,
+          "8": 0.0032,
+          "10": 0.0008
+        },
+        "payoutRatio": 0.8623999999999999
+      }
+    },
+    {
+      "mode": 3,
+      "rounds": 1000000,
+      "seed": 93820,
+      "stake": 100,
+      "board": {
+        "none": 576970,
+        "ordinary": 339173,
+        "big": 79847,
+        "super": 4010
+      },
+      "paid": {
+        "none": 576970,
+        "ordinary": 301297,
+        "big": 117723,
+        "super": 4010
+      },
+      "featureAwards": {
+        "none": 0,
+        "ordinary": 37876,
+        "big": 9060,
+        "super": 471
+      },
+      "histogram": {
+        "0": 576970,
+        "1": 301297,
+        "4": 70787,
+        "6": 37876,
+        "8": 3539,
+        "9": 9060,
+        "13": 471
+      },
+      "observed": {
+        "anyAward": 0.42303,
+        "refund": 0.301297,
+        "big": 0.117723,
+        "super": 0.00401,
+        "profit": 0.121733,
+        "payoutRatio": 0.9276760000000001
+      },
+      "expected": {
+        "board": {
+          "none": 0.576,
+          "ordinary": 0.34,
+          "big": 0.08,
+          "super": 0.004
+        },
+        "paid": {
+          "none": 0.576,
+          "ordinary": 0.3018875453928728,
+          "big": 0.11811245460712719,
+          "super": 0.004
+        },
+        "histogram": {
+          "0": 0.576,
+          "1": 0.3018875453928728,
+          "4": 0.07103236362185243,
+          "6": 0.03811245460712719,
+          "8": 0.0035516181810926212,
+          "9": 0.008967636378147575,
+          "13": 0.00044838181890737873
+        },
+        "payoutRatio": 0.9296423640209106
+      }
+    }
+  ],
+  "onboarding": {
+    "accounts": 10000,
+    "mixedRooms": true,
+    "reloadEverySpin": true,
+    "latestFirstBig": 5,
+    "latestFirstSuper": 10
+  },
+  "staleSaveGuarantee": "PASS: no forced prizes after the first ten spins",
+  "wallet": "PASS: debit then one settlement; aggregate cash flow exact"
+}

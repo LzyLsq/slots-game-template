@@ -1,0 +1,109 @@
+{
+  "reviewedAt": "2026-10-10T12:05:19+08:00",
+  "scope": "F33 detail polish; existing generated raster artwork reused; no new theme or economy changes",
+  "changes": [
+    "Single-pointer deliberate-tap binding; drag/cancel releases the complete control and cannot activate it",
+    "Generated treasury plus enters the virtual-coin shop without purchasing; aligned nonwrapping treasury labels",
+    "Explicit active-room visual state and centre-first podium with readable names; separate personal rank preserved",
+    "Monotonic smoothed progress follows actual art, animation and optional-material readiness; safe loading-title edge",
+    "Complete source-registered cabinet in wide windows; portrait framing retained; wallet and utility mounts scale together"
+  ],
+  "checks": {
+    "typecheck": "pass",
+    "npmTest": "pass",
+    "generatedArtRegistrations": 155,
+    "localizedKeys": 325,
+    "mathematicalLayoutViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        375,
+        812
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        739,
+        766
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        1280,
+        720
+      ]
+    ]
+  },
+  "actualBrowser": {
+    "type": "Codex in-app browser; no external Chrome opened in this pass",
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        739,
+        766
+      ],
+      [
+        1280,
+        720
+      ]
+    ],
+    "actions": [
+      "390px treasury plus enters store; product text inspected; no purchase performed",
+      "Hall swipe changes room; named room enters directly",
+      "Pearl rules returns to its cabinet, not the hall; cabinet background does not trigger spin",
+      "Pearl and Dragon spin-button drag-out does not start reels; Dragon immediately before/after shows COINS 310728, BET 500, WIN 0",
+      "320px Jade and hall bottom deck inspected; 390px Pearl, Ember and Dragon inspected",
+      "739x766 Ember complete title, keeper, aperture, controls and wallet inspected",
+      "1280x720 Dragon complete stage inspected; actual loading screenshot at 47 percent has a visible safe title and generated image fill",
+      "390px rank centre #1 JadeMoth, left #2 PearlRiver, right #3 KoiKeeper and separate player row inspected"
+    ],
+    "consoleAtFinalCabinetCheck": {
+      "warn": [],
+      "error": []
+    },
+    "saveHandling": "No reset, direct storage write, purchase, claim or deliberate spin for this QA; only immediate same-run drag-before/after equality asserted. Persisted values can differ across reloads.",
+    "consoleAtFinalShopCheck": {
+      "warn": [],
+      "error": []
+    },
+    "cleanup": "Temporary viewport override reset; in-app preview retained as deliverable; no external Chrome opened."
+  },
+  "build": {
+    "creatorVersion": "3.8.8",
+    "target": "web-mobile",
+    "reportedFinishedAt": "2026-10-10T11:59:32+08:00",
+    "exitCode": 36,
+    "diagnostic": "Existing script-worker SIGTERM teardown remains in build log. Finished output is served and runtime checked; not a certified clean release build.",
+    "log": "output/playwright/detail-build-20261010.log"
+  },
+  "evidence": [
+    "output/playwright/detail-home-390-final-20261010.png",
+    "output/playwright/detail-home-square-final-20261010.png",
+    "output/playwright/detail-ember-square-final-20261010.png",
+    "output/playwright/detail-dragon-390-final-20261010.png",
+    "output/playwright/detail-dragon-drag-cancel-20261010.png",
+    "output/playwright/detail-dragon-landscape-final-20261010.png",
+    "output/playwright/detail-loading-landscape-final-20261010.png",
+    "output/playwright/detail-rank-390-final-20261010.png",
+    "output/playwright/detail-store-390-final-20261010.png",
+    "output/playwright/detail-tests-20261010.log"
+  ],
+  "limitations": "Desktop browser viewport QA only; not physical mobile GPU, speaker listening, production backend/IAP or App Store certification."
+}

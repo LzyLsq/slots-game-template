@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "c00a66b2-bcb0-4b22-aebd-48d9bee3da11",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "c00a66b2-bcb0-4b22-aebd-48d9bee3da11@6c48a",
+      "displayName": "cabinet-fox-roles-motion",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "c00a66b2-bcb0-4b22-aebd-48d9bee3da11",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "c00a66b2-bcb0-4b22-aebd-48d9bee3da11@f9941",
+      "displayName": "cabinet-fox-roles-motion",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 3,
+        "offsetY": 0,
+        "trimX": 12,
+        "trimY": 10,
+        "width": 1294,
+        "height": 2428,
+        "rawWidth": 1312,
+        "rawHeight": 2448,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -647,
+            -1214,
+            0,
+            647,
+            -1214,
+            0,
+            -647,
+            1214,
+            0,
+            647,
+            1214,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            12,
+            2438,
+            1306,
+            2438,
+            12,
+            10,
+            1306,
+            10
+          ],
+          "nuv": [
+            0.009146341463414634,
+            0.004084967320261438,
+            0.9954268292682927,
+            0.004084967320261438,
+            0.009146341463414634,
+            0.9959150326797386,
+            0.9954268292682927,
+            0.9959150326797386
+          ],
+          "minPos": [
+            -647,
+            -1214,
+            0
+          ],
+          "maxPos": [
+            647,
+            1214,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c00a66b2-bcb0-4b22-aebd-48d9bee3da11@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "c00a66b2-bcb0-4b22-aebd-48d9bee3da11@6c48a"
+  }
+}

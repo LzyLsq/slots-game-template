@@ -1,0 +1,20 @@
+{
+  "name": "f33-fortune-lantern-house",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Fortune Lantern House \u2014 collector reel treasure game",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "test": "node tools/check-art.mjs && node --import tsx tools/vault-math-test.ts && node --import tsx tools/probability-save-test.ts && node --import tsx tools/probability-audit.ts && node --import tsx tools/daily-journal-test.ts && node --import tsx tools/language-test.ts && node --import tsx tools/inbox-test.ts && node --import tsx tools/spin-wallet-test.ts && node --import tsx tools/reward-audio-test.ts && node --import tsx tools/keeper-gesture-test.ts && node --import tsx tools/stable-face-blink-test.ts && node --import tsx tools/blink-sequence-test.ts && python3 tools/check-keeper-blinks.py && node --import tsx tools/keeper-clearance-test.ts && node --import tsx tools/hall-fortune-motion-test.ts && node --import tsx tools/hall-ambience-test.ts && node --import tsx tools/hall-room-gesture-test.ts && node --import tsx tools/hall-lower-deck-test.ts && python3 tools/check-hall-integration.py && python3 tools/check-cast-motion.py && node --import tsx tools/theme-art-test.ts && node --import tsx tools/shop-layout-test.ts && node --import tsx tools/scene-music-test.ts && node --import tsx tools/page-transition-test.ts && node --import tsx tools/mode-entry-loading-test.ts && node --import tsx tools/audio-warmth-test.ts && node --import tsx tools/audio-choreography-test.ts && node --import tsx tools/audio-feedback-test.ts && node --import tsx tools/task-gold-motion-test.ts && node --import tsx tools/detail-polish-test.ts && node --import tsx tools/cabinet-win-test.ts && node --import tsx tools/service-detail-test.ts && node --import tsx tools/art-preparation-test.ts",
+    "typecheck:math": "tsc -p tsconfig.math.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  },
+  "uuid": "bc9a824e-85d2-4eb2-a979-53eb3ff4c3a3"
+}

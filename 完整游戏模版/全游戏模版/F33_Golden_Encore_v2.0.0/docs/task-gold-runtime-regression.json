@@ -1,0 +1,81 @@
+{
+  "initial": 5294,
+  "results": [
+    {
+      "mode": 0,
+      "before": 5294,
+      "coins": 5294,
+      "overlay": false,
+      "page": "home"
+    },
+    {
+      "mode": 1,
+      "before": 5294,
+      "coins": 5294,
+      "overlay": false,
+      "page": "home"
+    },
+    {
+      "mode": 2,
+      "before": 5294,
+      "coins": 5294,
+      "overlay": false,
+      "page": "home"
+    },
+    {
+      "mode": 3,
+      "before": 5294,
+      "coins": 5294,
+      "overlay": false,
+      "page": "home"
+    }
+  ],
+  "errors": [],
+  "date": "2026-10-10",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "context": "Isolated in-memory QA browser; the user preview and save were not altered.",
+  "scope": "Four presentation-only reward previews and four real KEEP button clicks. Previews never credit the wallet.",
+  "viewports": [
+    [
+      320,
+      568
+    ],
+    [
+      375,
+      812
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      430,
+      932
+    ],
+    [
+      360,
+      640
+    ],
+    [
+      739,
+      766
+    ],
+    [
+      1024,
+      768
+    ]
+  ],
+  "screenshots": "output/playwright/treasure-natural-*.png and treasure-final-*-ready.png",
+  "recording": "output/playwright/treasure-keepers-final.webm",
+  "validation": [
+    "npm run typecheck passed",
+    "npm test passed",
+    "Cocos Creator 3.8.8 web-mobile Finished at 2026-10-10 10:35:14 +08:00"
+  ],
+  "limitations": [
+    "Creator has the existing exit-36 teardown issue after Finished.",
+    "Desktop browser review, not real-device FPS or App Store certification.",
+    "Rapid responsive reloads had transient localhost connection resets; the recorded playback reported no JavaScript exceptions."
+  ],
+  "cleanup": "Own isolated QA Chrome closed; localhost41734 responds HTTP200; user browser left untouched."
+}

@@ -1,0 +1,239 @@
+{
+  "date": "2026-10-10",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "scope": "Four theme-specific room entry/loading animations; existing app startup loading retained. Presentation-only; no wager or economy changes.",
+  "implementation": {
+    "themes": [
+      "Jade Ferry — generated ferry scene, jade lantern emblem and tide drift",
+      "Pearl Garden — generated garden scene, lotus emblem and gentle flower sway",
+      "Ember Foundry — generated forge scene, ingot emblem and grounded gold gleam",
+      "Celestial Vault — generated dragon treasury scene, orb emblem and bounded orbital glint"
+    ],
+    "generatedRasterOnly": true,
+    "newBitmapAssets": 0,
+    "cabinetShownAsLoadingScene": false,
+    "sceneRegistration": "Existing source-registered KeeperGestureView and HallAmbienceView; no screen-space duplicate character or whole-mascot scaling.",
+    "progressFixture": "Existing ui-wide-ticket + button-gold; fill is cropped inner core of generated fx-gilded-light at [96,180,324,188]. Runtime cropped SpriteFrame is released by its owner.",
+    "progressSource": [
+      "cabinet/background/controls",
+      "unique reel symbols",
+      "cabinet keeper/blink banks",
+      "prize keeper/blink/title art"
+    ],
+    "progressMeaning": "Smoothed completed prerequisite groups, after the existing generated loading scene has been available. Cache-ready phase shows ready/entering copy, not a fabricated timed 0-to-100 load.",
+    "minimumCachedWelcomeSeconds": 2.05,
+    "readinessHoldSeconds": 0.36,
+    "reducedMotionMinimumSeconds": 0.24,
+    "reducedMotionReadyHoldSeconds": 0.12,
+    "preparationVisibleTimeoutSeconds": 18,
+    "fiveLanguageCopy": true,
+    "captionFontSize": 36,
+    "footerFontSize": 33,
+    "interaction": "Single mode selection -> protected room welcome/loading -> automatically enter selected cabinet. No second start confirmation.",
+    "startup": "Original global startup loading retained; debug direct-game startup also gets selected-room entry. Returning from rules to the same cabinet does not restart room loading.",
+    "lifecycle": [
+      "input shield and duplicate entry lock survive page fade",
+      "resize retains model progress/time and renders entry rather than old page",
+      "visibility/disable pause and show/enable resume",
+      "destroy/cancel ignore stale promises",
+      "failed/timeout preparation returns to hall with localized feedback",
+      "owned cropped frame disposed; no per-frame frame allocation"
+    ]
+  },
+  "checks": {
+    "npmTest": "PASS — full chain",
+    "typecheck": "PASS",
+    "preparingPhaseSamples": 5120,
+    "cadences": [
+      30,
+      60,
+      90,
+      120,
+      20
+    ],
+    "mathematicalViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        360,
+        640
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        739,
+        766
+      ],
+      [
+        844,
+        390
+      ]
+    ],
+    "realProductionMethodRegression": [
+      "four genuine readiness batches",
+      "post-fade duplicate lock",
+      "resize",
+      "wallet/bet/spin invariant",
+      "rules return",
+      "failure fallback",
+      "stale promise cancellation",
+      "direct-game startup loading"
+    ],
+    "viewAdapterRegression": [
+      "generated core crop",
+      "phase copy",
+      "bounded unique emblem motion",
+      "no per-update SpriteFrame creation",
+      "owned frame release without shared original release"
+    ]
+  },
+  "runtime": {
+    "browser": "Existing Codex in-app browser, original tab 5; no external/Google Chrome or additional temporary tab opened.",
+    "buildFinishedAt": "2026-10-10T13:34:07+08:00",
+    "url": "http://127.0.0.1:41734/",
+    "actualViewports": [
+      [
+        393,
+        769
+      ],
+      [
+        320,
+        568
+      ],
+      [
+        739,
+        766
+      ]
+    ],
+    "cases": [
+      {
+        "mode": "jade",
+        "viewport": [
+          393,
+          769
+        ],
+        "loadingScreenshot": "output/playwright/mode-entry-jade-loading.png",
+        "cabinetScreenshot": "output/playwright/mode-entry-jade-game.png",
+        "screenshotSamples": 90,
+        "screenshotSequenceDurationMs": 4978,
+        "minimumMeanLuminance": 90.561,
+        "observed": "Corresponding theme loading followed by corresponding playable cabinet; title, progress panel and footer in bounds."
+      },
+      {
+        "mode": "pearl",
+        "viewport": [
+          393,
+          769
+        ],
+        "loadingScreenshot": "output/playwright/mode-entry-pearl-loading.png",
+        "cabinetScreenshot": "output/playwright/mode-entry-pearl-game.png",
+        "screenshotSamples": 90,
+        "screenshotSequenceDurationMs": 7079,
+        "minimumMeanLuminance": 99.835,
+        "observed": "Corresponding theme loading followed by corresponding playable cabinet; title, progress panel and footer in bounds."
+      },
+      {
+        "mode": "ember",
+        "viewport": [
+          393,
+          769
+        ],
+        "loadingScreenshot": "output/playwright/mode-entry-ember-loading.png",
+        "cabinetScreenshot": "output/playwright/mode-entry-ember-game.png",
+        "screenshotSamples": 90,
+        "screenshotSequenceDurationMs": 5477,
+        "minimumMeanLuminance": 89.402,
+        "observed": "Corresponding theme loading followed by corresponding playable cabinet; title, progress panel and footer in bounds."
+      },
+      {
+        "mode": "dragon",
+        "viewport": [
+          393,
+          769
+        ],
+        "loadingScreenshot": "output/playwright/mode-entry-dragon-loading.png",
+        "cabinetScreenshot": "output/playwright/mode-entry-dragon-game.png",
+        "screenshotSamples": 90,
+        "screenshotSequenceDurationMs": 6710,
+        "minimumMeanLuminance": 90.141,
+        "observed": "Corresponding theme loading followed by corresponding playable cabinet; title, progress panel and footer in bounds."
+      },
+      {
+        "mode": "dragon320",
+        "viewport": [
+          320,
+          568
+        ],
+        "loadingScreenshot": "output/playwright/mode-entry-dragon320-loading.png",
+        "cabinetScreenshot": "output/playwright/mode-entry-dragon320-game.png",
+        "screenshotSamples": 90,
+        "screenshotSequenceDurationMs": 6563,
+        "minimumMeanLuminance": 92.837,
+        "observed": "Corresponding theme loading followed by corresponding playable cabinet; title, progress panel and footer in bounds."
+      },
+      {
+        "mode": "pearl739",
+        "viewport": [
+          739,
+          766
+        ],
+        "loadingScreenshot": "output/playwright/mode-entry-pearl739-loading.png",
+        "cabinetScreenshot": "output/playwright/mode-entry-pearl739-game.png",
+        "screenshotSamples": 90,
+        "screenshotSequenceDurationMs": 7880,
+        "minimumMeanLuminance": 82.858,
+        "observed": "Corresponding theme loading followed by corresponding playable cabinet; title, progress panel and footer in bounds."
+      }
+    ],
+    "walletBeforeAndAfter": 310728,
+    "betBeforeAndAfter": 500,
+    "winBeforeAndAfter": 0,
+    "realSpinsPerformed": 0,
+    "purchaseOrClaimPerformed": false,
+    "saveResetOrAppStateInjection": false,
+    "consoleWarnOrError": [],
+    "finalState": "Returned to Pearl Garden hall; viewport override reset and original preview tab retained.",
+    "visualObservations": [
+      "All four generated scene/title/emblem combinations matched their destination modes.",
+      "Loading scenes contain themed environments, not cabinet backdrops.",
+      "No observed black/white interruption in the sampled room-entry transitions. This does not certify every rendering frame.",
+      "No observed clipped loading title, progress copy or footer at the three actual viewport sizes.",
+      "Wallet readable and unchanged in all six destination screenshots and returned hall."
+    ],
+    "actualAnimationEvidence": {
+      "path": "output/playwright/mode-entry-dragon-live.webp",
+      "screenshotSamples": 90,
+      "encodedFrames": 89,
+      "durationMs": 6811,
+      "source": "Actual continuous browser screenshots with measured per-sample timing; WebP merged one identical adjacent frame. Not a synthetic animated mockup or FPS/audio benchmark."
+    },
+    "captureMetadata": "output/playwright/mode-entry-capture-20261010.json",
+    "fourThemeOverview": "output/playwright/mode-entry-four-themes.png",
+    "temporaryRawScreenshotsRemoved": true
+  },
+  "build": {
+    "platform": "web-mobile",
+    "engine": "Cocos Creator 3.8.8",
+    "finishedAt": "2026-10-10T13:34:07+08:00",
+    "cliExitCode": 36,
+    "existingLimitation": "Creator script-worker/native IPC teardown anomaly remains; emitted web output was run, but the CLI exit is not a clean release/native build sign-off."
+  },
+  "limitations": [
+    "No physical-phone GPU/frame-time measurement.",
+    "No native/StoreKit/App Store sign-off.",
+    "Screenshot captures contain no audio; no perceptual loudspeaker/animation smoothness certification."
+  ],
+  "logs": [
+    "output/playwright/mode-entry-tests-20261010.log",
+    "output/playwright/mode-entry-typecheck-20261010.log",
+    "output/playwright/mode-entry-build-20261010.log"
+  ]
+}

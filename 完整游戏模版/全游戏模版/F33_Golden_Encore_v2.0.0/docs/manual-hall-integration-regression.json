@@ -1,0 +1,186 @@
+{
+  "verifiedAt": "2026-10-09T11:41:31+08:00",
+  "scope": "Manual hall navigation and scene-native generated hall mascots only; cabinet, loading, rewards, wallet and language functionality preserved.",
+  "generatedArtwork": {
+    "provider": "local CC Switch",
+    "fullScenes": 4,
+    "notes": "New generated scenes embed each matching mascot with support, contact light/shadow and foreground occlusion. No duplicated full-body hall cutout.",
+    "sha256": {
+      "hero-otter-ferry.png": "33f24d611dbc94e6bf84a3970e95fb718034963fd56af6b029f611641fc709cb",
+      "hero-pearl-garden.png": "f97d97ef90528b8b3aa4f0b38c0dbda7318fe4d7252b5a6a89608303ae606fe2",
+      "hero-ember-foundry.png": "1d0fb189e3390302ea80cf0deb5de6e4feb0e899d22a6c19cd2a5e1b00c701cd",
+      "hero-celestial-vault.png": "39536a3bdc3aaa9c9e79b7aefc8fb35952b0efca1e879b68444aad81d4328614",
+      "hall-otter-paw-motion.png": "96878f997225eca3fbcb6d3cca507dd88d674cff1d4d371b7b43ba2f45364af2",
+      "hall-rabbit-paw-motion.png": "a2699f33b4361715c076561abd5d40ac6e6ad94105f2832f0217f906377288f1",
+      "hall-fox-paw-motion.png": "3fee236abfd2e711e246812f23599341062a56148a4fba61e78d7404876b3c6e",
+      "hall-dragon-paw-motion.png": "23e00dc82f978b461efeb18405c57c2000198b1ec8d83b27765b962ad6944e45",
+      "hall-room-previous.png": "a507e7ed558ac127eae9b11dad7ae58ca47285ee29057982f3626bbf21c3457d",
+      "hall-room-next.png": "d5a96164b05c67ff04b3bfcbf0d44ec3d09b545faa4571f5f0caa36bd0c01ab1"
+    }
+  },
+  "manualBrowsing": {
+    "autoAdvanceRemoved": true,
+    "heroSwipe": "left/right release, axis-locked, single-pointer",
+    "generatedImageArrowButtons": true,
+    "selectionHoldSeconds": 14.5,
+    "rapidClicks": 24,
+    "maxSimultaneousCrossfadeScenes": 2,
+    "invalidDragCases": [
+      "vertical",
+      "short-horizontal",
+      "diagonal",
+      "outside-cancel"
+    ],
+    "namedThumbnailDirectEntry": true,
+    "heroTapDirectEntry": true,
+    "returnRestoresEnteredRoom": true
+  },
+  "responsive": {
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ]
+    ],
+    "roomScreenshots": 12,
+    "scenePatchRegistrationTolerancePx": 0.02,
+    "arrowsFullyVisible": true,
+    "settledSceneAndKeeperCount": 1
+  },
+  "motion": {
+    "technique": "Offline localized 2D articulation of generated forearm pixels, not independently AI-generated 64-pose films, skeletal animation or 3D.",
+    "frames": 64,
+    "runtimeFramesPerSecond": 30,
+    "scenePatch": {
+      "size": [
+        128,
+        160
+      ],
+      "atlas": [
+        1056,
+        1312
+      ],
+      "samplingGutterPx": 2
+    },
+    "gestureSeconds": 2.1333333333333333,
+    "hallIdlePauseSeconds": 4,
+    "faceFeetTorsoSceneTransformFixed": true,
+    "exactNeutralAndPatchEdges": true,
+    "runtime": [
+      {
+        "mode": 0,
+        "uniqueFrames": 64,
+        "range": [
+          0,
+          63
+        ],
+        "movingTransform": false,
+        "lifecycle": {
+          "held": 19,
+          "stayed": 19,
+          "resumed": 29
+        }
+      },
+      {
+        "mode": 1,
+        "uniqueFrames": 64,
+        "range": [
+          0,
+          63
+        ],
+        "movingTransform": false,
+        "lifecycle": {
+          "held": 19,
+          "stayed": 19,
+          "resumed": 29
+        }
+      },
+      {
+        "mode": 2,
+        "uniqueFrames": 64,
+        "range": [
+          0,
+          63
+        ],
+        "movingTransform": false,
+        "lifecycle": {
+          "held": 19,
+          "stayed": 19,
+          "resumed": 29
+        }
+      },
+      {
+        "mode": 3,
+        "uniqueFrames": 64,
+        "range": [
+          0,
+          63
+        ],
+        "movingTransform": false,
+        "lifecycle": {
+          "held": 19,
+          "stayed": 19,
+          "resumed": 30
+        }
+      }
+    ],
+    "reducedMotionNeutralFrame": [
+      0,
+      0
+    ]
+  },
+  "walletSafety": {
+    "isolatedQA": {
+      "coins": 5000,
+      "spins": 0
+    },
+    "userPreview": {
+      "refreshOnly": true,
+      "coinsBefore": 309728,
+      "coinsAfter": 309728,
+      "storageReset": false,
+      "spinExecuted": false
+    }
+  },
+  "checks": {
+    "typecheck": "pass",
+    "npmTest": "pass",
+    "pageErrors": [],
+    "failedArtworkRequests": []
+  },
+  "build": {
+    "creator": "3.8.8",
+    "platform": "web-mobile",
+    "reportedStatus": "Finished",
+    "reportedFinish": "2026-10-09T11:23:56+08:00",
+    "processExitCode": 36,
+    "note": "Existing worker teardown issue after Finished; not a verified clean release build."
+  },
+  "evidenceDirectory": "/Users/xzkj/Documents/Codex/2026-09-22/gei/output/hall-integrated",
+  "evidenceFiles": [
+    "responsive-scenes.json",
+    "manual-gestures.json",
+    "direct-entries.json",
+    "motion-runtime.json",
+    "halls-runtime-390.jpg",
+    "hall-manual-demo.webm"
+  ],
+  "limitations": [
+    "Browser viewport QA is not physical-phone performance validation.",
+    "App Store readiness and speaker/perceptual validation are not certified.",
+    "Hall character changes do not alter cabinet/prize/loading mascot artwork."
+  ],
+  "cleanup": {
+    "isolatedBrowserSession": "f33-hall-integrated",
+    "closed": true,
+    "userPreviewAndLocalhostServerRetained": true
+  }
+}

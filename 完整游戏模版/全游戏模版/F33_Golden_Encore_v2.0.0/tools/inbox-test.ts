@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import { claimLetter, clearRead, letterState, readLetter, unreadCount, type Inbox } from '../assets/scripts/domain/Inbox';
+let inbox: Inbox = {};
+assert.equal(unreadCount(inbox), 3);
+inbox = readLetter(inbox, 'welcome');
+assert.equal(unreadCount(inbox), 2);
+assert.equal(letterState(inbox, 'welcome').read, true);
+inbox = clearRead(inbox);
+assert.equal(letterState(inbox, 'welcome').deleted, false, 'Unclaimed attachment must survive clear-read');
+const first = claimLetter(inbox, 'welcome'); inbox = first.inbox;
+assert.equal(first.coins, 600);
+assert.equal(claimLetter(inbox, 'welcome').coins, 0, 'Reward cannot be claimed twice');
+inbox = clearRead(inbox);
+assert.equal(letterState(inbox, 'welcome').deleted, true);
+assert.equal(claimLetter(inbox, 'welcome').coins, 0, 'Deleted mail cannot credit coins');
+assert.equal(claimLetter(inbox, 'house-news').coins, 0);
+assert.equal(claimLetter(inbox, 'absent' as never).coins, 0);
+console.log('Local inbox tests passed');

@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-10",
+  "recordedAt": "2026-10-10T14:11:04.660159+08:00",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "scope": "Service-page readability, generated-hardware safe lettering, calendar state, account settings, modal and notice interaction polish. No new economy or artwork.",
+  "implementation": {
+    "generatedRasterOnly": true,
+    "newBitmapAssets": 0,
+    "lettering": "Amounts/names are single-line; ticket inscriptions avoid seals; jade/coral buttons use ivory lettering rather than dark low-contrast text. Registered cabinet/shop controls retain their own layout.",
+    "calendar": "Current day receives the existing generated jade plaque and ivory copy; other states remain on the paper surface. Day, amount and state have separate safe columns; READY clears the carved end.",
+    "account": "Balance/spin/total columns and motion/sound/language buttons have separate safe bounds. Portrait selection and name instructions remain on scroll paper, not jade edges.",
+    "rank": "Top-three names/scores remain clear of ribbon seals; rows 4–6 keep right-aligned scores away from wax; separate personal rank is retained.",
+    "ledger": "Left-aligned activity/time and right-aligned amounts stay inside the generated ticket clear core.",
+    "modal": "Full-visible-area input shield, 8 logical-pixel soft rise and .22s fade in; .14s guarded fade out. Shield persists through close; duplicate closes and stale callbacks are cancelled; reduced motion skips the tween.",
+    "notice": "Existing generated wide-ticket, scaled with the page, clears navigation. Name validation is owned by the modal and uses the blank space between input and actions, not the page header.",
+    "retained": [
+      "four distinct modes",
+      "five languages",
+      "global startup loading",
+      "four separate mode-entry loading scenes",
+      "manual hall browsing and direct entry",
+      "debit before spin",
+      "normal/BIG/SUPER presentations and newcomer guarantees",
+      "original theme art and symbols",
+      "scene music and interaction/reward audio"
+    ]
+  },
+  "checks": {
+    "typecheck": "PASS — npm run typecheck",
+    "npmTest": "PASS — complete existing test chain plus tools/service-detail-test.ts",
+    "mathematicalViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        393,
+        769
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        739,
+        766
+      ],
+      [
+        1024,
+        768
+      ]
+    ],
+    "calendarStates": 98,
+    "languagesPerCalendarState": 5,
+    "productionMethodTests": [
+      "presentSheet",
+      "dismissSheet",
+      "bindTap"
+    ],
+    "productionMethodScope": "Executed transpiled actual production methods through a small Cocos test adapter; asserts reveal, repeated close guard, closing input shield, cancel/external destroy and reduced motion. This does not substitute for a physical-device render test.",
+    "actualVisualViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        393,
+        769
+      ],
+      [
+        739,
+        766
+      ]
+    ],
+    "actualVisualReview": [
+      "Account values and all three setting buttons at 320/393.",
+      "Top-three names and separate personal rank at 393/739.",
+      "Final calendar at 320/393, including ivory current-day amount and READY clearance.",
+      "Avatar and five-language picker opened/closed; no selection persisted.",
+      "Rename instructions on paper. Empty unsaved draft triggers readable validation within the scroll; Cancel leaves saved name unchanged.",
+      "Shop and ledger at 739, without purchase/claim.",
+      "Hall/login at 393 and final selected Celestial Vault cabinet at 393; COINS/BET/WIN and controls are in source-registered hardware."
+    ],
+    "sampledWarnErrorEntries": 0,
+    "diagnosticScope": "Latest temporary preview-tab captured warn/error sample only, limit 50. Not an exhaustive no-error certification."
+  },
+  "dataSafety": {
+    "observedBeforeEarlyPrecheck": {
+      "coins": 312228
+    },
+    "earlyPrecheckIncident": {
+      "wager": 500,
+      "result": "NO MATCH / WIN 0",
+      "coinsAfter": 311728,
+      "description": "An early attempt to inspect a service-page target was followed by a cabinet spin. Exact cause was not established (coordinate targeting, changing page or concurrent interaction are possible); do not attribute it conclusively to a product defect. No save rollback/reset was applied."
+    },
+    "finalObservedAccount": {
+      "name": "Lantern Guest",
+      "coins": 311728,
+      "spins": 90,
+      "totalWon": 328522
+    },
+    "laterActions": "No further spin, AUTO, purchase, reward claim, saved profile edit or save reset during the subsequent service/cabinet review. Empty rename drafts were cancelled. No localStorage or engine-state injection.",
+    "noExternalChromeOpened": true,
+    "browserCleanup": "Only the task-created in-app-browser QA tab is closed; viewport override is reset."
+  },
+  "build": {
+    "creator": "3.8.8",
+    "target": "web-mobile",
+    "reportedFinishedAt": "2026-10-10T14:04:09+08:00",
+    "exitCode": 36,
+    "status": "Emitted web output actually previewed; existing script-worker/native IPC teardown exit remains unresolved.",
+    "notCertified": [
+      "clean native/release build",
+      "App Store approval",
+      "physical-device frame rate",
+      "speaker/perceptual sound quality"
+    ]
+  },
+  "evidence": {
+    "screenshots": [
+      "output/playwright/service-detail-account-393.png",
+      "output/playwright/service-detail-account-320.png",
+      "output/playwright/service-detail-rank-393.png",
+      "output/playwright/service-detail-rank-739.png",
+      "output/playwright/service-detail-calendar-393.png",
+      "output/playwright/service-detail-calendar-320.png",
+      "output/playwright/service-detail-rewards-393.png",
+      "output/playwright/service-detail-rewards-320.png",
+      "output/playwright/service-detail-avatar-320.png",
+      "output/playwright/service-detail-language-320.png",
+      "output/playwright/service-detail-rename-320.png",
+      "output/playwright/service-detail-validation-320.png",
+      "output/playwright/service-detail-store-739.png",
+      "output/playwright/service-detail-ledger-739.png",
+      "output/playwright/service-detail-home-393.png",
+      "output/playwright/service-detail-login-393.png",
+      "output/playwright/service-detail-cabinet-393.png",
+      "output/playwright/service-detail-overview-20261010.jpg"
+    ],
+    "overview": "Three unaltered 393×769 actual runtime screenshots placed side by side; not mocked/generated UI.",
+    "logs": [
+      "output/playwright/service-detail-typecheck-20261010.log",
+      "output/playwright/service-detail-tests-20261010.log",
+      "output/playwright/service-detail-build-20261010.log",
+      "output/playwright/service-detail-browser-diagnostics-20261010.json"
+    ],
+    "sources": [
+      "assets/scripts/ui/ServiceDetailLayout.ts",
+      "assets/scripts/ui/GoldenEncoreApp.ts",
+      "tools/service-detail-test.ts",
+      "package.json"
+    ]
+  }
+}

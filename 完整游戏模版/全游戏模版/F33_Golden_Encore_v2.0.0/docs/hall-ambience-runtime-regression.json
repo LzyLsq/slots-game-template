@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-10",
+  "project": "F33_Golden_Encore_v2.0.0",
+  "scope": "More visible, source-registered festive ambience in the four existing halls; presentation only.",
+  "implementation": {
+    "generatedRasterOnly": true,
+    "newBitmapAssets": 0,
+    "registeredSourceSize": [
+      1024,
+      1536
+    ],
+    "pooledGlowsPerRoom": 23,
+    "pooledCoinsPerRoom": 8,
+    "fourSceneProfiles": true,
+    "luminousCoreCrop": [
+      96,
+      180,
+      324,
+      188
+    ],
+    "roomOwnedField": true,
+    "lighting": [
+      "four physically registered lantern blooms",
+      "two room-specific treasure glints",
+      "four gilded architectural glints",
+      "five exposed water/floor reflections",
+      "eight soft side motes"
+    ],
+    "coinStream": "Two terrace-bound continuous gold streams; full keeper rectangle protected with feathered opacity.",
+    "miniatureIdlePulseIntervalSeconds": 1.25,
+    "manualBrowsingAndDirectEntryPreserved": true,
+    "backgroundModalDisableCleanup": "Owned game hide/show listeners, suspended elapsed-time model, no reset shower, destroyed cropped frame.",
+    "reducedMotion": "Low static lantern illumination; moving gold, lights and jelly suppressed."
+  },
+  "checks": {
+    "npmTest": "PASS",
+    "typecheck": "PASS",
+    "motionSamples": 28200,
+    "visibleCoinPoses": 217099,
+    "cadences": [
+      10,
+      15,
+      30,
+      60,
+      120
+    ],
+    "mathematicalViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        375,
+        667
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        739,
+        766
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1024,
+        768
+      ]
+    ],
+    "runtimeViewports": [
+      [
+        393,
+        769
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ],
+      [
+        739,
+        766
+      ]
+    ],
+    "runtimeActions": [
+      "All four themes inspected at 390×844 via manual right arrows.",
+      "Dragon inspected at 320×568 and 739×766.",
+      "Wide-window manual swipe returns Dragon to Jade; selection remains Jade throughout final recording.",
+      "Journal opened/closed without claiming; four exposed backdrop crops remain pixel-identical while the new ambience is suspended.",
+      "Viewport override reset; original user tab 5 retained; no Google Chrome or temporary browser tab opened."
+    ],
+    "runtimeWarningErrorLogs": [],
+    "walletDisplayed": 310728,
+    "betsPurchasesRewardClaimsPerformed": false,
+    "recordedCopyPixelStable": [
+      "wallet",
+      "mode title and subtitle",
+      "four mode names"
+    ]
+  },
+  "webBuild": {
+    "finishedAt": "2026-10-10 13:18:41+08:00",
+    "creatorExitCode": 36,
+    "limitation": "Creator reports Finished and its output was actually run. Existing worker SIGTERM/exit-36 teardown and native subprocess IPC shutdown messages remain; this is not a clean release/native/App Store sign-off."
+  },
+  "evidence": [
+    "output/playwright/hall-ambience-live.webp",
+    "output/playwright/hall-ambience-capture-20261010.json",
+    "output/playwright/hall-ambience-final.png",
+    "output/playwright/hall-ambience-jade-390.png",
+    "output/playwright/hall-ambience-pearl-390.png",
+    "output/playwright/hall-ambience-ember-390.png",
+    "output/playwright/hall-ambience-dragon-390.png",
+    "output/playwright/hall-ambience-dragon-320.png",
+    "output/playwright/hall-ambience-dragon-739.png",
+    "output/playwright/hall-ambience-journal-open.png",
+    "output/playwright/hall-ambience-journal-held.png",
+    "output/playwright/hall-ambience-tests-20261010.log",
+    "output/playwright/hall-ambience-typecheck-20261010.log",
+    "output/playwright/hall-ambience-build-20261010.log"
+  ],
+  "notCertified": [
+    "Physical phone/GPU performance",
+    "Frame-time distribution and sustained FPS",
+    "Speaker/perceptual audio quality",
+    "Backend/IAP",
+    "App Store readiness"
+  ]
+}

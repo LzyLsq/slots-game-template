@@ -1,0 +1,3552 @@
+{
+  "date": "2026-09-30",
+  "task": "Source-registered shop text layout",
+  "build": {
+    "finished": true,
+    "exitCode": 36,
+    "time": "16:03:28",
+    "log": "/tmp/f33-store-text-build.log",
+    "logRetention": "Local transient build log; key status is recorded here."
+  },
+  "typecheck": "pass",
+  "tests": "pass",
+  "inventory": [
+    "final renders: four niches, text/sign alignment, three viewports, five languages",
+    "real touch: all four demo claims, duplicate input, claim return/wallet persistence",
+    "off-happy-path: blank/title tap and large wallet diagnostic"
+  ],
+  "renders": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "PEARL PURSE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "QUICK PLAY",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "JADE FERRY",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "LONG PLAY",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "GOLD RESERVE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "MORE SPINS",
+          "font": 25,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "DRAGON CACHE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "LARGE CACHE",
+          "font": 22,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        }
+      ],
+      "language": "en",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 2,
+        "column": 1,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "珍珠钱袋",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "快速畅玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翠玉渡口",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "尽情畅玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黄金储备",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "更多转动",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龙之秘藏",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "海量宝藏",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        }
+      ],
+      "language": "zh-CN",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 2,
+        "column": 2,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "珍珠錢袋",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "快速暢玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翠玉渡口",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "盡情暢玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黃金儲備",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "更多轉動",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龍之秘藏",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "海量寶藏",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        }
+      ],
+      "language": "zh-TW",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 2,
+        "column": 3,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "真珠の財布",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "すぐに遊ぶ",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翡翠の渡し",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "たっぷり遊ぶ",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黄金の備蓄",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "もっとスピン",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龍の隠し財宝",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "大量の宝物",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        }
+      ],
+      "language": "ja",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 2,
+        "column": 4,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "진주 주머니",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "빠른 플레이",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "비취 나루",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 381.5475104665072,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 405.0611729964114,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "오래 플레이",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 425.00313995215316,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 462.5059434808613,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "황금 비축",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 122.67316462320574,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "더 많은 회전",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 146.78210974880383,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 120.8873168361244,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "용의 숨긴 보물",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 270.89853095095697,
+            "cy": 513.7002467105262,
+            "width": 104.17445424641147,
+            "height": 16.072630083732058
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 537.2139092404307,
+            "width": 62.504672547846894,
+            "height": 19.04904306220096
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "대형 보물",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 295.007476076555,
+            "cy": 557.1558761961722,
+            "width": 62.504672547846894,
+            "height": 14.286782296650719
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 269.1126831638756,
+            "cy": 594.3610384270335,
+            "width": 98.81691088516746,
+            "height": 12.50093450956938
+          }
+        }
+      ],
+      "language": "ko",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 2,
+        "column": 5,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "PEARL PURSE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "QUICK PLAY",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "JADE FERRY",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "LONG PLAY",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "GOLD RESERVE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "MORE SPINS",
+          "font": 25,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "DRAGON CACHE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "LARGE CACHE",
+          "font": 22,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        }
+      ],
+      "language": "en",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 1,
+        "column": 1,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "珍珠钱袋",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "快速畅玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翠玉渡口",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "尽情畅玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黄金储备",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "更多转动",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龙之秘藏",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "海量宝藏",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        }
+      ],
+      "language": "zh-CN",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 1,
+        "column": 2,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "珍珠錢袋",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "快速暢玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翠玉渡口",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "盡情暢玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黃金儲備",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "更多轉動",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龍之秘藏",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "海量寶藏",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        }
+      ],
+      "language": "zh-TW",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 1,
+        "column": 3,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "真珠の財布",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "すぐに遊ぶ",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翡翠の渡し",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "たっぷり遊ぶ",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黄金の備蓄",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "もっとスピン",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龍の隠し財宝",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "大量の宝物",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        }
+      ],
+      "language": "ja",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 1,
+        "column": 4,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "진주 주머니",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "빠른 플레이",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "비취 나루",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 250.80821371610847,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 270.1014752791068,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "오래 플레이",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 286.46411483253587,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 317.2356459330143,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "황금 비축",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 100.65490430622009,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "더 많은 회전",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 120.43660287081339,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 99.1895933014354,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "용의 숨긴 보물",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 222.2757177033493,
+            "cy": 359.2412280701754,
+            "width": 85.47647527910685,
+            "height": 13.187799043062201
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 378.53448963317385,
+            "width": 51.285885167464116,
+            "height": 15.629984051036685
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "대형 보물",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 242.05741626794259,
+            "cy": 394.89712918660285,
+            "width": 51.285885167464116,
+            "height": 11.722488038277511
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 220.8104066985646,
+            "cy": 425.4244417862839,
+            "width": 81.08054226475278,
+            "height": 10.257177033492825
+          }
+        }
+      ],
+      "language": "ko",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 1,
+        "column": 5,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "PEARL PURSE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "QUICK PLAY",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "JADE FERRY",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "LONG PLAY",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "GOLD RESERVE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "MORE SPINS",
+          "font": 25,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "DRAGON CACHE",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "LARGE CACHE",
+          "font": 22,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "ADD COINS  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        }
+      ],
+      "language": "en",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 3,
+        "column": 1,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "珍珠钱袋",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "快速畅玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翠玉渡口",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "尽情畅玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黄金储备",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "更多转动",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龙之秘藏",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "海量宝藏",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "补充金币  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        }
+      ],
+      "language": "zh-CN",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 3,
+        "column": 2,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "珍珠錢袋",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "快速暢玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翠玉渡口",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "盡情暢玩",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黃金儲備",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "更多轉動",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龍之秘藏",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "海量寶藏",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "補充金幣  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        }
+      ],
+      "language": "zh-TW",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 3,
+        "column": 3,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "真珠の財布",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "すぐに遊ぶ",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "翡翠の渡し",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "たっぷり遊ぶ",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "黄金の備蓄",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "もっとスピン",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "龍の隠し財宝",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "大量の宝物",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "コインを追加  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        }
+      ],
+      "language": "ja",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 3,
+        "column": 4,
+        "indexBase": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "coins": 37000,
+      "cabinet": {
+        "width": 980,
+        "height": 980
+      },
+      "labels": [
+        {
+          "name": "Shop 0 · title",
+          "text": "진주 주머니",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 0 · amount",
+          "text": "+1,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 0 · detail",
+          "text": "빠른 플레이",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 0 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 1 · title",
+          "text": "비취 나루",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 421.3985371810208,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 1 · amount",
+          "text": "+3,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 447.3238574062998,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 1 · detail",
+          "text": "오래 플레이",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 469.31115430622015,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 1 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 510.66039922248797,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 2 · title",
+          "text": "황금 비축",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 135.25502766148327,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 2 · amount",
+          "text": "+8,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 2 · detail",
+          "text": "더 많은 회전",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 161.83668510765548,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 2 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 133.28601599880383,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        },
+        {
+          "name": "Shop 3 · title",
+          "text": "용의 숨긴 보물",
+          "font": 31,
+          "wrap": false,
+          "rect": {
+            "cx": 298.6829956638756,
+            "cy": 567.1054002192983,
+            "width": 114.85901365629984,
+            "height": 17.721104964114833
+          }
+        },
+        {
+          "name": "Shop 3 · amount",
+          "text": "+20,000",
+          "font": 40,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 593.0307204445774,
+            "width": 68.91540819377991,
+            "height": 21.002791068580546
+          }
+        },
+        {
+          "name": "Shop 3 · detail",
+          "text": "대형 보물",
+          "font": 26,
+          "wrap": false,
+          "rect": {
+            "cx": 325.26465311004785,
+            "cy": 615.0180173444975,
+            "width": 68.91540819377991,
+            "height": 15.752093301435407
+          }
+        },
+        {
+          "name": "Shop 3 · claim",
+          "text": "코인 추가  +",
+          "font": 28,
+          "wrap": false,
+          "rect": {
+            "cx": 296.7139840011962,
+            "cy": 656.039093650319,
+            "width": 108.95197866826156,
+            "height": 13.783081638755982
+          }
+        }
+      ],
+      "language": "ko",
+      "setup": "diagnostic language-picker opening; selection by touchscreen",
+      "evidence": {
+        "file": "docs/screenshots/shop-text-final-languages.jpg",
+        "row": 3,
+        "column": 5,
+        "indexBase": 1
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "test": "Real HOME → Open SHOP navigation",
+      "after": {
+        "page": "store",
+        "coins": 5000,
+        "ledger": []
+      }
+    },
+    {
+      "test": "Non-button title tap does not credit coins",
+      "before": {
+        "page": "store",
+        "coins": 5000,
+        "ledger": []
+      },
+      "after": {
+        "page": "store",
+        "coins": 5000,
+        "ledger": []
+      }
+    },
+    {
+      "test": "Real Pearl claim +1000; repeated plaque touch does not double-credit",
+      "before": {
+        "page": "store",
+        "coins": 5000,
+        "ledger": []
+      },
+      "after": {
+        "page": "store",
+        "coins": 6000,
+        "overlay": "Gift reveal · PEARL PURSE",
+        "ledger": [
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      }
+    },
+    {
+      "test": "Real collect returns to shop without another credit",
+      "after": {
+        "page": "store",
+        "coins": 6000,
+        "ledger": [
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      }
+    },
+    {
+      "test": "Real JADE FERRY plaque +3000, presentation and collect",
+      "before": {
+        "page": "store",
+        "coins": 6000,
+        "ledger": [
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      },
+      "after": {
+        "page": "store",
+        "coins": 9000,
+        "ledger": [
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      }
+    },
+    {
+      "test": "Real GOLD RESERVE plaque +8000, presentation and collect",
+      "before": {
+        "page": "store",
+        "coins": 9000,
+        "ledger": [
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      },
+      "after": {
+        "page": "store",
+        "coins": 17000,
+        "ledger": [
+          {
+            "label": "GOLD RESERVE · DEMO COINS",
+            "delta": 8000
+          },
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      }
+    },
+    {
+      "test": "Real DRAGON CACHE plaque +20000, presentation and collect",
+      "before": {
+        "page": "store",
+        "coins": 17000,
+        "ledger": [
+          {
+            "label": "GOLD RESERVE · DEMO COINS",
+            "delta": 8000
+          },
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      },
+      "after": {
+        "page": "store",
+        "coins": 37000,
+        "ledger": [
+          {
+            "label": "DRAGON CACHE · DEMO COINS",
+            "delta": 20000
+          },
+          {
+            "label": "GOLD RESERVE · DEMO COINS",
+            "delta": 8000
+          },
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      }
+    },
+    {
+      "test": "Real home → shop after navigation; persisted 37,000 balance on reload and shop return",
+      "after": {
+        "page": "store",
+        "coins": 37000,
+        "ledger": [
+          {
+            "label": "DRAGON CACHE · DEMO COINS",
+            "delta": 20000
+          },
+          {
+            "label": "GOLD RESERVE · DEMO COINS",
+            "delta": 8000
+          },
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      }
+    },
+    {
+      "test": "Final-build diagnostic 9-digit wallet at 320×568; no real transaction",
+      "wallet": [
+        {
+          "text": "가상 지갑",
+          "font": 28,
+          "wrap": true,
+          "size": {
+            "width": 300,
+            "height": 42
+          },
+          "pos": {
+            "x": -105,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "text": "999,999,999",
+          "font": 36,
+          "wrap": false,
+          "size": {
+            "width": 205,
+            "height": 50
+          },
+          "pos": {
+            "x": 205,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "evidence": "Runtime label geometry recorded below and manually inspected during final browser QA; no additional screenshot is packaged."
+    },
+    {
+      "test": "Final-build real Pearl claim and collect at 320×568 Korean (+1000 once)",
+      "before": {
+        "page": "store",
+        "coins": 37000,
+        "ledger": [
+          {
+            "label": "DRAGON CACHE · DEMO COINS",
+            "delta": 20000
+          },
+          {
+            "label": "GOLD RESERVE · DEMO COINS",
+            "delta": 8000
+          },
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      },
+      "after": {
+        "page": "store",
+        "coins": 38000,
+        "ledger": [
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          },
+          {
+            "label": "DRAGON CACHE · DEMO COINS",
+            "delta": 20000
+          },
+          {
+            "label": "GOLD RESERVE · DEMO COINS",
+            "delta": 8000
+          },
+          {
+            "label": "JADE FERRY · DEMO COINS",
+            "delta": 3000
+          },
+          {
+            "label": "PEARL PURSE · DEMO COINS",
+            "delta": 1000
+          }
+        ]
+      }
+    }
+  ],
+  "runtimeErrors": [],
+  "functionalStart": {
+    "page": "home",
+    "coins": 5000,
+    "ledger": []
+  },
+  "functionalEnd": {
+    "page": "store",
+    "coins": 37000,
+    "ledger": [
+      {
+        "label": "DRAGON CACHE · DEMO COINS",
+        "delta": 20000
+      },
+      {
+        "label": "GOLD RESERVE · DEMO COINS",
+        "delta": 8000
+      },
+      {
+        "label": "JADE FERRY · DEMO COINS",
+        "delta": 3000
+      },
+      {
+        "label": "PEARL PURSE · DEMO COINS",
+        "delta": 1000
+      }
+    ]
+  },
+  "functionalFinalBuildEnd": {
+    "page": "store",
+    "coins": 38000,
+    "ledger": [
+      {
+        "label": "PEARL PURSE · DEMO COINS",
+        "delta": 1000
+      },
+      {
+        "label": "DRAGON CACHE · DEMO COINS",
+        "delta": 20000
+      },
+      {
+        "label": "GOLD RESERVE · DEMO COINS",
+        "delta": 8000
+      },
+      {
+        "label": "JADE FERRY · DEMO COINS",
+        "delta": 3000
+      },
+      {
+        "label": "PEARL PURSE · DEMO COINS",
+        "delta": 1000
+      }
+    ]
+  },
+  "browserClosed": true,
+  "evidence": {
+    "mobile": "docs/screenshots/shop-text-final-mobile.jpg",
+    "languages": "docs/screenshots/shop-text-final-languages.jpg",
+    "zh-CN-390x844": "docs/screenshots/shop-text-final-390x844-zh.png"
+  },
+  "scope": "Merchant shop text/image registration only; original generated artwork, four amounts and free simulated-coin claim flow retained.",
+  "limitations": [
+    "Browser viewports are not physical iPhone/device certification.",
+    "320×568 English secondary descriptions fit but are small; not a large-type accessibility certification.",
+    "Merchant packs are free local demo coins, not StoreKit or a real-money purchase.",
+    "Creator reports web-mobile Build Finished but exits 36 after worker termination; a clean release build remains unverified."
+  ]
+}

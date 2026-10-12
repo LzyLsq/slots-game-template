@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "cf41bca4-a1cd-4de8-af81-d63a17ed1f83",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "cf41bca4-a1cd-4de8-af81-d63a17ed1f83@6c48a",
+      "displayName": "prize-dragon-roles-motion",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "cf41bca4-a1cd-4de8-af81-d63a17ed1f83",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "cf41bca4-a1cd-4de8-af81-d63a17ed1f83@f9941",
+      "displayName": "prize-dragon-roles-motion",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 5.5,
+        "offsetY": -15,
+        "trimX": 11,
+        "trimY": 40,
+        "width": 1301,
+        "height": 3622,
+        "rawWidth": 1312,
+        "rawHeight": 3672,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -650.5,
+            -1811,
+            0,
+            650.5,
+            -1811,
+            0,
+            -650.5,
+            1811,
+            0,
+            650.5,
+            1811,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            11,
+            3632,
+            1312,
+            3632,
+            11,
+            10,
+            1312,
+            10
+          ],
+          "nuv": [
+            0.008384146341463415,
+            0.0027233115468409588,
+            1,
+            0.0027233115468409588,
+            0.008384146341463415,
+            0.9891067538126361,
+            1,
+            0.9891067538126361
+          ],
+          "minPos": [
+            -650.5,
+            -1811,
+            0
+          ],
+          "maxPos": [
+            650.5,
+            1811,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "cf41bca4-a1cd-4de8-af81-d63a17ed1f83@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "cf41bca4-a1cd-4de8-af81-d63a17ed1f83@6c48a"
+  }
+}

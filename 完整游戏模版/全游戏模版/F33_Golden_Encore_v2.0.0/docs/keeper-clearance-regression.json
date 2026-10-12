@@ -1,0 +1,854 @@
+{
+  "date": "2026-09-30",
+  "scope": "Local virtual-coin browser demo, not real device/native certification",
+  "realSpinRun": {
+    "initialCoins": 5000,
+    "stake": 2,
+    "spins": [
+      {
+        "spin": 1,
+        "before": {
+          "coins": 5000,
+          "spins": 0
+        },
+        "debit": {
+          "coins": 4998,
+          "spins": 1,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 4998,
+          "spins": 1,
+          "moving": false,
+          "tier": "none",
+          "award": 0,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 2,
+        "before": {
+          "coins": 4998,
+          "spins": 1
+        },
+        "debit": {
+          "coins": 4996,
+          "spins": 2,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 2,
+          "moving": false,
+          "tier": "ordinary",
+          "award": 4,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 3,
+        "before": {
+          "coins": 5000,
+          "spins": 2
+        },
+        "debit": {
+          "coins": 4998,
+          "spins": 3,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 4998,
+          "spins": 3,
+          "moving": false,
+          "tier": "none",
+          "award": 0,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 4,
+        "before": {
+          "coins": 4998,
+          "spins": 3
+        },
+        "debit": {
+          "coins": 4996,
+          "spins": 4,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 4996,
+          "spins": 4,
+          "moving": false,
+          "tier": "none",
+          "award": 0,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 5,
+        "before": {
+          "coins": 4996,
+          "spins": 4
+        },
+        "debit": {
+          "coins": 4994,
+          "spins": 5,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5004,
+          "spins": 5,
+          "moving": false,
+          "tier": "big",
+          "award": 10,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 6,
+        "before": {
+          "coins": 5004,
+          "spins": 5
+        },
+        "debit": {
+          "coins": 5002,
+          "spins": 6,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5006,
+          "spins": 6,
+          "moving": false,
+          "tier": "ordinary",
+          "award": 4,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 7,
+        "before": {
+          "coins": 5006,
+          "spins": 6
+        },
+        "debit": {
+          "coins": 5004,
+          "spins": 7,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5004,
+          "spins": 7,
+          "moving": false,
+          "tier": "none",
+          "award": 0,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 8,
+        "before": {
+          "coins": 5004,
+          "spins": 7
+        },
+        "debit": {
+          "coins": 5002,
+          "spins": 8,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5002,
+          "spins": 8,
+          "moving": false,
+          "tier": "none",
+          "award": 0,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 9,
+        "before": {
+          "coins": 5002,
+          "spins": 8
+        },
+        "debit": {
+          "coins": 5000,
+          "spins": 9,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5004,
+          "spins": 9,
+          "moving": false,
+          "tier": "ordinary",
+          "award": 4,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "spin": 10,
+        "before": {
+          "coins": 5004,
+          "spins": 9
+        },
+        "debit": {
+          "coins": 5002,
+          "spins": 10,
+          "moving": true
+        },
+        "settled": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "tier": "super",
+          "award": 30,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      }
+    ],
+    "awards": [
+      {
+        "spin": 2,
+        "tier": "ordinary",
+        "award": 4,
+        "sample": {
+          "samples": 180,
+          "copyViolations": 0,
+          "particleViolations": 0,
+          "maskedParticles": 701,
+          "visibleParticles": 2826,
+          "maxParticles": 28,
+          "copyScope": "headline plate and collection button; glyphs visually checked"
+        },
+        "coinsAfterCollection": 5000
+      },
+      {
+        "spin": 5,
+        "tier": "big",
+        "award": 10,
+        "sample": {
+          "samples": 180,
+          "copyViolations": 0,
+          "particleViolations": 0,
+          "maskedParticles": 433,
+          "visibleParticles": 7469,
+          "maxParticles": 76,
+          "copyScope": "all live label boxes, headline plate and collection button"
+        },
+        "coinsAfterCollection": 5004
+      },
+      {
+        "spin": 6,
+        "tier": "ordinary",
+        "award": 4,
+        "sample": {
+          "samples": 180,
+          "copyViolations": 0,
+          "particleViolations": 0,
+          "maskedParticles": 700,
+          "visibleParticles": 2818,
+          "maxParticles": 28,
+          "copyScope": "headline plate and collection button; glyphs visually checked"
+        },
+        "coinsAfterCollection": 5006
+      },
+      {
+        "spin": 9,
+        "tier": "ordinary",
+        "award": 4,
+        "sample": {
+          "samples": 180,
+          "copyViolations": 0,
+          "particleViolations": 0,
+          "maskedParticles": 701,
+          "visibleParticles": 2823,
+          "maxParticles": 28,
+          "copyScope": "headline plate and collection button; glyphs visually checked"
+        },
+        "coinsAfterCollection": 5004
+      },
+      {
+        "spin": 10,
+        "tier": "super",
+        "award": 30,
+        "sample": {
+          "samples": 180,
+          "copyViolations": 0,
+          "particleViolations": 0,
+          "maskedParticles": 7785,
+          "visibleParticles": 4228,
+          "maxParticles": 144,
+          "copyScope": "all live label boxes, headline plate and collection button"
+        },
+        "coinsAfterCollection": 5032
+      }
+    ],
+    "finalCoins": 5032
+  },
+  "finalCabinetLayouts": {
+    "method": "diagnostic room setup followed by actual character greeting taps; actual hall swipes/room entrances were separately exercised before the final caption/meter refinement",
+    "cases": [
+      {
+        "viewport": "390x844",
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "390x844",
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "390x844",
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "390x844",
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5032,
+          "spins": 10,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "320x568",
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "320x568",
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "320x568",
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "320x568",
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "430x932",
+        "mode": 0,
+        "before": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 0,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "430x932",
+        "mode": 1,
+        "before": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 1,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "430x932",
+        "mode": 2,
+        "before": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 2,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      },
+      {
+        "viewport": "430x932",
+        "mode": 3,
+        "before": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        },
+        "after": {
+          "page": "game",
+          "mode": 3,
+          "coins": 5000,
+          "spins": 0,
+          "moving": false,
+          "keepers": [
+            {
+              "tokens": 3
+            }
+          ],
+          "overflow": false
+        }
+      }
+    ]
+  },
+  "responsivePrizeReplays": [
+    {
+      "kind": "presentation-only replay, no payout",
+      "viewport": "320x568",
+      "tier": "ordinary",
+      "sample": {
+        "samples": 150,
+        "copyViolations": 0,
+        "particleViolations": 0,
+        "maskedParticles": 531,
+        "visibleParticles": 2401,
+        "maxParticles": 28,
+        "copyScope": "headline plate and collection button; glyphs visually checked"
+      },
+      "balance": 5000
+    },
+    {
+      "kind": "presentation-only replay, no payout",
+      "viewport": "320x568",
+      "tier": "big",
+      "sample": {
+        "samples": 150,
+        "copyViolations": 0,
+        "particleViolations": 0,
+        "maskedParticles": 467,
+        "visibleParticles": 5466,
+        "maxParticles": 76,
+        "copyScope": "all live label boxes, headline plate and collection button"
+      },
+      "balance": 5000
+    },
+    {
+      "kind": "presentation-only replay, no payout",
+      "viewport": "320x568",
+      "tier": "super",
+      "sample": {
+        "samples": 150,
+        "copyViolations": 0,
+        "particleViolations": 0,
+        "maskedParticles": 5370,
+        "visibleParticles": 3270,
+        "maxParticles": 112,
+        "copyScope": "all live label boxes, headline plate and collection button"
+      },
+      "balance": 5000
+    },
+    {
+      "kind": "presentation-only replay, no payout",
+      "viewport": "430x932",
+      "tier": "ordinary",
+      "sample": {
+        "samples": 150,
+        "copyViolations": 0,
+        "particleViolations": 0,
+        "maskedParticles": 547,
+        "visibleParticles": 2393,
+        "maxParticles": 28,
+        "copyScope": "headline plate and collection button; glyphs visually checked"
+      },
+      "balance": 5000
+    },
+    {
+      "kind": "presentation-only replay, no payout",
+      "viewport": "430x932",
+      "tier": "big",
+      "sample": {
+        "samples": 150,
+        "copyViolations": 0,
+        "particleViolations": 0,
+        "maskedParticles": 264,
+        "visibleParticles": 5696,
+        "maxParticles": 76,
+        "copyScope": "all live label boxes, headline plate and collection button"
+      },
+      "balance": 5000
+    },
+    {
+      "kind": "presentation-only replay, no payout",
+      "viewport": "430x932",
+      "tier": "super",
+      "sample": {
+        "samples": 150,
+        "copyViolations": 0,
+        "particleViolations": 0,
+        "maskedParticles": 5489,
+        "visibleParticles": 2918,
+        "maxParticles": 112,
+        "copyScope": "all live label boxes, headline plate and collection button"
+      },
+      "balance": 5000
+    }
+  ],
+  "reducedMotion": [
+    {
+      "tier": "ordinary",
+      "reduced": true,
+      "rigs": 0,
+      "guard": 0,
+      "coins": 5000,
+      "amount": "4 COINS"
+    },
+    {
+      "tier": "big",
+      "reduced": true,
+      "rigs": 0,
+      "guard": 0,
+      "coins": 5000,
+      "amount": "10 COINS"
+    },
+    {
+      "tier": "super",
+      "reduced": true,
+      "rigs": 0,
+      "guard": 0,
+      "coins": 5000,
+      "amount": "24 COINS"
+    }
+  ],
+  "scriptErrors": [],
+  "build": {
+    "log": "/tmp/f33-build-keeper-clearance-final-release.log",
+    "reportedFinished": true,
+    "cliExit": 36
+  },
+  "cleanup": {
+    "ownedTestContextsClosed": true,
+    "ownedTestChromeClosed": true,
+    "headlessChromeRemaining": false,
+    "previewServerRetained": true,
+    "personalBrowserUntouched": true
+  }
+}
