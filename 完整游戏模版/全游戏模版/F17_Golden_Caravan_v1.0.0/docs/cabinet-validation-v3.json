@@ -1,22 +1,23 @@
 [
   {
     "id": "golden-hour",
-    "core": "independent-route-paths",
+    "core": "independent-line-reels",
     "feature": "horizontal-drift",
     "samples": 6000,
-    "features": 3876,
+    "features": 1659,
     "motions": [
       "move"
     ]
   },
   {
     "id": "jade-treasury",
-    "core": "independent-poker-reels",
-    "feature": "travelling-wild",
+    "core": "independent-scatter-groups",
+    "feature": "mystery-free",
     "samples": 6000,
-    "features": 326,
+    "features": 3054,
     "motions": [
-      "move"
+      "respin",
+      "transform"
     ]
   },
   {
@@ -24,7 +25,7 @@
     "core": "independent-variable-ways",
     "feature": "symbol-upgrade",
     "samples": 6000,
-    "features": 5991,
+    "features": 22,
     "motions": [
       "transform"
     ]
@@ -34,7 +35,7 @@
     "core": "independent-cluster-avalanche",
     "feature": "route-delivery",
     "samples": 6000,
-    "features": 3721,
+    "features": 3894,
     "motions": [
       "move"
     ]

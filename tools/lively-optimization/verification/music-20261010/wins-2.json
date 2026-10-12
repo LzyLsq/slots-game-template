@@ -1,0 +1,185 @@
+{
+  "checkedAt": "2026-10-10T05:53:28.267Z",
+  "visualOnly": true,
+  "games": [
+    {
+      "id": 25,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 26,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 28,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 31,
+      "passed": false,
+      "error": "TimeoutError: page.waitForFunction: Timeout 45000ms exceeded.",
+      "checks": [],
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "missing": [
+        {
+          "url": "http://127.0.0.1:63798/?debug=1&screen=game&game=coin-carousel",
+          "status": 404
+        }
+      ]
+    }
+  ]
+}

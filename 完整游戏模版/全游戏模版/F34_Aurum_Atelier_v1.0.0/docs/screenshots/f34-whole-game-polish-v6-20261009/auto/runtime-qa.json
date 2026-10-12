@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-09T05:36:28.406Z",
+  "scope": "Real touchscreen AUTO start/stop, queued second round, rules cancellation and lifecycle cancellation. Real generator and settlement; deterministic no-feature/no-win sequences selected only in isolated test contexts, welcome benefit disabled there. No user save affected.",
+  "cases": [
+    {
+      "id": "golden-hour",
+      "fixtureSeed": 1,
+      "checks": [
+        "Stop during rolling completes one round with no queued debit",
+        "AUTO starts the next round once; stop prevents a third",
+        "Rules stops AUTO and restores input on close",
+        "Background/foreground resumes the current round without restarting AUTO",
+        "Return to salon preserves stopped state"
+      ],
+      "passed": true
+    },
+    {
+      "id": "jade-treasury",
+      "fixtureSeed": 20,
+      "checks": [
+        "Stop during rolling completes one round with no queued debit",
+        "AUTO starts the next round once; stop prevents a third",
+        "Rules stops AUTO and restores input on close",
+        "Background/foreground resumes the current round without restarting AUTO",
+        "Return to salon preserves stopped state"
+      ],
+      "passed": true
+    },
+    {
+      "id": "pearl-palace",
+      "fixtureSeed": 5,
+      "checks": [
+        "Stop during rolling completes one round with no queued debit",
+        "AUTO starts the next round once; stop prevents a third",
+        "Rules stops AUTO and restores input on close",
+        "Background/foreground resumes the current round without restarting AUTO",
+        "Return to salon preserves stopped state"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ruby-revel",
+      "fixtureSeed": 2345,
+      "checks": [
+        "Stop during rolling completes one round with no queued debit",
+        "AUTO starts the next round once; stop prevents a third",
+        "Rules stops AUTO and restores input on close",
+        "Background/foreground resumes the current round without restarting AUTO",
+        "Return to salon preserves stopped state"
+      ],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

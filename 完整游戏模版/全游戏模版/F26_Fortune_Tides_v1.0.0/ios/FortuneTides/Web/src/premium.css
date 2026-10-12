@@ -84,7 +84,7 @@ html[lang=ja] .harbor-v2 .destination-copy strong{font-size:clamp(9px,2.6vw,12px
 .harbor-v2 .daily-ribbon b{white-space:nowrap;overflow-wrap:normal}.harbor-v2 .daily-ribbon>span{flex-shrink:0}
 
 /* Cabinet-front celebration: the treasure and its fittings are the surface. */
-.modal-backdrop.award-backdrop{background:radial-gradient(ellipse at 50% 44%,#261b0830,#1a140db3);backdrop-filter:none;-webkit-backdrop-filter:none;overflow-y:auto}
+.modal-backdrop.award-backdrop{background:linear-gradient(180deg,#0b3448b8,#061927e8),url('/art/crafted/captains-cabin.webp') center/cover no-repeat,#0d3448;backdrop-filter:none;-webkit-backdrop-filter:none;overflow-y:auto}
 .dialog.award-dialog{background:none;border:0;border-radius:0;box-shadow:none;overflow:visible;width:min(94vw,440px);max-height:94dvh;animation:award-reveal .44s cubic-bezier(.18,.8,.25,1) both}
 .award-dialog>header{position:relative;background:none;border:0;box-shadow:none;justify-content:center;padding:4px 42px 12px;min-height:56px}
 .award-dialog>header h2{font:900 clamp(26px,8vw,38px)/1.12 Georgia,'Songti SC',serif;color:#ffe4a0;text-shadow:0 2px #805017,0 -1px #fff7d8,0 4px 12px #231404;flex:1;text-align:center;text-wrap:balance}

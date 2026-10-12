@@ -39,7 +39,7 @@ function spinProgress(progress) {
 }
 
 export class Reels {
-  constructor(canvas, images, mode, {reduced = false, onCell} = {}) {
+  constructor(canvas, images, mode, {reduced = false, onCell, onStop} = {}) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
     this.images = images;
@@ -47,6 +47,7 @@ export class Reels {
     this.mode = mode;
     this.motion = motionProfiles[mode.id] || motionProfiles.mint;
     this.reduced = reduced;
+    this.onStop = onStop;
     this.grid = Array.from({length: mode.cols}, (_, c) => Array.from({length: mode.rows}, (_, r) => (c + r * 2) % 6));
     this.wins = [];
     this.winKeys = new Set();
@@ -130,6 +131,9 @@ export class Reels {
   }
 
   settle(grid, values) {
+    if(this.phase==='spin')for(let c=0;c<this.mode.cols;c++){
+      if(!this.landed.has(c)&&!(this.locked?.[c]?.every(v=>v>0))){this.landed.add(c);this.onStop?.(c);}
+    }
     this.grid = copyGrid(grid);
     this.values = values ? copyGrid(values) : null;
     this.phase = 'idle';
@@ -299,9 +303,10 @@ export class Reels {
           g.fillRect((c + .15 + j * .31) * cw, yy, 1.2, ch * .65);
         }
         g.restore();
-      } else if (this.phase === 'spin' && !this.reduced && !this.landed.has(c)) {
+      } else if (this.phase === 'spin' && !this.landed.has(c)) {
         this.landed.add(c);
-        for (let row = 0; row < this.mode.rows; row++) if (!(this.locked?.[c]?.[row] > 0)) this.burst(c, row, 4);
+        if(!this.locked?.[c]?.every(v=>v>0))this.onStop?.(c);
+        if(!this.reduced)for (let row = 0; row < this.mode.rows; row++) if (!(this.locked?.[c]?.[row] > 0)) this.burst(c, row, 4);
       }
       for (let r = 0; r < this.mode.rows; r++) {
         const locked = this.locked?.[c]?.[r] > 0;

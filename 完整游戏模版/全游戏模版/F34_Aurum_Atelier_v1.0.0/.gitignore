@@ -1,0 +1,29 @@
+/library/
+/temp/
+/local/
+/profiles/
+/build/
+/node_modules
+/.creator/
+/.playwright-cli/
+/output/
+/work/generated/
+/work/imagegen/
+/work/ccswitch/
+/work/prompts/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+/.CocosCreator/
+
+# Superseded local review captures
+/docs/screenshots/final-20260924/
+/docs/screenshots/input-*-input-fixed.png
+
+# Earlier visual iterations kept locally, not part of current delivery
+/docs/screenshots/living-hall-20260928/
+
+/tmp/
+__pycache__/

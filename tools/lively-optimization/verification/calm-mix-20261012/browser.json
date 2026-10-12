@@ -1,0 +1,3969 @@
+{
+  "checkedAt": "2026-10-12T03:19:51.309Z",
+  "revision": "calm-single-focus-20261012",
+  "scope": "Browser playback/state checks for real accepted spin, ignored repeated taps, rules, five award presentation fixtures, collect/skip, music toggle, simulated host background/resume and lobby return. Not human listening, real iPhone or payment testing.",
+  "sourceReports": [
+    "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/situation-audio-qa.YJs3Du/results.json",
+    "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/situation-audio-qa.EwyV20/results.json",
+    "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/situation-audio-qa.uBCQV6/results.json"
+  ],
+  "games": [
+    {
+      "id": 13,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1730,
+            "violations": [],
+            "samples": {
+              "played": 15,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1146144,
+              "buffers": 16,
+              "dropped": 1,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 15,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 2086,
+            "violations": [],
+            "samples": {
+              "played": 18,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 3,
+              "decodedBytes": 992820,
+              "buffers": 16,
+              "dropped": 4,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 16,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1688,
+            "violations": [],
+            "samples": {
+              "played": 19,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1045564,
+              "buffers": 16,
+              "dropped": 0,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 17,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1705,
+            "violations": [],
+            "samples": {
+              "played": 15,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1050084,
+              "buffers": 16,
+              "dropped": 0,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 18,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1848,
+            "violations": [],
+            "samples": {
+              "played": 16,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1016052,
+              "buffers": 16,
+              "dropped": 1,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 19,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "setModalOpen",
+              "args": [
+                false
+              ],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 2054,
+            "violations": [],
+            "samples": {
+              "played": 21,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 3,
+              "decodedBytes": 1313720,
+              "buffers": 16,
+              "dropped": 1,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 20,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1982,
+            "violations": [],
+            "samples": {
+              "played": 23,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 3,
+              "decodedBytes": 1043384,
+              "buffers": 16,
+              "dropped": 3,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 21,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "setModalOpen",
+              "args": [
+                false
+              ],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 2234,
+            "violations": [],
+            "samples": {
+              "played": 20,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 3,
+              "decodedBytes": 1165596,
+              "buffers": 16,
+              "dropped": 3,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 22,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 2104,
+            "violations": [],
+            "samples": {
+              "played": 22,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 3,
+              "decodedBytes": 968128,
+              "buffers": 16,
+              "dropped": 1,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 23,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-mega.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1771,
+            "violations": [],
+            "samples": {
+              "played": 18,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1095236,
+              "buffers": 16,
+              "dropped": 1,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 24,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1709,
+            "violations": [],
+            "samples": {
+              "played": 16,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1236172,
+              "buffers": 16,
+              "dropped": 0,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 25,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1226,
+            "violations": [],
+            "samples": {
+              "played": 22,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 934872,
+              "buffers": 16,
+              "dropped": 0,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 26,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.1599999964237213,
+          "modalClosed": 0.3799999952316284
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "setModalOpen",
+              "args": [
+                false
+              ],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishAward",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishAward",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 3,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1447,
+            "violations": [],
+            "samples": {
+              "played": 33,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1006316,
+              "buffers": 16,
+              "dropped": 5,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 27,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1176,
+            "violations": [],
+            "samples": {
+              "played": 22,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1037048,
+              "buffers": 16,
+              "dropped": 5,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 28,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 2,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1151,
+            "violations": [],
+            "samples": {
+              "played": 20,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1018008,
+              "buffers": 16,
+              "dropped": 1,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 29,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "setModalOpen",
+              "args": [
+                false
+              ],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 2498,
+            "violations": [],
+            "samples": {
+              "played": 24,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 3,
+              "decodedBytes": 1174624,
+              "buffers": 16,
+              "dropped": 3,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 30,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1744,
+            "violations": [],
+            "samples": {
+              "played": 15,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1035392,
+              "buffers": 16,
+              "dropped": 0,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 31,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 1882,
+            "violations": [],
+            "samples": {
+              "played": 18,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 2,
+              "decodedBytes": 1108500,
+              "buffers": 16,
+              "dropped": 0,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 33,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinKeepsSameMusic": true,
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "setModalOpen",
+              "args": [
+                false
+              ],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "mix": "calm-single-focus-20261012",
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "countAccents": 1,
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "countAccents": 0,
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        },
+        {
+          "singleMelodyAndBoundedFeedback": {
+            "frames": 2330,
+            "violations": [],
+            "samples": {
+              "played": 20,
+              "voices": 0,
+              "activeVoices": 0,
+              "fadingVoices": 0,
+              "groups": {},
+              "highWater": 3,
+              "decodedBytes": 1027136,
+              "buffers": 16,
+              "dropped": 2,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

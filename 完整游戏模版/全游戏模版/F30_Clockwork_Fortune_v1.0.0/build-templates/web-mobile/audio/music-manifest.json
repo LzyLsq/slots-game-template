@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F30_Clockwork_Fortune_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "March of the Spoons",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/March%20of%20the%20Spoons.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700008",
+      "isrc": "USUAN1700008",
+      "published": "2017-01-16",
+      "sourceSha256": "ba8ea9fb20b692b0d4960bd5d0cacf5b41e8a9ed3d2514cbac96a01ef69e072e",
+      "file": "music-home.m4a",
+      "sha256": "4bb7b091fb3addabd1ad1b47d220339498d20f423d459705d217fcfd3bece0c2",
+      "duration": 89.3529411764706,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Mischief Maker",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Mischief%20Maker.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700009",
+      "isrc": "USUAN1700009",
+      "published": "2017-01-16",
+      "sourceSha256": "efc8109e080430f026b77dbbe2031e223e861fe195357cd113b15b14d948fb1f",
+      "file": "music-cabinet.m4a",
+      "sha256": "99f9e860a4978a982c40a3a3dd43a383b4e970cc2bb1abc0e7bd57b422bc2a18",
+      "duration": 89.24,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Clockwork: precise latch, ticks and wooden gears / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "b35d7bea586f6412be312753a50b708e9505ce86c42e5549117c18f8da00a4e6",
+      "file": "win-small.m4a",
+      "sha256": "a9a695cc5a064badaef11be72e422a0cbc71782be37ce75f3ab9dc67e0a085f9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.35700000000000004,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT07",
+          "sourceSha256": "b35d7bea586f6412be312753a50b708e9505ce86c42e5549117c18f8da00a4e6",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/metalClick",
+          "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.4573469387755102,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT07"
+    },
+    {
+      "id": "win-big",
+      "title": "Clockwork: precise latch, ticks and wooden gears / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "40d6f3fb92225d039a9196c5cda98c9366efdc837c10b9b6d01d94dfafae8ec9",
+      "file": "win-big.m4a",
+      "sha256": "9a4aa1fb8f9b0e0ddef59da4ca5b8e13ac649740ec3db46372f5c1f4858a1dcc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.1333219954648526,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT11",
+          "sourceSha256": "40d6f3fb92225d039a9196c5cda98c9366efdc837c10b9b6d01d94dfafae8ec9",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9766893424036281,
+          "sourceSeconds": 0.9766893424036281,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_003",
+          "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.22494331065759637,
+          "sourceSeconds": 0.22494331065759637,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chip-lay-3",
+          "sourceSha256": "bf24ebb417b6279568800dffdb0205d3ec8854c7efe179e8964755a6341727aa",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.9266893424036281,
+          "gain": 0.205,
+          "maxSeconds": 0.1816326530612245,
+          "sourceSeconds": 0.265578231292517,
+          "sourceOffsetSeconds": 0.08394557823129252,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT11"
+    },
+    {
+      "id": "win-mega",
+      "title": "Clockwork: precise latch, ticks and wooden gears / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
+      "file": "win-mega.m4a",
+      "sha256": "e6c2ffbea31252257548465b3acc5dcccffed3613b18d28da6435846913b7a8d",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.40187074829931974,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT00",
+          "sourceSha256": "e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chip-lay-1",
+          "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.23879818594104307,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.13807256235827664,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.043333333333333335,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT00"
+    },
+    {
+      "id": "win-epic",
+      "title": "Clockwork: precise latch, ticks and wooden gears / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
+      "file": "win-epic.m4a",
+      "sha256": "70c85f1f73bd468f5c537a124036a6b23276968136a4c2955eeb634b38f625d1",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6689229024943311,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT01",
+          "sourceSha256": "ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5122902494331065,
+          "sourceSeconds": 0.5122902494331065,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/metalClick",
+          "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.4573469387755102,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chip-lay-3",
+          "sourceSha256": "bf24ebb417b6279568800dffdb0205d3ec8854c7efe179e8964755a6341727aa",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.46229024943310654,
+          "gain": 0.255,
+          "maxSeconds": 0.1816326530612245,
+          "sourceSeconds": 0.265578231292517,
+          "sourceOffsetSeconds": 0.08394557823129252,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT01"
+    },
+    {
+      "id": "win-super",
+      "title": "Clockwork: precise latch, ticks and wooden gears / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
+      "file": "win-super.m4a",
+      "sha256": "6f0d1fbdbcdea42a5ede51f73c651502a9919b00ec68c7d7fd0231d47a4c63c9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.7704875283446712,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT04",
+          "sourceSha256": "7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.6574149659863946,
+          "sourceSeconds": 0.6574149659863946,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_003",
+          "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.22494331065759637,
+          "sourceSeconds": 0.22494331065759637,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chip-lay-1",
+          "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.6074149659863946,
+          "gain": 0.28,
+          "maxSeconds": 0.13807256235827664,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.043333333333333335,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT04"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "d74b6e3ee8c43bf477fe9f346b70f44e1b4cd971d0c15ea61d9dc2510e45f5bc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "rpg/metalClick",
+          "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.4573469387755102,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/click_002",
+          "sourceSha256": "adcd1f4adc35f1b41bc1b5bbefeff7aa44f2f3f0d96d3199b544140c7c1e761c",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.011609977324263039,
+          "sourceSeconds": 0.011609977324263039,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "ba9ba60b172b3ebc131a940f25793cd2e207aca7af73dc80d637277f060f1708",
+      "file": "sfx-ui-back.wav",
+      "sha256": "3337dd8be72dcc259b4cf7c2797f15b8b0d81a926d9a5f621fe74f0871a81632",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.28951247165532884,
+      "sources": [
+        {
+          "key": "rpg/metalLatch",
+          "sourceSha256": "ba9ba60b172b3ebc131a940f25793cd2e207aca7af73dc80d637277f060f1708",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.2645124716553288,
+          "sourceSeconds": 0.27598639455782314,
+          "sourceOffsetSeconds": 0.01147392290249433,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_003",
+          "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.22494331065759637,
+          "sourceSeconds": 0.22494331065759637,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+      "file": "sfx-ui-select.wav",
+      "sha256": "a1fc1487dd65450d55cfc629c3baededb38a31fe5facf6b47bf0cab85ce31afd",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_002",
+          "sourceSha256": "4cc6ac5341b9b2c86fef80c347de028e9ab9f2e037586ac7d9fa59a403a1c012",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.062403628117913834,
+          "sourceSeconds": 0.062403628117913834,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+      "file": "sfx-bet-up.wav",
+      "sha256": "53e942a62495a60c098e90bd3568bd85e5b9b2846f8e7b62b98b9a5c5cd1815f",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.28700000000000003,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_003",
+          "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.22494331065759637,
+          "sourceSeconds": 0.22494331065759637,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_004",
+          "sourceSha256": "541c19cc1ab712a9efc5765df602e7d0da09d9cafdd297ce1e19b092289fd62f",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.5035827664399093,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+      "file": "sfx-bet-down.wav",
+      "sha256": "6c77a152b1fcc0082afdac2da14dc48b90493637d6e91a4028db46db5e090449",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "rpg/metalClick",
+          "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.4573469387755102,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/card-slide-8",
+          "sourceSha256": "95d9aa26f8c63af9934f27a8e3b7e9b583f177640f0bbd6982f12dba52b9ae6b",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6806349206349206,
+          "sourceOffsetSeconds": 0.019138321995464853,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "95d9aa26f8c63af9934f27a8e3b7e9b583f177640f0bbd6982f12dba52b9ae6b",
+      "file": "sfx-spin-start.wav",
+      "sha256": "aefbee3fdd4ea4305fa848c18e385b46decade9f07983b84547b7906db232572",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.685,
+      "sources": [
+        {
+          "key": "casino/card-slide-8",
+          "sourceSha256": "95d9aa26f8c63af9934f27a8e3b7e9b583f177640f0bbd6982f12dba52b9ae6b",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.66,
+          "sourceSeconds": 0.6806349206349206,
+          "sourceOffsetSeconds": 0.019138321995464853,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+      "file": "sfx-stop-1.wav",
+      "sha256": "4fc3dec7834d891a78844a295b4687e63748855ef4ffad8a40f23b9a9bf195e0",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "rpg/metalClick",
+          "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.4573469387755102,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+      "file": "sfx-stop-2.wav",
+      "sha256": "32b0e64d9c4eb4882e359d20937d402a726891ceea3d7051bed01bc1123c70d9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24994331065759637,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_003",
+          "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.22494331065759637,
+          "sourceSeconds": 0.22494331065759637,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+      "file": "sfx-stop-3.wav",
+      "sha256": "35e1b69615e17cc3e91959ab14a8cc31f61d6c4fda78d30786c3dfe6aa98c090",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+      "file": "sfx-coin-1.wav",
+      "sha256": "b0fdc2d7b60c5d33f711fabd30cd2f0532dfce8eb61941fc81b7c981bbc161dc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.16307256235827663,
+      "sources": [
+        {
+          "key": "casino/chip-lay-1",
+          "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.13807256235827664,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.043333333333333335,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "bf24ebb417b6279568800dffdb0205d3ec8854c7efe179e8964755a6341727aa",
+      "file": "sfx-coin-2.wav",
+      "sha256": "298ee42430c56664314fe69198a4ef18beea51d75258493ecf85db7f437152e8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2066326530612245,
+      "sources": [
+        {
+          "key": "casino/chip-lay-3",
+          "sourceSha256": "bf24ebb417b6279568800dffdb0205d3ec8854c7efe179e8964755a6341727aa",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1816326530612245,
+          "sourceSeconds": 0.265578231292517,
+          "sourceOffsetSeconds": 0.08394557823129252,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+      "file": "sfx-coin-3.wav",
+      "sha256": "e33bdd8f092ea8e1f4d3be03018d09606abc8e8609cb60a8790cd6fd02616364",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chip-lay-1",
+          "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.13807256235827664,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.043333333333333335,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/metalClick",
+          "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.4573469387755102,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "bf24ebb417b6279568800dffdb0205d3ec8854c7efe179e8964755a6341727aa",
+      "file": "sfx-burst.wav",
+      "sha256": "2463989b233f04330fdd524cecbf7985c2864612793e2fce5c749c07149fdf78",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.34638321995464855,
+      "sources": [
+        {
+          "key": "casino/chip-lay-3",
+          "sourceSha256": "bf24ebb417b6279568800dffdb0205d3ec8854c7efe179e8964755a6341727aa",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1816326530612245,
+          "sourceSeconds": 0.265578231292517,
+          "sourceOffsetSeconds": 0.08394557823129252,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "95d9aa26f8c63af9934f27a8e3b7e9b583f177640f0bbd6982f12dba52b9ae6b",
+      "file": "sfx-reveal.wav",
+      "sha256": "d87bcb72bef10737610f5b418d5200e4b7d2053cb116db4797046c4dc11c1c55",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.665,
+      "sources": [
+        {
+          "key": "casino/card-slide-8",
+          "sourceSha256": "95d9aa26f8c63af9934f27a8e3b7e9b583f177640f0bbd6982f12dba52b9ae6b",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.64,
+          "sourceSeconds": 0.6806349206349206,
+          "sourceOffsetSeconds": 0.019138321995464853,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/metalClick",
+          "sourceSha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.4573469387755102,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+      "file": "sfx-collect.wav",
+      "sha256": "8062912f3b50b084bd8dff7cc1f573fd4e7e6d86404a9aaad8d89d93046b1f79",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2899433106575964,
+      "sources": [
+        {
+          "key": "casino/chip-lay-1",
+          "sourceSha256": "4b2111252ccb64eed67f171e061053849cfbb29873536c03948646f244a3905c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.13807256235827664,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.043333333333333335,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_003",
+          "sourceSha256": "0d18737d93ba7aa0669f751094cbc1671bbebac4fe207783922938ce75e24334",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.22494331065759637,
+          "sourceSeconds": 0.22494331065759637,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Clockwork: precise latch, ticks and wooden gears / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+      "file": "sfx-reward.wav",
+      "sha256": "03812e8afe39129606278e395e3e47a07af02e9df5b898af32659bc84f31e505",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chip-lay-3",
+          "sourceSha256": "bf24ebb417b6279568800dffdb0205d3ec8854c7efe179e8964755a6341727aa",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.1816326530612245,
+          "sourceSeconds": 0.265578231292517,
+          "sourceOffsetSeconds": 0.08394557823129252,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Mischief Maker",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Mischief%20Maker.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700009",
+      "isrc": "USUAN1700009",
+      "published": "2017-01-16",
+      "sourceSha256": "efc8109e080430f026b77dbbe2031e223e861fe195357cd113b15b14d948fb1f",
+      "file": "music-spin.m4a",
+      "sha256": "3df50f93cd758872f8bc769cdfea24c39c385b1535587e6fde2fe5317af0a3de",
+      "duration": 14.86,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 96,
+        "end": 111.36
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Clockwork: precise latch, ticks and wooden gears"
+}

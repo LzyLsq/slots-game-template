@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F23_Golden_Lamp_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Desert City",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Desert%20City.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100564",
+      "isrc": "USUAN1100564",
+      "published": "2009-03-08",
+      "sourceSha256": "aeefb582c77059aaf5b10d1e9125d7b19adca07cd841f3654e74aed7da9a3a71",
+      "file": "music-home.m4a",
+      "sha256": "e82feabeda33de2ba6a2343d94a9df151549b595a58d5159a7b33b6e92a76d15",
+      "duration": 82.72093023255815,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Quasi Motion",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Quasi%20Motion.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100836",
+      "isrc": "USUAN1100836",
+      "published": "2011-06-26",
+      "sourceSha256": "8a933c225fc31cb2835e94aa7bb49c19f8bc6009f549f2c6c256dd48215a74f2",
+      "file": "music-cabinet.m4a",
+      "sha256": "2714b653fdf51baca58bc2575598683b2c6346cec77fb4ee30f9400085c3586f",
+      "duration": 90.2,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "f98fa4af012d443da636a2d90f2926adc2384ec833851918f88426be9a25acf9",
+      "file": "win-small.m4a",
+      "sha256": "62c504e40e73f8808f5de1f8d2245b1fea9bf980c75e1f1f1efbb5c1e283846d",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6098526077097506,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI04",
+          "sourceSha256": "f98fa4af012d443da636a2d90f2926adc2384ec833851918f88426be9a25acf9",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5848526077097506,
+          "sourceSeconds": 0.5848526077097506,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactMetal_light_002",
+          "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.25396825396825395,
+          "sourceSeconds": 0.25396825396825395,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI04"
+    },
+    {
+      "id": "win-big",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "91870588924e0e498c6eb8d4f4ccf8595c9e7dc51fb553797b551062e642ce7c",
+      "file": "win-big.m4a",
+      "sha256": "94072bb0c37dd559112576814601d5f2ab64bcff3823615c59708179806abc78",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.7310770975056688,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI07",
+          "sourceSha256": "91870588924e0e498c6eb8d4f4ccf8595c9e7dc51fb553797b551062e642ce7c",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.339501133786848,
+          "sourceSeconds": 1.339501133786848,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/metalPot1",
+          "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 1.4680045351473923,
+          "sourceOffsetSeconds": 0.08802721088435374,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 1.289501133786848,
+          "gain": 0.205,
+          "maxSeconds": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI07"
+    },
+    {
+      "id": "win-mega",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "072fe661c6ce8c7672afaf0af51e27533d6effe99d35584b01d864bde800ecc1",
+      "file": "win-mega.m4a",
+      "sha256": "7ea8b5946bf20fe5dba97436b1aae152f8c4b1f48a0fd0ac22c759928b1f9430",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.483344671201814,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI11",
+          "sourceSha256": "072fe661c6ce8c7672afaf0af51e27533d6effe99d35584b01d864bde800ecc1",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.8083446712018141,
+          "sourceSeconds": 0.8083446712018141,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/handleCoins",
+          "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.758344671201814,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.7,
+          "sourceSeconds": 0.854671201814059,
+          "sourceOffsetSeconds": 0.05210884353741497,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI11"
+    },
+    {
+      "id": "win-epic",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "b442ade3308a2bbda4b8c572c86f9f1071c7bdbcfb1e6f915d35c605b61bd475",
+      "file": "win-epic.m4a",
+      "sha256": "f9c5ab0151b30bb8772157ec0fa6a877de4711844538deb6a4be4ba018942d4e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.9009637188208618,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI00",
+          "sourceSha256": "b442ade3308a2bbda4b8c572c86f9f1071c7bdbcfb1e6f915d35c605b61bd475",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5093877551020408,
+          "sourceSeconds": 0.5093877551020408,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactMetal_light_002",
+          "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.25396825396825395,
+          "sourceSeconds": 0.25396825396825395,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.45938775510204083,
+          "gain": 0.255,
+          "maxSeconds": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI00"
+    },
+    {
+      "id": "win-super",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "3f8f2534a297d19386c233a7ee4fa8737cc40870dd206010263760e1983dde46",
+      "file": "win-super.m4a",
+      "sha256": "0fdf92848241abad1fdd63693ee9f4db34555222cf1790fc45a0ffba55c0b7a9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.6807142857142856,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI01",
+          "sourceSha256": "3f8f2534a297d19386c233a7ee4fa8737cc40870dd206010263760e1983dde46",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.0057142857142858,
+          "sourceSeconds": 1.0057142857142858,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/metalPot1",
+          "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 1.4680045351473923,
+          "sourceOffsetSeconds": 0.08802721088435374,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/handleCoins",
+          "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.9557142857142857,
+          "gain": 0.28,
+          "maxSeconds": 0.7,
+          "sourceSeconds": 0.854671201814059,
+          "sourceOffsetSeconds": 0.05210884353741497,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI01"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "388af4856f30b0e811aca7553aacda3412dc1a77f6345a398b2985ffdd18d03a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.278968253968254,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_002",
+          "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.25396825396825395,
+          "sourceSeconds": 0.25396825396825395,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/click_003",
+          "sourceSha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.01886621315192744,
+          "sourceSeconds": 0.01886621315192744,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "d545b1d9f20e6188140aaf551a96f1e82fe0d15f7ca066fac8b065e1231e0038",
+      "file": "sfx-ui-back.wav",
+      "sha256": "985d7b3f25e4619a12b4c244d0c3627c8d58b30f340b664672d2c25ec19ddfc8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.465,
+      "sources": [
+        {
+          "key": "rpg/clothBelt2",
+          "sourceSha256": "d545b1d9f20e6188140aaf551a96f1e82fe0d15f7ca066fac8b065e1231e0038",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.44,
+          "sourceSeconds": 0.7533333333333333,
+          "sourceOffsetSeconds": 0.003832199546485261,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/metalPot1",
+          "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.28002267573696143,
+          "sourceSeconds": 1.4680045351473923,
+          "sourceOffsetSeconds": 0.08802721088435374,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "file": "sfx-ui-select.wav",
+      "sha256": "c12f418fb1ffbeb3a385f6cf4c1f488c51d43458ea3ca0f6c50c04ab248d5ad8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30000000000000004,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_003",
+          "sourceSha256": "9a612fd2f513d52a296906b41071c990f75defe56be3bee60d2d4e2423b51b8b",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.26,
+          "sourceSeconds": 0.38458049886621315,
+          "sourceOffsetSeconds": 0.011315192743764172,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+      "file": "sfx-bet-up.wav",
+      "sha256": "3e3537e249ea3f1513ab1180d41c734e5dd6608b0ed2997e691d6bb84f30cf60",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "rpg/metalPot1",
+          "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 1.4680045351473923,
+          "sourceOffsetSeconds": 0.08802721088435374,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/switch_004",
+          "sourceSha256": "541c19cc1ab712a9efc5765df602e7d0da09d9cafdd297ce1e19b092289fd62f",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.5035827664399093,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+      "file": "sfx-bet-down.wav",
+      "sha256": "01aef77628ce8d470952f0ce55a36cc545a8d6c1638508d1f8e84939cc8e3c2d",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36281405895691615,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_002",
+          "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.25396825396825395,
+          "sourceSeconds": 0.25396825396825395,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/handleSmallLeather",
+          "sourceSha256": "ae3cbf695aa0a8b98b5a80a835be5a3ccbd5446a24db2235cd4c3cd6fc92ed96",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.3218140589569161,
+          "sourceSeconds": 0.35333333333333333,
+          "sourceOffsetSeconds": 0.03151927437641723,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "ae3cbf695aa0a8b98b5a80a835be5a3ccbd5446a24db2235cd4c3cd6fc92ed96",
+      "file": "sfx-spin-start.wav",
+      "sha256": "e4c17e0e7358ed4d530ae6366260ac04e62397ee7e33916e8b51603fa8e03158",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.34681405895691614,
+      "sources": [
+        {
+          "key": "rpg/handleSmallLeather",
+          "sourceSha256": "ae3cbf695aa0a8b98b5a80a835be5a3ccbd5446a24db2235cd4c3cd6fc92ed96",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3218140589569161,
+          "sourceSeconds": 0.35333333333333333,
+          "sourceOffsetSeconds": 0.03151927437641723,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+      "file": "sfx-stop-1.wav",
+      "sha256": "4528708582fb306f01134d3dd7392d96a90d0932e156cecb55af84c487eaaada",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.278968253968254,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_002",
+          "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.25396825396825395,
+          "sourceSeconds": 0.25396825396825395,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+      "file": "sfx-stop-2.wav",
+      "sha256": "98c15f1747edc781edb23097252fe2f82286dda68fac597ff671deff3efadd43",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "rpg/metalPot1",
+          "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 1.4680045351473923,
+          "sourceOffsetSeconds": 0.08802721088435374,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "file": "sfx-stop-3.wav",
+      "sha256": "96583a7377e5260cd60b1bc898a6b0c55e96a212f1a1fde4a8c788467ef00c80",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2267233560090703,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+      "file": "sfx-coin-1.wav",
+      "sha256": "d30857a289e915393d0d18286ab38cd4bac567f202adb9cabade7e9fdedd68f2",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.245,
+      "sources": [
+        {
+          "key": "rpg/handleCoins",
+          "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.854671201814059,
+          "sourceOffsetSeconds": 0.05210884353741497,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+      "file": "sfx-coin-2.wav",
+      "sha256": "66e87e9140505706c2c9c4814f44ba38ad009f22ff838bf29acae9928f7dcfb5",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.245,
+      "sources": [
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+      "file": "sfx-coin-3.wav",
+      "sha256": "736641d20476ad105599ab904aee071f2d3aa1fe3710bb392d341242e459e917",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "rpg/handleCoins",
+          "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.854671201814059,
+          "sourceOffsetSeconds": 0.05210884353741497,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactMetal_light_002",
+          "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.25396825396825395,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+      "file": "sfx-burst.wav",
+      "sha256": "a7bc930a41a7f12b8de0a62fce7314874997faff6be5712d2b117b765cc6697a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.4415759637188209,
+      "sources": [
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "ae3cbf695aa0a8b98b5a80a835be5a3ccbd5446a24db2235cd4c3cd6fc92ed96",
+      "file": "sfx-reveal.wav",
+      "sha256": "e9aaf5ed872be46cd54a83df5b1b364a80c73079035da0e4389042a96d195213",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.34681405895691614,
+      "sources": [
+        {
+          "key": "rpg/handleSmallLeather",
+          "sourceSha256": "ae3cbf695aa0a8b98b5a80a835be5a3ccbd5446a24db2235cd4c3cd6fc92ed96",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.3218140589569161,
+          "sourceSeconds": 0.35333333333333333,
+          "sourceOffsetSeconds": 0.03151927437641723,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactMetal_light_002",
+          "sourceSha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.25396825396825395,
+          "sourceSeconds": 0.25396825396825395,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+      "file": "sfx-collect.wav",
+      "sha256": "10eebe6d912a12cac45d834d2889d2fda2a8404b9bbbc673596318d72ba01507",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.725,
+      "sources": [
+        {
+          "key": "rpg/handleCoins",
+          "sourceSha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.7,
+          "sourceSeconds": 0.854671201814059,
+          "sourceOffsetSeconds": 0.05210884353741497,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/metalPot1",
+          "sourceSha256": "159def979e8e386c2c539f5e99cc30a080eb2dcb6c911fa2e4ccc0785b2522fd",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 1.4680045351473923,
+          "sourceOffsetSeconds": 0.08802721088435374,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Golden Lamp: lamp brass, silk and treasure pouch / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "file": "sfx-reward.wav",
+      "sha256": "9b19f0a7cbdf318b7ec0f330b1d1d863bfaf32a858a422451d7a5c3fbfde1207",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.5015759637188208,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Quasi Motion",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Quasi%20Motion.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100836",
+      "isrc": "USUAN1100836",
+      "published": "2011-06-26",
+      "sourceSha256": "8a933c225fc31cb2835e94aa7bb49c19f8bc6009f549f2c6c256dd48215a74f2",
+      "file": "music-spin.m4a",
+      "sha256": "1cbb113d12d85c58f5ed2976f7580c94ff3c3c5aaa4a60deb1ae3a06371f2183",
+      "duration": 18.7,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 96,
+        "end": 115.2
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Golden Lamp: lamp brass, silk and treasure pouch"
+}

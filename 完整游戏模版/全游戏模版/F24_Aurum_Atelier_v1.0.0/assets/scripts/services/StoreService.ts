@@ -1,3 +1,4 @@
+import { LocalCoinStore } from '../LocalCoinStore';
 import {ECONOMY} from '../math/EconomyProfile';
 import { SecureRNG } from '../core/SecureRNG';
 import { EconomyService } from './EconomyService';
@@ -33,6 +34,7 @@ export interface VerifiedPurchase {
   readonly transactionId?: string;
   /** StoreKit JWS forwarded to the authenticated game server. */
   readonly signedTransactionInfo?: string;
+  readonly appAccountToken?: string;
   readonly message?: string;
 }
 export interface VerifiedServerPurchase { readonly status: 'verified'; readonly productId: string; readonly transactionId: string; readonly creditedCredits: number; readonly authoritativeBalance: number; }
@@ -68,18 +70,33 @@ const nativeBridge = (): AureliaPurchaseBridge | undefined => (globalThis as Run
 const validTransactionId = (value: string | undefined): value is string => Boolean(value && /^[A-Za-z0-9._:-]{3,160}$/.test(value));
 
 export class StoreService {
+  private localPurchases?: LocalCoinStore;
+  private localStore(): LocalCoinStore {
+    return this.localPurchases ??= new LocalCoinStore(STORE_PRODUCTS, ALL_STORE_PRODUCTS, () => {
+      const s=this.save.read(),p=s.currentUserId?s.players[s.currentUserId]:undefined;
+      return p&&!p.isGuest?{id:p.id,token:p.appAccountToken}:null;
+    }, (nativeId,amount) => {
+      const id='apple:'+nativeId,ledger=this.save.currentScope()?.creditedPurchaseIds;
+      if(ledger?.includes(id)||ledger?.includes(nativeId))return 'duplicate';
+      if(this.economy.balance()>1_000_000_000-amount)throw Error('Coin balance limit: spend coins before retrying this unfinished purchase');
+      if(!this.economy.creditVerifiedPurchase(amount,id))throw Error('Unable to save purchased coins');
+      if(!this.save.currentScope()?.creditedPurchaseIds.includes(id))throw Error('Purchase was not persisted');
+      return 'new';
+    });
+  }
   private debugGrants = false;
   private readonly purchasesInFlight = new Set<string>();
 
-  public constructor(private readonly save: SaveService, private readonly economy: EconomyService, debugGrants = false, private readonly server?: StoreServerClient) { this.debugGrants = debugGrants; }
+  public constructor(private readonly save: SaveService, private readonly economy: EconomyService, debugGrants = false, private readonly server?: StoreServerClient) { this.debugGrants = debugGrants && !nativeBridge(); }
 
-  public setDebugGrants(enabled: boolean): void { this.debugGrants = enabled; }
-  public purchaseAvailable(): boolean { return this.debugGrants || Boolean(nativeBridge() && this.server); }
+  public setDebugGrants(enabled: boolean): void { this.debugGrants = enabled && !nativeBridge(); }
+  public purchaseAvailable(): boolean { return this.debugGrants || Boolean(nativeBridge()); }
 
   public async catalog(): Promise<readonly StoreCatalogItem[]> {
+    if (!this.server && nativeBridge()) return this.localStore().catalog();
     if (this.debugGrants) return STORE_PRODUCTS.map((product) => ({ ...product, displayPrice: `${product.debugPrice} SANDBOX`, available: true }));
     const bridge = nativeBridge();
-    if (!bridge || !this.server) return STORE_PRODUCTS.map((product) => ({ ...product, displayPrice: 'UNAVAILABLE', available: false }));
+    if (!bridge) return STORE_PRODUCTS.map((product) => ({ ...product, displayPrice: 'UNAVAILABLE', available: false }));
     try {
       const products = await bridge.products(STORE_PRODUCTS.map((product) => product.appleProductId));
       const byId = new Map(products.map((product) => [product.productId, product]));
@@ -90,6 +107,7 @@ export class StoreService {
   }
 
   public async purchase(productId: string): Promise<StoreActionResult> {
+    if (!this.server && nativeBridge()) return this.localStore().purchase(productId);
     const product = STORE_PRODUCTS.find((item) => item.id === productId); const userId = this.save.read().currentUserId; const player = userId ? this.save.read().players[userId] : undefined;
     if (!product || !player || player.isGuest) return { ok: false, status: 'unavailable', credited: 0, message: 'Sign in to purchase virtual coins.' };
     const amount = product.credits + product.bonus;
@@ -118,6 +136,7 @@ export class StoreService {
   }
 
   public async restore(): Promise<StoreActionResult> {
+    if (!this.server && nativeBridge()) return this.localStore().restore();
     const userId = this.save.read().currentUserId; const player = userId ? this.save.read().players[userId] : undefined;
     if (!player || player.isGuest) return { ok: false, status: 'unavailable', credited: 0, message: 'Sign in to synchronize purchases.' };
     if (this.debugGrants) return { ok: true, status: 'verified', credited: 0, message: 'Sandbox balance is already current.' };

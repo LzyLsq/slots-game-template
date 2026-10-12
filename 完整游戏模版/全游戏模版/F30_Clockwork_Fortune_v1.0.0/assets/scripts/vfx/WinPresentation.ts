@@ -1,8 +1,13 @@
 import {GameConfig, SpinResult, WinResult} from '../math/types';
 import {language, tr} from '../ui/Language';
 /** Display tiers only. They neither draw prizes nor alter settlement. */
-export const WIN_TIERS = [5,10,50,100] as const;
-export function winTier(multiplier:number):number{return multiplier>=WIN_TIERS[3]?4:multiplier>=WIN_TIERS[2]?3:multiplier>=WIN_TIERS[1]?2:multiplier>=WIN_TIERS[0]?1:0;}
+// BIG is strictly profitable; existing higher tiers remain inclusive.
+export const WIN_TIERS = [1,10,50,100] as const;
+export function winTier(multiplier:number):number{
+  if(!Number.isFinite(multiplier))return 0;
+  return multiplier>=100?4:multiplier>=50?3:multiplier>=10?2:multiplier>1?1:0;
+}
+export function isBigWin(total:number,bet:number):boolean{return Number.isFinite(total)&&Number.isFinite(bet)&&bet>0&&total>bet;}
 const phrases={
   "line-left":["Left-edge line", "左起赔付线", "左起賠付線", "左端ライン", "왼쪽 시작 라인"],
   "line-right":["Right-edge line", "右起赔付线", "右起賠付線", "右端ライン", "오른쪽 시작 라인"],
@@ -62,7 +67,9 @@ const phrases={
   total:['Total return','总返还','總返還','返還合計','총 반환'],
   stake:['× stake','× 本局下注','× 本局下注','× ベット','× 베팅'],
   below:['Return below stake','返还低于下注','返還低於下注','返還はベット未満','반환액이 베팅보다 적음'],
-  tiers:['Normal award: positive return below 5×. BIG ≥5× · SUPER BIG ≥10× · MEGA ≥50× · EPIC ≥100× stake. New accounts: round 5 ≥5× and round 10 ≥10× across all modes; any shortfall is a separate credited newcomer bonus.','普通奖为不足5倍的正返还；大奖≥5倍、超级大奖≥10倍、巨奖≥50倍、史诗≥100倍下注。新账户跨模式累计第5局至少5倍、第10局至少10倍；不足部分作为独立新人奖金真实入账。','普通獎為不足5倍的正返還；大獎≥5倍、超級大獎≥10倍、巨獎≥50倍、史詩≥100倍下注。新帳戶跨模式累計第5局至少5倍、第10局至少10倍；不足部分作為獨立新人獎金入帳。','通常賞は5倍未満の正の返還。BIG ≥5倍・SUPER BIG ≥10倍・MEGA ≥50倍・EPIC ≥100倍。新規アカウントの全モード合計5回目は最低5倍、10回目は最低10倍。不足分は別枠特典として入金。','일반상은 5배 미만의 양수 반환. BIG ≥5배 · SUPER BIG ≥10배 · MEGA ≥50배 · EPIC ≥100배. 신규 계정의 모든 모드 합산 5번째는 최소 5배, 10번째는 최소 10배. 부족분은 별도 보너스로 지급.'],
+  tiers:["Win tiers: BIG >1× · SUPER BIG 10× · MEGA 50× · EPIC 100× stake. Total round return, not extra prizes.","大奖分级：总奖金大于本局下注为大奖 · 超级大奖10倍 · 巨奖50倍 · 史诗100倍。仅演出分级，不额外发奖。","大獎分級：總獎金大於本局下注為大獎 · 超級大獎10倍 · 巨獎50倍 · 史詩100倍。僅演出分級，不額外發獎。","BIGは返還合計が今回のベットを超える場合。SUPER BIG 10倍・MEGA 50倍・EPIC 100倍。追加賞なし。","BIG: 이번 베팅보다 많은 총 당첨금. SUPER BIG 10배 · MEGA 50배 · EPIC 100배. 추가 보상 없음."],
+  profitableTier:['Total return > stake · BIG WIN','总返还 > 本局下注 · 大奖','總返還 > 本局下注 · 大獎','返還合計 > ベット · BIG WIN','총 반환액 > 베팅 · BIG WIN'],
+  ordinaryTier:['Ordinary paid win · total return ≤ stake','普通中奖 · 总返还 ≤ 本局下注','普通中獎 · 總返還 ≤ 本局下注','通常当たり · 返還合計 ≤ ベット','일반 당첨 · 총 반환액 ≤ 베팅'],
   tier:['Total return ≥ {n}× stake · presentation tier','总返还 ≥ {n}倍下注 · 演出档位','總返還 ≥ {n}倍下注 · 演出檔位','返還合計 ≥ ベット{n}倍・演出区分','총 반환액 ≥ 베팅 {n}배 · 연출 단계'],
   newcomer:['New player {n}/10 · BIG by round 5, SUPER BIG by round 10','新人 {n}/10 · 第5局保底大奖、第10局保底超级大奖','新人 {n}/10 · 第5局保底大獎、第10局保底超級大獎','初心者 {n}/10・5回目BIG、10回目SUPER BIGを保証','신규 {n}/10 · 5회 BIG, 10회 SUPER BIG 보장'],
   newcomerAward:['New player guarantee (separate bonus)','新手保底补足（单独奖励）','新手保底補足（單獨獎勵）','初心者保証（別枠特典）','신규 보장 (별도 보너스)'],
@@ -70,7 +77,7 @@ const phrases={
 function p(key:keyof typeof phrases):string{const i=['en','zh-CN','zh-TW','ja','ko'].indexOf(language());return phrases[key][Math.max(0,i)];}
 function amount(n:number):string{return n.toLocaleString('en-US',{maximumFractionDigits:3});}
 export function tierRules():string{return p('tiers');}
-export function tierCaption(multiplier:number):string{return p('tier').replace('{n}',String(WIN_TIERS[Math.max(0,winTier(multiplier)-1)]));}
+export function tierCaption(multiplier:number):string{const tier=winTier(multiplier);return tier===0?p('ordinaryTier'):tier===1?p('profitableTier'):p('tier').replace('{n}',String(WIN_TIERS[tier-1]));}
 /** Short caption for the small phone celebration plate; detailed policy stays in Rules. */
 export function celebrationCaption(multiplier:number,welcomeBonus=false):string {
   const i=Math.max(0,['en','zh-CN','zh-TW','ja','ko'].indexOf(language()));

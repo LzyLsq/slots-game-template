@@ -1,3 +1,6 @@
+import { StationaryArtwork } from '../vfx/StationaryArtwork';
+import {rewardArtwork,rewardInk,rewardTextWidth,type RewardPlateKind} from './RewardArtwork';
+import { ThemeMotion } from '../vfx/ThemeMotion';
 import {tr} from './Language';
 import {TextFit} from './TextFit';
 import { EventTouch, Color, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
@@ -6,6 +9,7 @@ export class SalonArt {
   private textures = new Map<string, Texture2D>();
   private frames = new Map<string, SpriteFrame>();
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
+    await ThemeMotion.prepare();
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
@@ -50,7 +54,7 @@ export class SalonArt {
     this.frames.set(key, sf); return sf;
   }
   public image(parent: Node, name: string, x: number, y: number, w: number, h: number, index = -1): Node {
-    const n = box(parent, name, x, y, w, h); const s = n.addComponent(Sprite);
+    const n = box(parent, name, x, y, w, h); StationaryArtwork.mark(n,name); const s = n.addComponent(Sprite);
     // Set CUSTOM before the frame: RAW would overwrite the authored hit/layout box.
     s.sizeMode = Sprite.SizeMode.CUSTOM; s.spriteFrame = this.frame(name, index);
     if (name === 'surfaces' || name === 'ledgers' || (name.startsWith('harvest-plate-')||name.startsWith('harvest-soft-plate-'))) s.type = Sprite.Type.SLICED;
@@ -62,6 +66,7 @@ export class SalonArt {
       w = frame.rect.width * scale; h = frame.rect.height * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
+    ThemeMotion.attach(s,name,index);
     return n;
   }
   public cover(parent: Node, name: string, x: number, y: number, w: number, h: number, index=-1, radius=0): Node {
@@ -75,6 +80,12 @@ export class SalonArt {
     // Public material API; Sprite's old blend-factor fields are private in 3.8.
     s.getMaterialInstance(0)?.overridePipelineStates({blendState:{targets:[{blend:true,blendSrc:gfx.BlendFactor.SRC_ALPHA,blendDst:gfx.BlendFactor.ONE,blendSrcAlpha:gfx.BlendFactor.ZERO,blendDstAlpha:gfx.BlendFactor.ONE}]}});
     opacity(n,alpha);return n;
+  }
+  public rewardPanel(parent:Node,x:number,y:number,w:number,h:number,theme=0,kind:RewardPlateKind='detail'):Node {return rewardArtwork(this,parent,x,y,w,h,theme,kind);}
+  public rewardButton(parent:Node,x:number,y:number,w:number,h:number,label:string,theme:number,action:()=>void):Node {
+    const hit=box(parent,'Collect your treasure',x,y,w,h),face=this.rewardPanel(hit,0,0,w,h,theme,'button');
+    const caption=text(face,label,0,0,rewardTextWidth(w),h*.58,34,rewardInk(theme));caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
+    bindPress(hit,face,action);return hit;
   }
   public panel(parent: Node, x: number, y: number, w: number, h: number, style = 0): Node { return this.image(parent, 'harvest-soft-plate-'+[1,0,3,2][style], x,y,w,h); }
   public button(parent: Node, name: string, x: number, y: number, w: number, h: number, label: string, icon: number | undefined, action: () => void, style = 3): Node {

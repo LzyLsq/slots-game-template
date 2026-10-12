@@ -1,0 +1,66 @@
+import {readFileSync,writeFileSync,existsSync,readdirSync,mkdirSync,cpSync,statSync} from 'node:fs';
+import {join,basename} from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {createRequire} from 'node:module';
+import {root,games,patch} from './install.mjs';
+import {packs} from './custom.mjs';
+import {walk,compressWeb} from './webp.mjs';
+const require=createRequire(import.meta.url),sharp=require('/Users/mengjunzhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+export const output=join(root,'Xcode_H5/WebP_IAP_20261010');
+const oldBase=join(root,'Xcode_H5/F13-F21_20260914'),template=join(oldBase,'F20_Golden_Canopy_OC_StoreKit2_Xcode'),templateApp=join(template,'F20_H5/ios-wrapper/App');
+mkdirSync(output,{recursive:true});
+const manifest=[],testOnly=process.argv.includes('--tests-only'),filter=process.argv.slice(2).filter(s=>s!=='--tests-only');
+const locateApp=`const cc=await System.import('cc');let app;for(let n=0;n<160;n++){app=cc.director.getScene()?.getComponentsInChildren(cc.Component).find(c=>__FIND__);if(app)break;await new Promise(r=>setTimeout(r,250));}if(!app)throw Error('Game component not ready');`;
+function webTest(g,p){
+ if(g.id===26)return `if(!localStorage.getItem('fortune-tides:accounts:v1')){const el=document.querySelector('#auth-consent');if(el){el.checked=true;el.dispatchEvent(new Event('change',{bubbles:true}));}document.querySelector('[data-action="auth-guest"]')?.click();}for(let n=0;n<80&&!document.querySelector('[data-page="shop"]');n++)await new Promise(r=>setTimeout(r,250));document.querySelector('[data-page="shop"]')?.click();const key='fortune-tides:v1',read=()=>JSON.parse(localStorage.getItem(key)||'{}'),before=read().coins;const buy=document.querySelector('[data-pack="${p.id}"]');if(!buy)throw Error('Shop button absent');buy.click();for(let n=0;n<120&&read().coins===before;n++)await new Promise(r=>setTimeout(r,250));const after=read().coins;document.querySelector('[data-action="sync-purchases"]')?.click();await new Promise(r=>setTimeout(r,500));return {ok:after===before+${p.credits+p.bonus},before,after,afterRecovery:read().coins,persisted:read().coins};`;
+ if(g.id===25)return locateApp.replace('__FIND__','c.ready&&c.localIAP&&c.state')+`const before=app.state.balance,r=await app.localIAP.purchase('${p.id}'),after=app.state.balance;await app.localIAP.restore();const profile=localStorage.getItem('f25.active-profile'),key='f25.velvet.fortune.v1'+(profile?':'+profile:'');return {ok:r.ok,before,after,afterRecovery:app.state.balance,persisted:JSON.parse(localStorage.getItem(key)).balance};`;
+ if(g.id===27)return locateApp.replace('__FIND__','c.pageRoot?.name.startsWith("Page ")&&c.localIAP&&c.player')+`const before=app.player.data.balance,r=await app.localIAP.purchase('${p.id}'),after=app.player.data.balance;await app.localIAP.restore();return {ok:r.ok,before,after,afterRecovery:app.player.data.balance,persisted:JSON.parse(localStorage.getItem('f27.sovereign.cocos.player.v1')).balance};`;
+ if(g.id===28)return locateApp.replace('__FIND__','c.localIAP&&c.wallet&&c.ready')+`const before=app.wallet.snapshot().balance,r=await app.localIAP.purchase('${p.id}'),after=app.wallet.snapshot().balance;await app.localIAP.restore();return {ok:r.ok,before,after,afterRecovery:app.wallet.snapshot().balance,persisted:JSON.parse(localStorage.getItem('f28.regatta.wallet.v1')).balance};`;
+ return locateApp.replace('__FIND__','c.root&&c.services&&c.services.auth&&c.services.store&&c.services.economy')+`app.accept();const a=await app.services.auth.register({username:'iap'+Date.now().toString().slice(-10),nickname:'Store Tester',password:'LocalTest_2026',confirmPassword:'LocalTest_2026',acceptedTerms:true});if(!a.ok)throw Error(JSON.stringify(a));const before=app.services.economy.balance(),r=await app.services.store.purchase('${p.id}'),after=app.services.economy.balance();await app.services.store.restore();const saved=app.services.save.read();return {ok:r.ok,before,after,afterRecovery:app.services.economy.balance(),persisted:saved.players[saved.currentUserId].credits};`;
+}
+for(const g of games.filter(g=>!filter.length||filter.includes(String(g.id)))){
+ const clean=g.slug.replace('_Cocos',''),name=clean.replaceAll('_',''),title=clean.replaceAll('_',' '),folder=`F${g.id}_${clean}_OC_StoreKit2_Xcode`,dir=join(output,folder),web=join(dir,`F${g.id}_H5`),app=join(web,'ios-wrapper/App');
+ if(testOnly){
+   if(!existsSync(join(app,'StoreTests.swift')))continue;
+   const item=JSON.parse(readFileSync(join(output,'manifest.json'))).find(p=>p.id===g.id);if(!item)continue;
+   const p=item.products[0],ready=g.id===26?"document.readyState==='complete'&&Boolean(document.querySelector('[data-action=\"auth-guest\"],[data-page=\"shop\"]'))":'Boolean(window.System)';
+   const tests=readFileSync(join(import.meta.dirname,'StoreTests.template.swift'),'utf8').replaceAll('__ISOLATE__',String([25,26,27,28].includes(g.id))).replaceAll('__MODULE__',name+'H5').replaceAll('__NAME__',name).replaceAll('__PRODUCT__',p.appleProductId).replaceAll('__COINS__',String(p.credits+p.bonus)).replaceAll('__READY__',ready).replaceAll('__WEB_TEST__',webTest(g,p));patch(join(app,'StoreTests.swift'),tests);continue;
+ }
+ const old=readdirSync(oldBase).find(n=>n.startsWith(`F${g.id}_`)),previous=old?join(oldBase,old):null;
+ let bundle='com.xzkj.'+name.toLowerCase()+'h5',port=19300+g.id;
+ if(previous){const proj=join(previous,'DBGame',readdirSync(join(previous,'DBGame')).find(n=>n.endsWith('.xcodeproj')));const text=readFileSync(join(proj,'project.pbxproj'),'utf8');bundle=[...text.matchAll(/PRODUCT_BUNDLE_IDENTIFIER = ([^;]+);/g)].map(m=>m[1]).find(s=>!s.endsWith('.tests'))||bundle;const server=readFileSync(join(previous,`F${g.id}_H5/ios-wrapper/App/H5LocalServer.m`),'utf8');port=Number(server.match(/htons\((\d+)\)/)?.[1]||port);}
+ let products,all;
+ if([25,26,27,28].includes(g.id))products=all=packs(g);
+ else{const r=spawnSync(process.execPath,['--import','tsx','-e',"import('./assets/scripts/services/StoreService.ts').then(m=>{const s=m.default||m;console.log(JSON.stringify({products:s.STORE_PRODUCTS,all:s.ALL_STORE_PRODUCTS||s.STORE_PRODUCTS}))})"],{cwd:g.source,encoding:'utf8'});if(r.status)throw Error(r.stderr);({products,all}=JSON.parse(r.stdout.trim().split('\n').at(-1)));}
+ const sourceBuild=join(g.source,g.id===26?'dist':'build/web-mobile');if(!existsSync(join(sourceBuild,'index.html')))throw Error('Missing Web build F'+g.id);
+ if(existsSync(dir))throw Error('Delivery already exists: '+dir+' (do not silently overwrite)');
+ mkdirSync(web,{recursive:true});cpSync(sourceBuild,web,{recursive:true,filter:p=>!p.endsWith('.DS_Store')&&!p.endsWith('.map')});
+ console.log('F'+g.id+': encoding WebP');const compression=await compressWeb(web,g.id===26);
+ mkdirSync(app,{recursive:true});
+ const rename=text=>text.replaceAll('GoldenCanopy',name).replaceAll('Golden Canopy',title).replaceAll('goldencanopy',name.toLowerCase()).replaceAll('F20_H5',`F${g.id}_H5`).replaceAll('com.xzkj.'+name.toLowerCase()+'h5',bundle).replaceAll('htons(19240)',`htons(${port})`).replaceAll('IPHONEOS_DEPLOYMENT_TARGET = 15.0;','IPHONEOS_DEPLOYMENT_TARGET = 15.4;');
+ for(const file of readdirSync(templateApp).filter(n=>n!=='Assets.xcassets'&&n!=='StoreTests.swift'&&n!=='Diagnostics.entitlements'))patch(join(app,file.replaceAll('GoldenCanopy',name)),rename(readFileSync(join(templateApp,file),'utf8')));
+ const backend=join(app,'StoreKitBackend.swift');let swift=readFileSync(backend,'utf8');swift=swift.replace(/private let allowed: Set<String> = \["purse"[\s\S]*?\n    }/,`private let allowed: Set<String> = ${JSON.stringify([...new Set(all.map(p=>p.appleProductId))])}`);patch(backend,swift);
+ const storekit={identifier:`F${g.id}-LOCAL-STOREKIT`,nonRenewingSubscriptions:[],products:all.map((p,i)=>({displayPrice:p.debugPrice.replace(/[^0-9.]/g,''),familyShareable:false,internalID:String(g.id*100+i),localizations:[{description:`${p.credits+p.bonus} virtual coins. No cash value.`,displayName:title+' '+p.label,locale:'en_US'}],productID:p.appleProductId,referenceName:p.id+' '+(p.credits+p.bonus),type:'Consumable'})),settings:{_applicationInternalID:'',_developerTeamID:'',_failTransactionsEnabled:false,_locale:'en_US',_storefront:'USA',_storeKitErrors:[]},subscriptionGroups:[],version:{major:3,minor:0}};
+ patch(join(app,name+'.storekit'),JSON.stringify(storekit,null,2));
+ const ready=g.id===26?"document.readyState==='complete'&&Boolean(document.querySelector('[data-action=\"auth-guest\"],[data-page=\"shop\"]'))":'Boolean(window.System)';
+ let tests=readFileSync(join(import.meta.dirname,'StoreTests.template.swift'),'utf8').replaceAll('__ISOLATE__',String([25,26,27,28].includes(g.id))).replaceAll('__MODULE__',name+'H5').replaceAll('__NAME__',name).replaceAll('__PRODUCT__',products[0].appleProductId).replaceAll('__COINS__',String(products[0].credits+products[0].bonus)).replaceAll('__READY__',ready).replaceAll('__WEB_TEST__',webTest(g,products[0]));
+ patch(join(app,'StoreTests.swift'),tests);
+ const project=join(dir,'DBGame',name+'H5.xcodeproj');mkdirSync(project,{recursive:true});patch(join(project,'project.pbxproj'),rename(readFileSync(join(template,'DBGame/GoldenCanopyH5.xcodeproj/project.pbxproj'),'utf8')));
+ for(const kind of ['LocalTest','Release'])patch(join(project,'xcshareddata/xcschemes',name+'-'+kind+'.xcscheme'),rename(readFileSync(join(template,'DBGame/GoldenCanopyH5.xcodeproj/xcshareddata/xcschemes/GoldenCanopy-'+kind+'.xcscheme'),'utf8')));
+ const iconDir=join(app,'Assets.xcassets/AppIcon.appiconset');mkdirSync(iconDir,{recursive:true});let art;
+ if(previous){const d=join(previous,`F${g.id}_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset`);const info=JSON.parse(readFileSync(join(d,'Contents.json')));art=join(d,info.images.find(i=>i.filename).filename);}
+ else if(g.id===26)art=join(g.source,'ios/FortuneTides/Assets.xcassets/AppIcon.appiconset/AppIcon.png');
+ else{const images=walk(join(g.source,'assets/resources')).filter(f=>/\.(png|webp)$/.test(f)&&!f.includes('/effects/'));art=images.find(f=>/app.?icon/i.test(f))||images.find(f=>/(badge|logo|title|mascot|hero)/i.test(f))||images[0];}
+ if(!art||!existsSync(art))throw Error('No theme icon source F'+g.id);
+ const icon=await sharp(art).resize(1024,1024,{fit:'cover'}).flatten({background:g.colors?.[0]||'#DFBA62'}).removeAlpha().png().toBuffer();writeFileSync(join(iconDir,'AppIcon.png'),icon);
+ patch(join(iconDir,'Contents.json'),JSON.stringify({images:[{filename:'AppIcon.png',idiom:'universal',platform:'ios',size:'1024x1024'}],info:{author:'xcode',version:1}},null,2));patch(join(app,'Assets.xcassets/Contents.json'),'{"info":{"author":"xcode","version":1}}');
+ mkdirSync(join(app,'Assets.xcassets/AccentColor.colorset'),{recursive:true});patch(join(app,'Assets.xcassets/AccentColor.colorset/Contents.json'),'{"colors":[{"idiom":"universal","color":{"color-space":"srgb","components":{"red":"0.90","green":"0.70","blue":"0.30","alpha":"1.0"}}}],"info":{"author":"xcode","version":1}}');
+ patch(join(dir,'README.md'),`# ${title} — WebP + iOS 本地内购\n\n双击 DBGame/${name}H5.xcodeproj。选择 ${name}-LocalTest 运行可模拟购买，不扣真钱；${name}-Release 不绑定本地测试商品。\n\nBundle ID：${bundle}；开发团队沿用 DQK6C4RU3Y（换账号需在 Signing & Capabilities 改 Team）。最低 iOS 15.4。原生主体为 Objective-C，StoreKit 2 后端为 Swift。\n\n图片以 WebP 发布，保持尺寸和透明度；App 图标保持不透明 PNG。主题图标${previous||g.id===26?'沿用原工程':'由现有主题资源裁切，请发布前确认设计'}。\n\n商品配置见上级 products.csv / manifest.json。需在对应 App Store Connect App 下创建 Consumable 商品，完整 ID 不可自行省略版本后缀。当前商品与历史商品保留独立数量；原生只接受该款白名单和匹配账户的 Apple 已验证交易。保存金币与交易 ID 后才 finish，未完成交易可重试，不会将已消耗金币无限恢复。\n\n无远程验证服务器。卸载、清数据或手动重置存档可能丢失本地账户和金币；无跨设备同步、服务端风控或自动退款扣币。本地 StoreKit 测试不证明真实扣款、沙盒登录或商店审核通过。\n`);
+ manifest.push({id:g.id,title,folder,project,bundle,port,team:'DQK6C4RU3Y',minimumIOS:'15.4',products,legacyProducts:all.filter(p=>!products.some(n=>n.appleProductId===p.appleProductId)),compression,iconSource:art,webBytes:compression.after});
+ writeFileSync(join(output,'manifest.json'),JSON.stringify(manifest,null,2));console.log(JSON.stringify({id:g.id,images:compression.count,beforeMiB:(compression.before/1048576).toFixed(1),afterMiB:(compression.after/1048576).toFixed(1)}));
+}
+if(!testOnly){
+const rows=['game,bundle_id,product_id,type,credits,bonus,total,reference_price_usd'];for(const g of manifest)for(const p of g.products)rows.push([g.id,g.bundle,p.appleProductId,'Consumable',p.credits,p.bonus,p.credits+p.bonus,p.debugPrice.replace(/[^0-9.]/g,'')].join(','));
+patch(join(output,'products.csv'),rows.join('\n'));
+patch(join(output,'使用说明.md'),`# WebP 内购 Xcode 交付\n\n共 ${manifest.length} 款：${manifest.map(g=>'F'+g.id).join('、')}。仓库无 F32。每款目录只有 DBGame 和 Fxx_H5 两个工作文件夹；DBGame 中 .xcodeproj 双击打开。不要双击 index.html 运行。\n\n1. 选游戏的 LocalTest Scheme，再选 iPhone 模拟器或设备运行。商店显示 StoreKit 本地化价格；标准款先注册本地账户再购买。\n2. Product → Test 可运行原生校验、待批准/非法商品拒绝、真实网页购买授币持久化回归。\n3. 正式付款：各 App 创建正确 Bundle ID 和 Consumable 商品，ID 用 products.csv；完成协议/税务/银行资料、商品本地化/审核信息。Release Scheme 不加载本地 .storekit，使用 Sandbox/TestFlight 测试，最后才正式上架。\n\n本包不依赖发布方远程验证服务器；Apple 商品查询及支付依然需要联网。取消、待批准、验证失败不发币；持久化后结束交易；仅恢复未完成消耗型购买，已花掉金币不恢复。\n\n旧工程未覆盖。图片原始源文件未删除，仅发布包去除已验证替换为 WebP 的 PNG。质量85、尺寸不变、透明通道逐像素验证；WebP 缩小文件体积，不等于按同样比例降低运行内存。\n\n发布前仍需真机 / Apple Sandbox、完整用户流程、隐私文案、账号删除、退款和存档重置策略检查；本地保存无法抵御越狱篡改或跨设备恢复，不承诺审核通过。\n`);
+}

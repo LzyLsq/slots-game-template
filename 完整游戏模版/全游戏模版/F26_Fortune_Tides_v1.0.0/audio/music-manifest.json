@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F26_Fortune_Tides_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Samba Isobel",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Samba%20Isobel.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700071",
+      "isrc": "USUAN1700071",
+      "published": "2017-11-23",
+      "sourceSha256": "563bd5a5686560f56f012d302a672796110cab392a0e3ecbbfdd8f96c6489527",
+      "file": "music-home.m4a",
+      "sha256": "217478d273710db0b01898c0e80b526b69b5af3fe772424ac2b2041924d754c3",
+      "duration": 89.94736842105263,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Beachfront Celebration",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Beachfront%20Celebration.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200022",
+      "isrc": "USUAN1200022",
+      "published": "2012-02-19",
+      "sourceSha256": "73ffcea8277780253b4e42dcbc3c5b3c50ba8ad343023372726a8678f43cc68e",
+      "file": "music-cabinet.m4a",
+      "sha256": "530cc5d60b617d253b11c45ff91260e953400c355d078ff92e25323dc17f11b6",
+      "duration": 91,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "206b5cb18870c1faa393047cb857eda28441b9682380c9eb5910119ea04c2ece",
+      "file": "win-small.m4a",
+      "sha256": "d5980447c01b3493dc3a5105aba3bb08df254be50d6b1941a9b34d44e891d95e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.6025056689342403,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL07",
+          "sourceSha256": "206b5cb18870c1faa393047cb857eda28441b9682380c9eb5910119ea04c2ece",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.5775056689342404,
+          "sourceSeconds": 1.5775056689342404,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL07"
+    },
+    {
+      "id": "win-big",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "86e97f88473e77119c24cc2fbcc711b3343a0b665d4297ea684f59ea17fc998e",
+      "file": "win-big.m4a",
+      "sha256": "ed5e64ae06046e51d623f13987e4d6de6216820ffcbd4edba7eb5db94f8041a8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.0096938775510205,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL11",
+          "sourceSha256": "86e97f88473e77119c24cc2fbcc711b3343a0b665d4297ea684f59ea17fc998e",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.8257596371882087,
+          "sourceSeconds": 0.8257596371882087,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGlass_light_004",
+          "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.21333333333333335,
+          "sourceSeconds": 0.21333333333333335,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.7757596371882086,
+          "gain": 0.205,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL11"
+    },
+    {
+      "id": "win-mega",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "8799eb726d784ae0aa1a9df80648a873ac60015bc00aea12c8e2dd1431a2bd7d",
+      "file": "win-mega.m4a",
+      "sha256": "03bd8b9f8848b37e661745d45876179ecbea37b5a006c21e5af1d0a444ea87cc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.0938662131519272,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL00",
+          "sourceSha256": "8799eb726d784ae0aa1a9df80648a873ac60015bc00aea12c8e2dd1431a2bd7d",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9476643990929705,
+          "sourceSeconds": 0.9476643990929705,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.8976643990929705,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL00"
+    },
+    {
+      "id": "win-epic",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "099b192f120f7eb7c24613be277428628b9ec9c81e1f8420254abce336fbe7e5",
+      "file": "win-epic.m4a",
+      "sha256": "5616c3849069d0c77d885aa624603c0a419bf48427e07c40e68f71f575fbbe41",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.5611678004535146,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL01",
+          "sourceSha256": "099b192f120f7eb7c24613be277428628b9ec9c81e1f8420254abce336fbe7e5",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.3772335600907029,
+          "sourceSeconds": 1.3772335600907029,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 1.3272335600907028,
+          "gain": 0.255,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL01"
+    },
+    {
+      "id": "win-super",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "65be5fe4af66574f4725602e454b7ea8d2613ab536a4a719fcb3810a240fdecf",
+      "file": "win-super.m4a",
+      "sha256": "c4da6801978e7c8372f1325c6086acc2b4a4360473e1a4143a1c6990bac60d56",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.0648412698412697,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL04",
+          "sourceSha256": "65be5fe4af66574f4725602e454b7ea8d2613ab536a4a719fcb3810a240fdecf",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9186394557823129,
+          "sourceSeconds": 0.9186394557823129,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGlass_light_004",
+          "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.21333333333333335,
+          "sourceSeconds": 0.21333333333333335,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.8686394557823128,
+          "gain": 0.28,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL04"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "1f6db7fca3eeea732afdc51479efe4d326b6dda6a9efc2b2691f34faf9da69f7",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/click_002",
+          "sourceSha256": "adcd1f4adc35f1b41bc1b5bbefeff7aa44f2f3f0d96d3199b544140c7c1e761c",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.011609977324263039,
+          "sourceSeconds": 0.011609977324263039,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b",
+      "file": "sfx-ui-back.wav",
+      "sha256": "96b0cebd8c5daf4c1aec631c9d5eba1f999faca7d199ddd9388d5e1fbef1be50",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.465,
+      "sources": [
+        {
+          "key": "rpg/cloth3",
+          "sourceSha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.44,
+          "sourceSeconds": 0.49467120181405894,
+          "sourceOffsetSeconds": 0.01235827664399093,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGlass_light_004",
+          "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.21333333333333335,
+          "sourceSeconds": 0.21333333333333335,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+      "file": "sfx-ui-select.wav",
+      "sha256": "012e9ad4bbde2512022dfe88aeaec3099a77a67867be3fd200afc51e13b38dcc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30000000000000004,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_006",
+          "sourceSha256": "b44550fa8d3276c072ce7c3c1315d949f7a28a95bc22b3618ad4eea62eac8abe",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.26,
+          "sourceSeconds": 1.9490249433106577,
+          "sourceOffsetSeconds": 0.030498866213151926,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+      "file": "sfx-bet-up.wav",
+      "sha256": "5eda0d51b1ca52eea57ca2cea819d5804a2527254ad05b34a1460b91c9dac49a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.28700000000000003,
+      "sources": [
+        {
+          "key": "impact/impactGlass_light_004",
+          "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.21333333333333335,
+          "sourceSeconds": 0.21333333333333335,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_007",
+          "sourceSha256": "eeaf60c2abc7e1b715e2b032401bcbf6b3753b77f96b238f861a034a75515967",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+      "file": "sfx-bet-down.wav",
+      "sha256": "4ef0edcf4c26c517ee1c6386002a9724c6656d8ca472214f534b180af997515e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/card-slide-6",
+          "sourceSha256": "be85da181ac879c20cb667d0f9f156dbdc236d3751737ad27359a15e946430a0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6022675736961451,
+          "sourceOffsetSeconds": 0.020680272108843538,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "be85da181ac879c20cb667d0f9f156dbdc236d3751737ad27359a15e946430a0",
+      "file": "sfx-spin-start.wav",
+      "sha256": "c3abe3d19a82abdd655678ce0a83bea7fb24b291721ac38d91092a65d882b708",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6065873015873016,
+      "sources": [
+        {
+          "key": "casino/card-slide-6",
+          "sourceSha256": "be85da181ac879c20cb667d0f9f156dbdc236d3751737ad27359a15e946430a0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.5815873015873015,
+          "sourceSeconds": 0.6022675736961451,
+          "sourceOffsetSeconds": 0.020680272108843538,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+      "file": "sfx-stop-1.wav",
+      "sha256": "52ef15f7967f0458718ab24b72a1c1272a1494a58e844c0264622b356c4d55ea",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+      "file": "sfx-stop-2.wav",
+      "sha256": "1a33227b115701a26a62044263d47ecfe94d48e5af9458c118dd723d2093f516",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.23833333333333334,
+      "sources": [
+        {
+          "key": "impact/impactGlass_light_004",
+          "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.21333333333333335,
+          "sourceSeconds": 0.21333333333333335,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+      "file": "sfx-stop-3.wav",
+      "sha256": "ca5119b9ae55f2e2eccbf19ab0f3ab0c4ff34e3c63d7913a407138d06ae919b8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.18028344671201812,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+      "file": "sfx-coin-1.wav",
+      "sha256": "81d3888cf3e4ed2220be08b95f1cf6e152a40eb27333c01b73c293710e9d9cf5",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.1962018140589569,
+      "sources": [
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+      "file": "sfx-coin-2.wav",
+      "sha256": "274e3541a4480602e832ce20303c9f1c9d1dc9e5449c03a8f089ddbe25e40421",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2339342403628118,
+      "sources": [
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+      "file": "sfx-coin-3.wav",
+      "sha256": "3e855975d88ef2aee2bd3649e39251d10d0d7f8c9642e94030b67e6e7d571641",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+      "file": "sfx-burst.wav",
+      "sha256": "4b4c7d5e45b71313998f83cf5de5ddb6b99bdf66b69a51fdeb5641f835a04f2a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2339342403628118,
+      "sources": [
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "be85da181ac879c20cb667d0f9f156dbdc236d3751737ad27359a15e946430a0",
+      "file": "sfx-reveal.wav",
+      "sha256": "979502d758bbb17550eaf8d9bc7d989d2e29ab568728c2fd010e611baf4723da",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6065873015873016,
+      "sources": [
+        {
+          "key": "casino/card-slide-6",
+          "sourceSha256": "be85da181ac879c20cb667d0f9f156dbdc236d3751737ad27359a15e946430a0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.5815873015873015,
+          "sourceSeconds": 0.6022675736961451,
+          "sourceOffsetSeconds": 0.020680272108843538,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+      "file": "sfx-collect.wav",
+      "sha256": "8b395941da8a4cf4ccf8bd4df3d631c0e9ad6e6197e879bb3af51722f7c4fcf2",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2783333333333334,
+      "sources": [
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGlass_light_004",
+          "sourceSha256": "f535b7cb7835400d8d28bcf9e1cf047ce3c0eb7a6456bdb1a4a27acbec1ed2cb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.21333333333333335,
+          "sourceSeconds": 0.21333333333333335,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Tides: rounded shell-like clicks and steel-drum phrases / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+      "file": "sfx-reward.wav",
+      "sha256": "7e1834555eca5475cf0a5a2aba6cead187553f8a3c6fae26eb9268d356a4089e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2939342403628118,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Beachfront Celebration",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Beachfront%20Celebration.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200022",
+      "isrc": "USUAN1200022",
+      "published": "2012-02-19",
+      "sourceSha256": "73ffcea8277780253b4e42dcbc3c5b3c50ba8ad343023372726a8678f43cc68e",
+      "file": "music-spin.m4a",
+      "sha256": "ddf7d71afd28b22bb0dc671989ba2cdc6e69226b5f8b9dd2f5f85e9902f2abfb",
+      "duration": 15.5,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 96,
+        "end": 112
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Tides: rounded shell-like clicks and steel-drum phrases"
+}

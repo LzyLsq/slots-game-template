@@ -1,0 +1,79 @@
+{
+  "identifier": "F28-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "2800",
+      "localizations": [
+        {
+          "description": "10000 virtual coins. No cash value.",
+          "displayName": "Treasure Regatta PURSE",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasureregatta.coins.purse.v1",
+      "referenceName": "purse 10000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "2801",
+      "localizations": [
+        {
+          "description": "55000 virtual coins. No cash value.",
+          "displayName": "Treasure Regatta BULLION",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasureregatta.coins.bullion.v1",
+      "referenceName": "bullion 55000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "2802",
+      "localizations": [
+        {
+          "description": "138000 virtual coins. No cash value.",
+          "displayName": "Treasure Regatta CHEST",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasureregatta.coins.chest.v1",
+      "referenceName": "chest 138000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "2803",
+      "localizations": [
+        {
+          "description": "360000 virtual coins. No cash value.",
+          "displayName": "Treasure Regatta VAULT",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasureregatta.coins.vault.v1",
+      "referenceName": "vault 360000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

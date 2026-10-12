@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-14",
+  "languages": [
+    "en",
+    "zh-CN",
+    "zh-TW",
+    "ja",
+    "ko"
+  ],
+  "viewports": [
+    [
+      320,
+      568
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "checks": [
+    "Five-language main screen render review",
+    "Four cabinet controls and payout/feature rules at 320px",
+    "Actual selector clicks, reload and logout persistence",
+    "Language change leaves player save and wallet unchanged",
+    "Live AUTO, BET and WIN translations",
+    "Mixed ranking: player promotion, tie handling, immutable input"
+  ],
+  "browserErrors": []
+}

@@ -1,0 +1,76 @@
+{
+  "music": [
+    {
+      "id": "music-home",
+      "title": "March of the Spoons",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/March%20of%20the%20Spoons.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700008",
+      "isrc": "USUAN1700008",
+      "published": "2017-01-16",
+      "sourceSha256": "ba8ea9fb20b692b0d4960bd5d0cacf5b41e8a9ed3d2514cbac96a01ef69e072e",
+      "file": "music-home.m4a",
+      "sha256": "4bb7b091fb3addabd1ad1b47d220339498d20f423d459705d217fcfd3bece0c2",
+      "duration": 89.3529411764706,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Mischief Maker",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Mischief%20Maker.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700009",
+      "isrc": "USUAN1700009",
+      "published": "2017-01-16",
+      "sourceSha256": "efc8109e080430f026b77dbbe2031e223e861fe195357cd113b15b14d948fb1f",
+      "file": "music-cabinet.m4a",
+      "sha256": "99f9e860a4978a982c40a3a3dd43a383b4e970cc2bb1abc0e7bd57b422bc2a18",
+      "duration": 89.24,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding",
+      "additionalUse": "music-spin.m4a: separate later eight-bar passage of the same work"
+    }
+  ],
+  "effects": {
+    "artist": "Kenney Vleugels (Kenney.nl)",
+    "license": "CC0 1.0",
+    "sourceUrl": "https://kenney.nl",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "packs": [
+      {
+        "name": "interface",
+        "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+        "license": "CC0 1.0",
+        "licenseSha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+      },
+      {
+        "name": "casino",
+        "sourceUrl": "https://kenney.nl/assets/casino-audio",
+        "license": "CC0 1.0",
+        "licenseSha256": "3d9c53acb6e236d760da14030f54bc53e1d8c2599f78470c36b96fddcde09221"
+      },
+      {
+        "name": "jingles",
+        "sourceUrl": "https://kenney.nl/assets/music-jingles",
+        "license": "CC0 1.0",
+        "licenseSha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+      },
+      {
+        "name": "impact",
+        "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+        "license": "CC0 1.0",
+        "licenseSha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+      },
+      {
+        "name": "rpg",
+        "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+        "license": "CC0 1.0",
+        "licenseSha256": "5735dfd72cb64cbbceda4ebc00c380c41ca680edb82ff153aa7c9ab97614c539"
+      }
+    ],
+    "modifications": "Licensed stock musical cues and theme-material foley at original speed/pitch. Each corresponding award uses a different whole source cue across twenty games; the twenty cues are reassigned across tiers, not one hundred exclusive compositions. No stitched musical phrases. Mild EQ and role-balanced offline mix."
+  }
+}

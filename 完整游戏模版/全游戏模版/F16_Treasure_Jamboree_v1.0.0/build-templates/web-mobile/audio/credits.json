@@ -1,0 +1,76 @@
+{
+  "music": [
+    {
+      "id": "music-home",
+      "title": "Cheery Monday",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cheery%20Monday.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700065",
+      "isrc": "USUAN1700065",
+      "published": "2017-08-14",
+      "sourceSha256": "841afe54871ec09fc0655ab4009222027c1679e17f653f82540dca4e98ebec3e",
+      "file": "music-home.m4a",
+      "sha256": "9ff7ccd05d6bad06c964d126ba076187ed43f4cb3356912958f5cc1a0ad67dd5",
+      "duration": 74.29411764705883,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Carpe Diem",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carpe%20Diem.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600023",
+      "isrc": "USUAN1600023",
+      "published": "2016-04-29",
+      "sourceSha256": "b6be2c037058349a3e53eb4410e079835ce6ef69f937e890fcb94548c55712ae",
+      "file": "music-cabinet.m4a",
+      "sha256": "9d435c3f5ecabd586859db3df0ca2cc27f70aa618cd00085ec17d3c592d68013",
+      "duration": 89,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding",
+      "additionalUse": "music-spin.m4a: separate later eight-bar passage of the same work"
+    }
+  ],
+  "effects": {
+    "artist": "Kenney Vleugels (Kenney.nl)",
+    "license": "CC0 1.0",
+    "sourceUrl": "https://kenney.nl",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "packs": [
+      {
+        "name": "interface",
+        "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+        "license": "CC0 1.0",
+        "licenseSha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+      },
+      {
+        "name": "casino",
+        "sourceUrl": "https://kenney.nl/assets/casino-audio",
+        "license": "CC0 1.0",
+        "licenseSha256": "3d9c53acb6e236d760da14030f54bc53e1d8c2599f78470c36b96fddcde09221"
+      },
+      {
+        "name": "jingles",
+        "sourceUrl": "https://kenney.nl/assets/music-jingles",
+        "license": "CC0 1.0",
+        "licenseSha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+      },
+      {
+        "name": "impact",
+        "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+        "license": "CC0 1.0",
+        "licenseSha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+      },
+      {
+        "name": "rpg",
+        "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+        "license": "CC0 1.0",
+        "licenseSha256": "5735dfd72cb64cbbceda4ebc00c380c41ca680edb82ff153aa7c9ab97614c539"
+      }
+    ],
+    "modifications": "Licensed stock musical cues and theme-material foley at original speed/pitch. Each corresponding award uses a different whole source cue across twenty games; the twenty cues are reassigned across tiers, not one hundred exclusive compositions. No stitched musical phrases. Mild EQ and role-balanced offline mix."
+  }
+}

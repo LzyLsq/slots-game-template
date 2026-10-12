@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F33_Golden_Library_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Heartwarming",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Heartwarming.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100207",
+      "isrc": "USUAN1100207",
+      "published": "2007-01-01",
+      "sourceSha256": "a621a943ab940567f4136060e0f1f0637038b8a03c10ff8926f956e1b2ef34e7",
+      "file": "music-home.m4a",
+      "sha256": "9bebec318c0c7f8f94faed961cd38d1b06d2e2c138eac591b8bb9e51c025f6cf",
+      "duration": 66.3170731707317,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Light Thought var 1",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Light%20Thought%20var%201.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200006",
+      "isrc": "USUAN1200006",
+      "published": "2012-02-05",
+      "sourceSha256": "648957823d64878102177d5af952135da6f0d675e41adca5c1003333c2c9ce97",
+      "file": "music-cabinet.m4a",
+      "sha256": "e8375f9ec57ed723c9a26a1f9171e7d47018d807e4e8fb51cfc9e871ea9a21db",
+      "duration": 89.22556390977444,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Library: page turns, book binding and gentle desk taps / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "072fe661c6ce8c7672afaf0af51e27533d6effe99d35584b01d864bde800ecc1",
+      "file": "win-small.m4a",
+      "sha256": "b3999d2c667e27f15ba5c86c6fe82172e524314da4820c2de5f9a516ee4661f0",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.8333446712018141,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI11",
+          "sourceSha256": "072fe661c6ce8c7672afaf0af51e27533d6effe99d35584b01d864bde800ecc1",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.8083446712018141,
+          "sourceSeconds": 0.8083446712018141,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/bookPlace1",
+          "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.2808163265306122,
+          "sourceSeconds": 0.294671201814059,
+          "sourceOffsetSeconds": 0.013854875283446711,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI11"
+    },
+    {
+      "id": "win-big",
+      "title": "Library: page turns, book binding and gentle desk taps / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "b442ade3308a2bbda4b8c572c86f9f1071c7bdbcfb1e6f915d35c605b61bd475",
+      "file": "win-big.m4a",
+      "sha256": "064a0fceb755dc011d2ab3a8a50ba49b9a9edeaeb6943bcabe5b7a99555f4855",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6901473922902495,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI00",
+          "sourceSha256": "b442ade3308a2bbda4b8c572c86f9f1071c7bdbcfb1e6f915d35c605b61bd475",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5093877551020408,
+          "sourceSeconds": 0.5093877551020408,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/bookPlace2",
+          "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.36401360544217687,
+          "sourceOffsetSeconds": 0.013083900226757369,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.45938775510204083,
+          "gain": 0.205,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI00"
+    },
+    {
+      "id": "win-mega",
+      "title": "Library: page turns, book binding and gentle desk taps / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "3f8f2534a297d19386c233a7ee4fa8737cc40870dd206010263760e1983dde46",
+      "file": "win-mega.m4a",
+      "sha256": "f985c610d2150fbacffe16b347b8e54c698f8ddb8fe40611964e445142f9adbf",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.1401927437641723,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI01",
+          "sourceSha256": "3f8f2534a297d19386c233a7ee4fa8737cc40870dd206010263760e1983dde46",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.0057142857142858,
+          "sourceSeconds": 1.0057142857142858,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_medium_003",
+          "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chip-lay-2",
+          "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.9557142857142857,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.1594784580498866,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.07707482993197279,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI01"
+    },
+    {
+      "id": "win-epic",
+      "title": "Library: page turns, book binding and gentle desk taps / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "f98fa4af012d443da636a2d90f2926adc2384ec833851918f88426be9a25acf9",
+      "file": "win-epic.m4a",
+      "sha256": "c472dfefd7ff1da337c26128d92eb1b13bb07f9328b027fdf987bc5d41aed57b",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.7656122448979591,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI04",
+          "sourceSha256": "f98fa4af012d443da636a2d90f2926adc2384ec833851918f88426be9a25acf9",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5848526077097506,
+          "sourceSeconds": 0.5848526077097506,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/bookPlace1",
+          "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.2808163265306122,
+          "sourceSeconds": 0.294671201814059,
+          "sourceOffsetSeconds": 0.013854875283446711,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.5348526077097505,
+          "gain": 0.255,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI04"
+    },
+    {
+      "id": "win-super",
+      "title": "Library: page turns, book binding and gentle desk taps / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "91870588924e0e498c6eb8d4f4ccf8595c9e7dc51fb553797b551062e642ce7c",
+      "file": "win-super.m4a",
+      "sha256": "e184dfb2e74afcb15d5f5446756b44e688616db1cf73a75e843f946688b0a11f",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.4739795918367347,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI07",
+          "sourceSha256": "91870588924e0e498c6eb8d4f4ccf8595c9e7dc51fb553797b551062e642ce7c",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.339501133786848,
+          "sourceSeconds": 1.339501133786848,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/bookPlace2",
+          "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.36401360544217687,
+          "sourceOffsetSeconds": 0.013083900226757369,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chip-lay-2",
+          "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 1.289501133786848,
+          "gain": 0.28,
+          "maxSeconds": 0.1594784580498866,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.07707482993197279,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI07"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "d0ea5df8cec79eefbfddd9854aed8ed1fd819b7fd477ab32243135b3fda8c965",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30581632653061225,
+      "sources": [
+        {
+          "key": "rpg/bookPlace1",
+          "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.2808163265306122,
+          "sourceSeconds": 0.294671201814059,
+          "sourceOffsetSeconds": 0.013854875283446711,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "interface/click_004",
+          "sourceSha256": "09e2c1b643b71b9aff9932b4e02d78db116446b9a14b00a5b2a9b28d2668fd8e",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.021768707482993196,
+          "sourceSeconds": 0.021768707482993196,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "3409042acbfaebc24c1a6327dc073e36f9250841712e96c5040da566a97df73c",
+      "file": "sfx-ui-back.wav",
+      "sha256": "1eede5ba24dbd57e22914434dd2bcedb450e8ab6958317272f7a5a97d673cdaf",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.465,
+      "sources": [
+        {
+          "key": "rpg/bookFlip2",
+          "sourceSha256": "3409042acbfaebc24c1a6327dc073e36f9250841712e96c5040da566a97df73c",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.44,
+          "sourceSeconds": 0.4493197278911565,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/bookPlace2",
+          "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.28002267573696143,
+          "sourceSeconds": 0.36401360544217687,
+          "sourceOffsetSeconds": 0.013083900226757369,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+      "file": "sfx-ui-select.wav",
+      "sha256": "91347c18d0f4a875601a329a05e57e1c05522d0e119f18de5e2d558bfd67b0cb",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.3660430839002268,
+      "sources": [
+        {
+          "key": "impact/impactWood_medium_003",
+          "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34104308390022675,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_004",
+          "sourceSha256": "eb6cb435f3f2ab14f85f46a2bdd9073ec511d0f1f8d8c890c6636045703a5fd4",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.26,
+          "sourceSeconds": 0.38458049886621315,
+          "sourceOffsetSeconds": 0.011519274376417234,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+      "file": "sfx-bet-up.wav",
+      "sha256": "02223a822f5b5c3ce44aaae1db51d0b48d62da36f5dc4ccd9d6dfeb1b92081d5",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "rpg/bookPlace2",
+          "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.36401360544217687,
+          "sourceOffsetSeconds": 0.013083900226757369,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/switch_006",
+          "sourceSha256": "2676ddc4e341ee557b4d1dc8767ef8655540d66fb3ded6a1614080dbc4dc6f18",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+      "file": "sfx-bet-down.wav",
+      "sha256": "a4baad97d7959321e5cff502f7cf5c326658ccc06bd153e374cce1d42cb85e23",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30581632653061225,
+      "sources": [
+        {
+          "key": "rpg/bookPlace1",
+          "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.2808163265306122,
+          "sourceSeconds": 0.294671201814059,
+          "sourceOffsetSeconds": 0.013854875283446711,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/bookFlip3",
+          "sourceSha256": "c85db5dceb3f1df073e960630277eaa88a5afda0477c1ddd68dad707621767be",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.20773242630385488,
+          "sourceSeconds": 0.23598639455782314,
+          "sourceOffsetSeconds": 0.028253968253968254,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "c85db5dceb3f1df073e960630277eaa88a5afda0477c1ddd68dad707621767be",
+      "file": "sfx-spin-start.wav",
+      "sha256": "5da7846677418d662b418502e6fc78748ea035f14ea7c0da4ad307607322a66a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38,
+      "sources": [
+        {
+          "key": "rpg/bookFlip3",
+          "sourceSha256": "c85db5dceb3f1df073e960630277eaa88a5afda0477c1ddd68dad707621767be",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.20773242630385488,
+          "sourceSeconds": 0.23598639455782314,
+          "sourceOffsetSeconds": 0.028253968253968254,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_medium_003",
+          "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+      "file": "sfx-stop-1.wav",
+      "sha256": "04e8a04ab83fa06cf74ec1d7d06fdc1716dee545f9f5d002321adbb9a88d8aeb",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30581632653061225,
+      "sources": [
+        {
+          "key": "rpg/bookPlace1",
+          "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.2808163265306122,
+          "sourceSeconds": 0.294671201814059,
+          "sourceOffsetSeconds": 0.013854875283446711,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+      "file": "sfx-stop-2.wav",
+      "sha256": "9979f5aba94a1ae8468b1989aed07ee6a3dcc78804474cac75c75d0c7c07dfa6",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "rpg/bookPlace2",
+          "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.36401360544217687,
+          "sourceOffsetSeconds": 0.013083900226757369,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+      "file": "sfx-stop-3.wav",
+      "sha256": "40d84c1fb2be6b2187fa9454cc59bdfb9e8c974c46b8fd2fa01dcddc7fce986c",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactWood_medium_003",
+          "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+      "file": "sfx-coin-1.wav",
+      "sha256": "ffffae62e2df8b66e6fbdfb045909f0170c800f41c96aac2ac67779436be5cd4",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.1844784580498866,
+      "sources": [
+        {
+          "key": "casino/chip-lay-2",
+          "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1594784580498866,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.07707482993197279,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+      "file": "sfx-coin-2.wav",
+      "sha256": "51c583270c6d32b71d2a67fbfb1845d3d52d1662102faaa4f299cf307219580c",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2307596371882086,
+      "sources": [
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+      "file": "sfx-coin-3.wav",
+      "sha256": "ac767478c13deada9f539bded7448b026ecfa564c0de7c3c289b81f689f2b797",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chip-lay-2",
+          "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1594784580498866,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.07707482993197279,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/bookPlace1",
+          "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.294671201814059,
+          "sourceOffsetSeconds": 0.013854875283446711,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+      "file": "sfx-burst.wav",
+      "sha256": "1c8a96344dc4bb4adde8ab0a72d7fbb22b173fb967994807445eae070b424934",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.41604308390022676,
+      "sources": [
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_medium_003",
+          "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.34104308390022675,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "c85db5dceb3f1df073e960630277eaa88a5afda0477c1ddd68dad707621767be",
+      "file": "sfx-reveal.wav",
+      "sha256": "6c6dbf48dad0ee05733d8a4045db5625d8c3b9056c3c5eea606e2b2c68338034",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.3338163265306123,
+      "sources": [
+        {
+          "key": "rpg/bookFlip3",
+          "sourceSha256": "c85db5dceb3f1df073e960630277eaa88a5afda0477c1ddd68dad707621767be",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.20773242630385488,
+          "sourceSeconds": 0.23598639455782314,
+          "sourceOffsetSeconds": 0.028253968253968254,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/bookPlace1",
+          "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.2808163265306122,
+          "sourceSeconds": 0.294671201814059,
+          "sourceOffsetSeconds": 0.013854875283446711,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+      "file": "sfx-collect.wav",
+      "sha256": "ac6b1e7dedfec1f0567038e5432589143191191276e65220bee40f043bcc2726",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.385,
+      "sources": [
+        {
+          "key": "casino/chip-lay-2",
+          "sourceSha256": "8ca8b2d450741c04ed7b4ba51ed3f73c2400c8b3dbe83b974be4fe4774a76712",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.1594784580498866,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.07707482993197279,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/bookPlace2",
+          "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.36401360544217687,
+          "sourceOffsetSeconds": 0.013083900226757369,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Library: page turns, book binding and gentle desk taps / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+      "file": "sfx-reward.wav",
+      "sha256": "976c123c6d8b7f9aa792088e8e11683042be8d7954436b81a1d57bd41b10125e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.3660430839002268,
+      "sources": [
+        {
+          "key": "impact/impactWood_medium_003",
+          "sourceSha256": "635c37cfcd854b187d643d450ff0397798dcc29ae94da32192b814fae6bd854c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.34104308390022675,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Light Thought var 1",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Light%20Thought%20var%201.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200006",
+      "isrc": "USUAN1200006",
+      "published": "2012-02-05",
+      "sourceSha256": "648957823d64878102177d5af952135da6f0d675e41adca5c1003333c2c9ce97",
+      "file": "music-spin.m4a",
+      "sha256": "677152af713e60ec7b2c7ec7b0a50239995534f14e23de36a35eb651edd7b55f",
+      "duration": 13.936090225563909,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 97.44360902255639,
+        "end": 111.87969924812029
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Library: page turns, book binding and gentle desk taps"
+}

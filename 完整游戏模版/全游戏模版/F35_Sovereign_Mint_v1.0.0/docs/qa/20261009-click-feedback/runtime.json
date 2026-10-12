@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-09",
+  "url": "http://127.0.0.1:6038/?debug=1&screen=game&game=golden-hour",
+  "method": "Real native UI clicks; read-only localhost DOM playback diagnostics (700 ms refresh). No system loopback recording or subjective listening assessment.",
+  "checkpoints": [
+    {
+      "label": "before-first-contact",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "fallback",
+        "recorded": "false",
+        "voices": "0",
+        "state": "locked",
+        "music": "true",
+        "effects": "true",
+        "ready": "0",
+        "failures": "0",
+        "cue-sequence": "0",
+        "cue": "",
+        "cue-source": "",
+        "cue-counts": "{}"
+      }
+    },
+    {
+      "label": "first-contact-settled",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "music-golden-hour",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "1",
+        "cue": "bet",
+        "cue-source": "fallback",
+        "cue-counts": "{\"bet\":1}"
+      }
+    },
+    {
+      "label": "recorded-bet-decrease",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "music-golden-hour",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "2",
+        "cue": "bet",
+        "cue-source": "fx-bet",
+        "cue-counts": "{\"bet\":2}"
+      }
+    },
+    {
+      "label": "spin-contact-and-motor",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "music-golden-hour",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "7",
+        "cue": "reel-stop",
+        "cue-source": "fx-reel-stop",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":1,\"reel-stop\":3}"
+      }
+    },
+    {
+      "label": "collect-confirm",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "music-golden-hour",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "8",
+        "cue": "collect",
+        "cue-source": "fx-collect",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":1,\"reel-stop\":3,\"collect\":1}"
+      }
+    },
+    {
+      "label": "auto-on-and-off",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "music-golden-hour",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "18",
+        "cue": "toggle",
+        "cue-source": "fx-toggle",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":3,\"reel-stop\":9,\"collect\":1,\"toggle\":2}"
+      }
+    },
+    {
+      "label": "music-off-effects-remain-enabled",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "fallback",
+        "recorded": "false",
+        "voices": "0",
+        "state": "running",
+        "music": "false",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "21",
+        "cue": "toggle",
+        "cue-source": "fx-toggle",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":3,\"reel-stop\":9,\"collect\":2,\"toggle\":4}"
+      }
+    },
+    {
+      "label": "effects-disabled",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "fallback",
+        "recorded": "false",
+        "voices": "0",
+        "state": "running",
+        "music": "false",
+        "effects": "false",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "22",
+        "cue": "toggle",
+        "cue-source": "fx-toggle",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":3,\"reel-stop\":9,\"collect\":2,\"toggle\":5}"
+      }
+    },
+    {
+      "label": "muted-close-no-new-cue",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "fallback",
+        "recorded": "false",
+        "voices": "0",
+        "state": "running",
+        "music": "false",
+        "effects": "false",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "22",
+        "cue": "toggle",
+        "cue-source": "fx-toggle",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":3,\"reel-stop\":9,\"collect\":2,\"toggle\":5}"
+      }
+    },
+    {
+      "label": "effects-enabled-once-music-stays-off",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "fallback",
+        "recorded": "false",
+        "voices": "0",
+        "state": "running",
+        "music": "false",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "23",
+        "cue": "toggle",
+        "cue-source": "fx-toggle",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":3,\"reel-stop\":9,\"collect\":2,\"toggle\":6}"
+      }
+    },
+    {
+      "label": "settings-restored-close-navigation",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "music-golden-hour",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "25",
+        "failures": "0",
+        "cue-sequence": "25",
+        "cue": "navigate",
+        "cue-source": "fx-navigate",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":3,\"reel-stop\":9,\"collect\":2,\"toggle\":7,\"navigate\":1}"
+      }
+    },
+    {
+      "label": "back-to-lobby",
+      "proof": {
+        "scene": "lobby",
+        "bpm": "116",
+        "track": "music-lobby",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "16",
+        "failures": "0",
+        "cue-sequence": "26",
+        "cue": "navigate",
+        "cue-source": "fx-navigate",
+        "cue-counts": "{\"bet\":2,\"tap\":1,\"spin\":3,\"reel-stop\":9,\"collect\":2,\"toggle\":7,\"navigate\":2}"
+      }
+    },
+    {
+      "label": "lobby-entry-and-final",
+      "proof": {
+        "scene": "golden-hour",
+        "bpm": "122",
+        "track": "music-golden-hour",
+        "recorded": "true",
+        "voices": "1",
+        "state": "running",
+        "music": "true",
+        "effects": "true",
+        "ready": "26",
+        "failures": "0",
+        "cue-sequence": "27",
+        "cue": "tap",
+        "cue-source": "fx-tap",
+        "cue-counts": "{\"bet\":2,\"tap\":2,\"spin\":3,\"reel-stop\":9,\"collect\":2,\"toggle\":7,\"navigate\":2}"
+      }
+    }
+  ]
+}

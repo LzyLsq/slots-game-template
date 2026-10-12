@@ -1,0 +1,2108 @@
+{
+  "checkedAt": "2026-10-10T09:36:59.597Z",
+  "scope": "Actual accepted spin/reel end, repeated tap, real modal methods, five presentation fixtures, mute/background/home playback. Not human listening, real iPhone or payment testing.",
+  "games": [
+    {
+      "id": 13,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 14,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 15,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 16,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 17,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "setModalOpen",
+              "args": [
+                false
+              ],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 18,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 19,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 20,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 21,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-super.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 22,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 23,
+      "passed": true,
+      "checks": [
+        {
+          "modalOpened": 0.18000000715255737,
+          "modalClosed": 0.46000000834465027
+        },
+        {
+          "realAcceptedSpin": true,
+          "ignoredRepeatedTap": true,
+          "spinFile": "music-spin.m4a",
+          "reelEndRestored": true,
+          "events": [
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "beginSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": true,
+                "celebrating": false,
+                "modal": false,
+                "track": "spin"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": true,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishWinPresentation",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "setModalOpen",
+              "args": [
+                false
+              ],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            },
+            {
+              "name": "finishSpin",
+              "args": [],
+              "before": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              },
+              "after": {
+                "scene": "cabinet",
+                "spinning": false,
+                "celebrating": false,
+                "modal": false,
+                "track": "cabinet"
+              }
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "file": "win-small.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 2,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 20,
+          "file": "win-big.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 60,
+          "file": "win-mega.m4a",
+          "collectRestored": true
+        },
+        {
+          "ratio": 100,
+          "file": "win-epic.m4a",
+          "collectRestored": true
+        },
+        {
+          "mute": true,
+          "backgroundNoBacklog": true,
+          "returnHome": true
+        }
+      ],
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F15_Honey_Parade_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Rainbows",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Rainbows.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600063",
+      "isrc": "USUAN1600063",
+      "published": "2016-10-22",
+      "sourceSha256": "71bd8b3f78187c44cc8da14783f7ebb14a6f122307e6622c3f449bdc03eae4b6",
+      "file": "music-home.m4a",
+      "sha256": "b72803577b7e29ef5e3dce34bedbebe5d4b93fc959365c6a5e5791c62e651ae7",
+      "duration": 90.63636363636364,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Happy Bee",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Happy%20Bee.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300014",
+      "isrc": "USUAN1300014",
+      "published": "2013-02-13",
+      "sourceSha256": "06f7dfd763a0bcc33fdf29ecf904c23753deaf392c8c7686902bfb943ba99576",
+      "file": "music-cabinet.m4a",
+      "sha256": "5be9556de17c6c495113041849623a5affcbd29d4758d8ba6ee5fc5e591ec327",
+      "duration": 89.49180327868852,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Honey Parade: padded bounce and little hive taps / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
+      "file": "win-small.m4a",
+      "sha256": "9c54a702f940e4b85891401dc25d99a832e27e04ad56b3769d76d6d0fce0798d",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.5372902494331065,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT01",
+          "sourceSha256": "ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5122902494331065,
+          "sourceSeconds": 0.5122902494331065,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT01"
+    },
+    {
+      "id": "win-big",
+      "title": "Honey Parade: padded bounce and little hive taps / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
+      "file": "win-big.m4a",
+      "sha256": "c29360d1b7cbeb1a1f515aca7ec78ff81fa0ccfe1ba28ba7e53f8c39847fbe3a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.8036167800453514,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT04",
+          "sourceSha256": "7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.6574149659863946,
+          "sourceSeconds": 0.6574149659863946,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.6074149659863946,
+          "gain": 0.205,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT04"
+    },
+    {
+      "id": "win-mega",
+      "title": "Honey Parade: padded bounce and little hive taps / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "b35d7bea586f6412be312753a50b708e9505ce86c42e5549117c18f8da00a4e6",
+      "file": "win-mega.m4a",
+      "sha256": "d87a6855c9d582336597190bece4ad05fa5dcaff1b35af40e744b593f77e70b3",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.4727324263038549,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT07",
+          "sourceSha256": "b35d7bea586f6412be312753a50b708e9505ce86c42e5549117c18f8da00a4e6",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_002",
+          "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.23879818594104307,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT07"
+    },
+    {
+      "id": "win-epic",
+      "title": "Honey Parade: padded bounce and little hive taps / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "40d6f3fb92225d039a9196c5cda98c9366efdc837c10b9b6d01d94dfafae8ec9",
+      "file": "win-epic.m4a",
+      "sha256": "fd2f9a9d1014ca8799398e97e72dded76e55c5534916e5906a09fd5a7c2fb578",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.122891156462585,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT11",
+          "sourceSha256": "40d6f3fb92225d039a9196c5cda98c9366efdc837c10b9b6d01d94dfafae8ec9",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9766893424036281,
+          "sourceSeconds": 0.9766893424036281,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.9266893424036281,
+          "gain": 0.255,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT11"
+    },
+    {
+      "id": "win-super",
+      "title": "Honey Parade: padded bounce and little hive taps / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
+      "file": "win-super.m4a",
+      "sha256": "07ac012032d425c187bd0d4f2c8ed46c9d7acd195e6e388233820345a872d0a4",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.4727324263038549,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT00",
+          "sourceSha256": "e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.23879818594104307,
+          "gain": 0.28,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT00"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "bf154a9032079208087886546424d6bded7a6938d19571d3ec0553f647ab538d",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2267233560090703,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/click_003",
+          "sourceSha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.01886621315192744,
+          "sourceSeconds": 0.01886621315192744,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "e7ab9a6c4466dea874196c61f59bf1da05cfe58748f42fadd695d441a154a99b",
+      "file": "sfx-ui-back.wav",
+      "sha256": "b4dd29d7aaa143766b5c78d60b0a9eec1052e29987713559ce452fe95d57a6d7",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.4103514739229025,
+      "sources": [
+        {
+          "key": "rpg/cloth4",
+          "sourceSha256": "e7ab9a6c4466dea874196c61f59bf1da05cfe58748f42fadd695d441a154a99b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.3853514739229025,
+          "sourceSeconds": 0.3853514739229025,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+      "file": "sfx-ui-select.wav",
+      "sha256": "7903a3774b33839b9441f0d56613a92ec91ca08237d1a080c0738896c325dd47",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30000000000000004,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_002",
+          "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_003",
+          "sourceSha256": "9a612fd2f513d52a296906b41071c990f75defe56be3bee60d2d4e2423b51b8b",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.26,
+          "sourceSeconds": 0.38458049886621315,
+          "sourceOffsetSeconds": 0.011315192743764172,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+      "file": "sfx-bet-up.wav",
+      "sha256": "2ccbc76c5b42da8d05304a9cbf292213dffe15e1fa45329409773c046447eb58",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_003",
+          "sourceSha256": "ca12dd32103f401481d5aff56d5e9831174e99bb577139c09b07d046eb8b837e",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.5035827664399093,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "file": "sfx-bet-down.wav",
+      "sha256": "019ec4d8950ee272236d6f7ded6c0d937b92d7f423fc507327b1e4edc57317a4",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/clothBelt",
+          "sourceSha256": "f29560a2aea95bbfeb643e1e8f56ec2b6f7e32f32ce4e140645a36db81de3253",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.734671201814059,
+          "sourceOffsetSeconds": 0.004965986394557823,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "f29560a2aea95bbfeb643e1e8f56ec2b6f7e32f32ce4e140645a36db81de3253",
+      "file": "sfx-spin-start.wav",
+      "sha256": "eb773ccef40cd231cee831fada4eb16e250c5d965b6202f907f6cfff688e539a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.685,
+      "sources": [
+        {
+          "key": "rpg/clothBelt",
+          "sourceSha256": "f29560a2aea95bbfeb643e1e8f56ec2b6f7e32f32ce4e140645a36db81de3253",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.66,
+          "sourceSeconds": 0.734671201814059,
+          "sourceOffsetSeconds": 0.004965986394557823,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_002",
+          "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "file": "sfx-stop-1.wav",
+      "sha256": "96583a7377e5260cd60b1bc898a6b0c55e96a212f1a1fde4a8c788467ef00c80",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2267233560090703,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+      "file": "sfx-stop-2.wav",
+      "sha256": "35e1b69615e17cc3e91959ab14a8cc31f61d6c4fda78d30786c3dfe6aa98c090",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+      "file": "sfx-stop-3.wav",
+      "sha256": "b5e5e350bee49a6c0ea195306398e6ffc172a383e53dea0f6b1bf4c9cfd44608",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.18028344671201812,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_002",
+          "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+      "file": "sfx-coin-1.wav",
+      "sha256": "274e3541a4480602e832ce20303c9f1c9d1dc9e5449c03a8f089ddbe25e40421",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2339342403628118,
+      "sources": [
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+      "file": "sfx-coin-2.wav",
+      "sha256": "81d3888cf3e4ed2220be08b95f1cf6e152a40eb27333c01b73c293710e9d9cf5",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.1962018140589569,
+      "sources": [
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+      "file": "sfx-coin-3.wav",
+      "sha256": "f9c92ed67794c848abdd9c1bbb585954b705ae3fea6f9af63119829dd65872d0",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+      "file": "sfx-burst.wav",
+      "sha256": "9d4e215165cf8bea3064cbe1f95a6b6d8e386bc7c8cc43aa8a278fa9bee4a07b",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.23028344671201814,
+      "sources": [
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_002",
+          "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "f29560a2aea95bbfeb643e1e8f56ec2b6f7e32f32ce4e140645a36db81de3253",
+      "file": "sfx-reveal.wav",
+      "sha256": "5f579e01df5a5fbe87e532309e213a39075400451b7e81b5e7e4f3b538f0f458",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.665,
+      "sources": [
+        {
+          "key": "rpg/clothBelt",
+          "sourceSha256": "f29560a2aea95bbfeb643e1e8f56ec2b6f7e32f32ce4e140645a36db81de3253",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.64,
+          "sourceSeconds": 0.734671201814059,
+          "sourceOffsetSeconds": 0.004965986394557823,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_001",
+          "sourceSha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+      "file": "sfx-collect.wav",
+      "sha256": "8c7b13cdcfd3aeafe6774f18262f3b1e897bd77ce22a34e2308d825bfabbfc23",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.33638321995464854,
+      "sources": [
+        {
+          "key": "casino/chips-handle-3",
+          "sourceSha256": "7c5a86e27b2bef839ae096dd655506cf46a82494bd01cc28f51bed6ab26cc342",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.2089342403628118,
+          "sourceSeconds": 0.2365532879818594,
+          "sourceOffsetSeconds": 0.02761904761904762,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_light_003",
+          "sourceSha256": "cdfbe8af2fe7ff9ee28f337a0a989deee0f327620da456c8413644880e9d0004",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Honey Parade: padded bounce and little hive taps / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+      "file": "sfx-reward.wav",
+      "sha256": "765a4eeab54126ce5b5ea7d28e73291f2babf04087740c38de8137bdf6319ba0",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2562018140589569,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_002",
+          "sourceSha256": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-2",
+          "sourceSha256": "9f985e766c3557eef1764240b48e30b2f0ffa870a99f05de85cd6bf0ea758ef5",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.18140589569160998,
+          "sourceOffsetSeconds": 0.01020408163265306,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Happy Bee",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Happy%20Bee.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300014",
+      "isrc": "USUAN1300014",
+      "published": "2013-02-13",
+      "sourceSha256": "06f7dfd763a0bcc33fdf29ecf904c23753deaf392c8c7686902bfb943ba99576",
+      "file": "music-spin.m4a",
+      "sha256": "869d00b0713ee99bb4656871c06be380a811b055793b13d6eb443ad0fa69bb48",
+      "duration": 15.237704918032787,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 96.39344262295081,
+        "end": 112.1311475409836
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Honey Parade: padded bounce and little hive taps"
+}

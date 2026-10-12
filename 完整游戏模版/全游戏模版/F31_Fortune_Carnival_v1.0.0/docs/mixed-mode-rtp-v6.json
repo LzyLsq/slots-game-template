@@ -1,0 +1,236 @@
+{
+  "training": [
+    {
+      "status": "CALIBRATION_REQUIRED",
+      "results": [
+        {
+          "gameId": "coin-carousel",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 0.69060416,
+          "targetRtp": 0.952,
+          "rtp": 0.9598554444444445,
+          "confidence95": [
+            0.938699752469488,
+            0.981011136419401
+          ],
+          "baseRtp": 0.595866,
+          "featureRtp": 0.3639894444444444,
+          "hitRate": 0.88526,
+          "featureRate": 0.45106,
+          "maxWin": 27072
+        },
+        {
+          "gameId": "lantern-vault",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 0.01248554,
+          "targetRtp": 0.952,
+          "rtp": 0.011720222222222222,
+          "confidence95": [
+            0.01150358151844394,
+            0.011936862926000505
+          ],
+          "baseRtp": 0.0004043333333333333,
+          "featureRtp": 0.01131588888888889,
+          "hitRate": 0.35742,
+          "featureRate": 0.4215,
+          "maxWin": 51
+        },
+        {
+          "gameId": "lucky-parade",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 0.46141199,
+          "targetRtp": 0.952,
+          "rtp": 0.23046088888888888,
+          "confidence95": [
+            0.22706909897105307,
+            0.2338526788067247
+          ],
+          "baseRtp": 0.17911977777777777,
+          "featureRtp": 0.05134111111111111,
+          "hitRate": 0.6874,
+          "featureRate": 0.1368,
+          "maxWin": 1464
+        },
+        {
+          "gameId": "celestial-mint",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 0.45770494,
+          "targetRtp": 0.952,
+          "rtp": 0.9508602222222222,
+          "confidence95": [
+            0.9300517316312994,
+            0.971668712813145
+          ],
+          "baseRtp": 0.6705777777777778,
+          "featureRtp": 0.28028244444444445,
+          "hitRate": 0.46552,
+          "featureRate": 0.46552,
+          "maxWin": 16030
+        }
+      ]
+    },
+    {
+      "status": "CALIBRATION_REQUIRED",
+      "results": [
+        {
+          "gameId": "coin-carousel",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 0.69070817,
+          "targetRtp": 0.952,
+          "rtp": 0.9601447777777777,
+          "confidence95": [
+            0.938985443226019,
+            0.9813041123295365
+          ],
+          "baseRtp": 0.5960805555555555,
+          "featureRtp": 0.36406422222222223,
+          "hitRate": 0.88526,
+          "featureRate": 0.45106,
+          "maxWin": 27076
+        },
+        {
+          "gameId": "lantern-vault",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 1.02268696,
+          "targetRtp": 0.952,
+          "rtp": 1.038021,
+          "confidence95": [
+            1.0202661847579053,
+            1.0557758152420949
+          ],
+          "baseRtp": 0.06579188888888889,
+          "featureRtp": 0.9722291111111111,
+          "hitRate": 0.4215,
+          "featureRate": 0.4215,
+          "maxWin": 4177
+        },
+        {
+          "gameId": "lucky-parade",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 1.92204201,
+          "targetRtp": 0.952,
+          "rtp": 0.9557473333333333,
+          "confidence95": [
+            0.9416451712436855,
+            0.969849495422981
+          ],
+          "baseRtp": 0.7435667777777778,
+          "featureRtp": 0.21218055555555557,
+          "hitRate": 0.6874,
+          "featureRate": 0.1368,
+          "maxWin": 6095
+        },
+        {
+          "gameId": "celestial-mint",
+          "spins": 50000,
+          "seed": 153784373,
+          "bet": 180,
+          "payoutScale": 0.46210445,
+          "targetRtp": 0.952,
+          "rtp": 0.9579871111111111,
+          "confidence95": [
+            0.936994681363288,
+            0.9789795408589342
+          ],
+          "baseRtp": 0.6754351111111111,
+          "featureRtp": 0.282552,
+          "hitRate": 0.46552,
+          "featureRate": 0.46552,
+          "maxWin": 16185
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "results": [
+      {
+        "gameId": "coin-carousel",
+        "spins": 100000,
+        "seed": 94635781,
+        "bet": 180,
+        "payoutScale": 0.69060402,
+        "targetRtp": 0.952,
+        "rtp": 0.9653272777777778,
+        "confidence95": [
+          0.9505385087697886,
+          0.980116046785767
+        ],
+        "baseRtp": 0.6018980555555555,
+        "featureRtp": 0.36342922222222224,
+        "hitRate": 0.88901,
+        "featureRate": 0.4509,
+        "maxWin": 27182
+      },
+      {
+        "gameId": "lantern-vault",
+        "spins": 100000,
+        "seed": 94635781,
+        "bet": 180,
+        "payoutScale": 0.94581852,
+        "targetRtp": 0.952,
+        "rtp": 0.9633405555555555,
+        "confidence95": [
+          0.9517471990827668,
+          0.9749339120283442
+        ],
+        "baseRtp": 0.06059833333333333,
+        "featureRtp": 0.9027422222222222,
+        "hitRate": 0.42321,
+        "featureRate": 0.42321,
+        "maxWin": 3752
+      },
+      {
+        "gameId": "lucky-parade",
+        "spins": 100000,
+        "seed": 94635781,
+        "bet": 180,
+        "payoutScale": 1.93059427,
+        "targetRtp": 0.952,
+        "rtp": 0.9596042777777778,
+        "confidence95": [
+          0.9497064941797897,
+          0.9695020613757659
+        ],
+        "baseRtp": 0.7492277777777778,
+        "featureRtp": 0.2103765,
+        "hitRate": 0.68645,
+        "featureRate": 0.13818,
+        "maxWin": 7482
+      },
+      {
+        "gameId": "celestial-mint",
+        "spins": 100000,
+        "seed": 94635781,
+        "bet": 180,
+        "payoutScale": 0.46307541,
+        "targetRtp": 0.952,
+        "rtp": 0.9365256111111111,
+        "confidence95": [
+          0.922631872094462,
+          0.9504193501277602
+        ],
+        "baseRtp": 0.6673335,
+        "featureRtp": 0.26919211111111113,
+        "hitRate": 0.4647,
+        "featureRate": 0.4647,
+        "maxWin": 21440
+      }
+    ]
+  },
+  "note": "Monte Carlo development check; not an independent certification."
+}

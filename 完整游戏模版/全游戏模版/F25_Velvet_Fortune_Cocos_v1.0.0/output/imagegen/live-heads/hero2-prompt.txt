@@ -1,0 +1,10 @@
+Use case: precise-object-edit
+Asset type: nonviolent cartoon sprite animation layers
+Input images: Image 1 is the edit target, a square crop of the brown otter wearing a purple theatrical outfit; hands and crystal ball stay in the backing layer.
+Primary request: prepare THREE registered square animation tiles in one horizontal strip, canvas 1536 x 512. Match the original illustration, proportions and identity; do not redesign or enlarge the character.
+LEFT tile is the stationary backing layer: reproduce this crop, but omit just the face, ears and headgear of the cartoon mascot so they can be drawn on a separate animation layer. Paint the hidden scenery naturally. Keep the torso, clothing below the neck, hands, props and surrounding scene unchanged. This is an illustration-layer editing task, not a scene of injury.
+MIDDLE tile is the overlapping animated face layer: the mascot's exact original head, both ears, cheek fur, crown or hat if present, with a small neck overlap. No torso, clothes, scenery, floor or shadow.
+RIGHT tile is the same animated layer with a gentle natural blink: both eyelids closed, otherwise absolutely identical silhouette, crown, fur, expression and position.
+Registration: each tile uses the SAME 512 x 512 coordinates as Image 1. Keep the head at its exact original size and position. Do not center, enlarge, shrink, shift or rotate it. Tile boundaries are x=512 and x=1024, without lines or gutters. Preserve left-tile outside edges.
+Middle and right backgrounds: perfectly solid flat chroma green #00FF00, no shadows, gradients, texture or edge glow. Native transparent alpha is also acceptable if supported, but never draw a checkerboard. Preserve detailed fur without coloured fringes.
+Constraints: one face per animation tile, complete ears/headgear; no text, labels, watermark, new character or new props.

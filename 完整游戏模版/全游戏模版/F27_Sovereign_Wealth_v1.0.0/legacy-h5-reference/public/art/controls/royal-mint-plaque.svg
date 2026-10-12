@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 128"><defs>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a0"/><stop offset=".19" stop-color="#d89a35"/><stop offset=".48" stop-color="#6b2d13"/><stop offset=".72" stop-color="#fff0a0"/><stop offset="1" stop-color="#d89a35"/></linearGradient>
+ <radialGradient id="glass" cx="34%" cy="22%" r="82%"><stop stop-color="#ffdf7d"/><stop offset=".1" stop-color="#a92c38"/><stop offset=".6" stop-color="#40070f"/><stop offset="1" stop-color="#080207"/></radialGradient>
+ <linearGradient id="lip" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff9cf" stop-opacity=".95"/><stop offset=".18" stop-color="#d89a35"/><stop offset=".58" stop-color="#6b2d13"/><stop offset="1" stop-color="#160506"/></linearGradient>
+ <pattern id="engrave" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M-3 12L12-3M3 21L21 3" stroke="#ffdf7d" stroke-opacity=".11" stroke-width="2"/></pattern>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#090104" flood-opacity=".82"/><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffca55" flood-opacity=".36"/></filter>
+ <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3"/></filter>
+ </defs>
+ <g filter="url(#shadow)"><g fill="url(#lip)" stroke="#fff0a0" stroke-width="3"><path d="M22 9H218Q239 9 239 30V98Q239 119 218 119H22Q1 119 1 98V30Q1 9 22 9Z"/></g><g fill="url(#engrave)" opacity=".95"><path d="M22 9H218Q239 9 239 30V98Q239 119 218 119H22Q1 119 1 98V30Q1 9 22 9Z"/></g><g fill="url(#glass)" stroke="#d89a35" stroke-width="4"><path d="M26 27H214Q221 27 221 34V94Q221 101 214 101H26Q19 101 19 94V34Q19 27 26 27Z"/></g><path d="M34 64H206" stroke="#ffdf7d" stroke-opacity=".38" stroke-width="2"/><circle cx="26" cy="64" r="4" fill="#ffdf7d" opacity=".7"/><circle cx="214" cy="64" r="4" fill="#ffdf7d" opacity=".7"/>
+ <path d="M37 43C77 24 155 23 202 42" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="7" stroke-linecap="round" filter="url(#soft)"/></g></svg>

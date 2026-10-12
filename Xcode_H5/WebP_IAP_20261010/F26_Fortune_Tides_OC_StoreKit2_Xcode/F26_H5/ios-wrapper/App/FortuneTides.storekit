@@ -1,0 +1,79 @@
+{
+  "identifier": "F26-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "2600",
+      "localizations": [
+        {
+          "description": "20000 virtual coins. No cash value.",
+          "displayName": "Fortune Tides DECKHAND",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.fortunetides.coins.deckhand.v1",
+      "referenceName": "deckhand 20000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "2601",
+      "localizations": [
+        {
+          "description": "110000 virtual coins. No cash value.",
+          "displayName": "Fortune Tides CAPTAIN",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.fortunetides.coins.captain.v1",
+      "referenceName": "captain 110000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "2602",
+      "localizations": [
+        {
+          "description": "240000 virtual coins. No cash value.",
+          "displayName": "Fortune Tides ADMIRAL",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.fortunetides.coins.admiral.v1",
+      "referenceName": "admiral 240000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "2603",
+      "localizations": [
+        {
+          "description": "520000 virtual coins. No cash value.",
+          "displayName": "Fortune Tides TREASURE",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.fortunetides.coins.treasure.v1",
+      "referenceName": "treasure 520000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "identifier": "F25-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "2500",
+      "localizations": [
+        {
+          "description": "10000 virtual coins. No cash value.",
+          "displayName": "Velvet Fortune PURSE",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.velvetfortune.coins.purse.v1",
+      "referenceName": "purse 10000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "2501",
+      "localizations": [
+        {
+          "description": "30000 virtual coins. No cash value.",
+          "displayName": "Velvet Fortune BULLION",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.velvetfortune.coins.bullion.v1",
+      "referenceName": "bullion 30000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "2502",
+      "localizations": [
+        {
+          "description": "80000 virtual coins. No cash value.",
+          "displayName": "Velvet Fortune CHEST",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.velvetfortune.coins.chest.v1",
+      "referenceName": "chest 80000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "2503",
+      "localizations": [
+        {
+          "description": "200000 virtual coins. No cash value.",
+          "displayName": "Velvet Fortune VAULT",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.velvetfortune.coins.vault.v1",
+      "referenceName": "vault 200000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

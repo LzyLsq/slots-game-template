@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-10-10T05:58:18.881Z",
+  "games": [
+    {
+      "id": 22,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-home.m4a",
+              "time": 0.908481,
+              "duration": 43.699955,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06037775541700109,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.466893,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1130914714698207,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.452789,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11681680033997548,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.53105,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10860568461049973,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.602241,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1025658025246276,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4231760501861572,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.986848,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07087034174478152,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.45384272933006287,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 1.376288,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05985963779155294,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

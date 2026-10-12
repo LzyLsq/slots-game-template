@@ -1,0 +1,5900 @@
+{
+  "checkedAt": "2026-10-10T06:15:17.100Z",
+  "ids": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    33
+  ],
+  "passed": true,
+  "music": [
+    {
+      "id": 13,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63780/audio/music-home.m4a",
+              "time": 0.711111,
+              "duration": 34.342313,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07796692396873663,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63780/audio/music-cabinet.m4a",
+              "time": 0.634231,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.006994684322704482,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63780/audio/music-cabinet.m4a",
+              "time": 0.499229,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.018050929000481875,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63780/audio/music-cabinet.m4a",
+              "time": 1.163063,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.216180744732106,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63780/audio/music-cabinet.m4a",
+              "time": 0.500262,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.01831991560702812,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63780/audio/music-cabinet.m4a",
+              "time": 0.934972,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.16413628806687192,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63780/audio/music-cabinet.m4a",
+              "time": 1.403923,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0873383762251627,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 14,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63781/audio/music-home.m4a",
+              "time": 0.679184,
+              "duration": 22.918095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07840290146831791,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63781/audio/music-cabinet.m4a",
+              "time": 0.45558,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09523041871616013,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63781/audio/music-cabinet.m4a",
+              "time": 0.455171,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09523041871616013,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63781/audio/music-cabinet.m4a",
+              "time": 0.455692,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09523041871616013,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63781/audio/music-cabinet.m4a",
+              "time": 0.443551,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0937749280424827,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63781/audio/music-cabinet.m4a",
+              "time": 0.834243,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.14372682142615897,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4415760636329651,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63781/audio/music-cabinet.m4a",
+              "time": 1.220117,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.037203133670701084,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 15,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63782/audio/music-home.m4a",
+              "time": 0.438181,
+              "duration": 16.602268,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09004694441789945,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63782/audio/music-cabinet.m4a",
+              "time": 0.467302,
+              "duration": 12.469116,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.015371804225605176,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63782/audio/music-cabinet.m4a",
+              "time": 0.435374,
+              "duration": 12.469116,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0165241156241143,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63782/audio/music-cabinet.m4a",
+              "time": 0.449887,
+              "duration": 12.469116,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.017005569705228072,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63782/audio/music-cabinet.m4a",
+              "time": 0.481814,
+              "duration": 12.469116,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.014312003116227965,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63782/audio/music-cabinet.m4a",
+              "time": 0.896767,
+              "duration": 12.469116,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06884880515576532,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63782/audio/music-cabinet.m4a",
+              "time": 1.307742,
+              "duration": 12.469116,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11604872424461915,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 16,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63783/audio/music-home.m4a",
+              "time": 0.447515,
+              "duration": 35.61941,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11181479509460088,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63783/audio/music-cabinet.m4a",
+              "time": 0.444082,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12287356771384429,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63783/audio/music-cabinet.m4a",
+              "time": 0.449866,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12061621602703723,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63783/audio/music-cabinet.m4a",
+              "time": 0.442504,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1274167880261678,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63783/audio/music-cabinet.m4a",
+              "time": 0.444082,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1274167880261678,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4293093681335449,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63783/audio/music-cabinet.m4a",
+              "time": 0.816424,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.007711080837256867,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4415760636329651,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63783/audio/music-cabinet.m4a",
+              "time": 1.204467,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.17961204070056233,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 17,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63784/audio/music-home.m4a",
+              "time": 0.438277,
+              "duration": 38.452245,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.022271891746700755,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63784/audio/music-cabinet.m4a",
+              "time": 0.444082,
+              "duration": 28.862404,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.026627132865772875,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63784/audio/music-cabinet.m4a",
+              "time": 0.447865,
+              "duration": 28.862404,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.023349560118771526,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63784/audio/music-cabinet.m4a",
+              "time": 0.441985,
+              "duration": 28.862404,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.025001377536107643,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63784/audio/music-cabinet.m4a",
+              "time": 0.444082,
+              "duration": 28.862404,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.025001377536107643,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4477093815803528,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63784/audio/music-cabinet.m4a",
+              "time": 0.834561,
+              "duration": 28.862404,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.008982682545812078,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.435442715883255,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63784/audio/music-cabinet.m4a",
+              "time": 1.209721,
+              "duration": 28.862404,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10894122739803395,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 18,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63785/audio/music-home.m4a",
+              "time": 0.461497,
+              "duration": 32.600816,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11037433779660834,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63785/audio/music-cabinet.m4a",
+              "time": 0.449887,
+              "duration": 24.473832,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.024610675194101126,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63785/audio/music-cabinet.m4a",
+              "time": 0.467302,
+              "duration": 24.473832,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.02385365228712881,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63785/audio/music-cabinet.m4a",
+              "time": 0.458594,
+              "duration": 24.473832,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.023403399723429176,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63785/audio/music-cabinet.m4a",
+              "time": 0.603719,
+              "duration": 24.473832,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13182504036765746,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4477093815803528,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63785/audio/music-cabinet.m4a",
+              "time": 0.999502,
+              "duration": 24.473832,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11876912389708709,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63785/audio/music-cabinet.m4a",
+              "time": 1.463013,
+              "duration": 24.473832,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06406984179628168,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 19,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63786/audio/music-home.m4a",
+              "time": 0.710764,
+              "duration": 24.055873,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07620673193819963,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63786/audio/music-cabinet.m4a",
+              "time": 0.455692,
+              "duration": 18.065125,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.03233423811283637,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63786/audio/music-cabinet.m4a",
+              "time": 0.438277,
+              "duration": 18.065125,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.055393867145815505,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63786/audio/music-cabinet.m4a",
+              "time": 0.583401,
+              "duration": 18.065125,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.050060393528582436,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63786/audio/music-cabinet.m4a",
+              "time": 0.460428,
+              "duration": 18.065125,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.029896813539798606,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4477093815803528,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63786/audio/music-cabinet.m4a",
+              "time": 0.858222,
+              "duration": 18.065125,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10097551136196002,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4415760636329651,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63786/audio/music-cabinet.m4a",
+              "time": 1.241273,
+              "duration": 18.065125,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05021289533763755,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 20,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63787/audio/music-home.m4a",
+              "time": 0.449887,
+              "duration": 33.158095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.017355942760378648,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63787/audio/music-cabinet.m4a",
+              "time": 0.523016,
+              "duration": 31.021859,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.16868551704987209,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63787/audio/music-cabinet.m4a",
+              "time": 0.449887,
+              "duration": 31.021859,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.04678617391330802,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63787/audio/music-cabinet.m4a",
+              "time": 0.448268,
+              "duration": 31.021859,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.04678617391330802,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63787/audio/music-cabinet.m4a",
+              "time": 0.444082,
+              "duration": 31.021859,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.04987418246328886,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.435442715883255,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63787/audio/music-cabinet.m4a",
+              "time": 0.801089,
+              "duration": 31.021859,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12045479480899735,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4293093681335449,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63787/audio/music-cabinet.m4a",
+              "time": 1.182802,
+              "duration": 31.021859,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12260113575656528,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 21,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63788/audio/music-home.m4a",
+              "time": 0.453962,
+              "duration": 20.062041,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11522645975812859,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63788/audio/music-cabinet.m4a",
+              "time": 0.454117,
+              "duration": 15.069751,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1503038526518075,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63788/audio/music-cabinet.m4a",
+              "time": 0.459042,
+              "duration": 15.069751,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.14806696539835362,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63788/audio/music-cabinet.m4a",
+              "time": 0.455692,
+              "duration": 15.069751,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.14841842485031956,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63788/audio/music-cabinet.m4a",
+              "time": 0.493723,
+              "duration": 15.069751,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.15049864642282565,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63788/audio/music-cabinet.m4a",
+              "time": 0.966865,
+              "duration": 15.069751,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.17458916336264094,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.45997604727745056,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63788/audio/music-cabinet.m4a",
+              "time": 1.374731,
+              "duration": 15.069751,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.20379774930269778,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-1.json"
+    },
+    {
+      "id": 22,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-home.m4a",
+              "time": 0.908481,
+              "duration": 43.699955,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06037775541700109,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.466893,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1130914714698207,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.452789,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11681680033997548,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.53105,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10860568461049973,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.602241,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1025658025246276,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4231760501861572,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 0.986848,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07087034174478152,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.45384272933006287,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+              "time": 1.376288,
+              "duration": 32.786576,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05985963779155294,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-3.json"
+    },
+    {
+      "id": 23,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-home.m4a",
+              "time": 0.626702,
+              "duration": 34.342313,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.03319005340493819,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.488706,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.015281701301570359,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.642133,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.023336164844075313,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.467302,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.017852290392868897,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.507937,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.016229471616442375,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.969433,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05062637248407843,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 1.471508,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11692911741546341,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-2.json"
+    },
+    {
+      "id": 24,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-home.m4a",
+              "time": 0.448471,
+              "duration": 36.989388,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0928498409308811,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.454748,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08311329535637714,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.443972,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08527716041602172,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.45302,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08311329535637714,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.444082,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08527716041602172,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.41704273223876953,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.803991,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.03282941761714397,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4231760501861572,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 1.167645,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.008293427831046122,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-2.json"
+    },
+    {
+      "id": 25,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 0.438277,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11269071085566461,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 0.696599,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.008860566657772354,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 1.547514,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1295478855645198,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 2.388655,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.02645504663455547,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 3.178427,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.013529175217769867,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 0.435374,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09965878428302861,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.4293093681335449,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 0.812995,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07141480143619998,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-4.json"
+    },
+    {
+      "id": 26,
+      "passed": true,
+      "checks": [
+        {
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-home.m4a",
+              "time": 0.689255,
+              "duration": 34.969252,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "mint",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.091488,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "pearl",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.049735,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "reef",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.01536,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "beacon",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.042456,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 0.446666,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 0.806859,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-2.json"
+    },
+    {
+      "id": 27,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.435374,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05919795903497797,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 0.437521,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0829284458159393,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 1.1469,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.013520211950836959,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 1.868506,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08711013767154835,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 2.583372,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08289390118009489,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.434738,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06887687998302751,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ]
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.4231760501861572,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.806893,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12061366317104452,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-4.json"
+    },
+    {
+      "id": 28,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-home.m4a",
+              "time": 0.449887,
+              "duration": 22.918095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10022885306825731,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 0.539864,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.04529311820133099,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 1.521457,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.19166023093764945,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 2.490341,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13618521351242344,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 3.478873,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.03424530266254885,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.435442715883255,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-home.m4a",
+              "time": 3.681644,
+              "duration": 22.918095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10119651617836388,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.435442715883255,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-home.m4a",
+              "time": 4.05603,
+              "duration": 22.918095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09585913777029859,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-5.json"
+    },
+    {
+      "id": 29,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-home.m4a",
+              "time": 0.453073,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12366963898637848,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.443654,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07475654965515198,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.534059,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07315787903375467,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.650159,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07610342906191954,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.607183,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07858936543112051,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 1.076644,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.17280198107908518,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 1.484358,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.19438858948876003,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-2.json"
+    },
+    {
+      "id": 30,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-home.m4a",
+              "time": 0.532511,
+              "duration": 35.61941,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09517496758536793,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.468507,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10888455693113243,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.566425,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09597343588280098,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.512554,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10786144576772658,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.438277,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11357176970244667,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4415760636329651,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.819708,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0995744956445242,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 1.230966,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10695473558625804,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-2.json"
+    },
+    {
+      "id": 31,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-home.m4a",
+              "time": 0.457354,
+              "duration": 15.53415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10845332686726694,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.455854,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13543051293807704,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.448175,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1345053925649992,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.454248,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13496108487157144,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.458594,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.137385703045436,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.41704273223876953,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.844694,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0783499515639988,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4415760636329651,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 1.228466,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09961022240326492,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-2.json"
+    },
+    {
+      "id": 33,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-home.m4a",
+              "time": 0.449887,
+              "duration": 21.873197,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07592844046921189,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.453215,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08417254293313306,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.487619,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08810304099931526,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.667574,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07915282991181015,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.625425,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07206815529654487,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 1.081422,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05106824189141174,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 1.606962,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1158800708273491,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "music-2.json"
+    }
+  ],
+  "native": [
+    {
+      "id": 13,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 136,
+      "seconds": 61,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F13.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 14,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 134,
+      "seconds": 32,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F14.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 15,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 176,
+      "seconds": 16,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F15.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 16,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 170,
+      "seconds": 44,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F16.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 17,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 162,
+      "seconds": 41,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F17.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 18,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 162,
+      "seconds": 55,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F18.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 19,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 168,
+      "seconds": 36,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F19.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 20,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 182,
+      "seconds": 41,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F20.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 21,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 171,
+      "seconds": 20,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F21.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 22,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 171,
+      "seconds": 20,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.MuG1Cc/F22.log",
+      "evidence": "native-1.json"
+    },
+    {
+      "id": 23,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 165,
+      "seconds": 61,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F23.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 24,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 190,
+      "seconds": 31,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F24.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 25,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 259,
+      "seconds": 16,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F25.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 26,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 255,
+      "seconds": 45,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F26.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 27,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 325,
+      "seconds": 41,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F27.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 28,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 88,
+      "seconds": 55,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F28.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 29,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 181,
+      "seconds": 37,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F29.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 30,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 179,
+      "seconds": 41,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F30.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 31,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 101,
+      "seconds": 20,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F31.log",
+      "evidence": "native-2.json"
+    },
+    {
+      "id": 33,
+      "passed": true,
+      "unsignedArm64Build": true,
+      "copiedFiles": 181,
+      "seconds": 20,
+      "log": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/mascot-native.Yl9TyW/F33.log",
+      "evidence": "native-2.json"
+    }
+  ],
+  "wins": [
+    {
+      "id": 13,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 14,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-4.json"
+    },
+    {
+      "id": 15,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 16,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 17,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 18,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 19,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 20,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 21,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 22,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 23,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 24,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 25,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-2.json"
+    },
+    {
+      "id": 26,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-2.json"
+    },
+    {
+      "id": 27,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "realSpin": true,
+          "ratio": "unmodified-random",
+          "sawBig": false
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 28,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-2.json"
+    },
+    {
+      "id": 29,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 30,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    },
+    {
+      "id": 31,
+      "passed": true,
+      "checks": [
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true,
+          "finalAmountVerified": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-3.json"
+    },
+    {
+      "id": 33,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "ratio": 0,
+          "sawBig": false
+        },
+        {
+          "realSpin": true,
+          "ratio": 1.01,
+          "sawBig": true
+        },
+        {
+          "mode": 0,
+          "ratio": 0.5,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 0,
+          "realBack": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 1,
+          "realBack": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 2,
+          "realBack": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1,
+          "big": false,
+          "realCollect": false,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 1.01,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "ratio": 100,
+          "big": true,
+          "realCollect": true,
+          "rendered": true
+        },
+        {
+          "mode": 3,
+          "realBack": true
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "evidence": "wins-1.json"
+    }
+  ],
+  "decodedAudio": 142,
+  "distinctBackgroundTracks": 40,
+  "audits": [
+    {
+      "out": "/Users/mengjunzhu/Desktop/Xcode_H5/WebP_IAP_20261010",
+      "games": [
+        {
+          "id": 13,
+          "webp": 47,
+          "products": 4,
+          "legacyProducts": 4,
+          "webBytes": 13619407,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 14,
+          "webp": 45,
+          "products": 4,
+          "legacyProducts": 4,
+          "webBytes": 13133752,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 15,
+          "webp": 66,
+          "products": 4,
+          "legacyProducts": 4,
+          "webBytes": 17528457,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 16,
+          "webp": 64,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 14026249,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 17,
+          "webp": 59,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 17012221,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 18,
+          "webp": 59,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 17953321,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 19,
+          "webp": 62,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 19813188,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 20,
+          "webp": 70,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 23337210,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 21,
+          "webp": 64,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 23780822,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 22,
+          "webp": 64,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 17330389,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 23,
+          "webp": 61,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 15762899,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 24,
+          "webp": 73,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 17109655,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 25,
+          "webp": 103,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 15809287,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 26,
+          "webp": 218,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 21332038,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 27,
+          "webp": 96,
+          "products": 3,
+          "legacyProducts": 0,
+          "webBytes": 19482673,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 28,
+          "webp": 19,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 11280985,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 29,
+          "webp": 70,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 25379615,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 30,
+          "webp": 68,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 21037263,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 31,
+          "webp": 29,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 19161719,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 33,
+          "webp": 70,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 21019446,
+          "minimumIOS": "15.4",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "out": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010",
+      "games": [
+        {
+          "id": 13,
+          "webp": 47,
+          "products": 4,
+          "legacyProducts": 4,
+          "webBytes": 13619407,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 14,
+          "webp": 45,
+          "products": 4,
+          "legacyProducts": 4,
+          "webBytes": 13133752,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 15,
+          "webp": 66,
+          "products": 4,
+          "legacyProducts": 4,
+          "webBytes": 17528457,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 16,
+          "webp": 64,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 14026249,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 17,
+          "webp": 59,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 17012221,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 18,
+          "webp": 59,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 17953321,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 19,
+          "webp": 62,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 19813188,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 20,
+          "webp": 70,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 23337210,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 21,
+          "webp": 64,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 23780822,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 22,
+          "webp": 64,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 17330389,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 23,
+          "webp": 61,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 15762899,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 24,
+          "webp": 73,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 17109655,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 25,
+          "webp": 103,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 15809287,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 26,
+          "webp": 218,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 21332038,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 27,
+          "webp": 96,
+          "products": 3,
+          "legacyProducts": 0,
+          "webBytes": 19482673,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 28,
+          "webp": 19,
+          "products": 4,
+          "legacyProducts": 0,
+          "webBytes": 11280985,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 29,
+          "webp": 70,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 25379615,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 30,
+          "webp": 68,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 21037263,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 31,
+          "webp": 29,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 19161719,
+          "minimumIOS": "15.4",
+          "passed": true
+        },
+        {
+          "id": 33,
+          "webp": 70,
+          "products": 4,
+          "legacyProducts": 8,
+          "webBytes": 21019446,
+          "minimumIOS": "15.4",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "nativeLifecycleFiles": 40,
+  "unchangedOtherNativeFiles": 884,
+  "deliveryChecks": [
+    {
+      "key": "F13-home",
+      "sha256": "e5a909d9557f772f922d2d628440e9b14c867207201967ae32ee023dd325392c"
+    },
+    {
+      "key": "F13-cabinet",
+      "sha256": "b0d6aff73ad764277db21b9c38057ebdfc21aa3eee46acf1b3e3b1d31ed1f86a"
+    },
+    {
+      "key": "F14-home",
+      "sha256": "65937a01ce8e24e37651fc091191735f9f3d57f32f537d39461f67f574832906"
+    },
+    {
+      "key": "F14-cabinet",
+      "sha256": "3bbc16855640a980c3f095497afa4674d06b6e03500ec2021628e05bc8270d92"
+    },
+    {
+      "key": "F15-home",
+      "sha256": "7a5001d72fe47434363cfa42105be7f77b050c11d1982bad9c91fca489bbd957"
+    },
+    {
+      "key": "F15-cabinet",
+      "sha256": "15e06b5bad7ba3961a89b2b8d18ff3b6d56e28047a8d38e58b7656253348baac"
+    },
+    {
+      "key": "F16-home",
+      "sha256": "c1b30cd08c09c83a6db602074424ac7fca6f4a3248b39a96143bb95c98871fd0"
+    },
+    {
+      "key": "F16-cabinet",
+      "sha256": "48b9418e6360b883c8eb1a49e2ff6a105786d4c6aa5979855bf99713d7677a71"
+    },
+    {
+      "key": "F17-home",
+      "sha256": "1e1886d0315b94f990aca6b7a9ca043db1f2b80b27a500309f609f9d6f0e758c"
+    },
+    {
+      "key": "F17-cabinet",
+      "sha256": "6d58b3ea470ef0c8aaea91fb1db608dea09ab09ba040d13c807f2ab058b7a701"
+    },
+    {
+      "key": "F18-home",
+      "sha256": "82ba51aa9ec3fa78538f94ef75e0e75ff2c316a90d16741bf2d7200fc6e4b619"
+    },
+    {
+      "key": "F18-cabinet",
+      "sha256": "581a9d150d7dff9f3dd67c4d220874d01241eaf65ddb91557b8f5510e722e767"
+    },
+    {
+      "key": "F19-home",
+      "sha256": "0995ecf2fe61c5de8cb223949809dcff6eece19f4d21ce52e55290014318b353"
+    },
+    {
+      "key": "F19-cabinet",
+      "sha256": "8d63d109a22fe72d7cdb713ded2b238529c2862ddef22ccfb79dd931f696e15f"
+    },
+    {
+      "key": "F20-home",
+      "sha256": "df89b8929a0a2d4e49ebc89edd880ffff82e504a06efb56183e3d84dca683297"
+    },
+    {
+      "key": "F20-cabinet",
+      "sha256": "43154e8da9b29d844b3bf84526a96b7cf7e083b3ac856929d3b4b4953faf4c66"
+    },
+    {
+      "key": "F21-home",
+      "sha256": "11bb5a0828126eec8df0cb437ddf4c96297e76fcef544345d77bb93fe5584f7d"
+    },
+    {
+      "key": "F21-cabinet",
+      "sha256": "099bf9b89fdee193b617ae353141fddb2913b76e3a53b95fe3961eb44ddb03de"
+    },
+    {
+      "key": "F22-home",
+      "sha256": "ab0586d5100aeef8f5a24f3c937b45e5b79596df96fcf07eca6854f6766ad4cd"
+    },
+    {
+      "key": "F22-cabinet",
+      "sha256": "5e00f1f0189cb637f317bd2aa9772654e201364bec2d1a3e05e14894e88428c3"
+    },
+    {
+      "key": "F23-home",
+      "sha256": "c92e519c2107d8a0bd5eabe902edf129d3f6993ffa42035a3ae7ff5a7a3dbabf"
+    },
+    {
+      "key": "F23-cabinet",
+      "sha256": "05ab53523cf3ea7740adb24a40c1936baa8307cc74985c3753832fe0374c02e2"
+    },
+    {
+      "key": "F24-home",
+      "sha256": "4dcf13956ee449b188ad310ca0d4dd59cda44b75950bdd4519b009e88e240e97"
+    },
+    {
+      "key": "F24-cabinet",
+      "sha256": "6750429525ade84aea50f79c0ea876967375c295fc312c111b35bc5ce1b69355"
+    },
+    {
+      "key": "F25-home",
+      "sha256": "399bcca98c0685670f6a91ca718a93ba435aee421d7c0593e86e003035313dfb"
+    },
+    {
+      "key": "F25-cabinet",
+      "sha256": "30926bfa0fdcbcb9128b02c9af2554c38f455830fa5426a9f92e01103d5e2f59"
+    },
+    {
+      "key": "F26-home",
+      "sha256": "717de59ce07ed650c77b986e2d21c327894bc9118f9f7153803b4ebceade604e"
+    },
+    {
+      "key": "F26-cabinet",
+      "sha256": "a122403923e50d0a95f4ae7e0d3d0d34ea3d112564913818c1a7ea78e542ba14"
+    },
+    {
+      "key": "F27-home",
+      "sha256": "68bb522d2014722a4f481e94013d96b757a9487222a1ba7881b347d5302a49ad"
+    },
+    {
+      "key": "F27-cabinet",
+      "sha256": "4de83375a1cb10a81f67eede573529b6003654c4e7a97dcef52c0384e085cc65"
+    },
+    {
+      "key": "F28-home",
+      "sha256": "8164c4941c79d4b9997521128512faafd2b8a3ad1ee961874012f38395c694d8"
+    },
+    {
+      "key": "F28-cabinet",
+      "sha256": "5323bbd4785ab438ebbc90b5c4a484d7876c610dd918b69987522e7f833f13fa"
+    },
+    {
+      "key": "F29-home",
+      "sha256": "52d46ae88c2dac391872ecff3e297cbeaf08c753558475e93381e1982003d389"
+    },
+    {
+      "key": "F29-cabinet",
+      "sha256": "f88479ca7ab4baacc5b93b078bb8f21f6485dc992698961edf0822f84908af4b"
+    },
+    {
+      "key": "F30-home",
+      "sha256": "729a1f664a6b6114228476e2c8371210db9b32be67b83704f593f8e6ff488907"
+    },
+    {
+      "key": "F30-cabinet",
+      "sha256": "5b6064b7effd8038ba1dd2dcd88360c4d97bcdc94399f796b83d812c3e3ac182"
+    },
+    {
+      "key": "F31-home",
+      "sha256": "1c6b2255780c5c80809140a84f705563d1a73b3e806216eb72379af7ebe96e3f"
+    },
+    {
+      "key": "F31-cabinet",
+      "sha256": "3f641b3eac06c86088a6b4016fa8788ff06c3fb6c07c0b849a2fe77e1d3a7ec8"
+    },
+    {
+      "key": "F33-home",
+      "sha256": "0f1da6b06977f030c5553ecda4c968ccd737858f705adb258f0bf249d86d7da8"
+    },
+    {
+      "key": "F33-cabinet",
+      "sha256": "6801a2fac2fec3ae06619c5e4b5480b8c325683a132b9022d89a065590f7c407"
+    }
+  ],
+  "limitations": [
+    "Browser playback/lifecycle verification is not an iPhone hardware listening test.",
+    "Unsigned arm64 Release compilation is not a signed install, Sandbox payment, TestFlight, or App Store approval.",
+    "No probability, settlement, account data, product IDs or signing settings were changed by the music fix."
+  ],
+  "previousWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.qk5xGr",
+  "previousAppDelegateBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/native-music-lifecycle.35MtHc"
+}

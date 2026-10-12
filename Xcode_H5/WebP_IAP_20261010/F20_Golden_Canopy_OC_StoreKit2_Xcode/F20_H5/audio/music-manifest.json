@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F20_Golden_Canopy_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Fretless",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fretless.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500074",
+      "isrc": "USUAN1500074",
+      "published": "2015-11-13",
+      "sourceSha256": "e3e640d27169941829ca5b63e3f65412e9c3829d991925be3abae3fc9b6664db",
+      "file": "music-home.m4a",
+      "sha256": "be21b0992dc4cce4a1bb651fafbe25334b426b4299ece528e816205b4e4f28ed",
+      "duration": 90.2,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Fireflies and Stardust",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fireflies%20and%20Stardust.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600061",
+      "isrc": "USUAN1600061",
+      "published": "2016-10-22",
+      "sourceSha256": "28d557e8d15ed9e39d55bebb1b9e3b2c40d1d3dc94f0ccec71618a194e64f7dc",
+      "file": "music-cabinet.m4a",
+      "sha256": "ddb1a807a25bb5f9fb7d213ffe6030be7654fc484eef71dab5e44aca548ef4d9",
+      "duration": 90.76470588235294,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "3f8f2534a297d19386c233a7ee4fa8737cc40870dd206010263760e1983dde46",
+      "file": "win-small.m4a",
+      "sha256": "03b952ffedd4ee42cad4ebda0cb0ab4f83f755442638c920bcdea787602e9ff1",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.0307142857142857,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI01",
+          "sourceSha256": "3f8f2534a297d19386c233a7ee4fa8737cc40870dd206010263760e1983dde46",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.0057142857142858,
+          "sourceSeconds": 1.0057142857142858,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_light_001",
+          "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI01"
+    },
+    {
+      "id": "win-big",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "f98fa4af012d443da636a2d90f2926adc2384ec833851918f88426be9a25acf9",
+      "file": "win-big.m4a",
+      "sha256": "a91da7c2ec13fc88318f8a322bcc1da67de691f02965fb769bdd3d0c8c55301e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.8923015873015873,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI04",
+          "sourceSha256": "f98fa4af012d443da636a2d90f2926adc2384ec833851918f88426be9a25acf9",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5848526077097506,
+          "sourceSeconds": 0.5848526077097506,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_medium_001",
+          "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/handleCoins2",
+          "sourceSha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.5348526077097505,
+          "gain": 0.205,
+          "maxSeconds": 0.3324489795918367,
+          "sourceSeconds": 0.35068027210884356,
+          "sourceOffsetSeconds": 0.0182312925170068,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI04"
+    },
+    {
+      "id": "win-mega",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "91870588924e0e498c6eb8d4f4ccf8595c9e7dc51fb553797b551062e642ce7c",
+      "file": "win-mega.m4a",
+      "sha256": "41bd3119f3baa78bcb97bf172bbeb1a98d02aea32a845970e78dcf0249ccadfe",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.6932766439909295,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI07",
+          "sourceSha256": "91870588924e0e498c6eb8d4f4ccf8595c9e7dc51fb553797b551062e642ce7c",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.339501133786848,
+          "sourceSeconds": 1.339501133786848,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGeneric_light_000",
+          "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.16108843537414966,
+          "sourceSeconds": 0.16108843537414966,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-4",
+          "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 1.289501133786848,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.3787755102040816,
+          "sourceSeconds": 0.3787755102040816,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI07"
+    },
+    {
+      "id": "win-epic",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "072fe661c6ce8c7672afaf0af51e27533d6effe99d35584b01d864bde800ecc1",
+      "file": "win-epic.m4a",
+      "sha256": "27bb0f2babec889b92a4c93cd920ce4782ad05b381ae52aabf66952cdd87b125",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.1157936507936506,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI11",
+          "sourceSha256": "072fe661c6ce8c7672afaf0af51e27533d6effe99d35584b01d864bde800ecc1",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.8083446712018141,
+          "sourceSeconds": 0.8083446712018141,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_light_001",
+          "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/handleCoins2",
+          "sourceSha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.758344671201814,
+          "gain": 0.255,
+          "maxSeconds": 0.3324489795918367,
+          "sourceSeconds": 0.35068027210884356,
+          "sourceOffsetSeconds": 0.0182312925170068,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI11"
+    },
+    {
+      "id": "win-super",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "b442ade3308a2bbda4b8c572c86f9f1071c7bdbcfb1e6f915d35c605b61bd475",
+      "file": "win-super.m4a",
+      "sha256": "0ddf8a424d1bb1d833b97cda5ca6516d21408fd86a03034df5342832fa292cff",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.8631632653061224,
+      "sources": [
+        {
+          "key": "jingles/Pizzicato jingles/jingles_PIZZI00",
+          "sourceSha256": "b442ade3308a2bbda4b8c572c86f9f1071c7bdbcfb1e6f915d35c605b61bd475",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5093877551020408,
+          "sourceSeconds": 0.5093877551020408,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_medium_001",
+          "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-handle-4",
+          "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.45938775510204083,
+          "gain": 0.28,
+          "maxSeconds": 0.3787755102040816,
+          "sourceSeconds": 0.3787755102040816,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Pizzicato jingles/jingles_PIZZI00"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "c73c9b78024e31c49c55ed627360b840f42cca14b24ea3ae8817498bdaf43493",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_001",
+          "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/click_004",
+          "sourceSha256": "09e2c1b643b71b9aff9932b4e02d78db116446b9a14b00a5b2a9b28d2668fd8e",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.021768707482993196,
+          "sourceSeconds": 0.021768707482993196,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "fb28781bd22b2eefdc14077f1adf5c94d7fe9c3a130194633b55f3e0d39d9f04",
+      "file": "sfx-ui-back.wav",
+      "sha256": "5dc89614be7981951303eaf83ca520dd01308652275a8b94c20f143a702fc69b",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.465,
+      "sources": [
+        {
+          "key": "impact/footstep_grass_001",
+          "sourceSha256": "fb28781bd22b2eefdc14077f1adf5c94d7fe9c3a130194633b55f3e0d39d9f04",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.44,
+          "sourceSeconds": 0.6864399092970521,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_medium_001",
+          "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.28002267573696143,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+      "file": "sfx-ui-select.wav",
+      "sha256": "f3f27b60e18f37a707ea299c2e2b3a0856e6e4845262c3dfe10bba8db0b717ce",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.18608843537414965,
+      "sources": [
+        {
+          "key": "impact/impactGeneric_light_000",
+          "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.16108843537414966,
+          "sourceSeconds": 0.16108843537414966,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_008",
+          "sourceSha256": "f703b6b1c62dae1c246a46d5c2442802588f68be2df4d17e0d65cf7e0dbfc826",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.05950113378684807,
+          "sourceSeconds": 0.05950113378684807,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+      "file": "sfx-bet-up.wav",
+      "sha256": "02823dad18ee4ae97161f492fd49b7744dc4229cff3471092d0c860e9124d478",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "impact/impactWood_medium_001",
+          "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/switch_001",
+          "sourceSha256": "3b74efad87f1e69dbd1d05c5ad952ab90859b5a3d11da6ec5bd79b4f03b42afa",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+      "file": "sfx-bet-down.wav",
+      "sha256": "aa9b1be8f1f12b34e296ef3fd071e0e571d2f6d7bf748e68ed0792372cf76f90",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_001",
+          "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/cloth3",
+          "sourceSha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.49467120181405894,
+          "sourceOffsetSeconds": 0.01235827664399093,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b",
+      "file": "sfx-spin-start.wav",
+      "sha256": "68af88e64b8d5ac8d110d1374a5eb354f6cfda8acce4f7306982cb2e51bfbada",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.507312925170068,
+      "sources": [
+        {
+          "key": "rpg/cloth3",
+          "sourceSha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.482312925170068,
+          "sourceSeconds": 0.49467120181405894,
+          "sourceOffsetSeconds": 0.01235827664399093,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGeneric_light_000",
+          "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.16108843537414966,
+          "sourceSeconds": 0.16108843537414966,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+      "file": "sfx-stop-1.wav",
+      "sha256": "a2d313f11de5716b7371ab0f82fcd3ed5e65fe19560f2552a1ee9591eff80834",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_001",
+          "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+      "file": "sfx-stop-2.wav",
+      "sha256": "005da7b394f57de87cd945ca4b42e3ce25915cfd722b7aa78230d8084501bcd4",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactWood_medium_001",
+          "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+      "file": "sfx-stop-3.wav",
+      "sha256": "9980b4fc96cd3d87efe57e973a95406fca9daf7a14e4daf3359aab7a177ac5ff",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.18608843537414965,
+      "sources": [
+        {
+          "key": "impact/impactGeneric_light_000",
+          "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.16108843537414966,
+          "sourceSeconds": 0.16108843537414966,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+      "file": "sfx-coin-1.wav",
+      "sha256": "a8721bbd13df3daa8a6433bf2722f2f9c556592aeab0ac276f9af69d319b6d72",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.245,
+      "sources": [
+        {
+          "key": "casino/chips-handle-4",
+          "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.3787755102040816,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+      "file": "sfx-coin-2.wav",
+      "sha256": "52079b0f94654acf32602d71840ae4449ff74cb88b40f63106ced852a73a982b",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.245,
+      "sources": [
+        {
+          "key": "rpg/handleCoins2",
+          "sourceSha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.35068027210884356,
+          "sourceOffsetSeconds": 0.0182312925170068,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+      "file": "sfx-coin-3.wav",
+      "sha256": "ba04feabce1dea79ebb6c8e733be5ee7ee8c7574566bdb2241d28c7866dae4e6",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chips-handle-4",
+          "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.3787755102040816,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_light_001",
+          "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+      "file": "sfx-burst.wav",
+      "sha256": "85c1a3bd774b6b453b331fa57ddd949bb74f388504496ee3b0f3813341e7c09a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.35744897959183675,
+      "sources": [
+        {
+          "key": "rpg/handleCoins2",
+          "sourceSha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.3324489795918367,
+          "sourceSeconds": 0.35068027210884356,
+          "sourceOffsetSeconds": 0.0182312925170068,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGeneric_light_000",
+          "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.16108843537414966,
+          "sourceSeconds": 0.16108843537414966,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b",
+      "file": "sfx-reveal.wav",
+      "sha256": "81b509cb48e66aa9cc20413720c4cf66b7438fb5ed769739c7057829d91ac563",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.507312925170068,
+      "sources": [
+        {
+          "key": "rpg/cloth3",
+          "sourceSha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.482312925170068,
+          "sourceSeconds": 0.49467120181405894,
+          "sourceOffsetSeconds": 0.01235827664399093,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_light_001",
+          "sourceSha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+      "file": "sfx-collect.wav",
+      "sha256": "d3c8e8b4a39295084fedfaf8f4574e1c74a53f0eee146a62c562925ff925c0a6",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.40377551020408164,
+      "sources": [
+        {
+          "key": "casino/chips-handle-4",
+          "sourceSha256": "0d171ea00224709cbe31ef95a111eabaf1382606a4836c5717043b339cbed8e9",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3787755102040816,
+          "sourceSeconds": 0.3787755102040816,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_medium_001",
+          "sourceSha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.34104308390022675,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Canopy: leafy rustle, acorn wood and treasure / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+      "file": "sfx-reward.wav",
+      "sha256": "9bcc7f7b27a2e2f765fdc2ce8a68fff966e2a54ccaeb219a3e878a082cb2f295",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.41744897959183674,
+      "sources": [
+        {
+          "key": "impact/impactGeneric_light_000",
+          "sourceSha256": "f0e982611e97512fee5f777986b67e8b435434b601f94992ec044f7e89fb5acb",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.16108843537414966,
+          "sourceSeconds": 0.16108843537414966,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/handleCoins2",
+          "sourceSha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.3324489795918367,
+          "sourceSeconds": 0.35068027210884356,
+          "sourceOffsetSeconds": 0.0182312925170068,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Fireflies and Stardust",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fireflies%20and%20Stardust.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600061",
+      "isrc": "USUAN1600061",
+      "published": "2016-10-22",
+      "sourceSha256": "28d557e8d15ed9e39d55bebb1b9e3b2c40d1d3dc94f0ccec71618a194e64f7dc",
+      "file": "music-spin.m4a",
+      "sha256": "86ccb3e88ed3d9856ce91cc196dfd99c23e0202754a09218af159fe4eb87b60f",
+      "duration": 10.794117647058824,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 96,
+        "end": 107.29411764705883
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Canopy: leafy rustle, acorn wood and treasure"
+}

@@ -1,5 +1,12 @@
+/* situation audio */
+export function isBigWin(total:number,bet:number):boolean{return Number.isFinite(total)&&Number.isFinite(bet)&&bet>0&&total>bet;}
+import {LocalCoinStore,deviceAccount} from './LocalCoinStore';
+const LOCAL_PRODUCTS=[{"id":"purse","credits":10000,"bonus":0,"appleProductId":"com.publisher.treasureregatta.coins.purse.v1","label":"PURSE","debugPrice":"$0.99"},{"id":"bullion","credits":50000,"bonus":5000,"appleProductId":"com.publisher.treasureregatta.coins.bullion.v1","label":"BULLION","debugPrice":"$4.99"},{"id":"chest","credits":120000,"bonus":18000,"appleProductId":"com.publisher.treasureregatta.coins.chest.v1","label":"CHEST","debugPrice":"$9.99"},{"id":"vault","credits":300000,"bonus":60000,"appleProductId":"com.publisher.treasureregatta.coins.vault.v1","label":"VAULT","debugPrice":"$19.99"}];
+import { SceneMusic } from './SceneMusic';
+import { ThemeMotion } from './vfx/ThemeMotion';
+import { ThemeFestivity } from './vfx/ThemeFestivity';
 import { _decorator, Component, Node, Canvas, Camera, UITransform, Layers, view, ResolutionPolicy, resources,
-  SpriteFrame, Texture2D, Rect, Color, Label, Graphics, UIOpacity, tween, Tween, Vec3, sys, game, Game, EditBox, Sprite, AudioClip, AudioSource, EffectAsset, JsonAsset } from 'cc';
+  SpriteFrame, Texture2D, Rect, Color, Label, Graphics, UIOpacity, tween, Tween, Vec3, sys, game, Game, EditBox, Sprite, AudioClip, AudioSource, EffectAsset, JsonAsset, BlockInputEvents } from 'cc';
 import { MODES, modeRules } from './core/Modes';
 import { BETS, type ModeId, type Round, type Stage } from './core/Model';
 import { platformRandom } from './game/PlatformRandom';
@@ -93,7 +100,9 @@ export class RegattaApp extends Component {
   private clips = new Map<string, AudioClip>();
   private audio!: AudioSource;
   private music!: AudioSource;
+  private webMusic?: SceneMusic;
   private audioUnlocked = false;
+  private localIAP=new LocalCoinStore(LOCAL_PRODUCTS,LOCAL_PRODUCTS,()=>deviceAccount(sys.localStorage,'f28','guest'),(id,amount)=>this.wallet.grantPurchase(id,amount));
   private wallet!: Wallet;
   private session!: Session;
   private page: Page = 'login';
@@ -121,6 +130,12 @@ export class RegattaApp extends Component {
   private stageTime = 0;
   private presenting = false;
   private awardShown = 0;
+  private grandShown = false;
+  private grandStage: Node | null = null;
+  private grandAmount: Label | null = null;
+  private grandTime = 0;
+  private autoVoyage = false;
+  private grandFx: { n: Node; opacity: UIOpacity; x: number; y: number; phase: number; ring: boolean }[] = [];
   private counterStart = 0;
   private transitioning = false;
   private coinPool: Node[] = [];
@@ -159,6 +174,9 @@ export class RegattaApp extends Component {
     this.audio = this.node.addComponent(AudioSource);
     this.music = node(this.node, 'Marina music').addComponent(AudioSource);
     this.music.loop = true; this.music.volume = .15;
+    if (typeof window !== 'undefined' && typeof window.Audio === 'function') {
+      this.webMusic = this.node.addComponent(SceneMusic);this.webMusic.setEffects(false);this.webMusic.setMusic(false);
+    }
     this.reduced = this.savedReducedMotion();
     this.measure(); this.content = node(this.node, 'Loading');
     game.on(Game.EVENT_HIDE, this.onHide, this); game.on(Game.EVENT_SHOW, this.onShow, this);
@@ -200,7 +218,7 @@ export class RegattaApp extends Component {
     const primer = this.buildLoadingPrimer();
     const coreKeys = ['marina', 'title', 'plaque', 'coin'];
     const artKeys = ['club', 'harbor-controls', ...IDS.map(m => `${m}-scene`), ...IDS.map(m => `${m}-console`)];
-    const audioKeys = ['press', 'launch', 'stop', 'win', 'collect', 'marina'];
+    const audioKeys = (this.webMusic ? [] : ['press','launch','stop','win','collect','marina']);
     const total = 1 + coreKeys.length + artKeys.length + 1 + IDS.length + audioKeys.length + 1;
     let count = 0;
     const report = () => {
@@ -208,6 +226,7 @@ export class RegattaApp extends Component {
       if (this.loadingView) this.loadingView.target = Math.max(this.loadingView.target, count / total);
     };
     try {
+      await ThemeMotion.prepare();
       configureControlLustre(await new Promise<EffectAsset>((resolve, reject) => resources.load('effects/control-lustre', EffectAsset, (e, effect) => e ? reject(e) : resolve(effect))));
       report();
       for (const key of coreKeys) {
@@ -253,7 +272,7 @@ export class RegattaApp extends Component {
       this.wallet = new Wallet({ read: () => sys.localStorage.getItem(KEY), write: v => sys.localStorage.setItem(KEY, v) });
       this.wallet.recover(); this.session = new Session(this.wallet, platformRandom());
       this.reduced = this.wallet.snapshot().settings.reducedMotion;
-      this.music.clip = this.clips.get('marina')!;
+      if (!this.webMusic) this.music.clip = this.clips.get('marina')!;
       this.captainName = sys.localStorage.getItem('f28.regatta.name') || 'Captain';
       const query = typeof location !== 'undefined' && typeof URLSearchParams !== 'undefined' ? new URLSearchParams(location.search) : null;
       const requested = query?.get('screen'); const mode = query?.get('game');
@@ -549,11 +568,13 @@ export class RegattaApp extends Component {
     }));
   }
   private f(key: string): SpriteFrame { const frame = this.frames.get(key); if (!frame) throw new Error(`Missing art: ${key}`); return frame; }
-  private sound(key: string): void { if (!this.hidden && this.wallet?.snapshot().settings.sound) { const clip = this.clips.get(key); if (clip) this.audio.playOneShot(clip, .42); } }
+  private sound(key: string): void { /* curated web cues */ if(this.webMusic){if(this.hidden||!this.wallet?.snapshot().settings.sound)return;this.webMusic.setEffects(true);if(key==='win'){const ratio=(this.round?.totalWin||0)/(this.round?.bet||1);if(ratio>1)this.webMusic.playWinFanfare(ratio>=100?4:ratio>=40?3:ratio>=20?2:1);else this.webMusic.playSmallWinJingle();}else if(key==='collect')this.webMusic.playWinDetail('collect');else if(key==='stop')this.webMusic.playReelStop();else this.webMusic.play(key==='launch'?'spin':key==='bet-up'?'bet-up':key==='bet-down'?'bet-down':key==='back'?'back':'tap');return;}  if (!this.hidden && this.wallet?.snapshot().settings.sound) { const clip = this.clips.get(key); if (clip) { this.audio.playOneShot(clip, .42); if (key === 'win' || key === 'collect') this.webMusic?.duckFor(key === 'win' ? 2.8 : .9); } } }
   private background(parent: Node, key: string): Node {
     const f = this.f(key), ratio = f.originalSize.width / f.originalSize.height;
     const h = Math.max(this.height, this.width / ratio), w = h * ratio;
-    return image(parent, f, 0, 0, w, h, 'Continuous scene');
+    const n = image(parent, f, 0, 0, w, h, 'Continuous scene');
+    ThemeMotion.attach(n.getComponent(Sprite)!,key);
+    return n;
   }
   private safe(action: () => void): void { try { action(); } catch (e) { this.dialog('Action not completed', e instanceof Error ? e.message : String(e)); } }
   private action(parent: Node, caption: string, x: number, y: number, w: number, h: number, callback: () => void, color = 'control-log', enabled: () => boolean = () => true, face: ControlFace = {}): Node {
@@ -564,7 +585,7 @@ export class RegattaApp extends Component {
     const role = harbor ? color.slice('control-'.length) as HarborControlRole : null;
     const family: ControlFace = role ? harborFace(role, w, h) : {};
     const effectiveEnabled = () => !this.uiLocked && enabled();
-    const n = button(parent, this.f(color), caption, x, y, w, h, () => { this.audioUnlocked = true; this.syncMusic(); this.sound('press'); this.safe(callback); this.refreshButtonStates(); }, effectiveEnabled, !darkInk, {...family, ...face, reduced: () => this.reduced});
+    const n = button(parent, this.f(color), caption, x, y, w, h, () => { this.audioUnlocked = true; this.syncMusic(); if(!color.endsWith('-spin')&&!color.endsWith('-minus')&&!color.endsWith('-plus'))this.sound(role==='back'?'back':'press'); this.safe(callback); this.refreshButtonStates(); }, effectiveEnabled, !darkInk, {...family, ...face, reduced: () => this.reduced});
     this.controls.push({n, enabled: effectiveEnabled}); buttonState(n, effectiveEnabled()); return n;
   }
   private cabinetAction(parent: Node, role: ConsoleRole, caption: string, x: number, y: number, w: number, h: number, callback: () => void, enabled: () => boolean = () => true): Node {
@@ -576,7 +597,8 @@ export class RegattaApp extends Component {
   }
   private go(page: Page): void {
     if (!this.ready || this.uiLocked || (this.session.phase === 'spinning')) return;
-    this.session.stopAuto(); if (this.session.phase === 'presenting') this.session.finishPresentation();
+    this.session.stopAuto(); this.autoVoyage = false; if (this.session.phase === 'presenting') this.session.finishPresentation();
+    this.clearGrandStage();
     this.reels?.clearHighlights();
     if (this.titleMotion) Tween.stopAllByTarget(this.titleMotion);
     this.titleMotion = null; this.harborBackground = null; this.harborEntries = []; this.harborGlints = []; this.harborAccents = []; this.cabinetFx = []; this.controls = [];
@@ -584,13 +606,13 @@ export class RegattaApp extends Component {
     this.coinPool = []; this.winPanel = null;
     this.winTitleLabel = this.winAmountLabel = this.winDetailLabel = null;
     this.rewardRings = []; this.rewardSparkles = [];
-    this.modal?.destroy(); this.modal = null; this.ambience = [];
+    this.webMusic?.setModalOpen(false); this.modal?.destroy(); this.modal = null; this.ambience = [];
     this.balanceLabel = this.betLabel = this.statusLabel = this.spinLabel = this.autoLabel = this.turboLabel = null;
     const previous = this.content; this.content = node(this.node, page); this.page = page;
     if (page === 'game') this.gamePage(); else if (page === 'home' || page === 'login') this.harbor(page === 'login'); else this.service(page);
     fadeIn(this.content, this.reduced); this.uiLocked = true;
     this.scheduleOnce(() => { previous.destroy(); this.uiLocked = false; }, this.reduced ? 0 : .25);
-    this.refreshBalance();
+    this.refreshBalance();this.syncMusic();
   }
   private header(title: string, parent = this.content): void {
     const top = this.height / 2 - this.safeTop - 115;
@@ -630,10 +652,10 @@ export class RegattaApp extends Component {
   }
   private harbor(login: boolean): void {
     const harbor = this.background(this.content, 'marina');
-    // Leave a small overscan margin so slow camera drift never exposes the
-    // clear color at tall or narrow aspect ratios.
+    // Keep the painted marina fixed; reflections and lanterns animate separately.
     harbor.setScale(1.025, 1.025, 1); this.harborBackground = harbor;
     this.addHarborReflections(login);
+    if(!login)ThemeFestivity.hall(this.content,this.width,this.height,this.reduced);
     const compactViewport = this.height < 1000;
     const titleY = this.height / 2 - this.safeTop - (login ? 210 : (compactViewport ? 112 : 160));
     const titleFrame = this.f('title');
@@ -934,7 +956,8 @@ export class RegattaApp extends Component {
     this.scene = node(this.content, 'Cabinet and world'); this.scene.setScale(scale, scale, 1);
     image(this.scene, f, 0, 0, 1024, 2048);
     const [left, top, width, height] = spec.aperture;
-    this.reels = new ReelView(this.scene, MODES[this.mode], this.symbols.get(this.mode)!, (left + width / 2 - .5) * 1024, (.5 - top - height / 2) * 2048, width * 1024, height * 2048, () => this.sound('stop'));
+    const trim=ThemeFestivity.cabinet(this.scene,(left+width/2-.5)*1024,(.5-top-height/2)*2048,width*1024,height*2048,MODES[this.mode].columns,this.reduced);
+    this.reels = new ReelView(this.scene, MODES[this.mode], this.symbols.get(this.mode)!, (left + width / 2 - .5) * 1024, (.5 - top - height / 2) * 2048, width * 1024, height * 2048, column => {if(this.webMusic)this.webMusic.playReelStop(column);else this.sound('stop');trim.land(column);});
     this.buildCabinetAmbience(left, top, width, height);
     const consoleY = (.5 - spec.console) * 2048;
     const layout = CONSOLE_LAYOUTS[this.mode];
@@ -1034,20 +1057,22 @@ export class RegattaApp extends Component {
     }
   }
   private idle(): boolean { return this.session.phase === 'idle' && this.session.remainingAuto === 0; }
-  private changeBet(delta: number): void { if (this.idle()) { this.betIndex = Math.max(0, Math.min(BETS.length - 1, this.betIndex + delta)); this.refreshControls(); } }
+  private changeBet(delta: number): void { if (this.idle()) { const prior=this.betIndex; this.betIndex = Math.max(0, Math.min(BETS.length - 1, this.betIndex + delta)); if(prior!==this.betIndex)this.sound(delta>0?'bet-up':'bet-down'); this.refreshControls(); } }
   private spin(): void {
     if (this.session.phase === 'presenting') { this.finishRound(); return; }
+    this.autoVoyage = false;
     if (this.session.spin(this.mode, BETS[this.betIndex]!, this.turbo)) this.beginVisual();
     else this.sessionError();
   }
   private beginVisual(): void {
     const state = this.session.state(); if (state.kind !== 'spinning' || !this.reels) return;
     this.round = state.round; this.roundId = state.id; this.stageIndex = 0; this.reviewStageIndex = 0; this.presenting = false; this.awardShown = 0;
+    this.clearGrandStage(); this.grandShown = false;
     if (this.winPanel) this.winPanel.active = false;
-    this.reels.start(state.round.stages[0]!.grid, state.turbo); this.sound('launch');
+    this.reels.start(state.round.stages[0]!.grid, state.turbo); this.webMusic?.beginSpin(); this.sound('launch');
     if (this.statusLabel) this.statusLabel.string = this.session.remainingAuto ? `Auto voyage · ${this.session.remainingAuto} spins queued` : 'Bon voyage…'; this.refreshBalance(); this.refreshControls();
   }
-  private stopped(): void {
+  private stopped(): void {this.webMusic?.finishSpin();
     this.session.reelsStopped(this.roundId);
     if (this.session.phase === 'error') { this.sessionError(); return; }
     this.presenting = true; this.stageTime = 0; this.counterStart = 0; this.presentStage(); this.refreshBalance(); this.refreshControls();
@@ -1059,13 +1084,13 @@ export class RegattaApp extends Component {
     this.counterStart = this.awardShown; this.awardShown += stageWin;
     if (stageWin) {
       const tier = this.rewardTier(this.awardShown / Math.max(1, this.round.bet));
-      this.sound('win');
+      if(this.webMusic)this.webMusic.playSmallWinJingle();else this.sound('win');
       this.coinFlight(tier === 2 ? 18 : tier === 1 ? 12 : Math.min(8, 4 + stage.awards.length));
       this.showReward(tier, stageWin, stage.awards.length);
     } else if (this.winPanel) this.winPanel.active = false;
     if (this.statusLabel) this.statusLabel.string = this.stageDescription(stage);
   }
-  private rewardTier(ratio: number): 0 | 1 | 2 { return ratio >= 20 ? 2 : ratio >= 5 ? 1 : 0; }
+  private rewardTier(ratio: number): 0 | 1 | 2 { return Number.isFinite(ratio) ? (ratio >= 20 ? 2 : ratio > 1 ? 1 : 0) : 0; }
   private showReward(tier: 0 | 1 | 2, stageWin: number, awardCount: number): void {
     if (!this.winPanel || !this.winTitleLabel || !this.winAmountLabel || !this.winDetailLabel) return;
     this.winPanel.active = true;
@@ -1110,7 +1135,79 @@ export class RegattaApp extends Component {
   }
   private finishRound(): void {
     if (!this.round) return;
+    // Stages may each return less than the stake. Classify the final total once,
+    // using the accepted round's stake, never the live wager selector.
+    if (!this.grandShown && isBigWin(this.round.totalWin, this.round.bet)) {
+      this.grandShown = true; this.showGrandStage(); return;
+    }
+    this.completeRound();
+  }
+  private showGrandStage(): void {
+    if (!this.round || this.grandStage) return;
+    this.presenting = false;
+    if (this.winPanel) this.winPanel.active = false;
+    this.transitioning = false;
+    const stage = this.grandStage = node(this.content, 'Grand treasure stage', 0, 0, this.width, this.height);
+    stage.addComponent(BlockInputEvents);
+    const scene = this.f(`${this.mode}-scene`), ratio = scene.originalSize.width / scene.originalSize.height;
+    const h = Math.max(this.height, this.width / ratio);
+    image(stage, scene, 0, 0, h * ratio, h, 'Voyage prize backdrop');
+    const shade = node(stage, 'Ocean velvet', 0, 0, this.width, this.height), g = shade.addComponent(Graphics);
+    g.fillColor = new Color(6, 31, 49, 195); g.rect(-this.width / 2, -this.height / 2, this.width, this.height); g.fill();
+    const composition = node(stage, 'Treasure coronation');
+    const compositionScale = Math.min(1, (this.height - this.safeTop - this.safeBottom - 170) / 1240);
+    composition.setScale(compositionScale, compositionScale, 1);
+    for (let i = 0; i < 3; i++) {
+      const ring = node(composition, 'Golden wake', 0, 100), ink = ring.addComponent(Graphics);
+      ink.strokeColor = new Color(255, 221, 117); ink.lineWidth = i === 0 ? 9 : 4;
+      ink.circle(0, 0, 235 + i * 67); ink.stroke();
+      ink.strokeColor = new Color(162, 233, 237); ink.lineWidth = 3;
+      for (let j = 0; j < 12; j++) {
+        const a = j * Math.PI / 6, r = 235 + i * 67;
+        ink.moveTo(Math.cos(a) * (r + 9), Math.sin(a) * (r + 9));
+        ink.lineTo(Math.cos(a) * (r + 34), Math.sin(a) * (r + 34)); ink.stroke();
+      }
+      const opacity = ring.addComponent(UIOpacity); opacity.opacity = 155;
+      this.grandFx.push({n:ring, opacity, x:0, y:100, phase:i * .8, ring:true});
+    }
+    const frame = this.symbols.get(this.mode)![0]!, fit = 530 / Math.max(frame.rect.width, frame.rect.height);
+    image(composition, frame, 0, 100, frame.rect.width * fit, frame.rect.height * fit, 'Mode treasure');
+    image(composition, this.f('plaque'), 0, 500, 940, 190, 'Treasure title plaque');
+    const tier = this.rewardTier(this.round.totalWin / this.round.bet);
+    text(composition, tier === 2 ? 'GRAND TREASURE' : 'BIG WIN', 0, 504, 770, 76, INK, 108);
+    outlined(text(composition, MODES[this.mode].title.toUpperCase(), 0, 371, 840, 31, GOLD));
+    image(composition, this.f('plaque'), 0, -276, 920, 175, 'Prize amount plaque');
+    this.grandAmount = text(composition, this.reduced ? this.round.totalWin.toLocaleString('en-US') : '0', 0, -274, 790, 83, INK, 116);
+    outlined(text(composition, 'COINS WON', 0, -391, 850, 34, GOLD));
+    outlined(text(composition, `TOTAL RETURN ${this.round.totalWin.toLocaleString('en-US')}  >  BET ${this.round.bet.toLocaleString('en-US')}`, 0, -447, 910, 27, GOLD));
+    for (let i = 0; i < (this.reduced ? 0 : 36); i++) {
+      const x = (i % 2 ? 1 : -1) * (330 + i % 4 * 45), y = 560 - i % 9 * 130;
+      const coin = image(composition, this.f('coin'), x, y, 38 + i % 3 * 12, 38 + i % 3 * 12, 'Treasure coin shower');
+      const opacity = coin.addComponent(UIOpacity); opacity.opacity = 210;
+      this.grandFx.push({n:coin, opacity, x, y, phase:i * .31, ring:false});
+    }
+    button(composition, this.f('plaque'), 'Collect & continue', 0, -580, 650, 150,
+      () => this.completeRound(), () => !!this.grandStage, false, {fontSize:40, reduced:() => this.reduced});
+    this.grandTime = 0; this.sound('win');
+    if (!this.reduced) {
+      composition.setScale(composition.scale.x * .88, composition.scale.y * .88, 1);
+      const scale = Math.min(1, (this.height - this.safeTop - this.safeBottom - 170) / 1240);
+      tween(composition).to(.42, {scale:new Vec3(scale, scale, 1)}, {easing:'backOut'}).start();
+    }
+  }
+  private clearGrandStage(): void {
+    if (this.grandStage?.isValid) {
+      const stop = (n:Node) => { Tween.stopAllByTarget(n); for (const c of n.children) stop(c); };
+      stop(this.grandStage); this.grandStage.destroy();
+    }
+    this.grandStage = null; this.grandAmount = null; this.grandFx = []; this.grandTime = 0;
+  }
+  private completeRound(): void {
+    if (!this.round) return;
+    this.clearGrandStage();
     const win = this.round.totalWin, bet = this.round.bet;
+    this.webMusic?.finishWinPresentation();
+    if(win>0)this.sound('collect');
     if (this.statusLabel) this.statusLabel.string = win ? `WIN ${win.toLocaleString('en-US')}  ·  Net ${win - bet >= 0 ? '+' : ''}${win - bet}\nTap here for winning combinations` : `No win · Bet ${bet}\nTap here for round details`;
     this.presenting = false; this.transitioning = false;
     this.reels?.clearHighlights();
@@ -1118,15 +1215,16 @@ export class RegattaApp extends Component {
     this.reels?.show(last.grid); this.reels?.highlight(last, this.reduced);
     if (this.winPanel) this.winPanel.active = false;
     this.session.finishPresentation(); this.refreshControls(); this.refreshBalance();
+    if (!this.session.remainingAuto) this.autoVoyage = false;
   }
   private auto(): void {
-    if (this.session.remainingAuto || this.session.phase === 'spinning') { this.session.stopAuto(); this.refreshControls(); return; }
+    if (this.session.remainingAuto || this.session.phase === 'spinning') { this.session.stopAuto(); this.autoVoyage = false; this.refreshControls(); return; }
     if (!this.idle()) return;
     this.dialog('Auto voyage', 'Play 10 rounds at the current bet.\nStop at any time; the active round will finish.\nAuto stops when you leave or hide the game.', 'Start 10 rounds', () => {
-      if (this.session.startAuto(10, this.mode, BETS[this.betIndex]!, this.turbo)) this.beginVisual(); else this.sessionError();
+      if (this.session.startAuto(10, this.mode, BETS[this.betIndex]!, this.turbo)) { this.autoVoyage = true; this.beginVisual(); } else this.sessionError();
     });
   }
-  private sessionError(): void {
+  private sessionError(): void {this.webMusic?.finishSpin();
     const state = this.session.state(); if (state.kind !== 'error') return;
     this.dialog('Voyage paused', state.message, 'Retry saved state', () => { this.session.retrySave(); this.refreshBalance(); this.refreshControls(); });
   }
@@ -1169,8 +1267,11 @@ export class RegattaApp extends Component {
       text(book, 'Virtual coins\nNo cash value', -235, -80, 375, 40, INK, 140);
       this.action(book, 'Daily provisions', -235, -315, 390, 120, () => this.go('rewards'), 'control-chest');
       text(book, 'PURCHASE STATUS', 235, 340, 375, 34);
-      text(book, 'Store unavailable.\n\nNo payment will\nbe taken.\n\nDaily provisions\nare free to collect.', 235, 20, 365, 37, INK, 420);
-      this.action(book, 'Restore purchases', 235, -315, 390, 120, () => this.dialog('Store unavailable', 'No store account or purchase service is connected.\nThere are no purchases to restore in this build.'), 'control-market');
+      LOCAL_PRODUCTS.forEach((p,i)=>{
+        const buy=this.action(book,(p.credits+p.bonus).toLocaleString()+' coins · UNAVAILABLE',235,200-i*128,390,110,()=>void this.localIAP.purchase(p.id).then(r=>{this.dialog(r.ok?'Purchase delivered':'Purchase status',r.message);}), 'control-market');
+        void this.localIAP.catalog().then(items=>{const l=buy.getComponentsInChildren(Label).find(l=>l.string.includes('UNAVAILABLE'));if(l&&l.isValid)l.string=(p.credits+p.bonus).toLocaleString()+' coins · '+items[i].displayPrice;});
+      });
+      this.action(book, 'Sync purchases', 235, -350, 390, 105, () => void this.localIAP.restore().then(r=>this.dialog('Purchase status',r.message)), 'control-market');
     } else {
       text(book, 'CREW PASSPORT', -235, 340, 375, 36); image(book, this.symbols.get('captain')![2]!, -235, 150, 250, 250);
       text(book, this.captainName, -235, -30, 365, 48); text(book, 'Guest captain\nSaved here', -235, -148, 370, 37, INK, 110);
@@ -1184,7 +1285,7 @@ export class RegattaApp extends Component {
     this.footer();
   }
   private dialog(title: string, body: string, confirm = 'Close', action?: () => void): void {
-    this.modal?.destroy(); const modal = node(this.node, 'Modal'); this.modal = modal;
+    this.modal?.destroy(); this.webMusic?.setModalOpen(true); const modal = node(this.node, 'Modal'); this.modal = modal;
     const scrim = node(modal, 'Scrim', 0, 0, this.width, this.height); const g = scrim.addComponent(Graphics);
     g.fillColor = new Color(18, 38, 43, 170); g.rect(-this.width/2, -this.height/2, this.width, this.height); g.fill();
     scrim.on(Node.EventType.TOUCH_START, () => undefined);
@@ -1199,7 +1300,7 @@ export class RegattaApp extends Component {
       this.action(modal, 'Previous', -278, -305, 300, 110, () => turn(-1), 'control-back', () => page > 0);
       this.action(modal, 'Next', 278, -305, 300, 110, () => turn(1), 'control-next', () => page < pages.length - 1);
     }
-    const close = () => { modal.destroy(); if (this.modal === modal) this.modal = null; };
+    const close = () => { this.webMusic?.setModalOpen(false); modal.destroy(); if (this.modal === modal) this.modal = null; };
     this.action(modal, confirm, action ? 180 : 0, -475, action ? 540 : 660, 128, () => { close(); action?.(); }, 'control-seal');
     if (action) this.action(modal, 'Cancel', -310, -475, 275, 110, close, 'control-cancel');
     fadeIn(modal, this.reduced);
@@ -1209,7 +1310,7 @@ export class RegattaApp extends Component {
     this.session.stopAuto();
     this.dialog('On-board settings', '');
     const m = this.modal!; const state = this.wallet.snapshot().settings;
-    this.action(m, `Sound: ${state.sound ? 'on' : 'off'}`, 0, 120, 650, 145, () => { this.wallet.setting('sound', !state.sound); this.settings(); }, 'control-switch');
+    this.action(m, `Sound: ${state.sound ? 'on' : 'off'}`, 0, 120, 650, 145, () => { this.wallet.setting('sound', !state.sound); this.syncMusic(); this.settings(); }, 'control-switch');
     this.action(m, `Music: ${state.music ? 'on' : 'off'}`, 0, -65, 650, 145, () => { this.wallet.setting('music', !state.music); this.syncMusic(); this.settings(); }, 'control-switch');
     this.action(m, `Motion: ${state.reducedMotion ? 'reduced' : 'full'}`, 0, -250, 650, 145, () => {
       this.wallet.setting('reducedMotion', !state.reducedMotion); this.reduced = !state.reducedMotion;
@@ -1226,6 +1327,7 @@ export class RegattaApp extends Component {
       }
       this.syncTitleMotion(); this.settings();
     }, 'control-switch');
+    this.action(m, 'Music credits', 0, -365, 650, 65, ()=>window.dispatchEvent(new Event('game-music-credits')), 'control-switch');
     text(m, 'Choose your on-board atmosphere.\nYour preferences are saved.', 0, 290, 790, 38, INK, 120);
   }
   private rules(): void {
@@ -1257,8 +1359,8 @@ export class RegattaApp extends Component {
   }
   private legal(kind: 'terms' | 'privacy'): void {
     this.dialog(kind === 'privacy' ? 'Privacy · this local build' : 'Play responsibly', kind === 'privacy'
-      ? 'Your guest name, settings and virtual coin records are stored on this device. No account, analytics or purchase service is connected.\n\nChoose Erase data in Crew to remove them.\n\nThe publisher’s contact, privacy policy and production services must be configured before public distribution.'
-      : 'This game uses nonredeemable virtual coins. There is no cash-out and no real-money prize.\n\nResults are random. Past results do not predict future results.\n\nNo purchases are enabled in this build. Take breaks and play within your limits.');
+      ? 'Your guest name, settings and virtual coin records are stored on this device. No remote account server or analytics is connected. Apple processes purchases in the iOS app.\n\nChoose Erase data in Crew to remove them.\n\nThe publisher’s contact, privacy policy and production services must be configured before public distribution.'
+      : 'This game uses nonredeemable virtual coins. There is no cash-out and no real-money prize.\n\nResults are random. Past results do not predict future results.\n\nApple-verified coin purchases are available inside the iOS app. Consumed coins cannot be restored. Take breaks and play within your limits.');
   }
   private sparkles(parent: Node, count: number, width: number, height: number): void {
     for (let i = 0; i < count; i++) {
@@ -1271,6 +1373,7 @@ export class RegattaApp extends Component {
   }
   private coinFlight(count: number): void {
     if (this.reduced) return;
+    this.webMusic?.playWinDetail('burst');
     for (let i = 0; i < Math.min(count, this.coinPool.length); i++) {
       const n = this.coinPool[i]!, origin = this.height / 2 - this.safeTop - 365;
       Tween.stopAllByTarget(n); n.setPosition((i-count/2)*14, origin - 18); n.setScale(1,1,1); n.active = true;
@@ -1291,11 +1394,6 @@ export class RegattaApp extends Component {
       for (const a of this.ambience) {
         a.n.setPosition(a.x, a.y + Math.sin(this.clock*.6+a.phase)*5);
         a.n.getComponent(UIOpacity)!.opacity = Math.round(28+Math.pow(Math.max(0,Math.sin(this.clock*.9+a.phase)),7)*190);
-      }
-      if (this.harborBackground?.isValid) {
-        this.harborBackground.setPosition(Math.sin(this.clock * .12) * 7, Math.cos(this.clock * .09) * 5);
-        const breathe = 1.028 + Math.sin(this.clock * .14) * .004;
-        this.harborBackground.setScale(breathe, breathe, 1);
       }
       for (const entry of this.harborEntries) if (entry.n.isValid && this.clock >= entry.readyAt) {
         const invite = .5 + .5 * Math.sin(this.clock * .46 + entry.phase);
@@ -1377,11 +1475,32 @@ export class RegattaApp extends Component {
     if (before === 'idle' && this.session.phase === 'spinning') this.beginVisual();
     if (this.session.phase === 'spinning' && this.reels?.tick(dt)) this.stopped();
     this.reels?.tickIdle(dt, !this.reduced && this.page === 'game' && this.idle() && !this.presenting && !this.modal);
-    if (this.presenting && this.round && !this.transitioning) {
+    if (this.grandStage && this.round) {
+      this.grandTime += Math.min(dt, .1);
+      const p = this.reduced ? 1 : Math.min(1, this.grandTime / 1.65);
+      this.webMusic?.playWinDetail('count',p);
+      if (this.grandAmount) this.grandAmount.string = Math.round(this.round.totalWin * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US');
+      if (!this.reduced) for (const fx of this.grandFx) {
+        if (fx.ring) {
+          fx.n.angle = this.grandTime * (fx.phase ? -14 : 18);
+          const pulse = .5 + .5 * Math.sin(this.grandTime * 2.5 + fx.phase);
+          fx.opacity.opacity = Math.round(100 + pulse * 135);
+        } else {
+          const cycle = (this.grandTime * .26 + fx.phase) % 1;
+          fx.n.setPosition(fx.x + Math.sin(this.grandTime * 1.5 + fx.phase) * 27, 660 - cycle * 1300);
+          fx.n.angle = this.grandTime * 85 + fx.phase * 120;
+          fx.n.setScale(.45 + Math.abs(Math.cos(this.grandTime * 2.2 + fx.phase)) * .55, 1, 1);
+          fx.opacity.opacity = Math.round(235 * Math.min(1, cycle * 8, (1 - cycle) * 8));
+        }
+      }
+      if (this.autoVoyage && this.grandTime >= 4.8) this.completeRound();
+    }
+    if (this.presenting && this.round && !this.transitioning && !this.grandStage) {
       this.stageTime += dt;
       const stage = this.round.stages[this.stageIndex]!;
       if (this.winAmountLabel && this.winPanel?.active) {
         const p = this.reduced ? 1 : Math.min(1, this.stageTime / 1.25);
+        this.webMusic?.playWinDetail('count',p);
         const value = Math.round(this.counterStart + (this.awardShown - this.counterStart) * (1 - Math.pow(1-p,3)));
         this.winAmountLabel.string = `${value.toLocaleString('en-US')} COINS`;
       }
@@ -1399,10 +1518,14 @@ export class RegattaApp extends Component {
     if (this.resizePending && this.session.phase === 'idle') { this.resizePending = false; this.onResize(); }
   }
   private syncMusic(): void {
+    if (this.webMusic) {
+      this.music?.pause();this.webMusic.setScene(this.page === 'game' ? 'cabinet' : 'home');
+      this.webMusic.setMusic(!this.hidden && !!this.wallet?.snapshot().settings.music);this.webMusic.setEffects(!this.hidden && !!this.wallet?.snapshot().settings.sound);return;
+    }
     if (!this.hidden && this.audioUnlocked && this.wallet?.snapshot().settings.music) { if (!this.music.playing) this.music.play(); }
     else this.music.pause();
   }
-  private onHide(): void { this.hidden = true; this.session?.hide(); this.audio?.pause(); this.music?.pause(); }
+  private onHide(): void { this.hidden = true; this.autoVoyage = false; this.session?.hide(); this.audio?.pause(); this.music?.pause(); }
   private onShow(): void { this.hidden = false; this.session?.show(); this.refreshControls(); this.syncMusic(); }
   private onResize(): void {
     if (!this.ready) return;
@@ -1410,6 +1533,7 @@ export class RegattaApp extends Component {
     this.measure(); this.go(this.page);
   }
   onDestroy(): void {
+    this.clearGrandStage();
     game.off(Game.EVENT_HIDE, this.onHide, this); game.off(Game.EVENT_SHOW, this.onShow, this); view.off('canvas-resize', this.onResize, this);
   }
 }

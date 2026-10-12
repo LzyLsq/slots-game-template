@@ -1,3 +1,5 @@
+import { ThemeFestivity } from '../vfx/ThemeFestivity';
+import { StationaryArtwork } from '../vfx/StationaryArtwork';
 import {Color,Graphics,Label,Node,EventTouch,tween,Tween,Vec3,UITransform,Sprite} from 'cc';
 import {box,text,bindPress,opacity,COLORS} from './SalonArt';
 import {SafeAreaAdapter as Safe} from './SafeAreaAdapter';
@@ -17,7 +19,7 @@ function atelierGlint(a:any,parent:Node,x:number,y:number,size:number,phase:numb
  ambientLoop(gleam,tween(gleam).delay(phase).repeatForever(tween().set({position:new Vec3(x-size*.22,y-2,0),scale:new Vec3(.62,.62,1)}).to(.9,{position:new Vec3(x+size*.22,y+2,0),scale:new Vec3(1.12,1.12,1)},{easing:'sineInOut'}).delay(4.4)));
 }
 function atelierFloat(a:any,art:Node,phase:number,lift=4):void{
- if(a.reduced||a.art.reducedMotion)return;
+ if(a.reduced||a.art.reducedMotion||StationaryArtwork.contains(art))return;
  const origin=art.position.clone();
  ambientLoop(art,tween(art).delay(phase).repeatForever(tween().to(2.6,{position:new Vec3(origin.x,origin.y+lift,origin.z)},{easing:'sineInOut'}).to(2.6,{position:origin},{easing:'sineInOut'})));
 }
@@ -109,6 +111,7 @@ export function atelierHome(a:any):void{
  atelierRoomLight(a);
  const available=a.height-410-Safe.safeTop-Safe.safeBottom,scale=Math.min((Safe.visibleWidth-60)/1020,available/1540);
  const stage=box(a.content,'Atelier exhibition',0,-8,1020,1540);stage.setScale(scale,scale,1);
+ ThemeFestivity.hall(stage,1020,1540,a.reduced);
  const identity=plate(a,stage,-125,675,735,125,true);
  const profile=a.services.profile.current(),avatar=atelierPortrait(a,identity,-295,0,108,profile?.avatar??0);bindPress(avatar,avatar,()=>void a.navigate('profile'));
  atelierGlint(a,avatar,-34,36,40,2.1);
@@ -120,8 +123,9 @@ export function atelierHome(a:any):void{
  let display:Node|undefined;const show=(n:number)=>{const next=(n+4)%4;if(display&&next===index)return;const direction=n>index?1:-1;index=next;a.selectedRoute=index;const old=display;display=box(host,'Exhibit '+index,0,0,980,930);const cfg=GAME_CONFIGS[index];
   const surround=box(display,'Carved exhibition aperture',0,44,972,720);const painting=a.art.cover(surround,'canopy-destinations',0,0,900,650,index,20);a.art.image(surround,'canopy-frame-0',0,0,972,720);painting.name='Enter '+cfg.name;atelierExhibitLife(a,surround,painting,index);
   // Move only the oversized painting beneath its fixed clipped aperture.
-  const scene=painting.children[0];
-  if(scene&&!a.reduced&&!a.art.reducedMotion){scene.setScale(1.035,1.035,1);ambientLoop(scene,tween(scene).repeatForever(tween().to(7,{scale:new Vec3(1.055,1.055,1),position:new Vec3(0,4,0)},{easing:'sineInOut'}).to(7,{scale:new Vec3(1.035,1.035,1),position:new Vec3(0,-4,0)},{easing:'sineInOut'})));}
+  // Keep the integrated workshop painting fixed. The independently pooled
+  // treasure particles, glass sheen and travelling rim reflections above
+  // supply the ambient motion without zooming or floating the whole photo.
   atelierGlint(a,surround,-434,305,82,.55);atelierGlint(a,surround,436,305,69,3.15);
 
   const title=plate(a,display,0,-299,894,178,true);text(title,cfg.name,0,33,790,70,51,COLORS.ink,true);text(title,cfg.modeLabel,0,-40,786,62,37,COLORS.ink);

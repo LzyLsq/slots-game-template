@@ -1,0 +1,497 @@
+{
+  "reloadAt": "2026-10-10T03:16:18.115Z",
+  "checks": [
+    {
+      "check": "gold-home",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "caravan-gold",
+        "context": "lobby",
+        "clip": "lion-prosperity-three-inward-invitations",
+        "time": 30.849,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          436,
+          614
+        ],
+        "rendered": [
+          347.948,
+          490
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.187,
+          3.119,
+          -0.02,
+          0,
+          0.007,
+          -0.157,
+          0
+        ]
+      },
+      "screenshot": "screenshots/guardian-refinement-gold-home-390.jpg"
+    },
+    {
+      "check": "oasis-home",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "sapphire-oasis",
+        "context": "lobby",
+        "clip": "elephant-wealth-palm-and-trunk-welcome",
+        "time": 97.416,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          508,
+          602
+        ],
+        "rendered": [
+          390,
+          462.165
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          0.124,
+          -0.092,
+          -0.025,
+          0,
+          -2.512,
+          0.775,
+          0
+        ]
+      },
+      "screenshot": "screenshots/guardian-refinement-oasis-home-390.jpg"
+    },
+    {
+      "check": "oasis-home-touch",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "sapphire-oasis",
+        "context": "lobby",
+        "clip": "elephant-wealth-palm-and-trunk-welcome",
+        "time": 97.682,
+        "cue": "touch",
+        "reduced": false,
+        "source": [
+          508,
+          602
+        ],
+        "rendered": [
+          390,
+          462.165
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.064,
+          -0.098,
+          -0.016,
+          0,
+          -1.013,
+          0.088,
+          0
+        ]
+      }
+    },
+    {
+      "check": "oasis-cabinet",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "sapphire-oasis",
+        "context": "cabinet",
+        "clip": "elephant-ingot-blessing-and-inward-palm",
+        "time": 5.7,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          508,
+          602
+        ],
+        "rendered": [
+          187.407,
+          222.084
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.004,
+          -0.084,
+          0.035,
+          0,
+          0.15,
+          0.33,
+          0
+        ]
+      },
+      "scene": {
+        "id": "sapphire-oasis",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2445312499999999,
+        "y": 80.81538461538457,
+        "perimeter": []
+      },
+      "screenshot": "screenshots/guardian-refinement-oasis-cabinet-390.jpg"
+    },
+    {
+      "check": "oasis-cabinet-touch",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "sapphire-oasis",
+        "context": "cabinet",
+        "clip": "elephant-ingot-blessing-and-inward-palm",
+        "time": 12.734,
+        "cue": "touch",
+        "reduced": false,
+        "source": [
+          508,
+          602
+        ],
+        "rendered": [
+          187.407,
+          222.084
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.036,
+          -0.089,
+          0.023,
+          0,
+          0.009,
+          0.205,
+          0
+        ]
+      }
+    },
+    {
+      "check": "bazaar-home",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "ruby-bazaar",
+        "context": "lobby",
+        "clip": "peacock-prosperity-feather-invitation",
+        "time": 9.849,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          431,
+          620
+        ],
+        "rendered": [
+          340.629,
+          490
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.162,
+          2.282,
+          0.016,
+          0,
+          2.917,
+          -0.036,
+          0
+        ]
+      },
+      "screenshot": "screenshots/guardian-refinement-bazaar-home-390.jpg"
+    },
+    {
+      "check": "bazaar-cabinet",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "ruby-bazaar",
+        "context": "cabinet",
+        "clip": "peacock-wing-drawing-wealth-to-chest",
+        "time": 8.802,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          431,
+          620
+        ],
+        "rendered": [
+          162.634,
+          233.952
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.26,
+          -0.155,
+          -0.039,
+          0,
+          0.819,
+          -0.428,
+          0
+        ]
+      },
+      "scene": {
+        "id": "ruby-bazaar",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2049592699818346,
+        "y": 111.20666526933564,
+        "perimeter": []
+      },
+      "screenshot": "screenshots/guardian-refinement-bazaar-cabinet-390.jpg"
+    },
+    {
+      "check": "bazaar-cabinet-small",
+      "viewport": [
+        320,
+        568
+      ],
+      "motion": {
+        "id": "ruby-bazaar",
+        "context": "cabinet",
+        "clip": "peacock-wing-drawing-wealth-to-chest",
+        "time": 28.301,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          431,
+          620
+        ],
+        "rendered": [
+          162.634,
+          233.952
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 2,
+        "degrees": [
+          -0.212,
+          -0.189,
+          -0.027,
+          0,
+          -0.098,
+          -0.358,
+          1.011
+        ]
+      },
+      "scene": {
+        "id": "ruby-bazaar",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1081.6901408450703,
+        "height": 1920,
+        "scale": 1.2069174919807215,
+        "y": 141.56037724987482,
+        "perimeter": []
+      },
+      "screenshot": "screenshots/guardian-refinement-bazaar-cabinet-320.jpg"
+    },
+    {
+      "check": "voyage-home",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "crown-voyage",
+        "context": "lobby",
+        "clip": "parrot-treasure-three-feather-beckons",
+        "time": 7.766,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          507,
+          612
+        ],
+        "rendered": [
+          390,
+          470.769
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          1.167,
+          7.906,
+          -0.012,
+          0,
+          0,
+          1.922,
+          0.414
+        ]
+      },
+      "screenshot": "screenshots/guardian-refinement-voyage-home-390.jpg"
+    },
+    {
+      "check": "voyage-home-touch",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "crown-voyage",
+        "context": "lobby",
+        "clip": "parrot-treasure-three-feather-beckons",
+        "time": 8.033,
+        "cue": "touch",
+        "reduced": false,
+        "source": [
+          507,
+          612
+        ],
+        "rendered": [
+          390,
+          470.769
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          -0.453,
+          -0.081,
+          -0.001,
+          0,
+          -0.222,
+          1.204,
+          3.677
+        ]
+      }
+    },
+    {
+      "check": "voyage-cabinet",
+      "viewport": [
+        390,
+        844
+      ],
+      "motion": {
+        "id": "crown-voyage",
+        "context": "cabinet",
+        "clip": "parrot-two-inward-treasure-sweeps",
+        "time": 6.683,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          507,
+          612
+        ],
+        "rendered": [
+          193.531,
+          233.612
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          2.511,
+          -0.055,
+          -0.057,
+          0,
+          -0.333,
+          0.536,
+          0
+        ]
+      },
+      "scene": {
+        "id": "crown-voyage",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2445312499999999,
+        "y": 80.81538461538457,
+        "perimeter": []
+      },
+      "screenshot": "screenshots/guardian-refinement-voyage-cabinet-390.jpg"
+    },
+    {
+      "check": "voyage-cabinet-tablet",
+      "viewport": [
+        768,
+        1024
+      ],
+      "motion": {
+        "id": "crown-voyage",
+        "context": "cabinet",
+        "clip": "parrot-two-inward-treasure-sweeps",
+        "time": 28.134,
+        "cue": "idle",
+        "reduced": false,
+        "source": [
+          507,
+          612
+        ],
+        "rendered": [
+          193.531,
+          233.612
+        ],
+        "ratioError": 0,
+        "rigidFaceAndTreasure": true,
+        "wealthCoins": 0,
+        "degrees": [
+          0.194,
+          0.215,
+          0,
+          0,
+          -0.075,
+          0.172,
+          0
+        ]
+      },
+      "scene": {
+        "id": "crown-voyage",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1440,
+        "height": 1920,
+        "scale": 1.1462393116969012,
+        "y": 8.493008314436793,
+        "perimeter": [
+          "centre-left",
+          "centre-right"
+        ]
+      },
+      "screenshot": "screenshots/guardian-refinement-voyage-cabinet-768.jpg"
+    }
+  ],
+  "viewportReset": true,
+  "finalScene": "caravan-gold lobby",
+  "console": [],
+  "consoleAfterReload": [],
+  "limitations": [
+    "No spins, purchases or claims in this character-refinement acceptance run",
+    "Four halls and three cabinets visually checked at 390x844; ruby cabinet at 320x568; crown cabinet at 768x1024",
+    "No speaker/headphone listening, native-device performance or App Store readiness conclusion"
+  ],
+  "balance": 37658
+}

@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F24_Aurum_Atelier_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Apero Hour",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Apero%20Hour.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700070",
+      "isrc": "USUAN1700070",
+      "published": "2017-11-20",
+      "sourceSha256": "248e2bbd81c7f0bc69e4bd1ad95513e640e3eb474872acfd63b8805ed73ea9ea",
+      "file": "music-home.m4a",
+      "sha256": "37ca121e38664f7b8509978604030816f6a0bc4e589b99fea7264de5898a34dd",
+      "duration": 89.85714285714286,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Cold Funk",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cold%20Funk.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100499",
+      "isrc": "USUAN1100499",
+      "published": "2008-08-23",
+      "sourceSha256": "a7d0b772f05b99c4ac3df28cb2feaa5190781c2b87bceef5052cc45408b6fc75",
+      "file": "music-cabinet.m4a",
+      "sha256": "dccfb9a9cfc38cfdaf271541f7a402e0a8ab54c5e38f6466d148649739e0cc82",
+      "duration": 89,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Atelier: delicate workshop tools and small metal pieces / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "94eeaa26800f6a04eb71b9d9e4f25c19d779109f6903d17811d2a881d2f5614d",
+      "file": "win-small.m4a",
+      "sha256": "9614de6bbccb385c964705259c407e0b46e62f36f9ea16e3f10ad2c6eaea5e1e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.435702947845805,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX04",
+          "sourceSha256": "94eeaa26800f6a04eb71b9d9e4f25c19d779109f6903d17811d2a881d2f5614d",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.41070294784580497,
+          "sourceSeconds": 0.41070294784580497,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactMetal_light_003",
+          "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.494875283446712,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX04"
+    },
+    {
+      "id": "win-big",
+      "title": "Atelier: delicate workshop tools and small metal pieces / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "241c8570fbded819ee0205e4be3efa80aeb834a70df89318da88f9e219798b11",
+      "file": "win-big.m4a",
+      "sha256": "1e197b32e00f7cb69bd67dca6850eb97116d32a4e52d834cd8db88333d0ffa16",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 2.2954535147392288,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX07",
+          "sourceSha256": "241c8570fbded819ee0205e4be3efa80aeb834a70df89318da88f9e219798b11",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.7429478458049887,
+          "sourceSeconds": 1.7429478458049887,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_light_003",
+          "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.5500226757369614,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-handle-1",
+          "sourceSha256": "a2c495237fb0dc0dc96ccc2c9840572edd226e6459398ecb631c6c9f9e5408f0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 1.6929478458049887,
+          "gain": 0.205,
+          "maxSeconds": 0.5775056689342404,
+          "sourceSeconds": 0.6167800453514739,
+          "sourceOffsetSeconds": 0.03927437641723356,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX07"
+    },
+    {
+      "id": "win-mega",
+      "title": "Atelier: delicate workshop tools and small metal pieces / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "ccc09671f1cb59ba556e4041daa1f31de396ac3ba79245951876fdece78b5dcd",
+      "file": "win-mega.m4a",
+      "sha256": "55c9efc9e79a9a7d91b6fbe9e00881b1cb7ef01f117b094a5aed876f7bfeb62e",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.7994217687074829,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX11",
+          "sourceSha256": "ccc09671f1cb59ba556e4041daa1f31de396ac3ba79245951876fdece78b5dcd",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.628390022675737,
+          "sourceSeconds": 0.628390022675737,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_001",
+          "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.18430839002267574,
+          "sourceSeconds": 0.18430839002267574,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-collide-1",
+          "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.5783900226757369,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.19603174603174603,
+          "sourceSeconds": 0.2742857142857143,
+          "sourceOffsetSeconds": 0.07825396825396826,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX11"
+    },
+    {
+      "id": "win-epic",
+      "title": "Atelier: delicate workshop tools and small metal pieces / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "f87605d2a3c717e6a26e584f57d24eac44e47f5a01470dad18809e5d6c9eb618",
+      "file": "win-epic.m4a",
+      "sha256": "fa2eed24998e605c6236c350e154d4a32c5437a98f24bad3c9cd5fdccb95e57a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.9515986394557824,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX00",
+          "sourceSha256": "f87605d2a3c717e6a26e584f57d24eac44e47f5a01470dad18809e5d6c9eb618",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.39909297052154197,
+          "sourceSeconds": 0.39909297052154197,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactMetal_light_003",
+          "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.494875283446712,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-handle-1",
+          "sourceSha256": "a2c495237fb0dc0dc96ccc2c9840572edd226e6459398ecb631c6c9f9e5408f0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.349092970521542,
+          "gain": 0.255,
+          "maxSeconds": 0.5775056689342404,
+          "sourceSeconds": 0.6167800453514739,
+          "sourceOffsetSeconds": 0.03927437641723356,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX00"
+    },
+    {
+      "id": "win-super",
+      "title": "Atelier: delicate workshop tools and small metal pieces / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "272b8160616d0f924f447df3f8543ab83440c5e41168107bd5abe1140894122b",
+      "file": "win-super.m4a",
+      "sha256": "cec14667ce09d4f7516a40f9c0c9a2e44b550e40142a5ca1e6b73d79d9a8960b",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.0809637188208616,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX01",
+          "sourceSha256": "272b8160616d0f924f447df3f8543ab83440c5e41168107bd5abe1140894122b",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9099319727891156,
+          "sourceSeconds": 0.9099319727891156,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_light_003",
+          "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.5500226757369614,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-collide-1",
+          "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.8599319727891156,
+          "gain": 0.28,
+          "maxSeconds": 0.19603174603174603,
+          "sourceSeconds": 0.2742857142857143,
+          "sourceOffsetSeconds": 0.07825396825396826,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX01"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "3b3d6a975e8faa43e655d650b7fdce2304e85c36ec90aa2429248e73ba9b5f66",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_003",
+          "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.494875283446712,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/click_004",
+          "sourceSha256": "09e2c1b643b71b9aff9932b4e02d78db116446b9a14b00a5b2a9b28d2668fd8e",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.021768707482993196,
+          "sourceSeconds": 0.021768707482993196,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "8638ab0c17f029aded0e27a4f9b9bb9f8c621b19a6e9975e855cb40ea63e2201",
+      "file": "sfx-ui-back.wav",
+      "sha256": "ec89c7b56cd7a0feae8599ad344edae8cda80bb0583448cc62b9943d0c5545f6",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.465,
+      "sources": [
+        {
+          "key": "casino/card-slide-5",
+          "sourceSha256": "8638ab0c17f029aded0e27a4f9b9bb9f8c621b19a6e9975e855cb40ea63e2201",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.44,
+          "sourceSeconds": 0.6022675736961451,
+          "sourceOffsetSeconds": 0.0021541950113378684,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_003",
+          "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.28002267573696143,
+          "sourceSeconds": 0.5500226757369614,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+      "file": "sfx-ui-select.wav",
+      "sha256": "6ba43e4a709f03a06dbaa62099564133a6bb9b1f5c577c5093f56d836db2d6d9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30000000000000004,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_001",
+          "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.18430839002267574,
+          "sourceSeconds": 0.18430839002267574,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_004",
+          "sourceSha256": "eb6cb435f3f2ab14f85f46a2bdd9073ec511d0f1f8d8c890c6636045703a5fd4",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.26,
+          "sourceSeconds": 0.38458049886621315,
+          "sourceOffsetSeconds": 0.011519274376417234,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+      "file": "sfx-bet-up.wav",
+      "sha256": "06218bfeb2ed0c9f75640f16db7c22d413b4eea8db619ab55c1d1525e5617ed5",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_003",
+          "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.5500226757369614,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/switch_005",
+          "sourceSha256": "e94dfab6fd6558068ab3ea97e22e4b4f16b83ee440e6abf33ec4c4e9fbe8a70e",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+      "file": "sfx-bet-down.wav",
+      "sha256": "f653b7dbe94df2207398674c12021625493590f206fd5844c92c21628ac3e2dc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_003",
+          "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.494875283446712,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "rpg/cloth1",
+          "sourceSha256": "ddb93a3671233f95da0e0b10367f082f7eb42fa6caaddcf776410aa8833c747d",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6759863945578232,
+          "sourceOffsetSeconds": 0.029047619047619048,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "ddb93a3671233f95da0e0b10367f082f7eb42fa6caaddcf776410aa8833c747d",
+      "file": "sfx-spin-start.wav",
+      "sha256": "2086f46c85b0645c873be5b197265f03c09cc0c17249517b7837ee6c54039c7c",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6719387755102041,
+      "sources": [
+        {
+          "key": "rpg/cloth1",
+          "sourceSha256": "ddb93a3671233f95da0e0b10367f082f7eb42fa6caaddcf776410aa8833c747d",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.6469387755102041,
+          "sourceSeconds": 0.6759863945578232,
+          "sourceOffsetSeconds": 0.029047619047619048,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_001",
+          "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.18430839002267574,
+          "sourceSeconds": 0.18430839002267574,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+      "file": "sfx-stop-1.wav",
+      "sha256": "0aed87b67cc63be449d205ae3b109d40fcbe4598db7c2692339f6fc55964eddb",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_003",
+          "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.494875283446712,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+      "file": "sfx-stop-2.wav",
+      "sha256": "a3a980e058e63c99bb5b6f909d46349b53fd1be9928f39479ae2493fedda1d04",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_003",
+          "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.5500226757369614,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+      "file": "sfx-stop-3.wav",
+      "sha256": "f43a9c57d716858a6d2f16b2da8ca40cb11e1900668b1b138a02acb261e1bba8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.20930839002267573,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_001",
+          "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.18430839002267574,
+          "sourceSeconds": 0.18430839002267574,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+      "file": "sfx-coin-1.wav",
+      "sha256": "dd48c77cbb2edcbecd6c3de19bc651bf65cf8040b2c51b3ffb235851c6ed307a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.22103174603174602,
+      "sources": [
+        {
+          "key": "casino/chips-collide-1",
+          "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.19603174603174603,
+          "sourceSeconds": 0.2742857142857143,
+          "sourceOffsetSeconds": 0.07825396825396826,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "a2c495237fb0dc0dc96ccc2c9840572edd226e6459398ecb631c6c9f9e5408f0",
+      "file": "sfx-coin-2.wav",
+      "sha256": "c62c8966dc1dbde74780f1273db9d84602c6569c17227fff5d6f7bc2bcb92a05",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.245,
+      "sources": [
+        {
+          "key": "casino/chips-handle-1",
+          "sourceSha256": "a2c495237fb0dc0dc96ccc2c9840572edd226e6459398ecb631c6c9f9e5408f0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.6167800453514739,
+          "sourceOffsetSeconds": 0.03927437641723356,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+      "file": "sfx-coin-3.wav",
+      "sha256": "6628bb450cbf1edd51a5e57c0498a29f8915c1f15590cc58c8865e866d6c8ca3",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chips-collide-1",
+          "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.19603174603174603,
+          "sourceSeconds": 0.2742857142857143,
+          "sourceOffsetSeconds": 0.07825396825396826,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactMetal_light_003",
+          "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.494875283446712,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "a2c495237fb0dc0dc96ccc2c9840572edd226e6459398ecb631c6c9f9e5408f0",
+      "file": "sfx-burst.wav",
+      "sha256": "9f75a203116cb33ff6e66632409379394dedfd11f0dd3a5aee57927f94509790",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6025056689342404,
+      "sources": [
+        {
+          "key": "casino/chips-handle-1",
+          "sourceSha256": "a2c495237fb0dc0dc96ccc2c9840572edd226e6459398ecb631c6c9f9e5408f0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.5775056689342404,
+          "sourceSeconds": 0.6167800453514739,
+          "sourceOffsetSeconds": 0.03927437641723356,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_001",
+          "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.18430839002267574,
+          "sourceSeconds": 0.18430839002267574,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "ddb93a3671233f95da0e0b10367f082f7eb42fa6caaddcf776410aa8833c747d",
+      "file": "sfx-reveal.wav",
+      "sha256": "451a3fe5a54f99ae2f4d8136f2bddca830a87dfd0cec0af552c70c43b52413f1",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.665,
+      "sources": [
+        {
+          "key": "rpg/cloth1",
+          "sourceSha256": "ddb93a3671233f95da0e0b10367f082f7eb42fa6caaddcf776410aa8833c747d",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.64,
+          "sourceSeconds": 0.6759863945578232,
+          "sourceOffsetSeconds": 0.029047619047619048,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactMetal_light_003",
+          "sourceSha256": "92d5db6bfc672d9dc1b4f390b2900504f013187fa36335472554fafefa9050b1",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.494875283446712,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+      "file": "sfx-collect.wav",
+      "sha256": "8899888f19016a3a39aaed7b0d596519e6a2d4b2c73b5c514cb4cd6f9cd07fa1",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.385,
+      "sources": [
+        {
+          "key": "casino/chips-collide-1",
+          "sourceSha256": "f41b3d106360fc68ebc061a211d4265b4cb5fa1fbe86e4d57d3673510e2c3784",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.19603174603174603,
+          "sourceSeconds": 0.2742857142857143,
+          "sourceOffsetSeconds": 0.07825396825396826,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_003",
+          "sourceSha256": "dbfb7c1d002576696df3e9a43d6639ee3f342068398b5e7b55bc2389d20508a9",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.5500226757369614,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Atelier: delicate workshop tools and small metal pieces / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+      "file": "sfx-reward.wav",
+      "sha256": "564d72dad22a51ad6d72e36eb980f9060c3d54c411419f55d2214ba8a907c750",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6625056689342405,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_001",
+          "sourceSha256": "84253095543c094d83cd749f42ecfbc96e356b60385f18a192c18eafb25b3cc6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.18430839002267574,
+          "sourceSeconds": 0.18430839002267574,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-1",
+          "sourceSha256": "a2c495237fb0dc0dc96ccc2c9840572edd226e6459398ecb631c6c9f9e5408f0",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.5775056689342404,
+          "sourceSeconds": 0.6167800453514739,
+          "sourceOffsetSeconds": 0.03927437641723356,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Cold Funk",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cold%20Funk.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100499",
+      "isrc": "USUAN1100499",
+      "published": "2008-08-23",
+      "sourceSha256": "a7d0b772f05b99c4ac3df28cb2feaa5190781c2b87bceef5052cc45408b6fc75",
+      "file": "music-spin.m4a",
+      "sha256": "0558c66b8465ab29fcd3e9048366b420dcf54b1fcac3539b792cd10adedc30dd",
+      "duration": 16.642857142857142,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 96.42857142857143,
+        "end": 113.57142857142857
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Atelier: delicate workshop tools and small metal pieces"
+}

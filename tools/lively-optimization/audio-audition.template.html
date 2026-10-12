@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>20款游戏 · 成品音频试听</title>
+<style>
+*{box-sizing:border-box}body{margin:0;color:#f3ead9;background:#191a20;font:15px/1.6 system-ui,-apple-system,sans-serif}main{max-width:1000px;margin:auto;padding:32px 20px 70px}h1{font-size:26px;margin:0 0 8px}p{margin:8px 0 16px;color:#c1bcaf}.note{border-left:3px solid #bda36a;padding:8px 14px;background:#22242c;border-radius:0 8px 8px 0}label{display:block;font-size:13px;color:#c1bcaf}select,button{font:inherit;color:inherit;border:1px solid #52525b;border-radius:9px;background:#292c35;min-height:44px;padding:8px 14px}select{width:100%;margin:5px 0 12px}button{cursor:pointer}button:hover{border-color:#d5bc86}button:focus-visible,select:focus-visible{outline:3px solid #d5bc86;outline-offset:3px}.quick{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.player{position:sticky;top:0;z-index:2;background:#24262fee;border:1px solid #545052;border-radius:12px;padding:14px;backdrop-filter:blur(8px)}#now{margin:0 0 10px;font-weight:600;color:#e3cb9a}audio{width:100%;height:45px;display:block}.player-footer{display:flex;gap:14px;align-items:center;margin-top:8px}.player-footer span{font-size:12px;color:#bfb9a9}h2{font-size:17px;margin:24px 0 10px}section{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.cue{text-align:left;display:flex;align-items:center;gap:12px}.cue span:first-child{min-width:48px;color:#d5bc86;font-size:12px}.cue strong{font-size:14px;font-weight:500}.cue.playing{border-color:#d5bc86;background:#423b2b}.details{margin-top:28px;border-top:1px solid #45434b;padding-top:14px;font-size:13px;overflow-wrap:anywhere}#error{color:#ffbbad}@media(max-width:600px){main{padding:18px 12px 40px}h1{font-size:22px}section{grid-template-columns:1fr}}
+</style>
+<main>
+ <h1>20款游戏 · 成品音频试听</h1>
+ <p>F13–F31、F33。此页逐个播放交付文件，便于检查音色、尾音与主题差异，不替代游戏内混音或真机验收。</p>
+ <p class="note">当前为已授权素材的编辑与混音版，不是20套独家作曲。自动解码、同步和播放测试不代表已通过主观“精品听感”验收。</p>
+ <label for="game">选择游戏</label><select id="game"></select>
+ <p id="theme"></p>
+ <div class="player"><div id="now">选择下方情景，点击试听</div><audio id="player" controls preload="none"></audio><div class="player-footer"><button id="stop" type="button">停止</button><span>请先降低设备音量；切换情景会停止上一段。</span></div><div id="error" role="status"></div></div>
+ <div class="quick" id="quick"></div>
+ <h2>背景音乐</h2><section id="music"></section>
+ <h2>操作与反馈</h2><section id="feedback"></section>
+ <h2>中奖短乐句</h2><section id="wins"></section>
+ <div class="details"><strong>素材与使用边界</strong><div id="credits"></div><p>播放器一次只播放一段，不预加载整套音频。奖级是否触发，以各游戏原有规则为准；此页的5个文件不表示所有游戏都有5个奖级。背景来自已署名的成品录音；短乐句和反馈来自授权素材库，跨奖级合理复用。游戏中还会进行背景压低、音量控制和声部限制。</p></div>
+</main>
+<script id="audio-data" type="application/json">__GAME_AUDIO_DATA__</script>
+<script>
+const games=JSON.parse(document.getElementById('audio-data').textContent);
+const names={
+ 'music-home':'大厅背景','music-cabinet':'柜机背景','music-spin':'旋转情景',
+ 'sfx-ui-tap':'点击','sfx-ui-back':'返回','sfx-ui-select':'选择确认',
+ 'sfx-bet-up':'增加下注','sfx-bet-down':'减少下注','sfx-spin-start':'启转',
+ 'sfx-stop-1':'第一停轴','sfx-stop-2':'第二停轴','sfx-stop-3':'第三停轴',
+ 'sfx-coin-1':'计奖细节 1','sfx-coin-2':'计奖细节 2','sfx-coin-3':'计奖细节 3',
+ 'sfx-burst':'爆发点缀','sfx-reveal':'揭晓','sfx-collect':'领取金币','sfx-reward':'领取奖励',
+ 'win-small':'普通中奖','win-big':'大奖','win-mega':'更高奖级 1','win-epic':'更高奖级 2','win-super':'超级大奖',
+};
+const select=document.getElementById('game'),player=document.getElementById('player');
+let current,active;
+for(const g of games){const o=document.createElement('option');o.value=g.id;o.textContent='F'+g.id+' · '+g.title;select.append(o);}
+function stop(){player.pause();player.removeAttribute('src');player.load();active?.classList.remove('playing');active=null;document.getElementById('now').textContent='已停止';}
+function play(track,button){
+ stop();active=button;active?.classList.add('playing');
+ player.src=current.audioPath.split('/').map(encodeURIComponent).join('/')+'/'+encodeURIComponent(track.file);
+ document.getElementById('now').textContent='F'+current.id+' · '+names[track.id];
+ document.getElementById('error').textContent='';
+ player.play().catch(e=>{document.getElementById('error').textContent='无法播放：'+e.message;});
+}
+function render(){
+ stop();current=games.find(g=>g.id===Number(select.value));
+ document.getElementById('theme').textContent=current.theme;
+ for(const id of ['music','feedback','wins','quick'])document.getElementById(id).replaceChildren();
+ for(const track of current.tracks){
+  const button=document.createElement('button');button.type='button';button.className='cue';
+  const tag=document.createElement('span');tag.textContent=track.id.startsWith('music-')?'背景':track.id.startsWith('win-')?'奖级':'反馈';
+  const title=document.createElement('strong');title.textContent=names[track.id]||track.id;
+  button.append(tag,title);button.onclick=()=>play(track,button);
+  document.getElementById(track.id.startsWith('music-')?'music':track.id.startsWith('win-')?'wins':'feedback').append(button);
+ }
+ for(const id of ['music-home','music-cabinet','sfx-ui-tap','sfx-spin-start','win-big','win-super']){
+  const track=current.tracks.find(t=>t.id===id),button=document.createElement('button');button.type='button';button.textContent=names[id];button.onclick=()=>play(track,button);document.getElementById('quick').append(button);
+ }
+ const credits=document.getElementById('credits');credits.replaceChildren();
+ for(const t of current.musicCredits){const p=document.createElement('p');p.textContent='“'+t.title+'” — Kevin MacLeod · CC BY 4.0。来源：'+t.sourcePage+'；修改：'+t.modifications;credits.append(p);}
+ const p=document.createElement('p');p.textContent='中奖短句与反馈：Kenney · CC0 1.0。原速原调，完整音乐尾音；低频清理、轻微高频柔化、分情景混音。';credits.append(p);
+}
+select.onchange=render;document.getElementById('stop').onclick=stop;
+player.addEventListener('error',()=>{document.getElementById('error').textContent='音频无法加载，请保持此文件与20款交付目录在一起。';});
+player.addEventListener('ended',()=>active?.classList.remove('playing'));
+document.addEventListener('visibilitychange',()=>{if(document.hidden)player.pause();});
+select.value='14';render();
+</script>
+</html>

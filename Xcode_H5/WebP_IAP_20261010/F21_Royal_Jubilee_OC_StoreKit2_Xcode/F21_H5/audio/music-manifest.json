@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F21_Royal_Jubilee_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Thatched Villagers",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Thatched%20Villagers.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100720",
+      "isrc": "USUAN1100720",
+      "published": "2010-06-09",
+      "sourceSha256": "148094b997a55e6ff8506d063720bc852830d9761f6c9c1d6ab7aea284754ca0",
+      "file": "music-home.m4a",
+      "sha256": "5bba4fe6e179ad36393ccf647bc8c24ffb4af3f8b0ac5000d9f5aa8d938ef8f1",
+      "duration": 89.94736842105263,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Life of Riley",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Life%20of%20Riley.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400054",
+      "isrc": "USUAN1400054",
+      "published": "2014-11-25",
+      "sourceSha256": "1916f05cd1860949f9241e17966d334c39852b531329e4a05802720bb154c564",
+      "file": "music-cabinet.m4a",
+      "sha256": "8b64cbe5809a1837ce1517587cb5ba6516e5b0da3523229b6e10305245a04664",
+      "duration": 90.76470588235294,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Royal Jubilee: satin and warm porcelain taps / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "099b192f120f7eb7c24613be277428628b9ec9c81e1f8420254abce336fbe7e5",
+      "file": "win-small.m4a",
+      "sha256": "abbbc55716345190bc01339f23f42d9a83974a19ef7995f1f0ce11e530bbe6a9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.4022335600907028,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL01",
+          "sourceSha256": "099b192f120f7eb7c24613be277428628b9ec9c81e1f8420254abce336fbe7e5",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.3772335600907029,
+          "sourceSeconds": 1.3772335600907029,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_light_001",
+          "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6661224489795918,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL01"
+    },
+    {
+      "id": "win-big",
+      "title": "Royal Jubilee: satin and warm porcelain taps / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "65be5fe4af66574f4725602e454b7ea8d2613ab536a4a719fcb3810a240fdecf",
+      "file": "win-big.m4a",
+      "sha256": "a77c2f2c44ad95be5722b3aa4be828e51a28e30d719e6898d557ccf98dd387c4",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.0648412698412697,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL04",
+          "sourceSha256": "65be5fe4af66574f4725602e454b7ea8d2613ab536a4a719fcb3810a240fdecf",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9186394557823129,
+          "sourceSeconds": 0.9186394557823129,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGlass_light_002",
+          "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.21043083900226758,
+          "sourceSeconds": 0.21043083900226758,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-collide-4",
+          "sourceSha256": "1ffa34af64adc62fce583c5aa9a3c98287b1673ef191576a5571f1ffd39529dd",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.8686394557823128,
+          "gain": 0.205,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.21623582766439908,
+          "sourceOffsetSeconds": 0.04503401360544218,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL04"
+    },
+    {
+      "id": "win-mega",
+      "title": "Royal Jubilee: satin and warm porcelain taps / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "206b5cb18870c1faa393047cb857eda28441b9682380c9eb5910119ea04c2ece",
+      "file": "win-mega.m4a",
+      "sha256": "9193225366fa36bed9336049be1085c2234d8591f2507322199f6b6c58b5a690",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.9094444444444443,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL07",
+          "sourceSha256": "206b5cb18870c1faa393047cb857eda28441b9682380c9eb5910119ea04c2ece",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.5775056689342404,
+          "sourceSeconds": 1.5775056689342404,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_medium_000",
+          "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 1.5275056689342403,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.3569387755102041,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL07"
+    },
+    {
+      "id": "win-epic",
+      "title": "Royal Jubilee: satin and warm porcelain taps / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "86e97f88473e77119c24cc2fbcc711b3343a0b665d4297ea684f59ea17fc998e",
+      "file": "win-epic.m4a",
+      "sha256": "6c18cbdc1c41998d6e2be6d0cc77bce0d8a724c90bc6370320bab96edfd85427",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.9719614512471656,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL11",
+          "sourceSha256": "86e97f88473e77119c24cc2fbcc711b3343a0b665d4297ea684f59ea17fc998e",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.8257596371882087,
+          "sourceSeconds": 0.8257596371882087,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_light_001",
+          "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6661224489795918,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-collide-4",
+          "sourceSha256": "1ffa34af64adc62fce583c5aa9a3c98287b1673ef191576a5571f1ffd39529dd",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.7757596371882086,
+          "gain": 0.255,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.21623582766439908,
+          "sourceOffsetSeconds": 0.04503401360544218,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL11"
+    },
+    {
+      "id": "win-super",
+      "title": "Royal Jubilee: satin and warm porcelain taps / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "8799eb726d784ae0aa1a9df80648a873ac60015bc00aea12c8e2dd1431a2bd7d",
+      "file": "win-super.m4a",
+      "sha256": "b3b8dbc45d53118ac2046506a45548d6bfa848df64c80f18259c43409b724cac",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.2796031746031744,
+      "sources": [
+        {
+          "key": "jingles/Steel jingles/jingles_STEEL00",
+          "sourceSha256": "8799eb726d784ae0aa1a9df80648a873ac60015bc00aea12c8e2dd1431a2bd7d",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9476643990929705,
+          "sourceSeconds": 0.9476643990929705,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGlass_light_002",
+          "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.21043083900226758,
+          "sourceSeconds": 0.21043083900226758,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.8976643990929705,
+          "gain": 0.28,
+          "maxSeconds": 0.3569387755102041,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Steel jingles/jingles_STEEL00"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "fe90dad9c15cdc4a6a8c46fab99b538039d3c3ea4d9de64ed4c3eec378e46b9a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.325,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_001",
+          "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.6661224489795918,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/click_001",
+          "sourceSha256": "ccfb7fa0cccdd9faec0eb16033c732b1e308d139d80f799161495d58f7adcdb9",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.11464852607709751,
+          "sourceSeconds": 0.11464852607709751,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "8a7451193c38bc05483aec25dd193e163a15d44cf7fff04ac7912573231b0201",
+      "file": "sfx-ui-back.wav",
+      "sha256": "3d1805cfe4e0ecc37d55925d8df28c179d79d00564b02c2e07c7d9dd4e852ee6",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.42413832199546486,
+      "sources": [
+        {
+          "key": "rpg/cloth2",
+          "sourceSha256": "8a7451193c38bc05483aec25dd193e163a15d44cf7fff04ac7912573231b0201",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.39913832199546484,
+          "sourceSeconds": 0.4359863945578231,
+          "sourceOffsetSeconds": 0.036848072562358274,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGlass_light_002",
+          "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.21043083900226758,
+          "sourceSeconds": 0.21043083900226758,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+      "file": "sfx-ui-select.wav",
+      "sha256": "07b05e596fff1050737e0c2409d52ae0897717c9c462f3437b70790a097c2f4f",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.385,
+      "sources": [
+        {
+          "key": "impact/impactPlate_medium_000",
+          "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/select_001",
+          "sourceSha256": "aec0c31ea934a35936ae0d2ab8fac8123c93aa5647f935853a58dbaf90278b7a",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.062403628117913834,
+          "sourceSeconds": 0.062403628117913834,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+      "file": "sfx-bet-up.wav",
+      "sha256": "71030bdfd9f695f1c7232580cec42ea0321da7086ce1ce6e3a751bfcdefbfc85",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.28700000000000003,
+      "sources": [
+        {
+          "key": "impact/impactGlass_light_002",
+          "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.21043083900226758,
+          "sourceSeconds": 0.21043083900226758,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_002",
+          "sourceSha256": "6fc395be2ad1f99ce318a5d28f98fb76dbeb676d83a0b28239d8c1fb90736180",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+      "file": "sfx-bet-down.wav",
+      "sha256": "bfc39e2a95fbc53ce2cfa474e020ead1b20c2b5ecc5a2567166861728387fee9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_001",
+          "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.3,
+          "sourceSeconds": 0.6661224489795918,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/card-fan-2",
+          "sourceSha256": "5743373c9dde00c6eee949a2c8e65d75946522768999167e1f5632451630e848",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 1.3220861678004534,
+          "sourceOffsetSeconds": 0.15893424036281179,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "5743373c9dde00c6eee949a2c8e65d75946522768999167e1f5632451630e848",
+      "file": "sfx-spin-start.wav",
+      "sha256": "8228bf6368b9e067cc456b3844607603a8c5bb3d567f22ec392e56d4b525bd5f",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.685,
+      "sources": [
+        {
+          "key": "casino/card-fan-2",
+          "sourceSha256": "5743373c9dde00c6eee949a2c8e65d75946522768999167e1f5632451630e848",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.66,
+          "sourceSeconds": 1.3220861678004534,
+          "sourceOffsetSeconds": 0.15893424036281179,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_medium_000",
+          "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+      "file": "sfx-stop-1.wav",
+      "sha256": "c9e22eb110b6ce118323da126b646b8b59249757ad298d753464d4894c899caa",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_001",
+          "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6661224489795918,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+      "file": "sfx-stop-2.wav",
+      "sha256": "8c002a17a1c21757f945cdefd0315c8d58f8e09468dde35081f56942760ca652",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.23543083900226758,
+      "sources": [
+        {
+          "key": "impact/impactGlass_light_002",
+          "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.21043083900226758,
+          "sourceSeconds": 0.21043083900226758,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+      "file": "sfx-stop-3.wav",
+      "sha256": "b7adb6543e534c52990b33aad4f7cbce58393fa7b771352e6ec28620e8c4c703",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactPlate_medium_000",
+          "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+      "file": "sfx-coin-1.wav",
+      "sha256": "b1b4026bcfcb104e43cab0bb6506a8f4769b6293dc7408c24139298612d22a63",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.245,
+      "sources": [
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "1ffa34af64adc62fce583c5aa9a3c98287b1673ef191576a5571f1ffd39529dd",
+      "file": "sfx-coin-2.wav",
+      "sha256": "7d783c164210289ffd47e64c27b9bab990cd8644cf249d3ada08f478dfb26ce4",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.1962018140589569,
+      "sources": [
+        {
+          "key": "casino/chips-collide-4",
+          "sourceSha256": "1ffa34af64adc62fce583c5aa9a3c98287b1673ef191576a5571f1ffd39529dd",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.21623582766439908,
+          "sourceOffsetSeconds": 0.04503401360544218,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+      "file": "sfx-coin-3.wav",
+      "sha256": "6e3cc5b5a7e921a2d4ecfbce042c9bdcf725a40a33b51856e331a4538a7f48a8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_001",
+          "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.6661224489795918,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "1ffa34af64adc62fce583c5aa9a3c98287b1673ef191576a5571f1ffd39529dd",
+      "file": "sfx-burst.wav",
+      "sha256": "7b9dcf4c28222afef504d0735779c385034ebb926fbfe5f9f22143cfd7990aae",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.435,
+      "sources": [
+        {
+          "key": "casino/chips-collide-4",
+          "sourceSha256": "1ffa34af64adc62fce583c5aa9a3c98287b1673ef191576a5571f1ffd39529dd",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.21623582766439908,
+          "sourceOffsetSeconds": 0.04503401360544218,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_medium_000",
+          "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "5743373c9dde00c6eee949a2c8e65d75946522768999167e1f5632451630e848",
+      "file": "sfx-reveal.wav",
+      "sha256": "ed0847c6bf4a9af78d666525c84fa858ae8b771d6a6ad3794c8993cf373b8875",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.665,
+      "sources": [
+        {
+          "key": "casino/card-fan-2",
+          "sourceSha256": "5743373c9dde00c6eee949a2c8e65d75946522768999167e1f5632451630e848",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.64,
+          "sourceSeconds": 1.3220861678004534,
+          "sourceOffsetSeconds": 0.15893424036281179,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_001",
+          "sourceSha256": "947915c2eb6ac57ee08fd3a48b297fd108d69abc72076e79882c21cad0eef56e",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.6661224489795918,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+      "file": "sfx-collect.wav",
+      "sha256": "87180927010ae21a6ba386f3f4be7dd4168a28955347a2550aca40bacd7b1c83",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.3819387755102041,
+      "sources": [
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3569387755102041,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGlass_light_002",
+          "sourceSha256": "710db7451bb7857b9140dfe6afe4621ea2188ad65eda3919c569d1bb285b933d",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.21043083900226758,
+          "sourceSeconds": 0.21043083900226758,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Royal Jubilee: satin and warm porcelain taps / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+      "file": "sfx-reward.wav",
+      "sha256": "9042e9dacd2cab250e2eebcd4d899d2082188d35d3a38872a40859e2f3a690d1",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.445,
+      "sources": [
+        {
+          "key": "impact/impactPlate_medium_000",
+          "sourceSha256": "b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.42,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-collide-4",
+          "sourceSha256": "1ffa34af64adc62fce583c5aa9a3c98287b1673ef191576a5571f1ffd39529dd",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.1712018140589569,
+          "sourceSeconds": 0.21623582766439908,
+          "sourceOffsetSeconds": 0.04503401360544218,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Life of Riley",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Life%20of%20Riley.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400054",
+      "isrc": "USUAN1400054",
+      "published": "2014-11-25",
+      "sourceSha256": "1916f05cd1860949f9241e17966d334c39852b531329e4a05802720bb154c564",
+      "file": "music-spin.m4a",
+      "sha256": "c61f8f88e001b4999297d16b4a3f0337b09cf1b0a8051c71ee880cf7aaf13411",
+      "duration": 18.323529411764707,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 96.47058823529412,
+        "end": 115.29411764705883
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Royal Jubilee: satin and warm porcelain taps"
+}

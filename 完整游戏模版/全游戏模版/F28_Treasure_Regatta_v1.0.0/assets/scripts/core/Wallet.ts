@@ -7,6 +7,7 @@ export interface Persistence { read(): string | null; write(value: string): void
 export interface Receipt { id: number; mode: ModeId; bet: number; win: number; balance: number }
 interface Pending { id: number; round: Round }
 export interface WalletState {
+  purchaseIds: string[];
   schema: 1;
   revision: number;
   balance: number;
@@ -16,13 +17,15 @@ export interface WalletState {
   rewardDays: string[];
   settings: { sound: boolean; music: boolean; reducedMotion: boolean };
 }
-const initial = (): WalletState => ({ schema: 1, revision: 0, balance: 10000, nextRoundId: 1, pending: null, receipts: [], rewardDays: [], settings: { sound: true, music: true, reducedMotion: false } });
+const initial = (): WalletState => ({ purchaseIds: [], schema: 1, revision: 0, balance: 10000, nextRoundId: 1, pending: null, receipts: [], rewardDays: [], settings: { sound: true, music: true, reducedMotion: false } });
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
 const integer = (value: unknown): value is number => Number.isSafeInteger(value) && (value as number) >= 0;
 
 /** Fail closed on corruption: never silently reset a wallet and grant coins. */
 function decode(raw: string): WalletState {
   const s: WalletState = JSON.parse(raw);
+  if(s && s.purchaseIds===undefined)s.purchaseIds=[];
+  if(!s||!Array.isArray(s.purchaseIds)||s.purchaseIds.some(id=>typeof id!=='string'||!/^\d{1,40}$/.test(id))||new Set(s.purchaseIds).size!==s.purchaseIds.length)throw Error("Invalid purchase ledger");
   if (!s || s.schema !== 1 || !integer(s.revision) || !integer(s.balance) || !integer(s.nextRoundId) || s.nextRoundId < 1 ||
     !Array.isArray(s.receipts) || s.receipts.length > 100 || !Array.isArray(s.rewardDays) ||
     !s.settings || ['sound', 'music', 'reducedMotion'].some(k => typeof s.settings[k as keyof WalletState['settings']] !== 'boolean')) {
@@ -66,6 +69,10 @@ export class Wallet {
       const value = JSON.stringify(this.state);
       storage.write(value); this.persisted = value;
     }
+  }
+  grantPurchase(id:string,amount:number):'new'|'duplicate' {
+    if(this.state.purchaseIds.includes(id))return 'duplicate';
+    this.commit(s=>{s.balance+=amount;s.purchaseIds.push(id);});return 'new';
   }
   snapshot(): WalletState { return clone(this.state); }
   private commit(mutator: (draft: WalletState) => void): void {

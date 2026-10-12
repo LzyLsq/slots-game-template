@@ -30,6 +30,11 @@
     configuration.allowsInlineMediaPlayback = YES;
     configuration.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
 
+
+    // Deliver native inactive/background state to Cocos and its audio pools.
+    NSString *lifecycle = @"(() => { let inactive=false; const hidden=Object.getOwnPropertyDescriptor(Document.prototype,'hidden')?.get; Object.defineProperty(document,'hidden',{configurable:true,get:()=>inactive||(hidden?hidden.call(document):false)}); window.__localGameLifecycle=active=>{const next=!active;if(next===inactive)return;inactive=next;document.dispatchEvent(new Event('visibilitychange'));}; })();";
+    [configuration.userContentController addUserScript:[[WKUserScript alloc] initWithSource:lifecycle injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:YES]];
+
     self.webView = [[WKWebView alloc] initWithFrame:controller.view.bounds configuration:configuration];
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.webView.navigationDelegate = self;
@@ -81,13 +86,21 @@
     }
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    [self.webView evaluateJavaScript:@"if(window.cc&&cc.game&&!cc.game.isPaused()){cc.game.pause();}" completionHandler:nil];
+- (void)setGameActive:(BOOL)active {
+    [self.webView setAllMediaPlaybackSuspended:!active completionHandler:nil];
+    [self.webView evaluateJavaScript:active ? @"window.__localGameLifecycle?.(true)" : @"window.__localGameLifecycle?.(false)" completionHandler:nil];
 }
+- (void)applicationWillResignActive:(UIApplication *)application { [self setGameActive:NO]; }
+- (void)applicationDidEnterBackground:(UIApplication *)application { [self setGameActive:NO]; }
+- (void)applicationDidBecomeActive:(UIApplication *)application { [self setGameActive:YES]; }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    [self.webView evaluateJavaScript:@"if(window.cc&&cc.game&&cc.game.isPaused()){cc.game.resume();}" completionHandler:nil];
+#if DEBUG
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    if (![NSProcessInfo.processInfo.arguments containsObject:@"--lively-media-smoke"]) return;
+    NSString *script = @"const audio=new Audio(new URL('audio/music-home.m4a',location.href));const result={};try{await Promise.race([audio.play(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('AAC timeout')),10000))]);await new Promise(resolve=>setTimeout(resolve,600));if(audio.paused||audio.currentTime<=0||audio.readyState<2)throw new Error('AAC did not advance');result.passed=true;result.time=audio.currentTime;result.duration=audio.duration;}catch(error){result.passed=false;result.error=String(error);result.mediaError=audio.error?.code;}finally{audio.pause();audio.removeAttribute('src');audio.load();}return JSON.stringify(result);";
+    [webView callAsyncJavaScript:script arguments:@{} inFrame:nil inContentWorld:WKContentWorld.pageWorld completionHandler:^(id value,NSError *error){NSLog(@"LIVELY_MEDIA_SMOKE F15 %@ %@",value,error);}];
 }
+#endif
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
     NSLog(@"H5 provisional navigation failed: %@", error);

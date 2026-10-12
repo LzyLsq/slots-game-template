@@ -1,0 +1,79 @@
+{
+  "identifier": "F16-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "1600",
+      "localizations": [
+        {
+          "description": "10000 virtual coins. No cash value.",
+          "displayName": "Treasure Jamboree COIN PURSE",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasurejamboree.coins.purse",
+      "referenceName": "purse 10000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "1601",
+      "localizations": [
+        {
+          "description": "55000 virtual coins. No cash value.",
+          "displayName": "Treasure Jamboree GOLD RESERVE",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasurejamboree.coins.bullion",
+      "referenceName": "bullion 55000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "1602",
+      "localizations": [
+        {
+          "description": "138000 virtual coins. No cash value.",
+          "displayName": "Treasure Jamboree TREASURE CHEST",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasurejamboree.coins.chest",
+      "referenceName": "chest 138000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "1603",
+      "localizations": [
+        {
+          "description": "360000 virtual coins. No cash value.",
+          "displayName": "Treasure Jamboree ROYAL VAULT",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.treasurejamboree.coins.vault",
+      "referenceName": "vault 360000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

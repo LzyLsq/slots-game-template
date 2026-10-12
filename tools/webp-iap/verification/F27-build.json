@@ -1,0 +1,68 @@
+{
+  "platform": "web-mobile",
+  "debug": false,
+  "buildPath": "project://build",
+  "outputName": "web-mobile",
+  "md5Cache": false,
+  "taskName": "web-mobile",
+  "buildMode": "normal",
+  "mainBundleCompressionType": "merge_dep",
+  "packages": {
+    "adsense-h5g-plugin": {
+      "enableAdsense": false,
+      "enableTestAd": false
+    },
+    "web-mobile": {
+      "useWebGPU": false,
+      "orientation": "auto",
+      "embedWebDebugger": false
+    }
+  },
+  "name": "f27-sovereign_wealth",
+  "server": "",
+  "engineModulesConfigKey": "defaultConfig",
+  "mangleProperties": false,
+  "skipCompressTexture": false,
+  "sourceMaps": false,
+  "overwriteProjectSettings": {
+    "includeModules": {
+      "gfx-webgl2": "on",
+      "physics": "inherit-project-setting",
+      "physics-2d": "inherit-project-setting"
+    },
+    "macroConfig": {
+      "cleanupImageCache": "inherit-project-setting"
+    }
+  },
+  "nativeCodeBundleMode": "both",
+  "polyfills": {
+    "asyncFunctions": true
+  },
+  "experimentalEraseModules": false,
+  "startSceneAssetBundle": false,
+  "bundleConfigs": [],
+  "inlineEnum": true,
+  "useBuiltinServer": false,
+  "md5CacheOptions": {
+    "excludes": [],
+    "includes": [],
+    "replaceOnly": [],
+    "handleTemplateMd5Link": true
+  },
+  "mainBundleIsRemote": false,
+  "useSplashScreen": true,
+  "bundleCommonChunk": false,
+  "packAutoAtlas": true,
+  "startScene": "5b6b70a4-c637-42e2-9144-66c18769f31b",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/Main.scene",
+      "uuid": "5b6b70a4-c637-42e2-9144-66c18769f31b"
+    }
+  ],
+  "wasmCompressionMode": false,
+  "binGroupConfig": {
+    "threshold": 16,
+    "enable": false
+  }
+}

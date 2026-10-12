@@ -1,4 +1,5 @@
 import {tr} from '../ui/Language';
+import {rewardInk,rewardOutline,rewardTextWidth} from '../ui/RewardArtwork';
 import { _decorator, Color, Component, EventTouch, game, Game, Graphics, Label, Node, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
 import { SalonArt, box, COLORS, opacity, outlined, text } from '../ui/SalonArt';
 import { GAME_CONFIGS, prizeArt } from '../math/GameConfigs';
@@ -41,16 +42,17 @@ export class SalonWinStage extends Component {
     stream.setup(art,1080,1720,true,[16,22,28][this.tier]);stream.reducedMotion=reduced;stream.enabled=false;
     const treasure=art.image(this.group,prizeArt(GAME_CONFIGS[this.theme].id),0,50,930,860);
     this.treasure=treasure;
-    const title=outlined(text(this.group,['BIG WIN','MEGA WIN','EPIC WIN'][this.tier],0,660,980,160,104,COLORS.gold,true),'#582919',5);
+    const titlePlate=art.rewardPanel(this.group,0,660,1040,200,this.theme,'title');
+    const title=outlined(text(titlePlate,['BIG WIN','MEGA WIN','EPIC WIN'][this.tier],0,0,rewardTextWidth(1040),120,94,rewardInk(this.theme),true),rewardOutline(this.theme),1);
     text(this.group,GAME_CONFIGS[this.theme].name,0,543,960,70,30,COLORS.cream);
     // One hero, one amount. No floating reel-symbol collage or generic card.
-    const plate=box(this.group,'Award typography',0,-480,930,220);this.counterPlate=plate;
-    text(plate,'TOTAL WIN',0,91,800,42,25,COLORS.cream,true);
-    this.count=outlined(text(plate,'0',0,-8,900,170,amount>=10000000?85:112,'#FFE9A0',true),'#482512',5);
+    const plate=art.rewardPanel(this.group,0,-480,930,220,this.theme,'amount');this.counterPlate=plate;
+    text(plate,'TOTAL WIN',0,57,rewardTextWidth(930),36,25,rewardInk(this.theme),true);
+    this.count=outlined(text(plate,'0',0,-25,rewardTextWidth(930),110,amount>=10000000?72:94,rewardInk(this.theme),true),rewardOutline(this.theme),1);
     this.count.cacheMode=Label.CacheMode.CHAR;
     for(let i=0;i<4;i++){const n=art.light(plate,3,(i%2?1:-1)*350,(i<2?1:-1)*72,105,35,0);n.name='Grand win finale glint';this.finale.push(n.getComponent(UIOpacity)!);}
     this.hint=outlined(text(this.group,'Tap to reveal the full amount',0,-649,890,78,36));
-    const collect=art.button(this.group,'Continue after celebration',0,-760,660,108,'Continue',1,()=>this.advance());this.collect=collect;
+    const collect=art.rewardButton(this.group,0,-760,660,108,'Continue',this.theme,()=>this.advance());this.collect=collect;
     // Preallocate a small terminal stream; update only transforms and alpha.
     if(walletTarget&&!reduced)for(let i=0;i<10;i++){
       const coin=art.image(this.node,'symbols',0,0,56,56,0);coin.name='Celebration wallet arrival';
@@ -76,7 +78,7 @@ export class SalonWinStage extends Component {
     this.node.on(Node.EventType.TOUCH_END,this.advance,this);
     return new Promise(resolve=>{this.done=resolve;});
   }
-  private reveal():void {
+  private reveal(manual=false):void {
     if(!this.revealed)this.onCue?.('complete');
     if(!this.revealed&&!this.reduced){this.finale.forEach((alpha,i)=>tween(alpha).delay(i*.06).to(.12,{opacity:225}).to(.5,{opacity:0},{easing:'sineOut'}).start());tween(this.count.node).to(.16,{scale:new Vec3(1.09,1.09,1)}).to(.24,{scale:new Vec3(1,1,1)},{easing:'backOut'}).start();}
     this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=tr(Math.floor(this.amount).toLocaleString('en-US'));
@@ -92,7 +94,7 @@ export class SalonWinStage extends Component {
   private readonly flightOrigin=new Vec3();
   private advance():void {
     if(this.finished)return;
-    if(!this.revealed){this.reveal();return;}
+    if(!this.revealed){this.reveal(true);return;}
     // Preserve a short landing beat even after a skip; never cut coins in flight.
     if(!this.reduced&&this.elapsed<this.flightAt+1.1){this.holdUntil=Math.min(this.holdUntil,this.flightAt+1.1);return;}
     this.finished=true;

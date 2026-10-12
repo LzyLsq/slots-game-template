@@ -1,3 +1,9 @@
+import { StationaryArtwork } from '../vfx/StationaryArtwork';
+import {rewardArtwork,rewardInk,rewardTextWidth,type RewardPlateKind} from './RewardArtwork';
+import { LivingMascotRig } from '../vfx/LivingMascotRig';
+import { CabinetReliefGlow } from '../vfx/CabinetReliefGlow';
+import { ThemeMotion } from '../vfx/ThemeMotion';
+import { CaravanCatRig } from '../vfx/CaravanCatRig';
 import {tr} from './Language';
 import {TextFit} from './TextFit';
 import { EventTouch, Color, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
@@ -6,23 +12,32 @@ export class SalonArt {
   private textures = new Map<string, Texture2D>();
   private frames = new Map<string, SpriteFrame>();
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
+    await ThemeMotion.prepare();
+    await LivingMascotRig.prepare(names);
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
+    if (names.includes('caravan-card-0') && !queue.includes('caravan-cat-rig-parts')) queue.push('caravan-cat-rig-parts');
+    const total = queue.length;
     const worker = async (): Promise<void> => {
       while (queue.length) {
         const name = queue.shift()!;
         if (!this.textures.has(name)) {
           const tex = await new Promise<Texture2D>((resolve, reject) => {
             const timeout=setTimeout(()=>reject(new Error('Artwork load timed out: '+name)),20000);
-            resources.load(`art/${name}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
+            const file = name === 'caravan-card-0' ? 'caravan-card-0-rig-bg' : LivingMascotRig.file(name);
+            resources.load(`art/${file}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
           });
           tex.setFilters(Texture2D.Filter.LINEAR, Texture2D.Filter.LINEAR); this.textures.set(name, tex);
         }
-        progress?.(++done, names.length);
+        progress?.(++done, total);
       }
     };
     await Promise.all([worker(), worker()]);
+  }
+  public replaceImage(node: Node, name: string, index = -1): void {
+    const sprite = node.getComponent(Sprite)!; sprite.spriteFrame = this.frame(name,index);
+    if (!LivingMascotRig.attach(sprite,name,index)) ThemeMotion.attach(sprite,name,index);
   }
   public frame(name: string, index = -1): SpriteFrame {
     const key = `${name}:${index}`; const cached = this.frames.get(key); if (cached) return cached;
@@ -37,6 +52,11 @@ export class SalonArt {
     const sf = new SpriteFrame(); sf.texture = texture;
     sf.rect = new Rect(index < 0 ? 0 : index % cols * w, index < 0 ? 0 : Math.floor(index / cols) * h, w, h);
     sf.originalSize = new Size(w, h); sf.packable = false;
+    if (name === 'caravan-cat-rig-parts' && index >= 0) {
+      // Native alpha bounds from output/imagegen/ccswitch-f17-cat-rig-bounds.json.
+      const b = [[34,37,203,211],[272,41,227,200],[527,41,228,200],[50,286,165,191],[310,314,145,132],[607,288,72,177]][index];
+      sf.rect = new Rect(b[0], b[1], b[2], b[3]); sf.originalSize = new Size(b[2], b[3]);
+    }
     if(name==='titles'&&index>=0){
       // Tight, measured alpha bounds: keep lettering proportional without
       // shrinking it to accommodate unused atlas padding.
@@ -50,7 +70,7 @@ export class SalonArt {
     this.frames.set(key, sf); return sf;
   }
   public image(parent: Node, name: string, x: number, y: number, w: number, h: number, index = -1): Node {
-    const n = box(parent, name, x, y, w, h); const s = n.addComponent(Sprite);
+    const n = box(parent, name, x, y, w, h); StationaryArtwork.mark(n,name); const s = n.addComponent(Sprite);
     // Set CUSTOM before the frame: RAW would overwrite the authored hit/layout box.
     s.sizeMode = Sprite.SizeMode.CUSTOM; s.spriteFrame = this.frame(name, index);
     if (name === 'surfaces' || name === 'ledgers' || (name.startsWith('caravan-plate-')||name.startsWith('caravan-soft-plate-'))) s.type = Sprite.Type.SLICED;
@@ -62,6 +82,13 @@ export class SalonArt {
       w = frame.rect.width * scale; h = frame.rect.height * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
+    if (name.endsWith('-tall') && index === -1) {
+      const seed = ['golden-hour','jade-treasury','pearl-palace','ruby-revel'].indexOf(name.slice(0,-5));
+      CabinetReliefGlow.attach(n,[[.36,.25],[.63,.25],[.5,.35],[.26,.77],[.72,.78]],seed);
+    } else if (name === 'caravan-card-0' && index === -1) {
+      // The backdrop has no cat; animate exactly one layered character on top.
+      n.addComponent(CaravanCatRig).setup(Array.from({length:6}, (_, i) => this.frame('caravan-cat-rig-parts', i)));
+    } else if (!LivingMascotRig.attach(s,name,index)) ThemeMotion.attach(s,name,index);
     return n;
   }
   public cover(parent: Node, name: string, x: number, y: number, w: number, h: number, index=-1, radius=0): Node {
@@ -75,6 +102,12 @@ export class SalonArt {
     // Public material API; Sprite's old blend-factor fields are private in 3.8.
     s.getMaterialInstance(0)?.overridePipelineStates({blendState:{targets:[{blend:true,blendSrc:gfx.BlendFactor.SRC_ALPHA,blendDst:gfx.BlendFactor.ONE,blendSrcAlpha:gfx.BlendFactor.ZERO,blendDstAlpha:gfx.BlendFactor.ONE}]}});
     opacity(n,alpha);return n;
+  }
+  public rewardPanel(parent:Node,x:number,y:number,w:number,h:number,theme=0,kind:RewardPlateKind='detail'):Node {return rewardArtwork(this,parent,x,y,w,h,theme,kind);}
+  public rewardButton(parent:Node,x:number,y:number,w:number,h:number,label:string,theme:number,action:()=>void):Node {
+    const hit=box(parent,'Collect your treasure',x,y,w,h),face=this.rewardPanel(hit,0,0,w,h,theme,'button');
+    const caption=text(face,label,0,0,rewardTextWidth(w),h*.58,34,rewardInk(theme));caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
+    bindPress(hit,face,action);return hit;
   }
   public panel(parent: Node, x: number, y: number, w: number, h: number, style = 0): Node { return this.image(parent, 'caravan-soft-plate-'+[0,1,2,3][style], x,y,w,h); }
   public button(parent: Node, name: string, x: number, y: number, w: number, h: number, label: string, icon: number | undefined, action: () => void, style = 3): Node {

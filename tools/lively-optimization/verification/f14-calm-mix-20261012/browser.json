@@ -1,0 +1,297 @@
+{
+  "checkedAt": "2026-10-12T02:37:16.348Z",
+  "passed": true,
+  "url": "http://127.0.0.1:51714/F14/",
+  "scope": "F14 browser actual playback and interaction state; one real preview spin, five award presentation fixtures, host lifecycle simulation. No human listening certification, real iPhone or StoreKit/payment test.",
+  "checks": [
+    {
+      "name": "Scene transition has no overlapping musical focus",
+      "frames": 53
+    },
+    {
+      "name": "Return transition has no overlapping musical focus",
+      "frames": 53
+    },
+    {
+      "name": "Rapid UI feedback is category-throttled and bounded",
+      "played": 1,
+      "voices": 1,
+      "activeVoices": 1,
+      "fadingVoices": 0,
+      "groups": {
+        "ui": 1
+      },
+      "highWater": 1,
+      "decodedBytes": 826084,
+      "buffers": 16,
+      "dropped": 179,
+      "errors": []
+    },
+    {
+      "name": "Counter emits only three quiet progress accents",
+      "played": 3,
+      "status": {
+        "played": 4,
+        "voices": 1,
+        "activeVoices": 1,
+        "fadingVoices": 0,
+        "groups": {
+          "detail": 1
+        },
+        "highWater": 1,
+        "decodedBytes": 826084,
+        "buffers": 16,
+        "dropped": 179,
+        "errors": []
+      }
+    },
+    {
+      "name": "Lobby composition actually advances",
+      "mix": "f14-calm-single-focus-20261012",
+      "scene": "home",
+      "cabinet": "golden-hour",
+      "spinning": false,
+      "celebrating": false,
+      "modal": false,
+      "track": "home",
+      "file": "music-home",
+      "musicPlayers": 1,
+      "winDecodedBytes": 0,
+      "winVoices": 0,
+      "page": "home",
+      "state": "idle",
+      "context": "running",
+      "gain": 0.46000000834465027,
+      "currentTime": 3.461688,
+      "duration": 184.507,
+      "paused": false,
+      "winCache": [],
+      "sampleStatus": {
+        "played": 4,
+        "voices": 0,
+        "activeVoices": 0,
+        "fadingVoices": 0,
+        "groups": {},
+        "highWater": 1,
+        "decodedBytes": 826084,
+        "buffers": 16,
+        "dropped": 179,
+        "errors": []
+      }
+    },
+    {
+      "name": "Lobby alternates complete works at natural end"
+    },
+    {
+      "name": "Distinct cabinet SKY ADMIRAL",
+      "file": "music-cabinet-golden-hour",
+      "position": 1.618666
+    },
+    {
+      "name": "Distinct cabinet PEARL VOYAGE",
+      "file": "music-cabinet-jade-treasury",
+      "position": 0.772202
+    },
+    {
+      "name": "Distinct cabinet SUNSTONE EXPRESS",
+      "file": "music-cabinet-pearl-palace",
+      "position": 0.757333
+    },
+    {
+      "name": "Distinct cabinet MOON CAROUSEL",
+      "file": "music-cabinet-ruby-revel",
+      "position": 0.778667
+    },
+    {
+      "name": "Accepted spin and repeated taps keep the same BGM player",
+      "final": {
+        "mix": "f14-calm-single-focus-20261012",
+        "scene": "cabinet",
+        "cabinet": "golden-hour",
+        "spinning": false,
+        "celebrating": false,
+        "modal": false,
+        "track": "cabinet",
+        "file": "music-cabinet-golden-hour",
+        "musicPlayers": 1,
+        "winDecodedBytes": 0,
+        "winVoices": 0,
+        "page": "game",
+        "state": "idle",
+        "context": "running",
+        "gain": 0.4474546015262604,
+        "currentTime": 13.807669,
+        "duration": 210.59375,
+        "paused": false,
+        "winCache": [],
+        "sampleStatus": {
+          "played": 13,
+          "voices": 0,
+          "activeVoices": 0,
+          "fadingVoices": 0,
+          "groups": {},
+          "highWater": 3,
+          "decodedBytes": 826084,
+          "buffers": 16,
+          "dropped": 185,
+          "errors": []
+        }
+      }
+    },
+    {
+      "name": "Award small replaces background musical focus",
+      "frames": 53
+    },
+    {
+      "name": "Automatic award small",
+      "duration": 1.8,
+      "winCache": [
+        "win-small"
+      ],
+      "winDecodedBytes": 635040
+    },
+    {
+      "name": "Award big replaces background musical focus",
+      "frames": 53
+    },
+    {
+      "name": "Automatic award big",
+      "duration": 5.5,
+      "winCache": [
+        "win-small",
+        "win-big"
+      ],
+      "winDecodedBytes": 2575432
+    },
+    {
+      "name": "Award mega replaces background musical focus",
+      "frames": 53
+    },
+    {
+      "name": "Automatic award mega",
+      "duration": 6.4,
+      "winCache": [
+        "win-big",
+        "win-mega"
+      ],
+      "winDecodedBytes": 4198312
+    },
+    {
+      "name": "Award epic replaces background musical focus",
+      "frames": 53
+    },
+    {
+      "name": "Automatic award epic",
+      "duration": 6.9,
+      "winCache": [
+        "win-mega",
+        "win-epic"
+      ],
+      "winDecodedBytes": 4692240
+    },
+    {
+      "name": "Award super replaces background musical focus",
+      "frames": 53
+    },
+    {
+      "name": "Automatic award super",
+      "duration": 7.3,
+      "winCache": [
+        "win-epic",
+        "win-super"
+      ],
+      "winDecodedBytes": 5009760
+    },
+    {
+      "name": "Actual skip/collect fades music and restores background"
+    },
+    {
+      "name": "Rapid scene changes bounded to two players; canceled fetch cannot replay"
+    },
+    {
+      "name": "Rules dialog lowers and restores the same music"
+    },
+    {
+      "name": "Sound and music controls stop immediately and restart without stale awards"
+    },
+    {
+      "name": "Simulated host hide/show preserves music position without queued award",
+      "before": 53.35925,
+      "after": 53.4648
+    },
+    {
+      "name": "Return to lobby clears cabinet presentation state"
+    },
+    {
+      "name": "Real credits UI lists all authors and works; Close works at 320px"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "requested": [
+    "credits.js",
+    "sfx-ui-tap.wav",
+    "sfx-ui-back.wav",
+    "sfx-ui-select.wav",
+    "sfx-bet-up.wav",
+    "sfx-bet-down.wav",
+    "sfx-spin-start.wav",
+    "sfx-stop-1.wav",
+    "sfx-stop-2.wav",
+    "sfx-stop-3.wav",
+    "sfx-coin-1.wav",
+    "sfx-coin-2.wav",
+    "sfx-coin-3.wav",
+    "sfx-burst.wav",
+    "sfx-reveal.wav",
+    "sfx-collect.wav",
+    "sfx-reward.wav",
+    "music-home.m4a",
+    "music-cabinet-golden-hour.m4a",
+    "music-home-alt.m4a",
+    "music-cabinet-jade-treasury.m4a",
+    "music-cabinet-pearl-palace.m4a",
+    "music-cabinet-ruby-revel.m4a",
+    "win-big.m4a",
+    "win-small.m4a",
+    "win-mega.m4a",
+    "win-epic.m4a",
+    "win-super.m4a",
+    "credits.json"
+  ],
+  "final": {
+    "mix": "f14-calm-single-focus-20261012",
+    "scene": "home",
+    "cabinet": "golden-hour",
+    "spinning": false,
+    "celebrating": false,
+    "modal": false,
+    "track": "home",
+    "file": "music-home",
+    "musicPlayers": 1,
+    "winDecodedBytes": 2575440,
+    "winVoices": 0,
+    "page": "profile",
+    "state": "idle",
+    "context": "running",
+    "gain": 0.46000000834465027,
+    "currentTime": 7.590362,
+    "duration": 184.507,
+    "paused": false,
+    "winCache": [
+      "win-super"
+    ],
+    "sampleStatus": {
+      "played": 35,
+      "voices": 0,
+      "activeVoices": 0,
+      "fadingVoices": 0,
+      "groups": {},
+      "highWater": 3,
+      "decodedBytes": 826084,
+      "buffers": 16,
+      "dropped": 185,
+      "errors": []
+    }
+  }
+}

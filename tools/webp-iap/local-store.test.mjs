@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
+const ts=(await import(pathToFileURL('/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F20_Golden_Canopy_v1.0.0/node_modules/typescript/lib/typescript.js'))).default;
+const code=ts.transpileModule(readFileSync(new URL('LocalCoinStore.ts',import.meta.url),'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
+const {LocalCoinStore,deviceAccount}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const p={id:'purse',appleProductId:'test.coins.purse',credits:100,bonus:10,label:'Purse',debugPrice:'$0.99'},token='13e6f7a8-6666-4777-8888-99aabbccddee';
+let current,balance,ids,finished,pending,tx,saveError,finishError;
+function reset(){current={id:'player',token};balance=0;ids=new Set();finished=[];pending=[];tx={status:'verified',productId:p.appleProductId,transactionId:'1001',appAccountToken:token};saveError=finishError=false;globalThis.__AURELIA_IAP__={products:async()=>[{productId:p.appleProductId,displayPrice:'¥6.00'}],purchase:async()=>{pending.push({...tx});return tx;},restore:async()=>pending,finish:async id=>{if(finishError)throw Error('offline');finished.push(id);pending=pending.filter(p=>p.transactionId!==id);}};return new LocalCoinStore([p],[p],()=>current,(id,amount)=>{if(saveError)throw Error('storage full');if(ids.has(id))return 'duplicate';ids.add(id);balance+=amount;return 'new';});}
+let s=reset(),r=await s.purchase('purse');assert.equal(r.ok,true);assert.equal(balance,110);assert.deepEqual(finished,['1001']);r=await s.purchase('purse');assert.equal(r.status,'duplicate');assert.equal(balance,110);
+s=reset();tx.status='cancelled';r=await s.purchase('purse');assert.equal(r.status,'cancelled');assert.equal(balance,0);assert.equal(finished.length,0);
+s=reset();tx.status='pending';r=await s.purchase('purse');assert.equal(r.status,'pending');assert.equal(balance,0);assert.equal(finished.length,0);
+s=reset();tx.status='unverified';assert.equal((await s.purchase('purse')).ok,false);assert.equal(balance,0);
+s=reset();tx.productId='unknown';assert.equal((await s.purchase('purse')).ok,false);assert.equal(balance,0);
+s=reset();tx.appAccountToken='23e6f7a8-6666-4777-8888-99aabbccddee';assert.equal((await s.purchase('purse')).ok,false);assert.equal(balance,0);
+s=reset();globalThis.__AURELIA_IAP__.purchase=async()=>{current={id:'other',token};return tx;};assert.equal((await s.purchase('purse')).ok,false);assert.equal(balance,0);
+s=reset();saveError=true;assert.equal((await s.purchase('purse')).ok,false);assert.equal(balance,0);assert.equal(finished.length,0);saveError=false;assert.equal((await s.restore()).ok,true);assert.equal(balance,110);
+s=reset();finishError=true;assert.equal((await s.purchase('purse')).ok,true);assert.equal(balance,110);finishError=false;assert.equal((await s.restore()).ok,true);assert.equal(balance,110);assert.equal(finished.length,1);
+s=reset();assert.equal((await s.catalog())[0].displayPrice,'¥6.00');delete globalThis.__AURELIA_IAP__;assert.equal((await s.purchase('purse')).status,'unavailable');assert.equal(balance,0);
+const storage=new Map(),api={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};const a=deviceAccount(api,'test','p');assert.equal(deviceAccount(api,'test','p').token,a.token);assert.match(a.token,/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);assert.notEqual(deviceAccount(api,'test','other').token,a.token);
+console.log('PASS: verified, duplicate, cancelled, pending, unverified, product/account mismatch, storage failure retry, finish retry, catalog prices, unavailable, UUID persistence');

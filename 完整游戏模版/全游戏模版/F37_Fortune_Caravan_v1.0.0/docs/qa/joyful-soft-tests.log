@@ -1,0 +1,321 @@
+
+> f37-fortune-caravan@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:guardians && npm run test:audio && npm run test:audio:recordings && npm run test:audio:festive && npm run test:award && npm run test:life && npm run test:reel-presentation && npm run test:text-layout && npm run test:caravan && npm run test:guardian-renderer && npm run test:lobby-details
+
+
+> f37-fortune-caravan@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "caravan-gold": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 161088,
+      "wins": 337,
+      "features": 115,
+      "maxWin": 2688
+    },
+    "sapphire-oasis": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 173995,
+      "wins": 645,
+      "features": 38,
+      "maxWin": 3584
+    },
+    "ruby-bazaar": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 170345,
+      "wins": 560,
+      "features": 35,
+      "maxWin": 3437
+    },
+    "crown-voyage": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 179140,
+      "wins": 527,
+      "features": 527,
+      "maxWin": 2506
+    }
+  }
+}
+
+> f37-fortune-caravan@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f37-fortune-caravan@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS caravan-themed virtual names, unchanged scores and separate real player identities.
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f37-fortune-caravan@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 132 cabinet/viewport combinations: safe insets, full guardian animation sweep, toolbar/footer clearance, reels and controls.
+PASS desktop portrait framing; phone landscape guard and portrait geometry unchanged.
+PASS art queue: ordered unique loads survive Creator ES5 lowering
+PASS single cabinet scene: one camera, uncut original, continuous architectural margins, no repeated glass/buttons/registers
+
+> f37-fortune-caravan@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+
+> f37-fortune-caravan@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+PASS F37 boarding subtitle, Apple availability and adult virtual-coin notice translations.
+PASS F37 service pages, journey counts, honest preview/no-cash copy and localized virtual caravan companions.
+
+> f37-fortune-caravan@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f37-fortune-caravan@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'caravan-gold',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 356,
+    featurePaidHits: 266,
+    coreHits: 867,
+    coreReturn: 0.6225777777777778,
+    hits: 1024,
+    sampleReturn: 0.9489777777777778,
+    layoutVariants: 1
+  },
+  {
+    id: 'sapphire-oasis',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 124,
+    featurePaidHits: 122,
+    coreHits: 1909,
+    coreReturn: 0.7604462962962963,
+    hits: 1966,
+    sampleReturn: 1.0216722222222223,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-bazaar',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 113,
+    featurePaidHits: 109,
+    coreHits: 1606,
+    coreReturn: 0.7901333333333334,
+    hits: 1670,
+    sampleReturn: 0.9586,
+    layoutVariants: 1
+  },
+  {
+    id: 'crown-voyage',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1606,
+    featurePaidHits: 916,
+    coreHits: 1606,
+    coreReturn: 0.3172833333333333,
+    hits: 1606,
+    sampleReturn: 0.9430111111111111,
+    layoutVariants: 1
+  }
+]
+
+> f37-fortune-caravan@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'caravan-gold',
+    core: 'lines',
+    feature: 'travelling-wild',
+    samples: 6000,
+    features: 660,
+    motions: [ 'move' ]
+  },
+  {
+    id: 'sapphire-oasis',
+    core: 'ways',
+    feature: 'sticky-free',
+    samples: 6000,
+    features: 221,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'ruby-bazaar',
+    core: 'lines',
+    feature: 'mystery-free',
+    samples: 6000,
+    features: 211,
+    motions: [ 'respin', 'transform' ]
+  },
+  {
+    id: 'crown-voyage',
+    core: 'clusters',
+    feature: 'cluster-bomb',
+    samples: 6000,
+    features: 3214,
+    motions: [ 'drop' ]
+  }
+]
+
+> f37-fortune-caravan@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'caravan-gold',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 356,
+    featurePaidHits: 266,
+    coreHits: 867,
+    coreReturn: 0.6225777777777778,
+    hits: 1024,
+    sampleReturn: 0.9489777777777778,
+    layoutVariants: 1
+  },
+  {
+    id: 'sapphire-oasis',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 124,
+    featurePaidHits: 122,
+    coreHits: 1909,
+    coreReturn: 0.7604462962962963,
+    hits: 1966,
+    sampleReturn: 1.0216722222222223,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-bazaar',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 113,
+    featurePaidHits: 109,
+    coreHits: 1606,
+    coreReturn: 0.7901333333333334,
+    hits: 1670,
+    sampleReturn: 0.9586,
+    layoutVariants: 1
+  },
+  {
+    id: 'crown-voyage',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1606,
+    featurePaidHits: 916,
+    coreHits: 1606,
+    coreReturn: 0.3172833333333333,
+    hits: 1606,
+    sampleReturn: 0.9430111111111111,
+    layoutVariants: 1
+  }
+]
+
+> f37-fortune-caravan@1.0.0 test:guardians
+> node --import tsx tools/guardian-test.ts
+
+PASS 11568 guardian poses, 2140080 planted-point checks, 36647424 non-inverting triangles; cue priority, tap cooldown, pause and reduced motion.
+PASS guardian detail polish: 6660 edge-safe mesh samples, reusable poses, cue crossfade, no repeated-cue reset, measured/pooled jewel reflections and cleanup.
+PASS 9632 authored choreography checks: eight scene-specific clips, distinct wave counts/holds/reversals, resting intervals, runtime cue continuity, and actual lobby/cabinet routing.
+PASS prosperity: eight inward palm/feather tracks; measured high-quality coin art, pooled runtime invitation and no new audio.
+PASS 21344 prosperity coin samples: below-face arcs, complete coin seat bounds, reuse, rest, cue suppression, reduced motion and safe handoff.
+PASS character refinement: 12 original-ratio/foot-anchored seats, 8496 rigid facial/held-treasure checks, bounded anatomy and alpha-safe clamped textures.
+
+> f37-fortune-caravan@1.0.0 test:audio
+> node --import tsx tools/audio-test.ts
+
+PASS audio: full award score / percussion, visual-clock cadence, skip/mute/background/gesture-lock/stale-lease cleanup; independent settings, persistence/rollback, 5 distinct compositions / tempos, theme timbres and stereo envelopes, cue debounce, bounded hitch recovery, voice cleanup/cap, mobile resume + background races, tactile categories
+
+> f37-fortune-caravan@1.0.0 test:audio:recordings
+> node --import tsx tools/audio-recording-test.ts
+
+PASS recorded audio: restrained EQ/gains, quiet duck/toggle recovery, no overlapping fanfare, mixer cleanup; 59 distinct AAC assets; decoded-source playback, loops/crossfade, fast toggle, effects/music independence, spin cleanup, five grades + one finale, stale/late/hidden handling, loading dedup/retry/cache/dispose
+
+> f37-fortune-caravan@1.0.0 test:audio:festive
+> node --import tsx tools/festive-audio-test.ts
+
+PASS festive audio: five original scores with joyful major harmony, single melodic lane + breathing phrases + soft bass + restrained distinct grooves, 45 performances, grade-specific cadences and unchanged visual timing
+
+> f37-fortune-caravan@1.0.0 test:award
+> node --import tsx tools/award-test.ts
+
+PASS award: 5 tiers, reduced motion, count/hold phases, deterministic bounded coin paths, exact payout decimals, local-only QA markers and cleanup
+PASS spectacle: four escalating fixed pools, 176-particle cap, reusable poses, deterministic paths, title/register keepouts, double climax, reduced-motion zero pools
+PASS spectacle polish: unchanged physical paths, advance smooth text keepouts, invisible cascade handoffs and quieter post-climax hold.
+
+> f37-fortune-caravan@1.0.0 test:life
+> node --import tsx tools/treasury-life-test.ts
+
+PASS treasury life: 136840 bounded bitmap poses, lobby captions and 4 cabinet keepouts, 64-node cap, 30Hz pooled motion, cue cooldown, background/reduced-motion freeze and listener cleanup.
+PASS detail life loops: closed rotation, coin flip, depth and opacity; measured character highlights instead of wandering facial sparkle.
+
+> f37-fortune-caravan@1.0.0 test:reel-presentation
+> node --import tsx tools/reel-presentation-test.ts
+
+PASS reel presentation: blur hysteresis, 40 motion curves, 18030 crop samples, >=2 culled buffers/column
+
+> f37-fortune-caravan@1.0.0 test:text-layout
+> node --import tsx tools/text-layout-test.ts
+
+PASS centered rule paragraphs / diagrams and bottom-carving clearance.
+PASS 500 text fits: five languages, long exact balances, joined emoji, multiline height, measured enamel seats and non-overlapping award lines.
+PASS F37 measured service actions, 320px copy, in-place hall selection lanes, journey ledger, shop showroom, rank honesty and separated account touch targets.
+PASS visible translated modal exit and bright-background podium contrast.
+PASS legible single-line login hints within measured enamel.
+PASS capped route fractions and non-destructive login room resize.
+
+> f37-fortune-caravan@1.0.0 test:caravan
+> node --import tsx tools/caravan-test.ts
+
+PASS caravan: 40 atomic settled rounds, duplicate/cancel/recovery protection, 4 account-scoped claims, persistence, remote authority guard and storage failure rollback.
+
+> f37-fortune-caravan@1.0.0 test:guardian-renderer
+> node --import tsx tools/guardian-renderer-test.ts
+
+PASS guardian renderer: 18000 completed shared-buffer frames, peak 40116 indices, bounded 50145 capacity, no upload overrun
+
+> f37-fortune-caravan@1.0.0 test:lobby-details
+> node --import tsx tools/lobby-detail-test.ts
+
+PASS bounded last-intent carousel, both wrap directions, no-op clicks, 400 cycles and page-rebuild guards.
+PASS five-language detail copy, carved rule controls, >=44px hit seats, translated SOUND and persistent resize shield.
+PASS modal resize preservation, deferred page layout, diagnostic cleanup and raw player names.
+PASS shop notice uses compact dark copy with a light contrast edge.
+
+> f37-fortune-caravan@1.0.0 test:audio:recordings
+> node --import tsx tools/audio-recording-test.ts
+
+PASS recorded audio: restrained EQ/gains, quiet duck/toggle recovery, no overlapping fanfare, mixer cleanup; 59 distinct AAC assets; decoded-source playback, loops/crossfade, fast toggle, effects/music independence, spin cleanup, five grades + one finale, stale/late/hidden handling, loading dedup/retry/cache/dispose

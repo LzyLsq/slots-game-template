@@ -1,0 +1,1254 @@
+{
+  "date": "2026-10-09",
+  "test": "Actual RGBA gutters, absence of saturated chroma-key residue, transparent portrait perimeter. This pixel audit supplements, not replaces, final render inspection.",
+  "assets": [
+    {
+      "name": "symbols",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "3c7c8d4992c37a5c9855f214d7386b92fbb959c3d9405295a9e195013e324d54",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            62,
+            62,
+            62,
+            62
+          ],
+          "visiblePixels": 53339
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            113,
+            30,
+            114,
+            31
+          ],
+          "visiblePixels": 27999
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            51,
+            93,
+            52,
+            93
+          ],
+          "visiblePixels": 37032
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            75,
+            48,
+            75,
+            49
+          ],
+          "visiblePixels": 44590
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            48,
+            48,
+            49,
+            49
+          ],
+          "visiblePixels": 63171
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            54,
+            75,
+            55,
+            76
+          ],
+          "visiblePixels": 40064
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            46,
+            36,
+            46,
+            36
+          ],
+          "visiblePixels": 67819
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            43,
+            58,
+            44,
+            58
+          ],
+          "visiblePixels": 52518
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            53,
+            57,
+            53,
+            57
+          ],
+          "visiblePixels": 56473
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            59,
+            62,
+            60,
+            63
+          ],
+          "visiblePixels": 21588
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            51,
+            56,
+            52,
+            57
+          ],
+          "visiblePixels": 49652
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            59,
+            54,
+            59,
+            54
+          ],
+          "visiblePixels": 54759
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            51,
+            52,
+            52,
+            52
+          ],
+          "visiblePixels": 50784
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            81,
+            52,
+            82,
+            52
+          ],
+          "visiblePixels": 56072
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            50,
+            44,
+            50,
+            44
+          ],
+          "visiblePixels": 51630
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            75,
+            42,
+            75,
+            42
+          ],
+          "visiblePixels": 50443
+        }
+      ]
+    },
+    {
+      "name": "symbols-blur",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "3ba90a4472d41ee361b306ccf6c35caaa1b8bc411c7a72aaa87e20c167deba85",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            51,
+            51,
+            51,
+            51
+          ],
+          "visiblePixels": 62575
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            105,
+            22,
+            106,
+            23
+          ],
+          "visiblePixels": 37550
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            41,
+            83,
+            43,
+            83
+          ],
+          "visiblePixels": 45594
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            64,
+            37,
+            64,
+            38
+          ],
+          "visiblePixels": 55662
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            38,
+            38,
+            40,
+            39
+          ],
+          "visiblePixels": 75043
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            44,
+            68,
+            45,
+            65
+          ],
+          "visiblePixels": 55090
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            36,
+            27,
+            36,
+            27
+          ],
+          "visiblePixels": 80456
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            33,
+            50,
+            34,
+            48
+          ],
+          "visiblePixels": 66086
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            42,
+            46,
+            42,
+            46
+          ],
+          "visiblePixels": 67130
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            48,
+            52,
+            51,
+            54
+          ],
+          "visiblePixels": 33029
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            42,
+            47,
+            43,
+            48
+          ],
+          "visiblePixels": 59241
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            50,
+            44,
+            50,
+            43
+          ],
+          "visiblePixels": 65931
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            42,
+            43,
+            43,
+            44
+          ],
+          "visiblePixels": 60457
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            70,
+            41,
+            71,
+            41
+          ],
+          "visiblePixels": 66028
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            42,
+            36,
+            41,
+            34
+          ],
+          "visiblePixels": 70309
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            64,
+            31,
+            64,
+            31
+          ],
+          "visiblePixels": 61329
+        }
+      ]
+    },
+    {
+      "name": "interfaces",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "ef18f5b01d3ef02dfc41e0905c1c55b7b964f6cfb2adaad4a220e43506c6bfde",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            53,
+            57,
+            53,
+            57
+          ],
+          "visiblePixels": 56473
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            43,
+            58,
+            44,
+            58
+          ],
+          "visiblePixels": 52518
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            51,
+            93,
+            52,
+            93
+          ],
+          "visiblePixels": 37032
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            53,
+            57,
+            53,
+            57
+          ],
+          "visiblePixels": 56473
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            54,
+            75,
+            55,
+            76
+          ],
+          "visiblePixels": 40064
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            75,
+            42,
+            75,
+            42
+          ],
+          "visiblePixels": 50443
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            62,
+            62,
+            62,
+            62
+          ],
+          "visiblePixels": 53339
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            46,
+            36,
+            46,
+            36
+          ],
+          "visiblePixels": 67819
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            75,
+            48,
+            75,
+            49
+          ],
+          "visiblePixels": 44590
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            59,
+            62,
+            60,
+            63
+          ],
+          "visiblePixels": 21588
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            59,
+            54,
+            59,
+            54
+          ],
+          "visiblePixels": 54759
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            51,
+            56,
+            52,
+            57
+          ],
+          "visiblePixels": 49652
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            51,
+            52,
+            52,
+            52
+          ],
+          "visiblePixels": 50784
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            48,
+            48,
+            49,
+            49
+          ],
+          "visiblePixels": 63171
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            50,
+            44,
+            50,
+            44
+          ],
+          "visiblePixels": 51630
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            113,
+            30,
+            114,
+            31
+          ],
+          "visiblePixels": 27999
+        }
+      ]
+    },
+    {
+      "name": "portraits",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "49fab88e715c16286eaf0f6767d470582fbb226235375a87b8a4a2c523f4ba5d",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            22,
+            18,
+            22,
+            18
+          ],
+          "visiblePixels": 34035
+        },
+        {
+          "cell": 1,
+          "transparentGutters": [
+            18,
+            32,
+            18,
+            33
+          ],
+          "visiblePixels": 32117
+        },
+        {
+          "cell": 2,
+          "transparentGutters": [
+            24,
+            18,
+            24,
+            18
+          ],
+          "visiblePixels": 21449
+        },
+        {
+          "cell": 3,
+          "transparentGutters": [
+            18,
+            30,
+            18,
+            31
+          ],
+          "visiblePixels": 31130
+        },
+        {
+          "cell": 4,
+          "transparentGutters": [
+            22,
+            18,
+            22,
+            18
+          ],
+          "visiblePixels": 34035
+        },
+        {
+          "cell": 5,
+          "transparentGutters": [
+            18,
+            32,
+            18,
+            33
+          ],
+          "visiblePixels": 32117
+        },
+        {
+          "cell": 6,
+          "transparentGutters": [
+            24,
+            18,
+            24,
+            18
+          ],
+          "visiblePixels": 21449
+        },
+        {
+          "cell": 7,
+          "transparentGutters": [
+            18,
+            30,
+            18,
+            31
+          ],
+          "visiblePixels": 31130
+        },
+        {
+          "cell": 8,
+          "transparentGutters": [
+            22,
+            18,
+            22,
+            18
+          ],
+          "visiblePixels": 34035
+        },
+        {
+          "cell": 9,
+          "transparentGutters": [
+            18,
+            32,
+            18,
+            33
+          ],
+          "visiblePixels": 32117
+        },
+        {
+          "cell": 10,
+          "transparentGutters": [
+            24,
+            18,
+            24,
+            18
+          ],
+          "visiblePixels": 21449
+        },
+        {
+          "cell": 11,
+          "transparentGutters": [
+            18,
+            30,
+            18,
+            31
+          ],
+          "visiblePixels": 31130
+        },
+        {
+          "cell": 12,
+          "transparentGutters": [
+            22,
+            18,
+            22,
+            18
+          ],
+          "visiblePixels": 34035
+        },
+        {
+          "cell": 13,
+          "transparentGutters": [
+            18,
+            32,
+            18,
+            33
+          ],
+          "visiblePixels": 32117
+        },
+        {
+          "cell": 14,
+          "transparentGutters": [
+            24,
+            18,
+            24,
+            18
+          ],
+          "visiblePixels": 21449
+        },
+        {
+          "cell": 15,
+          "transparentGutters": [
+            18,
+            30,
+            18,
+            31
+          ],
+          "visiblePixels": 31130
+        }
+      ]
+    },
+    {
+      "name": "guardian-caravan-gold",
+      "width": 436,
+      "height": 614,
+      "sha256": "1028f8960fb719a7507a20cf6752d53c432a808ce040f45fac1e16b2187710b1",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 132783
+        }
+      ]
+    },
+    {
+      "name": "guardian-sapphire-oasis",
+      "width": 508,
+      "height": 602,
+      "sha256": "0541d9e267bb42e9a21c022557a50a8fe99faa9b5392b63e089c42983c9a55c8",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 162981
+        }
+      ]
+    },
+    {
+      "name": "guardian-ruby-bazaar",
+      "width": 431,
+      "height": 620,
+      "sha256": "52ab4d0b3c9381080d9d44d77af78e44dff5dae5988e342f4acf5afcbf354d93",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 136761
+        }
+      ]
+    },
+    {
+      "name": "guardian-crown-voyage",
+      "width": 507,
+      "height": 612,
+      "sha256": "e8de8f66735128eade97fa38ca9c7f00e02b18c1e4aa4572be30899acdd86b2a",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 153527
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-0",
+      "width": 255,
+      "height": 253,
+      "sha256": "62db41c7529ac313b5acc3071288d5d2838da6f52f487256fc612bbe02d1c69d",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 51578
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-1",
+      "width": 221,
+      "height": 219,
+      "sha256": "fa453977f6fab234b29b3983947c463d49db15cd63877183dca4abf859d563e6",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 35508
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-2",
+      "width": 217,
+      "height": 219,
+      "sha256": "e3f89a6d64117080a1bc270ce9ef99eaf9af3df5054990b1993055535fcfdd08",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 34785
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-3",
+      "width": 352,
+      "height": 184,
+      "sha256": "e72cf195c7efa356ca667fc60fc03d01f94f84e78f4fff902b23af1fabf6669e",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 59843
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-4",
+      "width": 256,
+      "height": 260,
+      "sha256": "9324b753ca9277d09bb9bb46d0b4f52775e48eeb610f2876cfd81cb00ed97a41",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 53389
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-5",
+      "width": 220,
+      "height": 222,
+      "sha256": "a244ad960967dd1168f1f236763249c5a5cd0fc6f7eac28521e61f2000a3739d",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 35858
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-6",
+      "width": 219,
+      "height": 225,
+      "sha256": "cad9b713652bc3b7b7347e3125ec2eb9fd800e0c577381831af499d2a5130b3a",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 36066
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-7",
+      "width": 352,
+      "height": 188,
+      "sha256": "3eb5aa44874f1397ddf55120c946adfcb6fcbcc8d7b323861811d14688c0afc2",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 61265
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-8",
+      "width": 256,
+      "height": 260,
+      "sha256": "b742b8d95b601a0b1579fb2e1b20b8554e7ad894d0635d7a30e511fba2f0b18d",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 53496
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-9",
+      "width": 221,
+      "height": 223,
+      "sha256": "1077cac71bc67175b85c008120df0786c3fa21fdf30e0f871ad78ae1809c0aee",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 36018
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-10",
+      "width": 220,
+      "height": 225,
+      "sha256": "b68c0bcec1141bb6be22c96dc38aeaec24ca8a7eee9a89058067c6e29060126a",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 36375
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-11",
+      "width": 356,
+      "height": 187,
+      "sha256": "81ae1c864311c5ca2a63d99a24609d37d006a84440d53f2e70f2346c8dbd6cfc",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 61615
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-12",
+      "width": 256,
+      "height": 265,
+      "sha256": "576ee93a9105de86ecb3c9190709397fb4dc30480cc22fdc5bad37ac51dbc5d9",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 54534
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-13",
+      "width": 224,
+      "height": 226,
+      "sha256": "0a7107257a2770de01c155b9cd97b09095254e717f8ed70a066e7f1341d174fc",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 37186
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-14",
+      "width": 226,
+      "height": 230,
+      "sha256": "fdc1613b00de0ea021f436e17a9bdb30b45d70832283f5b5d7bee44d41314aae",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 38227
+        }
+      ]
+    },
+    {
+      "name": "caravan-button-15",
+      "width": 356,
+      "height": 192,
+      "sha256": "f934996e54433b6efee8151975b8c5da8ffc9aed0d493358392cddb08e70a750",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "visiblePixels": 63312
+        }
+      ]
+    },
+    {
+      "name": "caravan-brand",
+      "width": 427,
+      "height": 224,
+      "sha256": "1bea62f7f39211208eb07ba38e62e396b2c1aecc6e108a0532fb26f0b3c89577",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 53236
+        }
+      ]
+    },
+    {
+      "name": "heading-login",
+      "width": 482,
+      "height": 218,
+      "sha256": "30ad3eb4774a6a83659b105e0d462f47d85e8e942da78747f46121bbd49e9d39",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 57578
+        }
+      ]
+    },
+    {
+      "name": "heading-shop",
+      "width": 456,
+      "height": 258,
+      "sha256": "8487de0317649fcc4572e45a90cc46ed7d0558d7ea6f3948956c406fffbdc450",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 50574
+        }
+      ]
+    },
+    {
+      "name": "heading-rewards",
+      "width": 480,
+      "height": 254,
+      "sha256": "d2fe0f7885e683fe7d60df598f0b5de8529d5232429ea5dbc1f2eb13e5537870",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 51743
+        }
+      ]
+    },
+    {
+      "name": "heading-rank",
+      "width": 474,
+      "height": 272,
+      "sha256": "0b86f9965e62ecb9513ecb2651104d577593ac206cd1ac77be9d3383dd445b91",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 54413
+        }
+      ]
+    },
+    {
+      "name": "heading-account",
+      "width": 481,
+      "height": 272,
+      "sha256": "f4a73f427940879ed0cbb4eff1f64fa3db3e4e94915ce34cada9dc6559da42b2",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 52600
+        }
+      ]
+    },
+    {
+      "name": "award-title-big",
+      "width": 478,
+      "height": 272,
+      "sha256": "4466d1db1132acd7d16fa594a0a41dddd2c7d6b1e31a5f2de614dd62c93aeae6",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 54709
+        }
+      ]
+    },
+    {
+      "name": "award-title-super",
+      "width": 479,
+      "height": 216,
+      "sha256": "eae544ab13f16e691da232fdc68a0f3c3303b4cbb273ddfc3fe93615e2ec47a2",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 58470
+        }
+      ]
+    },
+    {
+      "name": "caravan-title-0",
+      "width": 480,
+      "height": 186,
+      "sha256": "bd79e022dd2ac8510939cae80d8dc96a59fef4274a61e446c90f747e34d56459",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 45950
+        }
+      ]
+    },
+    {
+      "name": "caravan-title-1",
+      "width": 481,
+      "height": 200,
+      "sha256": "a6d3ea6838aaeafa96e69f903c76f2c0d45053d29461991afba1f809a85c0503",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 50656
+        }
+      ]
+    },
+    {
+      "name": "caravan-title-2",
+      "width": 461,
+      "height": 210,
+      "sha256": "eef8ef2a44139e7ba83deecb529515302d0d3dfc6625367c85f8a8e868c0e52c",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 52246
+        }
+      ]
+    },
+    {
+      "name": "caravan-title-3",
+      "width": 456,
+      "height": 221,
+      "sha256": "1998ef442d5aff1baea49ee9a7c2d80a79af60fa521865889c4ac4617e4dadd2",
+      "cells": [
+        {
+          "cell": 0,
+          "transparentGutters": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "visiblePixels": 48574
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "testedAt": "2026-10-10T03:08:51.895Z",
+  "buildFinishedAt": "2026-10-10T03:03:30Z",
+  "reloadAt": "2026-10-10T03:04:14.024Z",
+  "finalBuildChecks": [
+    {
+      "check": "home-final-build",
+      "viewport": [
+        390,
+        844
+      ],
+      "selection": {
+        "index": 0,
+        "id": "caravan-gold",
+        "moving": false,
+        "target": 0
+      },
+      "screenshot": "screenshots/detail-refinement-home-390.jpg"
+    },
+    {
+      "check": "gold-cabinet",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": {
+        "id": "caravan-gold",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.04832884729356,
+        "y": 192.43640397532124,
+        "perimeter": [
+          "centre-left",
+          "bottom-left",
+          "bottom-centre",
+          "centre-right",
+          "bottom-right"
+        ]
+      }
+    },
+    {
+      "check": "rules-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "shield": {
+        "width": 1080,
+        "height": 2337.230769230769
+      },
+      "screenshot": "screenshots/detail-refinement-rules-390.jpg"
+    },
+    {
+      "check": "rules-next",
+      "observedPage": "2 / 7"
+    },
+    {
+      "check": "rules-320-and-prev",
+      "viewport": [
+        320,
+        568
+      ],
+      "observedPage": "1 / 7",
+      "shield": {
+        "width": 1081.6901408450703,
+        "height": 1920
+      },
+      "screenshot": "screenshots/detail-refinement-rules-320.jpg"
+    },
+    {
+      "check": "rules-phone-to-tablet",
+      "viewport": [
+        768,
+        1024
+      ],
+      "observedPage": "1 / 7",
+      "shield": {
+        "width": 1440,
+        "height": 1920
+      },
+      "screenshot": "screenshots/detail-refinement-rules-tablet.jpg"
+    },
+    {
+      "check": "sound-options",
+      "viewport": [
+        390,
+        844
+      ],
+      "changedSettings": false
+    },
+    {
+      "check": "enter-during-selection-slide",
+      "beforePlay": {
+        "index": 1,
+        "id": "sapphire-oasis",
+        "moving": true,
+        "target": 1
+      }
+    },
+    {
+      "check": "oasis-cabinet",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": {
+        "id": "sapphire-oasis",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2445312499999999,
+        "y": 80.81538461538457,
+        "perimeter": []
+      },
+      "screenshot": "screenshots/detail-refinement-oasis-390.jpg"
+    },
+    {
+      "check": "bazaar-cabinet",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": {
+        "id": "ruby-bazaar",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2049592699818346,
+        "y": 111.20666526933564,
+        "perimeter": []
+      },
+      "screenshot": "screenshots/detail-refinement-bazaar-390.jpg"
+    },
+    {
+      "check": "voyage-cabinet",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": {
+        "id": "crown-voyage",
+        "rooms": 1,
+        "independentBackdrop": false,
+        "width": 1080,
+        "height": 2337.230769230769,
+        "scale": 1.2445312499999999,
+        "y": 80.81538461538457,
+        "perimeter": []
+      },
+      "loadingScreenshot": "screenshots/detail-refinement-voyage-loading-390.jpg"
+    },
+    {
+      "check": "final-home-320",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "selection": "{\"index\":3,\"id\":\"crown-voyage\",\"moving\":false,\"target\":3}",
+      "result": "大厅模式短名、玩法提示、开始入口、旅途进度及底栏在框内；无按钮重叠",
+      "screenshot": "screenshots/detail-refinement-home-320.jpg"
+    }
+  ],
+  "earlierBuildChecks": {
+    "note": "加载页漏译补齐前的真实浏览器测试；轮播代码与最终构建一致，非最终构建重测",
+    "checks": [
+      {
+        "check": "home-first-load",
+        "viewport": [
+          390,
+          844
+        ],
+        "selection": {
+          "index": 0,
+          "id": "caravan-gold",
+          "moving": false,
+          "target": 0
+        },
+        "screenshot": "screenshots/detail-refinement-home-390.jpg"
+      },
+      {
+        "check": "three-next-taps",
+        "selection": {
+          "index": 3,
+          "id": "crown-voyage",
+          "moving": false,
+          "target": 3
+        }
+      },
+      {
+        "check": "both-wrap-directions",
+        "forward": {
+          "index": 0,
+          "id": "caravan-gold",
+          "moving": true,
+          "target": 0
+        },
+        "backward": {
+          "index": 3,
+          "id": "crown-voyage",
+          "moving": true,
+          "target": 3
+        }
+      }
+    ]
+  },
+  "defaultViewport": {
+    "canvas": {
+      "height": 879,
+      "width": 794,
+      "x": 0,
+      "y": 0
+    },
+    "selection": "{\"index\":3,\"id\":\"crown-voyage\",\"moving\":false,\"target\":3}",
+    "viewport": {
+      "height": 879,
+      "width": 794
+    }
+  },
+  "viewportOverrideReset": true,
+  "consoleSinceFinalReload": [],
+  "consoleCaptured": [],
+  "limits": [
+    "本轮最终构建验收未旋转、购买或领奖",
+    "余额最终reload后37,658，BET80；不声称历史整个会话余额不变",
+    "没有主观音乐试听、真机帧率或App Store发行验收",
+    "静态截图为真实Web渲染，不代表动画视频"
+  ]
+}

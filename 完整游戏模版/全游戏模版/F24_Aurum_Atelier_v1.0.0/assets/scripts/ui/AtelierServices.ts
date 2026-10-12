@@ -130,7 +130,7 @@ function profile(app:any,stage:Node):void{
  stats.forEach(([label,value],i)=>{const y=114-i*76;copy(document,label,-208,y,391,67,34);copy(document,amount(value),237,y,391,71,42);if(i<3)stroke(document,0,y-38,746,'#D8C69F');});
  const contacts=box(stage,'Desk utilities',0,-343,940,154);
  button(app,contacts,'Open correspondence',-235,0,448,132,'Mail',()=>app.mail(),true);button(app,contacts,'Open coin journal',235,0,448,132,'COIN JOURNAL',()=>app.history(),true);
- button(app,stage,'Language',-234,-491,448,87,'Language',()=>app.languages(),true);button(app,stage,'Privacy',234,-491,448,87,'Privacy',()=>app.legal('privacy'),true);
+ button(app,stage,'Language',-312,-491,286,87,'Language',()=>app.languages(),true);button(app,stage,'Privacy',0,-491,286,87,'Privacy',()=>app.legal('privacy'),true);button(app,stage,'Credits',312,-491,286,87,'Credits',()=>window.dispatchEvent(new Event('game-music-credits')),true);
  button(app,stage,'Sign out',-234,-603,448,87,'Sign out',()=>void app.signOut());button(app,stage,'Delete account',234,-603,448,87,'Delete account',()=>app.deleteAccount(),true);
 }
 /** Call at the beginning of the matching legacy page method; true means rendered. */

@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F16_Treasure_Jamboree_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Cheery Monday",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cheery%20Monday.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700065",
+      "isrc": "USUAN1700065",
+      "published": "2017-08-14",
+      "sourceSha256": "841afe54871ec09fc0655ab4009222027c1679e17f653f82540dca4e98ebec3e",
+      "file": "music-home.m4a",
+      "sha256": "9ff7ccd05d6bad06c964d126ba076187ed43f4cb3356912958f5cc1a0ad67dd5",
+      "duration": 74.29411764705883,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Carpe Diem",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carpe%20Diem.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600023",
+      "isrc": "USUAN1600023",
+      "published": "2016-04-29",
+      "sourceSha256": "b6be2c037058349a3e53eb4410e079835ce6ef69f937e890fcb94548c55712ae",
+      "file": "music-cabinet.m4a",
+      "sha256": "9d435c3f5ecabd586859db3df0ca2cc27f70aa618cd00085ec17d3c592d68013",
+      "duration": 89,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Jamboree: toy drum taps and festive treasure / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
+      "file": "win-small.m4a",
+      "sha256": "418ab3990e34266d1c310c9f79beda5ce3f2f4d298389800e27712756a79b331",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6824149659863946,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT04",
+          "sourceSha256": "7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.6574149659863946,
+          "sourceSeconds": 0.6574149659863946,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_000",
+          "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.1785034013605442,
+          "sourceSeconds": 0.1785034013605442,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT04"
+    },
+    {
+      "id": "win-big",
+      "title": "Jamboree: toy drum taps and festive treasure / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "b35d7bea586f6412be312753a50b708e9505ce86c42e5549117c18f8da00a4e6",
+      "file": "win-big.m4a",
+      "sha256": "aed1298772dfc5d2d786b34d29d50d9ac38150e43cc809a2841a6c4917b87dff",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6207369614512471,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT07",
+          "sourceSha256": "b35d7bea586f6412be312753a50b708e9505ce86c42e5549117c18f8da00a4e6",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.23879818594104307,
+          "gain": 0.205,
+          "maxSeconds": 0.3569387755102041,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT07"
+    },
+    {
+      "id": "win-mega",
+      "title": "Jamboree: toy drum taps and festive treasure / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "40d6f3fb92225d039a9196c5cda98c9366efdc837c10b9b6d01d94dfafae8ec9",
+      "file": "win-mega.m4a",
+      "sha256": "74aea2a9e681ae6dc08ad753e7176b761c6b0a57be535173bb3997475fd7bdaa",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.1574489795918366,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT11",
+          "sourceSha256": "40d6f3fb92225d039a9196c5cda98c9366efdc837c10b9b6d01d94dfafae8ec9",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9766893424036281,
+          "sourceSeconds": 0.9766893424036281,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactWood_light_004",
+          "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.9266893424036281,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT11"
+    },
+    {
+      "id": "win-epic",
+      "title": "Jamboree: toy drum taps and festive treasure / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
+      "file": "win-epic.m4a",
+      "sha256": "2070925ffe184f88e2ea23267aa2514555ddc87697cafc2620291273a5fda1a3",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6207369614512471,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT00",
+          "sourceSha256": "e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_000",
+          "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.1785034013605442,
+          "sourceSeconds": 0.1785034013605442,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.23879818594104307,
+          "gain": 0.255,
+          "maxSeconds": 0.3569387755102041,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT00"
+    },
+    {
+      "id": "win-super",
+      "title": "Jamboree: toy drum taps and festive treasure / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
+      "file": "win-super.m4a",
+      "sha256": "d1e754fc24e398e0d46929471af5bf5f12892a322421c41885d95768c61df0cf",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.6930498866213152,
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT01",
+          "sourceSha256": "ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5122902494331065,
+          "sourceSeconds": 0.5122902494331065,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.46229024943310654,
+          "gain": 0.28,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT01"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "5a7df752095065732c3c3c99d8adb36685e1631386283a0ac979c09aa2461877",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2035034013605442,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_000",
+          "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.1785034013605442,
+          "sourceSeconds": 0.1785034013605442,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/click_004",
+          "sourceSha256": "09e2c1b643b71b9aff9932b4e02d78db116446b9a14b00a5b2a9b28d2668fd8e",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.021768707482993196,
+          "sourceSeconds": 0.021768707482993196,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "d545b1d9f20e6188140aaf551a96f1e82fe0d15f7ca066fac8b065e1231e0038",
+      "file": "sfx-ui-back.wav",
+      "sha256": "8b16b0a943535697491842fcec4584101e704e1c02a12b869636102fd9aefdbe",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.465,
+      "sources": [
+        {
+          "key": "rpg/clothBelt2",
+          "sourceSha256": "d545b1d9f20e6188140aaf551a96f1e82fe0d15f7ca066fac8b065e1231e0038",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.44,
+          "sourceSeconds": 0.7533333333333333,
+          "sourceOffsetSeconds": 0.003832199546485261,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+      "file": "sfx-ui-select.wav",
+      "sha256": "694e11be1d9996452a677838a807287d10dc5298ee1f1099c8681bdb86fb7f7f",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.30000000000000004,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_004",
+          "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_004",
+          "sourceSha256": "eb6cb435f3f2ab14f85f46a2bdd9073ec511d0f1f8d8c890c6636045703a5fd4",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.26,
+          "sourceSeconds": 0.38458049886621315,
+          "sourceOffsetSeconds": 0.011519274376417234,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+      "file": "sfx-bet-up.wav",
+      "sha256": "b92b8f1ea9fd7a1da3f5a5b32906cba7536f6a98819dc4007685e44d291ef5b7",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.28700000000000003,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_004",
+          "sourceSha256": "541c19cc1ab712a9efc5765df602e7d0da09d9cafdd297ce1e19b092289fd62f",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.5035827664399093,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+      "file": "sfx-bet-down.wav",
+      "sha256": "97c9f63cbd0e84e6ff327800cab14d3803d445755f96d2f19dd63695a7e3e4cc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_000",
+          "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.1785034013605442,
+          "sourceSeconds": 0.1785034013605442,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/card-fan-1",
+          "sourceSha256": "7a9758ccad8899baef1b9f60b4064e4baa724a548293832fdaea07e6e07e638d",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.73578231292517,
+          "sourceOffsetSeconds": 0.016281179138321996,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "7a9758ccad8899baef1b9f60b4064e4baa724a548293832fdaea07e6e07e638d",
+      "file": "sfx-spin-start.wav",
+      "sha256": "b45aaab3be92e9733c707af36671d2f5c4cb806d47401997e8e92df6066817d9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.685,
+      "sources": [
+        {
+          "key": "casino/card-fan-1",
+          "sourceSha256": "7a9758ccad8899baef1b9f60b4064e4baa724a548293832fdaea07e6e07e638d",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.66,
+          "sourceSeconds": 0.73578231292517,
+          "sourceOffsetSeconds": 0.016281179138321996,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_light_004",
+          "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+      "file": "sfx-stop-1.wav",
+      "sha256": "7f543a72d5f098cf8fee903d01391c65b5f551eff01142a6d1ed9475f799bb34",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2035034013605442,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_000",
+          "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.1785034013605442,
+          "sourceSeconds": 0.1785034013605442,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+      "file": "sfx-stop-2.wav",
+      "sha256": "ca5119b9ae55f2e2eccbf19ab0f3ab0c4ff34e3c63d7913a407138d06ae919b8",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.18028344671201812,
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+      "file": "sfx-stop-3.wav",
+      "sha256": "8a17f3ba631bcc94543c03fdada1a787bafb937f23d49bada5c2b1b08de9a6e0",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.29638321995464856,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_004",
+          "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+      "file": "sfx-coin-1.wav",
+      "sha256": "51c583270c6d32b71d2a67fbfb1845d3d52d1662102faaa4f299cf307219580c",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2307596371882086,
+      "sources": [
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+      "file": "sfx-coin-2.wav",
+      "sha256": "b1b4026bcfcb104e43cab0bb6506a8f4769b6293dc7408c24139298612d22a63",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.245,
+      "sources": [
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+      "file": "sfx-coin-3.wav",
+      "sha256": "82da8f486b70274610909e0b33c447f1ad1bd4cca86fc088eb91b1833e905a3b",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2485034013605442,
+      "sources": [
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_000",
+          "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.1785034013605442,
+          "sourceSeconds": 0.1785034013605442,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+      "file": "sfx-burst.wav",
+      "sha256": "c07eb3bcead9bf2e9756ecd0b52301d951093bdf3ed8fa75e69e10b2517c7341",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.3819387755102041,
+      "sources": [
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.3569387755102041,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactWood_light_004",
+          "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "7a9758ccad8899baef1b9f60b4064e4baa724a548293832fdaea07e6e07e638d",
+      "file": "sfx-reveal.wav",
+      "sha256": "b735003f86e6075e1347b4d877981909a984a932733ded316ead9ae0ee984b09",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.665,
+      "sources": [
+        {
+          "key": "casino/card-fan-1",
+          "sourceSha256": "7a9758ccad8899baef1b9f60b4064e4baa724a548293832fdaea07e6e07e638d",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.64,
+          "sourceSeconds": 0.73578231292517,
+          "sourceOffsetSeconds": 0.016281179138321996,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_000",
+          "sourceSha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.1785034013605442,
+          "sourceSeconds": 0.1785034013605442,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+      "file": "sfx-collect.wav",
+      "sha256": "85bd6b713b256d80bddf6cc0952372559f974385f893c7eaa19c350e7f8e6c9b",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.2307596371882086,
+      "sources": [
+        {
+          "key": "casino/chips-collide-2",
+          "sourceSha256": "2a10c5ff4b2fbaa55a317fc258ddce3fec85bd26db2d3c2ad298b3b33ce23bc6",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.2057596371882086,
+          "sourceSeconds": 0.23365079365079366,
+          "sourceOffsetSeconds": 0.027891156462585033,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_003",
+          "sourceSha256": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Jamboree: toy drum taps and festive treasure / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+      "file": "sfx-reward.wav",
+      "sha256": "fefaf6c8a0f1574fac1c328ba712511dabb6540b53f400631548119a4ce3be2a",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.4419387755102041,
+      "sources": [
+        {
+          "key": "impact/impactWood_light_004",
+          "sourceSha256": "e10009f67ddaeb3a59a3e1129cfc1615d84ba60ab578eae07e7092ac223f099c",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.27138321995464854,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-3",
+          "sourceSha256": "48cc0f01e2b62be7677f2e8c02177906cab80e96fa8176fa05b3ced35bc2a9c2",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.3569387755102041,
+          "sourceSeconds": 0.37587301587301586,
+          "sourceOffsetSeconds": 0.018934240362811793,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Carpe Diem",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carpe%20Diem.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600023",
+      "isrc": "USUAN1600023",
+      "published": "2016-04-29",
+      "sourceSha256": "b6be2c037058349a3e53eb4410e079835ce6ef69f937e890fcb94548c55712ae",
+      "file": "music-spin.m4a",
+      "sha256": "9cc99ac463de91aa55bd7b1aec26568ee6fa73f3e30ddf1db11744bdf578f24d",
+      "duration": 19.5,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 97.5,
+        "end": 117.5
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Jamboree: toy drum taps and festive treasure"
+}

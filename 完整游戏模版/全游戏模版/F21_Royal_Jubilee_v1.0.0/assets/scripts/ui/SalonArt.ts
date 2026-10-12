@@ -1,3 +1,7 @@
+import { StationaryArtwork } from '../vfx/StationaryArtwork';
+import {rewardArtwork,rewardInk,rewardTextWidth,type RewardPlateKind} from './RewardArtwork';
+import { LivingMascotRig } from '../vfx/LivingMascotRig';
+import { ThemeMotion } from '../vfx/ThemeMotion';
 import {TextFit} from './TextFit';
 import {tr,language} from './Language';
 import { Color, EventTouch, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
@@ -7,6 +11,8 @@ export class SalonArt {
   private textures = new Map<string, Texture2D>();
   private frames = new Map<string, SpriteFrame>();
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
+    await ThemeMotion.prepare();
+    await LivingMascotRig.prepare(names);
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
@@ -16,7 +22,7 @@ export class SalonArt {
         if (!this.textures.has(name)) {
           const tex = await new Promise<Texture2D>((resolve, reject) => {
             const timeout=setTimeout(()=>reject(new Error('Artwork load timed out: '+name)),20000);
-            resources.load(`art/${name}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
+            resources.load(`art/${LivingMascotRig.file(name)}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
           });
           tex.setFilters(Texture2D.Filter.LINEAR, Texture2D.Filter.LINEAR); this.textures.set(name, tex);
         }
@@ -24,6 +30,10 @@ export class SalonArt {
       }
     };
     await Promise.all([worker(), worker()]);
+  }
+  public replaceImage(node: Node, name: string, index = -1): void {
+    const sprite = node.getComponent(Sprite)!; sprite.spriteFrame = this.frame(name,index);
+    if (!LivingMascotRig.attach(sprite,name,index)) ThemeMotion.attach(sprite,name,index);
   }
   public frame(name: string, index = -1): SpriteFrame {
     const key = `${name}:${index}`; const cached = this.frames.get(key); if (cached) return cached;
@@ -53,7 +63,7 @@ export class SalonArt {
     this.frames.set(key, sf); return sf;
   }
   public image(parent: Node, name: string, x: number, y: number, w: number, h: number, index = -1): Node {
-    const n = box(parent, name, x, y, w, h); const s = n.addComponent(Sprite);
+    const n = box(parent, name, x, y, w, h); StationaryArtwork.mark(n,name); const s = n.addComponent(Sprite);
     // Set CUSTOM before the frame: RAW would overwrite the authored hit/layout box.
     s.sizeMode = Sprite.SizeMode.CUSTOM; s.spriteFrame = this.frame(name, index);
     if (name.startsWith('canopy-frame-') || name === 'surfaces' || name === 'ledgers' || (name.startsWith('canopy-plate-')||name.startsWith('canopy-soft-plate-'))) s.type = Sprite.Type.SLICED;
@@ -65,6 +75,7 @@ export class SalonArt {
       w = frame.rect.width * scale; h = frame.rect.height * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
+    if (!LivingMascotRig.attach(s,name,index)) ThemeMotion.attach(s,name,index);
     if(name==='canopy-destinations'&&index===0){
       // Theme ornaments share the card transform in the hall and loading view.
       this.image(n,'symbols',0,h*.403,w*.205,h*.205,13).name='Solar crown crest';
@@ -86,6 +97,12 @@ export class SalonArt {
     // Public material API; Sprite's old blend-factor fields are private in 3.8.
     s.getMaterialInstance(0)?.overridePipelineStates({blendState:{targets:[{blend:true,blendSrc:gfx.BlendFactor.SRC_ALPHA,blendDst:gfx.BlendFactor.ONE,blendSrcAlpha:gfx.BlendFactor.ZERO,blendDstAlpha:gfx.BlendFactor.ONE}]}});
     opacity(n,alpha);return n;
+  }
+  public rewardPanel(parent:Node,x:number,y:number,w:number,h:number,theme=0,kind:RewardPlateKind='detail'):Node {return rewardArtwork(this,parent,x,y,w,h,theme,kind);}
+  public rewardButton(parent:Node,x:number,y:number,w:number,h:number,label:string,theme:number,action:()=>void):Node {
+    const hit=box(parent,'Collect your treasure',x,y,w,h),face=this.rewardPanel(hit,0,0,w,h,theme,'button');
+    const caption=text(face,label,0,0,rewardTextWidth(w),h*.58,34,rewardInk(theme));caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
+    bindPress(hit,face,action);return hit;
   }
   public panel(parent: Node, x: number, y: number, w: number, h: number, style = 0): Node { return this.image(parent, (h>w*.5?'canopy-frame-':'canopy-soft-plate-')+[0,1,2,3][style], x,y,w,h); }
   public button(parent: Node, name: string, x: number, y: number, w: number, h: number, label: string, icon: number | undefined, action: () => void, style = 3): Node {

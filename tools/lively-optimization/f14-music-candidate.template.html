@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F14 · 音乐新旧对比候选</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101b22;--card:#1a2932;--edge:#344952;--gold:#f6d493;--muted:#b6c8ce}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f6f1;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1080px;margin:auto;padding:24px 20px 120px}h1{font-size:clamp(24px,4vw,36px);margin:8px 0}h2{font-size:22px;margin:30px 0 12px}p{margin:10px 0;color:var(--muted)}.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--gold)}.notice{padding:12px 16px;background:#22353e;border-left:3px solid var(--gold);border-radius:6px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{border:1px solid var(--edge);border-radius:12px;padding:16px;background:var(--card);min-width:0}.card.active{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}.tag{font-size:12px;border:1px solid var(--edge);border-radius:20px;padding:3px 9px;color:var(--gold)}.old .tag{color:var(--muted)}h3{font-size:17px;margin:10px 0 4px}.track-name{font-weight:600;color:var(--gold)}.detail{font-size:13px;margin:8px 0;min-height:48px}.actions{display:flex;align-items:center;gap:12px;margin-top:10px}.cue,.stop{min-height:44px;border:0;border-radius:7px;background:var(--gold);color:#17232a;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer}.old .cue{background:#304954;color:#e3edf0}.time{color:var(--muted);font-size:13px}.credits{font-size:12px;color:var(--muted);margin-top:12px;overflow-wrap:anywhere}a{color:#aedbd3}details{margin-top:24px;padding:16px;border:1px solid var(--edge);border-radius:8px}summary{cursor:pointer;color:var(--gold)}.credit-item{padding:8px 0;border-bottom:1px solid var(--edge);font-size:13px;overflow-wrap:anywhere}.dock{position:fixed;bottom:0;left:0;right:0;z-index:10;background:#15232ef5;border-top:1px solid var(--edge);padding:10px 20px}.dock-inner{max-width:1080px;margin:auto;display:flex;align-items:center;gap:12px}.now{font-size:13px;flex:1;min-width:0;overflow-wrap:anywhere}audio{width:320px;max-width:100%;height:40px}.error{color:#ffb4a5;font-size:13px}button:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}@media(max-width:700px){main{padding:18px 14px 165px}.grid{grid-template-columns:1fr}.dock-inner{flex-wrap:wrap}.now{flex-basis:calc(100% - 85px)}audio{width:100%;flex-basis:100%}.detail{min-height:0}.dock{padding:10px 14px}}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">F14 CLOUD CROWN · 独立试听候选</div>
+    <h1>换配曲，不只是换节奏。</h1>
+    <p>7 首不同作品 · 大厅双选曲 · 四个柜机各一曲 · 五级较长中奖段落</p>
+    <div class="notice">先听“大厅温暖迎宾” → “柜机新曲” → “超级大奖”，再对比旧版。此页尚未接入游戏，原 H5 / Xcode 工程未覆盖。</div>
+    <h2>新的场景配乐</h2>
+    <p>保留完整作品和原速原调。可以拖动底部进度条，听中段与后段的配器变化；正式接入仍需处理循环与场景切换。</p>
+    <section id="new-music" class="grid" aria-label="新场景配乐"></section>
+    <h2>新的中奖段落</h2>
+    <p>不是多个无关旋律拼接，也不是原声加大音量。这里是已发布作品的末段摘录，保留结尾；并非独立原创奖曲，听感和演出同步尚待确认。</p>
+    <section id="new-wins" class="grid" aria-label="新中奖段落"></section>
+    <h2>当前旧版 · 原样对比</h2>
+    <p>现有大奖声音约 1–2 秒；下面是游戏当前文件的副本，原文件未修改。</p>
+    <section id="old" class="grid" aria-label="原版对比"></section>
+    <details><summary>作品署名、许可与本样版边界</summary><div id="credits"></div><p>正式接入时要保留游戏内可访问的作品名、作者、原作与许可链接，并标注剪辑。样版仅供本项目内部选曲；不作为独立音乐库出售或上传流媒体，不提交音频指纹服务。技术解码通过不代表人工听感验收。</p><p>未改玩法、内购、签名与 WebP 图片；未做真机混音、演出同步或完整曲目的循环边界验收。</p></details>
+  </main>
+  <footer class="dock"><div class="dock-inner"><div id="now" class="now" aria-live="polite">点一个“试听”开始 · 默认音量 45%</div><button id="stop" class="stop" type="button">停止</button><audio id="player" controls preload="none"></audio></div><div id="error" class="error" role="alert"></div></footer>
+  <script id="audio-data" type="application/json">/* AUDIO_DATA */</script>
+  <script>
+    'use strict';
+    const data=JSON.parse(document.querySelector('#audio-data').textContent),player=document.querySelector('#player'),now=document.querySelector('#now'),error=document.querySelector('#error');
+    player.volume=.45;
+    let serial=0,active=null;
+    function reset(){++serial;player.pause();player.removeAttribute('src');player.load();if(active){active.classList.remove('active');active.querySelector('button').setAttribute('aria-pressed','false');active=null;}error.textContent='';}
+    document.querySelector('#stop').addEventListener('click',()=>{reset();now.textContent='已停止 · 一次只播放一个音频';});
+    function text(tag,value,cls){const e=document.createElement(tag);e.textContent=value;if(cls)e.className=cls;return e;}
+    function duration(seconds){return seconds<60?seconds.toFixed(1)+' 秒':Math.floor(seconds/60)+':'+String(Math.floor(seconds%60)).padStart(2,'0');}
+    async function playTrack(t,card,button,offset=0){reset();const request=serial;active=card;card.classList.add('active');button.setAttribute('aria-pressed','true');if(offset>0)player.addEventListener('loadedmetadata',()=>{if(request===serial)player.currentTime=offset;},{once:true});player.src=t.file;now.textContent=t.label+' · '+t.title+(offset>0?' · 中段':'');try{await player.play();}catch(e){if(request!==serial||e.name==='AbortError')return;error.textContent='播放失败：'+e.message;}}
+    for(const t of data.tracks){
+      const card=document.createElement('article');card.className='card '+t.variant;card.dataset.id=t.id;
+      card.append(text('span',t.variant==='old'?'旧版原样':t.fullComposition?'完整作品':'授权原作摘录','tag'),text('h3',t.label),text('div',t.title,'track-name'),text('p',t.note,'detail'));
+      const actions=document.createElement('div');actions.className='actions';const button=text('button','试听','cue');button.type='button';button.setAttribute('aria-pressed','false');button.setAttribute('aria-label','试听 '+t.label);actions.append(button);if(t.variant==='new'&&t.fullComposition){const middle=text('button','听中段','cue-mid');middle.type='button';middle.style.cssText='min-height:44px;border:1px solid #69838a;border-radius:7px;background:transparent;color:#e3edf0;padding:10px 12px;font:inherit;cursor:pointer';middle.setAttribute('aria-label','试听中段 '+t.label);middle.addEventListener('click',()=>playTrack(t,card,button,Math.floor(t.duration*.4)));actions.append(middle);}actions.append(text('span',duration(t.duration),'time'));card.append(actions);
+      card.append(text('div',t.artist+' · '+t.license,'credits'));
+      button.addEventListener('click',()=>playTrack(t,card,button));
+      document.querySelector(t.variant==='old'?'#old':t.section==='wins'?'#new-wins':'#new-music').append(card);
+    }
+    player.addEventListener('ended',()=>{if(active){active.classList.remove('active');active.querySelector('button').setAttribute('aria-pressed','false');active=null;}now.textContent='本段播放结束 · 可以听下一段或重播';});
+    player.addEventListener('error',()=>{if(player.hasAttribute('src'))error.textContent='音频加载失败，请确认 new / old 文件夹与本 HTML 保存在一起。';});
+    document.addEventListener('visibilitychange',()=>{if(document.hidden&&!player.paused){player.pause();now.textContent+=' · 离开页面已暂停';}});
+    const credits=document.querySelector('#credits');
+    for(const source of data.compositions){const item=document.createElement('div');item.className='credit-item';item.append(text('div',source.attribution));const a=document.createElement('a');a.href=source.page;a.target='_blank';a.rel='noopener noreferrer';a.textContent='原作与作者许可说明';item.append(a,document.createTextNode(' · '));const license=document.createElement('a');license.href=source.licenseUrl;license.target='_blank';license.rel='noopener noreferrer';license.textContent='CC BY 4.0';item.append(license);credits.append(item);}
+    const oldMusic=data.tracks.filter(t=>t.variant==='old'&&t.id.startsWith('old-music-'));for(const t of oldMusic){const item=text('div',t.title+' by Kevin MacLeod · CC BY 4.0 · '+t.sourceUrl,'credit-item');credits.append(item);}
+    credits.append(text('div','旧中奖素材：Kenney Vleugels · CC0 1.0；项目对原素材做了剪辑、增益与少量物件声混合。','credit-item'));
+  </script>
+</body>
+</html>

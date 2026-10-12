@@ -1,0 +1,62 @@
+{
+  "startedAt": "2026-10-12T04:02:57.779Z",
+  "scope": "Actual local desktop Xcode projects; unsigned simulator build, existing XCTest runtime/WebP/local StoreKit checks, installed-app launch, screenshot and packaged-Web hashes. Not a real iPhone, real Apple login, payment or full manual gameplay test.",
+  "delivery": "/Users/mengjunzhu/Desktop/Xcode_H5/WebP_IAP_20261010",
+  "destination": "2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9",
+  "derivedData": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/webp-iap/verification/DerivedData",
+  "out": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/lively-optimization/verification/xcode-all-20261012.EcEAro",
+  "xcode": "Xcode 26.3\nBuild version 17C529",
+  "nativeFilesProtected": 92,
+  "results": [
+    {
+      "id": 29,
+      "title": "Jade Lantern Court",
+      "project": "/Users/mengjunzhu/Desktop/Xcode_H5/WebP_IAP_20261010/F29_Jade_Lantern_Court_OC_StoreKit2_Xcode/DBGame/JadeLanternCourtH5.xcodeproj",
+      "scheme": "JadeLanternCourt-LocalTest",
+      "code": 0,
+      "timedOut": false,
+      "log": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/lively-optimization/verification/xcode-all-20261012.EcEAro/F29-xcode.log",
+      "resultBundle": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/lively-optimization/verification/xcode-all-20261012.EcEAro/F29.xcresult",
+      "tests": [
+        "testNativeVerificationRecoveryAndAccountIsolation",
+        "testPendingAndInvalidMessagesDoNotDeliver",
+        "testWebPResourcesLoadFromLocalServer",
+        "testWebPurchaseAndDurableCoins"
+      ],
+      "testSummary": "est' started at 2026-10-12 12:03:34.015.\nTest Suite 'StoreTests' started at 2026-10-12 12:03:34.015.\nTest Case '-[JadeLanternCourtTests.StoreTests testNativeVerificationRecoveryAndAccountIsolation]' started.\nTest Case '-[JadeLanternCourtTests.StoreTests testNativeVerificationRecoveryAndAccountIsolation]' passed (1.295 seconds).\nTest Case '-[JadeLanternCourtTests.StoreTests testPendingAndInvalidMessagesDoNotDeliver]' started.\nTest Case '-[JadeLanternCourtTests.StoreTests testPendingAndInvalidMessagesDoNotDeliver]' passed (0.378 seconds).\nTest Case '-[JadeLanternCourtTests.StoreTests testWebPResourcesLoadFromLocalServer]' started.\nTest Case '-[JadeLanternCourtTests.StoreTests testWebPResourcesLoadFromLocalServer]' passed (1.328 seconds).\nTest Case '-[JadeLanternCourtTests.StoreTests testWebPurchaseAndDurableCoins]' started.\n2026-10-12 12:03:37.988485+0800 JadeLanternCourtH5[79391:54850931] [assertion] Error acquiring assertion: <Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}>\n2026-10-12 12:03:37.989054+0800 JadeLanternCourtH5[79391:54850931] [ProcessSuspension] 0x11706c780 - ProcessAssertion::acquireSync Failed to acquire RBS assertion 'WebKit Media Playback' for process with PID=79400, error: Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}\n2026-10-12 12:03:37.990577+0800 JadeLanternCourtH5[79391:54850931] [assertion] Error acquiring assertion: <Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}>\n2026-10-12 12:03:37.991415+0800 JadeLanternCourtH5[79391:54850931] [ProcessSuspension] 0x11706d500 - ProcessAssertion::acquireSync Failed to acquire RBS assertion 'WebKit Media Playback' for process with PID=79391, error: Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}\n2026-10-12 12:03:37.996144+0800 JadeLanternCourtH5[79391:54850931] [assertion] Error acquiring assertion: <Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}>\n2026-10-12 12:03:37.996364+0800 JadeLanternCourtH5[79391:54850931] [ProcessSuspension] 0x11706db00 - ProcessAssertion::acquireSync Failed to acquire RBS assertion 'WebKit Media Playback' for process with PID=79407, error: Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}\n2026-10-12 12:03:40.314538+0800 JadeLanternCourtH5[79391:54850926] [assertion] Error acquiring assertion: <Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}>\n2026-10-12 12:03:40.314616+0800 JadeLanternCourtH5[79391:54850926] [ProcessSuspension] 0x11706f240 - ProcessAssertion::acquireSync Failed to acquire RBS assertion 'WebKit Media Playback' for process with PID=79400, error: Error Domain=RBSServiceErrorDomain Code=1 \"(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)\" UserInfo={NSLocalizedFailureReason=(originator doesn't have entitlement com.apple.runningboard.assertions.webkit AND originator doesn't have entitlement com.apple.multitasking.systemappassertions)}\nTest Case '-[JadeLanternCourtTests.StoreTests testWebPurchaseAndDurableCoins]' passed (3.522 seconds).\nTest Suite 'StoreTests' passed at 2026-10-12 12:03:40.540.\n\t Executed 4 tests, with 0 failures (0 unexpected) in 6.522 (6.525) seconds\nTest Suite 'JadeLanternCourtTests.xctest' passed at 2026-10-12 12:03:40.541.\n\t Executed 4 tests, with 0 failures (0 unexpected) in 6.522 (6.526) seconds\nTest Suite 'All tests' passed at 2026-10-12 12:03:40.541.\n\t Executed 4 tests, with 0 failures (0 unexpected) in 6.522 (6.527) seconds\n2026-10-12 12:03:40.879 xcodebuild[79275:54849539] [MT] IDETestOperationsObserverDebug: 18.699 elapsed -- Testing started completed.\n2026-10-12 12:03:40.879 xcodebuild[79275:54849539] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start\n2026-10-12 12:03:40.879 xcodebuild[79275:54849539] [MT] IDETestOperationsObserverDebug: 18.699 sec, +18.699 sec -- end\n\nTest session results, code coverage, and logs:\n\t/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/lively-optimization/verification/xcode-all-20261012.EcEAro/F29.xcresult\n\n** TEST SUCCEEDED **\n\nTesting started\n",
+      "app": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/webp-iap/verification/DerivedData/Build/Products/Debug-iphonesimulator/JadeLanternCourtH5.app",
+      "packagedWebFiles": 207,
+      "packagedWebP": 70,
+      "bundleId": "com.xzkj.jadelanterncourth5",
+      "launch": "com.xzkj.jadelanterncourth5: 79429",
+      "screenshot": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/lively-optimization/verification/xcode-all-20261012.EcEAro/F29-simulator.png",
+      "installedAppLaunched": true,
+      "passed": true,
+      "seconds": 48
+    },
+    {
+      "id": 30,
+      "title": "Clockwork Fortune",
+      "project": "/Users/mengjunzhu/Desktop/Xcode_H5/WebP_IAP_20261010/F30_Clockwork_Fortune_OC_StoreKit2_Xcode/DBGame/ClockworkFortuneH5.xcodeproj",
+      "scheme": "ClockworkFortune-LocalTest",
+      "passed": false,
+      "error": "Less than 1.2 GiB free; stopped to protect user files"
+    }
+  ],
+  "simulator": {
+    "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-17-5",
+    "lastBootedAt": "2026-10-12T03:34:27Z",
+    "dataPath": "/Users/mengjunzhu/Library/Developer/CoreSimulator/Devices/2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9/data",
+    "dataPathSize": 2713952256,
+    "logPath": "/Users/mengjunzhu/Library/Logs/CoreSimulator/2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9",
+    "udid": "2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9",
+    "isAvailable": true,
+    "logPathSize": 389120,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-11",
+    "state": "Booted",
+    "name": "Lively Optimization Verification"
+  },
+  "nativeFilesChanged": [],
+  "finishedAt": "2026-10-12T04:03:47.668Z",
+  "passed": false
+}

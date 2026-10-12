@@ -1,0 +1,50 @@
+
+> f29-jade-lantern-court@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1340,
+    hits: 2650,
+    sampleReturn: 0.9407481481481481,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 6,
+    rows: 3,
+    spins: 3000,
+    features: 2787,
+    hits: 2784,
+    sampleReturn: 0.9860833333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'any-reel-ways',
+    columns: 6,
+    rows: 4,
+    spins: 3000,
+    features: 418,
+    hits: 2969,
+    sampleReturn: 0.9471166666666667,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'any-reel-ways',
+    columns: 7,
+    rows: 3,
+    spins: 3000,
+    features: 2945,
+    hits: 2922,
+    sampleReturn: 0.9339740740740741,
+    layoutVariants: 1
+  }
+]

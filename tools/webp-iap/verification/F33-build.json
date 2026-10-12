@@ -1,0 +1,68 @@
+{
+  "platform": "web-mobile",
+  "debug": false,
+  "buildPath": "project://build",
+  "outputName": "web-mobile",
+  "md5Cache": false,
+  "taskName": "web-mobile",
+  "buildMode": "normal",
+  "mainBundleCompressionType": "merge_dep",
+  "packages": {
+    "adsense-h5g-plugin": {
+      "enableAdsense": false,
+      "enableTestAd": false
+    },
+    "web-mobile": {
+      "useWebGPU": false,
+      "orientation": "auto",
+      "embedWebDebugger": false
+    }
+  },
+  "name": "f33-golden_library",
+  "server": "",
+  "engineModulesConfigKey": "defaultConfig",
+  "mangleProperties": false,
+  "skipCompressTexture": false,
+  "sourceMaps": false,
+  "overwriteProjectSettings": {
+    "includeModules": {
+      "gfx-webgl2": "on",
+      "physics": "inherit-project-setting",
+      "physics-2d": "inherit-project-setting"
+    },
+    "macroConfig": {
+      "cleanupImageCache": "inherit-project-setting"
+    }
+  },
+  "nativeCodeBundleMode": "both",
+  "polyfills": {
+    "asyncFunctions": true
+  },
+  "experimentalEraseModules": false,
+  "startSceneAssetBundle": false,
+  "bundleConfigs": [],
+  "inlineEnum": true,
+  "useBuiltinServer": false,
+  "md5CacheOptions": {
+    "excludes": [],
+    "includes": [],
+    "replaceOnly": [],
+    "handleTemplateMd5Link": true
+  },
+  "mainBundleIsRemote": false,
+  "useSplashScreen": true,
+  "bundleCommonChunk": false,
+  "packAutoAtlas": true,
+  "startScene": "e6f4e0a7-9acf-497a-b5f5-a7c4490d1802",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/GildedExpress.scene",
+      "uuid": "e6f4e0a7-9acf-497a-b5f5-a7c4490d1802"
+    }
+  ],
+  "wasmCompressionMode": false,
+  "binGroupConfig": {
+    "threshold": 16,
+    "enable": false
+  }
+}

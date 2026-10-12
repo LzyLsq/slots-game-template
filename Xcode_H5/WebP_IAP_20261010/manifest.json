@@ -1,0 +1,2171 @@
+[
+  {
+    "id": 13,
+    "title": "Golden Harvest",
+    "folder": "F13_Golden_Harvest_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F13_Golden_Harvest_OC_StoreKit2_Xcode/DBGame/GoldenHarvestH5.xcodeproj",
+    "bundle": "com.xzkj.goldenharvesth5",
+    "port": 19233,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.harvest.coins.purse.v2",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "THE GOLDEN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.harvest.coins.bullion.v2",
+        "credits": 50000,
+        "bonus": 10000,
+        "label": "THE BULLION COLLECTION",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.harvest.coins.chest.v2",
+        "credits": 100000,
+        "bonus": 40000,
+        "label": "THE HARVEST TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.harvest.coins.vault.v2",
+        "credits": 200000,
+        "bonus": 120000,
+        "label": "THE HARVEST GRAND VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.aurelia.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "THE GOLDEN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.aurelia.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "THE BULLION COLLECTION",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.aurelia.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "THE HARVEST TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.aurelia.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "THE HARVEST GRAND VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 47,
+      "before": 61187890,
+      "after": 16451842,
+      "savedBytes": 44736048,
+      "originalBytes": 53012345,
+      "encodedBytes": 5442386
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F13_Golden_Harvest_OC_StoreKit2_Xcode/F13_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F13-1024.png",
+    "webBytes": 16451842,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:01.785Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F13_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Harvest: seed pods, timber and coin basket",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:47.467Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F13_H5"
+  },
+  {
+    "id": 14,
+    "title": "Cloud Crown",
+    "folder": "F14_Cloud_Crown_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F14_Cloud_Crown_OC_StoreKit2_Xcode/DBGame/CloudCrownH5.xcodeproj",
+    "bundle": "com.xzkj.cloudcrownh5",
+    "port": 19234,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.cloudcrown.coins.purse.v2",
+        "credits": 20000,
+        "bonus": 0,
+        "label": "CAPTAIN’S PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.cloudcrown.coins.bullion.v2",
+        "credits": 100000,
+        "bonus": 20000,
+        "label": "GOLDEN CARGO",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.cloudcrown.coins.chest.v2",
+        "credits": 200000,
+        "bonus": 80000,
+        "label": "ROYAL SHIPMENT",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.cloudcrown.coins.vault.v2",
+        "credits": 400000,
+        "bonus": 240000,
+        "label": "CROWN TREASURY",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.cloudcrown.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "CAPTAIN’S PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.cloudcrown.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLDEN CARGO",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.cloudcrown.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "ROYAL SHIPMENT",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.cloudcrown.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "CROWN TREASURY",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 45,
+      "before": 58452983,
+      "after": 16297951,
+      "savedBytes": 42155032,
+      "originalBytes": 50631359,
+      "encodedBytes": 5310888
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F14_Cloud_Crown_OC_StoreKit2_Xcode/F14_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F14-1024.png",
+    "webBytes": 82273079,
+    "sourceBuildRefreshedAt": "2026-10-10T08:33:20.064Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F14_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Cloud Crown: silk swish and softened crystal",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:47.596Z",
+    "approvedMusicRevision": "f14-approved-compositions-event-aligned-20261012",
+    "approvedMusicUpdatedAt": "2026-10-12T02:37:35.469Z",
+    "approvedMusicBackup": "/Users/mengjunzhu/Desktop/F14_清爽混音前备份_20261012.Is9xVZ",
+    "audioNotes": "Six authored background works: two lobby playlist entries and four cabinet tracks. Five closing award excerpts aligned to existing presentation. Spin does not restart music. Not commissioned stems or verified seamless loops.",
+    "audioMixRevision": "f14-calm-single-focus-20261012",
+    "audioMixNotes": "Sequential scene fades. Background muted during award melody, then smooth recovery. Three sparse count accents, category-throttled low-volume SFX."
+  },
+  {
+    "id": 15,
+    "title": "Honey Parade",
+    "folder": "F15_Honey_Parade_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F15_Honey_Parade_OC_StoreKit2_Xcode/DBGame/HoneyParadeH5.xcodeproj",
+    "bundle": "com.xzkj.honeyparadeh5",
+    "port": 19235,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.honeyparade.coins.purse.v2",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "HONEY POUCH",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.honeyparade.coins.bullion.v2",
+        "credits": 50000,
+        "bonus": 10000,
+        "label": "PEACH CACHE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.honeyparade.coins.chest.v2",
+        "credits": 100000,
+        "bonus": 40000,
+        "label": "GOLDEN HONEY",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.honeyparade.coins.vault.v2",
+        "credits": 200000,
+        "bonus": 120000,
+        "label": "FESTIVAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.honeyparade.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "HONEY POUCH",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.honeyparade.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "PEACH CACHE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.honeyparade.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "GOLDEN HONEY",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.honeyparade.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "FESTIVAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 66,
+      "before": 117664913,
+      "after": 20787863,
+      "savedBytes": 96877050,
+      "originalBytes": 110010105,
+      "encodedBytes": 9866668
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F15_Honey_Parade_OC_StoreKit2_Xcode/F15_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F15-1024.png",
+    "webBytes": 20787863,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:02.321Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F15_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Honey Parade: padded bounce and little hive taps",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:47.744Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F15_H5"
+  },
+  {
+    "id": 16,
+    "title": "Treasure Jamboree",
+    "folder": "F16_Treasure_Jamboree_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F16_Treasure_Jamboree_OC_StoreKit2_Xcode/DBGame/TreasureJamboreeH5.xcodeproj",
+    "bundle": "com.xzkj.treasurejamboreeh5",
+    "port": 19316,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.treasurejamboree.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.treasurejamboree.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.treasurejamboree.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.treasurejamboree.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 64,
+      "before": 49965368,
+      "after": 16520078,
+      "savedBytes": 33445290,
+      "originalBytes": 41984043,
+      "encodedBytes": 6043734
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F16_Treasure_Jamboree_v1.0.0/assets/resources/art/canopy-title-0.png",
+    "webBytes": 16520078,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:02.966Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F16_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Jamboree: toy drum taps and festive treasure",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:47.880Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F16_H5"
+  },
+  {
+    "id": 17,
+    "title": "Golden Caravan",
+    "folder": "F17_Golden_Caravan_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F17_Golden_Caravan_OC_StoreKit2_Xcode/DBGame/GoldenCaravanH5.xcodeproj",
+    "bundle": "com.xzkj.goldencaravanh5",
+    "port": 19237,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldencaravan.coins.purse.v3",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "TRAVEL PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldencaravan.coins.bullion.v3",
+        "credits": 50000,
+        "bonus": 10000,
+        "label": "BULLION CASE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldencaravan.coins.chest.v3",
+        "credits": 100000,
+        "bonus": 40000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldencaravan.coins.vault.v3",
+        "credits": 200000,
+        "bonus": 120000,
+        "label": "CARAVAN VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldencaravan.coins.purse.v2",
+        "credits": 7200,
+        "bonus": 0,
+        "label": "TRAVEL PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldencaravan.coins.bullion.v2",
+        "credits": 24000,
+        "bonus": 2400,
+        "label": "BULLION CASE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldencaravan.coins.chest.v2",
+        "credits": 60000,
+        "bonus": 9000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldencaravan.coins.vault.v2",
+        "credits": 144000,
+        "bonus": 28800,
+        "label": "CARAVAN VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldencaravan.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "TRAVEL PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldencaravan.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "BULLION CASE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldencaravan.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldencaravan.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "CARAVAN VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 59,
+      "before": 85858076,
+      "after": 19710562,
+      "savedBytes": 66147514,
+      "originalBytes": 77514714,
+      "encodedBytes": 8661938
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F17_Golden_Caravan_OC_StoreKit2_Xcode/F17_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F17-1024.png",
+    "webBytes": 19710562,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:03.594Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F17_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Caravan: leather pouch, wooden chest and coins",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:48.011Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F17_H5"
+  },
+  {
+    "id": 18,
+    "title": "Gilded Express",
+    "folder": "F18_Gilded_Express_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F18_Gilded_Express_OC_StoreKit2_Xcode/DBGame/GildedExpressH5.xcodeproj",
+    "bundle": "com.xzkj.gildedexpressh5",
+    "port": 19238,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.gildedexpress.coins.purse.v3",
+        "credits": 20000,
+        "bonus": 0,
+        "label": "TRAVEL PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.gildedexpress.coins.bullion.v3",
+        "credits": 100000,
+        "bonus": 20000,
+        "label": "BULLION CASE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.gildedexpress.coins.chest.v3",
+        "credits": 200000,
+        "bonus": 80000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.gildedexpress.coins.vault.v3",
+        "credits": 400000,
+        "bonus": 240000,
+        "label": "CARAVAN VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.gildedexpress.coins.purse.v2",
+        "credits": 10500,
+        "bonus": 0,
+        "label": "TRAVEL PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.gildedexpress.coins.bullion.v2",
+        "credits": 35000,
+        "bonus": 3500,
+        "label": "BULLION CASE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.gildedexpress.coins.chest.v2",
+        "credits": 87500,
+        "bonus": 14000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.gildedexpress.coins.vault.v2",
+        "credits": 210000,
+        "bonus": 42000,
+        "label": "CARAVAN VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.gildedexpress.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "TRAVEL PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.gildedexpress.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "BULLION CASE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.gildedexpress.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.gildedexpress.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "CARAVAN VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 59,
+      "before": 126876528,
+      "after": 20766068,
+      "savedBytes": 106110460,
+      "originalBytes": 118711516,
+      "encodedBytes": 9781482
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F18_Gilded_Express_OC_StoreKit2_Xcode/F18_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F18-1024.png",
+    "webBytes": 20766068,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:04.129Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F18_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Express: upholstered latch and brass mechanism",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:48.134Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F18_H5"
+  },
+  {
+    "id": 19,
+    "title": "Fortune Treasury",
+    "folder": "F19_Fortune_Treasury_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F19_Fortune_Treasury_OC_StoreKit2_Xcode/DBGame/FortuneTreasuryH5.xcodeproj",
+    "bundle": "com.xzkj.fortunetreasuryh5",
+    "port": 19239,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunetreasury.coins.purse.v3",
+        "credits": 50000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunetreasury.coins.bullion.v3",
+        "credits": 250000,
+        "bonus": 50000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunetreasury.coins.chest.v3",
+        "credits": 500000,
+        "bonus": 200000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunetreasury.coins.vault.v3",
+        "credits": 1000000,
+        "bonus": 600000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunetreasury.coins.purse.v2",
+        "credits": 18000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunetreasury.coins.bullion.v2",
+        "credits": 60000,
+        "bonus": 7200,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunetreasury.coins.chest.v2",
+        "credits": 150000,
+        "bonus": 27000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunetreasury.coins.vault.v2",
+        "credits": 360000,
+        "bonus": 79200,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunetreasury.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunetreasury.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunetreasury.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunetreasury.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 62,
+      "before": 190488850,
+      "after": 23131522,
+      "savedBytes": 167357328,
+      "originalBytes": 182572519,
+      "encodedBytes": 11889856
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F19_Fortune_Treasury_OC_StoreKit2_Xcode/F19_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F19-1024.png",
+    "webBytes": 23131522,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:04.684Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F19_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Treasury: rounded vault latch and coin stacks",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:48.455Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F19_H5"
+  },
+  {
+    "id": 20,
+    "title": "Golden Canopy",
+    "folder": "F20_Golden_Canopy_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F20_Golden_Canopy_OC_StoreKit2_Xcode/DBGame/GoldenCanopyH5.xcodeproj",
+    "bundle": "com.xzkj.goldencanopyh5",
+    "port": 19240,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldencanopy.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldencanopy.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldencanopy.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldencanopy.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldencanopy.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldencanopy.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldencanopy.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldencanopy.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldencanopy.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldencanopy.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldencanopy.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldencanopy.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 68,
+      "before": 155649486,
+      "after": 26161086,
+      "savedBytes": 129488400,
+      "originalBytes": 147561683,
+      "encodedBytes": 14200490
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F20_Golden_Canopy_OC_StoreKit2_Xcode/F20_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F20-1024.png",
+    "webBytes": 26161086,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:05.262Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F20_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Canopy: leafy rustle, acorn wood and treasure",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:48.960Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F20_H5"
+  },
+  {
+    "id": 21,
+    "title": "Royal Jubilee",
+    "folder": "F21_Royal_Jubilee_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F21_Royal_Jubilee_OC_StoreKit2_Xcode/DBGame/RoyalJubileeH5.xcodeproj",
+    "bundle": "com.xzkj.royaljubileeh5",
+    "port": 19261,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.royaljubilee.coins.purse.v3",
+        "credits": 30000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.royaljubilee.coins.bullion.v3",
+        "credits": 150000,
+        "bonus": 30000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.royaljubilee.coins.chest.v3",
+        "credits": 300000,
+        "bonus": 120000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.royaljubilee.coins.vault.v3",
+        "credits": 600000,
+        "bonus": 360000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.royaljubilee.coins.purse.v2",
+        "credits": 13500,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.royaljubilee.coins.bullion.v2",
+        "credits": 45000,
+        "bonus": 5400,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.royaljubilee.coins.chest.v2",
+        "credits": 112500,
+        "bonus": 20250,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.royaljubilee.coins.vault.v2",
+        "credits": 270000,
+        "bonus": 59400,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.royaljubilee.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.royaljubilee.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.royaljubilee.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.royaljubilee.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 64,
+      "before": 234312574,
+      "after": 27125792,
+      "savedBytes": 207186782,
+      "originalBytes": 226595834,
+      "encodedBytes": 16056126
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/F13-F21_20260914/F21_Royal_Jubilee_OC_StoreKit2_Xcode/F21_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon-F21-1024.png",
+    "webBytes": 27125792,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:05.897Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F21_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Royal Jubilee: satin and warm porcelain taps",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:49.513Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F21_H5"
+  },
+  {
+    "id": 22,
+    "title": "Celestial Fortune",
+    "folder": "F22_Celestial_Fortune_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F22_Celestial_Fortune_OC_StoreKit2_Xcode/DBGame/CelestialFortuneH5.xcodeproj",
+    "bundle": "com.xzkj.celestialfortuneh5",
+    "port": 19322,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.celestialfortune.coins.purse.v3",
+        "credits": 15000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.celestialfortune.coins.bullion.v3",
+        "credits": 75000,
+        "bonus": 15000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.celestialfortune.coins.chest.v3",
+        "credits": 150000,
+        "bonus": 60000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.celestialfortune.coins.vault.v3",
+        "credits": 300000,
+        "bonus": 180000,
+        "label": "GOLDEN FORGE",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.celestialfortune.coins.purse.v2",
+        "credits": 9000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.celestialfortune.coins.bullion.v2",
+        "credits": 30000,
+        "bonus": 3600,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.celestialfortune.coins.chest.v2",
+        "credits": 75000,
+        "bonus": 12750,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.celestialfortune.coins.vault.v2",
+        "credits": 180000,
+        "bonus": 39600,
+        "label": "GOLDEN FORGE",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.celestialfortune.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.celestialfortune.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.celestialfortune.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.celestialfortune.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "GOLDEN FORGE",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 64,
+      "before": 91801125,
+      "after": 19079141,
+      "savedBytes": 72721984,
+      "originalBytes": 83258698,
+      "encodedBytes": 8780324
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F22_Celestial_Fortune_v1.0.0/assets/resources/art/canopy-title-0.png",
+    "webBytes": 19079141,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:06.894Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F22_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Celestial: crystal detail and airy fabric sweep",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:49.880Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F22_H5"
+  },
+  {
+    "id": 23,
+    "title": "Golden Lamp",
+    "folder": "F23_Golden_Lamp_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F23_Golden_Lamp_OC_StoreKit2_Xcode/DBGame/GoldenLampH5.xcodeproj",
+    "bundle": "com.xzkj.goldenlamph5",
+    "port": 19323,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlamp.coins.purse.v3",
+        "credits": 25000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlamp.coins.bullion.v3",
+        "credits": 125000,
+        "bonus": 25000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlamp.coins.chest.v3",
+        "credits": 250000,
+        "bonus": 100000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlamp.coins.vault.v3",
+        "credits": 500000,
+        "bonus": 300000,
+        "label": "GOLDEN FORGE",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlamp.coins.purse.v2",
+        "credits": 12600,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlamp.coins.bullion.v2",
+        "credits": 42000,
+        "bonus": 5040,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlamp.coins.chest.v2",
+        "credits": 105000,
+        "bonus": 18900,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlamp.coins.vault.v2",
+        "credits": 252000,
+        "bonus": 55440,
+        "label": "GOLDEN FORGE",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlamp.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlamp.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlamp.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlamp.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "GOLDEN FORGE",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 61,
+      "before": 65080441,
+      "after": 18526419,
+      "savedBytes": 46554022,
+      "originalBytes": 56827127,
+      "encodedBytes": 7502368
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/assets/resources/art/canopy-title-0.png",
+    "webBytes": 18526419,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:07.834Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F23_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Golden Lamp: lamp brass, silk and treasure pouch",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:50.235Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F23_H5"
+  },
+  {
+    "id": 24,
+    "title": "Aurum Atelier",
+    "folder": "F24_Aurum_Atelier_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F24_Aurum_Atelier_OC_StoreKit2_Xcode/DBGame/AurumAtelierH5.xcodeproj",
+    "bundle": "com.xzkj.aurumatelierh5",
+    "port": 19324,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "apprentice",
+        "appleProductId": "com.publisher.aurumatelier.coins.apprentice",
+        "credits": 20000,
+        "bonus": 0,
+        "label": "Starter",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "artisan",
+        "appleProductId": "com.publisher.aurumatelier.coins.artisan",
+        "credits": 100000,
+        "bonus": 10000,
+        "label": "Artisan",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "master",
+        "appleProductId": "com.publisher.aurumatelier.coins.master",
+        "credits": 200000,
+        "bonus": 40000,
+        "label": "Master",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "patron",
+        "appleProductId": "com.publisher.aurumatelier.coins.patron",
+        "credits": 400000,
+        "bonus": 120000,
+        "label": "Patron",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 73,
+      "before": 84011778,
+      "after": 19885736,
+      "savedBytes": 64126042,
+      "originalBytes": 75597777,
+      "encodedBytes": 8694180
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F24_Aurum_Atelier_v1.0.0/assets/resources/art/canopy-title-0.png",
+    "webBytes": 19885736,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:08.402Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F24_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Atelier: delicate workshop tools and small metal pieces",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:51.820Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F24_H5"
+  },
+  {
+    "id": 25,
+    "title": "Velvet Fortune",
+    "folder": "F25_Velvet_Fortune_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F25_Velvet_Fortune_OC_StoreKit2_Xcode/DBGame/VelvetFortuneH5.xcodeproj",
+    "bundle": "com.xzkj.velvetfortuneh5",
+    "port": 19325,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "credits": 10000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.velvetfortune.coins.purse.v1",
+        "label": "PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "credits": 30000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.velvetfortune.coins.bullion.v1",
+        "label": "BULLION",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "credits": 80000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.velvetfortune.coins.chest.v1",
+        "label": "CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "credits": 200000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.velvetfortune.coins.vault.v1",
+        "label": "VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 9,
+      "before": 28515605,
+      "after": 18971568,
+      "savedBytes": 9544037,
+      "originalBytes": 14953093,
+      "encodedBytes": 1379144
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F25_Velvet_Fortune_Cocos_v1.0.0/assets/resources/art/hero0-live-bg.png",
+    "webBytes": 18971568,
+    "minimumIOS": "15.4",
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:09.169Z",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F25_H5",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Velvet: cloth-covered buttons and soft leather",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:53.184Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F25_H5"
+  },
+  {
+    "id": 26,
+    "title": "Fortune Tides",
+    "folder": "F26_Fortune_Tides_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F26_Fortune_Tides_OC_StoreKit2_Xcode/DBGame/FortuneTidesH5.xcodeproj",
+    "bundle": "com.xzkj.fortunetidesh5",
+    "port": 19326,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "deckhand",
+        "credits": 20000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.fortunetides.coins.deckhand.v1",
+        "label": "DECKHAND",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "captain",
+        "credits": 110000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.fortunetides.coins.captain.v1",
+        "label": "CAPTAIN",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "admiral",
+        "credits": 240000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.fortunetides.coins.admiral.v1",
+        "label": "ADMIRAL",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "treasure",
+        "credits": 520000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.fortunetides.coins.treasure.v1",
+        "label": "TREASURE",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 174,
+      "before": 46295531,
+      "after": 24116587,
+      "savedBytes": 22178944,
+      "originalBytes": 28921923,
+      "encodedBytes": 3957928
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F26_Fortune_Tides_v1.0.0/ios/FortuneTides/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+    "webBytes": 24116587,
+    "minimumIOS": "15.4",
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:10.119Z",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F26_H5",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Tides: rounded shell-like clicks and steel-drum phrases",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:54.388Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F26_H5"
+  },
+  {
+    "id": 27,
+    "title": "Sovereign Wealth",
+    "folder": "F27_Sovereign_Wealth_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F27_Sovereign_Wealth_OC_StoreKit2_Xcode/DBGame/SovereignWealthH5.xcodeproj",
+    "bundle": "com.xzkj.sovereignwealthh5",
+    "port": 19327,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "credits": 2500,
+        "bonus": 0,
+        "appleProductId": "com.publisher.sovereignwealth.coins.purse.v1",
+        "label": "PURSE",
+        "debugPrice": "$1.99"
+      },
+      {
+        "id": "coffer",
+        "credits": 9000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.sovereignwealth.coins.coffer.v1",
+        "label": "COFFER",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "vault",
+        "credits": 25000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.sovereignwealth.coins.vault.v1",
+        "label": "VAULT",
+        "debugPrice": "$9.99"
+      }
+    ],
+    "legacyProducts": [],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 85,
+      "before": 49598099,
+      "after": 22799152,
+      "savedBytes": 26798947,
+      "originalBytes": 33084281,
+      "encodedBytes": 2967234
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F27_Sovereign_Wealth_v1.0.0/assets/resources/f27/titles/crown-wheel.png",
+    "webBytes": 22799152,
+    "minimumIOS": "15.4",
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:10.939Z",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F27_H5",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Sovereign: polished mint latch and dense coin detail",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:55.016Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F27_H5"
+  },
+  {
+    "id": 28,
+    "title": "Treasure Regatta",
+    "folder": "F28_Treasure_Regatta_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F28_Treasure_Regatta_OC_StoreKit2_Xcode/DBGame/TreasureRegattaH5.xcodeproj",
+    "bundle": "com.xzkj.treasureregattah5",
+    "port": 19328,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "credits": 10000,
+        "bonus": 0,
+        "appleProductId": "com.publisher.treasureregatta.coins.purse.v1",
+        "label": "PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "appleProductId": "com.publisher.treasureregatta.coins.bullion.v1",
+        "label": "BULLION",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "appleProductId": "com.publisher.treasureregatta.coins.chest.v1",
+        "label": "CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "appleProductId": "com.publisher.treasureregatta.coins.vault.v1",
+        "label": "VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 19,
+      "before": 29157609,
+      "after": 35786407,
+      "savedBytes": -6628798,
+      "originalBytes": 21746230,
+      "encodedBytes": 3361746
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F28_Treasure_Regatta_v1.0.0/assets/resources/art/title.png",
+    "webBytes": 35786407,
+    "minimumIOS": "15.4",
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:11.704Z",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F28_H5",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Regatta: ship timber, rope-like cloth and treasure chest",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:55.919Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F28_H5"
+  },
+  {
+    "id": 29,
+    "title": "Jade Lantern Court",
+    "folder": "F29_Jade_Lantern_Court_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F29_Jade_Lantern_Court_OC_StoreKit2_Xcode/DBGame/JadeLanternCourtH5.xcodeproj",
+    "bundle": "com.xzkj.jadelanterncourth5",
+    "port": 19329,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.jadelanterncourt.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 70,
+      "before": 216200509,
+      "after": 27980146,
+      "savedBytes": 188220363,
+      "originalBytes": 207801041,
+      "encodedBytes": 16971832
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F29_Jade_Lantern_Court_v1.0.0/assets/resources/art/canopy-title-0.png",
+    "webBytes": 27980146,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:12.411Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F29_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Jade Lantern: jade-like porcelain and paper folds",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:56.628Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F29_H5"
+  },
+  {
+    "id": 30,
+    "title": "Clockwork Fortune",
+    "folder": "F30_Clockwork_Fortune_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F30_Clockwork_Fortune_OC_StoreKit2_Xcode/DBGame/ClockworkFortuneH5.xcodeproj",
+    "bundle": "com.xzkj.clockworkfortuneh5",
+    "port": 19330,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.clockworkfortune.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.clockworkfortune.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.clockworkfortune.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.clockworkfortune.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.clockworkfortune.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.clockworkfortune.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.clockworkfortune.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.clockworkfortune.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.clockworkfortune.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.clockworkfortune.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.clockworkfortune.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.clockworkfortune.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 68,
+      "before": 97457904,
+      "after": 23679344,
+      "savedBytes": 73778560,
+      "originalBytes": 89197103,
+      "encodedBytes": 12775272
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F30_Clockwork_Fortune_v1.0.0/assets/resources/art/canopy-title-0.png",
+    "webBytes": 23679344,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:12.989Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F30_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Clockwork: precise latch, ticks and wooden gears",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:12:58.382Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F30_H5"
+  },
+  {
+    "id": 31,
+    "title": "Fortune Carnival",
+    "folder": "F31_Fortune_Carnival_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F31_Fortune_Carnival_OC_StoreKit2_Xcode/DBGame/FortuneCarnivalH5.xcodeproj",
+    "bundle": "com.xzkj.fortunecarnivalh5",
+    "port": 19331,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunecarnival.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunecarnival.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunecarnival.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunecarnival.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunecarnival.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunecarnival.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunecarnival.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunecarnival.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunecarnival.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunecarnival.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunecarnival.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunecarnival.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 29,
+      "before": 99903140,
+      "after": 22581108,
+      "savedBytes": 77322032,
+      "originalBytes": 92279938,
+      "encodedBytes": 11536760
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F31_Fortune_Carnival_v1.0.0/assets/resources/art/apple-mark.png",
+    "webBytes": 22581108,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:13.432Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F31_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Carnival: padded spring bounce and toy accents",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:13:00.199Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F31_H5"
+  },
+  {
+    "id": 33,
+    "title": "Golden Library",
+    "folder": "F33_Golden_Library_OC_StoreKit2_Xcode",
+    "project": "/Users/mengjunzhu/Desktop/slots/slots-game-template/Xcode_H5/WebP_IAP_20261010/F33_Golden_Library_OC_StoreKit2_Xcode/DBGame/GoldenLibraryH5.xcodeproj",
+    "bundle": "com.xzkj.goldenlibraryh5",
+    "port": 19333,
+    "team": "DQK6C4RU3Y",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlibrary.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlibrary.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlibrary.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlibrary.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlibrary.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlibrary.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlibrary.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlibrary.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlibrary.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlibrary.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlibrary.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlibrary.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "WebP quality 85, exact alpha, original dimensions; no duplicate PNG fallback",
+      "count": 70,
+      "before": 96838542,
+      "after": 23727543,
+      "savedBytes": 73110999,
+      "originalBytes": 89008344,
+      "encodedBytes": 13188058
+    },
+    "iconSource": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F33_Golden_Library_v1.0.0/assets/resources/art/canopy-title-0.png",
+    "webBytes": 23727543,
+    "sourceBuildRefreshedAt": "2026-10-12T03:20:13.926Z",
+    "previousGeneratedWebBackup": "/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/profitable-win-delivery.r3F5d2/0/F33_H5",
+    "minimumIOS": "15.4",
+    "mascotAnimationRevision": "articulated-alpha-20261010",
+    "winPresentationRevision": "total-return-strictly-over-stake-20261010",
+    "musicPlaybackRevision": "authored-unique-loops-curated-pcm-feedback-20261010",
+    "feedbackRevision": "animation-events-rate-limited-count-reel-collect-20261010",
+    "situationAudioRevision": "accepted-spin-last-reel-modal-award-20261010",
+    "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+    "feedbackPalette": "Library: page turns, book binding and gentle desk taps",
+    "feedbackAudioUpdatedAt": "2026-10-10T10:13:01.303Z",
+    "calmMixRevision": "calm-single-focus-20261012",
+    "previousCalmMixWebBackup": "/Users/mengjunzhu/Desktop/其余19款_清爽混音前备份_20261012.PThw8C/previous-web/0/F33_H5"
+  }
+]

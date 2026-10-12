@@ -1,0 +1,166 @@
+{
+  "checkedAt": "2026-10-10T06:02:10.539Z",
+  "games": [
+    {
+      "id": 28,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-home.m4a",
+              "time": 0.449887,
+              "duration": 22.918095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10022885306825731,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 0.539864,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.04529311820133099,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 1.521457,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.19166023093764945,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 2.490341,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13618521351242344,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-cabinet.m4a",
+              "time": 3.478873,
+              "duration": 17.205986,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.03424530266254885,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.435442715883255,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-home.m4a",
+              "time": 3.681644,
+              "duration": 22.918095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10119651617836388,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.435442715883255,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63795/audio/music-home.m4a",
+              "time": 4.05603,
+              "duration": 22.918095,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09585913777029859,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 0.15
+        }
+      ],
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "testedAt": "2026-10-10T06:21:39.418Z",
+  "buildMain": "index.79ad2.js",
+  "buildSha256": "db61671d5b4ab76c01d6247c07179843a5f3d7a808dfec2c49f947abfe0b2ab5",
+  "records": [
+    {
+      "stage": "gold-390",
+      "observedAt": "2026-10-10T06:15:07.703Z",
+      "dom": {
+        "attrs": {
+          "data-cabinet-scene": "{\"id\":\"caravan-gold\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.04832884729356,\"y\":192.43640397532124,\"perimeter\":[\"centre-left\",\"bottom-left\",\"bottom-centre\",\"centre-right\",\"bottom-right\"]}",
+          "data-guardian-motion": "{\"id\":\"caravan-gold\",\"context\":\"cabinet\",\"clip\":\"lion-wealth-two-palm-collections\",\"time\":13.467,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[191.081,269.092],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.195,1.353,-0.058,0,-0.312,-0.304,0]}",
+          "data-lobby-selection": "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "108",
+          "data-soundtrack-cue": "tap",
+          "data-soundtrack-cue-counts": "{\"tap\":1}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "1",
+          "data-soundtrack-cue-source": "fx-tap",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "12.976",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "26",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "caravan-gold",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-caravan-gold",
+          "data-soundtrack-voices": "1"
+        },
+        "preloader": false,
+        "viewport": {
+          "h": 844,
+          "w": 390
+        }
+      }
+    },
+    {
+      "stage": "return-home-390",
+      "observedAt": "2026-10-10T06:15:14.358Z",
+      "dom": {
+        "attrs": {
+          "data-guardian-motion": "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":6.452,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.155,-0.189,0.001,0,0.166,-0.06,0]}",
+          "data-lobby-selection": "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "104",
+          "data-soundtrack-cue": "navigate",
+          "data-soundtrack-cue-counts": "{\"tap\":1,\"navigate\":1}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "2",
+          "data-soundtrack-cue-source": "fx-navigate",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "6.227",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "16",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "lobby",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-lobby",
+          "data-soundtrack-voices": "1"
+        }
+      }
+    },
+    {
+      "stage": "oasis-390",
+      "observedAt": "2026-10-10T06:15:42.767Z",
+      "dom": {
+        "attrs": {
+          "data-cabinet-scene": "{\"id\":\"sapphire-oasis\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}",
+          "data-guardian-motion": "{\"id\":\"sapphire-oasis\",\"context\":\"cabinet\",\"clip\":\"elephant-ingot-blessing-and-inward-palm\",\"time\":9.029,\"cue\":\"idle\",\"reduced\":false,\"source\":[508,602],\"rendered\":[187.407,222.084],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":1,\"degrees\":[-0.541,0.117,-0.031,0,-4.817,2.006,6]}",
+          "data-lobby-selection": "{\"index\":1,\"id\":\"sapphire-oasis\",\"moving\":false,\"target\":1}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "102",
+          "data-soundtrack-cue": "tap",
+          "data-soundtrack-cue-counts": "{\"tap\":2,\"navigate\":2}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "4",
+          "data-soundtrack-cue-source": "fx-tap",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "8.021",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "26",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "sapphire-oasis",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-sapphire-oasis",
+          "data-soundtrack-voices": "1"
+        },
+        "preloader": false,
+        "viewport": {
+          "h": 844,
+          "w": 390
+        }
+      }
+    },
+    {
+      "stage": "crown-390",
+      "observedAt": "2026-10-10T06:16:13.254Z",
+      "dom": {
+        "attrs": {
+          "data-cabinet-scene": "{\"id\":\"ruby-bazaar\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2049592699818346,\"y\":111.20666526933564,\"perimeter\":[]}",
+          "data-guardian-motion": "{\"id\":\"ruby-bazaar\",\"context\":\"cabinet\",\"clip\":\"peacock-wing-drawing-wealth-to-chest\",\"time\":7.75,\"cue\":\"idle\",\"reduced\":false,\"source\":[431,620],\"rendered\":[162.634,233.952],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.062,0.049,-0.056,0,-0.312,-0.407,0]}",
+          "data-lobby-selection": "{\"index\":2,\"id\":\"ruby-bazaar\",\"moving\":false,\"target\":2}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "98",
+          "data-soundtrack-cue": "tap",
+          "data-soundtrack-cue-counts": "{\"tap\":3,\"navigate\":4}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "7",
+          "data-soundtrack-cue-source": "fx-tap",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "6.800",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "26",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "ruby-bazaar",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-ruby-bazaar",
+          "data-soundtrack-voices": "1"
+        },
+        "preloader": false,
+        "viewport": {
+          "h": 844,
+          "w": 390
+        }
+      }
+    },
+    {
+      "stage": "crown-320",
+      "observedAt": "2026-10-10T06:16:27.741Z",
+      "dom": {
+        "attrs": {
+          "data-cabinet-scene": "{\"id\":\"ruby-bazaar\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1081.6901408450703,\"height\":1920,\"scale\":1.2069174919807215,\"y\":141.56037724987482,\"perimeter\":[]}",
+          "data-guardian-motion": "{\"id\":\"ruby-bazaar\",\"context\":\"cabinet\",\"clip\":\"peacock-wing-drawing-wealth-to-chest\",\"time\":22.217,\"cue\":\"idle\",\"reduced\":false,\"source\":[431,620],\"rendered\":[162.634,233.952],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.219,-0.212,-0.009,0,0,-0.239,0]}",
+          "data-lobby-selection": "{\"index\":2,\"id\":\"ruby-bazaar\",\"moving\":false,\"target\":2}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "98",
+          "data-soundtrack-cue": "tap",
+          "data-soundtrack-cue-counts": "{\"tap\":3,\"navigate\":4}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "7",
+          "data-soundtrack-cue-source": "fx-tap",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "21.664",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "26",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "ruby-bazaar",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-ruby-bazaar",
+          "data-soundtrack-voices": "1"
+        },
+        "preloader": false,
+        "viewport": {
+          "h": 568,
+          "w": 320
+        }
+      }
+    },
+    {
+      "stage": "rules-320",
+      "observedAt": "2026-10-10T06:16:41.634Z",
+      "dom": {
+        "dialog": "{\"width\":1081.6901408450703,\"height\":1920}",
+        "transition": null,
+        "viewport": {
+          "h": 568,
+          "w": 320
+        }
+      }
+    },
+    {
+      "stage": "home-320",
+      "observedAt": "2026-10-10T06:16:56.154Z",
+      "dom": {
+        "cabinet": null,
+        "scene": "lobby",
+        "transition": null,
+        "viewport": {
+          "h": 568,
+          "w": 320
+        }
+      }
+    },
+    {
+      "stage": "voyage-390",
+      "observedAt": "2026-10-10T06:18:04.283Z",
+      "dom": {
+        "attrs": {
+          "data-cabinet-scene": "{\"id\":\"crown-voyage\",\"rooms\":1,\"independentBackdrop\":false,\"width\":1080,\"height\":2337.230769230769,\"scale\":1.2445312499999999,\"y\":80.81538461538457,\"perimeter\":[]}",
+          "data-guardian-motion": "{\"id\":\"crown-voyage\",\"context\":\"cabinet\",\"clip\":\"parrot-two-inward-treasure-sweeps\",\"time\":8.301,\"cue\":\"idle\",\"reduced\":false,\"source\":[507,612],\"rendered\":[193.531,233.612],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[0.455,0.423,0.021,0,-0.758,-0.01,4.997]}",
+          "data-lobby-selection": "{\"index\":3,\"id\":\"crown-voyage\",\"moving\":false,\"target\":3}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "106",
+          "data-soundtrack-cue": "tap",
+          "data-soundtrack-cue-counts": "{\"tap\":4,\"navigate\":8}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "12",
+          "data-soundtrack-cue-source": "fx-tap",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "7.424",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "26",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "crown-voyage",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-crown-voyage",
+          "data-soundtrack-voices": "1"
+        },
+        "preloader": false,
+        "viewport": {
+          "h": 844,
+          "w": 390
+        }
+      }
+    },
+    {
+      "stage": "store-doubletap-default",
+      "observedAt": "2026-10-10T06:18:58.494Z",
+      "action": "Double-clicked Shop navigation only; no purchase action.",
+      "transitionObserved": "store",
+      "dom": {
+        "attrs": {
+          "data-guardian-motion": "{\"id\":\"crown-voyage\",\"context\":\"lobby\",\"clip\":\"parrot-treasure-three-feather-beckons\",\"time\":17.854,\"cue\":\"idle\",\"reduced\":false,\"source\":[507,612],\"rendered\":[390,470.769],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":0,\"degrees\":[-0.113,0.028,-0.056,0,-0.36,-0.453,0]}",
+          "data-lobby-selection": "{\"index\":3,\"id\":\"crown-voyage\",\"moving\":false,\"target\":3}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "104",
+          "data-soundtrack-cue": "tap",
+          "data-soundtrack-cue-counts": "{\"tap\":5,\"navigate\":9}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "14",
+          "data-soundtrack-cue-source": "fx-tap",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "26.353",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "16",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "lobby",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-lobby",
+          "data-soundtrack-voices": "1"
+        },
+        "preloader": false,
+        "viewport": {
+          "h": 854,
+          "w": 467
+        }
+      }
+    },
+    {
+      "stage": "profile-default",
+      "observedAt": "2026-10-10T06:19:27.522Z",
+      "dom": {
+        "dialog": null,
+        "failures": "0",
+        "music": "music-lobby",
+        "scene": "lobby",
+        "transition": null,
+        "viewport": {
+          "h": 854,
+          "w": 467
+        },
+        "voices": "1"
+      }
+    },
+    {
+      "stage": "sound-settings-default",
+      "observedAt": "2026-10-10T06:20:01.738Z",
+      "note": "Opened existing settings; Music / Effects / Vibration all ON; no toggle performed.",
+      "dom": {
+        "dialog": "{\"width\":1080,\"height\":1974.9892933618844}",
+        "effects": "true",
+        "failures": "0",
+        "music": "true"
+      }
+    },
+    {
+      "stage": "rank-default",
+      "observedAt": "2026-10-10T06:20:21.830Z",
+      "dom": {
+        "dialog": null,
+        "failures": "0",
+        "scene": "lobby",
+        "transition": null,
+        "viewport": {
+          "h": 854,
+          "w": 467
+        },
+        "voices": "1"
+      }
+    },
+    {
+      "stage": "journey-default",
+      "observedAt": "2026-10-10T06:20:43.718Z",
+      "note": "Display only; no reward claim.",
+      "dom": {
+        "dialog": null,
+        "failures": "0",
+        "scene": "lobby",
+        "transition": null,
+        "viewport": {
+          "h": 854,
+          "w": 467
+        },
+        "voices": "1"
+      }
+    },
+    {
+      "stage": "final-home-default",
+      "observedAt": "2026-10-10T06:21:39.403Z",
+      "dom": {
+        "attrs": {
+          "data-guardian-motion": "{\"id\":\"caravan-gold\",\"context\":\"lobby\",\"clip\":\"lion-prosperity-three-inward-invitations\",\"time\":17.333,\"cue\":\"idle\",\"reduced\":false,\"source\":[436,614],\"rendered\":[347.948,490],\"ratioError\":0,\"rigidFaceAndTreasure\":true,\"wealthCoins\":2,\"degrees\":[-0.815,2.908,0.065,0,0.883,0.265,0.204]}",
+          "data-lobby-selection": "{\"index\":0,\"id\":\"caravan-gold\",\"moving\":false,\"target\":0}",
+          "data-soundtrack-award-active": "false",
+          "data-soundtrack-award-voices": "0",
+          "data-soundtrack-bpm": "104",
+          "data-soundtrack-cue": "navigate",
+          "data-soundtrack-cue-counts": "{\"tap\":10,\"navigate\":11,\"toggle\":1}",
+          "data-soundtrack-cue-rate": "1",
+          "data-soundtrack-cue-sequence": "22",
+          "data-soundtrack-cue-source": "fx-navigate",
+          "data-soundtrack-effects": "true",
+          "data-soundtrack-failures": "0",
+          "data-soundtrack-guardian-voices": "0",
+          "data-soundtrack-music": "true",
+          "data-soundtrack-music-level": "0.48",
+          "data-soundtrack-music-position": "2.655",
+          "data-soundtrack-press-voices": "0",
+          "data-soundtrack-ready": "16",
+          "data-soundtrack-recorded": "true",
+          "data-soundtrack-scene": "lobby",
+          "data-soundtrack-state": "running",
+          "data-soundtrack-success-voices": "0",
+          "data-soundtrack-track": "music-lobby",
+          "data-soundtrack-voices": "1"
+        },
+        "preloader": false,
+        "viewport": {
+          "h": 854,
+          "w": 467
+        }
+      }
+    }
+  ],
+  "warnErrorLogs": [],
+  "actions": "Normal navigation, four cabinet entries/returns, Shop double-click, Rules and Sound settings inspection only. No spins, purchases, claims, wallet writes or preference toggles performed via tools.",
+  "walletObserved": {
+    "initial": 40001,
+    "final": 40001,
+    "finalAccountRounds": 38
+  },
+  "notes": [
+    "The initial audio state after reload was suspended until the first real input gesture; subsequent stable cabinet and lobby samples had recorded track, running, voices=1 and failures=0.",
+    "data-guardian-motion and data-lobby-selection may remain from the previous page on service pages; do not interpret them as currently visible guardians or current screen identity.",
+    "Temporary viewport overrides were reset; final viewport 467×854.",
+    "UI/render and audio runtime-state checks only; not device frame-rate certification, subjective audio mastering assessment or release approval."
+  ]
+}

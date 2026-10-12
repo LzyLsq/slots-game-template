@@ -1,4 +1,6 @@
-import {tierCaption, winTier} from './WinPresentation';
+import {rewardInk,rewardOutline,rewardTextWidth} from '../ui/RewardArtwork';
+import type { WinSoundCue } from '../audio/AudioManager';
+import {newcomerAwardCaption, tierCaption, winTier} from './WinPresentation';
 import {tr} from '../ui/Language';
 import { _decorator, Color, Component, EventTouch, Graphics, Label, Node, tween, UIOpacity, Vec3 } from 'cc';
 import { SalonArt, box, COLORS, opacity, outlined, text } from '../ui/SalonArt';
@@ -15,34 +17,43 @@ export class SalonWinStage extends Component {
   private countDuration=3.3;private holdUntil=5.5;private tier=0;private revealed=false;private amount=0; private elapsed=0; private lastTick=-1; private finished=false;
   private count!:Label; private hint!:Label; private group!:Node; private veil!:UIOpacity;
   private rays!:Node; private halo!:Node; private done?:()=>void; private reduced=false;
-  public setup(art:SalonArt, amount:number, height:number, reduced:boolean,multiplier=20,theme=0):Promise<void> {
-    this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=Math.max(0,winTier(multiplier)-1);
-    this.countDuration=[3.3,4.1,4.9][this.tier];this.holdUntil=this.countDuration+2.2;
+  private superCrown?:Node; private superSparks:Node[]=[];
+  private onSound?:(cue:WinSoundCue,progress:number)=>void;
+  public setup(art:SalonArt, amount:number, height:number, reduced:boolean,multiplier=20,theme=0,welcomeBonus=false,onSound?:(cue:WinSoundCue,progress:number)=>void):Promise<void> {
+    this.onSound=onSound;this.theme=Math.max(0,Math.min(3,theme));this.amount=amount;this.reduced=reduced;this.tier=Math.max(0,winTier(multiplier)-1);
+    this.countDuration=[3.3,4.2,4.7,5.1][this.tier];this.holdUntil=this.countDuration+2.2;
     const shade=box(this.node,'Warm celebration veil',0,0,1600,height);const dim=shade.addComponent(Graphics);dim.fillColor=new Color(49,24,15,150);dim.rect(-800,-height/2,1600,height);dim.fill();this.shadeAlpha=opacity(shade,255);
     this.group=box(this.node,'Celebration choreography',0,0,1080,1920);
     this.group.setScale(Math.min(1,(height-180)/1720),Math.min(1,(height-180)/1720),1);
     // Light is additive; no full-screen black card is hidden in the artwork.
     this.rays=art.light(this.group,0,0,170,1470,1470,115);
     this.halo=art.light(this.group,1,0,150,1260,1260,140);
+    // The 10x tier has its own rotating crown and orbiting starbursts.
+    if(this.tier===1&&!reduced){
+      this.superCrown=art.light(this.group,0,0,150,1510,1510,105);
+      for(let i=0;i<8;i++)this.superSparks.push(art.light(this.group,3,0,0,90,90,170));
+    }
     const stream=box(this.group,'Coin fountain',0,0,1080,1720).addComponent(SalonAtmosphere);
-    stream.setup(art,1080,1720,true,[40,52,64][this.tier]);stream.reducedMotion=reduced;
+    stream.setup(art,1080,1720,true,[40,58,64,72][this.tier]);stream.reducedMotion=reduced;
     const treasure=art.image(this.group,prizeArt(GAME_CONFIGS[this.theme].id),0,50,930,860);
     // The themed nameplate masks baked cabinet lettering without a black overlay.
-    const titlePlate=art.panel(this.group,0,635,1040,240,0);titlePlate.name='Grand win title nameplate';
-    const title=outlined(text(titlePlate,['BIG WIN','MEGA WIN','EPIC WIN'][this.tier],0,30,840,98,84,'#573225',true),'#FFF4DD',2);
+    const titlePlate=art.rewardPanel(this.group,0,635,1040,240,this.theme,'title');titlePlate.name='Grand win title nameplate';
+    const title=outlined(text(titlePlate,['BIG WIN','SUPER BIG WIN','MEGA WIN','EPIC WIN'][this.tier],0,30,rewardTextWidth(1040),98,84,rewardInk(this.theme),true),rewardOutline(this.theme),1);
     title.enableWrapText=false;
-    const subtitle=text(titlePlate,GAME_CONFIGS[this.theme].name,0,-55,840,44,28,'#573225');
+    title.overflow=Label.Overflow.SHRINK;
+    const subtitle=text(titlePlate,GAME_CONFIGS[this.theme].name,0,-55,rewardTextWidth(1040),44,28,rewardInk(this.theme));
     subtitle.enableWrapText=false;
-    const rulePlate=art.panel(this.group,0,455,940,100,0);rulePlate.name='Grand win explanation nameplate';
-    outlined(text(rulePlate,tierCaption(multiplier),0,0,800,60,27,'#573225'),'#FFF4DD',1);
+    const rulePlate=art.rewardPanel(this.group,0,455,940,100,this.theme,'detail');rulePlate.name='Grand win explanation nameplate';
+    const rule=outlined(text(rulePlate,welcomeBonus?newcomerAwardCaption():tierCaption(multiplier),0,0,rewardTextWidth(940),60,27,rewardInk(this.theme)),rewardOutline(this.theme),1);
+    rule.enableWrapText=false;rule.overflow=Label.Overflow.SHRINK;
     // Theme objects occupy the sides of the treasure, away from the title and count.
     for(let i=0;i<4;i++){const n=art.image(this.group,symbolAtlas(GAME_CONFIGS[this.theme].id),(i%2?1:-1)*(i<2?340:380),i<2?300:-180,i<2?210:145,i<2?210:145,[[8,5,0,10],[14,10,0,1],[7,10,0,6],[2,6,0,1]][this.theme][i]);this.emblems.push(n);}
-    const plate=art.panel(this.group,0,-503,871,189,0);
-    this.count=outlined(text(plate,'0',0,0,816,165,91,'#573225',false),'#FFF4DD',1);
+    const plate=art.rewardPanel(this.group,0,-503,871,189,this.theme,'amount');
+    this.count=outlined(text(plate,'0',0,0,816,165,91,rewardInk(this.theme),false),rewardOutline(this.theme),1);
     this.count.enableWrapText=false;
     for(let i=0;i<4;i++){const n=art.light(plate,3,(i%2?1:-1)*350,(i<2?1:-1)*72,105,35,0);n.name='Grand win finale glint';this.finale.push(n.getComponent(UIOpacity)!);}
     this.hint=outlined(text(this.group,'Tap to reveal the full amount',0,-649,890,78,36));
-    const collect=art.button(this.group,'Collect your treasure',0,-760,730,118,'Collect treasure',1,()=>this.advance());
+    const collect=art.rewardButton(this.group,0,-760,730,118,'Collect treasure',this.theme,()=>this.advance());
     // A button tap must not also trigger the stage's reveal/dismiss handler.
     collect.on(Node.EventType.TOUCH_END,(event:EventTouch)=>{event.propagationStopped=true;});
     this.veil=opacity(this.group,0);
@@ -57,30 +68,32 @@ export class SalonWinStage extends Component {
     this.node.on(Node.EventType.TOUCH_END,this.advance,this);
     return new Promise(resolve=>{this.done=resolve;});
   }
-  private reveal():void {
+  private reveal(manual=false):void {
     if(!this.revealed&&!this.reduced){this.finale.forEach((alpha,i)=>tween(alpha).delay(i*.06).to(.12,{opacity:225}).to(.5,{opacity:0},{easing:'sineOut'}).start());tween(this.count.node).to(.09,{scale:new Vec3(.97,.97,1)},{easing:'sineOut'}).to(.22,{scale:new Vec3(1,1,1)},{easing:'sineInOut'}).start();}
-    this.revealed=true;this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=tr(formatWinAmount(this.amount));
+    this.revealed=true;this.onSound?.(manual?'skip':'reveal',1);this.elapsed=Math.max(this.elapsed,this.countDuration);this.count.string=tr(formatWinAmount(this.amount));
     this.hint.string=tr('Added to your wallet · Tap to continue');
   }
   private advance():void {
     if(this.finished)return;
-    if(this.elapsed<this.countDuration){this.reveal();return;}
-    this.finished=true;
+    if(this.elapsed<this.countDuration){this.reveal(true);return;}
+    this.onSound?.('collect',1);this.finished=true;
     tween(this.shadeAlpha).to(this.reduced?.01:.36,{opacity:0},{easing:'sineInOut'}).start();
     tween(this.veil).to(this.reduced?.01:.36,{opacity:0},{easing:'sineInOut'}).call(()=>{this.done?.();this.done=undefined;}).start();
   }
   protected update(dt:number):void {
     if(this.finished)return;this.elapsed+=Math.min(dt,.1);
     if(!this.reduced){this.rays.angle=this.elapsed*6;this.halo.angle=-this.elapsed*4;
+      if(this.superCrown)this.superCrown.angle=this.elapsed*14;
+      this.superSparks.forEach((n,i)=>{const phase=i*Math.PI/4+this.elapsed*.38;n.setPosition(Math.cos(phase)*430,150+Math.sin(phase)*420);const s=.65+.27*Math.sin(this.elapsed*3+i);n.setScale(s,s,1);});
       this.emblems.forEach((n,i)=>{const t=this.elapsed*1.4+i*1.7,side=i%2?1:-1;n.setPosition(side*(i<2?340:380)+Math.sin(t)*12,(i<2?300:-180)+Math.sin(t*.8)*24);n.angle=Math.sin(t)*[5,4,7,6][this.theme];const scale=1+Math.sin(t*.8)*.025;n.setScale(scale,1,1);});}
     const tick=Math.floor(this.elapsed*24);
     if(tick!==this.lastTick&&this.elapsed<this.countDuration){
       this.lastTick=tick;const p=Math.min(1,Math.max(0,(this.elapsed-.55)/(this.countDuration-.55)));
-      this.count.string=tr(Math.floor(this.amount*(1-Math.pow(1-p,2.4))).toLocaleString('en-US'));
+      this.count.string=tr(Math.floor(this.amount*(1-Math.pow(1-p,2.4))).toLocaleString('en-US'));if(!this.reduced&&p>0&&p<1)this.onSound?.('count',p);
     }
     if(this.elapsed>=this.countDuration&&!this.revealed)this.reveal();
     // A completed amount is held for at least 2 seconds before auto-dismissal.
     if(this.elapsed>=this.holdUntil)this.advance();
   }
-  protected onDestroy():void {this.done?.();this.done=undefined;}
+  protected onDestroy():void {this.onSound=undefined;this.done?.();this.done=undefined;}
 }

@@ -1,0 +1,253 @@
+{
+  "date": "2026-10-10",
+  "scope": "F37 only; explicitly listed files, no git actions",
+  "originalMastersPreserved": 59,
+  "newAAC": 34,
+  "files": [
+    {
+      "path": "assets/scripts/audio/FeedbackCatalog.ts",
+      "before": null,
+      "after": "22b2f78fc19cffd70310d9b6fd250476fe10a0e4f226bf7cac51ccb53d4da0e9"
+    },
+    {
+      "path": "assets/scripts/audio/FeedbackCatalog.ts.meta",
+      "before": null,
+      "after": "b68e0c6decc50815ea6ff11429d79e564a5f2611204539eb2099a1407e0289e6"
+    },
+    {
+      "path": "assets/scripts/audio/SoundtrackCatalog.ts",
+      "before": "0179b493c113e4c99ba4492d561f43098e1c23abf011cb61087dbd4d3d2553bb",
+      "after": "f29fc49d2366ca0993415396842dfe30418a90e536d7d95b78d249cea0a55cc4"
+    },
+    {
+      "path": "assets/scripts/audio/SoundscapeEngine.ts",
+      "before": "cf9d4fc6cf93f4377d65130a221cdee0bca44ff0e054ced82ac8e722bc688cd6",
+      "after": "698312c04dcc9e20ca1a3a0a447b9ff324173900706dfc0ed70f5c08a0674e91"
+    },
+    {
+      "path": "assets/scripts/audio/AudioManager.ts",
+      "before": "b33527f8b12cf38cdad303b9d65bf800f58d83bd45e459d439ef8b12b1862c5e",
+      "after": "5d56e7decb701f6215821b7e3638350eb362c5358cc10b0c644f08e3a74b06f2"
+    },
+    {
+      "path": "assets/scripts/audio/RecordedAudio.ts",
+      "before": "2b3fa5eec26177ade6bc5ae830c9536e36a05eff8f7b3576bdd2f577386f7477",
+      "after": "64bdca55dd3f5c29b9964ca3c10cb437b8e9a61b1c1b4b69fbf5f9d9e2de38e1"
+    },
+    {
+      "path": "assets/scripts/ui/AureliaApp.ts",
+      "before": "45abdbf819ca990e5138c9b0912777d983681198caa908c72b30f6cd57c1af7e",
+      "after": "f05a79308e8c1c29f93718aefe255d78c438d4dcc8372f24b37de74defae4467"
+    },
+    {
+      "path": "tools/render-feedback.py",
+      "before": null,
+      "after": "268bcbbfccc569176256774f8282ccbb01eaace3460ab3dde47ca59633cf9e08"
+    },
+    {
+      "path": "tools/master-audio.py",
+      "before": "5a08345b3aded3d9c5d40355ee0bba85cefd3da9034b49f623c527a6e2914d49",
+      "after": "451ec41a6455cecebd52d43fd10e06bf9a2ffe11feab2400dfdf1ff62dba8a41"
+    },
+    {
+      "path": "tools/audio-asset-qa.py",
+      "before": "d45081e7ee34d7a86c18f152a24933cb3713a2bc8696844632fb6df36322e7b0",
+      "after": "b1f272ce493652d63ce7170582c3eab625e80b2923ccca8d094769ee8b923d1b"
+    },
+    {
+      "path": "tools/audio-recording-test.ts",
+      "before": "b66be8ba14d3ea7b2de676bf8bf887e5f74b5116c306e549bab044437d6247c2",
+      "after": "1fdf3c098d6e1fe8d98b0a767ff9df3eca3d3090dafc281f5ade2f4be730a612"
+    },
+    {
+      "path": "docs/qa/feedback-completion-assets.json",
+      "before": null,
+      "after": "a0d44c9ab16136f192b76c4ee5f2e58803a60510e270a7c4c992ba89891dd4a7"
+    },
+    {
+      "path": "docs/qa/feedback-completion-features.json",
+      "before": null,
+      "after": "08ef05c7cf805bfaf1dbed0e7ada62fba9d535dad65545f64c5f7776286c7083"
+    },
+    {
+      "path": "docs/qa/feedback-completion-tests.log",
+      "before": null,
+      "after": "b7cddfe7673e371ace708ddd96c1c55a56725b94bb37a8e69dd7097193165270"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/manifest.json",
+      "before": "09418ec5d9742a96d06041fa35f6a8e967c4b98c3abd7a2005e6a4954c0fdb9f",
+      "after": "2bab8bcf591ec5dcbef83272b0817966408e096119519444225ba7ead9403a4c"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-tap-v1.m4a",
+      "before": null,
+      "after": "6a0ff7a363bfac61b04bde445a9f7cfde15d23311efe37cac7bd8781e034bc61"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-tap-v2.m4a",
+      "before": null,
+      "after": "f0964c862d5dd89ad393255f15bc2e12286d90cc8b861e8d97406befc43621dc"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-bet-v1.m4a",
+      "before": null,
+      "after": "59a109e696263a1c1345d807a9e5e3283a203240446c1d880b5008c573bcb46c"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-bet-v2.m4a",
+      "before": null,
+      "after": "936ded268eaff9a9cbdc818da8b00cf254f589e8a390fd8498a9807e8015609f"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-navigate-v1.m4a",
+      "before": null,
+      "after": "bf22a44e793311509bec2b5b4060575e3298cbd613b5193b52cc6751a76c5a98"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-navigate-v2.m4a",
+      "before": null,
+      "after": "8485c178e1eb032b3d3b848d012023838b002a2f6540a5e3edcbbf3c32789daf"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-toggle-v1.m4a",
+      "before": null,
+      "after": "d18f2680ef78d337577bd42c9b2695111ef4b9a39a2f5322dae3b5e829045a9d"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-toggle-v2.m4a",
+      "before": null,
+      "after": "4eacf23a21a7c34ba208fe8f10975dcc29ac8af5e7183da5fe2ad5605ae0fa64"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-confirm-v1.m4a",
+      "before": null,
+      "after": "07b145db1347c6383a232c6f01259229a5c27e26c4c48b594fe0d79e52a202a3"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-confirm-v2.m4a",
+      "before": null,
+      "after": "e7fd5676e862eea1d0fafab649c9fea1910d77462e6416cc2eb3add00cf86945"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-caravan-gold-spin.m4a",
+      "before": null,
+      "after": "9ba8b5c91f169b4b7a3584b7491883e3a42738cc5b75fbb100e52b848a436915"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-caravan-gold-reel-stop.m4a",
+      "before": null,
+      "after": "3f0ca746d0c908917a517e510390ef050bda2950a9469bb5390ce7c3d36d2b68"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-caravan-gold-reel-roll.m4a",
+      "before": null,
+      "after": "18f83013fddc0b6d44ab5f72204e39e6a6af50422552822519258a36bffd057d"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-caravan-gold-collect.m4a",
+      "before": null,
+      "after": "1648ad4ee913ad8cad017e943de3256f65e113bc21e0a39f130be517faba4ea5"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-caravan-gold-feature-entry.m4a",
+      "before": null,
+      "after": "daa82d13bea512e8aa727564f7f5352e256a81b9fdc2dbc7f8ece5ed1288329e"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-caravan-gold-feature-step.m4a",
+      "before": null,
+      "after": "f8d01237af34133dac9f2fe0991ab1e793ddc172f6a552503e503685b631007b"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-sapphire-oasis-spin.m4a",
+      "before": null,
+      "after": "1d096f989d05692e0b3732aebe718ae6b36e10a11ed70cdd89551a307c295dec"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-sapphire-oasis-reel-stop.m4a",
+      "before": null,
+      "after": "f854fea8e8add6891f482a4d4c03015afd6542f457e60629bfdf0bcd199cac72"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-sapphire-oasis-reel-roll.m4a",
+      "before": null,
+      "after": "6a26115288aaad84c3994fefb3c25230c178a9541056f4a5a3618e5eddbb2491"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-sapphire-oasis-collect.m4a",
+      "before": null,
+      "after": "5530d4d288ad5ee7d956cefd48ebd9fd95a89a34b31f53584a8a7a73aa1c6e14"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-sapphire-oasis-feature-entry.m4a",
+      "before": null,
+      "after": "2c298b449b8150bef692211febb0e75906014edd5cc4c9cb40f3f0006d1120cf"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-sapphire-oasis-feature-step.m4a",
+      "before": null,
+      "after": "cc779c40e3b74b43c8c61deb3f131f52e419b67fea0af1774c1c5ae234a2b6b9"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-ruby-bazaar-spin.m4a",
+      "before": null,
+      "after": "e799acfaa208e439d236cc0a003f67dec554043c9fb03cefdacd1832f0c2eede"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-ruby-bazaar-reel-stop.m4a",
+      "before": null,
+      "after": "4f00caffa9a3dfd59a4c12e9c71a4e6828ffdf44b6a32b8c10574999ede02acd"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-ruby-bazaar-reel-roll.m4a",
+      "before": null,
+      "after": "26d450902e4be82a15a41fac04cd7f484a8a99eb076fd68a9ed11a60a24aa7db"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-ruby-bazaar-collect.m4a",
+      "before": null,
+      "after": "91a947f284752e70663875a05910948a7e30340b31bcc7a9d54df8d7555e9e4c"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-ruby-bazaar-feature-entry.m4a",
+      "before": null,
+      "after": "8bf6454db0b9911f3e10940bb3625f543ba946c14bb465127147402e19a4bf0f"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-ruby-bazaar-feature-step.m4a",
+      "before": null,
+      "after": "749a678673f65c14ba03a418e74fe6e63a62957dfadec75d25a977ad4c6babc1"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-crown-voyage-spin.m4a",
+      "before": null,
+      "after": "c342f4d912df00221dd9edd6149c8da9a6faecebe88ca4a442f9c2ee37bf9069"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-crown-voyage-reel-stop.m4a",
+      "before": null,
+      "after": "7c0ce60bd4229b5856aed2dcab8ff11743589987f4dbba8f3f4d17f516b33a07"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-crown-voyage-reel-roll.m4a",
+      "before": null,
+      "after": "e3eee6dea134b0c656819b119368c46f5ff836240db5c8c759a920775d8cbb75"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-crown-voyage-collect.m4a",
+      "before": null,
+      "after": "2b79546387294e466cb8d704c1b4ecc9abeda714599e78918aaf0a05961687ae"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-crown-voyage-feature-entry.m4a",
+      "before": null,
+      "after": "a902028247903ad584d3d704bb8e103b6193ef4e4099b998c4af96169102662a"
+    },
+    {
+      "path": "build-templates/web-mobile/audio/fx-cabinet-crown-voyage-feature-step.m4a",
+      "before": null,
+      "after": "b0df9c9be144a644b8416ff8796c34c02a75923f791ebd962a8c038253b15e36"
+    }
+  ]
+}

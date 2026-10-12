@@ -1,9 +1,10 @@
 // Purely visual: balances are committed by the store, never by this animation.
 let current;
 export function cancelCollection(){current?.abort();current=null;}
-export function collectCoins(source,target,{reduced=false}={}){
+export function collectCoins(source,target,{reduced=false,onCollect}={}){
  cancelCollection();
- if(reduced||matchMedia('(prefers-reduced-motion: reduce)').matches||document.hidden||!source||!target)return;
+ if(document.hidden||!source||!target)return;
+ if(reduced||matchMedia('(prefers-reduced-motion: reduce)').matches){onCollect?.();return;}
  const a=source.getBoundingClientRect(),b=target.getBoundingClientRect();
  if(!a.width||!b.width)return;
  const controller=new AbortController();current=controller;
@@ -24,7 +25,7 @@ export function collectCoins(source,target,{reduced=false}={}){
    return {offset:u,transform:`translate(${x-13}px,${y-13}px) rotate(${u*260+offset}deg) scale(${scale})`,opacity:Math.min(1,u*8,(1-u)*8)};
   });
   const motion=coin.animate(frames,{duration:920,delay:i*58,easing:'cubic-bezier(.22,.08,.35,1)',fill:'both'});
-  animations.push(motion);motion.onfinish=()=>{if(controller.signal.aborted)return;target.classList.add('wallet-collected');if(++finished===7){const pulse=target.animate([{filter:'brightness(1)'},{filter:'brightness(1.18)',offset:.35},{filter:'brightness(1)'}],{duration:360});animations.push(pulse);pulse.onfinish=clean;}};
+  animations.push(motion);motion.onfinish=()=>{if(controller.signal.aborted)return;target.classList.add('wallet-collected');if(++finished===7){onCollect?.();const pulse=target.animate([{filter:'brightness(1)'},{filter:'brightness(1.18)',offset:.35},{filter:'brightness(1)'}],{duration:360});animations.push(pulse);pulse.onfinish=clean;}};
  }
 }
 

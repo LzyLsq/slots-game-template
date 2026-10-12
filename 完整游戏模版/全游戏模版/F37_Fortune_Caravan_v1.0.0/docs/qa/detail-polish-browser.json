@@ -1,0 +1,324 @@
+{
+  "date": "2026-10-09",
+  "project": "F37_Fortune_Caravan_v1.0.0",
+  "preview": "http://127.0.0.1:6037/",
+  "scope": "Real UI interactions; forced awards are local-only QA, not natural probability validation",
+  "checks": [
+    {
+      "check": "390px lion touch",
+      "proof": {
+        "cue": "{}",
+        "life": {
+          "blessings": 1,
+          "energy": 0,
+          "first": {
+            "x": 278.4,
+            "y": -114.5
+          },
+          "frames": 594,
+          "impulse": 1,
+          "owner": "lobby-1791538791192-0.056196128974758675",
+          "paintMs": 0.032,
+          "particles": 31,
+          "peakPaintMs": 0.2,
+          "quiet": false,
+          "reduced": false,
+          "scene": "lobby",
+          "time": 19.82,
+          "visible": true,
+          "zones": [
+            "Treasure coins",
+            "Treasure reflections",
+            "Left arcade lantern",
+            "Right arcade lantern",
+            "Arcade dust"
+          ]
+        }
+      }
+    },
+    {
+      "check": "390px elephant touch",
+      "life": {
+        "blessings": 2,
+        "energy": 0,
+        "first": {
+          "x": 284.2,
+          "y": -120.3
+        },
+        "frames": 1619,
+        "impulse": 1,
+        "owner": "lobby-1791538791192-0.056196128974758675",
+        "paintMs": 0.03,
+        "particles": 31,
+        "peakPaintMs": 0.2,
+        "quiet": false,
+        "reduced": false,
+        "scene": "lobby",
+        "time": 53.97,
+        "visible": true,
+        "zones": [
+          "Treasure coins",
+          "Treasure reflections",
+          "Left arcade lantern",
+          "Right arcade lantern",
+          "Arcade dust"
+        ]
+      }
+    },
+    {
+      "check": "390px peacock touch",
+      "life": {
+        "blessings": 3,
+        "energy": 0,
+        "first": {
+          "x": 198.3,
+          "y": -64.8
+        },
+        "frames": 2164,
+        "impulse": 0.87,
+        "owner": "lobby-1791538791192-0.056196128974758675",
+        "paintMs": 0.029,
+        "particles": 31,
+        "peakPaintMs": 0.2,
+        "quiet": false,
+        "reduced": false,
+        "scene": "lobby",
+        "time": 72.13,
+        "visible": true,
+        "zones": [
+          "Treasure coins",
+          "Treasure reflections",
+          "Left arcade lantern",
+          "Right arcade lantern",
+          "Arcade dust"
+        ]
+      }
+    },
+    {
+      "check": "390px parrot touch",
+      "life": {
+        "blessings": 4,
+        "energy": 0,
+        "first": {
+          "x": 189.3,
+          "y": -62.8
+        },
+        "frames": 2769,
+        "impulse": 0.94,
+        "owner": "lobby-1791538791192-0.056196128974758675",
+        "paintMs": 0.029,
+        "particles": 31,
+        "peakPaintMs": 0.2,
+        "quiet": false,
+        "reduced": false,
+        "scene": "lobby",
+        "time": 92.3,
+        "visible": true,
+        "zones": [
+          "Treasure coins",
+          "Treasure reflections",
+          "Left arcade lantern",
+          "Right arcade lantern",
+          "Arcade dust"
+        ]
+      }
+    },
+    {
+      "check": "390px parrot cabinet touch",
+      "life": {
+        "blessings": 1,
+        "energy": 0,
+        "first": {
+          "x": -225.7,
+          "y": 598.4
+        },
+        "frames": 646,
+        "impulse": 0.98,
+        "owner": "crown-voyage-1791538884628-0.9402507203644357",
+        "paintMs": 0.014,
+        "particles": 35,
+        "peakPaintMs": 0.2,
+        "quiet": false,
+        "reduced": false,
+        "scene": "crown-voyage",
+        "time": 21.53,
+        "visible": true,
+        "zones": [
+          "Upper ornament",
+          "Left frame current",
+          "Right frame current",
+          "Left treasury heap",
+          "Right treasury heap"
+        ]
+      }
+    },
+    {
+      "check": "320px lion cabinet touch",
+      "life": {
+        "blessings": 1,
+        "energy": 0,
+        "first": {
+          "x": -245.3,
+          "y": 670.1
+        },
+        "frames": 591,
+        "impulse": 1,
+        "owner": "caravan-gold-1791538932984-0.9152635167149562",
+        "paintMs": 0.027,
+        "particles": 35,
+        "peakPaintMs": 0.2,
+        "quiet": false,
+        "reduced": false,
+        "scene": "caravan-gold",
+        "time": 19.71,
+        "visible": true,
+        "zones": [
+          "Upper ornament",
+          "Left frame current",
+          "Right frame current",
+          "Left treasury heap",
+          "Right treasury heap"
+        ]
+      }
+    },
+    {
+      "check": "390px elephant cabinet touch",
+      "life": {
+        "blessings": 1,
+        "energy": 0,
+        "first": {
+          "x": -219.9,
+          "y": 655
+        },
+        "frames": 857,
+        "impulse": 1,
+        "owner": "sapphire-oasis-1791538955830-0.9974327428633198",
+        "paintMs": 0.029,
+        "particles": 35,
+        "peakPaintMs": 0.2,
+        "quiet": false,
+        "reduced": false,
+        "scene": "sapphire-oasis",
+        "time": 28.6,
+        "visible": true,
+        "zones": [
+          "Upper ornament",
+          "Left frame current",
+          "Right frame current",
+          "Left treasury heap",
+          "Right treasury heap"
+        ]
+      }
+    },
+    {
+      "check": "ordinary-award",
+      "viewport": "390x844",
+      "markers": {
+        "data-award-amount": "63",
+        "data-award-audio": "running",
+        "data-award-audio-hidden": "false",
+        "data-award-music-bpm": "100",
+        "data-award-music-scene": "sapphire-oasis",
+        "data-award-peak-voices": "2",
+        "data-award-phase": "hold",
+        "data-award-scheduled-notes": "2",
+        "data-award-tier": "0",
+        "data-award-voices": "0"
+      },
+      "observed": "63 coin plaque visible and clear of spin/auto controls",
+      "walletEquation": "32373 - 80 + 63 = 32356",
+      "screenshot": "detail-ordinary-award-390.png"
+    },
+    {
+      "check": "peacock-cabinet-touch",
+      "viewport": "430x932",
+      "life": {
+        "blessings": 1,
+        "energy": 0,
+        "first": {
+          "x": -128.7,
+          "y": 593.5
+        },
+        "frames": 601,
+        "impulse": 0.88,
+        "owner": "ruby-bazaar-1791539165970-0.5259765369371818",
+        "paintMs": 0.02,
+        "particles": 35,
+        "peakPaintMs": 0.2,
+        "quiet": false,
+        "reduced": false,
+        "scene": "ruby-bazaar",
+        "time": 20.07,
+        "visible": true,
+        "zones": [
+          "Upper ornament",
+          "Left frame current",
+          "Right frame current",
+          "Left treasury heap",
+          "Right treasury heap"
+        ]
+      },
+      "screenshot": "detail-peacock-cabinet-430.png"
+    },
+    {
+      "check": "super-award-local-qa",
+      "viewport": "430x932",
+      "markers": {
+        "data-award-amount": "2000",
+        "data-award-audio": "running",
+        "data-award-audio-hidden": "false",
+        "data-award-music-bpm": "96",
+        "data-award-music-scene": "ruby-bazaar",
+        "data-award-peak-voices": "2",
+        "data-award-phase": "hold",
+        "data-award-scheduled-notes": "2",
+        "data-award-tier": "2",
+        "data-award-voices": "0"
+      },
+      "observed": "Title, amount and collect control unobstructed; hold calmer after climax",
+      "walletEquation": "32356 - 80 + 2000 = 34276",
+      "screenshot": "detail-super-award-430.png"
+    },
+    {
+      "check": "super-award-collected",
+      "viewport": "430x932",
+      "markers": {},
+      "observed": "Award removed; balance 34276, WIN 2000, SPIN visible and ready",
+      "screenshot": "detail-super-collected-430.png"
+    },
+    {
+      "check": "big-award-local-qa",
+      "viewport": "390x844",
+      "markers": {
+        "data-award-amount": "560",
+        "data-award-audio": "running",
+        "data-award-audio-hidden": "false",
+        "data-award-music-bpm": "110",
+        "data-award-music-scene": "caravan-gold",
+        "data-award-peak-voices": "2",
+        "data-award-phase": "hold",
+        "data-award-scheduled-notes": "2",
+        "data-award-tier": "1",
+        "data-award-voices": "0"
+      },
+      "observed": "Count phase inspected at 414 displayed coins, followed by final hold 560; title/register unobstructed",
+      "walletEquation": "34276 - 80 + 560 = 34756",
+      "screenshot": "detail-big-award-390.png"
+    },
+    {
+      "check": "big-award-collected",
+      "viewport": "390x844",
+      "markers": {},
+      "observed": "Award removed; balance 34756, WIN 560, SPIN control visible",
+      "screenshot": "detail-big-collected-390.png"
+    }
+  ],
+  "console": [],
+  "finalDOM": "- generic \"Fortune Caravan game\"",
+  "viewportOverride": "reset to normal browser dimensions",
+  "limits": [
+    "No new raster artwork generated",
+    "No physical-device FPS or subjective headphone/speaker listening result",
+    "No payout, wallet or newcomer rules changed"
+  ]
+}

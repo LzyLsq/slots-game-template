@@ -1,0 +1,1443 @@
+{
+  "checkedAt": "2026-10-10T09:33:09.978Z",
+  "scope": "Browser playback, actual first-cabinet spin, award fixtures, mute/background, credits entry and small-screen dialog. Not human listening or real iPhone verification.",
+  "games": [
+    {
+      "id": 24,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 9258.300000190735
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 9408.10000038147
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 9541.5
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": false,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 9860.60000038147
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 10041.400000095367
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 10208.10000038147
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 11714.10000038147
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 12691.60000038147
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 12891.300000190735
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 13108
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 13274.700000286102
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 13491.700000286102
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 13691.300000190735
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 13891.400000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 14075
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 14276.10000038147
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 14474.800000190735
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 14691.400000095367
+            },
+            {
+              "id": "reveal",
+              "group": "detail",
+              "time": 14844.300000190735
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 15261.400000095367
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 32,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 100,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 25,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 6571.699999809265
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 6688.5
+            },
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 6820.299999713898
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 7721.199999809265
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 7887.799999713898
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 8071.5
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 8255.099999904633
+            },
+            {
+              "id": "burst",
+              "group": "detail",
+              "time": 9699.5
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 11171.199999809265
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 11743.299999713898
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 11919.699999809265
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12103.89999961853
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 12271.699999809265
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 12455.099999904633
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 12637.199999809265
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 12804.39999961853
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 12988.299999713898
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 13169.699999809265
+            },
+            {
+              "id": "reveal",
+              "group": "detail",
+              "time": 15000
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 15000.799999713898
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 31,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 100,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 26,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 6335.800000190735
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 6419.5
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 6502.5
+            },
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 6586.900000095367
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 6669.10000038147
+            }
+          ]
+        },
+        {
+          "ratio": 0.5,
+          "count": true,
+          "collectOnce": true,
+          "cues": [
+            {
+              "id": "burst",
+              "group": "detail",
+              "time": 9872.300000190735
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 9886.700000286102
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 10073
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 10254.5
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 10436.60000038147
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 10560
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 11169.900000095367
+            }
+          ]
+        },
+        {
+          "ratio": 2,
+          "count": true,
+          "collectOnce": true,
+          "cues": [
+            {
+              "id": "burst",
+              "group": "detail",
+              "time": 11727.300000190735
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 11741.60000038147
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 11920.60000038147
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 12104
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12288
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12470.10000038147
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12654.60000038147
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 12837
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 13020.10000038147
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 13205
+            },
+            {
+              "id": "ui-back",
+              "group": "ui",
+              "time": 13599.5
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 14919.900000095367
+            }
+          ]
+        },
+        {
+          "actualBetPicker": true,
+          "unchangedWagerSilent": true
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 51,
+        "voices": 1,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 100,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 27,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 5668.900000095367
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 5852.5
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 6020.300000190735
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": false,
+          "cues": [
+            {
+              "id": "burst",
+              "group": "detail",
+              "time": 6130.599999904633
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 6168.300000190735
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 6351.800000190735
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 6535
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 6719.199999809265
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 7286.400000095367
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "burst",
+              "group": "detail",
+              "time": 8107.5
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 8134.800000190735
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 8318.199999809265
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 8501.199999809265
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 8684.800000190735
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 8869.300000190735
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 9051.199999809265
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 9235.5
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 9419.099999904633
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 9602.699999809265
+            },
+            {
+              "id": "ui-tap",
+              "group": "ui",
+              "time": 10890.099999904633
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 10890.400000095367
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 34,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 99,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 28,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 6250.900000095367
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 6360.5
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 6460
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": false,
+          "cues": [
+            {
+              "id": "burst",
+              "group": "detail",
+              "time": 7391.200000286102
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 7393.099999904633
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 7576.5
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 7760
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 7943.200000286102
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 8110.200000286102
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 8293.099999904633
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 8493.099999904633
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 9593.300000190735
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 9851.099999904633
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 10110.700000286102
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 10309.900000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 10493.599999904633
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 10660
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 10843.300000190735
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 11027
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 11193.200000286102
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 11393.200000286102
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 12842.099999904633
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 33,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 101,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 29,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 9492.199999809265
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 9630.199999809265
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 9773.89999961853
+            },
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 9907.699999809265
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 10061.599999904633
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": false,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 15108.099999904633
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 15289.89999961853
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 15489.89999961853
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 16943.199999809265
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 17958.299999713898
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 18157.599999904633
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 18373.699999809265
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 18573.599999904633
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 18789.699999809265
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 18958.39999961853
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 19173.699999809265
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 19341.599999904633
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 19540.799999713898
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 19741.599999904633
+            },
+            {
+              "id": "reveal",
+              "group": "detail",
+              "time": 19888.5
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 20302.5
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 40,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 100,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 30,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 7553.400000095367
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 7686.5
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 7836.700000286102
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": false,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 8186.5
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 8369.700000286102
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 8569.800000190735
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 10030.200000286102
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 11487.400000095367
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 11702.800000190735
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 11869.60000038147
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 12072.400000095367
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 12286
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12486.400000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12652.800000190735
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12869.400000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 13036.60000038147
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 13236.800000190735
+            },
+            {
+              "id": "reveal",
+              "group": "detail",
+              "time": 13452.300000190735
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 13853.10000038147
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 28,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 102,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 31,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 8820.099999904633
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 8953.900000095367
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 9103.599999904633
+            },
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 9236.799999713898
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 9370.799999713898
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": false,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 12421.5
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 12603.599999904633
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 12804.5
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 14255.799999713898
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 15371.299999713898
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 15586.699999809265
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 15753.299999713898
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 15954.400000095367
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 16121
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 16321.5
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 16538.799999713898
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 16739.400000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 16953.799999713898
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 17154.199999809265
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 17336.799999713898
+            },
+            {
+              "id": "reveal",
+              "group": "detail",
+              "time": 17396.699999809265
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 17831.799999713898
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 37,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 101,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 33,
+      "passed": true,
+      "checks": [
+        {
+          "realSpin": true,
+          "oneLaunchNoTap": true,
+          "columnStops": [
+            {
+              "id": "stop-1",
+              "group": "reel",
+              "time": 10756
+            },
+            {
+              "id": "stop-2",
+              "group": "reel",
+              "time": 10891.400000095367
+            },
+            {
+              "id": "stop-3",
+              "group": "reel",
+              "time": 11041.699999809265
+            }
+          ]
+        },
+        {
+          "ordinaryCount": true,
+          "ordinaryCollectOnce": true,
+          "f25SettlementFlightFixture": false,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 14879.599999904633
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 15056.599999904633
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 15256.400000095367
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 16709.299999713898
+            }
+          ]
+        },
+        {
+          "bigCount": true,
+          "bigCollectOnce": true,
+          "cues": [
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 18575.199999809265
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 18789
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 18989.099999904633
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 19189.699999809265
+            },
+            {
+              "id": "coin-1",
+              "group": "detail",
+              "time": 19373.400000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 19573.5
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 19787.400000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 19988.900000095367
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 20204.699999809265
+            },
+            {
+              "id": "coin-2",
+              "group": "detail",
+              "time": 20404.699999809265
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 20621.299999713898
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 20788.799999713898
+            },
+            {
+              "id": "coin-3",
+              "group": "detail",
+              "time": 20989.900000095367
+            },
+            {
+              "id": "reveal",
+              "group": "detail",
+              "time": 21095.400000095367
+            },
+            {
+              "id": "collect",
+              "group": "collect",
+              "time": 21545.5
+            }
+          ]
+        },
+        {
+          "decodeAll16": true,
+          "voiceCap": 8,
+          "rateLimited": true,
+          "decodedBytes": 858244
+        },
+        {
+          "mutedSilent": true,
+          "backgroundSilent": true,
+          "noResumeBacklog": true
+        },
+        {
+          "creditsEntryClicked": true
+        },
+        {
+          "smallScreenCreditsClose": true
+        }
+      ],
+      "sampleStatus": {
+        "played": 33,
+        "voices": 0,
+        "highWater": 8,
+        "decodedBytes": 858244,
+        "buffers": 16,
+        "dropped": 100,
+        "errors": []
+      },
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

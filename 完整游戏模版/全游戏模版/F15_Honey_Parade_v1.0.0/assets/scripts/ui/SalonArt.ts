@@ -1,11 +1,18 @@
+import { StationaryArtwork } from '../vfx/StationaryArtwork';
+import {rewardArtwork,rewardInk,rewardTextWidth,type RewardPlateKind} from './RewardArtwork';
+import { LivingMascotRig } from '../vfx/LivingMascotRig';
+import { ThemeMotion } from '../vfx/ThemeMotion';
 import {tr} from './Language';
 import {TextFit} from './TextFit';
+import {rewardTheme,rewardPlateLayout} from './RewardTheme';
 import { EventTouch, Color, gfx, Graphics, Label, LabelOutline, Layers, Mask, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec3 } from 'cc';
 export const COLORS = { cream: '#FFF8E7', gold: '#FFD988', jade: '#613F45', ink: '#633C32', coral: '#ED967C' };
 export class SalonArt {
   private textures = new Map<string, Texture2D>();
   private frames = new Map<string, SpriteFrame>();
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
+    await ThemeMotion.prepare();
+    await LivingMascotRig.prepare(names);
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
@@ -15,7 +22,7 @@ export class SalonArt {
         if (!this.textures.has(name)) {
           const tex = await new Promise<Texture2D>((resolve, reject) => {
             const timeout=setTimeout(()=>reject(new Error('Artwork load timed out: '+name)),20000);
-            resources.load(`art/${name}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
+            resources.load(`art/${LivingMascotRig.file(name)}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
           });
           tex.setFilters(Texture2D.Filter.LINEAR, Texture2D.Filter.LINEAR); this.textures.set(name, tex);
         }
@@ -23,6 +30,10 @@ export class SalonArt {
       }
     };
     await Promise.all([worker(), worker()]);
+  }
+  public replaceImage(node: Node, name: string, index = -1): void {
+    const sprite = node.getComponent(Sprite)!; sprite.spriteFrame = this.frame(name,index);
+    if (!LivingMascotRig.attach(sprite,name,index)) ThemeMotion.attach(sprite,name,index);
   }
   public frame(name: string, index = -1): SpriteFrame {
     const key = `${name}:${index}`; const cached = this.frames.get(key); if (cached) return cached;
@@ -50,7 +61,7 @@ export class SalonArt {
     this.frames.set(key, sf); return sf;
   }
   public image(parent: Node, name: string, x: number, y: number, w: number, h: number, index = -1): Node {
-    const n = box(parent, name, x, y, w, h); const s = n.addComponent(Sprite);
+    const n = box(parent, name, x, y, w, h); StationaryArtwork.mark(n,name); const s = n.addComponent(Sprite);
     // Set CUSTOM before the frame: RAW would overwrite the authored hit/layout box.
     s.sizeMode = Sprite.SizeMode.CUSTOM; s.spriteFrame = this.frame(name, index);
     if (name === 'surfaces' || name === 'ledgers' || (name.startsWith('harvest-plate-')||name.startsWith('harvest-soft-plate-'))) s.type = Sprite.Type.SLICED;
@@ -62,6 +73,7 @@ export class SalonArt {
       w = frame.rect.width * scale; h = frame.rect.height * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
+    if (!LivingMascotRig.attach(s,name,index)) ThemeMotion.attach(s,name,index);
     return n;
   }
   public cover(parent: Node, name: string, x: number, y: number, w: number, h: number, index=-1, radius=0): Node {
@@ -77,6 +89,14 @@ export class SalonArt {
     opacity(n,alpha);return n;
   }
   public panel(parent: Node, x: number, y: number, w: number, h: number, style = 0): Node { return this.image(parent, 'harvest-soft-plate-'+[0,1,2,3][style], x,y,w,h); }
+  public rewardPanel(parent:Node,x:number,y:number,w:number,h:number,theme=0,kind:RewardPlateKind='detail'):Node {return rewardArtwork(this,parent,x,y,w,h,theme,kind);}
+  public rewardButton(parent:Node,x:number,y:number,w:number,h:number,label:string,theme:number,action:()=>void):Node {
+    const hit=box(parent,'Collect your treasure',x,y,w,h);
+    const face=this.rewardPanel(hit,0,0,w,h,theme,'button');
+    const caption=outlined(text(face,label,0,0,rewardPlateLayout(w,h).textWidth,h*.62,34,rewardInk(theme)),'#FFF3DC',1);
+    caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
+    bindPress(hit,face,action);return hit;
+  }
   public button(parent: Node, name: string, x: number, y: number, w: number, h: number, label: string, icon: number | undefined, action: () => void, style = 3): Node {
     const hit = box(parent, name, x, y, w, h);
     // The image icon already includes a sculpted gold rim. A second square

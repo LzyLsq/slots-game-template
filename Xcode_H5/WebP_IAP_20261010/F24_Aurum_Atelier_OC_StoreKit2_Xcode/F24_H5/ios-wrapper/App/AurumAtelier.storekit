@@ -1,0 +1,79 @@
+{
+  "identifier": "F24-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "2400",
+      "localizations": [
+        {
+          "description": "20000 virtual coins. No cash value.",
+          "displayName": "Aurum Atelier Starter",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.aurumatelier.coins.apprentice",
+      "referenceName": "apprentice 20000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "2401",
+      "localizations": [
+        {
+          "description": "110000 virtual coins. No cash value.",
+          "displayName": "Aurum Atelier Artisan",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.aurumatelier.coins.artisan",
+      "referenceName": "artisan 110000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "2402",
+      "localizations": [
+        {
+          "description": "240000 virtual coins. No cash value.",
+          "displayName": "Aurum Atelier Master",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.aurumatelier.coins.master",
+      "referenceName": "master 240000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "2403",
+      "localizations": [
+        {
+          "description": "520000 virtual coins. No cash value.",
+          "displayName": "Aurum Atelier Patron",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.aurumatelier.coins.patron",
+      "referenceName": "patron 520000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

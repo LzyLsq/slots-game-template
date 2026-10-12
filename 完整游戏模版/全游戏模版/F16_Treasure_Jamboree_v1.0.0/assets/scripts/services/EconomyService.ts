@@ -60,7 +60,7 @@ export class EconomyService {
     this.save.update((state) => {
       const player = state.players[userId]; const data = state.playerData[userId];
       if (data.creditedPurchaseIds.includes(transactionId)) return;
-      player.credits = authoritativeBalance ?? Math.min(1_000_000_000, player.credits + amount); data.creditedPurchaseIds.push(transactionId); data.creditedPurchaseIds = data.creditedPurchaseIds.slice(-500);
+      player.credits = authoritativeBalance ?? Math.min(1_000_000_000, player.credits + amount); data.creditedPurchaseIds.push(transactionId);
       this.addTransaction(data.transactions, player.credits, amount, 'store-iap', transactionId);
     });
     return true;

@@ -132,7 +132,7 @@ const sanitizeScope = (value: unknown): PlayerScopedSave => {
   const remote=objectValue(raw.pendingRemoteSpin);
   if(typeof remote.requestId==='string'&&/^[a-z0-9-]{12,128}$/i.test(remote.requestId)&&typeof remote.gameId==='string'&&['golden-hour','jade-treasury','pearl-palace','ruby-revel'].includes(remote.gameId)&&[50,100,200,500,1000].includes(remote.bet as number))next.pendingRemoteSpin={requestId:remote.requestId,gameId:remote.gameId,bet:remote.bet as number};
   next.settledSpinIds = Array.isArray(raw.settledSpinIds) ? raw.settledSpinIds.filter((id): id is string => typeof id === 'string').slice(-200) : [];
-  next.creditedPurchaseIds = Array.isArray(raw.creditedPurchaseIds) ? raw.creditedPurchaseIds.filter((id): id is string => typeof id === 'string' && /^[A-Za-z0-9._:-]{3,160}$/.test(id)).slice(-500) : [];
+  next.creditedPurchaseIds = Array.isArray(raw.creditedPurchaseIds) ? raw.creditedPurchaseIds.filter((id): id is string => typeof id === 'string' && /^[A-Za-z0-9._:-]{3,160}$/.test(id)) : [];
   return next;
 };
 

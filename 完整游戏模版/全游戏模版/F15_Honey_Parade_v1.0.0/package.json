@@ -7,7 +7,8 @@
     "version": "3.8.8"
   },
   "scripts": {
-    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:core && npm run test:cabinets && npm run test:primary",
+    "test": "npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:reward",
+    "test:reward": "node --import tsx tools/reward-theme-test.ts && node tools/reward-stage-test.mjs",
     "test:layout": "node --import tsx tools/layout-test.ts",
     "test:math": "node --import tsx tools/math-test.ts",
     "test:apple-auth": "node --import tsx tools/apple-auth-test.ts",

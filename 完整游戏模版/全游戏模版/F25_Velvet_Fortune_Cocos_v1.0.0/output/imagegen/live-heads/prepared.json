@@ -1,0 +1,602 @@
+[
+  {
+    "art": "hero0",
+    "index": -1,
+    "canvas": [
+      500,
+      300
+    ],
+    "rect": [
+      62,
+      26,
+      146,
+      133
+    ],
+    "pivot": [
+      138.89999999999998,
+      155.4
+    ],
+    "frames": [
+      [
+        12,
+        22,
+        232,
+        211
+      ],
+      [
+        268,
+        22,
+        232,
+        211
+      ]
+    ],
+    "phase": 7.75,
+    "angle": 3.6,
+    "period": 5.8,
+    "blinkSafe": true,
+    "blinkIoU": 0.9812,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left ear",
+        "pivot": [
+          0.26,
+          0.43
+        ],
+        "region": [
+          -0.17,
+          -0.05,
+          0.39,
+          0.4
+        ],
+        "angle": 7,
+        "period": 5.9,
+        "phase": 2.1,
+        "mode": "flick"
+      },
+      {
+        "name": "right ear",
+        "pivot": [
+          0.76,
+          0.43
+        ],
+        "region": [
+          0.64,
+          -0.05,
+          1.2,
+          0.41
+        ],
+        "angle": -5.95,
+        "period": 7.1,
+        "phase": 4.3,
+        "mode": "flick"
+      }
+    ]
+  },
+  {
+    "art": "hero1",
+    "index": -1,
+    "canvas": [
+      500,
+      300
+    ],
+    "rect": [
+      153,
+      7,
+      192,
+      202
+    ],
+    "pivot": [
+      240.8,
+      199.5
+    ],
+    "frames": [
+      [
+        17,
+        268,
+        221,
+        232
+      ],
+      [
+        273,
+        268,
+        221,
+        232
+      ]
+    ],
+    "phase": 8.58,
+    "angle": 2.1,
+    "period": 6.27,
+    "blinkSafe": true,
+    "blinkIoU": 0.9921,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left long ear",
+        "pivot": [
+          0.27,
+          0.5
+        ],
+        "region": [
+          -0.12,
+          -0.14,
+          0.51,
+          0.55
+        ],
+        "angle": 11,
+        "period": 6.1,
+        "phase": 2.4,
+        "mode": "flick"
+      },
+      {
+        "name": "right long ear",
+        "pivot": [
+          0.69,
+          0.5
+        ],
+        "region": [
+          0.53,
+          -0.12,
+          1.17,
+          0.61
+        ],
+        "angle": -9,
+        "period": 7.3,
+        "phase": 4.8,
+        "mode": "flick"
+      }
+    ]
+  },
+  {
+    "art": "hero2",
+    "index": -1,
+    "canvas": [
+      500,
+      300
+    ],
+    "rect": [
+      140,
+      23,
+      171,
+      133
+    ],
+    "pivot": [
+      239.7,
+      161.70000000000002
+    ],
+    "frames": [
+      [
+        12,
+        550,
+        232,
+        180
+      ],
+      [
+        268,
+        550,
+        232,
+        180
+      ]
+    ],
+    "phase": 9.41,
+    "angle": 3.6,
+    "period": 6.74,
+    "blinkSafe": true,
+    "blinkIoU": 0.9868,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left ear",
+        "pivot": [
+          0.26,
+          0.43
+        ],
+        "region": [
+          -0.16,
+          0.1,
+          0.34,
+          0.57
+        ],
+        "angle": 9,
+        "period": 5.9,
+        "phase": 2.1,
+        "mode": "flick"
+      },
+      {
+        "name": "right ear",
+        "pivot": [
+          0.76,
+          0.43
+        ],
+        "region": [
+          0.7,
+          0.1,
+          1.17,
+          0.57
+        ],
+        "angle": -7.6499999999999995,
+        "period": 7.1,
+        "phase": 4.3,
+        "mode": "flick"
+      }
+    ]
+  },
+  {
+    "art": "hero3",
+    "index": -1,
+    "canvas": [
+      500,
+      300
+    ],
+    "rect": [
+      99,
+      2,
+      201,
+      149
+    ],
+    "pivot": [
+      221.9,
+      159.25
+    ],
+    "frames": [
+      [
+        12,
+        810,
+        232,
+        172
+      ],
+      [
+        268,
+        810,
+        232,
+        172
+      ]
+    ],
+    "phase": 10.24,
+    "angle": 3.6,
+    "period": 7.21,
+    "blinkSafe": true,
+    "blinkIoU": 0.9914,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left ear",
+        "pivot": [
+          0.26,
+          0.43
+        ],
+        "region": [
+          -0.16,
+          0.1,
+          0.34,
+          0.57
+        ],
+        "angle": 9,
+        "period": 5.9,
+        "phase": 2.1,
+        "mode": "flick"
+      },
+      {
+        "name": "right ear",
+        "pivot": [
+          0.76,
+          0.43
+        ],
+        "region": [
+          0.7,
+          0.1,
+          1.17,
+          0.57
+        ],
+        "angle": -7.6499999999999995,
+        "period": 7.1,
+        "phase": 4.3,
+        "mode": "flick"
+      }
+    ]
+  },
+  {
+    "art": "cabinet0",
+    "index": -1,
+    "canvas": [
+      940,
+      1672
+    ],
+    "rect": [
+      213,
+      83,
+      195,
+      195
+    ],
+    "pivot": [
+      302.6,
+      273.6
+    ],
+    "frames": [
+      [
+        12,
+        1036,
+        232,
+        232
+      ],
+      [
+        268,
+        1036,
+        232,
+        232
+      ]
+    ],
+    "phase": 11.07,
+    "angle": 2.6,
+    "period": 7.68,
+    "blinkSafe": true,
+    "blinkIoU": 0.985,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left ear",
+        "pivot": [
+          0.26,
+          0.43
+        ],
+        "region": [
+          -0.17,
+          -0.05,
+          0.39,
+          0.4
+        ],
+        "angle": 7,
+        "period": 5.9,
+        "phase": 2.1,
+        "mode": "flick"
+      },
+      {
+        "name": "right ear",
+        "pivot": [
+          0.76,
+          0.43
+        ],
+        "region": [
+          0.64,
+          -0.05,
+          1.2,
+          0.41
+        ],
+        "angle": -5.95,
+        "period": 7.1,
+        "phase": 4.3,
+        "mode": "flick"
+      }
+    ]
+  },
+  {
+    "art": "cabinet1",
+    "index": -1,
+    "canvas": [
+      941,
+      1672
+    ],
+    "rect": [
+      296,
+      38,
+      290,
+      306
+    ],
+    "pivot": [
+      449,
+      304.5
+    ],
+    "frames": [
+      [
+        18,
+        1292,
+        220,
+        232
+      ],
+      [
+        274,
+        1292,
+        220,
+        232
+      ]
+    ],
+    "phase": 11.899999999999999,
+    "angle": 2,
+    "period": 8.149999999999999,
+    "blinkSafe": true,
+    "blinkIoU": 0.9862,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left long ear",
+        "pivot": [
+          0.27,
+          0.5
+        ],
+        "region": [
+          -0.12,
+          -0.14,
+          0.51,
+          0.55
+        ],
+        "angle": 11,
+        "period": 6.1,
+        "phase": 2.4,
+        "mode": "flick"
+      },
+      {
+        "name": "right long ear",
+        "pivot": [
+          0.69,
+          0.5
+        ],
+        "region": [
+          0.53,
+          -0.12,
+          1.17,
+          0.61
+        ],
+        "angle": -9,
+        "period": 7.3,
+        "phase": 4.8,
+        "mode": "flick"
+      }
+    ]
+  },
+  {
+    "art": "cabinet2",
+    "index": -1,
+    "canvas": [
+      941,
+      1672
+    ],
+    "rect": [
+      329,
+      80,
+      220,
+      193
+    ],
+    "pivot": [
+      429.5,
+      285.79999999999995
+    ],
+    "frames": [
+      [
+        12,
+        1562,
+        232,
+        204
+      ],
+      [
+        268,
+        1562,
+        232,
+        204
+      ]
+    ],
+    "phase": 12.73,
+    "angle": 2.6,
+    "period": 8.62,
+    "blinkSafe": true,
+    "blinkIoU": 0.9915,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left ear",
+        "pivot": [
+          0.26,
+          0.43
+        ],
+        "region": [
+          -0.16,
+          0.1,
+          0.34,
+          0.57
+        ],
+        "angle": 9,
+        "period": 5.9,
+        "phase": 2.1,
+        "mode": "flick"
+      },
+      {
+        "name": "right ear",
+        "pivot": [
+          0.76,
+          0.43
+        ],
+        "region": [
+          0.7,
+          0.1,
+          1.17,
+          0.57
+        ],
+        "angle": -7.6499999999999995,
+        "period": 7.1,
+        "phase": 4.3,
+        "mode": "flick"
+      }
+    ]
+  },
+  {
+    "art": "cabinet3",
+    "index": -1,
+    "canvas": [
+      1024,
+      1536
+    ],
+    "rect": [
+      371,
+      13,
+      268,
+      237
+    ],
+    "pivot": [
+      516.5,
+      247.5
+    ],
+    "frames": [
+      [
+        12,
+        1817,
+        232,
+        205
+      ],
+      [
+        268,
+        1817,
+        232,
+        205
+      ]
+    ],
+    "phase": 13.559999999999999,
+    "angle": 2.4,
+    "period": 9.09,
+    "blinkSafe": true,
+    "blinkIoU": 0.9961,
+    "eyeState": "open",
+    "blinkEnabled": true,
+    "bones": [
+      {
+        "name": "left ear",
+        "pivot": [
+          0.26,
+          0.43
+        ],
+        "region": [
+          -0.16,
+          0.1,
+          0.34,
+          0.57
+        ],
+        "angle": 9,
+        "period": 5.9,
+        "phase": 2.1,
+        "mode": "flick"
+      },
+      {
+        "name": "right ear",
+        "pivot": [
+          0.76,
+          0.43
+        ],
+        "region": [
+          0.7,
+          0.1,
+          1.17,
+          0.57
+        ],
+        "angle": -7.6499999999999995,
+        "period": 7.1,
+        "phase": 4.3,
+        "mode": "flick"
+      }
+    ]
+  }
+]

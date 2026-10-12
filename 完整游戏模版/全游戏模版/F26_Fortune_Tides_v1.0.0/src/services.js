@@ -18,12 +18,13 @@ const clone = value => JSON.parse(JSON.stringify(value));
 const utcDay = () => new Date().toISOString().slice(0, 10);
 function defaultStorage() { try { return globalThis.localStorage; } catch { return undefined; } }
 function freshState() {
-  return { version: 1, name: 'Captain', coins: INITIAL_COINS, lang: 'en', sound: true, reducedMotion: false,
+  return { purchaseIds: [], version: 1, name: 'Captain', coins: INITIAL_COINS, lang: 'en', sound: true, reducedMotion: false,
     spins: 0, bestWin: 0, totalWin: 0, totalBet: 0, dailyLast: '', dailyClaims: 0,
     mail: MAIL.map(mail => ({ ...mail, read: false, claimed: false })) };
 }
 function normalize(raw) {
   const state = freshState();
+  if(Array.isArray(raw?.purchaseIds))state.purchaseIds=raw.purchaseIds.filter(id=>typeof id==='string'&&/^\d{1,40}$/.test(id));
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return state;
   if (typeof raw.name === 'string' && raw.name.trim()) state.name = [...raw.name.trim()].slice(0, 20).join('');
   for (const key of ['spins', 'dailyClaims']) state[key] = integer(raw[key], state[key]);
@@ -97,6 +98,15 @@ export function createStore(storage = defaultStorage(), storageKey = STORAGE_KEY
       return { ok: true, coins: DAILY_COINS, amount: DAILY_COINS };
     }); },
     canClaimDaily() { return current.dailyLast < utcDay(); },
+    grantPurchase(id,amount) {
+      if(current.purchaseIds.includes(id))return 'duplicate';
+      if(!storage||!Number.isSafeInteger(amount)||amount<=0)throw Error('Invalid purchase save');
+      const next=clone(current);next.coins+=amount;next.purchaseIds.push(id);
+      if(!validAmount(next.coins))throw Error('Balance limit');
+      storage.setItem(storageKey,JSON.stringify(next));current=next;persistent=true;
+      for(const l of listeners)try{l(clone(current));}catch{}
+      return 'new';
+    },
     purchase() { return fail('nativeIAPNotice'); },
   };
 }

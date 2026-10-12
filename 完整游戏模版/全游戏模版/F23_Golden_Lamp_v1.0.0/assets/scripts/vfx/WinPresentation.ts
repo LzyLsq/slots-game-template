@@ -1,8 +1,13 @@
 import {GameConfig, SpinResult, WinResult} from '../math/types';
 import {language, tr} from '../ui/Language';
 /** Display tiers only. They neither draw prizes nor alter settlement. */
-export const WIN_TIERS = [10,50,100] as const;
-export function winTier(multiplier:number):number{return multiplier>=WIN_TIERS[2]?3:multiplier>=WIN_TIERS[1]?2:multiplier>=WIN_TIERS[0]?1:0;}
+// BIG is strictly profitable; existing higher tiers remain inclusive.
+export const WIN_TIERS = [1,50,100] as const;
+export function winTier(multiplier:number):number{
+  if(!Number.isFinite(multiplier))return 0;
+  return multiplier>=100?3:multiplier>=50?2:multiplier>1?1:0;
+}
+export function isBigWin(total:number,bet:number):boolean{return Number.isFinite(total)&&Number.isFinite(bet)&&bet>0&&total>bet;}
 const phrases={
   "line-left":["Left-edge line", "左起赔付线", "左起賠付線", "左端ライン", "왼쪽 시작 라인"],
   "line-right":["Right-edge line", "右起赔付线", "右起賠付線", "右端ライン", "오른쪽 시작 라인"],
@@ -62,13 +67,15 @@ const phrases={
   total:['Total return','总返还','總返還','返還合計','총 반환'],
   stake:['× stake','× 本局下注','× 本局下注','× ベット','× 베팅'],
   below:['Return below stake','返还低于下注','返還低於下注','返還はベット未満','반환액이 베팅보다 적음'],
-  tiers:['Win tiers: BIG 10× · MEGA 50× · EPIC 100× stake. Total return, not extra prizes.','大奖分级：大奖10倍 · 巨奖50倍 · 史诗100倍下注。按总返还分级，不额外发奖。','大獎分級：大獎10倍 · 巨獎50倍 · 史詩100倍下注。按總返還分級，不額外發獎。','演出基準：BIG 10倍・MEGA 50倍・EPIC 100倍ベット。返還合計の区分で、追加賞ではありません。','연출 기준: BIG 10배 · MEGA 50배 · EPIC 100배 베팅. 총 반환액 기준이며 추가 보상이 아닙니다.'],
+  tiers:["Win tiers: BIG >1× · MEGA 50× · EPIC 100× stake. Total round return, not extra prizes.","大奖分级：总奖金大于本局下注为大奖 · 巨奖50倍 · 史诗100倍。仅演出分级，不额外发奖。","大獎分級：總獎金大於本局下注為大獎 · 巨獎50倍 · 史詩100倍。僅演出分級，不額外發獎。","BIGは返還合計が今回のベットを超える場合。MEGA 50倍・EPIC 100倍。追加賞なし。","BIG: 이번 베팅보다 많은 총 당첨금. MEGA 50배 · EPIC 100배. 추가 보상 없음."],
+  profitableTier:['Total return > stake · BIG WIN','总返还 > 本局下注 · 大奖','總返還 > 本局下注 · 大獎','返還合計 > ベット · BIG WIN','총 반환액 > 베팅 · BIG WIN'],
+  ordinaryTier:['Ordinary paid win · total return ≤ stake','普通中奖 · 总返还 ≤ 本局下注','普通中獎 · 總返還 ≤ 本局下注','通常当たり · 返還合計 ≤ ベット','일반 당첨 · 총 반환액 ≤ 베팅'],
   tier:['Total return ≥ {n}× stake · no extra prize','总返还 ≥ {n}倍下注 · 非额外奖金','總返還 ≥ {n}倍下注 · 非額外獎金','返還合計 ≥ ベット{n}倍・追加賞なし','총 반환액 ≥ 베팅 {n}배 · 추가 보상 아님'],
 } as const;
 function p(key:keyof typeof phrases):string{const i=['en','zh-CN','zh-TW','ja','ko'].indexOf(language());return phrases[key][Math.max(0,i)];}
 function amount(n:number):string{return n.toLocaleString('en-US',{maximumFractionDigits:3});}
 export function tierRules():string{return p('tiers');}
-export function tierCaption(multiplier:number):string{return p('tier').replace('{n}',String(WIN_TIERS[Math.max(0,winTier(multiplier)-1)]));}
+export function tierCaption(multiplier:number):string{const tier=winTier(multiplier);return tier===0?p('ordinaryTier'):tier===1?p('profitableTier'):p('tier').replace('{n}',String(WIN_TIERS[tier-1]));}
 /** credits is the settled allocation AFTER round-level rounding and cap.
  * rawCredits is diagnostic pre-settlement math and must never be displayed here. */
 export function awardCredits(w:WinResult):number{return w.credits;}

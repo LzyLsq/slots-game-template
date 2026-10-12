@@ -1,0 +1,337 @@
+{
+  "checkedAt": "2026-10-10T06:01:51.001Z",
+  "games": [
+    {
+      "id": 25,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 0.438277,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11269071085566461,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 0.696599,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.008860566657772354,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 1.547514,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1295478855645198,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 2.388655,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.02645504663455547,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 3.178427,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.013529175217769867,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 0.435374,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09965878428302861,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.4293093681335449,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 0.812995,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07141480143619998,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 27,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.435374,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05919795903497797,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 0.437521,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0829284458159393,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 1.1469,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.013520211950836959,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 1.868506,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08711013767154835,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 2.583372,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08289390118009489,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.434738,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06887687998302751,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ]
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.4231760501861572,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.806893,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12061366317104452,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

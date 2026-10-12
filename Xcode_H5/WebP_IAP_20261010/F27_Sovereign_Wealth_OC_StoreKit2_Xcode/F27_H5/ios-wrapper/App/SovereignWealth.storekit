@@ -1,0 +1,64 @@
+{
+  "identifier": "F27-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "1.99",
+      "familyShareable": false,
+      "internalID": "2700",
+      "localizations": [
+        {
+          "description": "2500 virtual coins. No cash value.",
+          "displayName": "Sovereign Wealth PURSE",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.sovereignwealth.coins.purse.v1",
+      "referenceName": "purse 2500",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "2701",
+      "localizations": [
+        {
+          "description": "9000 virtual coins. No cash value.",
+          "displayName": "Sovereign Wealth COFFER",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.sovereignwealth.coins.coffer.v1",
+      "referenceName": "coffer 9000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "2702",
+      "localizations": [
+        {
+          "description": "25000 virtual coins. No cash value.",
+          "displayName": "Sovereign Wealth VAULT",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.sovereignwealth.coins.vault.v1",
+      "referenceName": "vault 25000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

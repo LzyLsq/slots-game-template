@@ -1,0 +1,1252 @@
+{
+  "id": 31,
+  "revision": "single-complete-cue-natural-tails-20261010",
+  "label": "Carnival: padded spring bounce and toy accents",
+  "zh": "嘉年华：软垫弹跳、玩具式轻快敲击",
+  "awardFamily": "HIT",
+  "sourcePacks": {
+    "interface": {
+      "url": "https://kenney.nl/assets/interface-sounds",
+      "licenseSha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    "casino": {
+      "url": "https://kenney.nl/assets/casino-audio",
+      "licenseSha256": "3d9c53acb6e236d760da14030f54bc53e1d8c2599f78470c36b96fddcde09221"
+    },
+    "jingles": {
+      "url": "https://kenney.nl/assets/music-jingles",
+      "licenseSha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+    },
+    "impact": {
+      "url": "https://kenney.nl/assets/impact-sounds",
+      "licenseSha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    "rpg": {
+      "url": "https://kenney.nl/assets/rpg-audio",
+      "licenseSha256": "5735dfd72cb64cbbceda4ebc00c380c41ca680edb82ff153aa7c9ab97614c539"
+    }
+  },
+  "originalSpeed": true,
+  "originalPitch": true,
+  "stereoMusicalCues": true,
+  "runtimeExtraVoices": 0,
+  "truncatedMusicalCues": 0,
+  "unrelatedMusicalPhrasesStitched": 0,
+  "recipes": [
+    {
+      "id": "sfx-ui-tap",
+      "file": "sfx-ui-tap.wav",
+      "rmsTarget": 0.075,
+      "parts": [
+        {
+          "key": "impact/impactSoft_medium_004",
+          "at": 0,
+          "gain": 0.9,
+          "max": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/click_003",
+          "at": 0.006,
+          "gain": 0.15,
+          "max": 0.01886621315192744,
+          "sourceSeconds": 0.01886621315192744,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.18028344671201812,
+      "firstTransientMs": 0.375,
+      "sha256": "7c31dd4b5eb15f01e03852090dad73aee13fce86c4393499d18fc0fb0a453a8f",
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_004",
+          "sourceSha256": "b0a4dea90eed47accf50b768beff1166f2f1486fb139e4d025b2427637624bca",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/click_003",
+          "sourceSha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.01886621315192744,
+          "sourceSeconds": 0.01886621315192744,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "file": "sfx-ui-back.wav",
+      "rmsTarget": 0.08,
+      "parts": [
+        {
+          "key": "casino/card-fan-2",
+          "at": 0,
+          "gain": 0.6,
+          "max": 0.44,
+          "sourceSeconds": 1.3220861678004534,
+          "sourceOffsetFrames": 7009,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "at": 0.025,
+          "gain": 0.2,
+          "max": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.465,
+      "firstTransientMs": 1.625,
+      "sha256": "8099fd3005eff436405b3e38b7b5e4d8f292ea2eebd86ff9cf73166853b5b9f4",
+      "sources": [
+        {
+          "key": "casino/card-fan-2",
+          "sourceSha256": "5743373c9dde00c6eee949a2c8e65d75946522768999167e1f5632451630e848",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.44,
+          "sourceSeconds": 1.3220861678004534,
+          "sourceOffsetSeconds": 0.15893424036281179,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "sourceSha256": "fd53e24efec3d5c1cee5a46fee70f97efd4bd01e53ac5d9b5f3b6719dfe9f5aa",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "file": "sfx-ui-select.wav",
+      "rmsTarget": 0.09,
+      "parts": [
+        {
+          "key": "impact/impactGeneric_light_003",
+          "at": 0,
+          "gain": 0.85,
+          "max": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_003",
+          "at": 0.015,
+          "gain": 0.22,
+          "max": 0.26,
+          "sourceSeconds": 0.38458049886621315,
+          "sourceOffsetFrames": 499,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "max": 0.30000000000000004,
+      "firstTransientMs": 0,
+      "sha256": "9e674859def56cf1e54a11206f078b11e7750ff50821d29c2adc2f1c0766ec28",
+      "sources": [
+        {
+          "key": "impact/impactGeneric_light_003",
+          "sourceSha256": "0e8896706130f6bc88cdf1f0157aaacdbe88dce86cf0330f9136e44eb1209e81",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/select_003",
+          "sourceSha256": "9a612fd2f513d52a296906b41071c990f75defe56be3bee60d2d4e2423b51b8b",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.26,
+          "sourceSeconds": 0.38458049886621315,
+          "sourceOffsetSeconds": 0.011315192743764172,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "file": "sfx-bet-up.wav",
+      "rmsTarget": 0.07,
+      "parts": [
+        {
+          "key": "impact/impactTin_medium_004",
+          "at": 0,
+          "gain": 0.8,
+          "max": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_005",
+          "at": 0.012,
+          "gain": 0.18,
+          "max": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "max": 0.28700000000000003,
+      "firstTransientMs": 0,
+      "sha256": "9827c890407baf5f49f8205fd3109440930188e69702791993dc0d7fb679841b",
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_004",
+          "sourceSha256": "fd53e24efec3d5c1cee5a46fee70f97efd4bd01e53ac5d9b5f3b6719dfe9f5aa",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_005",
+          "sourceSha256": "e94dfab6fd6558068ab3ea97e22e4b4f16b83ee440e6abf33ec4c4e9fbe8a70e",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "file": "sfx-bet-down.wav",
+      "rmsTarget": 0.06,
+      "parts": [
+        {
+          "key": "impact/impactSoft_medium_004",
+          "at": 0,
+          "gain": 0.68,
+          "max": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/cloth4",
+          "at": 0.016,
+          "gain": 0.16,
+          "max": 0.34002267573696143,
+          "sourceSeconds": 0.3853514739229025,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "max": 0.38102267573696147,
+      "firstTransientMs": 0.375,
+      "sha256": "b32a2b610e25ea3a25ac6c48554dffb016170d7e1e99ca98e163d1e340414754",
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_004",
+          "sourceSha256": "b0a4dea90eed47accf50b768beff1166f2f1486fb139e4d025b2427637624bca",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "rpg/cloth4",
+          "sourceSha256": "e7ab9a6c4466dea874196c61f59bf1da05cfe58748f42fadd695d441a154a99b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.3853514739229025,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "file": "sfx-spin-start.wav",
+      "rmsTarget": 0.12,
+      "parts": [
+        {
+          "key": "rpg/cloth4",
+          "at": 0,
+          "gain": 0.8,
+          "max": 0.3853514739229025,
+          "sourceSeconds": 0.3853514739229025,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGeneric_light_003",
+          "at": 0.035,
+          "gain": 0.36,
+          "max": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.4103514739229025,
+      "firstTransientMs": 7.375,
+      "sha256": "33fd50f4cf23d181d62fac07b2b8749e4f3db92b2ddf58ccd365286f01ae52b4",
+      "sources": [
+        {
+          "key": "rpg/cloth4",
+          "sourceSha256": "e7ab9a6c4466dea874196c61f59bf1da05cfe58748f42fadd695d441a154a99b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.3853514739229025,
+          "sourceSeconds": 0.3853514739229025,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGeneric_light_003",
+          "sourceSha256": "0e8896706130f6bc88cdf1f0157aaacdbe88dce86cf0330f9136e44eb1209e81",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "file": "sfx-stop-1.wav",
+      "rmsTarget": 0.105,
+      "parts": [
+        {
+          "key": "impact/impactSoft_medium_004",
+          "at": 0,
+          "gain": 0.85,
+          "max": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.18028344671201812,
+      "firstTransientMs": 0.375,
+      "sha256": "d726cda1d03919f5025a75f7cac8ef8907d0422016c977152977a5a63289ae1c",
+      "sources": [
+        {
+          "key": "impact/impactSoft_medium_004",
+          "sourceSha256": "b0a4dea90eed47accf50b768beff1166f2f1486fb139e4d025b2427637624bca",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "file": "sfx-stop-2.wav",
+      "rmsTarget": 0.105,
+      "parts": [
+        {
+          "key": "impact/impactTin_medium_004",
+          "at": 0,
+          "gain": 0.85,
+          "max": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.2267233560090703,
+      "firstTransientMs": 0,
+      "sha256": "821966a9acdd74933bdf92c1c186e9d71dc6d57f841ef13d2737aeabda5fe8ea",
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_004",
+          "sourceSha256": "fd53e24efec3d5c1cee5a46fee70f97efd4bd01e53ac5d9b5f3b6719dfe9f5aa",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "file": "sfx-stop-3.wav",
+      "rmsTarget": 0.105,
+      "parts": [
+        {
+          "key": "impact/impactGeneric_light_003",
+          "at": 0,
+          "gain": 0.85,
+          "max": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.16577097505668933,
+      "firstTransientMs": 0,
+      "sha256": "0abe93a9253dfa968e5bba31117d5f010adee7604dbd9e8f2f8ff481afdce4b5",
+      "sources": [
+        {
+          "key": "impact/impactGeneric_light_003",
+          "sourceSha256": "0e8896706130f6bc88cdf1f0157aaacdbe88dce86cf0330f9136e44eb1209e81",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "file": "sfx-coin-1.wav",
+      "rmsTarget": 0.045,
+      "parts": [
+        {
+          "key": "casino/chips-handle-6",
+          "at": 0,
+          "gain": 0.7,
+          "max": 0.22,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetFrames": 2429,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "max": 0.245,
+      "firstTransientMs": 1.25,
+      "sha256": "66e87e9140505706c2c9c4814f44ba38ad009f22ff838bf29acae9928f7dcfb5",
+      "sources": [
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "file": "sfx-coin-2.wav",
+      "rmsTarget": 0.045,
+      "parts": [
+        {
+          "key": "casino/chips-handle-5",
+          "at": 0,
+          "gain": 0.7,
+          "max": 0.22,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "max": 0.245,
+      "firstTransientMs": 0.625,
+      "sha256": "765fc5398a803b8083e57a906d3e738c1220a67736e1d5afed09a63a94293a9a",
+      "sources": [
+        {
+          "key": "casino/chips-handle-5",
+          "sourceSha256": "589753ea21b1955626e82975be8979f42140f5b0645a8c33c2d1f7e33fba68cb",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "file": "sfx-coin-3.wav",
+      "rmsTarget": 0.045,
+      "parts": [
+        {
+          "key": "casino/chips-handle-6",
+          "at": 0,
+          "gain": 0.7,
+          "max": 0.22,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetFrames": 2429,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "at": 0.045,
+          "gain": 0.18,
+          "max": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.245,
+      "firstTransientMs": 1.25,
+      "sha256": "f13619381e3836c98642de00dba2898b93746e0241c618f41b61e0f5276263b6",
+      "sources": [
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.22,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "sourceSha256": "b0a4dea90eed47accf50b768beff1166f2f1486fb139e4d025b2427637624bca",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "file": "sfx-burst.wav",
+      "rmsTarget": 0.145,
+      "parts": [
+        {
+          "key": "casino/chips-handle-5",
+          "at": 0,
+          "gain": 0.7,
+          "max": 0.76,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGeneric_light_003",
+          "at": 0.05,
+          "gain": 0.3,
+          "max": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.785,
+      "firstTransientMs": 1.375,
+      "sha256": "68d252b8b92771f2f158a271408c60c84f49c615e510e161eb9c6ad35036363e",
+      "sources": [
+        {
+          "key": "casino/chips-handle-5",
+          "sourceSha256": "589753ea21b1955626e82975be8979f42140f5b0645a8c33c2d1f7e33fba68cb",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.76,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactGeneric_light_003",
+          "sourceSha256": "0e8896706130f6bc88cdf1f0157aaacdbe88dce86cf0330f9136e44eb1209e81",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "file": "sfx-reveal.wav",
+      "rmsTarget": 0.14,
+      "parts": [
+        {
+          "key": "rpg/cloth4",
+          "at": 0,
+          "gain": 0.65,
+          "max": 0.3853514739229025,
+          "sourceSeconds": 0.3853514739229025,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "at": 0.028,
+          "gain": 0.45,
+          "max": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.4103514739229025,
+      "firstTransientMs": 7.375,
+      "sha256": "9b0b554d2a9e21369452cc474edad9cfe697484c2b1bb0fb0cc8a72d6c4a0aa7",
+      "sources": [
+        {
+          "key": "rpg/cloth4",
+          "sourceSha256": "e7ab9a6c4466dea874196c61f59bf1da05cfe58748f42fadd695d441a154a99b",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.3853514739229025,
+          "sourceSeconds": 0.3853514739229025,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "sourceSha256": "b0a4dea90eed47accf50b768beff1166f2f1486fb139e4d025b2427637624bca",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "file": "sfx-collect.wav",
+      "rmsTarget": 0.12,
+      "parts": [
+        {
+          "key": "casino/chips-handle-6",
+          "at": 0,
+          "gain": 0.8,
+          "max": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetFrames": 2429,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "at": 0.04,
+          "gain": 0.28,
+          "max": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "max": 0.4415759637188209,
+      "firstTransientMs": 1.25,
+      "sha256": "958fcf44597456c6d9a585bf70d807bc34b3a35e0110c94e0c59020a6523a2a3",
+      "sources": [
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "sourceSha256": "fd53e24efec3d5c1cee5a46fee70f97efd4bd01e53ac5d9b5f3b6719dfe9f5aa",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "file": "sfx-reward.wav",
+      "rmsTarget": 0.135,
+      "parts": [
+        {
+          "key": "impact/impactGeneric_light_003",
+          "at": 0,
+          "gain": 0.5,
+          "max": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-5",
+          "at": 0.06,
+          "gain": 0.7,
+          "max": 0.72,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "max": 0.805,
+      "firstTransientMs": 0,
+      "sha256": "cd00d532b0982fd03567b1965746c914652628899eb9ae108f64fc7428e407e6",
+      "sources": [
+        {
+          "key": "impact/impactGeneric_light_003",
+          "sourceSha256": "0e8896706130f6bc88cdf1f0157aaacdbe88dce86cf0330f9136e44eb1209e81",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-5",
+          "sourceSha256": "589753ea21b1955626e82975be8979f42140f5b0645a8c33c2d1f7e33fba68cb",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.72,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "win-small",
+      "file": "win-small.m4a",
+      "rmsTarget": 0.125,
+      "parts": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT11",
+          "at": 0,
+          "gain": 0.9,
+          "max": 0.9766893424036281,
+          "sourceSeconds": 0.9766893424036281,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "at": 0.012,
+          "gain": 0.1,
+          "max": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT11",
+      "completeMusicalCue": true,
+      "max": 1.0016893424036282,
+      "sha256": "5156b091a370ed4b89c8c4e87f23b28d01a140bf18258049d8bf3f62a5656eb4",
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT11",
+          "sourceSha256": "40d6f3fb92225d039a9196c5cda98c9366efdc837c10b9b6d01d94dfafae8ec9",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9766893424036281,
+          "sourceSeconds": 0.9766893424036281,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "sourceSha256": "b0a4dea90eed47accf50b768beff1166f2f1486fb139e4d025b2427637624bca",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "win-big",
+      "file": "win-big.m4a",
+      "rmsTarget": 0.135,
+      "parts": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT00",
+          "at": 0,
+          "gain": 0.9,
+          "max": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "at": 0.012,
+          "gain": 0.115,
+          "max": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-5",
+          "at": 0.23879818594104307,
+          "gain": 0.205,
+          "max": 0.7,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT00",
+      "completeMusicalCue": true,
+      "max": 0.963798185941043,
+      "sha256": "088860c6e37ba8982de2021a37226c9b3bc6314d2766b8920e63cedbc4837b32",
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT00",
+          "sourceSha256": "e23d8c9e971a4e34484bc834a3ec1d560811ec6f5edd5efa2c61e583c18c504a",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "sourceSha256": "fd53e24efec3d5c1cee5a46fee70f97efd4bd01e53ac5d9b5f3b6719dfe9f5aa",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-5",
+          "sourceSha256": "589753ea21b1955626e82975be8979f42140f5b0645a8c33c2d1f7e33fba68cb",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.23879818594104307,
+          "gain": 0.205,
+          "maxSeconds": 0.7,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "win-mega",
+      "file": "win-mega.m4a",
+      "rmsTarget": 0.145,
+      "parts": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT01",
+          "at": 0,
+          "gain": 0.9,
+          "max": 0.5122902494331065,
+          "sourceSeconds": 0.5122902494331065,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGeneric_light_003",
+          "at": 0.012,
+          "gain": 0.13,
+          "max": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-6",
+          "at": 0.46229024943310654,
+          "gain": 0.22999999999999998,
+          "max": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetFrames": 2429,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT01",
+      "completeMusicalCue": true,
+      "max": 0.9038662131519274,
+      "sha256": "99bacb25cf2f98ebf2595be7f6bbcc24b240e675c2629092003d483e891c0f5f",
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT01",
+          "sourceSha256": "ddca9df332d7cdab525bbbe62ca26e9d61aa64bfa626d9516d5c53eb91c45322",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.5122902494331065,
+          "sourceSeconds": 0.5122902494331065,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactGeneric_light_003",
+          "sourceSha256": "0e8896706130f6bc88cdf1f0157aaacdbe88dce86cf0330f9136e44eb1209e81",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.14077097505668934,
+          "sourceSeconds": 0.14077097505668934,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.46229024943310654,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "win-epic",
+      "file": "win-epic.m4a",
+      "rmsTarget": 0.155,
+      "parts": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT04",
+          "at": 0,
+          "gain": 0.9,
+          "max": 0.6574149659863946,
+          "sourceSeconds": 0.6574149659863946,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "max": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-5",
+          "at": 0.6074149659863946,
+          "gain": 0.255,
+          "max": 0.7,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT04",
+      "completeMusicalCue": true,
+      "max": 1.3324149659863944,
+      "sha256": "4f7856ebcc688976380e84d986281434b95c5e3deb28c76190ab87c25ab69530",
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT04",
+          "sourceSha256": "7c20cd8d6b98e583822e1f58abc596900a07ba75ca690ec599efe5ea58981211",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.6574149659863946,
+          "sourceSeconds": 0.6574149659863946,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactSoft_medium_004",
+          "sourceSha256": "b0a4dea90eed47accf50b768beff1166f2f1486fb139e4d025b2427637624bca",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.15528344671201813,
+          "sourceSeconds": 0.15528344671201813,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-5",
+          "sourceSha256": "589753ea21b1955626e82975be8979f42140f5b0645a8c33c2d1f7e33fba68cb",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.6074149659863946,
+          "gain": 0.255,
+          "maxSeconds": 0.7,
+          "sourceSeconds": 0.846077097505669,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "win-super",
+      "file": "win-super.m4a",
+      "rmsTarget": 0.165,
+      "parts": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT07",
+          "at": 0,
+          "gain": 0.9,
+          "max": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "at": 0.012,
+          "gain": 0.16,
+          "max": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetFrames": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-6",
+          "at": 0.23879818594104307,
+          "gain": 0.28,
+          "max": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetFrames": 2429,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Hit jingles/jingles_HIT07",
+      "completeMusicalCue": true,
+      "max": 0.680374149659864,
+      "sha256": "c7f32e1b3fe2776abad73570302a67cee61c8d72386d943a2963262f90cbde16",
+      "sources": [
+        {
+          "key": "jingles/Hit jingles/jingles_HIT07",
+          "sourceSha256": "b35d7bea586f6412be312753a50b708e9505ce86c42e5549117c18f8da00a4e6",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.28879818594104306,
+          "sourceSeconds": 0.28879818594104306,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_004",
+          "sourceSha256": "fd53e24efec3d5c1cee5a46fee70f97efd4bd01e53ac5d9b5f3b6719dfe9f5aa",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.2017233560090703,
+          "sourceSeconds": 0.2017233560090703,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-handle-6",
+          "sourceSha256": "527d4d3de55cc261dc476329b71a750c296f3ad633ac50318d913976bb89857c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.23879818594104307,
+          "gain": 0.28,
+          "maxSeconds": 0.4165759637188209,
+          "sourceSeconds": 0.47165532879818595,
+          "sourceOffsetSeconds": 0.05507936507936508,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    }
+  ]
+}

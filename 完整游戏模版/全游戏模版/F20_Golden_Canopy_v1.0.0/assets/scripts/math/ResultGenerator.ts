@@ -24,14 +24,14 @@ export class ResultGenerator {
   if(force?.scatterCount&&c.scatterId)for(let i=0;i<Math.min(force.scatterCount,c.columns);i++)grid[i*c.rows]=c.scatterId;
   if(force?.holdAndSpin&&c.bonusId)for(let i=0;i<Math.min(6,Math.ceil(grid.length/2));i++)grid[i*2]=c.bonusId;
   let wins=this.evaluate(c,grid,bet);
-  if(force?.winTier){const multiplier=force.winTier==='big'?25:force.winTier==='mega'?75:150;wins.push({kind:'bonus',symbolId:'chest',count:1,multiplier,credits:bet*multiplier,positions:[]});}
+  if(force?.winTier){const multiplier=force.winTier==='big'?7:force.winTier==='super'?25:force.winTier==='mega'?75:150;wins.push({kind:'bonus',symbolId:'chest',count:1,multiplier,credits:bet*multiplier,positions:[]});}
   let featureResult=this.resolve(c,bet,grid,wins,rng,!!(force?.scatterCount||force?.holdAndSpin));const rounded=roundAwards([...wins,...(featureResult?.rounds.flatMap(r=>Array.from(r.wins))??[])]);let cursor=wins.length;
   wins=rounded.slice(0,cursor);
   if(featureResult){const rounds=featureResult.rounds.map(r=>{const ws=rounded.slice(cursor,cursor+r.wins.length);cursor+=r.wins.length;return {...r,wins:ws,credits:ws.reduce((n,w)=>n+w.credits,0)};});featureResult={...featureResult,rounds,totalCredits:rounds.reduce((n,r)=>n+r.credits,0)};}
 let remaining=Math.floor(bet*c.maxWinMultiplier);
   const award=(value:number):number=>{const credits=Math.min(remaining,value);remaining-=credits;return credits;};
   wins=wins.map(w=>({...w,credits:award(w.credits)}));
-  const baseWin=wins.reduce((sum,w)=>sum+w.credits,0);
+  let baseWin=wins.reduce((sum,w)=>sum+w.credits,0);
   if(featureResult){
    const rounds=featureResult.rounds.map(round=>{
     const credits=award(round.credits);let roundBudget=credits;
@@ -42,6 +42,12 @@ let remaining=Math.floor(bet*c.maxWinMultiplier);
    featureResult={...featureResult,rounds,totalCredits,pickAwards:featureResult.pickAwards?.map(()=>totalCredits)};
   }
   const featureWin=featureResult?.totalCredits??0;
+  // Draw/settle the reels and features first. Only a separate, visible benefit
+  // fills a qualifying new player's total return up to 10x the stake.
+  if(force?.newcomerSuper&&baseWin+featureWin<bet*10){
+   const credits=Math.min(remaining,bet*10-baseWin-featureWin);
+   if(credits>0){wins.push({kind:'bonus',symbolId:'newcomer-benefit',count:1,multiplier:0,credits,positions:[]});baseWin+=credits;}
+  }
   return {spinId:`${c.id}-${seed}-${++this.sequence}`,gameId:c.id,seed,stops,grid,layout:prepared.layout,wins,baseWin,featureWin,totalWin:baseWin+featureWin,featureResult,feature:featureResult?{type:featureResult.type,count:featureResult.rounds.length}:undefined,anticipationColumns:[]};
  }
  private fresh(c:GameConfig,rng:RandomSource):string[]{return this.gridFromStops(c,c.reelStrips.map(strip=>rng.int(0,strip.length)));}

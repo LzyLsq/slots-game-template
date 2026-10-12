@@ -6,7 +6,7 @@ export function currentProfile(){return storageAdapter().getItem('f25.active-pro
 export function selectProfile(id:string){if(id)storageAdapter().setItem('f25.active-profile',id);else storageAdapter().removeItem('f25.active-profile')}
 function profileKey(){const id=currentProfile();return KEY+(id?':'+id:'')}
 const KEY='f25.velvet.fortune.v1';
-export const defaultState=()=>({version:1,name:'Royal Guest',avatar:0,balance:40000,won:0,spins:0,biggest:0,bet:100,mode:0,loggedIn:false,lang:'en',sound:false,motion:true,claims:[],mailClaims:[],dailyGift:'',history:[],pending:null});
+export const defaultState=()=>({version:1,name:'Royal Guest',avatar:0,balance:40000,won:0,spins:0,biggest:0,bet:100,mode:0,loggedIn:false,lang:'en',sound:true,motion:true,claims:[],mailClaims:[],dailyGift:'',history:[],pending:null});
 export function normalizeState(s){
  if(!s||s.version!==1||!Number.isSafeInteger(s.balance)||s.balance<0)throw Error('Invalid save');
  const d={...defaultState(),...s};d.name=typeof d.name==='string'?d.name.trim().slice(0,18)||'Royal Guest':'Royal Guest';

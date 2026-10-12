@@ -1,0 +1,914 @@
+{
+  "version": 5,
+  "revision": "curated-authored-audio-20261010",
+  "theme": "F27_Sovereign_Wealth_v1.0.0",
+  "licenses": {
+    "music": "CC BY 4.0",
+    "effects": "CC0 1.0"
+  },
+  "creation": "Published authored music and CC0 sound packs. No runtime oscillator or GM/MIDI background render.",
+  "tracks": [
+    {
+      "id": "music-home",
+      "title": "Lobby Time",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Lobby%20Time.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600054",
+      "isrc": "USUAN1600054",
+      "published": "2016-09-22",
+      "sourceSha256": "bc47dc1f1a0b1fe4ff631cee89ca3987b8f7b52f533d06233665d51300331beb",
+      "file": "music-home.m4a",
+      "sha256": "69f6d622796555a8e0718fa820deeba44192c34424dbe2e44653bd38c5ceacce",
+      "duration": 90.875,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "music-cabinet",
+      "title": "Cool Vibes",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Vibes.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100863",
+      "isrc": "USUAN1100863",
+      "published": "2011-10-14",
+      "sourceSha256": "86e5afb1f71da4c45927bb693cc32e2f72954137cf010599a912fa89cfd4db2e",
+      "file": "music-cabinet.m4a",
+      "sha256": "bfc5ddef9c09428d61ca7072b558b26b39d54bc3f2e3174929c515b3370d27f9",
+      "duration": 88.63855421686748,
+      "modifications": "Beat-length excerpt, equal-power loop join, gentle EQ, loudness normalization, AAC encoding"
+    },
+    {
+      "id": "win-small",
+      "title": "Sovereign: polished mint latch and dense coin detail / win-small",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "ccc09671f1cb59ba556e4041daa1f31de396ac3ba79245951876fdece78b5dcd",
+      "file": "win-small.m4a",
+      "sha256": "b21756c48262d83eb1c8c73dc2cc78474d9cf767bd25628ad22e72b04d83f713",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.653390022675737,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX11",
+          "sourceSha256": "ccc09671f1cb59ba556e4041daa1f31de396ac3ba79245951876fdece78b5dcd",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.628390022675737,
+          "sourceSeconds": 0.628390022675737,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactMetal_light_004",
+          "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.1,
+          "maxSeconds": 0.22784580498866214,
+          "sourceSeconds": 0.22784580498866214,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ],
+      "phraseOrder": [
+        11
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX11"
+    },
+    {
+      "id": "win-big",
+      "title": "Sovereign: polished mint latch and dense coin detail / win-big",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "f87605d2a3c717e6a26e584f57d24eac44e47f5a01470dad18809e5d6c9eb618",
+      "file": "win-big.m4a",
+      "sha256": "af53987eff1475001302ed979b99a38752b65dea550a7224bbb95ec68702ddcf",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.5333673469387755,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX00",
+          "sourceSha256": "f87605d2a3c717e6a26e584f57d24eac44e47f5a01470dad18809e5d6c9eb618",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.39909297052154197,
+          "sourceSeconds": 0.39909297052154197,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_002",
+          "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.115,
+          "maxSeconds": 0.1349659863945578,
+          "sourceSeconds": 0.1349659863945578,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-5",
+          "sourceSha256": "42dd800e3e24bbd07d3ebfc86c44b6500d376641e30270dc363d95a73e90b56e",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.349092970521542,
+          "gain": 0.205,
+          "maxSeconds": 0.15927437641723355,
+          "sourceSeconds": 0.19301587301587303,
+          "sourceOffsetSeconds": 0.03374149659863945,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        0
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX00"
+    },
+    {
+      "id": "win-mega",
+      "title": "Sovereign: polished mint latch and dense coin detail / win-mega",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "272b8160616d0f924f447df3f8543ab83440c5e41168107bd5abe1140894122b",
+      "file": "win-mega.m4a",
+      "sha256": "dee8b632fd53c3c71aea1780284794f54b109e4d864308f340d981f17e083c00",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.036315192743764,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX01",
+          "sourceSha256": "272b8160616d0f924f447df3f8543ab83440c5e41168107bd5abe1140894122b",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.9099319727891156,
+          "sourceSeconds": 0.9099319727891156,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.13,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-collide-3",
+          "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.8599319727891156,
+          "gain": 0.22999999999999998,
+          "maxSeconds": 0.1513832199546485,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0.12,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        1
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX01"
+    },
+    {
+      "id": "win-epic",
+      "title": "Sovereign: polished mint latch and dense coin detail / win-epic",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "94eeaa26800f6a04eb71b9d9e4f25c19d779109f6903d17811d2a881d2f5614d",
+      "file": "win-epic.m4a",
+      "sha256": "0dac6b09467d865fd41cddc0fa0e84a7c68d98add6307a7157f12e30465b1aee",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.5449773242630386,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX04",
+          "sourceSha256": "94eeaa26800f6a04eb71b9d9e4f25c19d779109f6903d17811d2a881d2f5614d",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.41070294784580497,
+          "sourceSeconds": 0.41070294784580497,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactMetal_light_004",
+          "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.14500000000000002,
+          "maxSeconds": 0.22784580498866214,
+          "sourceSeconds": 0.22784580498866214,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-stack-5",
+          "sourceSha256": "42dd800e3e24bbd07d3ebfc86c44b6500d376641e30270dc363d95a73e90b56e",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.360702947845805,
+          "gain": 0.255,
+          "maxSeconds": 0.15927437641723355,
+          "sourceSeconds": 0.19301587301587303,
+          "sourceOffsetSeconds": 0.03374149659863945,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        4
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX04"
+    },
+    {
+      "id": "win-super",
+      "title": "Sovereign: polished mint latch and dense coin detail / win-super",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "sourceSha256": "241c8570fbded819ee0205e4be3efa80aeb834a70df89318da88f9e219798b11",
+      "file": "win-super.m4a",
+      "sha256": "1238b8540a1ad6149b190666109240555f50298730c8dfbc9e70328212a95fd1",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 1.8693310657596371,
+      "sources": [
+        {
+          "key": "jingles/Sax jingles/jingles_SAX07",
+          "sourceSha256": "241c8570fbded819ee0205e4be3efa80aeb834a70df89318da88f9e219798b11",
+          "sourceUrl": "https://kenney.nl/assets/music-jingles",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 1.7429478458049887,
+          "sourceSeconds": 1.7429478458049887,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "impact/impactTin_medium_002",
+          "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.16,
+          "maxSeconds": 0.1349659863945578,
+          "sourceSeconds": 0.1349659863945578,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/chips-collide-3",
+          "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 1.6929478458049887,
+          "gain": 0.28,
+          "maxSeconds": 0.1513832199546485,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0.12,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ],
+      "phraseOrder": [
+        7
+      ],
+      "primaryMusicalSource": "jingles/Sax jingles/jingles_SAX07"
+    },
+    {
+      "id": "sfx-ui-tap",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-ui-tap",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+      "file": "sfx-ui-tap.wav",
+      "sha256": "9ee0753497c3bf02c0c04a43e9a8995dd6cf68fe9ee0d1c769cab42859e208f9",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.25284580498866216,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_004",
+          "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.9,
+          "maxSeconds": 0.22784580498866214,
+          "sourceSeconds": 0.22784580498866214,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/click_003",
+          "sourceSha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.006,
+          "gain": 0.15,
+          "maxSeconds": 0.01886621315192744,
+          "sourceSeconds": 0.01886621315192744,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-back",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-ui-back",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "sourceSha256": "f3b692d5c83263c25bce779805b212dbab515d18a603c695fc6a1e8650cf5366",
+      "file": "sfx-ui-back.wav",
+      "sha256": "cab7711370ce56fdaf9b0f2dbe0325ded7e802c485d7a4e65baf2bfae9c58225",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.4504648526077098,
+      "sources": [
+        {
+          "key": "rpg/beltHandle2",
+          "sourceSha256": "f3b692d5c83263c25bce779805b212dbab515d18a603c695fc6a1e8650cf5366",
+          "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.6,
+          "maxSeconds": 0.4254648526077098,
+          "sourceSeconds": 0.4866666666666667,
+          "sourceOffsetSeconds": 0.061201814058956916,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_002",
+          "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.025,
+          "gain": 0.2,
+          "maxSeconds": 0.1349659863945578,
+          "sourceSeconds": 0.1349659863945578,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-ui-select",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-ui-select",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+      "file": "sfx-ui-select.wav",
+      "sha256": "c3313fc54b17618d032003898c63c899d08f854946473281f0fda65a4d48f9c4",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.385,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "interface/select_007",
+          "sourceSha256": "cd4390dd2b24f09016a5fa1be63334fa0f1859811f4cf29c02e8e2750f6a2cd0",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.015,
+          "gain": 0.22,
+          "maxSeconds": 0.05950113378684807,
+          "sourceSeconds": 0.05950113378684807,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-up",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-bet-up",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+      "file": "sfx-bet-up.wav",
+      "sha256": "8907e6e7c845bf3c378a2363cf3a8d762f2211c095b62a75e86a264861042c83",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.28700000000000003,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_002",
+          "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.1349659863945578,
+          "sourceSeconds": 0.1349659863945578,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "interface/switch_001",
+          "sourceSha256": "3b74efad87f1e69dbd1d05c5ad952ab90859b5a3d11da6ec5bd79b4f03b42afa",
+          "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+          "license": "CC0 1.0",
+          "at": 0.012,
+          "gain": 0.18,
+          "maxSeconds": 0.25,
+          "sourceSeconds": 0.6196825396825397,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-bet-down",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-bet-down",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+      "file": "sfx-bet-down.wav",
+      "sha256": "bfc383d281e98f6af7528b687d807ea0fa1ef1ebdf3168372550f814434081fc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.38102267573696147,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_004",
+          "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.68,
+          "maxSeconds": 0.22784580498866214,
+          "sourceSeconds": 0.22784580498866214,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        },
+        {
+          "key": "casino/card-slide-7",
+          "sourceSha256": "bda2040194f43484d03ee3c65ed6fff57251882ea7227abce4214bfa30bf2705",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.016,
+          "gain": 0.16,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6516099773242631,
+          "sourceOffsetSeconds": 0.08836734693877552,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-spin-start",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-spin-start",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "bda2040194f43484d03ee3c65ed6fff57251882ea7227abce4214bfa30bf2705",
+      "file": "sfx-spin-start.wav",
+      "sha256": "1c2b7b942bd3408386e49317cda3fc414ed8082d399165864ab028d5212afdc5",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.5882426303854875,
+      "sources": [
+        {
+          "key": "casino/card-slide-7",
+          "sourceSha256": "bda2040194f43484d03ee3c65ed6fff57251882ea7227abce4214bfa30bf2705",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.5632426303854875,
+          "sourceSeconds": 0.6516099773242631,
+          "sourceOffsetSeconds": 0.08836734693877552,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.035,
+          "gain": 0.36,
+          "maxSeconds": 0.32,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-1",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-stop-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+      "file": "sfx-stop-1.wav",
+      "sha256": "d7ac05e768f012ede7cd85b5ba408db5e9f289ad4fb3571473163d5cb1144f28",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.25284580498866216,
+      "sources": [
+        {
+          "key": "impact/impactMetal_light_004",
+          "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.22784580498866214,
+          "sourceSeconds": 0.22784580498866214,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-2",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-stop-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+      "file": "sfx-stop-2.wav",
+      "sha256": "d421375cb72f1e51fa554e3c3f4c50f09498818331b7679bc5dfc95171105738",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.1599659863945578,
+      "sources": [
+        {
+          "key": "impact/impactTin_medium_002",
+          "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.1349659863945578,
+          "sourceSeconds": 0.1349659863945578,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-stop-3",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-stop-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+      "file": "sfx-stop-3.wav",
+      "sha256": "52ef15f7967f0458718ab24b72a1c1272a1494a58e844c0264622b356c4d55ea",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.36502267573696145,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.85,
+          "maxSeconds": 0.34002267573696143,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-1",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-coin-1",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+      "file": "sfx-coin-1.wav",
+      "sha256": "5b23d77e606d27309b59d3b272d52f856992e464933c31fe4f2f8c2622df4e29",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.1763832199546485,
+      "sources": [
+        {
+          "key": "casino/chips-collide-3",
+          "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1513832199546485,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0.12,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-2",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-coin-2",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "42dd800e3e24bbd07d3ebfc86c44b6500d376641e30270dc363d95a73e90b56e",
+      "file": "sfx-coin-2.wav",
+      "sha256": "71b4c29021c346552d7c86be0c947f1104533c37f06e5fc4db158f4d0d3da65c",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.18427437641723354,
+      "sources": [
+        {
+          "key": "casino/chips-stack-5",
+          "sourceSha256": "42dd800e3e24bbd07d3ebfc86c44b6500d376641e30270dc363d95a73e90b56e",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.15927437641723355,
+          "sourceSeconds": 0.19301587301587303,
+          "sourceOffsetSeconds": 0.03374149659863945,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-coin-3",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-coin-3",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+      "file": "sfx-coin-3.wav",
+      "sha256": "220219e8beb6ac6b0ba473a244ae7dbfeca94eae1cade89c3e02985275696445",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.24999999999999997,
+      "sources": [
+        {
+          "key": "casino/chips-collide-3",
+          "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.1513832199546485,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0.12,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactMetal_light_004",
+          "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.045,
+          "gain": 0.18,
+          "maxSeconds": 0.18,
+          "sourceSeconds": 0.22784580498866214,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-burst",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-burst",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "42dd800e3e24bbd07d3ebfc86c44b6500d376641e30270dc363d95a73e90b56e",
+      "file": "sfx-burst.wav",
+      "sha256": "f196f8e89fc93c13c6eaf85150d1315abe89c874eedb3dc0de2928d2bc13a046",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.435,
+      "sources": [
+        {
+          "key": "casino/chips-stack-5",
+          "sourceSha256": "42dd800e3e24bbd07d3ebfc86c44b6500d376641e30270dc363d95a73e90b56e",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.7,
+          "maxSeconds": 0.15927437641723355,
+          "sourceSeconds": 0.19301587301587303,
+          "sourceOffsetSeconds": 0.03374149659863945,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.05,
+          "gain": 0.3,
+          "maxSeconds": 0.36,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "sfx-reveal",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-reveal",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "bda2040194f43484d03ee3c65ed6fff57251882ea7227abce4214bfa30bf2705",
+      "file": "sfx-reveal.wav",
+      "sha256": "e05df3a2967a56e4c5ab826ead10922e98bab848055c3c632931159c7e53c8dc",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.5882426303854875,
+      "sources": [
+        {
+          "key": "casino/card-slide-7",
+          "sourceSha256": "bda2040194f43484d03ee3c65ed6fff57251882ea7227abce4214bfa30bf2705",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.65,
+          "maxSeconds": 0.5632426303854875,
+          "sourceSeconds": 0.6516099773242631,
+          "sourceOffsetSeconds": 0.08836734693877552,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactMetal_light_004",
+          "sourceSha256": "9b1c35820fba507081261f19ab5f461f69a5e2627a7d91acdb73ca3cfc997979",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.028,
+          "gain": 0.45,
+          "maxSeconds": 0.22784580498866214,
+          "sourceSeconds": 0.22784580498866214,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-collect",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-collect",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/casino-audio",
+      "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+      "file": "sfx-collect.wav",
+      "sha256": "272cedfb809588bdcb4d3b3917a15d2bb93161cbb2e2ce8cef82dcceac17edee",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.19996598639455782,
+      "sources": [
+        {
+          "key": "casino/chips-collide-3",
+          "sourceSha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.8,
+          "maxSeconds": 0.1513832199546485,
+          "sourceSeconds": 0.27138321995464854,
+          "sourceOffsetSeconds": 0.12,
+          "naturalTailRetained": true,
+          "completeSource": false
+        },
+        {
+          "key": "impact/impactTin_medium_002",
+          "sourceSha256": "c1d2c4f9910d4529581ae56a9a9a01454c4619fbb7d6da7616221d8ec58cc0c4",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0.04,
+          "gain": 0.28,
+          "maxSeconds": 0.1349659863945578,
+          "sourceSeconds": 0.1349659863945578,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": true,
+          "completeSource": true
+        }
+      ]
+    },
+    {
+      "id": "sfx-reward",
+      "title": "Sovereign: polished mint latch and dense coin detail / sfx-reward",
+      "artist": "Kenney Vleugels; sample editing by project",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+      "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+      "file": "sfx-reward.wav",
+      "sha256": "667cef7bd3c2a8c4b46e4486da0253fe2caf01513319fb9e06d2b333bf826930",
+      "modifications": "Original speed/pitch. One complete stock musical cue per award, retained stereo and authored tail, restrained theme foley. Trimmed low-level foley lead-in with 2ms pre-onset, role-balanced feedback, 45ms fades only on shortened foley, mild high-shelf. No stitched melodies or runtime oscillators.",
+      "duration": 0.445,
+      "sources": [
+        {
+          "key": "impact/impactPlate_light_004",
+          "sourceSha256": "9cb33b0c0cce948313f078b60769d2f8e4075472494fc8f8129aa4a23c951897",
+          "sourceUrl": "https://kenney.nl/assets/impact-sounds",
+          "license": "CC0 1.0",
+          "at": 0,
+          "gain": 0.5,
+          "maxSeconds": 0.42,
+          "sourceSeconds": 0.6777324263038549,
+          "sourceOffsetSeconds": 0,
+          "naturalTailRetained": false,
+          "completeSource": false
+        },
+        {
+          "key": "casino/chips-stack-5",
+          "sourceSha256": "42dd800e3e24bbd07d3ebfc86c44b6500d376641e30270dc363d95a73e90b56e",
+          "sourceUrl": "https://kenney.nl/assets/casino-audio",
+          "license": "CC0 1.0",
+          "at": 0.06,
+          "gain": 0.7,
+          "maxSeconds": 0.15927437641723355,
+          "sourceSeconds": 0.19301587301587303,
+          "sourceOffsetSeconds": 0.03374149659863945,
+          "naturalTailRetained": true,
+          "completeSource": false
+        }
+      ]
+    },
+    {
+      "id": "music-spin",
+      "title": "Cool Vibes",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Vibes.mp3",
+      "sourcePage": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100863",
+      "isrc": "USUAN1100863",
+      "published": "2011-10-14",
+      "sourceSha256": "86e5afb1f71da4c45927bb693cc32e2f72954137cf010599a912fa89cfd4db2e",
+      "file": "music-spin.m4a",
+      "sha256": "e8e859a50f4fdcff954897b4e5963fa7032fd4ec2f27be3b072be9088692b22e",
+      "duration": 22.632530120481928,
+      "modifications": "Later eight-bar spin passage; equal-power join, gentle EQ, normalization, AAC. Original tempo and pitch retained.",
+      "sourcePassage": {
+        "start": 98.3132530120482,
+        "end": 121.44578313253012
+      }
+    }
+  ],
+  "situationRevision": "accepted-spin-last-reel-modal-award-20261010",
+  "feedbackThemeRevision": "single-complete-cue-natural-tails-20261010",
+  "feedbackPalette": "Sovereign: polished mint latch and dense coin detail"
+}

@@ -1,0 +1,1384 @@
+{
+  "checkedAt": "2026-10-10T05:59:19.845Z",
+  "games": [
+    {
+      "id": 22,
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: BGM timeline did not advance",
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63789/audio/music-home.m4a",
+              "time": 0.600816,
+              "duration": 43.699955,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09252564773515226,
+          "playErrors": []
+        }
+      ],
+      "snapshot": {
+        "page": "game",
+        "enabled": true,
+        "scene": "cabinet",
+        "gain": 0.46000000834465027,
+        "context": "running",
+        "elements": [
+          {
+            "src": "http://127.0.0.1:63789/audio/music-cabinet.m4a",
+            "time": 0.130612,
+            "duration": 32.786576,
+            "paused": true,
+            "ready": 4,
+            "volume": 1
+          }
+        ],
+        "rms": 0,
+        "playErrors": []
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 23,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-home.m4a",
+              "time": 0.626702,
+              "duration": 34.342313,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.03319005340493819,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.488706,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.015281701301570359,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.642133,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.023336164844075313,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.467302,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.017852290392868897,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.507937,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.016229471616442375,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 0.969433,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05062637248407843,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63790/audio/music-cabinet.m4a",
+              "time": 1.471508,
+              "duration": 25.77415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11692911741546341,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 24,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-home.m4a",
+              "time": 0.448471,
+              "duration": 36.989388,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0928498409308811,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.454748,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08311329535637714,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.443972,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08527716041602172,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.45302,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08311329535637714,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.444082,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08527716041602172,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.41704273223876953,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 0.803991,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.03282941761714397,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4231760501861572,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63791/audio/music-cabinet.m4a",
+              "time": 1.167645,
+              "duration": 27.747846,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.008293427831046122,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 25,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 0.461497,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.14174702124292146,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 0.641451,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.011262221796002779,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 1.64632,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13209851984753204,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 2.578021,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.25091220457743996,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-cabinet.m4a",
+              "time": 3.375785,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.009297478431391608,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 2.953915,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.103724092357059,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63792/audio/music-home.m4a",
+              "time": 3.375662,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06018592343153122,
+          "playErrors": [],
+          "cocosMusicPlaying": false,
+          "cocosMusicVolume": 1
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 26,
+      "passed": true,
+      "checks": [
+        {
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-home.m4a",
+              "time": 0.689255,
+              "duration": 34.969252,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "mint",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.091488,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "pearl",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.049735,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "reef",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.01536,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "mode": "beacon",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 1.042456,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 0.446666,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63793/audio/music-cabinet.m4a",
+              "time": 0.806859,
+              "duration": 26.238549,
+              "paused": false,
+              "ready": 4,
+              "volume": 0.38
+            }
+          ],
+          "rms": 0,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 27,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "login",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.44255,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.060789633212948654,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 0.449887,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.06683818826246561,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 1.172607,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.012479260740575444,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 1.899937,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.15011336842252346,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-cabinet.m4a",
+              "time": 2.605769,
+              "duration": 14.466032,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08615446616714198,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.452789,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.048698358704838705,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ]
+        },
+        {
+          "backgroundRestored": true,
+          "page": "home",
+          "enabled": true,
+          "scene": "home",
+          "gain": 0.4477093815803528,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "time": 0.844626,
+              "duration": 19.249342,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12434658927352953,
+          "playErrors": [
+            {
+              "src": "http://127.0.0.1:63794/audio/music-home.m4a",
+              "error": "AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+              "cancelled": true
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 28,
+      "passed": false,
+      "error": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.",
+      "checks": [],
+      "snapshot": {
+        "page": "home",
+        "enabled": true,
+        "scene": "home",
+        "elements": [],
+        "rms": 0,
+        "playErrors": [],
+        "cocosMusicPlaying": false,
+        "cocosMusicVolume": 0.15
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 29,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-home.m4a",
+              "time": 0.453073,
+              "duration": 40.054422,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.12366963898637848,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.443654,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07475654965515198,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.534059,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07315787903375467,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.650159,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07610342906191954,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 0.607183,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07858936543112051,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 1.076644,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.17280198107908518,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63796/audio/music-cabinet.m4a",
+              "time": 1.484358,
+              "duration": 30.069841,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.19438858948876003,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 30,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-home.m4a",
+              "time": 0.532511,
+              "duration": 35.61941,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09517496758536793,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.468507,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10888455693113243,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.566425,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09597343588280098,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.512554,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10786144576772658,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.438277,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.11357176970244667,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4415760636329651,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 0.819708,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0995744956445242,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63797/audio/music-cabinet.m4a",
+              "time": 1.230966,
+              "duration": 26.726168,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10695473558625804,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 31,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-home.m4a",
+              "time": 0.457354,
+              "duration": 15.53415,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.10845332686726694,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.455854,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13543051293807704,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.448175,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1345053925649992,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.454248,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.13496108487157144,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.458594,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.137385703045436,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.41704273223876953,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 0.844694,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.0783499515639988,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.4415760636329651,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63798/audio/music-cabinet.m4a",
+              "time": 1.228466,
+              "duration": 11.679637,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.09961022240326492,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": 33,
+      "passed": true,
+      "checks": [
+        {
+          "scene": "home",
+          "page": "home",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-home.m4a",
+              "time": 0.449887,
+              "duration": 21.873197,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07592844046921189,
+          "playErrors": []
+        },
+        {
+          "mode": 0,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.453215,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08417254293313306,
+          "playErrors": []
+        },
+        {
+          "mode": 1,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.487619,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.08810304099931526,
+          "playErrors": []
+        },
+        {
+          "mode": 2,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.667574,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07915282991181015,
+          "playErrors": []
+        },
+        {
+          "mode": 3,
+          "scene": "cabinet",
+          "page": "game",
+          "enabled": true,
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 0.625425,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.07206815529654487,
+          "playErrors": []
+        },
+        {
+          "toggleRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 1.081422,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.05106824189141174,
+          "playErrors": []
+        },
+        {
+          "backgroundRestored": true,
+          "page": "game",
+          "enabled": true,
+          "scene": "cabinet",
+          "gain": 0.46000000834465027,
+          "context": "running",
+          "elements": [
+            {
+              "src": "http://127.0.0.1:63799/audio/music-cabinet.m4a",
+              "time": 1.606962,
+              "duration": 16.416508,
+              "paused": false,
+              "ready": 4,
+              "volume": 1
+            }
+          ],
+          "rms": 0.1158800708273491,
+          "playErrors": []
+        }
+      ],
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

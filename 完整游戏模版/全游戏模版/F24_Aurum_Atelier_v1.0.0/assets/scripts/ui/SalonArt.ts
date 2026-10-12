@@ -1,3 +1,6 @@
+import { StationaryArtwork } from '../vfx/StationaryArtwork';
+import {rewardArtwork,rewardInk,rewardTextWidth,type RewardPlateKind} from './RewardArtwork';
+import { ThemeMotion } from '../vfx/ThemeMotion';
 import {TextFit} from './TextFit';
 import {tr,language} from './Language';
 import { Color, EffectAsset, EventTouch, gfx, Graphics, Label, LabelOutline, Layers, Mask, Material, Node, Rect, resources, Size, Sprite, SpriteFrame, Texture2D, tween, Tween, UIOpacity, UITransform, Vec2, Vec3, Vec4 } from 'cc';
@@ -12,6 +15,7 @@ export class SalonArt {
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
     if(!this.roomFeather)this.roomFeather=await new Promise<EffectAsset>((resolve,reject)=>resources.load('effects/atelier-room-feather',EffectAsset,(error,asset)=>error?reject(error):resolve(asset)));
     if(!this.glassRepair)this.glassRepair=await new Promise<EffectAsset>((resolve,reject)=>resources.load('effects/atelier-glass-repair',EffectAsset,(error,asset)=>error?reject(error):resolve(asset)));
+    await ThemeMotion.prepare();
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
@@ -99,7 +103,7 @@ export class SalonArt {
     this.frames.set(key, sf); return sf;
   }
   public image(parent: Node, name: string, x: number, y: number, w: number, h: number, index = -1): Node {
-    const n = box(parent, name, x, y, w, h); const s = n.addComponent(Sprite);
+    const n = box(parent, name, x, y, w, h); StationaryArtwork.mark(n,name); const s = n.addComponent(Sprite);
     // Set CUSTOM before the frame: RAW would overwrite the authored hit/layout box.
     s.sizeMode = Sprite.SizeMode.CUSTOM; if(name.startsWith('symbols')||name.startsWith('prize-')||name==='interfaces')s.trim=false; s.spriteFrame = this.frame(name, index);
     if (name.startsWith('canopy-frame-') || name === 'surfaces' || name === 'ledgers' || (name.startsWith('canopy-plate-')||name.startsWith('canopy-soft-plate-'))) s.type = Sprite.Type.SLICED;
@@ -112,6 +116,7 @@ export class SalonArt {
       w = fw * scale; h = fh * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
+    ThemeMotion.attach(s,name,index);
     return n;
   }
   /** Keep the existing painted room, feathering its outer pixels into the cabinet. */
@@ -132,6 +137,12 @@ export class SalonArt {
     // Public material API; Sprite's old blend-factor fields are private in 3.8.
     s.getMaterialInstance(0)?.overridePipelineStates({blendState:{targets:[{blend:true,blendSrc:gfx.BlendFactor.SRC_ALPHA,blendDst:gfx.BlendFactor.ONE,blendSrcAlpha:gfx.BlendFactor.ZERO,blendDstAlpha:gfx.BlendFactor.ONE}]}});
     opacity(n,alpha);return n;
+  }
+  public rewardPanel(parent:Node,x:number,y:number,w:number,h:number,theme=0,kind:RewardPlateKind='detail'):Node {return rewardArtwork(this,parent,x,y,w,h,theme,kind);}
+  public rewardButton(parent:Node,x:number,y:number,w:number,h:number,label:string,theme:number,action:()=>void):Node {
+    const hit=box(parent,'Collect your treasure',x,y,w,h),face=this.rewardPanel(hit,0,0,w,h,theme,'button');
+    const caption=text(face,label,0,0,rewardTextWidth(w),h*.58,34,rewardInk(theme));caption.enableWrapText=false;caption.overflow=Label.Overflow.SHRINK;
+    bindPress(hit,face,action);return hit;
   }
   public panel(parent: Node, x: number, y: number, w: number, h: number, style = 0): Node { return this.image(parent, (h>w*.5?'canopy-frame-':'canopy-soft-plate-')+[0,1,2,3][style], x,y,w,h); }
   /** Solid parchment under the open-centre frame, so the scene cannot show through copy. */

@@ -1,0 +1,55 @@
+
+> f19-fortune-treasury@1.0.0 release:audit
+> node --import tsx tools/release-audit.ts
+
+BLOCK  Publisher identity and public legal URLs
+       Set publisherLegalName, supportEmail and HTTPS legal URLs.
+BLOCK  App Store product identifiers
+       Replace all com.publisher.* product IDs with App Store Connect consumable IDs.
+BLOCK  Hosted legal documents finalized
+       Complete counsel-reviewed publisher, retention, territory and governing-law clauses.
+PASS  Project artwork set is complete
+       Integrated cabinets and shared bitmap atlases require their Cocos meta files.
+PASS  Independent core and signature are wired
+       Project-specific base evaluation and signature are additionally checked by the core tests and browser presentation checks.
+PASS  Shared cabinet design plane is preserved
+       Art, reels and controls use measured coordinates on one uniformly scaled plane; test:layout checks bounds.
+PASS  Win presentation has reveal and teardown
+       Browser QA must also verify celebration dismissal and input recovery.
+PASS  Registration uses an independent draft
+       Browser QA must verify that legal review and acceptance retain typed fields.
+PASS  Release cannot grant local coins
+       Local grants are restricted to localhost/debug and release defaults off.
+PASS  Server-verified StoreKit boundary
+       Server product, transaction, amount and idempotency checks must precede StoreKit finish.
+PASS  Apple signed transaction verification
+       Production requires Apple roots, Bundle ID, environment and product map.
+PASS  Sign in with Apple is server verified
+       Native authorization must be verified for signature, issuer, audience, expiry and nonce before a session is created.
+PASS  Persistent wallet and idempotency schema
+       PostgreSQL stores sessions, wallets, rounds, receipts and notification IDs.
+PASS  Refunded transactions cannot be replayed
+       Refund and revoke notifications close the receipt before any replay can deliver coins.
+PASS  Production service is explicit
+       Deployment uses the PostgreSQL service, not the in-memory development server.
+PASS  Remote account and authoritative rounds wired
+       Release login, rounds and rewards use the authenticated production API.
+PASS  Remote rank and profile wired
+       Leaderboard and player customization no longer depend on release-local simulation.
+PASS  Baseline API throttling
+       Process-level rate limits protect authentication, spins and purchases; edge WAF remains required.
+PASS  Release UI has no simulation claims
+       Player-facing release copy must not present fake local purchases, mail or rankings.
+PASS  Account deletion available
+       In-app re-authenticated deletion and server pseudonymization path exist.
+PASS  Privacy, terms and support in app
+       Legal/support links must remain reachable on the authentication screen.
+PASS  Eligibility gate versioned
+       Policy changes require eligibility confirmation again.
+PASS  Release build includes the launch scene
+       The checked-in build configuration must retain the launch scene and stable public filenames.
+PASS  Built web artifact is complete
+       Build web-mobile with the release config and verify the scene plus fixed privacy, terms and support URLs.
+
+21/24 automated release checks passed.
+Release remains blocked until every BLOCK item is resolved.

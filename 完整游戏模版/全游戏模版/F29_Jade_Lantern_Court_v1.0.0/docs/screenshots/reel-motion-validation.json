@@ -1,0 +1,49 @@
+{
+  "reports": [
+    {
+      "id": "golden-hour",
+      "continuous": true,
+      "final": true,
+      "smooth": true,
+      "maxStep": 0.53120000076294,
+      "frames": 128,
+      "p95": 16.700000000000728,
+      "effectCount": 10,
+      "target": 9
+    },
+    {
+      "id": "jade-treasury",
+      "continuous": true,
+      "final": true,
+      "smooth": true,
+      "maxStep": 0.5279999999999987,
+      "frames": 145,
+      "p95": 16.700000000000728,
+      "effectCount": 10,
+      "target": 15
+    },
+    {
+      "id": "pearl-palace",
+      "continuous": true,
+      "final": true,
+      "smooth": true,
+      "maxStep": 0.5327999992370609,
+      "frames": 145,
+      "p95": 16.799999999999272,
+      "effectCount": 10,
+      "target": 20
+    },
+    {
+      "id": "ruby-revel",
+      "continuous": true,
+      "final": true,
+      "smooth": true,
+      "maxStep": 0.2784000015258794,
+      "frames": 145,
+      "p95": 16.700000000000728,
+      "effectCount": 10,
+      "target": 25
+    }
+  ],
+  "errors": []
+}

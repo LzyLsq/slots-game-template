@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-10",
+  "scope": "F37 explicit audio sources/tests/QA/screenshot only; no git commit/push",
+  "work": "/Users/mengjunzhu/Documents/Codex/2026-09-22/ke/work/F37_Fortune_Caravan_v1.0.0",
+  "formal": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F37_Fortune_Caravan_v1.0.0",
+  "files": [
+    {
+      "path": "assets/scripts/audio/SoundtrackCatalog.ts",
+      "sha256": "0179b493c113e4c99ba4492d561f43098e1c23abf011cb61087dbd4d3d2553bb",
+      "matches": true
+    },
+    {
+      "path": "assets/scripts/audio/SoundscapeEngine.ts",
+      "sha256": "cf9d4fc6cf93f4377d65130a221cdee0bca44ff0e054ced82ac8e722bc688cd6",
+      "matches": true
+    },
+    {
+      "path": "assets/scripts/audio/AudioManager.ts",
+      "sha256": "b33527f8b12cf38cdad303b9d65bf800f58d83bd45e459d439ef8b12b1862c5e",
+      "matches": true
+    },
+    {
+      "path": "tools/audio-recording-test.ts",
+      "sha256": "b66be8ba14d3ea7b2de676bf8bf887e5f74b5116c306e549bab044437d6247c2",
+      "matches": true
+    },
+    {
+      "path": "docs/QA.md",
+      "sha256": "b0233f1be47c6c42e245e43daf73342125fbac0362a53edfc8cdaa69201e98c8",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/music-balance-tests.log",
+      "sha256": "ef1e14acaadc238d41f3f157d51126380ea31285aaf45a048b3b9daaed864d1b",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/music-balance-assets.json",
+      "sha256": "b593e67c226c294bd46aeea6c9cdc4916e6c7509ed462ad961d368cd026ab387",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/music-balance-levels.json",
+      "sha256": "d036bd8f88160f737caee478b8ef05051f9c31521218c1adf005bb6d11d867a9",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/music-balance-build.log",
+      "sha256": "40cbeda8792bb61e7424596c03ecb83642ee06375f48827e050eb1d3c21118a3",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/music-balance-artifact.json",
+      "sha256": "f22a3f26b28afceff3fa75fd9a7cb9e534c1a2ec63721d820605ce7609f69166",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/music-balance-browser.json",
+      "sha256": "2b6239a5121148f1ba2fe0175d9f30a31a7cd241cd259bbe3d60fca4cd71f451",
+      "matches": true
+    },
+    {
+      "path": "docs/screenshots/music-balance-home.png",
+      "sha256": "0f4b8750d9afc6d60d622763bd5357059530b7546d85ba2fa7eac2f58fd1ec0c",
+      "matches": true
+    }
+  ],
+  "buildFileCount": 354,
+  "allBuildFilesMatch": true
+}

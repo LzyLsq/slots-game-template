@@ -1,0 +1,15 @@
+.tidal-festivity{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2;contain:layout style paint}
+.tidal-festivity i{position:absolute;display:block;pointer-events:none;animation-delay:var(--delay);will-change:transform,opacity}
+.tidal-pearl{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8d3,#c7f3ef 48%,#87d8da99 65%,transparent 72%);left:calc(4% + var(--side)*88%);top:var(--y);animation:tidal-rise 7.8s ease-in-out infinite}
+.tidal-glint{width:16px;height:16px;left:calc(8% + var(--side)*80%);top:var(--y);background:radial-gradient(ellipse at center,#fff7c8 0,transparent 65%);animation:tidal-glimmer 4.8s ease-in-out infinite}
+.tidal-glint:before,.tidal-glint:after{content:"";position:absolute;inset:7px 0;background:#fff2b6;border-radius:50%}
+.tidal-glint:after{transform:rotate(90deg)}
+.tidal-rim{left:calc(var(--glass-x) - 5%);top:calc(var(--glass-y) - 4%);width:calc(var(--glass-w) + 10%);height:calc(var(--glass-h) + 8%);overflow:visible}
+.tidal-rim .tidal-pearl{left:calc(-1% + var(--side)*100%);top:var(--y);animation-duration:6.5s}
+.tidal-rim .tidal-glint{offset-path:inset(0 round 12px);offset-distance:0%;left:auto;top:auto;animation:tidal-travel 6.8s linear infinite;opacity:.8}
+.reduced .tidal-festivity{display:none}
+.motion-paused .tidal-festivity i{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.tidal-festivity{display:none}}
+@keyframes tidal-rise{0%,100%{transform:translate(0,12px) scale(.8);opacity:0}30%{opacity:.65}70%{opacity:.5}95%{transform:translate(5px,-28px) scale(1.15);opacity:0}}
+@keyframes tidal-glimmer{0%,58%,100%{opacity:.08;transform:scale(.55) rotate(0)}76%{opacity:.9;transform:scale(1.2) rotate(25deg)}}
+@keyframes tidal-travel{from{offset-distance:0%;transform:scale(.7)}to{offset-distance:100%;transform:scale(1)}}

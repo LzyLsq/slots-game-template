@@ -13,3 +13,21 @@ Xcode_H5/**/NativeBuild/
 Xcode_H5/**/Staged/
 Xcode_H5/**/覆盖前备份/
 Xcode_H5/**/替换出的原H5/
+
+# Temporary staging directories from WebP/audio delivery synchronization
+Xcode_H5/WebP_IAP_20261010/.calm-*/
+
+# Cocos editor caches and generated native/test products (not source templates)
+完整游戏模版/全游戏模版/F*/library/
+完整游戏模版/全游戏模版/F*/temp/
+完整游戏模版/全游戏模版/F*/local/
+完整游戏模版/全游戏模版/F*/profiles/
+完整游戏模版/全游戏模版/F*/build/
+**/xcuserdata/
+**/*.xcuserstate
+**/DerivedData/
+**/*.xcresult/
+**/*.app/
+**/__pycache__/
+tools/lively-optimization/verification/xcode-all-*/normal-launch/recognize-screen
+tools/webp-iap/verification/*/
