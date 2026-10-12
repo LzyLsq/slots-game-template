@@ -1,0 +1,59 @@
+{
+  "project": "F40_Fortune_Festival_v1.0.0",
+  "checkedAt": "2026-10-10",
+  "engine": "Cocos Creator 3.8.8",
+  "preview": "http://127.0.0.1:6040/",
+  "readyForSubmission": false,
+  "verifiedLocally": [
+    "Cocos web-mobile preview build",
+    "13 automated game and service test suites",
+    "TypeScript client and server compilation",
+    "Real touch controls and settlement on four modes",
+    "320×568 and 390×844 canvas layout",
+    "Five-language rules and toolbar review",
+    "Four mode resource loading, retry and return",
+    "Registered articulated guardian mesh, eye closure and reel masks",
+    "Atomic daily festival stamps, rewards and account-scoped persistence",
+    "Natural return sampling and exact twin-board enumeration"
+  ],
+  "requiresImplementation": [
+    "Executable iOS StoreKit 2 bridge bound to the purchase contract",
+    "Executable iOS Sign in with Apple bridge bound to the authorization contract",
+    "Publisher identity, HTTPS support/privacy/terms addresses and finalized legal copy",
+    "App Store Connect product IDs and bundle identifier",
+    "Configured and deployed production service, PostgreSQL, Apple verification roots and notification endpoint"
+  ],
+  "requiresExternalValidation": [
+    "iPhone/iPad device rendering, memory, thermal and frame-time acceptance",
+    "Native signing, provisioning and archive",
+    "StoreKit Sandbox purchases, refunds, restore and duplicate transaction checks",
+    "Apple sign-in and account deletion on a device",
+    "Production authentication, wallet and notification acceptance",
+    "Audio listening on phone speakers and headphones",
+    "TestFlight acceptance and App Store review"
+  ],
+  "notClaimed": [
+    "App Store approval",
+    "Native device performance",
+    "Live Apple login or real-money purchase availability",
+    "Exact 96% return or an industry-standard win probability"
+  ],
+  "evidence": {
+    "differences": "docs/product-differences.md",
+    "layout": "docs/screenshots/f40-final-20261010/layout-capture.json",
+    "runtime": "docs/qa/runtime/runtime-audit.json",
+    "settlement": "docs/qa/settlement/summary.json",
+    "probability": [
+      "docs/qa/rtp-min.json",
+      "docs/qa/rtp-max.json",
+      "docs/qa/panda-exact.json"
+    ],
+    "motion": "docs/qa/motion-final/direct-canvas-audit.json",
+    "releaseAudit": "docs/qa/release-audit-20261010.txt",
+    "finalScreenshots": "docs/screenshots/f40-final-20261010/README.md",
+    "serviceScenes": "docs/screenshots/f40-final-20261010/services/capture-audit.json",
+    "awardTiers": "docs/qa/awards/award-audit.json",
+    "awardInteractions": "docs/qa/award-interactions/interaction-audit.json",
+    "startup": "docs/qa/startup/startup-audit.json"
+  }
+}

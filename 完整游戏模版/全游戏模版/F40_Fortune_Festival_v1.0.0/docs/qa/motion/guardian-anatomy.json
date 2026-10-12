@@ -1,0 +1,398 @@
+{
+  "source": "assets/scripts/vfx/CabinetGuardian.ts",
+  "baseline": false,
+  "results": [
+    {
+      "mode": "golden-phoenix",
+      "seconds": 15,
+      "includesIdleWatchAndCelebration": true,
+      "parts": [
+        {
+          "name": "face",
+          "points": [
+            [
+              340,
+              125
+            ],
+            [
+              440,
+              155
+            ],
+            [
+              350,
+              185
+            ],
+            [
+              425,
+              205
+            ]
+          ],
+          "maxLengthChange": 1.3322676295501878e-15,
+          "maxAngleChange": 1.7763568394002505e-15,
+          "maxStep": 0.05365747676896895
+        },
+        {
+          "name": "wing",
+          "points": [
+            [
+              170,
+              180
+            ],
+            [
+              190,
+              180
+            ],
+            [
+              180,
+              200
+            ],
+            [
+              195,
+              205
+            ]
+          ],
+          "maxLengthChange": 3.6637359812630166e-15,
+          "maxAngleChange": 3.552713678800501e-15,
+          "maxStep": 0.20329463334635758
+        }
+      ]
+    },
+    {
+      "mode": "jade-dragon",
+      "seconds": 15,
+      "includesIdleWatchAndCelebration": true,
+      "parts": [
+        {
+          "name": "face",
+          "points": [
+            [
+              340,
+              135
+            ],
+            [
+              440,
+              165
+            ],
+            [
+              355,
+              195
+            ],
+            [
+              425,
+              210
+            ]
+          ],
+          "maxLengthChange": 1.9984014443252818e-15,
+          "maxAngleChange": 1.7763568394002505e-15,
+          "maxStep": 0.06521829597081939
+        },
+        {
+          "name": "paw",
+          "points": [
+            [
+              180,
+              180
+            ],
+            [
+              200,
+              190
+            ],
+            [
+              220,
+              200
+            ],
+            [
+              195,
+              210
+            ]
+          ],
+          "maxLengthChange": 4.107825191113079e-15,
+          "maxAngleChange": 2.6147972675971718e-15,
+          "maxStep": 0.23239543594409404
+        }
+      ]
+    },
+    {
+      "mode": "pearl-qilin",
+      "seconds": 15,
+      "includesIdleWatchAndCelebration": true,
+      "parts": [
+        {
+          "name": "face",
+          "points": [
+            [
+              320,
+              140
+            ],
+            [
+              425,
+              160
+            ],
+            [
+              340,
+              200
+            ],
+            [
+              410,
+              210
+            ]
+          ],
+          "maxLengthChange": 1.7763568394002505e-15,
+          "maxAngleChange": 1.9984014443252818e-15,
+          "maxStep": 0.06406503865983991
+        },
+        {
+          "name": "paw",
+          "points": [
+            [
+              190,
+              190
+            ],
+            [
+              210,
+              205
+            ],
+            [
+              220,
+              215
+            ],
+            [
+              195,
+              230
+            ]
+          ],
+          "maxLengthChange": 4.6629367034256575e-15,
+          "maxAngleChange": 2.8033131371785203e-15,
+          "maxStep": 0.2117684050626937
+        }
+      ]
+    },
+    {
+      "mode": "amber-panda",
+      "seconds": 15,
+      "includesIdleWatchAndCelebration": true,
+      "parts": [
+        {
+          "name": "face",
+          "points": [
+            [
+              345,
+              125
+            ],
+            [
+              420,
+              150
+            ],
+            [
+              360,
+              185
+            ],
+            [
+              420,
+              190
+            ]
+          ],
+          "maxLengthChange": 1.5543122344752192e-15,
+          "maxAngleChange": 1.5543122344752192e-15,
+          "maxStep": 0.054128003095721085
+        },
+        {
+          "name": "paw",
+          "points": [
+            [
+              180,
+              140
+            ],
+            [
+              205,
+              155
+            ],
+            [
+              200,
+              180
+            ],
+            [
+              225,
+              175
+            ]
+          ],
+          "maxLengthChange": 2.6645352591003757e-15,
+          "maxAngleChange": 2.4424906541753444e-15,
+          "maxStep": 0.3196257711172907
+        }
+      ]
+    }
+  ],
+  "limbIsolation": [
+    {
+      "theme": 0,
+      "fixed": [
+        {
+          "point": [
+            350,
+            280
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            380,
+            310
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            500,
+            330
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            368,
+            390
+          ],
+          "displacement": 0
+        }
+      ],
+      "freePawDisplacement": 24.642648096721146
+    },
+    {
+      "theme": 1,
+      "fixed": [
+        {
+          "point": [
+            330,
+            290
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            380,
+            315
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            500,
+            330
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            368,
+            390
+          ],
+          "displacement": 0
+        }
+      ],
+      "freePawDisplacement": 22.786516983457663
+    },
+    {
+      "theme": 2,
+      "fixed": [
+        {
+          "point": [
+            320,
+            290
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            380,
+            315
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            500,
+            330
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            368,
+            390
+          ],
+          "displacement": 0
+        }
+      ],
+      "freePawDisplacement": 19.743373585287493
+    },
+    {
+      "theme": 3,
+      "fixed": [
+        {
+          "point": [
+            310,
+            260
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            380,
+            310
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            500,
+            330
+          ],
+          "displacement": 0
+        },
+        {
+          "point": [
+            368,
+            390
+          ],
+          "displacement": 0
+        }
+      ],
+      "freePawDisplacement": 25.821955622256997
+    }
+  ],
+  "blinks": [
+    {
+      "theme": 0,
+      "maximum": 1,
+      "closedFrames": 9,
+      "activeFrames": 61,
+      "seconds": 15,
+      "faceGeometryUnaffected": true
+    },
+    {
+      "theme": 1,
+      "maximum": 1,
+      "closedFrames": 9,
+      "activeFrames": 60,
+      "seconds": 15,
+      "faceGeometryUnaffected": true
+    },
+    {
+      "theme": 2,
+      "maximum": 1,
+      "closedFrames": 9,
+      "activeFrames": 60,
+      "seconds": 15,
+      "faceGeometryUnaffected": true
+    },
+    {
+      "theme": 3,
+      "maximum": 1,
+      "closedFrames": 9,
+      "activeFrames": 54,
+      "seconds": 15,
+      "faceGeometryUnaffected": true
+    }
+  ]
+}

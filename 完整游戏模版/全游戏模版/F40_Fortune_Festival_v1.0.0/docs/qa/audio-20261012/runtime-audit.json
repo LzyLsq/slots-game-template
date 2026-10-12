@@ -1,0 +1,2553 @@
+{
+  "checks": [
+    "golden-phoenix: 90 decoded clips / 11 managed sources",
+    "Live score resumes at position after engine hide/show",
+    "golden-phoenix: counting score → reveal cadence",
+    "golden-phoenix: 5 actual column stops / tier accents / single charge and settlement / clean exit",
+    "golden-phoenix: 30 immediate taps accept one voice and recover",
+    "golden-phoenix: all-voice mute persists on reload",
+    "golden-phoenix: scene crossfade leaves one hall loop",
+    "jade-dragon: 90 decoded clips / 11 managed sources",
+    "jade-dragon: counting score → reveal cadence via early collect",
+    "jade-dragon: 5 actual column stops / tier accents / single charge and settlement / clean exit",
+    "jade-dragon: 30 immediate taps accept one voice and recover",
+    "jade-dragon: all-voice mute persists on reload",
+    "jade-dragon: scene crossfade leaves one hall loop",
+    "pearl-qilin: 90 decoded clips / 11 managed sources",
+    "pearl-qilin: counting score → reveal cadence",
+    "Award overlay intercepts utility tap",
+    "pearl-qilin: 6 actual column stops / tier accents / single charge and settlement / clean exit",
+    "pearl-qilin: 30 immediate taps accept one voice and recover",
+    "pearl-qilin: all-voice mute persists on reload",
+    "pearl-qilin: scene crossfade leaves one hall loop",
+    "amber-panda: 90 decoded clips / 11 managed sources",
+    "amber-panda: counting score → reveal cadence",
+    "amber-panda: 6 actual column stops / tier accents / single charge and settlement / clean exit",
+    "amber-panda: 30 immediate taps accept one voice and recover",
+    "amber-panda: all-voice mute persists on reload",
+    "amber-panda: scene crossfade leaves one hall loop",
+    "Expired score does not restart on foreground"
+  ],
+  "rounds": [
+    {
+      "mode": "golden-phoenix",
+      "loaded": {
+        "count": 90,
+        "clips": [
+          {
+            "name": "reel-start",
+            "duration": 0.52
+          },
+          {
+            "name": "reel-roll",
+            "duration": 0.96
+          },
+          {
+            "name": "reel-stop-2",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect",
+            "duration": 0.85
+          },
+          {
+            "name": "ui-touch",
+            "duration": 0.2
+          },
+          {
+            "name": "win-normal",
+            "duration": 1.24
+          },
+          {
+            "name": "reel-stop-3",
+            "duration": 0.3
+          },
+          {
+            "name": "feature",
+            "duration": 1.32
+          },
+          {
+            "name": "reel-stop-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-5",
+            "duration": 0.3
+          },
+          {
+            "name": "win-epic-amber-panda",
+            "duration": 5.65
+          },
+          {
+            "name": "win-epic-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-amber-panda",
+            "duration": 5.05
+          },
+          {
+            "name": "reel-stop-amber-panda-2",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-amber-panda",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-amber-panda-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-amber-panda",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-amber-panda",
+            "duration": 0.3
+          },
+          {
+            "name": "coin-collect-amber-panda",
+            "duration": 0.85
+          },
+          {
+            "name": "award-accent-amber-panda",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-amber-panda",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal-amber-panda",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-pearl-qilin",
+            "duration": 5.05
+          },
+          {
+            "name": "win-epic-pearl-qilin",
+            "duration": 5.65
+          },
+          {
+            "name": "win-super-pearl-qilin",
+            "duration": 4.35
+          },
+          {
+            "name": "music-salon",
+            "duration": 53.333344
+          },
+          {
+            "name": "win-grand-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-pearl-qilin-5",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-pearl-qilin",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-pearl-qilin-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-2",
+            "duration": 0.3
+          },
+          {
+            "name": "music-golden-phoenix",
+            "duration": 51.428563
+          },
+          {
+            "name": "reel-stop-pearl-qilin-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-pearl-qilin",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-pearl-qilin",
+            "duration": 1.32
+          },
+          {
+            "name": "coin-collect-pearl-qilin",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-pearl-qilin",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-jade-dragon",
+            "duration": 5.65
+          },
+          {
+            "name": "win-super-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-grand-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-jade-dragon",
+            "duration": 5.05
+          },
+          {
+            "name": "win-super-jade-dragon",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-jade-dragon-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-jade-dragon",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-jade-dragon-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon",
+            "duration": 0.3
+          },
+          {
+            "name": "coin-collect-jade-dragon",
+            "duration": 0.85
+          },
+          {
+            "name": "music-amber-panda",
+            "duration": 49.655188
+          },
+          {
+            "name": "award-accent-jade-dragon",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-jade-dragon",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal-jade-dragon",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic",
+            "duration": 5.65
+          },
+          {
+            "name": "win-super",
+            "duration": 4.35
+          },
+          {
+            "name": "win-super-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-grand-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-golden-phoenix-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-mega",
+            "duration": 5.05
+          },
+          {
+            "name": "reel-stop-golden-phoenix-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-2",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-golden-phoenix-1",
+            "duration": 0.3
+          },
+          {
+            "name": "music-pearl-qilin",
+            "duration": 55.384625
+          },
+          {
+            "name": "reel-stop-golden-phoenix",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-golden-phoenix",
+            "duration": 0.58
+          },
+          {
+            "name": "win-normal-golden-phoenix",
+            "duration": 1.24
+          },
+          {
+            "name": "coin-collect-golden-phoenix",
+            "duration": 0.85
+          },
+          {
+            "name": "feature-golden-phoenix",
+            "duration": 1.32
+          },
+          {
+            "name": "music-jade-dragon",
+            "duration": 54.339625
+          }
+        ],
+        "sources": 11,
+        "columns": 5
+      },
+      "sourcePlayRequests": [
+        {
+          "time": 7173.099999904633,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 7174.89999961853,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 7175,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 7176.299999713898,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 7176.5,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 7176.5,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 9116.89999961853,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-golden-phoenix"
+        },
+        {
+          "time": 9118.099999904633,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-golden-phoenix"
+        },
+        {
+          "time": 9250.099999904633,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-golden-phoenix-1"
+        },
+        {
+          "time": 9251.199999809265,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-golden-phoenix-1"
+        },
+        {
+          "time": 9400.099999904633,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-golden-phoenix-2"
+        },
+        {
+          "time": 9401.199999809265,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-golden-phoenix-2"
+        },
+        {
+          "time": 9533.39999961853,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-golden-phoenix-3"
+        },
+        {
+          "time": 9534.599999904633,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-golden-phoenix-3"
+        },
+        {
+          "time": 9666.89999961853,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-golden-phoenix-4"
+        },
+        {
+          "time": 9668.799999713898,
+          "source": "Managed feedback 1",
+          "clip": "win-normal-golden-phoenix"
+        },
+        {
+          "time": 9669.199999809265,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-golden-phoenix-4"
+        },
+        {
+          "time": 9669.199999809265,
+          "source": "Managed feedback 1",
+          "clip": "win-normal-golden-phoenix"
+        },
+        {
+          "time": 14068.099999904633,
+          "source": "Award performance score",
+          "clip": "win-epic"
+        },
+        {
+          "time": 14079.89999961853,
+          "source": "Award performance score",
+          "clip": "win-epic"
+        },
+        {
+          "time": 14592.599999904633,
+          "source": "Music 1",
+          "clip": "music-golden-phoenix"
+        },
+        {
+          "time": 14592.699999809265,
+          "source": "Award performance score",
+          "clip": "win-epic"
+        },
+        {
+          "time": 15450.5,
+          "source": "Managed feedback 2",
+          "clip": "award-accent-golden-phoenix"
+        },
+        {
+          "time": 15453.799999713898,
+          "source": "Managed feedback 2",
+          "clip": "award-accent-golden-phoenix"
+        },
+        {
+          "time": 16417.099999904633,
+          "source": "Managed feedback 3",
+          "clip": "award-accent-golden-phoenix"
+        },
+        {
+          "time": 16419.39999961853,
+          "source": "Managed feedback 3",
+          "clip": "award-accent-golden-phoenix"
+        },
+        {
+          "time": 17783.199999809265,
+          "source": "Managed feedback 4",
+          "clip": "award-accent-golden-phoenix"
+        },
+        {
+          "time": 17785.199999809265,
+          "source": "Managed feedback 4",
+          "clip": "award-accent-golden-phoenix"
+        },
+        {
+          "time": 19383.199999809265,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve"
+        },
+        {
+          "time": 19387.799999713898,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve"
+        }
+      ],
+      "acceptedFeedback": [
+        {
+          "time": 7173.099999904633,
+          "clip": "ui-touch",
+          "category": "tap",
+          "level": 0.4
+        },
+        {
+          "time": 7175,
+          "clip": "reel-start",
+          "category": "spin",
+          "level": 0.55
+        },
+        {
+          "time": 9116.89999961853,
+          "clip": "reel-stop-golden-phoenix",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9250.099999904633,
+          "clip": "reel-stop-golden-phoenix-1",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9400.099999904633,
+          "clip": "reel-stop-golden-phoenix-2",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9533.5,
+          "clip": "reel-stop-golden-phoenix-3",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9666.89999961853,
+          "clip": "reel-stop-golden-phoenix-4",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9668.799999713898,
+          "clip": "win-normal-golden-phoenix",
+          "category": "win-normal",
+          "level": 0.58
+        },
+        {
+          "time": 15450.5,
+          "clip": "award-accent-golden-phoenix",
+          "category": "award-accent",
+          "level": 0.33499999999999996
+        },
+        {
+          "time": 16417.199999809265,
+          "clip": "award-accent-golden-phoenix",
+          "category": "award-accent",
+          "level": 0.37
+        },
+        {
+          "time": 17783.199999809265,
+          "clip": "award-accent-golden-phoenix",
+          "category": "award-accent",
+          "level": 0.405
+        }
+      ],
+      "reelLandings": [
+        {
+          "column": 0,
+          "time": 9116.799999713898
+        },
+        {
+          "column": 1,
+          "time": 9250.099999904633
+        },
+        {
+          "column": 2,
+          "time": 9400.099999904633
+        },
+        {
+          "column": 3,
+          "time": 9533.299999713898
+        },
+        {
+          "column": 4,
+          "time": 9666.699999809265
+        }
+      ],
+      "transactions": [
+        {
+          "id": "tx-7e6d2f831d524dee749426c98d3cc9c3",
+          "type": "spin-win",
+          "amount": 12051
+        },
+        {
+          "id": "tx-7294892db1341b46c9c687ab5ea70c09",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "balanceBefore": 27000,
+      "balanceAfter": 38971,
+      "forced": "QA epic result; real local charge/settlement; production RNG unchanged"
+    },
+    {
+      "mode": "jade-dragon",
+      "loaded": {
+        "count": 90,
+        "clips": [
+          {
+            "name": "reel-stop",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent",
+            "duration": 0.58
+          },
+          {
+            "name": "reel-stop-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-5",
+            "duration": 0.3
+          },
+          {
+            "name": "feature",
+            "duration": 1.32
+          },
+          {
+            "name": "ui-touch",
+            "duration": 0.2
+          },
+          {
+            "name": "reel-start",
+            "duration": 0.52
+          },
+          {
+            "name": "reel-stop-4",
+            "duration": 0.3
+          },
+          {
+            "name": "coin-collect",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal",
+            "duration": 1.24
+          },
+          {
+            "name": "reel-roll",
+            "duration": 0.96
+          },
+          {
+            "name": "win-epic-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-amber-panda",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-amber-panda",
+            "duration": 5.05
+          },
+          {
+            "name": "win-super-amber-panda",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-amber-panda-5",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-amber-panda",
+            "duration": 3.45
+          },
+          {
+            "name": "win-super-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-grand-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-amber-panda-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-amber-panda",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect-amber-panda",
+            "duration": 0.85
+          },
+          {
+            "name": "feature-amber-panda",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal-amber-panda",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-pearl-qilin",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-pearl-qilin",
+            "duration": 5.05
+          },
+          {
+            "name": "music-golden-phoenix",
+            "duration": 51.428563
+          },
+          {
+            "name": "win-super-pearl-qilin",
+            "duration": 4.35
+          },
+          {
+            "name": "win-grand-pearl-qilin",
+            "duration": 3.45
+          },
+          {
+            "name": "win-grand-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-pearl-qilin-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-2",
+            "duration": 0.3
+          },
+          {
+            "name": "music-salon",
+            "duration": 53.333344
+          },
+          {
+            "name": "reel-stop-pearl-qilin",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-pearl-qilin",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-pearl-qilin",
+            "duration": 1.32
+          },
+          {
+            "name": "coin-collect-pearl-qilin",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-pearl-qilin",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-jade-dragon",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-jade-dragon",
+            "duration": 5.05
+          },
+          {
+            "name": "win-grand-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-jade-dragon-5",
+            "duration": 0.3
+          },
+          {
+            "name": "music-amber-panda",
+            "duration": 49.655188
+          },
+          {
+            "name": "win-super-jade-dragon",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-jade-dragon-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-jade-dragon",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-jade-dragon-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-jade-dragon",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-jade-dragon",
+            "duration": 1.32
+          },
+          {
+            "name": "coin-collect-jade-dragon",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-jade-dragon",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega",
+            "duration": 5.05
+          },
+          {
+            "name": "win-mega-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-golden-phoenix-5",
+            "duration": 0.3
+          },
+          {
+            "name": "music-pearl-qilin",
+            "duration": 55.384625
+          },
+          {
+            "name": "win-grand-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-golden-phoenix-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-3",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-golden-phoenix",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-2",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-golden-phoenix",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-golden-phoenix",
+            "duration": 1.32
+          },
+          {
+            "name": "coin-collect-golden-phoenix",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-golden-phoenix",
+            "duration": 1.24
+          },
+          {
+            "name": "music-jade-dragon",
+            "duration": 54.339625
+          }
+        ],
+        "sources": 11,
+        "columns": 5
+      },
+      "sourcePlayRequests": [
+        {
+          "time": 7087.099999904633,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 7088.5,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 7088.5,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 7089.800000190735,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 7089.800000190735,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 7089.900000095367,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 9032,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-jade-dragon"
+        },
+        {
+          "time": 9033.300000190735,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-jade-dragon"
+        },
+        {
+          "time": 9165.099999904633,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-jade-dragon-1"
+        },
+        {
+          "time": 9166.200000286102,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-jade-dragon-1"
+        },
+        {
+          "time": 9314.900000095367,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-jade-dragon-2"
+        },
+        {
+          "time": 9316.099999904633,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-jade-dragon-2"
+        },
+        {
+          "time": 9448.200000286102,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-jade-dragon-3"
+        },
+        {
+          "time": 9449.400000095367,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-jade-dragon-3"
+        },
+        {
+          "time": 9581.599999904633,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-jade-dragon-4"
+        },
+        {
+          "time": 9584.099999904633,
+          "source": "Managed feedback 1",
+          "clip": "win-normal-jade-dragon"
+        },
+        {
+          "time": 9584.5,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-jade-dragon-4"
+        },
+        {
+          "time": 9584.599999904633,
+          "source": "Managed feedback 1",
+          "clip": "win-normal-jade-dragon"
+        },
+        {
+          "time": 10799.900000095367,
+          "source": "Award performance score",
+          "clip": "win-epic-jade-dragon"
+        },
+        {
+          "time": 10811.800000190735,
+          "source": "Award performance score",
+          "clip": "win-epic-jade-dragon"
+        },
+        {
+          "time": 11217.200000286102,
+          "source": "Managed feedback 2",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 11217.800000190735,
+          "source": "Managed feedback 3",
+          "clip": "award-accent-jade-dragon"
+        },
+        {
+          "time": 11217.800000190735,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve-jade-dragon"
+        },
+        {
+          "time": 11218.400000095367,
+          "source": "Managed feedback 2",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 11218.400000095367,
+          "source": "Managed feedback 3",
+          "clip": "award-accent-jade-dragon"
+        },
+        {
+          "time": 11218.400000095367,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve-jade-dragon"
+        }
+      ],
+      "acceptedFeedback": [
+        {
+          "time": 7087.200000286102,
+          "clip": "ui-touch",
+          "category": "tap",
+          "level": 0.4
+        },
+        {
+          "time": 7088.5,
+          "clip": "reel-start",
+          "category": "spin",
+          "level": 0.55
+        },
+        {
+          "time": 9032.099999904633,
+          "clip": "reel-stop-jade-dragon",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9165.200000286102,
+          "clip": "reel-stop-jade-dragon-1",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9314.900000095367,
+          "clip": "reel-stop-jade-dragon-2",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9448.200000286102,
+          "clip": "reel-stop-jade-dragon-3",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9581.599999904633,
+          "clip": "reel-stop-jade-dragon-4",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9584.099999904633,
+          "clip": "win-normal-jade-dragon",
+          "category": "win-normal",
+          "level": 0.58
+        },
+        {
+          "time": 11217.200000286102,
+          "clip": "ui-touch",
+          "category": "tap",
+          "level": 0.4
+        },
+        {
+          "time": 11217.800000190735,
+          "clip": "award-accent-jade-dragon",
+          "category": "award-accent",
+          "level": 0.405
+        }
+      ],
+      "reelLandings": [
+        {
+          "column": 0,
+          "time": 9031.900000095367
+        },
+        {
+          "column": 1,
+          "time": 9165.099999904633
+        },
+        {
+          "column": 2,
+          "time": 9314.900000095367
+        },
+        {
+          "column": 3,
+          "time": 9448.200000286102
+        },
+        {
+          "column": 4,
+          "time": 9581.5
+        }
+      ],
+      "transactions": [
+        {
+          "id": "tx-2dc26071ec9f57a64ebcdb6609cb05fb",
+          "type": "spin-win",
+          "amount": 12000
+        },
+        {
+          "id": "tx-c49710d23cbcc10233382815559a4f0f",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "balanceBefore": 27000,
+      "balanceAfter": 38920,
+      "forced": "QA epic result; real local charge/settlement; production RNG unchanged"
+    },
+    {
+      "mode": "pearl-qilin",
+      "loaded": {
+        "count": 90,
+        "clips": [
+          {
+            "name": "reel-stop-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-1",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect",
+            "duration": 0.85
+          },
+          {
+            "name": "feature",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal",
+            "duration": 1.24
+          },
+          {
+            "name": "reel-roll",
+            "duration": 0.96
+          },
+          {
+            "name": "ui-touch",
+            "duration": 0.2
+          },
+          {
+            "name": "reel-start",
+            "duration": 0.52
+          },
+          {
+            "name": "win-mega-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-amber-panda",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-amber-panda",
+            "duration": 5.05
+          },
+          {
+            "name": "reel-stop-amber-panda-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-super-amber-panda",
+            "duration": 4.35
+          },
+          {
+            "name": "win-grand-amber-panda",
+            "duration": 3.45
+          },
+          {
+            "name": "win-grand-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-amber-panda-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-amber-panda",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-amber-panda",
+            "duration": 1.32
+          },
+          {
+            "name": "music-golden-phoenix",
+            "duration": 51.428563
+          },
+          {
+            "name": "win-epic-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "coin-collect-amber-panda",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-amber-panda",
+            "duration": 1.24
+          },
+          {
+            "name": "music-salon",
+            "duration": 53.333344
+          },
+          {
+            "name": "win-mega-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-pearl-qilin",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-pearl-qilin",
+            "duration": 5.05
+          },
+          {
+            "name": "win-super-pearl-qilin",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-pearl-qilin-5",
+            "duration": 0.3
+          },
+          {
+            "name": "win-super-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-pearl-qilin-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-pearl-qilin-3",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-pearl-qilin",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-pearl-qilin",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-1",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-pearl-qilin",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect-pearl-qilin",
+            "duration": 0.85
+          },
+          {
+            "name": "feature-pearl-qilin",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal-pearl-qilin",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-jade-dragon",
+            "duration": 5.05
+          },
+          {
+            "name": "win-epic-jade-dragon",
+            "duration": 5.65
+          },
+          {
+            "name": "reel-stop-jade-dragon-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-2",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-jade-dragon",
+            "duration": 3.45
+          },
+          {
+            "name": "win-grand-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-jade-dragon-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon",
+            "duration": 0.3
+          },
+          {
+            "name": "win-super-jade-dragon",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-jade-dragon-1",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-jade-dragon",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-jade-dragon",
+            "duration": 1.32
+          },
+          {
+            "name": "coin-collect-jade-dragon",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-jade-dragon",
+            "duration": 1.24
+          },
+          {
+            "name": "music-amber-panda",
+            "duration": 49.655188
+          },
+          {
+            "name": "win-epic-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega",
+            "duration": 5.05
+          },
+          {
+            "name": "win-super",
+            "duration": 4.35
+          },
+          {
+            "name": "win-super-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-grand-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-golden-phoenix-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-golden-phoenix-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-golden-phoenix",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect-golden-phoenix",
+            "duration": 0.85
+          },
+          {
+            "name": "feature-golden-phoenix",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal-golden-phoenix",
+            "duration": 1.24
+          },
+          {
+            "name": "music-pearl-qilin",
+            "duration": 55.384625
+          },
+          {
+            "name": "music-jade-dragon",
+            "duration": 54.339625
+          }
+        ],
+        "sources": 11,
+        "columns": 6
+      },
+      "sourcePlayRequests": [
+        {
+          "time": 6482.5,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 6483.5,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 6483.5,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 6485.099999904633,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 6485.099999904633,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 6485.099999904633,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 8429.5,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-pearl-qilin"
+        },
+        {
+          "time": 8432.099999904633,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-pearl-qilin"
+        },
+        {
+          "time": 8561.800000190735,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-pearl-qilin-1"
+        },
+        {
+          "time": 8563.5,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-pearl-qilin-1"
+        },
+        {
+          "time": 8712.200000286102,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-pearl-qilin-2"
+        },
+        {
+          "time": 8715.300000190735,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-pearl-qilin-2"
+        },
+        {
+          "time": 8845.800000190735,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-pearl-qilin-3"
+        },
+        {
+          "time": 8848.300000190735,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-pearl-qilin-3"
+        },
+        {
+          "time": 8979.599999904633,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-pearl-qilin-4"
+        },
+        {
+          "time": 8981.400000095367,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-pearl-qilin-4"
+        },
+        {
+          "time": 9129.200000286102,
+          "source": "Managed feedback 1",
+          "clip": "reel-stop-pearl-qilin-5"
+        },
+        {
+          "time": 9135.099999904633,
+          "source": "Managed feedback 2",
+          "clip": "win-normal-pearl-qilin"
+        },
+        {
+          "time": 9135.700000286102,
+          "source": "Managed feedback 1",
+          "clip": "reel-stop-pearl-qilin-5"
+        },
+        {
+          "time": 9135.800000190735,
+          "source": "Managed feedback 2",
+          "clip": "win-normal-pearl-qilin"
+        },
+        {
+          "time": 13263.900000095367,
+          "source": "Managed feedback 3",
+          "clip": "win-normal-pearl-qilin"
+        },
+        {
+          "time": 13264.900000095367,
+          "source": "Managed feedback 3",
+          "clip": "win-normal-pearl-qilin"
+        },
+        {
+          "time": 15597.200000286102,
+          "source": "Award performance score",
+          "clip": "win-epic-pearl-qilin"
+        },
+        {
+          "time": 15610.900000095367,
+          "source": "Award performance score",
+          "clip": "win-epic-pearl-qilin"
+        },
+        {
+          "time": 16945.700000286102,
+          "source": "Managed feedback 4",
+          "clip": "award-accent-pearl-qilin"
+        },
+        {
+          "time": 16949.099999904633,
+          "source": "Managed feedback 4",
+          "clip": "award-accent-pearl-qilin"
+        },
+        {
+          "time": 17945.700000286102,
+          "source": "Managed feedback 5",
+          "clip": "award-accent-pearl-qilin"
+        },
+        {
+          "time": 17947.800000190735,
+          "source": "Managed feedback 5",
+          "clip": "award-accent-pearl-qilin"
+        },
+        {
+          "time": 19311.800000190735,
+          "source": "Managed feedback 0",
+          "clip": "award-accent-pearl-qilin"
+        },
+        {
+          "time": 19313.700000286102,
+          "source": "Managed feedback 0",
+          "clip": "award-accent-pearl-qilin"
+        },
+        {
+          "time": 20912.300000190735,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve-pearl-qilin"
+        },
+        {
+          "time": 20917.900000095367,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve-pearl-qilin"
+        }
+      ],
+      "acceptedFeedback": [
+        {
+          "time": 6482.5,
+          "clip": "ui-touch",
+          "category": "tap",
+          "level": 0.4
+        },
+        {
+          "time": 6483.5,
+          "clip": "reel-start",
+          "category": "spin",
+          "level": 0.55
+        },
+        {
+          "time": 8429.5,
+          "clip": "reel-stop-pearl-qilin",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 8561.800000190735,
+          "clip": "reel-stop-pearl-qilin-1",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 8712.200000286102,
+          "clip": "reel-stop-pearl-qilin-2",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 8845.800000190735,
+          "clip": "reel-stop-pearl-qilin-3",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 8979.599999904633,
+          "clip": "reel-stop-pearl-qilin-4",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9129.200000286102,
+          "clip": "reel-stop-pearl-qilin-5",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9135.099999904633,
+          "clip": "win-normal-pearl-qilin",
+          "category": "win-normal",
+          "level": 0.58
+        },
+        {
+          "time": 13264,
+          "clip": "win-normal-pearl-qilin",
+          "category": "win-normal",
+          "level": 0.58
+        },
+        {
+          "time": 16945.800000190735,
+          "clip": "award-accent-pearl-qilin",
+          "category": "award-accent",
+          "level": 0.33499999999999996
+        },
+        {
+          "time": 17945.700000286102,
+          "clip": "award-accent-pearl-qilin",
+          "category": "award-accent",
+          "level": 0.37
+        },
+        {
+          "time": 19311.800000190735,
+          "clip": "award-accent-pearl-qilin",
+          "category": "award-accent",
+          "level": 0.405
+        }
+      ],
+      "reelLandings": [
+        {
+          "column": 0,
+          "time": 8429.300000190735
+        },
+        {
+          "column": 1,
+          "time": 8561.800000190735
+        },
+        {
+          "column": 2,
+          "time": 8712
+        },
+        {
+          "column": 3,
+          "time": 8845.599999904633
+        },
+        {
+          "column": 4,
+          "time": 8979.400000095367
+        },
+        {
+          "column": 5,
+          "time": 9129.099999904633
+        }
+      ],
+      "transactions": [
+        {
+          "id": "tx-244f60ce98efb686f79a8a59d0764e96",
+          "type": "spin-win",
+          "amount": 12062
+        },
+        {
+          "id": "tx-0cf6bf11e9d10864f57b93af49c164bb",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "balanceBefore": 27000,
+      "balanceAfter": 38982,
+      "forced": "QA epic result; real local charge/settlement; production RNG unchanged"
+    },
+    {
+      "mode": "amber-panda",
+      "loaded": {
+        "count": 90,
+        "clips": [
+          {
+            "name": "reel-stop",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect",
+            "duration": 0.85
+          },
+          {
+            "name": "feature",
+            "duration": 1.32
+          },
+          {
+            "name": "reel-stop-1",
+            "duration": 0.3
+          },
+          {
+            "name": "ui-touch",
+            "duration": 0.2
+          },
+          {
+            "name": "win-normal",
+            "duration": 1.24
+          },
+          {
+            "name": "reel-start",
+            "duration": 0.52
+          },
+          {
+            "name": "reel-stop-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-roll",
+            "duration": 0.96
+          },
+          {
+            "name": "reel-stop-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-epic-amber-panda",
+            "duration": 5.65
+          },
+          {
+            "name": "win-epic-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-amber-panda",
+            "duration": 5.05
+          },
+          {
+            "name": "reel-stop-amber-panda-5",
+            "duration": 0.3
+          },
+          {
+            "name": "win-super-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-amber-panda-4",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-resolve-amber-panda",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-amber-panda",
+            "duration": 4.35
+          },
+          {
+            "name": "reel-stop-amber-panda-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda-2",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-amber-panda",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-amber-panda-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-amber-panda",
+            "duration": 0.3
+          },
+          {
+            "name": "music-golden-phoenix",
+            "duration": 51.428563
+          },
+          {
+            "name": "award-accent-amber-panda",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect-amber-panda",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-amber-panda",
+            "duration": 1.24
+          },
+          {
+            "name": "feature-amber-panda",
+            "duration": 1.32
+          },
+          {
+            "name": "win-epic-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "music-salon",
+            "duration": 53.333344
+          },
+          {
+            "name": "win-epic-pearl-qilin",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-pearl-qilin",
+            "duration": 4.35
+          },
+          {
+            "name": "win-mega-pearl-qilin",
+            "duration": 5.05
+          },
+          {
+            "name": "win-grand-resolve-pearl-qilin",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-pearl-qilin-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-2",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-pearl-qilin",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-pearl-qilin",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-pearl-qilin-1",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-pearl-qilin",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-pearl-qilin",
+            "duration": 1.32
+          },
+          {
+            "name": "coin-collect-pearl-qilin",
+            "duration": 0.85
+          },
+          {
+            "name": "win-normal-pearl-qilin",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic-jade-dragon",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-grand-resolve-jade-dragon",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega-jade-dragon",
+            "duration": 5.05
+          },
+          {
+            "name": "win-super-jade-dragon",
+            "duration": 4.35
+          },
+          {
+            "name": "music-amber-panda",
+            "duration": 49.655188
+          },
+          {
+            "name": "reel-stop-jade-dragon-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-jade-dragon",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-jade-dragon",
+            "duration": 3.45
+          },
+          {
+            "name": "reel-stop-jade-dragon-1",
+            "duration": 0.3
+          },
+          {
+            "name": "award-accent-jade-dragon",
+            "duration": 0.58
+          },
+          {
+            "name": "coin-collect-jade-dragon",
+            "duration": 0.85
+          },
+          {
+            "name": "feature-jade-dragon",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal-jade-dragon",
+            "duration": 1.24
+          },
+          {
+            "name": "win-epic-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "music-pearl-qilin",
+            "duration": 55.384625
+          },
+          {
+            "name": "win-epic",
+            "duration": 5.65
+          },
+          {
+            "name": "win-mega-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super",
+            "duration": 4.35
+          },
+          {
+            "name": "win-super-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-golden-phoenix-5",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix-1",
+            "duration": 0.3
+          },
+          {
+            "name": "win-mega",
+            "duration": 5.05
+          },
+          {
+            "name": "reel-stop-golden-phoenix-3",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "reel-stop-golden-phoenix-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-phoenix",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand",
+            "duration": 3.45
+          },
+          {
+            "name": "award-accent-golden-phoenix",
+            "duration": 0.58
+          },
+          {
+            "name": "feature-golden-phoenix",
+            "duration": 1.32
+          },
+          {
+            "name": "win-normal-golden-phoenix",
+            "duration": 1.24
+          },
+          {
+            "name": "coin-collect-golden-phoenix",
+            "duration": 0.85
+          },
+          {
+            "name": "music-jade-dragon",
+            "duration": 54.339625
+          }
+        ],
+        "sources": 11,
+        "columns": 6
+      },
+      "sourcePlayRequests": [
+        {
+          "time": 7353.700000286102,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 7356.400000095367,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 7356.400000095367,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 7358.700000286102,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 7358.900000095367,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 7358.900000095367,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 9293.599999904633,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-amber-panda"
+        },
+        {
+          "time": 9296.400000095367,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-amber-panda"
+        },
+        {
+          "time": 9426.599999904633,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-amber-panda-1"
+        },
+        {
+          "time": 9428.5,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-amber-panda-1"
+        },
+        {
+          "time": 9576.700000286102,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-amber-panda-2"
+        },
+        {
+          "time": 9578.400000095367,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-amber-panda-2"
+        },
+        {
+          "time": 9709.900000095367,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-amber-panda-3"
+        },
+        {
+          "time": 9711.200000286102,
+          "source": "Managed feedback 5",
+          "clip": "reel-stop-amber-panda-3"
+        },
+        {
+          "time": 9843.700000286102,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-amber-panda-4"
+        },
+        {
+          "time": 9846.400000095367,
+          "source": "Managed feedback 0",
+          "clip": "reel-stop-amber-panda-4"
+        },
+        {
+          "time": 9993.5,
+          "source": "Managed feedback 1",
+          "clip": "reel-stop-amber-panda-5"
+        },
+        {
+          "time": 9997.300000190735,
+          "source": "Managed feedback 2",
+          "clip": "win-normal-amber-panda"
+        },
+        {
+          "time": 9997.800000190735,
+          "source": "Managed feedback 1",
+          "clip": "reel-stop-amber-panda-5"
+        },
+        {
+          "time": 9998,
+          "source": "Managed feedback 2",
+          "clip": "win-normal-amber-panda"
+        },
+        {
+          "time": 14394.800000190735,
+          "source": "Award performance score",
+          "clip": "win-epic-amber-panda"
+        },
+        {
+          "time": 14414.700000286102,
+          "source": "Award performance score",
+          "clip": "win-epic-amber-panda"
+        },
+        {
+          "time": 15776.099999904633,
+          "source": "Managed feedback 3",
+          "clip": "award-accent-amber-panda"
+        },
+        {
+          "time": 15780.599999904633,
+          "source": "Managed feedback 3",
+          "clip": "award-accent-amber-panda"
+        },
+        {
+          "time": 16725.5,
+          "source": "Managed feedback 4",
+          "clip": "award-accent-amber-panda"
+        },
+        {
+          "time": 16728.300000190735,
+          "source": "Managed feedback 4",
+          "clip": "award-accent-amber-panda"
+        },
+        {
+          "time": 18042.200000286102,
+          "source": "Managed feedback 5",
+          "clip": "award-accent-amber-panda"
+        },
+        {
+          "time": 18045.5,
+          "source": "Managed feedback 5",
+          "clip": "award-accent-amber-panda"
+        },
+        {
+          "time": 19708.900000095367,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve-amber-panda"
+        },
+        {
+          "time": 19714.900000095367,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve-amber-panda"
+        }
+      ],
+      "acceptedFeedback": [
+        {
+          "time": 7353.700000286102,
+          "clip": "ui-touch",
+          "category": "tap",
+          "level": 0.4
+        },
+        {
+          "time": 7356.400000095367,
+          "clip": "reel-start",
+          "category": "spin",
+          "level": 0.55
+        },
+        {
+          "time": 9293.700000286102,
+          "clip": "reel-stop-amber-panda",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9426.599999904633,
+          "clip": "reel-stop-amber-panda-1",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9576.700000286102,
+          "clip": "reel-stop-amber-panda-2",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9709.900000095367,
+          "clip": "reel-stop-amber-panda-3",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9843.700000286102,
+          "clip": "reel-stop-amber-panda-4",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9993.599999904633,
+          "clip": "reel-stop-amber-panda-5",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 9997.300000190735,
+          "clip": "win-normal-amber-panda",
+          "category": "win-normal",
+          "level": 0.58
+        },
+        {
+          "time": 15776.099999904633,
+          "clip": "award-accent-amber-panda",
+          "category": "award-accent",
+          "level": 0.33499999999999996
+        },
+        {
+          "time": 16725.5,
+          "clip": "award-accent-amber-panda",
+          "category": "award-accent",
+          "level": 0.37
+        },
+        {
+          "time": 18042.200000286102,
+          "clip": "award-accent-amber-panda",
+          "category": "award-accent",
+          "level": 0.405
+        }
+      ],
+      "reelLandings": [
+        {
+          "column": 0,
+          "time": 9293.5
+        },
+        {
+          "column": 1,
+          "time": 9426.5
+        },
+        {
+          "column": 2,
+          "time": 9576.700000286102
+        },
+        {
+          "column": 3,
+          "time": 9709.800000190735
+        },
+        {
+          "column": 4,
+          "time": 9843.5
+        },
+        {
+          "column": 5,
+          "time": 9993.5
+        }
+      ],
+      "transactions": [
+        {
+          "id": "tx-89a772df07b805a4943f9d47e93b442d",
+          "type": "spin-win",
+          "amount": 12256
+        },
+        {
+          "id": "tx-02e12eb7c4f1b4f1067e7f8a966de480",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "balanceBefore": 27000,
+      "balanceAfter": 39176,
+      "forced": "QA epic result; real local charge/settlement; production RNG unchanged"
+    }
+  ],
+  "errors": [],
+  "scope": "Owned desktop browser; engine hide/show lifecycle fixtures. Not phone listening or native OS interruption testing."
+}

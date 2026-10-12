@@ -1,0 +1,2737 @@
+{
+  "seed": 16189956,
+  "sample": 6,
+  "round": {
+    "spinId": "amber-panda-185949165-7",
+    "gameId": "amber-panda",
+    "seed": 185949165,
+    "stops": [
+      35,
+      52,
+      21,
+      24,
+      31,
+      33
+    ],
+    "grid": [
+      "ruby",
+      "bars",
+      "safe",
+      "chip",
+      "pouch",
+      "chip",
+      "chip",
+      "pouch",
+      "bars",
+      "pouch",
+      "safe",
+      "chest",
+      "bars",
+      "wild",
+      "safe",
+      "chest",
+      "chest",
+      "chip"
+    ],
+    "layout": {
+      "family": "twin-boards",
+      "panels": 2
+    },
+    "wins": [
+      {
+        "kind": "line",
+        "symbolId": "chest",
+        "count": 3,
+        "multiplier": 32.085,
+        "credits": 257,
+        "positions": [
+          11,
+          13,
+          15
+        ],
+        "lineIndex": 9
+      }
+    ],
+    "baseWin": 257,
+    "featureWin": 102,
+    "totalWin": 359,
+    "featureResult": {
+      "type": "cabinet-feature",
+      "rounds": [
+        {
+          "index": 1,
+          "grid": [
+            "pouch",
+            "chip",
+            "pouch",
+            "chip",
+            "pouch",
+            "chip",
+            "chip",
+            "pouch",
+            "chip",
+            "ruby",
+            "ruby",
+            "chip",
+            "pouch",
+            "chip",
+            "ruby",
+            "bars",
+            "safe",
+            "chip"
+          ],
+          "wins": [],
+          "credits": 0,
+          "caption": "PANDA LANTERN REVEAL",
+          "motion": "respin",
+          "remaining": 2
+        },
+        {
+          "index": 2,
+          "grid": [
+            "pouch",
+            "chip",
+            "pouch",
+            "chip",
+            "pouch",
+            "chip",
+            "chip",
+            "pouch",
+            "chip",
+            "ruby",
+            "ruby",
+            "chip",
+            "pouch",
+            "chip",
+            "ruby",
+            "bars",
+            "bars",
+            "chip"
+          ],
+          "wins": [],
+          "credits": 0,
+          "caption": "PANDA LANTERN REVEAL",
+          "motion": "transform",
+          "focus": [
+            16
+          ],
+          "remaining": 2
+        },
+        {
+          "index": 3,
+          "grid": [
+            "chip",
+            "pouch",
+            "chip",
+            "pouch",
+            "chip",
+            "chip",
+            "chip",
+            "chip",
+            "pouch",
+            "bars",
+            "chip",
+            "chip",
+            "chest",
+            "chip",
+            "pouch",
+            "pouch",
+            "chip",
+            "pouch"
+          ],
+          "wins": [
+            {
+              "kind": "line",
+              "symbolId": "chip",
+              "count": 3,
+              "multiplier": 6.417000000000001,
+              "credits": 51,
+              "positions": [
+                2,
+                4,
+                6
+              ],
+              "lineIndex": 4
+            },
+            {
+              "kind": "line",
+              "symbolId": "chip",
+              "count": 3,
+              "multiplier": 6.417000000000001,
+              "credits": 51,
+              "positions": [
+                10,
+                13,
+                16
+              ],
+              "lineIndex": 5
+            }
+          ],
+          "credits": 102,
+          "caption": "PANDA LANTERN REVEAL",
+          "motion": "respin",
+          "remaining": 1
+        },
+        {
+          "index": 4,
+          "grid": [
+            "chip",
+            "pouch",
+            "chip",
+            "wild",
+            "chip",
+            "chip",
+            "crown",
+            "pouch",
+            "pouch",
+            "chip",
+            "wild",
+            "bars",
+            "bars",
+            "crown",
+            "pouch",
+            "chest",
+            "chip",
+            "ruby"
+          ],
+          "wins": [],
+          "credits": 0,
+          "caption": "PANDA LANTERN REVEAL",
+          "motion": "respin",
+          "remaining": 0
+        }
+      ],
+      "totalCredits": 102,
+      "detail": "Three lantern SCATTER symbols across both boards start three free spins. Each spin reveals all lanterns as one randomly selected ordinary symbol. Both boards evaluate their own five lines with half the stake. No extra stake is charged; free spins do not retrigger. All awards share the round limit."
+    },
+    "feature": {
+      "type": "cabinet-feature",
+      "count": 4
+    },
+    "anticipationColumns": []
+  },
+  "sequence": [
+    {
+      "t": 5,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 3.8383999938964837,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 3.8383999938964837,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 3.8383999938964837,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 3.8383999938964837,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 3.8383999938964837,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 3.8383999938964837,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 135,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 5.7071999969482405,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 5.7071999969482405,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 5.7071999969482405,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 5.7071999969482405,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 5.7071999969482405,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 5.7071999969482405,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 260,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 7.838399993896484,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 7.838399993896484,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 7.838399993896484,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 7.838399993896484,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 7.838399993896484,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 7.838399993896484,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 400,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 9.972799995422365,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 9.972799995422365,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 9.972799995422365,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 9.972799995422365,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 9.972799995422365,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 9.972799995422365,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 525,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 12.107199996948246,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 12.107199996948246,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 12.107199996948246,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 12.107199996948246,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 12.107199996948246,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 12.107199996948246,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 654,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 14.213004992875698,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 14.238399993896488,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 14.238399993896488,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 14.238399993896488,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 14.238399993896488,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 14.238399993896488,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 779,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 16.113424288046176,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 16.351725608408675,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 16.37759999847412,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 16.37759999847412,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 16.37759999847412,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 16.37759999847412,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 904,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 17.430073499770995,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 18.008674693391644,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 18.23332526880801,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 18.238399993896483,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 18.238399993896483,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 18.238399993896483,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1034,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 18.446290542358387,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 19.506631565941966,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 20.260856808564245,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 20.367197481348295,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 20.37279999542236,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 20.37279999542236,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1159,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 18.896995851571656,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 20.383752557504003,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 21.793787997282465,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 22.13922625543342,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 22.2376655367356,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 22.239999999999995,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1318,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19.03499881987752,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 20.961258234619933,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 23.331855115978918,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 24.23666326093827,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 24.724687121384008,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 24.89685559583497,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1450,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19.01280294354504,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 21.034971483200025,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 23.910972200397957,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 25.351599018034822,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 26.30802543713085,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 26.842258813704387,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1576,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21.022220135236665,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 24.02982467090815,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 25.818950129873144,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 27.16273360425594,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 28.048226124235246,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1700,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24.019879789631855,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 26.03261807228681,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 27.869404271020468,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 29.31145952102052,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1825,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24.00002338875269,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 26.02520383901674,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28.02692649783045,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 29.829591300257764,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1951,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26.000214529498482,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28.026645418554704,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 30.02562169896071,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2075,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28.002175174384373,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 30.030954225477256,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2201,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30.00305033809166,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2326,
+      "kind": "presenting",
+      "hint": "Board 2 · Payline 5\nTreasure chest ×3 · +257 coins",
+      "readout": "97",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2778,
+      "kind": "presenting",
+      "hint": "Board 2 · Payline 5\nTreasure chest ×3 · +257 coins",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2902,
+      "kind": "presenting",
+      "hint": "Board 2 · Payline 5\nTreasure chest ×3 · +257 coins",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3041,
+      "kind": "presenting",
+      "hint": "Board 2 · Payline 5\nTreasure chest ×3 · +257 coins",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3169,
+      "kind": "presenting",
+      "hint": "Board 2 · Payline 5\nTreasure chest ×3 · +257 coins",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3293,
+      "kind": "presenting",
+      "hint": "Board 2 · Payline 5\nTreasure chest ×3 · +257 coins",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3419,
+      "kind": "presenting",
+      "hint": "Board 2 · Payline 5\nTreasure chest ×3 · +257 coins",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3542,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3668,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3792,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3920,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4051,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4174,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4303,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4435,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4560,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5672,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 1/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5855,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 2/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5985,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 2/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6117,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 2/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6267,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 2/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6402,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 2/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6529,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 3/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6656,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 3/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6784,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 3/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6909,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 3/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 7070,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 3/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 7200,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 3/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 7324,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 3/4",
+      "readout": "257",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 7801,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "315",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 7926,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "351",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 8056,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "358",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 8184,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 8311,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 8437,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 8574,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 8721,
+      "kind": "presenting",
+      "hint": "Bonus 3/4 · Award ×2\n+102 coins",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 8873,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 4/4",
+      "readout": "359",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 9034,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 4/4",
+      "readout": "359",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 9192,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 4/4",
+      "readout": "359",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 9384,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 4/4",
+      "readout": "359",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 9523,
+      "kind": "presenting",
+      "hint": "PANDA LANTERN REVEAL · 4/4",
+      "readout": "359",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 11739,
+      "kind": "presenting",
+      "modal": "Treasure celebration",
+      "hint": "PANDA LANTERN REVEAL · 4/4",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 16320,
+      "kind": "presenting",
+      "modal": "Treasure celebration",
+      "hint": "PANDA LANTERN REVEAL · 4/4",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 19787,
+      "kind": "idle",
+      "hint": "WELCOME 8/10\nWIN 359 · 4.49× BET",
+      "readout": "359",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    }
+  ]
+}

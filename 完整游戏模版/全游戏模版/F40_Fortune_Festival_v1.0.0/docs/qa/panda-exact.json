@@ -1,0 +1,63 @@
+{
+  "gameId": "amber-panda",
+  "naturalOnly": true,
+  "boardStopCombinations": [
+    148877,
+    148877
+  ],
+  "featureTriggerRate": 0.07435202338603802,
+  "payoutScale": 1.2834,
+  "recommendedScale": 1.2834,
+  "recommendedMaxError": 0.0023941572496656294,
+  "method": "Enumerate each independent 3-reel board and all uniform mystery replacements; convolve lantern counts across boards; actual per-line integer rounding; three independent free spins; payout cap cannot bind below 200x.",
+  "results": [
+    {
+      "bet": 30,
+      "baseRtp": 0.7599741173362351,
+      "featureRtp": 0.1994947236553312,
+      "rtp": 0.9594688409915663,
+      "targetRtp": 0.96,
+      "difference": -0.0005311590084337015
+    },
+    {
+      "bet": 80,
+      "baseRtp": 0.759462509319774,
+      "featureRtp": 0.19933172573333774,
+      "rtp": 0.9587942350531118,
+      "targetRtp": 0.96,
+      "difference": -0.001205764946888177
+    },
+    {
+      "bet": 180,
+      "baseRtp": 0.7623560239511662,
+      "featureRtp": 0.20003813329849943,
+      "rtp": 0.9623941572496656,
+      "targetRtp": 0.96,
+      "difference": 0.0023941572496656294
+    },
+    {
+      "bet": 400,
+      "baseRtp": 0.7611303290635895,
+      "featureRtp": 0.1997311611619409,
+      "rtp": 0.9608614902255304,
+      "targetRtp": 0.96,
+      "difference": 0.0008614902255303925
+    },
+    {
+      "bet": 500,
+      "baseRtp": 0.761143359954862,
+      "featureRtp": 0.1997370118571723,
+      "rtp": 0.9608803718120343,
+      "targetRtp": 0.96,
+      "difference": 0.0008803718120343751
+    },
+    {
+      "bet": 900,
+      "baseRtp": 0.7611530920752627,
+      "featureRtp": 0.1997392975321055,
+      "rtp": 0.9608923896073682,
+      "targetRtp": 0.96,
+      "difference": 0.0008923896073682602
+    }
+  ]
+}

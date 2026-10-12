@@ -1,0 +1,321 @@
+
+> f40-fortune-festival@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:win-presentation && npm run test:expedition && npm run test:probability
+
+
+> f40-fortune-festival@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-phoenix": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 188211,
+      "wins": 437,
+      "features": 54,
+      "maxWin": 8230
+    },
+    "jade-dragon": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 159469,
+      "wins": 572,
+      "features": 47,
+      "maxWin": 4414
+    },
+    "pearl-qilin": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 169973,
+      "wins": 686,
+      "features": 657,
+      "maxWin": 2672
+    },
+    "amber-panda": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 178650,
+      "wins": 539,
+      "features": 76,
+      "maxWin": 1849
+    }
+  }
+}
+
+> f40-fortune-festival@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f40-fortune-festival@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f40-fortune-festival@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 40 cabinet/viewport combinations: enlarged glass, essential bounds, symbol crop and breathing room.
+
+> f40-fortune-festival@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts && node --import tsx tools/rule-contract-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+PASS rule contracts: 90 deterministic assertions across 4 genuinely distinct cabinets
+
+> f40-fortune-festival@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+All four feature rule sets translated in all five interface languages.
+
+> f40-fortune-festival@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f40-fortune-festival@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-phoenix',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 129,
+    featurePaidHits: 124,
+    coreHits: 1232,
+    coreReturn: 0.5903574074074074,
+    hits: 1329,
+    sampleReturn: 0.9808425925925925,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-dragon',
+    family: 'variable-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 158,
+    featurePaidHits: 158,
+    coreHits: 1717,
+    coreReturn: 0.41099814814814817,
+    hits: 1809,
+    sampleReturn: 1.005164814814815,
+    layoutVariants: 243
+  },
+  {
+    id: 'pearl-qilin',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 4,
+    spins: 3000,
+    features: 2003,
+    featurePaidHits: 856,
+    coreHits: 2003,
+    coreReturn: 0.3170851851851852,
+    hits: 2074,
+    sampleReturn: 1.0291092592592592,
+    layoutVariants: 1
+  },
+  {
+    id: 'amber-panda',
+    family: 'twin-boards',
+    columns: 6,
+    rows: 3,
+    spins: 3000,
+    features: 245,
+    featurePaidHits: 220,
+    coreHits: 1484,
+    coreReturn: 0.7409111111111111,
+    hits: 1634,
+    sampleReturn: 0.9620796296296297,
+    layoutVariants: 1
+  }
+]
+
+> f40-fortune-festival@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-phoenix',
+    core: 'lines',
+    feature: 'sticky-free',
+    samples: 6000,
+    features: 269,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'jade-dragon',
+    core: 'ways',
+    feature: 'coin-vault',
+    samples: 6000,
+    features: 307,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'pearl-qilin',
+    core: 'clusters',
+    feature: 'scatter-cascade',
+    samples: 6000,
+    features: 3904,
+    motions: [ 'drop' ]
+  },
+  {
+    id: 'amber-panda',
+    core: 'lines',
+    feature: 'mystery-free',
+    samples: 6000,
+    features: 475,
+    motions: [ 'respin', 'transform' ]
+  }
+]
+
+> f40-fortune-festival@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-phoenix',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 129,
+    featurePaidHits: 124,
+    coreHits: 1232,
+    coreReturn: 0.5903574074074074,
+    hits: 1329,
+    sampleReturn: 0.9808425925925925,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-dragon',
+    family: 'variable-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 158,
+    featurePaidHits: 158,
+    coreHits: 1717,
+    coreReturn: 0.41099814814814817,
+    hits: 1809,
+    sampleReturn: 1.005164814814815,
+    layoutVariants: 243
+  },
+  {
+    id: 'pearl-qilin',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 4,
+    spins: 3000,
+    features: 2003,
+    featurePaidHits: 856,
+    coreHits: 2003,
+    coreReturn: 0.3170851851851852,
+    hits: 2074,
+    sampleReturn: 1.0291092592592592,
+    layoutVariants: 1
+  },
+  {
+    id: 'amber-panda',
+    family: 'twin-boards',
+    columns: 6,
+    rows: 3,
+    spins: 3000,
+    features: 245,
+    featurePaidHits: 220,
+    coreHits: 1484,
+    coreReturn: 0.7409111111111111,
+    hits: 1634,
+    sampleReturn: 0.9620796296296297,
+    layoutVariants: 1
+  }
+]
+
+> f40-fortune-festival@1.0.0 test:win-presentation
+> node --import tsx tools/win-presentation-test.ts
+
+PASS strict charged-bet boundaries, retained tiers, translated captions and cabinet-anchored award text across phone proportions.
+PASS all three coin layers across four tiers and cabinets: full rotated bounds clear the award copy; both volleys finish before exit.
+PASS paired light crests after early and automatic reveals; all opacity values remain in the render range.
+
+> f40-fortune-festival@1.0.0 test:expedition
+> node --import tsx tools/expedition-test.ts
+
+PASS daily album: settlement-only progress, duplicate protection, four stamps/parade, reload, UTC rollover, account isolation, cap ledger and pending refund.
+
+> f40-fortune-festival@1.0.0 test:probability
+> node --import tsx tools/probability-test.ts && node --import tsx tools/exact-panda-audit.ts
+
+PASS 8+ anywhere, WILD independence, no reused group cells, 24382 real cascade boards, stake-independent draws/layout/features.
+{
+  "gameId": "amber-panda",
+  "naturalOnly": true,
+  "boardStopCombinations": [
+    148877,
+    148877
+  ],
+  "featureTriggerRate": 0.07435202338603802,
+  "payoutScale": 1.2834,
+  "recommendedScale": 1.2834,
+  "recommendedMaxError": 0.0023941572496656294,
+  "method": "Enumerate each independent 3-reel board and all uniform mystery replacements; convolve lantern counts across boards; actual per-line integer rounding; three independent free spins; payout cap cannot bind below 200x.",
+  "results": [
+    {
+      "bet": 30,
+      "baseRtp": 0.7599741173362351,
+      "featureRtp": 0.1994947236553312,
+      "rtp": 0.9594688409915663,
+      "targetRtp": 0.96,
+      "difference": -0.0005311590084337015
+    },
+    {
+      "bet": 80,
+      "baseRtp": 0.759462509319774,
+      "featureRtp": 0.19933172573333774,
+      "rtp": 0.9587942350531118,
+      "targetRtp": 0.96,
+      "difference": -0.001205764946888177
+    },
+    {
+      "bet": 180,
+      "baseRtp": 0.7623560239511662,
+      "featureRtp": 0.20003813329849943,
+      "rtp": 0.9623941572496656,
+      "targetRtp": 0.96,
+      "difference": 0.0023941572496656294
+    },
+    {
+      "bet": 400,
+      "baseRtp": 0.7611303290635895,
+      "featureRtp": 0.1997311611619409,
+      "rtp": 0.9608614902255304,
+      "targetRtp": 0.96,
+      "difference": 0.0008614902255303925
+    },
+    {
+      "bet": 500,
+      "baseRtp": 0.761143359954862,
+      "featureRtp": 0.1997370118571723,
+      "rtp": 0.9608803718120343,
+      "targetRtp": 0.96,
+      "difference": 0.0008803718120343751
+    },
+    {
+      "bet": 900,
+      "baseRtp": 0.7611530920752627,
+      "featureRtp": 0.1997392975321055,
+      "rtp": 0.9608923896073682,
+      "targetRtp": 0.96,
+      "difference": 0.0008923896073682602
+    }
+  ]
+}

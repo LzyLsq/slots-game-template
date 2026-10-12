@@ -1,0 +1,330 @@
+{
+  "checks": [
+    "Initial progress cannot show 100% before sound preparation completes",
+    "Hall cold start prepares 14 clips instead of all 90",
+    "golden-phoenix: dedicated loading waits for sound; repeated entry is ignored",
+    "golden-phoenix: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "jade-dragon: dedicated loading waits for sound; repeated entry is ignored",
+    "jade-dragon: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "pearl-qilin: dedicated loading waits for sound; repeated entry is ignored",
+    "pearl-qilin: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "amber-panda: dedicated loading waits for sound; repeated entry is ignored",
+    "amber-panda: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "All stalled optional sounds release loading within one scene preparation budget",
+    "Return to hall works after optional sound timeouts"
+  ],
+  "records": [
+    {
+      "stage": "boot gated",
+      "requests": 2,
+      "page": "home",
+      "config": "golden-phoenix",
+      "busy": false,
+      "bootLoading": true,
+      "modeLoading": false,
+      "blockingInput": true,
+      "labels": [
+        "Preparing your treasures  67%"
+      ],
+      "progress": 0.6796116504854369,
+      "decodedAudio": 0,
+      "decodedSeconds": 0,
+      "music": [
+        {
+          "playing": false
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "hall ready",
+      "requests": 14,
+      "page": "home",
+      "config": "golden-phoenix",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 14,
+      "decodedSeconds": 60.80334399999998,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "golden-phoenix gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "golden-phoenix",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "10 LINES · STICKY WILD FLIGHTS",
+        "Preparing your game… 32%"
+      ],
+      "progress": 1,
+      "decodedAudio": 14,
+      "decodedSeconds": 60.80334399999998,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "golden-phoenix ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "golden-phoenix",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 33,
+      "decodedSeconds": 149.40190699999997,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-golden-phoenix"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "jade-dragon gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "golden-phoenix",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "VARIABLE WAYS · TREASURE HOLD",
+        "Preparing your game… 32%"
+      ],
+      "progress": 1,
+      "decodedAudio": 33,
+      "decodedSeconds": 149.40190699999997,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false,
+          "clip": "music-golden-phoenix"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "jade-dragon ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "jade-dragon",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 52,
+      "decodedSeconds": 240.91153200000005,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-jade-dragon"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "pearl-qilin gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "jade-dragon",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "8+ MATCHING · PEARL DROPS",
+        "Preparing your game… 25%"
+      ],
+      "progress": 1,
+      "decodedAudio": 52,
+      "decodedSeconds": 240.91153200000005,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false,
+          "clip": "music-jade-dragon"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "pearl-qilin ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "pearl-qilin",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 71,
+      "decodedSeconds": 333.46615700000024,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-pearl-qilin"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "amber-panda gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "pearl-qilin",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "TWIN BOARDS · LANTERN REVEALS",
+        "Preparing your game… 32%"
+      ],
+      "progress": 1,
+      "decodedAudio": 71,
+      "decodedSeconds": 333.46615700000024,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false,
+          "clip": "music-pearl-qilin"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "amber-panda ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "amber-panda",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 90,
+      "decodedSeconds": 420.29134500000043,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-amber-panda"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "all sounds stalled; accelerated optional timeout",
+      "elapsedMs": 8008,
+      "page": "game",
+      "config": "golden-phoenix",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 0,
+      "decodedSeconds": 0,
+      "music": [
+        {
+          "playing": false
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated desktop Chromium; real resource gating. All-sound timeout uses an accelerated clock/timer fixture, not native device/network timing."
+}

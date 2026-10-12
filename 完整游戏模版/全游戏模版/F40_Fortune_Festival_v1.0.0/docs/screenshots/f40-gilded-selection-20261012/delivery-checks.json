@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-12",
+  "version": "f40-gilded-selection-20261012",
+  "sourceChecks": {
+    "npm test": "passed",
+    "npm run typecheck": "passed",
+    "npm run typecheck:server": "passed"
+  },
+  "releaseAudit": {
+    "passed": 21,
+    "total": 26,
+    "exitCode": 1,
+    "remaining": [
+      "publisher/legal URLs",
+      "App Store product identifiers",
+      "hosted legal finalization",
+      "executable native integration",
+      "device/production acceptance"
+    ]
+  },
+  "export": {
+    "engine": "Cocos Creator 3.8.8",
+    "reportedFinished": true,
+    "cliExitCode": 36,
+    "workerDiagnostic": "SIGTERM",
+    "runningPreviewChecked": true
+  },
+  "scope": "Desktop browser phone emulation. Native phone, production services, payment and store review not verified."
+}

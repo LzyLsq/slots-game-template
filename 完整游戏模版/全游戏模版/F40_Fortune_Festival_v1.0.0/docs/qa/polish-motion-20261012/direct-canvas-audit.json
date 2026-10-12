@@ -1,0 +1,852 @@
+{
+  "method": "GameCanvas.captureStream(30) + MediaRecorder; decoded WebM frames inspected separately",
+  "results": [
+    {
+      "mode": "golden-phoenix",
+      "idle": {
+        "video": "direct-canvas/golden-phoenix-idle.webm",
+        "bytes": 4751901,
+        "frames": [
+          {
+            "file": "golden-phoenix-idle-t0.5.png",
+            "time": 0.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-idle-t2.5.png",
+            "time": 2.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-idle-t5.5.png",
+            "time": 5.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-idle-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-idle-t9.png",
+            "time": 9,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 99,
+          "distinctGestures": 63,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            0.9997768964788515
+          ]
+        }
+      },
+      "spin": {
+        "video": "direct-canvas/golden-phoenix-spin-award.webm",
+        "bytes": 6899683,
+        "frames": [
+          {
+            "file": "golden-phoenix-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-phoenix-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 146,
+          "distinctGestures": 98,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "balance": 29078,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-331f600742463d1c65f48e295bb126a5",
+            "at": "2026-10-12T02:09:43.171Z",
+            "type": "spin-win",
+            "amount": 2158,
+            "balance": 29078,
+            "reference": "salon-spin-4e147268eb2e97f1c3dae918314bf007"
+          },
+          {
+            "id": "tx-b7e92dfc844c25d3c0446a9cfb889b8a",
+            "at": "2026-10-12T02:09:43.163Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-4e147268eb2e97f1c3dae918314bf007"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "29,078",
+          "WIN",
+          "2,158",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 2,158 · 26.98× BET"
+        ]
+      },
+      "fixture": "debug super result; charged and settled real local round; production RNG unaffected"
+    },
+    {
+      "mode": "jade-dragon",
+      "idle": {
+        "video": "direct-canvas/jade-dragon-idle.webm",
+        "bytes": 4756037,
+        "frames": [
+          {
+            "file": "jade-dragon-idle-t0.5.png",
+            "time": 0.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-idle-t2.5.png",
+            "time": 2.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-idle-t5.5.png",
+            "time": 5.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-idle-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-idle-t9.png",
+            "time": 9,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 99,
+          "distinctGestures": 64,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            0.9655639467354251
+          ]
+        }
+      },
+      "spin": {
+        "video": "direct-canvas/jade-dragon-spin-award.webm",
+        "bytes": 5889646,
+        "frames": [
+          {
+            "file": "jade-dragon-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 134,
+          "distinctGestures": 95,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "balance": 28934,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-2d3e1979e825fff3714356353c2c6199",
+            "at": "2026-10-12T02:10:32.546Z",
+            "type": "spin-win",
+            "amount": 2014,
+            "balance": 28934,
+            "reference": "salon-spin-a1b862567c36d2ac1a3cb5475b390a36"
+          },
+          {
+            "id": "tx-63cee8eb8a86cfa225fe0f9c678deebd",
+            "at": "2026-10-12T02:10:32.511Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-a1b862567c36d2ac1a3cb5475b390a36"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "28,934",
+          "WIN",
+          "2,014",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 2,014 · 25.18× BET"
+        ]
+      },
+      "fixture": "debug super result; charged and settled real local round; production RNG unaffected"
+    },
+    {
+      "mode": "pearl-qilin",
+      "idle": {
+        "video": "direct-canvas/pearl-qilin-idle.webm",
+        "bytes": 4703193,
+        "frames": [
+          {
+            "file": "pearl-qilin-idle-t0.5.png",
+            "time": 0.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-idle-t2.5.png",
+            "time": 2.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-idle-t5.5.png",
+            "time": 5.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-idle-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-idle-t9.png",
+            "time": 9,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 99,
+          "distinctGestures": 58,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            0.975974080045798
+          ]
+        }
+      },
+      "spin": {
+        "video": "direct-canvas/pearl-qilin-spin-award.webm",
+        "bytes": 4590638,
+        "frames": [
+          {
+            "file": "pearl-qilin-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "pearl-qilin-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 116,
+          "distinctGestures": 69,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "balance": 28920,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-9bc72a5d2f5cd6c47005cee95eb055db",
+            "at": "2026-10-12T02:11:18.692Z",
+            "type": "spin-win",
+            "amount": 2000,
+            "balance": 28920,
+            "reference": "salon-spin-6261d187c3fc0b7080bcfb79710c5f28"
+          },
+          {
+            "id": "tx-a5939227ff59247d4a968aba7e3daa2c",
+            "at": "2026-10-12T02:11:18.657Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-6261d187c3fc0b7080bcfb79710c5f28"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "28,920",
+          "WIN",
+          "2,000",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 2,000 · 25.00× BET"
+        ]
+      },
+      "fixture": "debug super result; charged and settled real local round; production RNG unaffected"
+    },
+    {
+      "mode": "amber-panda",
+      "idle": {
+        "video": "direct-canvas/amber-panda-idle.webm",
+        "bytes": 4484310,
+        "frames": [
+          {
+            "file": "amber-panda-idle-t0.5.png",
+            "time": 0.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-idle-t2.5.png",
+            "time": 2.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-idle-t5.5.png",
+            "time": 5.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-idle-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-idle-t9.png",
+            "time": 9,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 99,
+          "distinctGestures": 63,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            0.9535104328223443
+          ]
+        }
+      },
+      "spin": {
+        "video": "direct-canvas/amber-panda-spin-award.webm",
+        "bytes": 6604539,
+        "frames": [
+          {
+            "file": "amber-panda-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "amber-panda-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 140,
+          "distinctGestures": 93,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "balance": 29023,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-8b4c49f10c83780590d153be10da58ca",
+            "at": "2026-10-12T02:12:36.346Z",
+            "type": "spin-win",
+            "amount": 2103,
+            "balance": 29023,
+            "reference": "salon-spin-ccc789042f556921a840e9354da72476"
+          },
+          {
+            "id": "tx-4f0e5c49e9ea762ed03548c90d2e5a99",
+            "at": "2026-10-12T02:12:36.328Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-ccc789042f556921a840e9354da72476"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "29,023",
+          "WIN",
+          "2,103",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 2,103 · 26.29× BET"
+        ]
+      },
+      "fixture": "debug super result; charged and settled real local round; production RNG unaffected"
+    }
+  ],
+  "errors": [],
+  "captureCleanupAborts": [
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/b070a635-ee16-4690-939c-28fcedbfe6a5",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/ccff4dee-801c-4a6e-8716-a5b93f6ab972",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/f23d2686-0864-426c-a2da-0d01d06b9192",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/9650ad92-bd6e-4ffb-974a-33adddd072f6",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/c7763fda-6601-41a1-bb83-8c4062662bb8",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/8dccdccd-aee8-44cd-86e4-3c072d63618e",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/4b55add4-0df5-44e8-b05e-501baebf379b",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/f2777de0-f0bf-476e-9220-5924904e6b6d",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-phoenix",
+      "request": "blob:http://127.0.0.1:6040/077a7f19-5b15-48ab-8164-a0d51c664cba",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/0f7a3c95-d475-4abb-a556-cb581c9ce05f",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/894f9e7e-836f-4934-bdc5-357da199c2de",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/c218eb2b-84d2-4bf2-8651-0ff277535a66",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/1358382d-a67b-4ec2-9a33-041891eaa8ef",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/379e7e21-91da-48c0-8f28-6b083fe6ecd2",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/7e89ac0d-9fbf-4308-8289-a9df202878cf",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/e8cdffcc-9a76-4c78-8431-88b9433299ee",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/a66787ed-c01c-43e6-a587-15da012b45c8",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/53e3b01c-406d-4e16-b604-8cc5e16096ea",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/75baa44b-e73d-4bc8-a145-124836d959f2",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/99adbc67-f91e-4a71-aa19-2d6e11154571",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/53612685-c7da-42b9-a1c6-d6ea8eafc660",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/708ebcfa-4723-4db4-a8b7-ecba865e9962",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/34c7944a-9087-4f73-b897-15cddde41e0d",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/a6920ad4-d1dc-4d77-9c31-0bb7ab1c77eb",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/54902112-2f79-4693-9d94-fbc17ab3e7d2",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/3b51679d-3e63-4423-bc48-e6967b6e6e0b",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "pearl-qilin",
+      "request": "blob:http://127.0.0.1:6040/f38e38a0-762c-4e81-9925-01382fe89aec",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/e086670e-684c-43a2-bdb8-573218f7966d",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/602edc5b-c541-4c08-a898-8f3a6d9e9ada",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/01616a6f-d8c5-4157-831d-753d849641ac",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/de0534b9-3f17-4ead-a522-f22e560dd649",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/df150bae-0590-4f2c-9395-47a75e1944ac",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/ac8fca52-543d-4185-b5d0-853f4046d51c",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/e496fd4d-226d-4baa-9fda-2b14c84c22c4",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/a64acf50-16b0-4908-9208-e12884c6c069",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "amber-panda",
+      "request": "blob:http://127.0.0.1:6040/23a5df12-6f85-43a8-a523-d8dd2d7613df",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    }
+  ]
+}

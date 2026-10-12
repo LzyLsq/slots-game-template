@@ -1,0 +1,24 @@
+/library/
+/temp/
+/local/
+/profiles/
+/build/
+/node_modules
+.DS_Store
+.env
+.env.*
+!.env.example
+/art-source/raw/
+/docs/**/*.webm
+/docs/**/*.gif
+__pycache__/
+
+# Keep historical image iterations local; publish the current delivery captures.
+/docs/**/*.png
+/docs/**/*.jpg
+/docs/**/*.jpeg
+!/docs/screenshots/f40-gilded-selection-20261012/**
+!/docs/qa/hall-selection-20261012/**/*.png
+!/docs/qa/hall-selection-20261012/**/*.jpg
+!/docs/qa/hall-selection-20261012/motion/hall-selection.webm
+/art-source/room-extension/

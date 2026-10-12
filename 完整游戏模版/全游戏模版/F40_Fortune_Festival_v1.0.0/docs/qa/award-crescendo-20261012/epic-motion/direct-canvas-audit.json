@@ -1,0 +1,183 @@
+{
+  "method": "GameCanvas.captureStream(30) + MediaRecorder; decoded WebM frames inspected separately",
+  "results": [
+    {
+      "mode": "jade-dragon",
+      "spin": {
+        "video": "direct-canvas/jade-dragon-spin-award.webm",
+        "bytes": 5714239,
+        "frames": [
+          {
+            "file": "jade-dragon-spin-award-t3.png",
+            "time": 3,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t4.png",
+            "time": 4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t5.png",
+            "time": 5,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t6.png",
+            "time": 6,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t7.png",
+            "time": 7,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t8.png",
+            "time": 8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t9.png",
+            "time": 9,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t10.png",
+            "time": 10,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "jade-dragon-spin-award-t11.png",
+            "time": 11,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "guardian": {
+          "sampleCount": 125,
+          "distinctGestures": 117,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "balance": 38920,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-fa2d72ae91a84abbd07e1f8f6982477d",
+            "at": "2026-10-12T02:38:18.443Z",
+            "type": "spin-win",
+            "amount": 12000,
+            "balance": 38920,
+            "reference": "salon-spin-1c666beeeaa9b05d1fb72827811d6254"
+          },
+          {
+            "id": "tx-9665db65420d4791273951304530b3d9",
+            "at": "2026-10-12T02:38:18.440Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-1c666beeeaa9b05d1fb72827811d6254"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "38,920",
+          "WIN",
+          "12,000",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 12,000 · 150.00× BET"
+        ]
+      },
+      "fixture": "debug epic result; charged and settled real local round; production RNG unaffected"
+    }
+  ],
+  "errors": [],
+  "captureCleanupAborts": [
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/949168d5-a568-47b2-9eee-345f5c44b513",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/d8c884e4-1fe6-4e5d-9a23-e32c3c4d9005",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/4b2b061d-2803-42f4-80ea-5facf3af3fe5",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/594a1cea-7ac0-4c43-b273-f31f61387b23",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/4b8d94a9-1ab1-45cb-bc15-5895f43f3f9b",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/b317e0be-5d1e-45f5-afcb-8282c64fac02",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/f98c3802-2a93-4fd1-bfd8-6742b9906c40",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "jade-dragon",
+      "request": "blob:http://127.0.0.1:6040/b2ce9e79-5a03-43c0-a2a2-916407e72898",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    }
+  ]
+}

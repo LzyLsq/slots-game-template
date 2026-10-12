@@ -1,0 +1,1926 @@
+{
+  "seed": 16124419,
+  "sample": 2,
+  "round": {
+    "spinId": "pearl-qilin-1793352121-3",
+    "gameId": "pearl-qilin",
+    "seed": 1793352121,
+    "stops": [
+      12,
+      33,
+      41,
+      2,
+      5,
+      11
+    ],
+    "grid": [
+      "chip",
+      "aqua",
+      "chest",
+      "pearl",
+      "chip",
+      "bars",
+      "safe",
+      "chip",
+      "chip",
+      "wild",
+      "bars",
+      "chest",
+      "safe",
+      "chip",
+      "chip",
+      "aqua",
+      "bars",
+      "aqua",
+      "wild",
+      "wild",
+      "chip",
+      "aqua",
+      "chip",
+      "bars"
+    ],
+    "layout": {
+      "family": "scatter-groups"
+    },
+    "wins": [
+      {
+        "kind": "cluster",
+        "symbolId": "chip",
+        "count": 8,
+        "positions": [
+          0,
+          4,
+          7,
+          8,
+          13,
+          14,
+          20,
+          22
+        ],
+        "multiplier": 0.10220800000000001,
+        "credits": 8
+      }
+    ],
+    "baseWin": 8,
+    "featureWin": 0,
+    "totalWin": 8,
+    "featureResult": {
+      "type": "cabinet-feature",
+      "rounds": [
+        {
+          "index": 1,
+          "grid": [
+            "chest",
+            "aqua",
+            "chest",
+            "pearl",
+            "chip",
+            "chip",
+            "bars",
+            "safe",
+            "chip",
+            "wild",
+            "bars",
+            "chest",
+            "chip",
+            "aqua",
+            "safe",
+            "aqua",
+            "bars",
+            "aqua",
+            "wild",
+            "wild",
+            "safe",
+            "aqua",
+            "aqua",
+            "bars"
+          ],
+          "wins": [],
+          "credits": 0,
+          "caption": "PEARL CELEBRATION",
+          "removed": [
+            0,
+            4,
+            7,
+            8,
+            13,
+            14,
+            20,
+            22
+          ],
+          "multiplier": 2,
+          "motion": "drop"
+        }
+      ],
+      "totalCredits": 0,
+      "detail": "A paid group of eight or more identical symbols starts celebration drops. Winning symbols clear; survivors fall and new symbols enter from above. Up to three extra drops pay at 2x, 4x and 6x. A losing drop ends the feature. Groups count anywhere; adjacency is not required. WILD pays only as its own symbol. No extra stake is charged."
+    },
+    "feature": {
+      "type": "cabinet-feature",
+      "count": 1
+    },
+    "anticipationColumns": []
+  },
+  "sequence": [
+    {
+      "t": 3,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 3.5792000045776358,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 3.5792000045776358,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 3.5792000045776358,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 3.5792000045776358,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 3.5792000045776358,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 3.5792000045776358,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 132,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 5.695999999999998,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 5.695999999999998,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 5.695999999999998,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 5.695999999999998,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 5.695999999999998,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 5.695999999999998,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 264,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 7.828800003051757,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 7.828800003051757,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 7.828800003051757,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 7.828800003051757,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 7.828800003051757,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 7.828800003051757,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 390,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 9.69759999847412,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 9.69759999847412,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 9.69759999847412,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 9.69759999847412,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 9.69759999847412,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 9.69759999847412,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 517,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 11.870400001525876,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 11.870400001525876,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 11.870400001525876,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 11.870400001525876,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 11.870400001525876,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 11.870400001525876,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 650,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 13.949436231180218,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 13.964800003051751,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 13.964800003051751,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 13.964800003051751,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 13.964800003051751,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 13.964800003051751,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 781,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 15.890218707720203,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 16.088783291488163,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 16.103999999999996,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 16.103999999999996,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 16.103999999999996,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 16.103999999999996,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 910,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 17.258279618445357,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 17.779857160403804,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 17.959220972557322,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 17.961599998474114,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 17.961599998474114,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 17.961599998474114,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1035,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 18.347500739969036,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 19.344115908211222,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 20.014815312815273,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 20.098278536047495,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 20.100800003051752,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 20.100800003051752,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1165,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 18.895611076512097,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 20.380304132903838,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 21.786736205121603,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 22.13058838994662,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 22.22814834262619,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 22.230400001525876,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1291,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19.030089521516018,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 20.859458517574744,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 22.95910924962739,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 23.67248962438032,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 24.0141806934731,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 24.09718119759263,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1416,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19.02461391027953,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 21.029062749876243,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 23.757131950853726,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 24.995160523728362,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 25.762975074312394,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 26.141824042975205,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1543,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19.001168001919183,
+          "stopped": false,
+          "brake": 0.94
+        },
+        {
+          "travel": 21.02936929661404,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 24.011353831932247,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 25.694256158128212,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 26.906424697124393,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 27.667479454607744,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1666,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21.001854442877274,
+          "stopped": false,
+          "brake": 1.08
+        },
+        {
+          "travel": 24.030514960711205,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 26.008719074748903,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 27.703926010691248,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 28.961498357288427,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1797,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24.00266371002701,
+          "stopped": false,
+          "brake": 1.22
+        },
+        {
+          "travel": 26.031541386958697,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28.006704407735874,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 29.71800888406547,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 1923,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26.006503884737654,
+          "stopped": false,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28.034231515852937,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 29.989111457644974,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2048,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28.007781541230703,
+          "stopped": false,
+          "brake": 1.5
+        },
+        {
+          "travel": 30.034653098908386,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2179,
+      "kind": "spinning",
+      "hint": "Treasures in motion…",
+      "readout": "0",
+      "running": true,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30.012895336330764,
+          "stopped": false,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2302,
+      "kind": "presenting",
+      "hint": "Anywhere count ×8\nFestival coin ×8 · +8 coins",
+      "readout": "1",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2841,
+      "kind": "presenting",
+      "hint": "Anywhere count ×8\nFestival coin ×8 · +8 coins",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 2983,
+      "kind": "presenting",
+      "hint": "Anywhere count ×8\nFestival coin ×8 · +8 coins",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3118,
+      "kind": "presenting",
+      "hint": "Anywhere count ×8\nFestival coin ×8 · +8 coins",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3287,
+      "kind": "presenting",
+      "hint": "Anywhere count ×8\nFestival coin ×8 · +8 coins",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3418,
+      "kind": "presenting",
+      "hint": "Anywhere count ×8\nFestival coin ×8 · +8 coins",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3550,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3683,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 19,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 21,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 24,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 26,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 28,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 30,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3816,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 3947,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4075,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4218,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4356,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": true,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4484,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 4615,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5198,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5330,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5455,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5581,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5705,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5832,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 5963,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6090,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6223,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6351,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6480,
+      "kind": "presenting",
+      "hint": "PEARL CELEBRATION · 1/1 · 2×",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    },
+    {
+      "t": 6609,
+      "kind": "idle",
+      "hint": "WELCOME 6/10\nRETURN 8 · 0.10× BET",
+      "readout": "8",
+      "running": false,
+      "transitioning": false,
+      "columns": [
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 0.94
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.08
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.22
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.3599999999999999
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.5
+        },
+        {
+          "travel": 100,
+          "stopped": true,
+          "brake": 1.6400000000000001
+        }
+      ]
+    }
+  ]
+}

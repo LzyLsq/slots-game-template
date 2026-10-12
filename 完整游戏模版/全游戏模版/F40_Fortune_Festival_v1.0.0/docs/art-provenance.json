@@ -1,0 +1,150 @@
+{
+  "project": "F40",
+  "provider": "User local CC Switch compatible image service",
+  "modelAlias": "gpt-image-2.5",
+  "commissions": [
+    "salon",
+    "canopy-services",
+    "canopy-brand",
+    "golden-phoenix-panorama",
+    "canopy-title-0",
+    "golden-phoenix-guardian",
+    "symbols-golden-phoenix",
+    "controls-0",
+    "prize-golden-phoenix",
+    "arrival-golden-phoenix",
+    "jade-dragon-panorama",
+    "canopy-title-1",
+    "jade-dragon-guardian",
+    "symbols-jade-dragon",
+    "controls-1",
+    "prize-jade-dragon",
+    "arrival-jade-dragon",
+    "pearl-qilin-panorama",
+    "canopy-title-2",
+    "pearl-qilin-guardian",
+    "symbols-pearl-qilin",
+    "controls-2",
+    "prize-pearl-qilin",
+    "arrival-pearl-qilin",
+    "amber-panda-panorama",
+    "canopy-title-3",
+    "amber-panda-guardian",
+    "symbols-amber-panda",
+    "controls-3",
+    "prize-amber-panda",
+    "arrival-amber-panda",
+    "canopy-destinations",
+    "interfaces",
+    "portraits",
+    "plates",
+    "frames",
+    "ledger-frame-room",
+    "win-frames",
+    "award-titles",
+    "optics",
+    "award-coin-flight",
+    "festival-firework-v1",
+    "interface-close",
+    "festival-gold-rays-v2",
+    "festival-spark-plume-v2",
+    "festival-gold-digits-v2"
+  ],
+  "originalPanoramaResolution": [
+    1536,
+    1024
+  ],
+  "processedPanoramaResolution": [
+    2304,
+    1536
+  ],
+  "sourceReuse": false,
+  "processing": "Proportional scaling, exact seam crops, alpha extraction, atlas cells, single silhouette split. No inherited image pixels.",
+  "extendedPanoramaResolution": [
+    2304,
+    3072
+  ],
+  "roomExtensions": "art-source/room-extension-v2; original cabinet stays registered",
+  "eyelidCommissions": "art-source/eyelids; four theme-matched closed-eye textures, independently registered",
+  "atlasProcessing": "Component-based extraction, proportional object packing, transparent RGB gutters and isolated premultiplied-alpha blur. See atlas-crop-audit-20261012.json.",
+  "scenePreservation": "Existing extended rooms, guardian mesh skins and corrected eyelids are preserved.",
+  "festival-firework-v1": {
+    "provider": "User local CC Switch compatible image service",
+    "modelAlias": "gpt-image-2.5",
+    "prompt": "art-source/prompts/festival-firework-20261012.txt",
+    "raw": "art-source/raw/festival-firework-v1.png",
+    "runtime": "assets/resources/art/festival-firework-v1.png",
+    "rawResolution": [
+      1374,
+      1145
+    ],
+    "runtimeResolution": [
+      1024,
+      1024
+    ],
+    "processing": "Transparent canvas, proportional premultiplied-alpha resize; used behind the guardian with additive blending. No inherited project image pixels."
+  },
+  "festival-gold-rays-v2": {
+    "provider": "User local CC Switch compatible image service",
+    "modelAlias": "gpt-image-2.5",
+    "date": "2026-10-12",
+    "prompt": "art-source/prompts/festival-gold-rays-v2-20261012.txt",
+    "raw": "art-source/raw/festival-gold-rays-v2.png",
+    "runtime": "assets/resources/art/festival-gold-rays-v2.png",
+    "rawResolution": [
+      1536,
+      1024
+    ],
+    "runtimeResolution": [
+      982,
+      655
+    ],
+    "rawSha256": "600186eea43c03628b833ec8869ff90e113b4a01625aa5255409db88b988dfbf",
+    "runtimeSha256": "09c43597dabbb96a7e6804fd99bb6af99df2c82cba5e42a1e88a5ff130f03386",
+    "usage": "An additive champagne-gold treasury light curtain opening upward inside the current cabinet screen.",
+    "processing": "Proportional contain into a transparent 1024 square, alpha-bound crop; runtime contain preserves the complete authored aspect ratio. Reveal uses a vertical Sprite fill, not image stretching.",
+    "preparationScript": "tools/prepare-award-art.py"
+  },
+  "festival-spark-plume-v2": {
+    "provider": "User local CC Switch compatible image service",
+    "modelAlias": "gpt-image-2.5",
+    "date": "2026-10-12",
+    "prompt": "art-source/prompts/festival-spark-plume-v2-20261012.txt",
+    "raw": "art-source/raw/festival-spark-plume-v2.png",
+    "runtime": "assets/resources/art/festival-spark-plume-v2.png",
+    "rawResolution": [
+      1024,
+      1536
+    ],
+    "runtimeResolution": [
+      655,
+      983
+    ],
+    "rawSha256": "a043beabeed4095a65b907feb3d002ade66720c76a72edf015cb423ef67b22bd",
+    "runtimeSha256": "69bf9ae2ffef9ed73141da6f7026c8439826ca617c4032a9dc7e6a721cf41213",
+    "usage": "Two staggered pairs of additive fountain plumes behind the cabinet crown and guardian.",
+    "processing": "Proportional contain into a transparent 1024 square and alpha-bound crop; Cocos sprites retain aspect ratio. No inherited project pixels.",
+    "preparationScript": "tools/prepare-award-art.py"
+  },
+  "festival-gold-digits-v2": {
+    "provider": "User local CC Switch compatible image service",
+    "modelAlias": "gpt-image-2.5",
+    "date": "2026-10-12",
+    "prompt": "art-source/prompts/festival-gold-digits-v2-20261012.txt",
+    "raw": "art-source/raw/festival-gold-digits-v2.png",
+    "runtime": "assets/resources/art/festival-gold-digits-v2.png",
+    "rawResolution": [
+      1448,
+      1086
+    ],
+    "runtimeResolution": [
+      1024,
+      1024
+    ],
+    "rawSha256": "c7d711f2bee6a25e4736ecec274b43ad44f2ae34d06340d481616b1f5ffa199d",
+    "runtimeSha256": "aeabbbe5901d1672e49c6bfdd114a58774868fc63a8ba6f02f86fd88302f2bdc",
+    "usage": "The real counting return displayed as twelve isolated metal glyphs: 0123456789,.",
+    "processing": "Measured glyph windows, high-alpha connected-component fringe cleanup with retained antialiasing, original glyph proportions and baseline; twelve used cells in a 4x4/256 atlas. Source bounds and exact runtime crops retained in art-source/award-glyph-crops.json.",
+    "preparationScript": "tools/prepare-award-art.py"
+  }
+}

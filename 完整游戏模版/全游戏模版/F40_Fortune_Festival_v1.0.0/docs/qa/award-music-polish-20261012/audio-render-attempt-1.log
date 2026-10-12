@@ -1,0 +1,66 @@
+music-salon 53.3333 seconds · rms 0.09157
+music-golden-phoenix 51.4286 seconds · rms 0.08839
+music-jade-dragon 54.3396 seconds · rms 0.08848
+music-pearl-qilin 55.3846 seconds · rms 0.08947
+music-amber-panda 49.6552 seconds · rms 0.09752
+ui-touch 0.2 seconds · rms 0.03796
+reel-start 0.52 seconds · rms 0.08874
+reel-roll 0.96 seconds · rms 0.04134
+coin-collect 0.85 seconds · rms 0.09519
+win-normal 1.24 seconds · rms 0.0936
+feature 1.32 seconds · rms 0.08578
+reel-stop 0.3 seconds · rms 0.05341
+reel-stop-1 0.3 seconds · rms 0.06147
+reel-stop-2 0.3 seconds · rms 0.07263
+reel-stop-3 0.3 seconds · rms 0.07039
+reel-stop-4 0.3 seconds · rms 0.05363
+reel-stop-5 0.3 seconds · rms 0.07196
+award-accent 0.58 seconds · rms 0.08235
+coin-collect-golden-phoenix 0.85 seconds · rms 0.09632
+win-normal-golden-phoenix 1.24 seconds · rms 0.08818
+feature-golden-phoenix 1.32 seconds · rms 0.0854
+reel-stop-golden-phoenix 0.3 seconds · rms 0.07687
+reel-stop-golden-phoenix-1 0.3 seconds · rms 0.07595
+reel-stop-golden-phoenix-2 0.3 seconds · rms 0.05421
+reel-stop-golden-phoenix-3 0.3 seconds · rms 0.06147
+reel-stop-golden-phoenix-4 0.3 seconds · rms 0.07263
+reel-stop-golden-phoenix-5 0.3 seconds · rms 0.07039
+award-accent-golden-phoenix 0.58 seconds · rms 0.08354
+coin-collect-jade-dragon 0.85 seconds · rms 0.09195
+win-normal-jade-dragon 1.24 seconds · rms 0.09707
+feature-jade-dragon 1.32 seconds · rms 0.08407
+reel-stop-jade-dragon 0.3 seconds · rms 0.05909
+reel-stop-jade-dragon-1 0.3 seconds · rms 0.05341
+reel-stop-jade-dragon-2 0.3 seconds · rms 0.06147
+reel-stop-jade-dragon-3 0.3 seconds · rms 0.07247
+reel-stop-jade-dragon-4 0.3 seconds · rms 0.07039
+reel-stop-jade-dragon-5 0.3 seconds · rms 0.06508
+award-accent-jade-dragon 0.58 seconds · rms 0.09742
+coin-collect-pearl-qilin 0.85 seconds · rms 0.09519
+win-normal-pearl-qilin 1.24 seconds · rms 0.0936
+feature-pearl-qilin 1.32 seconds · rms 0.08578
+reel-stop-pearl-qilin 0.3 seconds · rms 0.05341
+reel-stop-pearl-qilin-1 0.3 seconds · rms 0.06147
+reel-stop-pearl-qilin-2 0.3 seconds · rms 0.07263
+reel-stop-pearl-qilin-3 0.3 seconds · rms 0.07039
+reel-stop-pearl-qilin-4 0.3 seconds · rms 0.05363
+reel-stop-pearl-qilin-5 0.3 seconds · rms 0.07196
+award-accent-pearl-qilin 0.58 seconds · rms 0.08235
+coin-collect-amber-panda 0.85 seconds · rms 0.07331
+win-normal-amber-panda 1.24 seconds · rms 0.08582
+feature-amber-panda 1.32 seconds · rms 0.07862
+reel-stop-amber-panda 0.3 seconds · rms 0.06713
+reel-stop-amber-panda-1 0.3 seconds · rms 0.07687
+reel-stop-amber-panda-2 0.3 seconds · rms 0.07595
+reel-stop-amber-panda-3 0.3 seconds · rms 0.05341
+reel-stop-amber-panda-4 0.3 seconds · rms 0.06147
+reel-stop-amber-panda-5 0.3 seconds · rms 0.07247
+award-accent-amber-panda 0.58 seconds · rms 0.09017
+win-grand 3.45 seconds · rms 0.14028
+Traceback (most recent call last):
+  File "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F40_Fortune_Festival_v1.0.0/art-source/compose_audio.py", line 195, in <module>
+    output('win-'+tag+'-resolve'+suffix,s,.63,.152+tier*.006,{'tier':tag,'key':KEYS[idx],'revealImpactSeconds':impacts})
+  File "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F40_Fortune_Festival_v1.0.0/art-source/compose_audio.py", line 53, in output
+    with wave.open(str(DEST/f'{name}.wav'),'wb') as f:
+         ^^^^^^^^^
+AttributeError: 'int' object has no attribute 'open'

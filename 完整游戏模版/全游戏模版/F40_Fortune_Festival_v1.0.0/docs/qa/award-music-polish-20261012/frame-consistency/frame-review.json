@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-12T08:20:34.992Z",
+  "mode": "jade-dragon",
+  "method": "requestAnimationFrame and Long Tasks; no MediaRecorder, screenshots, trace or decoding during measured rounds",
+  "fixture": "Debug EPIC results; real local round reservations and settlements; not natural probability evidence",
+  "records": [
+    {
+      "round": 1,
+      "durationMs": 15819.400000095367,
+      "frames": 948,
+      "maxFrameMs": 16.80000000000109,
+      "p95FrameMs": 16.700000000000728,
+      "gaps": [],
+      "longTasks": [],
+      "tiers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "state": "idle",
+      "busy": false,
+      "pending": false
+    },
+    {
+      "round": 2,
+      "durationMs": 37036.09999990463,
+      "frames": 2222,
+      "maxFrameMs": 16.80000000000291,
+      "p95FrameMs": 16.700000000004366,
+      "gaps": [],
+      "longTasks": [],
+      "tiers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "state": "idle",
+      "busy": false,
+      "pending": false
+    },
+    {
+      "round": 3,
+      "durationMs": 15784,
+      "frames": 946,
+      "maxFrameMs": 16.80000000000291,
+      "p95FrameMs": 16.70000000001164,
+      "gaps": [],
+      "longTasks": [],
+      "tiers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "state": "idle",
+      "busy": false,
+      "pending": false
+    }
+  ],
+  "errors": []
+}

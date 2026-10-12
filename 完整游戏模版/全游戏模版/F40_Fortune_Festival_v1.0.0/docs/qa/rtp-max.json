@@ -1,0 +1,98 @@
+{
+  "status": "TARGET_COMPATIBLE",
+  "naturalOnly": true,
+  "newcomerIncluded": false,
+  "forcedResultsIncluded": false,
+  "maxConfidence95HalfWidth": 0.01,
+  "note": "RTP is long-run total return divided by stake, not hit probability. The nominal target allows 0.4 percentage points for integer rounding. A compatible interval is not proof of exact target RTP.",
+  "results": [
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "golden-phoenix",
+      "spins": 2000000,
+      "seed": 40571,
+      "bet": 900,
+      "payoutScale": 0.41305,
+      "targetRtp": 0.96,
+      "rtp": 0.9599796966666667,
+      "confidence95": [
+        0.9559009553965906,
+        0.9640584379367428
+      ],
+      "baseRtp": 0.62183026,
+      "featureRtp": 0.3381494366666667,
+      "hitRate": 0.4386755,
+      "featureRate": 0.0475745,
+      "maxWin": 199892
+    },
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "jade-dragon",
+      "spins": 2000000,
+      "seed": 40571,
+      "bet": 900,
+      "payoutScale": 2.4511,
+      "targetRtp": 0.96,
+      "rtp": 0.9571610183333333,
+      "confidence95": [
+        0.9533252028275839,
+        0.9609968338390827
+      ],
+      "baseRtp": 0.413045705,
+      "featureRtp": 0.5441153133333333,
+      "hitRate": 0.584749,
+      "featureRate": 0.049092,
+      "maxWin": 34261
+    },
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "pearl-qilin",
+      "spins": 2000000,
+      "seed": 40571,
+      "bet": 900,
+      "payoutScale": 1.2776,
+      "targetRtp": 0.96,
+      "rtp": 0.9643525622222222,
+      "confidence95": [
+        0.9620125242865925,
+        0.966692600157852
+      ],
+      "baseRtp": 0.38874394055555556,
+      "featureRtp": 0.5756086216666667,
+      "hitRate": 0.6783355,
+      "featureRate": 0.651691,
+      "maxWin": 37719
+    },
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "amber-panda",
+      "spins": 2000000,
+      "seed": 40571,
+      "bet": 900,
+      "payoutScale": 1.2834,
+      "targetRtp": 0.96,
+      "rtp": 0.9604745088888889,
+      "confidence95": [
+        0.9586024004556247,
+        0.962346617322153
+      ],
+      "baseRtp": 0.76170529,
+      "featureRtp": 0.19876921888888888,
+      "hitRate": 0.5514165,
+      "featureRate": 0.0739835,
+      "maxWin": 19638
+    }
+  ]
+}

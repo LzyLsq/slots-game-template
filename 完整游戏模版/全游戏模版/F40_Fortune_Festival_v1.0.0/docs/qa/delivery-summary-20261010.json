@@ -1,0 +1,41 @@
+{
+  "project": "F40_Fortune_Festival_v1.0.0",
+  "date": "2026-10-10",
+  "version": "f40-final-20261010",
+  "engine": "Cocos Creator 3.8.8",
+  "buildFinished": true,
+  "creatorExitCode": 36,
+  "clientTypecheckExit": 0,
+  "serverTypecheckExit": 0,
+  "testsExit": 0,
+  "testSuites": 13,
+  "latestBrowserRuns": {
+    "phone-layout": {
+      "exitCode": 0,
+      "evidence": "docs/screenshots/f40-final-20261010/layout-capture.json"
+    },
+    "services": {
+      "exitCode": 0,
+      "evidence": "docs/screenshots/f40-final-20261010/services/capture-audit.json"
+    },
+    "runtime": {
+      "exitCode": 0,
+      "evidence": "docs/qa/runtime/runtime-audit.json"
+    },
+    "awards": {
+      "exitCode": 0,
+      "evidence": "docs/qa/awards/award-audit.json"
+    },
+    "award-interactions": {
+      "exitCode": 0,
+      "evidence": "docs/qa/award-interactions/interaction-audit.json"
+    }
+  },
+  "releaseAutomatedChecks": {
+    "passed": 21,
+    "total": 26,
+    "submissionReady": false
+  },
+  "nativeDeviceValidated": false,
+  "audioAuditionedOnDevice": false
+}

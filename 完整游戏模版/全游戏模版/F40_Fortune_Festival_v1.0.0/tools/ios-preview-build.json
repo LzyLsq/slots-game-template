@@ -1,0 +1,72 @@
+{
+  "platform": "ios",
+  "debug": false,
+  "buildPath": "project://build",
+  "outputName": "ios",
+  "md5Cache": false,
+  "taskName": "ios",
+  "buildMode": "normal",
+  "mainBundleCompressionType": "merge_dep",
+  "packages": {
+    "ios": {
+      "packageName": "com.example.fortunefestival.f40",
+      "bundleIdentifier": "com.example.fortunefestival.f40",
+      "orientation": {
+        "portrait": true,
+        "upsideDown": false,
+        "landscapeLeft": false,
+        "landscapeRight": false
+      },
+      "osTarget": "15.0",
+      "targetVersion": "15.0",
+      "skipUpdateXcodeProject": false
+    }
+  },
+  "name": "f40-fortune-festival",
+  "server": "",
+  "engineModulesConfigKey": "defaultConfig",
+  "mangleProperties": false,
+  "skipCompressTexture": false,
+  "sourceMaps": false,
+  "overwriteProjectSettings": {
+    "includeModules": {
+      "gfx-webgl2": "on",
+      "physics": "inherit-project-setting",
+      "physics-2d": "inherit-project-setting"
+    },
+    "macroConfig": {
+      "cleanupImageCache": "inherit-project-setting"
+    }
+  },
+  "nativeCodeBundleMode": "both",
+  "polyfills": {
+    "asyncFunctions": true
+  },
+  "experimentalEraseModules": false,
+  "startSceneAssetBundle": false,
+  "bundleConfigs": [],
+  "inlineEnum": true,
+  "useBuiltinServer": false,
+  "md5CacheOptions": {
+    "excludes": [],
+    "includes": [],
+    "replaceOnly": [],
+    "handleTemplateMd5Link": true
+  },
+  "mainBundleIsRemote": false,
+  "useSplashScreen": true,
+  "bundleCommonChunk": false,
+  "packAutoAtlas": true,
+  "startScene": "76dfd7e2-dd46-4e31-a260-3185d428ab61",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/FortuneFestival.scene",
+      "uuid": "76dfd7e2-dd46-4e31-a260-3185d428ab61"
+    }
+  ],
+  "wasmCompressionMode": false,
+  "binGroupConfig": {
+    "threshold": 16,
+    "enable": false
+  }
+}

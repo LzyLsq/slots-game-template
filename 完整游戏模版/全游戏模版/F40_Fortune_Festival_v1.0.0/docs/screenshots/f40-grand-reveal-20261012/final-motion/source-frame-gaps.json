@@ -1,0 +1,77 @@
+{
+  "scope": "Sequential decoding of original 30fps canvas recordings; source gaps and browser RAF timings measure different things. First stage sample is an approximate phase boundary, not a CPU cause attribution.",
+  "results": [
+    {
+      "mode": "golden-phoenix",
+      "decodedFrames": 644,
+      "stageFirstSampleSeconds": 12.643,
+      "maxSourceGapMs": 75.0,
+      "gapsOver100ms": []
+    },
+    {
+      "mode": "jade-dragon",
+      "decodedFrames": 437,
+      "stageFirstSampleSeconds": 5.875,
+      "maxSourceGapMs": 194.0,
+      "gapsOver100ms": [
+        {
+          "fromSeconds": 0.0,
+          "toSeconds": 0.194,
+          "gapMs": 194.0,
+          "stageStartedByGapEnd": false
+        },
+        {
+          "fromSeconds": 4.603,
+          "toSeconds": 4.734,
+          "gapMs": 131.0,
+          "stageStartedByGapEnd": false
+        },
+        {
+          "fromSeconds": 5.76,
+          "toSeconds": 5.883,
+          "gapMs": 123.0,
+          "stageStartedByGapEnd": true
+        }
+      ]
+    },
+    {
+      "mode": "pearl-qilin",
+      "decodedFrames": 569,
+      "stageFirstSampleSeconds": 11.597,
+      "maxSourceGapMs": 451.0,
+      "gapsOver100ms": [
+        {
+          "fromSeconds": 6.422,
+          "toSeconds": 6.586,
+          "gapMs": 164.0,
+          "stageStartedByGapEnd": false
+        },
+        {
+          "fromSeconds": 6.586,
+          "toSeconds": 7.037,
+          "gapMs": 451.0,
+          "stageStartedByGapEnd": false
+        },
+        {
+          "fromSeconds": 7.494,
+          "toSeconds": 7.601,
+          "gapMs": 107.0,
+          "stageStartedByGapEnd": false
+        },
+        {
+          "fromSeconds": 11.478,
+          "toSeconds": 11.587,
+          "gapMs": 109.0,
+          "stageStartedByGapEnd": false
+        }
+      ]
+    },
+    {
+      "mode": "amber-panda",
+      "decodedFrames": 383,
+      "stageFirstSampleSeconds": 3.951,
+      "maxSourceGapMs": 93.0,
+      "gapsOver100ms": []
+    }
+  ]
+}

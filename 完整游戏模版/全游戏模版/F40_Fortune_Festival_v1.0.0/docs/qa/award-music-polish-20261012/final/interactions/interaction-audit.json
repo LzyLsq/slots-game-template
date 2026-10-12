@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "check": "early reveal, utility input isolation, resize, immediate repeat, restoration and no duplicate credits",
+      "reduced": false
+    },
+    {
+      "check": "automatic count/reveal/exit with complete restoration"
+    },
+    {
+      "check": "early reveal, utility input isolation, resize, immediate repeat, restoration and no duplicate credits",
+      "reduced": true
+    }
+  ],
+  "errors": [],
+  "scope": "Presentation fixtures; accounting unchanged. Charged/settled rounds verified in direct recording and runtime QA."
+}
