@@ -1,0 +1,8161 @@
+{
+  "mode": "pearl-rhythm",
+  "fixture": "Explicit localhost debug SUPER; full idle, real spin and paid settlement, award and exit",
+  "backgroundAndSettlement": {
+    "before": {
+      "rooms": [
+        {
+          "name": "pearl-rhythm-room-continuous",
+          "id": "Node.327",
+          "parent": "Cabinet-coordinate-plane",
+          "frame": "",
+          "position": [
+            540,
+            1073.5606971153845
+          ],
+          "scale": [
+            1.033203125,
+            1.033203125
+          ],
+          "paint": [
+            4096,
+            3072
+          ]
+        }
+      ],
+      "balance": 27000,
+      "bet": 80,
+      "rounds": 0,
+      "state": "idle"
+    },
+    "during": {
+      "rooms": [
+        {
+          "name": "pearl-rhythm-room-continuous",
+          "id": "Node.327",
+          "parent": "Cabinet-coordinate-plane",
+          "frame": "",
+          "position": [
+            540,
+            1073.5606971153845
+          ],
+          "scale": [
+            1.033203125,
+            1.033203125
+          ],
+          "paint": [
+            4096,
+            3072
+          ]
+        }
+      ],
+      "balance": 28920,
+      "bet": 80,
+      "rounds": 1,
+      "state": "presenting",
+      "win": 2000,
+      "modal": "Treasure celebration"
+    },
+    "after": {
+      "rooms": [
+        {
+          "name": "pearl-rhythm-room-continuous",
+          "id": "Node.327",
+          "parent": "Cabinet-coordinate-plane",
+          "frame": "",
+          "position": [
+            540,
+            1073.5606971153845
+          ],
+          "scale": [
+            1.033203125,
+            1.033203125
+          ],
+          "paint": [
+            4096,
+            3072
+          ]
+        }
+      ],
+      "balance": 28920,
+      "bet": 80,
+      "rounds": 1,
+      "state": "idle"
+    }
+  },
+  "samples": [
+    {
+      "t": 4996.800000190735,
+      "clock": 1.4945000000000004,
+      "angle": -2.441229590669214,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5041.099999904633,
+      "clock": 1.527599999904633,
+      "angle": -2.347241858267011,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5091.699999809265,
+      "clock": 1.5776999998092656,
+      "angle": -2.1949662958123892,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5142.400000095367,
+      "clock": 1.6276999998092656,
+      "angle": -2.0335087400040255,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5192.5,
+      "clock": 1.6776999998092657,
+      "angle": -1.8654592146538826,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5245.199999809265,
+      "clock": 1.7441999998092657,
+      "angle": -1.6366477396857382,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5295.300000190735,
+      "clock": 1.7942999997138982,
+      "angle": -1.4638527179991494,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5345.199999809265,
+      "clock": 1.8442999997138982,
+      "angle": -1.293961855639247,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5394.099999904633,
+      "clock": 1.877599999904633,
+      "angle": -1.1834362537951453,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5442.5,
+      "clock": 1.9275999999046332,
+      "angle": -1.023072317722826,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5494.099999904633,
+      "clock": 1.9775999999046334,
+      "angle": -0.871194672439383,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5545.199999809265,
+      "clock": 2.0442999997138984,
+      "angle": -0.6847544678946246,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5593.400000095367,
+      "clock": 2.077699999809266,
+      "angle": -0.5992687986295957,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5642.099999904633,
+      "clock": 2.1275999999046338,
+      "angle": -0.4822198827946598,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5695.400000095367,
+      "clock": 2.194299999713899,
+      "angle": -0.3467766128042294,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5745.199999809265,
+      "clock": 2.2442999997138995,
+      "angle": -0.26142683664023264,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5795.199999809265,
+      "clock": 2.2942999997138998,
+      "angle": -0.18987433731601241,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5845.199999809265,
+      "clock": 2.3442999997139,
+      "angle": -0.13168352616131726,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5895.400000095367,
+      "clock": 2.3942999997139003,
+      "angle": -0.08609112205322061,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5941.900000095367,
+      "clock": 2.4275999999046354,
+      "angle": -0.062201009660511536,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 5992.400000095367,
+      "clock": 2.477699999809268,
+      "angle": -0.03504349495260419,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6045.199999809265,
+      "clock": 2.544299999713901,
+      "angle": -0.012877075471147154,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6092.699999809265,
+      "clock": 2.577599999904636,
+      "angle": -0.00659976894547605,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6145.099999904633,
+      "clock": 2.6444000000953714,
+      "angle": -0.0008077151996404361,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6191.400000095367,
+      "clock": 2.6775999999046367,
+      "angle": -0.00009746327708799075,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6243.099999904633,
+      "clock": 2.7276999998092695,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6293.400000095367,
+      "clock": 2.7775999999046372,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6343.300000190735,
+      "clock": 2.8275999999046375,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6392.300000190735,
+      "clock": 2.8775999999046378,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6441.099999904633,
+      "clock": 2.9276999998092705,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6495.5,
+      "clock": 2.994400000095373,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6545.099999904633,
+      "clock": 3.0442999997139037,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6593.800000190735,
+      "clock": 3.0776999998092713,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6644,
+      "clock": 3.127599999904639,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6691.699999809265,
+      "clock": 3.177699999809272,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6745.199999809265,
+      "clock": 3.2444000000953745,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6794.099999904633,
+      "clock": 3.27759999990464,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6842.800000190735,
+      "clock": 3.32759999990464,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6895.400000095367,
+      "clock": 3.3942999997139056,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6945.199999809265,
+      "clock": 3.4444000000953756,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 6993.699999809265,
+      "clock": 3.477599999904641,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7042.800000190735,
+      "clock": 3.5276999998092737,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7091.800000190735,
+      "clock": 3.577699999809274,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7145.400000095367,
+      "clock": 3.644299999713907,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7195.300000190735,
+      "clock": 3.6942999997139068,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7243,
+      "clock": 3.7276999998092744,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7295.400000095367,
+      "clock": 3.7942999997139073,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7341.400000095367,
+      "clock": 3.8275999999046424,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7395.300000190735,
+      "clock": 3.894299999713908,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7445.199999809265,
+      "clock": 3.944299999713908,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7494.099999904633,
+      "clock": 3.977599999904643,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7545.199999809265,
+      "clock": 4.044299999713908,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7592.800000190735,
+      "clock": 4.077599999904642,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7645,
+      "clock": 4.144299999713906,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7695.300000190735,
+      "clock": 4.1942999997139045,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7744.099999904633,
+      "clock": 4.227599999904639,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7795.199999809265,
+      "clock": 4.294299999713902,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7841.300000190735,
+      "clock": 4.327599999904637,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7891.599999904633,
+      "clock": 4.3775999999046356,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7941.199999809265,
+      "clock": 4.427699999809267,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 7991.599999904633,
+      "clock": 4.477699999809266,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8042.5,
+      "clock": 4.527699999809265,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8095.900000095367,
+      "clock": 4.594299999713896,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8142.400000095367,
+      "clock": 4.627699999809263,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8195.400000095367,
+      "clock": 4.694299999713894,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8243.699999809265,
+      "clock": 4.727599999904628,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8292.900000095367,
+      "clock": 4.7776999998092595,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8342.400000095367,
+      "clock": 4.827599999904626,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8395.300000190735,
+      "clock": 4.894400000095359,
+      "angle": 0,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8445.099999904633,
+      "clock": 4.944299999713889,
+      "angle": 0.00011562790335276492,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8494.099999904633,
+      "clock": 4.977599999904623,
+      "angle": 0.0008837569438095722,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8545.300000190735,
+      "clock": 5.044400000095357,
+      "angle": 0.0069016719498031405,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8593.199999809265,
+      "clock": 5.077699999809255,
+      "angle": 0.013344843240784549,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8642.300000190735,
+      "clock": 5.127699999809255,
+      "angle": 0.028931588317993404,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8692.199999809265,
+      "clock": 5.177699999809254,
+      "angle": 0.0531861107354904,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8741.400000095367,
+      "clock": 5.227699999809253,
+      "angle": 0.08768538484590147,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8795.5,
+      "clock": 5.2944000000953535,
+      "angle": 0.1519242629236657,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8845.599999904633,
+      "clock": 5.344400000095352,
+      "angle": 0.21504013074942996,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8892.599999904633,
+      "clock": 5.377599999904617,
+      "angle": 0.2644162783595148,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8942.400000095367,
+      "clock": 5.427699999809248,
+      "angle": 0.35048007331858777,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 8991.699999809265,
+      "clock": 5.47779999971388,
+      "angle": 0.45048450555913483,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9041.699999809265,
+      "clock": 5.527799999713879,
+      "angle": 0.5639111267626921,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9096.599999904633,
+      "clock": 5.594599999904613,
+      "angle": 0.735533676415806,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9142.5,
+      "clock": 5.627599999904613,
+      "angle": 0.8281289152272311,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9195.199999809265,
+      "clock": 5.694299999713877,
+      "angle": 1.0290229546800527,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9245.099999904633,
+      "clock": 5.744299999713876,
+      "angle": 1.1896712543296526,
+      "blink": 0.2504154038111409,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9293.699999809265,
+      "clock": 5.77759999990461,
+      "angle": 1.3003413504588417,
+      "blink": 0.7097659834169068,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9341.199999809265,
+      "clock": 5.827599999904609,
+      "angle": 1.470374991988627,
+      "blink": 1,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9395.199999809265,
+      "clock": 5.894299999713873,
+      "angle": 1.700584884167982,
+      "blink": 0.9326943038843746,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9445.199999809265,
+      "clock": 5.944299999713872,
+      "angle": 1.8722717135896314,
+      "blink": 0.6063005276512748,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9494.199999809265,
+      "clock": 5.977599999904606,
+      "angle": 1.9846573997399037,
+      "blink": 0.3395921199796308,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9541.599999904633,
+      "clock": 6.027599999904605,
+      "angle": 2.1483521291704255,
+      "blink": 0.04043163549400064,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9593,
+      "clock": 6.077699999809237,
+      "angle": 2.3037186248304216,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9642.5,
+      "clock": 6.127699999809237,
+      "angle": 2.447265016860139,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9695.199999809265,
+      "clock": 6.194299999713868,
+      "angle": 2.615795301975264,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9745.099999904633,
+      "clock": 6.244299999713868,
+      "angle": 2.72186328616307,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9795.300000190735,
+      "clock": 6.294400000095337,
+      "angle": 2.807810170980491,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9841.300000190735,
+      "clock": 6.327699999809234,
+      "angle": 2.8525770415161276,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9891.699999809265,
+      "clock": 6.3775999999046,
+      "angle": 2.8997270852028247,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9944.300000190735,
+      "clock": 6.4291999998092315,
+      "angle": 2.9217506103728956,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 9992.800000190735,
+      "clock": 6.477699999809231,
+      "angle": 2.9163405781368645,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10042.099999904633,
+      "clock": 6.52769999980923,
+      "angle": 2.8832922778924397,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10095.400000095367,
+      "clock": 6.594299999713861,
+      "angle": 2.7949874832935047,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10145.099999904633,
+      "clock": 6.64429999971386,
+      "angle": 2.695289097931468,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10193.699999809265,
+      "clock": 6.6775999999045945,
+      "angle": 2.6131642010161658,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10244.199999809265,
+      "clock": 6.7275999999045935,
+      "angle": 2.466779393347402,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10295.099999904633,
+      "clock": 6.794299999713858,
+      "angle": 2.230162293211438,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10345.300000190735,
+      "clock": 6.844299999713857,
+      "angle": 2.0238088372839695,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10392.300000190735,
+      "clock": 6.877599999904591,
+      "angle": 1.8736744887667918,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10443,
+      "clock": 6.92759999990459,
+      "angle": 1.630871452544107,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10494.099999904633,
+      "clock": 6.977599999904589,
+      "angle": 1.3695107924786503,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10542.599999904633,
+      "clock": 7.027699999809221,
+      "angle": 1.0918789775217987,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10592.900000095367,
+      "clock": 7.077599999904588,
+      "angle": 0.8027805704459962,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10642.699999809265,
+      "clock": 7.127599999904587,
+      "angle": 0.5038118149802275,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10695.300000190735,
+      "clock": 7.19429999971385,
+      "angle": 0.09648304280964672,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10745.199999809265,
+      "clock": 7.24429999971385,
+      "angle": -0.21063543647177255,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10793.900000095367,
+      "clock": 7.277599999904584,
+      "angle": -0.4140358415978963,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10845.300000190735,
+      "clock": 7.344400000095318,
+      "angle": -0.8145683411080404,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10895.300000190735,
+      "clock": 7.394400000095317,
+      "angle": -1.103792680547124,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10945.199999809265,
+      "clock": 7.444299999713846,
+      "angle": -1.3797483959289598,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 10992.699999809265,
+      "clock": 7.477699999809213,
+      "angle": -1.5558347760612357,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11042.199999809265,
+      "clock": 7.527599999904579,
+      "angle": -1.8038960629493117,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11092.599999904633,
+      "clock": 7.577699999809211,
+      "angle": -2.032512300430952,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11143,
+      "clock": 7.627599999904578,
+      "angle": -2.2375291081754844,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11193.300000190735,
+      "clock": 7.677599999904577,
+      "angle": -2.4182666745025547,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11245.199999809265,
+      "clock": 7.744299999713842,
+      "angle": -2.618184234146866,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11292.699999809265,
+      "clock": 7.777599999904576,
+      "angle": -2.699598088393548,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11342.400000095367,
+      "clock": 7.827699999809208,
+      "angle": -2.798380620276474,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11395.199999809265,
+      "clock": 7.894299999713839,
+      "angle": -2.885158418354607,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11445.199999809265,
+      "clock": 7.944400000095308,
+      "angle": -2.9171128675051663,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11494.099999904633,
+      "clock": 7.977599999904572,
+      "angle": -2.922830988629934,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11542.699999809265,
+      "clock": 8.027699999809204,
+      "angle": -2.9088410491164165,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11594.099999904633,
+      "clock": 8.077599999904573,
+      "angle": -2.869011793342362,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11645.099999904633,
+      "clock": 8.144299999713839,
+      "angle": -2.7782569852617183,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11695.199999809265,
+      "clock": 8.19429999971384,
+      "angle": -2.684648151929717,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11743.099999904633,
+      "clock": 8.227699999809207,
+      "angle": -2.6111647432900633,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11795.099999904633,
+      "clock": 8.294299999713841,
+      "angle": -2.4417794052049895,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11843.699999809265,
+      "clock": 8.327599999904576,
+      "angle": -2.3472418582671764,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11895.099999904633,
+      "clock": 8.394299999713843,
+      "angle": -2.142271184981583,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11945.300000190735,
+      "clock": 8.444299999713843,
+      "angle": -1.9783055045418263,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        100,
+        100,
+        100
+      ],
+      "running": false
+    },
+    {
+      "t": 11992.400000095367,
+      "clock": 8.47769999980921,
+      "angle": -1.8665965337284047,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        0.0007087394016896475,
+        0.0007087394016896475,
+        0.0007087394016896475
+      ],
+      "running": true
+    },
+    {
+      "t": 12045.300000190735,
+      "clock": 8.544299999713845,
+      "angle": -1.623431907198092,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        0.07855905910589189,
+        0.07855905910589189,
+        0.07855905910589189
+      ],
+      "running": true
+    },
+    {
+      "t": 12091.699999809265,
+      "clock": 8.57759999990458,
+      "angle": -1.492041411321013,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        0.2025673378519777,
+        0.2025673378519777,
+        0.2025673378519777
+      ],
+      "running": true
+    },
+    {
+      "t": 12145.099999904633,
+      "clock": 8.644299999713846,
+      "angle": -1.2178550697354733,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        0.6866864167576969,
+        0.6866864167576969,
+        0.6866864167576969
+      ],
+      "running": true
+    },
+    {
+      "t": 12191.699999809265,
+      "clock": 8.677599999904581,
+      "angle": -1.0786807462523482,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        1.0504279332549724,
+        1.0504279332549724,
+        1.0504279332549724
+      ],
+      "running": true
+    },
+    {
+      "t": 12242,
+      "clock": 8.727599999904582,
+      "angle": -0.8709792527270483,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        1.7274074986182744,
+        1.7274074986182744,
+        1.7274074986182744
+      ],
+      "running": true
+    },
+    {
+      "t": 12295.099999904633,
+      "clock": 8.794299999713848,
+      "angle": -0.6030206498778921,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        2.7727999954223637,
+        2.7727999954223637,
+        2.7727999954223637
+      ],
+      "running": true
+    },
+    {
+      "t": 12342,
+      "clock": 8.827699999809216,
+      "angle": -0.4752715041548244,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        3.3071999969482424,
+        3.3071999969482424,
+        3.3071999969482424
+      ],
+      "running": true
+    },
+    {
+      "t": 12395.099999904633,
+      "clock": 8.89429999971385,
+      "angle": -0.23787036970476622,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        4.372799995422364,
+        4.372799995422364,
+        4.372799995422364
+      ],
+      "running": true
+    },
+    {
+      "t": 12445.400000095367,
+      "clock": 8.94429999971385,
+      "angle": -0.07753576015876901,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        5.172799995422363,
+        5.172799995422363,
+        5.172799995422363
+      ],
+      "running": true
+    },
+    {
+      "t": 12494.099999904633,
+      "clock": 8.977599999904585,
+      "angle": 0.019775457927814544,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        5.705599998474121,
+        5.705599998474121,
+        5.705599998474121
+      ],
+      "running": true
+    },
+    {
+      "t": 12542.099999904633,
+      "clock": 9.027099999904586,
+      "angle": 0.14964985923027363,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        6.49759999847412,
+        6.49759999847412,
+        6.49759999847412
+      ],
+      "running": true
+    },
+    {
+      "t": 12595.199999809265,
+      "clock": 9.093799999713852,
+      "angle": 0.29600688762027216,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        7.564799995422364,
+        7.564799995422364,
+        7.564799995422364
+      ],
+      "running": true
+    },
+    {
+      "t": 12643.800000190735,
+      "clock": 9.127099999904587,
+      "angle": 0.3568283718582774,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        8.097599998474122,
+        8.097599998474122,
+        8.097599998474122
+      ],
+      "running": true
+    },
+    {
+      "t": 12693.5,
+      "clock": 9.177299999713853,
+      "angle": 0.43364433213807674,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        8.900799995422364,
+        8.900799995422364,
+        8.900799995422364
+      ],
+      "running": true
+    },
+    {
+      "t": 12741.199999809265,
+      "clock": 9.227199999809221,
+      "angle": 0.49330735601390047,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        9.699199996948243,
+        9.699199996948243,
+        9.699199996948243
+      ],
+      "running": true
+    },
+    {
+      "t": 12794.599999904633,
+      "clock": 9.293799999713855,
+      "angle": 0.5497851184404653,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        10.764799995422365,
+        10.764799995422365,
+        10.764799995422365
+      ],
+      "running": true
+    },
+    {
+      "t": 12844.599999904633,
+      "clock": 9.343799999713855,
+      "angle": 0.5774250125332562,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        11.564799995422366,
+        11.564799995422366,
+        11.564799995422366
+      ],
+      "running": true
+    },
+    {
+      "t": 12893.599999904633,
+      "clock": 9.37709999990459,
+      "angle": 0.5901209910100287,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        12.097599998474124,
+        12.097599998474124,
+        12.097599998474124
+      ],
+      "running": true
+    },
+    {
+      "t": 12942.099999904633,
+      "clock": 9.427199999809224,
+      "angle": 0.6025685224313292,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        12.898848414946155,
+        12.899199996948246,
+        12.899199996948246
+      ],
+      "running": true
+    },
+    {
+      "t": 12992.599999904633,
+      "clock": 9.477099999904592,
+      "angle": 0.6095021130832567,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        13.689089309557657,
+        13.697599998474127,
+        13.697599998474127
+      ],
+      "running": true
+    },
+    {
+      "t": 13041.300000190735,
+      "clock": 9.527199999809225,
+      "angle": 0.6138756409261431,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        14.460931457656681,
+        14.499199996948247,
+        14.499199996948247
+      ],
+      "running": true
+    },
+    {
+      "t": 13094.599999904633,
+      "clock": 9.593799999713859,
+      "angle": 0.6186069056246204,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        15.431296719430616,
+        15.561269588425128,
+        15.564799995422364
+      ],
+      "running": true
+    },
+    {
+      "t": 13144.5,
+      "clock": 9.64379999971386,
+      "angle": 0.6215867930306967,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        16.103135136319892,
+        16.339508106096126,
+        16.364799995422366
+      ],
+      "running": true
+    },
+    {
+      "t": 13193,
+      "clock": 9.677199999809227,
+      "angle": 0.6233423732114332,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        16.519285459666936,
+        16.841576441743985,
+        16.899199996948244
+      ],
+      "running": true
+    },
+    {
+      "t": 13242,
+      "clock": 9.727099999904596,
+      "angle": 0.6256583459079529,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        17.086235621928548,
+        17.55520910792529,
+        17.69667427642134
+      ],
+      "running": true
+    },
+    {
+      "t": 13294.699999809265,
+      "clock": 9.793799999713862,
+      "angle": 0.628259220874734,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        17.731899502622678,
+        18.423505366952345,
+        18.749877064800877
+      ],
+      "running": true
+    },
+    {
+      "t": 13342.300000190735,
+      "clock": 9.82719999980923,
+      "angle": 0.6293786282204007,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        18.004222354576868,
+        18.815447450852364,
+        19.265405433892262
+      ],
+      "running": true
+    },
+    {
+      "t": 13394.5,
+      "clock": 9.89369999980923,
+      "angle": 0.6312996071751229,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        18.442954711731776,
+        19.501044304876746,
+        20.252254177891018
+      ],
+      "running": true
+    },
+    {
+      "t": 13444.800000190735,
+      "clock": 9.943900000095333,
+      "angle": 0.6325159942548618,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        18.684706916955555,
+        19.930464339089063,
+        20.948941624923425
+      ],
+      "running": true
+    },
+    {
+      "t": 13494.5,
+      "clock": 9.993799999713865,
+      "angle": 0.6335565237992441,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        18.85380518168423,
+        20.280615665746016,
+        21.58785247932502
+      ],
+      "running": true
+    },
+    {
+      "t": 13544.599999904633,
+      "clock": 10.043799999713865,
+      "angle": 0.6344540486381044,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        18.960115933471506,
+        20.5561086999744,
+        22.164107701566948
+      ],
+      "running": true
+    },
+    {
+      "t": 13592.400000095367,
+      "clock": 10.077199999809233,
+      "angle": 0.63498281922709,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19.001524462898097,
+        20.6999572115144,
+        22.508951253364607
+      ],
+      "running": true
+    },
+    {
+      "t": 13641.800000190735,
+      "clock": 10.127199999809234,
+      "angle": 0.63568167248959,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19.03011635154942,
+        20.859715930119453,
+        22.95993015942414
+      ],
+      "running": true
+    },
+    {
+      "t": 13694.800000190735,
+      "clock": 10.193799999713868,
+      "angle": 0.6364637452841303,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19.034658348685138,
+        20.982780021649532,
+        23.43241439234787
+      ],
+      "running": true
+    },
+    {
+      "t": 13744.599999904633,
+      "clock": 10.243799999713868,
+      "angle": 0.6369563173593802,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19.028072353233764,
+        21.022875388297884,
+        23.68967371730107
+      ],
+      "running": true
+    },
+    {
+      "t": 13794.599999904633,
+      "clock": 10.293799999713869,
+      "angle": 0.637380278073512,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19.016831962562595,
+        21.034449842143186,
+        23.867182376933766
+      ],
+      "running": true
+    },
+    {
+      "t": 13841.599999904633,
+      "clock": 10.327099999904604,
+      "angle": 0.6376293405233261,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19.009194507126807,
+        21.03492076800302,
+        23.945172190025108
+      ],
+      "running": true
+    },
+    {
+      "t": 13894.599999904633,
+      "clock": 10.39379999971387,
+      "angle": 0.6380592622637383,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19.000110009084526,
+        21.026038850608927,
+        24.022689767652682
+      ],
+      "running": true
+    },
+    {
+      "t": 13944.699999809265,
+      "clock": 10.443799999713871,
+      "angle": 0.6383295915502505,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19,
+        21.014459241299505,
+        24.034781058319
+      ],
+      "running": true
+    },
+    {
+      "t": 13993,
+      "clock": 10.477199999809239,
+      "angle": 0.6384888541910824,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19,
+        21.007123270037486,
+        24.03445860660145
+      ],
+      "running": true
+    },
+    {
+      "t": 14042.599999904633,
+      "clock": 10.527099999904607,
+      "angle": 0.6386989544939848,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19,
+        21.000401498659595,
+        24.027419945893477
+      ],
+      "running": true
+    },
+    {
+      "t": 14094.900000095367,
+      "clock": 10.593799999713873,
+      "angle": 0.6389349005477328,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19,
+        21,
+        24.01213700838991
+      ],
+      "running": true
+    },
+    {
+      "t": 14144.800000190735,
+      "clock": 10.643900000095343,
+      "angle": 0.6390835353874256,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19,
+        21,
+        24.002650313119283
+      ],
+      "running": true
+    },
+    {
+      "t": 14192.5,
+      "clock": 10.677099999904609,
+      "angle": 0.6391704167588237,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "spinning",
+      "travel": [
+        19,
+        21,
+        24.000032606939037
+      ],
+      "running": true
+    },
+    {
+      "t": 14241.900000095367,
+      "clock": 10.72709999990461,
+      "angle": 0.7685840192205668,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14295.400000095367,
+      "clock": 10.793699999809244,
+      "angle": 0.9916002066237214,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14345.400000095367,
+      "clock": 10.843799999713877,
+      "angle": 1.1323225964377945,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14391.800000190735,
+      "clock": 10.877199999809244,
+      "angle": 1.2150500243924174,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14441.099999904633,
+      "clock": 10.927099999904613,
+      "angle": 1.3241845808761092,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14493.099999904633,
+      "clock": 10.977099999904613,
+      "angle": 1.4183202781690238,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14544.699999809265,
+      "clock": 11.04379999971388,
+      "angle": 1.5238085445492093,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14594.599999904633,
+      "clock": 11.09379999971388,
+      "angle": 1.5901382159880468,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14642.300000190735,
+      "clock": 11.127199999809248,
+      "angle": 1.6292158859481027,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14694.800000190735,
+      "clock": 11.193799999713882,
+      "angle": 1.6963669224428304,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14744.5,
+      "clock": 11.24369999980925,
+      "angle": 1.7385821747298704,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14793.400000095367,
+      "clock": 11.27719999980925,
+      "angle": 1.763577610706372,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14842.5,
+      "clock": 11.32719999980925,
+      "angle": 1.7965093637295042,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14894.800000190735,
+      "clock": 11.393799999713885,
+      "angle": 1.8333626339335851,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14942.300000190735,
+      "clock": 11.427199999809252,
+      "angle": 1.8492504289127003,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 14994.800000190735,
+      "clock": 11.493799999713886,
+      "angle": 1.8765520029715903,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15044.599999904633,
+      "clock": 11.543900000095356,
+      "angle": 1.8937791954273335,
+      "blink": 0.24540305658482142,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15095.199999809265,
+      "clock": 11.593900000095356,
+      "angle": 1.9085749062420188,
+      "blink": 0.8950840842352635,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15144.699999809265,
+      "clock": 11.643799999713888,
+      "angle": 1.921286081833365,
+      "blink": 1,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15194.699999809265,
+      "clock": 11.693799999713889,
+      "angle": 1.9322503027783078,
+      "blink": 0.9348408270740189,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15242.699999809265,
+      "clock": 11.727199999809256,
+      "angle": 1.9387400947343398,
+      "blink": 0.7368886351831623,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15294.900000095367,
+      "clock": 11.79379999971389,
+      "angle": 1.9533129858621627,
+      "blink": 0.22078464160877265,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15344.5,
+      "clock": 11.843799999713891,
+      "angle": 1.9710144556160254,
+      "blink": 0.0032941852846648523,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15392.900000095367,
+      "clock": 11.877099999904626,
+      "angle": 1.9884949260647597,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 15443.099999904633,
+      "clock": 11.926999999999994,
+      "angle": 2.0263063286429763,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15493.099999904633,
+      "clock": 11.977099999904627,
+      "angle": 2.0817350853452106,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15541.800000190735,
+      "clock": 12.027099999904628,
+      "angle": 2.1579659618227023,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15593.099999904633,
+      "clock": 12.077199999809261,
+      "angle": 2.2582519215535832,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15645,
+      "clock": 12.143799999713895,
+      "angle": 2.432553419759335,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15694.900000095367,
+      "clock": 12.193799999713896,
+      "angle": 2.5961791570831085,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15742.400000095367,
+      "clock": 12.227499999999997,
+      "angle": 2.722797435120807,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15794.699999809265,
+      "clock": 12.293799999713896,
+      "angle": 3.0103536782125255,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15844.5,
+      "clock": 12.343799999713896,
+      "angle": 3.2601067946036064,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15894.599999904633,
+      "clock": 12.393799999713897,
+      "angle": 3.5365072721348483,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15942.900000095367,
+      "clock": 12.427099999904632,
+      "angle": 3.7342790646357127,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 15994.800000190735,
+      "clock": 12.493799999713898,
+      "angle": 4.159419010502557,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16044.599999904633,
+      "clock": 12.5437999997139,
+      "angle": 4.499280907968194,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16092.400000095367,
+      "clock": 12.577099999904634,
+      "angle": 4.733378595021579,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16142.300000190735,
+      "clock": 12.627099999904635,
+      "angle": 5.093018656936697,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16195.599999904633,
+      "clock": 12.693799999713901,
+      "angle": 5.579921659493025,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16245,
+      "clock": 12.744000000000003,
+      "angle": 5.944499340303775,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16295.300000190735,
+      "clock": 12.793799999713903,
+      "angle": 6.298092722714231,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16342.5,
+      "clock": 12.827400000095372,
+      "angle": 6.529105099836875,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16395.300000190735,
+      "clock": 12.893799999713902,
+      "angle": 6.959654665837881,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16444.599999904633,
+      "clock": 12.943799999713903,
+      "angle": 7.2540830405094185,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16495.400000095367,
+      "clock": 12.993799999713904,
+      "angle": 7.516432833476284,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16541.900000095367,
+      "clock": 13.027199999809271,
+      "angle": 7.6710469707807,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16595.199999809265,
+      "clock": 13.093799999713905,
+      "angle": 7.9230991615257205,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16644.599999904633,
+      "clock": 13.143799999713906,
+      "angle": 8.05760784578156,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16694.900000095367,
+      "clock": 13.193799999713907,
+      "angle": 8.140615582294574,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16741.099999904633,
+      "clock": 13.227199999809274,
+      "angle": 8.165661679302794,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16793,
+      "clock": 13.277199999809275,
+      "angle": 8.155581032457345,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16843.5,
+      "clock": 13.327099999904643,
+      "angle": 8.086829443665838,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16895,
+      "clock": 13.39379999971391,
+      "angle": 7.901274412739042,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16944.599999904633,
+      "clock": 13.44379999971391,
+      "angle": 7.691568927072507,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 16995.199999809265,
+      "clock": 13.49379999971391,
+      "angle": 7.422142628212968,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17043.300000190735,
+      "clock": 13.527099999904646,
+      "angle": 7.210362759030073,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17095,
+      "clock": 13.593799999713912,
+      "angle": 6.711712579899352,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17144.400000095367,
+      "clock": 13.64369999980928,
+      "angle": 6.277590680916932,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17195,
+      "clock": 13.693799999713914,
+      "angle": 5.7937570064754835,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17243.400000095367,
+      "clock": 13.727099999904649,
+      "angle": 5.447990298879157,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17295.099999904633,
+      "clock": 13.793799999713915,
+      "angle": 4.704788416142801,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17342.400000095367,
+      "clock": 13.82709999990465,
+      "angle": 4.312087612362666,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17394.900000095367,
+      "clock": 13.893799999713917,
+      "angle": 3.4919402218803195,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17443.800000190735,
+      "clock": 13.927199999809284,
+      "angle": 3.0686040616193573,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17491.699999809265,
+      "clock": 13.977199999809285,
+      "angle": 2.3814606592165974,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17544.5,
+      "clock": 14.043699999809286,
+      "angle": 1.4064797833793072,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17593,
+      "clock": 14.077199999809286,
+      "angle": 0.9486183106525352,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17644.5,
+      "clock": 14.14379999971392,
+      "angle": 0.10179560727916903,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17695.099999904633,
+      "clock": 14.19379999971392,
+      "angle": -0.4796236210640583,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17742.300000190735,
+      "clock": 14.227099999904656,
+      "angle": -0.8411875048866326,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17794.900000095367,
+      "clock": 14.293900000095391,
+      "angle": -1.5043320397352218,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17844.599999904633,
+      "clock": 14.343799999713923,
+      "angle": -1.9449139073518629,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17893.599999904633,
+      "clock": 14.377099999904658,
+      "angle": -2.212444513699322,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17941.599999904633,
+      "clock": 14.427199999809291,
+      "angle": -2.5743946073489243,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 17992.900000095367,
+      "clock": 14.477199999809292,
+      "angle": -2.8863726477890177,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18041,
+      "clock": 14.52709999990466,
+      "angle": -3.148075948489332,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18095.199999809265,
+      "clock": 14.593799999713926,
+      "angle": -3.419903268922175,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18144.5,
+      "clock": 14.643699999809295,
+      "angle": -3.565036317886767,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18194.900000095367,
+      "clock": 14.693799999713928,
+      "angle": -3.661227994319785,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18241.5,
+      "clock": 14.727099999904663,
+      "angle": -3.6982177823446465,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18291.699999809265,
+      "clock": 14.777099999904664,
+      "angle": -3.7144465700976466,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18342.400000095367,
+      "clock": 14.827099999904664,
+      "angle": -3.685216328604506,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18392.900000095367,
+      "clock": 14.877099999904665,
+      "angle": -3.6129388323225564,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18442.5,
+      "clock": 14.927099999904666,
+      "angle": -3.5005095541489486,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18494.900000095367,
+      "clock": 14.9936999998093,
+      "angle": -3.294222666137207,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18542.400000095367,
+      "clock": 15.027099999904667,
+      "angle": -3.168979354455674,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18594.900000095367,
+      "clock": 15.093799999713934,
+      "angle": -2.881458375372006,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18644.599999904633,
+      "clock": 15.143799999713934,
+      "angle": -2.638405333516223,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18694.900000095367,
+      "clock": 15.193799999713935,
+      "angle": -2.3768984958157153,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18744.400000095367,
+      "clock": 15.243799999713936,
+      "angle": -2.10166475424572,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18795.300000190735,
+      "clock": 15.293699999809304,
+      "angle": -1.8180205655907462,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18845.400000095367,
+      "clock": 15.343799999713937,
+      "angle": -1.5289167103266499,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18895,
+      "clock": 15.393799999713938,
+      "angle": -1.2405984015926093,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18942.5,
+      "clock": 15.42700000000004,
+      "angle": -1.05138887219987,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 18995.400000095367,
+      "clock": 15.49379999971394,
+      "angle": -0.6814557695769714,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19044.5,
+      "clock": 15.54379999971394,
+      "angle": -0.4182283120176622,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19093.5,
+      "clock": 15.577099999904675,
+      "angle": -0.25121667086797395,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19141.099999904633,
+      "clock": 15.627099999904676,
+      "angle": -0.014961273391203456,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19194.699999809265,
+      "clock": 15.693799999713942,
+      "angle": 0.26957879328354917,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19244.5,
+      "clock": 15.743799999713943,
+      "angle": 0.45772565399230103,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19295,
+      "clock": 15.793799999713944,
+      "angle": 0.6231364466668061,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19342.199999809265,
+      "clock": 15.827099999904679,
+      "angle": 0.7204517559560555,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19394.900000095367,
+      "clock": 15.893799999713945,
+      "angle": 0.8846271798912085,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19443.699999809265,
+      "clock": 15.92709999990468,
+      "angle": 0.9516175044392976,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19491.699999809265,
+      "clock": 15.97709999990468,
+      "angle": 1.1396415434391607,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19544.800000190735,
+      "clock": 16.043799999713947,
+      "angle": 1.3437421896280064,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19597.099999904633,
+      "clock": 16.094199999809316,
+      "angle": 1.4647865404174507,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19641.800000190735,
+      "clock": 16.12829999971395,
+      "angle": 1.5320795503278775,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19691.300000190735,
+      "clock": 16.177199999809314,
+      "angle": 1.610589843686189,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19742,
+      "clock": 16.22709999990468,
+      "angle": 1.6724913451017727,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19794.699999809265,
+      "clock": 16.293799999713947,
+      "angle": 1.7344351211147713,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19842.400000095367,
+      "clock": 16.293799999713947,
+      "angle": 1.7344351211147713,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19894.900000095367,
+      "clock": 16.293799999713947,
+      "angle": 1.7344351211147713,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19945.099999904633,
+      "clock": 16.293799999713947,
+      "angle": 1.7344351211147713,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 19991.699999809265,
+      "clock": 16.477199999809315,
+      "angle": 1.8468268382136548,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20042.5,
+      "clock": 16.52709999990468,
+      "angle": 1.8681230807720655,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20094.800000190735,
+      "clock": 16.593799999713948,
+      "angle": 1.8920391071742322,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20144.599999904633,
+      "clock": 16.64379999971395,
+      "angle": 1.907077198402891,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20194.599999904633,
+      "clock": 16.693699999809315,
+      "angle": 1.9199966060781035,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20246.300000190735,
+      "clock": 16.74500000000005,
+      "angle": 1.9314084700339942,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20291.699999809265,
+      "clock": 16.777099999904685,
+      "angle": 1.9377057542781955,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20344.699999809265,
+      "clock": 16.84379999971395,
+      "angle": 1.9490028852250498,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20392.800000190735,
+      "clock": 16.87729999971395,
+      "angle": 1.9538789686215297,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20444.5,
+      "clock": 16.943799999713953,
+      "angle": 1.96222040817252,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20492.300000190735,
+      "clock": 16.977099999904688,
+      "angle": 1.965812193086173,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20544.699999809265,
+      "clock": 17.043900000095423,
+      "angle": 1.9720205851199777,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20593.400000095367,
+      "clock": 17.07709999990469,
+      "angle": 1.9746730497130884,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20642.599999904633,
+      "clock": 17.127099999904686,
+      "angle": 1.9782008918695344,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "presenting",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false,
+      "modal": "Treasure celebration"
+    },
+    {
+      "t": 20691.5,
+      "clock": 17.17719999980932,
+      "angle": 1.981242961703428,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 20743.5,
+      "clock": 17.227099999904688,
+      "angle": 1.98385082350234,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 20794.5,
+      "clock": 17.293799999713954,
+      "angle": 1.9867794946735533,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 20844.400000095367,
+      "clock": 17.34369999980932,
+      "angle": 1.9886175914059918,
+      "blink": 0.24290840406092412,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 20891.800000190735,
+      "clock": 17.377099999904686,
+      "angle": 1.9897028304395832,
+      "blink": 0.7031946671380462,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 20943.599999904633,
+      "clock": 17.427099999904684,
+      "angle": 1.9911371440247478,
+      "blink": 1,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 20994.5,
+      "clock": 17.49379999971395,
+      "angle": 1.992744432841803,
+      "blink": 0.9348408270737502,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21044.400000095367,
+      "clock": 17.54390000009542,
+      "angle": 1.9937569486769613,
+      "blink": 0.6094757006625009,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21092.199999809265,
+      "clock": 17.577099999904686,
+      "angle": 1.9943487935264101,
+      "blink": 0.34345947156905465,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21142.800000190735,
+      "clock": 17.627099999904683,
+      "angle": 1.995135961511756,
+      "blink": 0.04217394020064602,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21194.400000095367,
+      "clock": 17.693699999809315,
+      "angle": 1.9960168655571493,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21243.599999904633,
+      "clock": 17.72709999990468,
+      "angle": 1.9963966316618118,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21294.599999904633,
+      "clock": 17.793699999809313,
+      "angle": 1.9970492214293112,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21342.400000095367,
+      "clock": 17.82709999990468,
+      "angle": 1.9973305590792425,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21394.5,
+      "clock": 17.893799999713945,
+      "angle": 1.9978146651678108,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21444.699999809265,
+      "clock": 17.943900000095415,
+      "angle": 1.99811962907683,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21494.599999904633,
+      "clock": 17.993799999713943,
+      "angle": 1.998381064138024,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    },
+    {
+      "t": 21541.800000190735,
+      "clock": 18.027099999904678,
+      "angle": 1.998534979760823,
+      "blink": 0,
+      "body": {
+        "position": [
+          0,
+          460.38671875
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "angle": 0
+      },
+      "state": "idle",
+      "travel": [
+        19,
+        21,
+        24
+      ],
+      "running": false
+    }
+  ]
+}

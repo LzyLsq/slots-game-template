@@ -1,0 +1,42 @@
+[
+  {
+    "name": "award-interactions",
+    "script": "award-interactions.cjs",
+    "returncode": 0,
+    "seconds": 25.7,
+    "output": "/tmp/f43-interactions-final",
+    "log": "/tmp/f43-award-interactions-qa-final.log"
+  },
+  {
+    "name": "award-copy",
+    "script": "award-copy.cjs",
+    "returncode": 0,
+    "seconds": 48.3,
+    "output": "/tmp/f43-copy-final",
+    "log": "/tmp/f43-award-copy-qa-final.log"
+  },
+  {
+    "name": "awards",
+    "script": "awards.cjs",
+    "returncode": 0,
+    "seconds": 117.0,
+    "output": "/tmp/f43-awards-current",
+    "log": "/tmp/f43-awards-qa-final.log"
+  },
+  {
+    "name": "motion",
+    "script": "direct-motion.cjs",
+    "returncode": 0,
+    "seconds": 96.8,
+    "output": "/tmp/f43-motion-fixed",
+    "log": "/tmp/f43-motion-qa-final.log"
+  },
+  {
+    "name": "phone",
+    "script": "phone-layout.cjs",
+    "returncode": 0,
+    "seconds": 135.5,
+    "output": "/tmp/f43-phone-final",
+    "log": "/tmp/f43-phone-qa-final.log"
+  }
+]

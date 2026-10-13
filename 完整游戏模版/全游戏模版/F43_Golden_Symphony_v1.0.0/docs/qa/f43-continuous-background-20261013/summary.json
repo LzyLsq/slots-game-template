@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-13",
+  "project": "F43_Golden_Symphony_v1.0.0",
+  "build": 10,
+  "request": "柜机背景要在一个图层上",
+  "implementation": {
+    "runtimeRoomBackgroundSpritesPerMode": 1,
+    "roomSize": [
+      4096,
+      3072
+    ],
+    "coordinatePlane": "Cabinet-coordinate-plane",
+    "artProvider": "Existing local CC Switch image provider",
+    "scope": "One opaque cabinet/architecture/floor/shadow environment; interactive reels, controls, guardian and effects remain above it. No secondary stretched, blurred or dark room layer."
+  },
+  "checks": {
+    "sourceCommands": [
+      {
+        "command": "npm run test:layout",
+        "exitCode": 0,
+        "checkedCabinetViewportCombinations": 48,
+        "includesWideViewports": [
+          "1366x768",
+          "2560x1080"
+        ]
+      },
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0
+      }
+    ],
+    "actualLayouts": {
+      "cases": 16,
+      "sizes": [
+        "320x568",
+        "390x844",
+        "794x883",
+        "1366x768"
+      ],
+      "modes": 4,
+      "pageErrors": [],
+      "oneBackgroundAndViewportCoverage": true
+    },
+    "registeredCentralPixels": [
+      {
+        "mode": "golden-strings",
+        "centralPixelsUnchanged": true,
+        "opaque": true,
+        "dimensions": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "mode": "sapphire-harp",
+        "centralPixelsUnchanged": true,
+        "opaque": true,
+        "dimensions": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "mode": "ruby-brass",
+        "centralPixelsUnchanged": true,
+        "opaque": true,
+        "dimensions": [
+          4096,
+          3072
+        ]
+      },
+      {
+        "mode": "pearl-rhythm",
+        "centralPixelsUnchanged": true,
+        "opaque": true,
+        "dimensions": [
+          4096,
+          3072
+        ]
+      }
+    ],
+    "motionAndSettlement": {
+      "cases": 4,
+      "pageErrors": [],
+      "sameBackgroundBeforeDuringAfter": true,
+      "chargedBet": 80,
+      "fixtureSuperWin": 2000,
+      "balancePerFreshContext": {
+        "before": 27000,
+        "after": 28920
+      },
+      "onePaidRoundPerContext": true,
+      "idleAndInputRestored": true
+    },
+    "gallery": {
+      "count": 47,
+      "hashesVerified": true
+    }
+  },
+  "visualReview": {
+    "actualRoomCaptures": "Four modes in phone/tablet/wide viewports reviewed; no visible join or black side gutter observed.",
+    "recordings": "All four complete sequential source-frame sheets reviewed through idle, spin, award, exit.",
+    "cadence": [
+      {
+        "video": "direct-canvas/golden-strings-spin-award.webm",
+        "decodedFrames": 500,
+        "endSeconds": 16.841,
+        "maxSourceGapSeconds": 0.216,
+        "gapsOver100ms": 1,
+        "method": "sequential original recorded frames, no interpolation",
+        "sequenceTimes": [
+          0.0,
+          0.608,
+          1.241,
+          1.808,
+          2.41,
+          3.008,
+          3.608,
+          4.208,
+          4.808,
+          5.408,
+          6.008,
+          6.608,
+          7.208,
+          7.808,
+          8.408,
+          9.008,
+          9.609,
+          10.241,
+          10.808,
+          11.409,
+          12.009,
+          12.609,
+          13.208,
+          13.809,
+          14.409,
+          15.008,
+          15.641,
+          16.208,
+          16.808
+        ]
+      },
+      {
+        "video": "direct-canvas/pearl-rhythm-spin-award.webm",
+        "decodedFrames": 494,
+        "endSeconds": 16.599,
+        "maxSourceGapSeconds": 0.184,
+        "gapsOver100ms": 1,
+        "method": "sequential original recorded frames, no interpolation",
+        "sequenceTimes": [
+          0.0,
+          0.616,
+          1.215,
+          1.816,
+          2.449,
+          3.032,
+          3.615,
+          4.249,
+          4.815,
+          5.416,
+          6.016,
+          6.632,
+          7.215,
+          7.848,
+          8.448,
+          9.015,
+          9.616,
+          10.215,
+          10.848,
+          11.449,
+          12.015,
+          12.615,
+          13.215,
+          13.815,
+          14.448,
+          15.032,
+          15.615,
+          16.248
+        ]
+      },
+      {
+        "video": "direct-canvas/ruby-brass-spin-award.webm",
+        "decodedFrames": 498,
+        "endSeconds": 16.699,
+        "maxSourceGapSeconds": 0.183,
+        "gapsOver100ms": 1,
+        "method": "sequential original recorded frames, no interpolation",
+        "sequenceTimes": [
+          0.0,
+          0.632,
+          1.2,
+          1.801,
+          2.434,
+          3.0,
+          3.632,
+          4.232,
+          4.832,
+          5.432,
+          6.0,
+          6.6,
+          7.232,
+          7.8,
+          8.432,
+          9.032,
+          9.6,
+          10.233,
+          10.832,
+          11.4,
+          12.0,
+          12.6,
+          13.2,
+          13.801,
+          14.401,
+          15.116,
+          15.6,
+          16.232
+        ]
+      },
+      {
+        "video": "direct-canvas/sapphire-harp-spin-award.webm",
+        "decodedFrames": 500,
+        "endSeconds": 16.766,
+        "maxSourceGapSeconds": 0.167,
+        "gapsOver100ms": 1,
+        "method": "sequential original recorded frames, no interpolation",
+        "sequenceTimes": [
+          0.0,
+          0.633,
+          1.233,
+          1.833,
+          2.433,
+          3.0,
+          3.6,
+          4.233,
+          4.833,
+          5.433,
+          6.033,
+          6.633,
+          7.233,
+          7.833,
+          8.435,
+          9.033,
+          9.6,
+          10.232,
+          10.8,
+          11.4,
+          12.033,
+          12.633,
+          13.233,
+          13.833,
+          14.4,
+          15.032,
+          15.633,
+          16.232
+        ]
+      }
+    ],
+    "limit": "Each recording contains one 167–216 ms source frame gap. No interpolation; these browser recordings do not establish device smoothness or performance, and no root cause is claimed."
+  },
+  "creatorCli": {
+    "exitCode": 36,
+    "finishedLogSeconds": 23,
+    "note": "Creator reported Finished and emitted the artifact. The process exited 36 and logged a script-worker SIGTERM. No zero-exit result or root cause is claimed. Global Creator settings were not changed."
+  },
+  "git": {
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "readyForSubmission": false,
+  "evidence": {
+    "layouts": "after/layout-capture.json",
+    "motion": "motion/motion-audit.json",
+    "source": "source-verification.json",
+    "build": "build10-artifact-source.json",
+    "art": "../../continuous-room-art-20261013.json"
+  },
+  "scopeLimit": "Math, legal text, audio and guardian animation implementation were unchanged; prior full-suite results retain their own build labels. Native device/Apple/StoreKit/release are not verified by this follow-up."
+}

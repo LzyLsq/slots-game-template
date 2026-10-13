@@ -1,0 +1,1113 @@
+{
+  "build": 11,
+  "createdAt": "2026-10-13T04:42:25.946Z",
+  "creatorVersion": "3.8.8",
+  "cliExitCode": 36,
+  "logFinishedInSeconds": 15,
+  "note": "Creator emitted a build and reported Finished in 15s, then exited 36 with script-worker SIGTERM. Browser artifact was validated separately. No zero-exit or root cause is claimed.",
+  "source": [
+    {
+      "path": "assets/scripts/LocalCoinStore.ts",
+      "sha256": "aae60255c00707df92d9e16d79672e15b091578d6c14706d034a6e963df04a6b",
+      "bytes": 5179
+    },
+    {
+      "path": "assets/scripts/audio/AudioManager.ts",
+      "sha256": "8152a8e98edcd3876a07baf19942e95f2692e64cc52bb294249423d621278e30",
+      "bytes": 13994
+    },
+    {
+      "path": "assets/scripts/audio/AudioPalette.ts",
+      "sha256": "d9f366f25284c97d4cb5ebd9d5c58aa927732f965a39d65fbc0c39f6e915b218",
+      "bytes": 2479
+    },
+    {
+      "path": "assets/scripts/core/GameBootstrap.ts",
+      "sha256": "644f2a2c13bfcbff432e85970b8d80686e7b08887d4e35d8f84e68df2fcca68a",
+      "bytes": 2667
+    },
+    {
+      "path": "assets/scripts/core/GameStateMachine.ts",
+      "sha256": "2e677c24e0f9707607cb5d9e092c7ffe38f24cf4c30d14187720d26fd4baebb0",
+      "bytes": 1011
+    },
+    {
+      "path": "assets/scripts/core/ReleaseConfig.ts",
+      "sha256": "cda46a23d277f2085663a6c75d1caa1f132802d5e416e56227830d298338fc6d",
+      "bytes": 1096
+    },
+    {
+      "path": "assets/scripts/core/SceneRouter.ts",
+      "sha256": "8763652b42e1ced85cfa4b57779e33155d092d3336f7061fe35e4d6adc40c62d",
+      "bytes": 1032
+    },
+    {
+      "path": "assets/scripts/core/SecureRNG.ts",
+      "sha256": "1521eb182b499a688baea2dae61c1741233e826462f58e6c4ecada594a7e353d",
+      "bytes": 2493
+    },
+    {
+      "path": "assets/scripts/core/SeededRNG.ts",
+      "sha256": "af9d0adede0cb24deddaa5c95f6abb88318059093199374f3407b8ce63c7066c",
+      "bytes": 1151
+    },
+    {
+      "path": "assets/scripts/math/CabinetProfiles.ts",
+      "sha256": "7c508fd0bd7f11daa0e96dc7d74186f3e9ebbdcee0de84eaa3000f228b342592",
+      "bytes": 2100
+    },
+    {
+      "path": "assets/scripts/math/CoreGame.ts",
+      "sha256": "75dd8eea0ddba949be5f9f1385dea1eadeb90b68e8c083c8127f2e3b92d2254a",
+      "bytes": 4201
+    },
+    {
+      "path": "assets/scripts/math/EconomyProfile.ts",
+      "sha256": "978567ce1eb82d6a40912b9fe9deb995dd98a576a1395ffec3a4e90ec9db6134",
+      "bytes": 351
+    },
+    {
+      "path": "assets/scripts/math/Evaluators.ts",
+      "sha256": "e830e231f055d4c455e594153002b8c0f3e8a6ae52ecb4836127ca336a4eae57",
+      "bytes": 7318
+    },
+    {
+      "path": "assets/scripts/math/FeatureControllers.ts",
+      "sha256": "4f92c665b576a1bdc8ddb770996a7e581cf2c9b69f24c686e7c310858d1f0661",
+      "bytes": 3965
+    },
+    {
+      "path": "assets/scripts/math/GameConfigs.ts",
+      "sha256": "f78c34197006f6e93b914295516dcc256795900e3b55d6aafef7ab0fac5a38b6",
+      "bytes": 6227
+    },
+    {
+      "path": "assets/scripts/math/IndependentCore.ts",
+      "sha256": "09052059b18413d245bae7b8d781e3b66e81905df233436d1d5a4550aeb96eef",
+      "bytes": 6974
+    },
+    {
+      "path": "assets/scripts/math/NewcomerGuarantee.ts",
+      "sha256": "860d7a56041b1ac124a2c8724d2165c8fb44131c6c2b8acae3cb607c8c3dccb1",
+      "bytes": 495
+    },
+    {
+      "path": "assets/scripts/math/PaytableDisplay.ts",
+      "sha256": "cf3d4b33e3e03ae1ce47fcb7c45d4493f6418054ddd4579d20a47f63bff56dd0",
+      "bytes": 3162
+    },
+    {
+      "path": "assets/scripts/math/PrimaryRuleText.ts",
+      "sha256": "17dac7e20158710ed0799aee98c1036568386bf75d831083f5a4508506091823",
+      "bytes": 23512
+    },
+    {
+      "path": "assets/scripts/math/PrimaryRuleVariants.ts",
+      "sha256": "4dbf4ff289653926e041632746f381ac8a7703c7bb1626f049aa89339aa45bd5",
+      "bytes": 1224
+    },
+    {
+      "path": "assets/scripts/math/ResultGenerator.ts",
+      "sha256": "0290b2dcbae928c6e20fc65401390d3cab3bed9dd8d251d38b652b8bd5255293",
+      "bytes": 5651
+    },
+    {
+      "path": "assets/scripts/math/RoundAwards.ts",
+      "sha256": "3058d0a46f0196dc58cb9c5f26bf5e3ee99681b3aac3ac55df7cd35d7c5fcf1b",
+      "bytes": 730
+    },
+    {
+      "path": "assets/scripts/math/RuleGeometry.ts",
+      "sha256": "6f4a92d7dc74bf0aa8a4ae49537d4591fb63c39fddd668e55815db48f07eac21",
+      "bytes": 1210
+    },
+    {
+      "path": "assets/scripts/math/SignatureFeature.ts",
+      "sha256": "a8e5e10e602da87e68074bbf6a09e93d851bccc2ea1f29b3e91044b2ddd298ef",
+      "bytes": 13458
+    },
+    {
+      "path": "assets/scripts/math/paylines.ts",
+      "sha256": "3b6968da15e1ef52045becdee55a49631eafb21deed668fc969ad9eeda0453c2",
+      "bytes": 539
+    },
+    {
+      "path": "assets/scripts/math/types.ts",
+      "sha256": "fd7477311ba6150303e871469ecd09fa3107235ab752044ca9ea862c3db4d7c5",
+      "bytes": 4031
+    },
+    {
+      "path": "assets/scripts/reels/CoreReelGuide.ts",
+      "sha256": "c39cfbe25cae1e01e6b556d2445bf25cc56d571f3f6f233e3c88bd8024fb9d19",
+      "bytes": 5262
+    },
+    {
+      "path": "assets/scripts/reels/ReelMotion.ts",
+      "sha256": "a4d59e75247ae3a0fdc9d2ca2af4552d4bdfb7dc8178e3635545ab727eb1a9d5",
+      "bytes": 1335
+    },
+    {
+      "path": "assets/scripts/reels/ReelStripConfig.ts",
+      "sha256": "fc64d15491a0707a2884bed4619a2abfeaceed4a14ef331732f280c184bfdd1b",
+      "bytes": 123
+    },
+    {
+      "path": "assets/scripts/reels/SalonReels.ts",
+      "sha256": "2b18ad1223d110e2f533be426b0cc617e40d660b63292560b2513ce3968081ff",
+      "bytes": 41177
+    },
+    {
+      "path": "assets/scripts/services/AchievementService.ts",
+      "sha256": "df2accca5314b98bb66a2665e307372c5ffef16f2a949e1eafb7cb5c6cc6238c",
+      "bytes": 2149
+    },
+    {
+      "path": "assets/scripts/services/AppleSignInService.ts",
+      "sha256": "bbe02573b2a95f079d498f700d11fc88625ed4475064bb583b3354174d8586f7",
+      "bytes": 2319
+    },
+    {
+      "path": "assets/scripts/services/AuthService.ts",
+      "sha256": "1d6ab5c522e0134b80b80d010db81a72dea9f1ab15ed3291c53d9eef3036ec5b",
+      "bytes": 802
+    },
+    {
+      "path": "assets/scripts/services/CredentialService.ts",
+      "sha256": "1b599f72a9bcc73a508ff2ac3f48ae9447f5d1680d663b26da05845cafa5117e",
+      "bytes": 2034
+    },
+    {
+      "path": "assets/scripts/services/EconomyService.ts",
+      "sha256": "cf7421e436b54e5eb11f977ce8400726a83629cd3630b991b78d330ef4f9ef36",
+      "bytes": 6309
+    },
+    {
+      "path": "assets/scripts/services/ExpeditionService.ts",
+      "sha256": "483d1ebbc092f4ecdd6fd87211187cc1a37dacaa51f474a31af840efda80f7f1",
+      "bytes": 2511
+    },
+    {
+      "path": "assets/scripts/services/LocalAuthService.ts",
+      "sha256": "2c1c4f76e62719db4c462ed664d37b2af9ed15319fb308e66a9180c66d6e4102",
+      "bytes": 5658
+    },
+    {
+      "path": "assets/scripts/services/MailService.ts",
+      "sha256": "0411997051b07c87eb0f31875dc7e9c26d093b875611630e95773f4cec8fa2ac",
+      "bytes": 2376
+    },
+    {
+      "path": "assets/scripts/services/PlayerProfileService.ts",
+      "sha256": "84ac15807605d666728e7485a0120d53e48384c7e48265cb7e5b11c4ecc1bbab",
+      "bytes": 3679
+    },
+    {
+      "path": "assets/scripts/services/ProductionApiClient.ts",
+      "sha256": "587ec229475bfcf196924d61df915451daab074a0ad2fe6ee512164ccf7a7d69",
+      "bytes": 5213
+    },
+    {
+      "path": "assets/scripts/services/RankService.ts",
+      "sha256": "de13c0f4dfd03cca9629a3658ca41262c5832ba14c187ab6dd2f012019c86049",
+      "bytes": 3134
+    },
+    {
+      "path": "assets/scripts/services/RedDotManager.ts",
+      "sha256": "2c3431cea644ebbe52a97af878cafac26f5cff22934835112c42b7be4df92ca2",
+      "bytes": 810
+    },
+    {
+      "path": "assets/scripts/services/RemoteAuthService.ts",
+      "sha256": "e5aa057896e83cbce08e5e9d54d35cffbbd0afdd675f7d90cdd3b5152aabe292",
+      "bytes": 5112
+    },
+    {
+      "path": "assets/scripts/services/RemoteSpinJournal.ts",
+      "sha256": "0b8064779f3033264b2bcf44273d26af2f90b68242348048da93f98ef6bc325c",
+      "bytes": 2886
+    },
+    {
+      "path": "assets/scripts/services/RewardService.ts",
+      "sha256": "034ee6f58219520c3cc42eda18b065c4c897c56aca7738990af54e7e181ad5ff",
+      "bytes": 3509
+    },
+    {
+      "path": "assets/scripts/services/SaveService.ts",
+      "sha256": "edf89f428d3d3064873a6306653dbb25a8205d86c85c22ac1cac593434365521",
+      "bytes": 12941
+    },
+    {
+      "path": "assets/scripts/services/StoreService.ts",
+      "sha256": "c04f87e2f6704cb3fe5ba9fad293c8fe7df903865f89d5a01d79ef3b9c22e496",
+      "bytes": 12948
+    },
+    {
+      "path": "assets/scripts/ui/AureliaApp.ts",
+      "sha256": "2519a0fb9f686e04189e9f952bc16c8ee6d7b249c7f1a1ff0dffec4a5af7522a",
+      "bytes": 106517
+    },
+    {
+      "path": "assets/scripts/ui/CabinetGeometry.ts",
+      "sha256": "0748e4fcd02f2b4ae85a73a2d6f203cb3585a9153a569a151214e2c7a13d52fc",
+      "bytes": 2671
+    },
+    {
+      "path": "assets/scripts/ui/CabinetToolText.ts",
+      "sha256": "9feda7ecd8d6a329aceabc73d9d1254838e41804d745af0224d7b41d05bd2d82",
+      "bytes": 558
+    },
+    {
+      "path": "assets/scripts/ui/CabinetTranslations.ts",
+      "sha256": "4ec398752f50ff3b90d56228ab68c79c13d70a49df505487b115890b58ca8b9f",
+      "bytes": 45709
+    },
+    {
+      "path": "assets/scripts/ui/ClockworkLocale.ts",
+      "sha256": "66cbf518c989e2bce7a75d2df798c051f2607276bb24eacd64fececceb52d8b8",
+      "bytes": 3064
+    },
+    {
+      "path": "assets/scripts/ui/FestivalLocale.ts",
+      "sha256": "684c3cc7cb120d095df865bc5eec448800de6df699d23119694e0766515a439f",
+      "bytes": 16288
+    },
+    {
+      "path": "assets/scripts/ui/Language.ts",
+      "sha256": "2ae869a053f1d2c996270e6b6ab107b7c61970f4916273d65e9bd2d74c0c7fe6",
+      "bytes": 82953
+    },
+    {
+      "path": "assets/scripts/ui/LegalContent.ts",
+      "sha256": "7dc57becdb96dbcb421572f8e820891662e67828216491a8a571b7db071b382d",
+      "bytes": 3258
+    },
+    {
+      "path": "assets/scripts/ui/PrimaryTranslations.ts",
+      "sha256": "d875b242c2764e0f7fb283d739065ebce2b49742f4aec4f4a1c86b84b1dd7f5e",
+      "bytes": 34746
+    },
+    {
+      "path": "assets/scripts/ui/RuleHelp.ts",
+      "sha256": "ca2aa82d4c60507b5d916a39fc0af41f5b66a9474cc29f8e496675a1670b4be9",
+      "bytes": 4487
+    },
+    {
+      "path": "assets/scripts/ui/RulePages.ts",
+      "sha256": "190023ee3842f535bf2804003ba2ddd3ff7ecf5df1aa0e062e43d6bc2668aa2c",
+      "bytes": 5741
+    },
+    {
+      "path": "assets/scripts/ui/RuleText.ts",
+      "sha256": "c37ae80f5791f7a63ebee3b58d1de9518750304ee9645f74433ca4554471aed0",
+      "bytes": 2061
+    },
+    {
+      "path": "assets/scripts/ui/SafeAreaAdapter.ts",
+      "sha256": "f17f8cf2f0df60e861fa6982ba08719b09a5d2ad9d808d0586aa6e37e431646e",
+      "bytes": 5736
+    },
+    {
+      "path": "assets/scripts/ui/SalonArt.ts",
+      "sha256": "d65ad5e2d5384cd654b73c634a7c05ac85eb1c6126fbf3f89fe374d35d514547",
+      "bytes": 16712
+    },
+    {
+      "path": "assets/scripts/ui/SymbolCrop.ts",
+      "sha256": "7921af4d263b233507ccf97d5a1909c3f75f257db59d19c30be7b413d6d202f2",
+      "bytes": 2755
+    },
+    {
+      "path": "assets/scripts/ui/SymphonyLocale.ts",
+      "sha256": "159b74e329ff8e1a66995ee070f2a0a850283a5f82fe751b28c62bd28ae56380",
+      "bytes": 9535
+    },
+    {
+      "path": "assets/scripts/ui/TextFit.ts",
+      "sha256": "5ec0b9ae649a0671e1e96c1f7231b9642304572ba0da5320a9a85efedb3eb5d8",
+      "bytes": 2696
+    },
+    {
+      "path": "assets/scripts/ui/UiLocaleAdditions.ts",
+      "sha256": "fabc4bff872f4dfc5fac2e90ed237cfad39eb1a56483bc615f30c85fb9f031c8",
+      "bytes": 98121
+    },
+    {
+      "path": "assets/scripts/vfx/AwardChoreography.ts",
+      "sha256": "f2a5e5b1500b67bc8f82462e5d63906ee859c965b1860c29fe283aa6d2bb23dd",
+      "bytes": 5009
+    },
+    {
+      "path": "assets/scripts/vfx/AwardDigits.ts",
+      "sha256": "3daf0e0917369fbe11a63c0d55c8c81b62a110ea1870be57ddbc3cdf434c4764",
+      "bytes": 2151
+    },
+    {
+      "path": "assets/scripts/vfx/AwardStageLayout.ts",
+      "sha256": "e30261dfe10f2db081f4a419502ea5016d8ef3372ac79d7e07be86cf3bdb2df2",
+      "bytes": 2593
+    },
+    {
+      "path": "assets/scripts/vfx/AwardTiming.ts",
+      "sha256": "18059d8a21f14e49e18c7f8d5a84a62fab4a1a5105dc468a191e70436c5fb3fc",
+      "bytes": 607
+    },
+    {
+      "path": "assets/scripts/vfx/CabinetGuardian.ts",
+      "sha256": "e8b2cccc2aa5de45550b5bce7c7ee2a2a187952be2e3f975b4568d31b81c34a4",
+      "bytes": 2000
+    },
+    {
+      "path": "assets/scripts/vfx/CanopyLeaves.ts",
+      "sha256": "bf8580ad24805f2ca0777a5442864990242ff59394a991116a802ca9c3efccda",
+      "bytes": 1117
+    },
+    {
+      "path": "assets/scripts/vfx/FestivalArrival.ts",
+      "sha256": "95216eec9a118f6b727ac3f9ffbdb05120b2df0d6b6aa62cdec590a24d6d47ad",
+      "bytes": 1632
+    },
+    {
+      "path": "assets/scripts/vfx/GuardianEyelids.ts",
+      "sha256": "876b5843e41cb059f43b8f3b794502af73a8564c19838170a430b4e3e23d4c51",
+      "bytes": 2523
+    },
+    {
+      "path": "assets/scripts/vfx/GuardianMesh.ts",
+      "sha256": "61bfb0be785f1486b4d6de98f569285a88cdc6885506e89bc6fda803a1c2762a",
+      "bytes": 5528
+    },
+    {
+      "path": "assets/scripts/vfx/HallSelectionAccent.ts",
+      "sha256": "02d3dac3f4590c9bc42caefbd459b2ef45b82bd8d3cbd5f294649241bf416d8d",
+      "bytes": 3672
+    },
+    {
+      "path": "assets/scripts/vfx/OrdinaryWinStage.ts",
+      "sha256": "abc5f785a1ce6cd5ede70ada462d46ebec9edc7fd08a7ca86858ad2b6946fb9a",
+      "bytes": 5741
+    },
+    {
+      "path": "assets/scripts/vfx/SalonAtmosphere.ts",
+      "sha256": "a13e6170d5e0fc5033713f61b30d8ff93e33d7c0ae09380c6872d30efecc9fcc",
+      "bytes": 13071
+    },
+    {
+      "path": "assets/scripts/vfx/SalonWinStage.ts",
+      "sha256": "d2349f49476c20aa4aecd7cea4a66ec1b14b3bdd9878c2b62816106a74e53bf2",
+      "bytes": 29420
+    },
+    {
+      "path": "assets/scripts/vfx/WinPresentation.ts",
+      "sha256": "c2318bc5de63b3fea276407ee5abe5ffb36d91a2fbb1c79e83695d8dfc780f8e",
+      "bytes": 16994
+    }
+  ],
+  "changedProductionScripts": [
+    "assets/scripts/vfx/AwardChoreography.ts",
+    "assets/scripts/vfx/AwardTiming.ts",
+    "assets/scripts/vfx/SalonWinStage.ts"
+  ],
+  "artifacts": [
+    {
+      "path": "build/web-mobile/index.html",
+      "sha256": "4e95d175f277b96e9ac6448d90b34c94f24c8038d516c26399f75b01bfd88881",
+      "bytes": 2191
+    },
+    {
+      "path": "build/web-mobile/index.js",
+      "sha256": "4317cb547b4d105f69346b925d961df7f951002fd5a4aaae807a361aa1ad49cd",
+      "bytes": 818
+    },
+    {
+      "path": "build/web-mobile/application.js",
+      "sha256": "359f85dd922e2568aa991af95a5c356a0102042c8918252987bfbd37f2153eb2",
+      "bytes": 3302
+    },
+    {
+      "path": "build/web-mobile/src/settings.json",
+      "sha256": "460e1399f97dd3aaf73c05ad20218f4fb183647862cfbbb87301d18d66269d09",
+      "bytes": 21914
+    },
+    {
+      "path": "build/web-mobile/assets/main/index.js",
+      "sha256": "ca4ff148d9914a21df741c60fb13952f697dd59c3d6805655dd4a5f2ec2d64fd",
+      "bytes": 651711
+    },
+    {
+      "path": "build/web-mobile/assets/resources/index.js",
+      "sha256": "51a07ab61ee49561d29734ff6ee095b0d8a47998bbe30a6f1973bf3c8b7faa25",
+      "bytes": 605
+    }
+  ],
+  "audio": [
+    {
+      "path": "assets/resources/audio/award-accent-golden-strings.wav",
+      "sha256": "59b3df794a327b6347e66fb7863965127f4727a1cf990301a880e94d9e2eceec",
+      "bytes": 74284,
+      "artifactPath": "build/web-mobile/assets/resources/native/83/83582592-c7f4-420c-80f3-ca8693515107.wav",
+      "artifactSha256": "59b3df794a327b6347e66fb7863965127f4727a1cf990301a880e94d9e2eceec"
+    },
+    {
+      "path": "assets/resources/audio/award-accent-pearl-rhythm.wav",
+      "sha256": "95e79a291d8a900b53691eca78ab6a9819e8c6f22eb69d4a781981987015fa5b",
+      "bytes": 74284,
+      "artifactPath": "build/web-mobile/assets/resources/native/d4/d42aefbc-5e66-4b9b-a3cf-b609bdd4fda7.wav",
+      "artifactSha256": "95e79a291d8a900b53691eca78ab6a9819e8c6f22eb69d4a781981987015fa5b"
+    },
+    {
+      "path": "assets/resources/audio/award-accent-ruby-brass.wav",
+      "sha256": "105a561660ca5f4a7eadd0092d6863a034cce486c6792f7cd77698fad74707e1",
+      "bytes": 74284,
+      "artifactPath": "build/web-mobile/assets/resources/native/88/884b2992-3e52-4002-ad0e-4e314a8c6f43.wav",
+      "artifactSha256": "105a561660ca5f4a7eadd0092d6863a034cce486c6792f7cd77698fad74707e1"
+    },
+    {
+      "path": "assets/resources/audio/award-accent-sapphire-harp.wav",
+      "sha256": "da119889d44e384f5c540ab8241685f7246e266ae8fcfcc167dbad45d61f46ab",
+      "bytes": 74284,
+      "artifactPath": "build/web-mobile/assets/resources/native/93/93d9b8db-99c4-44da-93c0-16bd0eb0b7e1.wav",
+      "artifactSha256": "da119889d44e384f5c540ab8241685f7246e266ae8fcfcc167dbad45d61f46ab"
+    },
+    {
+      "path": "assets/resources/audio/award-accent.wav",
+      "sha256": "95e79a291d8a900b53691eca78ab6a9819e8c6f22eb69d4a781981987015fa5b",
+      "bytes": 74284,
+      "artifactPath": "build/web-mobile/assets/resources/native/39/39b387a6-4205-48f2-b760-be29bfad61c4.wav",
+      "artifactSha256": "95e79a291d8a900b53691eca78ab6a9819e8c6f22eb69d4a781981987015fa5b"
+    },
+    {
+      "path": "assets/resources/audio/coin-collect-golden-strings.wav",
+      "sha256": "411901434c9ef3f88e724393d806943c2ea2e35c1d5a4e7391c96c3fd526278c",
+      "bytes": 108844,
+      "artifactPath": "build/web-mobile/assets/resources/native/8f/8f078ca9-72a0-4ba7-86f4-6f608b8b8557.wav",
+      "artifactSha256": "411901434c9ef3f88e724393d806943c2ea2e35c1d5a4e7391c96c3fd526278c"
+    },
+    {
+      "path": "assets/resources/audio/coin-collect-pearl-rhythm.wav",
+      "sha256": "b98fddc816e73dd0457724ad1aaa981a70d8f5e3d52a4051cd3cc26057b8e599",
+      "bytes": 108844,
+      "artifactPath": "build/web-mobile/assets/resources/native/41/416a45f1-ba90-42d1-81c0-1bad1a125fbc.wav",
+      "artifactSha256": "b98fddc816e73dd0457724ad1aaa981a70d8f5e3d52a4051cd3cc26057b8e599"
+    },
+    {
+      "path": "assets/resources/audio/coin-collect-ruby-brass.wav",
+      "sha256": "afa37eafa58826bd659df640998bf8400b3da4f8b181df1a35e8b991e70d574f",
+      "bytes": 108844,
+      "artifactPath": "build/web-mobile/assets/resources/native/44/4468b60e-2b5b-454c-9c05-38d27835bdaf.wav",
+      "artifactSha256": "afa37eafa58826bd659df640998bf8400b3da4f8b181df1a35e8b991e70d574f"
+    },
+    {
+      "path": "assets/resources/audio/coin-collect-sapphire-harp.wav",
+      "sha256": "a958c3c1fdad203d54dc2f70e623defa052e9f941ec6d3ffcc07847e62cfb67c",
+      "bytes": 108844,
+      "artifactPath": "build/web-mobile/assets/resources/native/c7/c75d1a6b-5b35-49cd-b3b1-73d69d9c20ba.wav",
+      "artifactSha256": "a958c3c1fdad203d54dc2f70e623defa052e9f941ec6d3ffcc07847e62cfb67c"
+    },
+    {
+      "path": "assets/resources/audio/coin-collect.wav",
+      "sha256": "b98fddc816e73dd0457724ad1aaa981a70d8f5e3d52a4051cd3cc26057b8e599",
+      "bytes": 108844,
+      "artifactPath": "build/web-mobile/assets/resources/native/8c/8c153d09-8865-4087-8c53-05c3e5daa34a.wav",
+      "artifactSha256": "b98fddc816e73dd0457724ad1aaa981a70d8f5e3d52a4051cd3cc26057b8e599"
+    },
+    {
+      "path": "assets/resources/audio/feature-golden-strings.wav",
+      "sha256": "d46ce86f70d0d3952a2809fc7f0c0a832966b2f154d5c7c1362b85f437457910",
+      "bytes": 169004,
+      "artifactPath": "build/web-mobile/assets/resources/native/b7/b7f9fcf3-c0e1-4ef0-9810-bec1643785ed.wav",
+      "artifactSha256": "d46ce86f70d0d3952a2809fc7f0c0a832966b2f154d5c7c1362b85f437457910"
+    },
+    {
+      "path": "assets/resources/audio/feature-pearl-rhythm.wav",
+      "sha256": "1e411de61d1dcce9fe6ef28e259dd2d3cbf4e8ee599a5eb898dc981cc99969b6",
+      "bytes": 169004,
+      "artifactPath": "build/web-mobile/assets/resources/native/ba/ba9346bb-ca6d-48a4-a7bd-40d054362c29.wav",
+      "artifactSha256": "1e411de61d1dcce9fe6ef28e259dd2d3cbf4e8ee599a5eb898dc981cc99969b6"
+    },
+    {
+      "path": "assets/resources/audio/feature-ruby-brass.wav",
+      "sha256": "83dac616a86843f4cd268190e7f50288d24cb895d5c367118cc511b67262fe15",
+      "bytes": 169004,
+      "artifactPath": "build/web-mobile/assets/resources/native/77/77adfba4-7f1a-4dc2-a1cd-2305f62deabe.wav",
+      "artifactSha256": "83dac616a86843f4cd268190e7f50288d24cb895d5c367118cc511b67262fe15"
+    },
+    {
+      "path": "assets/resources/audio/feature-sapphire-harp.wav",
+      "sha256": "d8369f23b033d03c9dd40f2d60a1c8f722542f985a442929e989629f54f24e1b",
+      "bytes": 169004,
+      "artifactPath": "build/web-mobile/assets/resources/native/a8/a8cf2ded-bdfb-47fb-ba2f-c73223a64957.wav",
+      "artifactSha256": "d8369f23b033d03c9dd40f2d60a1c8f722542f985a442929e989629f54f24e1b"
+    },
+    {
+      "path": "assets/resources/audio/feature.wav",
+      "sha256": "8f2f0003d28fe581cf7628ab9eef27b68525f8672b32e1fc3f9bb4c7dd336fee",
+      "bytes": 169004,
+      "artifactPath": "build/web-mobile/assets/resources/native/93/9319b834-1be0-42fc-8989-668206a87b81.wav",
+      "artifactSha256": "8f2f0003d28fe581cf7628ab9eef27b68525f8672b32e1fc3f9bb4c7dd336fee"
+    },
+    {
+      "path": "assets/resources/audio/music-golden-strings.wav",
+      "sha256": "c6969acfcbd1278555f461ab16bdbf5220a6c09b4d60b16755e0304d78ce829f",
+      "bytes": 5120044,
+      "artifactPath": "build/web-mobile/assets/resources/native/40/4057fd9e-8f70-4c20-bbc9-97d5bd50d978.wav",
+      "artifactSha256": "c6969acfcbd1278555f461ab16bdbf5220a6c09b4d60b16755e0304d78ce829f"
+    },
+    {
+      "path": "assets/resources/audio/music-pearl-rhythm.wav",
+      "sha256": "97b9e452ee98befe361d08c5faf5035881e11913486e01751cb676a5a6b3797e",
+      "bytes": 6582900,
+      "artifactPath": "build/web-mobile/assets/resources/native/ae/ae3cd456-f7c4-4e14-9b99-eb0d52dc286b.wav",
+      "artifactSha256": "97b9e452ee98befe361d08c5faf5035881e11913486e01751cb676a5a6b3797e"
+    },
+    {
+      "path": "assets/resources/audio/music-ruby-brass.wav",
+      "sha256": "29fdb78e95a98dac238a2c38bfd00720bf6421b87940eeffa1c3b253baee7021",
+      "bytes": 6355908,
+      "artifactPath": "build/web-mobile/assets/resources/native/58/5834e890-9fa7-455a-acc2-41e2e533a4ce.wav",
+      "artifactSha256": "29fdb78e95a98dac238a2c38bfd00720bf6421b87940eeffa1c3b253baee7021"
+    },
+    {
+      "path": "assets/resources/audio/music-salon.wav",
+      "sha256": "c494d20be1a6792118ca63e61f5567230e4df0758d67919caf30bc8f89cebeed",
+      "bytes": 6702588,
+      "artifactPath": "build/web-mobile/assets/resources/native/45/459a656d-ebf4-47ba-8a83-f5b679e357e6.wav",
+      "artifactSha256": "c494d20be1a6792118ca63e61f5567230e4df0758d67919caf30bc8f89cebeed"
+    },
+    {
+      "path": "assets/resources/audio/music-sapphire-harp.wav",
+      "sha256": "0850643d4fa14b747a982f79f5f839dc7830e0f8cd0bb48b06a3b572bc916f3a",
+      "bytes": 5421220,
+      "artifactPath": "build/web-mobile/assets/resources/native/0e/0eaeeb91-6537-45aa-ba67-5ce8188711cb.wav",
+      "artifactSha256": "0850643d4fa14b747a982f79f5f839dc7830e0f8cd0bb48b06a3b572bc916f3a"
+    },
+    {
+      "path": "assets/resources/audio/reel-roll.wav",
+      "sha256": "a324e24e61773a31052304a67f0f6565df247f8c92fe9c870ef56fdc61bbc851",
+      "bytes": 122924,
+      "artifactPath": "build/web-mobile/assets/resources/native/88/88113dff-742f-4597-b52f-f6c9dcdf41ab.wav",
+      "artifactSha256": "a324e24e61773a31052304a67f0f6565df247f8c92fe9c870ef56fdc61bbc851"
+    },
+    {
+      "path": "assets/resources/audio/reel-start.wav",
+      "sha256": "76452c4d2d3a7f78753c264814d2d78a0735ce153a1f6cc3194379a8d33697be",
+      "bytes": 66604,
+      "artifactPath": "build/web-mobile/assets/resources/native/e5/e587b9db-84ea-4d74-94c8-fbfda3b36583.wav",
+      "artifactSha256": "76452c4d2d3a7f78753c264814d2d78a0735ce153a1f6cc3194379a8d33697be"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-1.wav",
+      "sha256": "1aca4a6196f7dc22582b8ae662417337088e30b109a5ee80a4225b8c1cf44bbc",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/9b/9b5ca0cd-4095-43fe-b703-a76157d7a2a9.wav",
+      "artifactSha256": "1aca4a6196f7dc22582b8ae662417337088e30b109a5ee80a4225b8c1cf44bbc"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-2.wav",
+      "sha256": "568e3414b60d2a801cfa6f786ddb54bc092311091c5701f1ea5f044ca851d381",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/5f/5f86ae96-ec61-427f-b65e-b3361a6bfe4d.wav",
+      "artifactSha256": "568e3414b60d2a801cfa6f786ddb54bc092311091c5701f1ea5f044ca851d381"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-3.wav",
+      "sha256": "489bf8a68ba8e26ebbd203a8fbd2a2e03461c37058b1b099ab82c37443f30062",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/30/30e62b38-2374-4682-a471-3f4a45ff2d3a.wav",
+      "artifactSha256": "489bf8a68ba8e26ebbd203a8fbd2a2e03461c37058b1b099ab82c37443f30062"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-4.wav",
+      "sha256": "e6dec17ad8bfdb298f2992a31f1e1451038adc3e435af84d157d167572c7d83a",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/c9/c9389672-1268-4505-a97f-46904a7976ca.wav",
+      "artifactSha256": "e6dec17ad8bfdb298f2992a31f1e1451038adc3e435af84d157d167572c7d83a"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-5.wav",
+      "sha256": "462169481567d53330f9ce8d76ddcf3c0287daee748818de3db7bb326697f17c",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/c0/c08ff5e4-bc7a-43e4-b226-b4e0db75860e.wav",
+      "artifactSha256": "462169481567d53330f9ce8d76ddcf3c0287daee748818de3db7bb326697f17c"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-golden-strings-1.wav",
+      "sha256": "3f6ee28dfdae463d4d0ef60c59d2782090516c9c789ae688444320e326b9e42b",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/1c/1cf25c57-08ff-4244-ba0b-6c02cae4f031.wav",
+      "artifactSha256": "3f6ee28dfdae463d4d0ef60c59d2782090516c9c789ae688444320e326b9e42b"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-golden-strings-2.wav",
+      "sha256": "99ebd3268b532b96c0a2f4843a378c4cc59129b949e852d121dd3677f8195694",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/54/54602d7c-f796-4cc5-88cb-b609b80f2ef9.wav",
+      "artifactSha256": "99ebd3268b532b96c0a2f4843a378c4cc59129b949e852d121dd3677f8195694"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-golden-strings-3.wav",
+      "sha256": "0a457f6a36bede0c84d07fffca6eba58839903bad866302ec868b60102e68603",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/f2/f28b5680-0579-4916-9f5d-f0ffced26a89.wav",
+      "artifactSha256": "0a457f6a36bede0c84d07fffca6eba58839903bad866302ec868b60102e68603"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-golden-strings-4.wav",
+      "sha256": "f13b9ac9de24380989251ff1dd8bab11f10648206ce233c2c3a6ad8401061af2",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/f3/f3173b89-7589-43b0-b460-92f42b11f568.wav",
+      "artifactSha256": "f13b9ac9de24380989251ff1dd8bab11f10648206ce233c2c3a6ad8401061af2"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-golden-strings-5.wav",
+      "sha256": "0471d6740d1217d90913f21474084e6d29a4a436767df34e50a00f4589bb7634",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/d2/d27f584c-92b5-4ba5-82fa-d855866bea1b.wav",
+      "artifactSha256": "0471d6740d1217d90913f21474084e6d29a4a436767df34e50a00f4589bb7634"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-golden-strings.wav",
+      "sha256": "b964ff6f38cd0c8dd0d468072959061b1fec2fcbd6de14d0d5a5115991f22c92",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/0d/0dae541b-2e90-401a-b8c5-1583fa5d815e.wav",
+      "artifactSha256": "b964ff6f38cd0c8dd0d468072959061b1fec2fcbd6de14d0d5a5115991f22c92"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-pearl-rhythm-1.wav",
+      "sha256": "1aca4a6196f7dc22582b8ae662417337088e30b109a5ee80a4225b8c1cf44bbc",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/39/39e18e0e-6d25-43f1-94b2-645d7fe96a33.wav",
+      "artifactSha256": "1aca4a6196f7dc22582b8ae662417337088e30b109a5ee80a4225b8c1cf44bbc"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-pearl-rhythm-2.wav",
+      "sha256": "568e3414b60d2a801cfa6f786ddb54bc092311091c5701f1ea5f044ca851d381",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/72/72796979-269e-45fe-aeba-48bc54d983d4.wav",
+      "artifactSha256": "568e3414b60d2a801cfa6f786ddb54bc092311091c5701f1ea5f044ca851d381"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-pearl-rhythm-3.wav",
+      "sha256": "489bf8a68ba8e26ebbd203a8fbd2a2e03461c37058b1b099ab82c37443f30062",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/de/de30eecf-5bc2-4315-a9b7-e3795a39c3e5.wav",
+      "artifactSha256": "489bf8a68ba8e26ebbd203a8fbd2a2e03461c37058b1b099ab82c37443f30062"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-pearl-rhythm-4.wav",
+      "sha256": "e6dec17ad8bfdb298f2992a31f1e1451038adc3e435af84d157d167572c7d83a",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/00/005ce88c-2906-4513-a679-207d8b073e17.wav",
+      "artifactSha256": "e6dec17ad8bfdb298f2992a31f1e1451038adc3e435af84d157d167572c7d83a"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-pearl-rhythm-5.wav",
+      "sha256": "462169481567d53330f9ce8d76ddcf3c0287daee748818de3db7bb326697f17c",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/e5/e5f0dd4d-6086-47a8-b2c4-f67b452c7551.wav",
+      "artifactSha256": "462169481567d53330f9ce8d76ddcf3c0287daee748818de3db7bb326697f17c"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-pearl-rhythm.wav",
+      "sha256": "a28b66b299d0dc7210081895701f9f07bc3cac2d5fe9beea023d23d58c6a68f1",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/98/98f5f45e-6e1d-4420-b78f-cf571224e2ca.wav",
+      "artifactSha256": "a28b66b299d0dc7210081895701f9f07bc3cac2d5fe9beea023d23d58c6a68f1"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-ruby-brass-1.wav",
+      "sha256": "b996c7542cc19a05a6b4dacc389ba604df67a7d6327710789e76255e2f05a50a",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/a8/a8f8a2a4-ed42-413b-b8ca-7828ef96747b.wav",
+      "artifactSha256": "b996c7542cc19a05a6b4dacc389ba604df67a7d6327710789e76255e2f05a50a"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-ruby-brass-2.wav",
+      "sha256": "c86a44a38f44ee669a31e01f18fdef9fece4c67ed89fb48fd72478677b54caec",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/31/314653f9-46de-4242-b8bb-f5e52d91dce6.wav",
+      "artifactSha256": "c86a44a38f44ee669a31e01f18fdef9fece4c67ed89fb48fd72478677b54caec"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-ruby-brass-3.wav",
+      "sha256": "1aca4a6196f7dc22582b8ae662417337088e30b109a5ee80a4225b8c1cf44bbc",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/09/097c7c51-a348-4193-aeb6-8a169a6b1066.wav",
+      "artifactSha256": "1aca4a6196f7dc22582b8ae662417337088e30b109a5ee80a4225b8c1cf44bbc"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-ruby-brass-4.wav",
+      "sha256": "568e3414b60d2a801cfa6f786ddb54bc092311091c5701f1ea5f044ca851d381",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/2f/2f88dcca-6309-4eb5-bee4-a340dc4062ce.wav",
+      "artifactSha256": "568e3414b60d2a801cfa6f786ddb54bc092311091c5701f1ea5f044ca851d381"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-ruby-brass-5.wav",
+      "sha256": "489bf8a68ba8e26ebbd203a8fbd2a2e03461c37058b1b099ab82c37443f30062",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/1b/1be351f0-ee0e-4df9-8cd3-22612d835f65.wav",
+      "artifactSha256": "489bf8a68ba8e26ebbd203a8fbd2a2e03461c37058b1b099ab82c37443f30062"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-ruby-brass.wav",
+      "sha256": "bafcde426b7d1520d50e2b9772fa7336f855e4f3e5776e5b36757242ff096a1d",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/af/afd76886-16dd-4b16-8939-b121d0b29629.wav",
+      "artifactSha256": "bafcde426b7d1520d50e2b9772fa7336f855e4f3e5776e5b36757242ff096a1d"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-sapphire-harp-1.wav",
+      "sha256": "0f6c79b3211912a5306907124fa15d514dbb74cc2cd8ad193c2e223375d9d81b",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/ca/ca477f12-a083-49fb-b8e3-d27908475c27.wav",
+      "artifactSha256": "0f6c79b3211912a5306907124fa15d514dbb74cc2cd8ad193c2e223375d9d81b"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-sapphire-harp-2.wav",
+      "sha256": "cf1855ebb6505e93442ae3db7615646632a183fe4684509c7f75ec63331e29ec",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/21/21ec6859-5840-4d7a-ba8d-ce9313066088.wav",
+      "artifactSha256": "cf1855ebb6505e93442ae3db7615646632a183fe4684509c7f75ec63331e29ec"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-sapphire-harp-3.wav",
+      "sha256": "e27712868e65fe04f39e682b65277fa468cd2ca4c79004186ae1b725b0f7bd36",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/39/39d88ffc-6552-410b-b336-eacf6c92137b.wav",
+      "artifactSha256": "e27712868e65fe04f39e682b65277fa468cd2ca4c79004186ae1b725b0f7bd36"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-sapphire-harp-4.wav",
+      "sha256": "bccf5d58382d9904492974bb7f50146be5fccbdf3fa18643cb4d4aa863ba22fe",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/4b/4b8518ec-8e7c-4d12-8eb9-b9959f99c6ad.wav",
+      "artifactSha256": "bccf5d58382d9904492974bb7f50146be5fccbdf3fa18643cb4d4aa863ba22fe"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-sapphire-harp-5.wav",
+      "sha256": "434c19f23ddf246369ab57d4c193c6c7514cb1ff9aa380e8e736bcf0601a6858",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/36/3691127b-8ad4-41cf-9984-fe91c6100acb.wav",
+      "artifactSha256": "434c19f23ddf246369ab57d4c193c6c7514cb1ff9aa380e8e736bcf0601a6858"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop-sapphire-harp.wav",
+      "sha256": "354d60a8b3590d4ddc2b8d11bb68b3d990d99565714111c7a70b9b318912cc00",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/f2/f28c16fc-bc73-45bc-9282-3038f826373a.wav",
+      "artifactSha256": "354d60a8b3590d4ddc2b8d11bb68b3d990d99565714111c7a70b9b318912cc00"
+    },
+    {
+      "path": "assets/resources/audio/reel-stop.wav",
+      "sha256": "a28b66b299d0dc7210081895701f9f07bc3cac2d5fe9beea023d23d58c6a68f1",
+      "bytes": 38444,
+      "artifactPath": "build/web-mobile/assets/resources/native/d3/d3ee6441-ab9e-489d-9646-d73c969604fe.wav",
+      "artifactSha256": "a28b66b299d0dc7210081895701f9f07bc3cac2d5fe9beea023d23d58c6a68f1"
+    },
+    {
+      "path": "assets/resources/audio/ui-touch.wav",
+      "sha256": "8b672f65664e5579478c67e56a65dcdb17ccbc47b7d0d62f9d6e9db0c6671e9f",
+      "bytes": 25644,
+      "artifactPath": "build/web-mobile/assets/resources/native/ce/ceaeba03-c523-417b-823e-e6cc0d49ed1a.wav",
+      "artifactSha256": "8b672f65664e5579478c67e56a65dcdb17ccbc47b7d0d62f9d6e9db0c6671e9f"
+    },
+    {
+      "path": "assets/resources/audio/win-epic-pearl-rhythm.wav",
+      "sha256": "0fc52b12f7e9024edf74fcf110f5eab5d75cbd79e9c56f5102381b37a81dc208",
+      "bytes": 723244,
+      "artifactPath": "build/web-mobile/assets/resources/native/25/25f4d3bb-0bfa-4c3f-bed3-9e41e4f5727d.wav",
+      "artifactSha256": "0fc52b12f7e9024edf74fcf110f5eab5d75cbd79e9c56f5102381b37a81dc208"
+    },
+    {
+      "path": "assets/resources/audio/win-epic-resolve-pearl-rhythm.wav",
+      "sha256": "b68ca00cd24a76dccc7f8d664242b741a8764e0383b3b11decfafb6cbb5f527e",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/26/26a8f8b1-407c-457d-88f3-1237ed09420e.wav",
+      "artifactSha256": "b68ca00cd24a76dccc7f8d664242b741a8764e0383b3b11decfafb6cbb5f527e"
+    },
+    {
+      "path": "assets/resources/audio/win-epic-resolve-ruby-brass.wav",
+      "sha256": "f8f8d50df346d14bdee59d96a46a3a2c376bce27753c4f17948ba1451f0e1b00",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/73/73045ab0-b27d-4958-b879-fe069b2b30cc.wav",
+      "artifactSha256": "f8f8d50df346d14bdee59d96a46a3a2c376bce27753c4f17948ba1451f0e1b00"
+    },
+    {
+      "path": "assets/resources/audio/win-epic-resolve-sapphire-harp.wav",
+      "sha256": "9153eae8bfac435a64d505ef2389d032a12a442bb4ede95f11435fc563d4ce82",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/83/83cb0d09-0a0d-423e-97a8-55f330341d52.wav",
+      "artifactSha256": "9153eae8bfac435a64d505ef2389d032a12a442bb4ede95f11435fc563d4ce82"
+    },
+    {
+      "path": "assets/resources/audio/win-epic-resolve.wav",
+      "sha256": "0db7535edb10395c79fe3a36af8d552df41e7fd2cac80e59b0db2a1f4e0de697",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/db/dbcdc13e-0b88-4ac6-8709-196480c5db04.wav",
+      "artifactSha256": "0db7535edb10395c79fe3a36af8d552df41e7fd2cac80e59b0db2a1f4e0de697"
+    },
+    {
+      "path": "assets/resources/audio/win-epic-ruby-brass.wav",
+      "sha256": "1fce0f493b7d74ead2ae3b33ce900b26ccb6de31316ca8a9be546e1b758b724f",
+      "bytes": 723244,
+      "artifactPath": "build/web-mobile/assets/resources/native/6c/6cd815c2-71c2-49ac-b712-7aa4b4453696.wav",
+      "artifactSha256": "1fce0f493b7d74ead2ae3b33ce900b26ccb6de31316ca8a9be546e1b758b724f"
+    },
+    {
+      "path": "assets/resources/audio/win-epic-sapphire-harp.wav",
+      "sha256": "ed71722d360737045b0f6667d4bd41df2cc9ec2b2f8ca317ea3119b976e880d2",
+      "bytes": 723244,
+      "artifactPath": "build/web-mobile/assets/resources/native/2c/2cbccc87-afa8-4bc4-91c7-3b11ab7ea461.wav",
+      "artifactSha256": "ed71722d360737045b0f6667d4bd41df2cc9ec2b2f8ca317ea3119b976e880d2"
+    },
+    {
+      "path": "assets/resources/audio/win-epic.wav",
+      "sha256": "9ac76262c0e367ce114a8e7843eab4d370f8b6d8a3c4b4fa7e2717089f54aed9",
+      "bytes": 723244,
+      "artifactPath": "build/web-mobile/assets/resources/native/fe/fe83fb6e-7988-48a9-9bee-3edf28987bd0.wav",
+      "artifactSha256": "9ac76262c0e367ce114a8e7843eab4d370f8b6d8a3c4b4fa7e2717089f54aed9"
+    },
+    {
+      "path": "assets/resources/audio/win-grand-pearl-rhythm.wav",
+      "sha256": "fce6faac6c9870895a90f5c5c37c2770d698741f3909926e1b889b81f4992792",
+      "bytes": 441644,
+      "artifactPath": "build/web-mobile/assets/resources/native/05/05374564-d121-4bf1-a5e6-c6a472874b8e.wav",
+      "artifactSha256": "fce6faac6c9870895a90f5c5c37c2770d698741f3909926e1b889b81f4992792"
+    },
+    {
+      "path": "assets/resources/audio/win-grand-resolve-pearl-rhythm.wav",
+      "sha256": "1e58e8ea5426f153eae4f473e67f4a228b2d47003f33012add40c962613fdfaa",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/f4/f43631f8-9dde-456a-9792-3bdc5336b42c.wav",
+      "artifactSha256": "1e58e8ea5426f153eae4f473e67f4a228b2d47003f33012add40c962613fdfaa"
+    },
+    {
+      "path": "assets/resources/audio/win-grand-resolve-ruby-brass.wav",
+      "sha256": "d33a42274e8cb64094f30156cecd4aecfcbb969b65e721f73a84a3b046d42e32",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/58/58a6718b-42ff-4296-8aea-45deb683f7e4.wav",
+      "artifactSha256": "d33a42274e8cb64094f30156cecd4aecfcbb969b65e721f73a84a3b046d42e32"
+    },
+    {
+      "path": "assets/resources/audio/win-grand-resolve-sapphire-harp.wav",
+      "sha256": "3551198e0a55c9e0fc273d8e9d5de04fe3ad48aaaea1446b2c7958293b9470bd",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/68/682d2934-c01f-4472-9a69-aec0dbfb8a19.wav",
+      "artifactSha256": "3551198e0a55c9e0fc273d8e9d5de04fe3ad48aaaea1446b2c7958293b9470bd"
+    },
+    {
+      "path": "assets/resources/audio/win-grand-resolve.wav",
+      "sha256": "4bdc673127155a1a0b2dcb27131835ca7cae5149d7eb7bed0b6909d6d302d46a",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/9d/9d3afa24-9a5f-48bd-b144-605fa7aacc72.wav",
+      "artifactSha256": "4bdc673127155a1a0b2dcb27131835ca7cae5149d7eb7bed0b6909d6d302d46a"
+    },
+    {
+      "path": "assets/resources/audio/win-grand-ruby-brass.wav",
+      "sha256": "7d2ffe8dd9bf042550ba161877a8d99fbc92165685ec2c4c827510d47a14e512",
+      "bytes": 441644,
+      "artifactPath": "build/web-mobile/assets/resources/native/84/84b5c187-6f69-4440-827b-9ebbf18c014f.wav",
+      "artifactSha256": "7d2ffe8dd9bf042550ba161877a8d99fbc92165685ec2c4c827510d47a14e512"
+    },
+    {
+      "path": "assets/resources/audio/win-grand-sapphire-harp.wav",
+      "sha256": "76cb6be60c0297b5efe0e7bf266442c2e772ad38d2c296f39b8876e290c1d437",
+      "bytes": 441644,
+      "artifactPath": "build/web-mobile/assets/resources/native/aa/aab64c89-d228-499e-9b5d-0ee1d9160490.wav",
+      "artifactSha256": "76cb6be60c0297b5efe0e7bf266442c2e772ad38d2c296f39b8876e290c1d437"
+    },
+    {
+      "path": "assets/resources/audio/win-grand.wav",
+      "sha256": "c3297b55f83e914b1ad7722805c04f5846181f598732c15bd91d83f77f79b656",
+      "bytes": 441644,
+      "artifactPath": "build/web-mobile/assets/resources/native/fd/fd02c7c3-6e3f-47f8-8ee0-c1c705ce63fe.wav",
+      "artifactSha256": "c3297b55f83e914b1ad7722805c04f5846181f598732c15bd91d83f77f79b656"
+    },
+    {
+      "path": "assets/resources/audio/win-mega-pearl-rhythm.wav",
+      "sha256": "e97f13cd651b06c5dea1a21e1e1b1da3246a1cda6af1e1add7f8eb7766ecd89a",
+      "bytes": 646444,
+      "artifactPath": "build/web-mobile/assets/resources/native/b5/b52bba63-6ea9-45cd-ae20-2e3a01db715e.wav",
+      "artifactSha256": "e97f13cd651b06c5dea1a21e1e1b1da3246a1cda6af1e1add7f8eb7766ecd89a"
+    },
+    {
+      "path": "assets/resources/audio/win-mega-resolve-pearl-rhythm.wav",
+      "sha256": "3aaa19c6b26b17be47735f06a54bad8359e13dfc18a82dc373e20b1db6c4cdca",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/2c/2cd06db3-75f9-4308-bf1d-a92c28b2eeb6.wav",
+      "artifactSha256": "3aaa19c6b26b17be47735f06a54bad8359e13dfc18a82dc373e20b1db6c4cdca"
+    },
+    {
+      "path": "assets/resources/audio/win-mega-resolve-ruby-brass.wav",
+      "sha256": "3e06e8f0833a636f0f39f6af59e0609338ae38de7869de09d970c5bdf904c48e",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/ba/ba7d01f2-cd1d-45ca-863c-d31edf627c3e.wav",
+      "artifactSha256": "3e06e8f0833a636f0f39f6af59e0609338ae38de7869de09d970c5bdf904c48e"
+    },
+    {
+      "path": "assets/resources/audio/win-mega-resolve-sapphire-harp.wav",
+      "sha256": "cd58868135c039c6d3a8cc99dd23119b9a90a50697aca7152f2faa0b1ba7c3b8",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/7a/7accbd7b-66e4-41e0-ba7b-2f5feb9d8bd4.wav",
+      "artifactSha256": "cd58868135c039c6d3a8cc99dd23119b9a90a50697aca7152f2faa0b1ba7c3b8"
+    },
+    {
+      "path": "assets/resources/audio/win-mega-resolve.wav",
+      "sha256": "26dab9c5bde8244572b111d9b4310eccfa10c0155feb73bf9145ea68cd2b5574",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/10/103a8b2e-828b-4e4c-9eaa-3784dd3e78b2.wav",
+      "artifactSha256": "26dab9c5bde8244572b111d9b4310eccfa10c0155feb73bf9145ea68cd2b5574"
+    },
+    {
+      "path": "assets/resources/audio/win-mega-ruby-brass.wav",
+      "sha256": "61782d2148432d1b18083e2df604f6ffac7912e12579a159910bd7f831670ba3",
+      "bytes": 646444,
+      "artifactPath": "build/web-mobile/assets/resources/native/4d/4d959bcd-fbfd-4f06-8e7d-ff679dcd8d14.wav",
+      "artifactSha256": "61782d2148432d1b18083e2df604f6ffac7912e12579a159910bd7f831670ba3"
+    },
+    {
+      "path": "assets/resources/audio/win-mega-sapphire-harp.wav",
+      "sha256": "5158d765e86d52c60735b48553539d07ab9cae17eaf9e2857d084c071e8caa2a",
+      "bytes": 646444,
+      "artifactPath": "build/web-mobile/assets/resources/native/71/716bfa04-e4bc-4de4-bf92-e18dfb15fb88.wav",
+      "artifactSha256": "5158d765e86d52c60735b48553539d07ab9cae17eaf9e2857d084c071e8caa2a"
+    },
+    {
+      "path": "assets/resources/audio/win-mega.wav",
+      "sha256": "f11eec835b1a0ea589b17cbad15c8625e734e0e0b9038ab303073844bc27a32e",
+      "bytes": 646444,
+      "artifactPath": "build/web-mobile/assets/resources/native/81/8141888a-22c4-4ba6-b494-58527a0317e5.wav",
+      "artifactSha256": "f11eec835b1a0ea589b17cbad15c8625e734e0e0b9038ab303073844bc27a32e"
+    },
+    {
+      "path": "assets/resources/audio/win-normal-golden-strings.wav",
+      "sha256": "8975e46ee42c244a21a9c1b1b05b119ecad2849754a6d17bfab0eb3f60818404",
+      "bytes": 158764,
+      "artifactPath": "build/web-mobile/assets/resources/native/81/81677134-3f37-48c3-a85b-72c60bbe7829.wav",
+      "artifactSha256": "8975e46ee42c244a21a9c1b1b05b119ecad2849754a6d17bfab0eb3f60818404"
+    },
+    {
+      "path": "assets/resources/audio/win-normal-pearl-rhythm.wav",
+      "sha256": "7e7413f143c287808c5fc55088cdd56e0564ece3a192938cdb45aea2eacf1701",
+      "bytes": 158764,
+      "artifactPath": "build/web-mobile/assets/resources/native/56/569cf509-97bc-473d-895e-5d715d6fcd16.wav",
+      "artifactSha256": "7e7413f143c287808c5fc55088cdd56e0564ece3a192938cdb45aea2eacf1701"
+    },
+    {
+      "path": "assets/resources/audio/win-normal-ruby-brass.wav",
+      "sha256": "065b8e67c9e993c5cb1ab376cc0b889f841c9172dca69cfe8f695bd5498a6ed8",
+      "bytes": 158764,
+      "artifactPath": "build/web-mobile/assets/resources/native/a5/a50a888e-dd99-4981-8b93-fee23bf13afb.wav",
+      "artifactSha256": "065b8e67c9e993c5cb1ab376cc0b889f841c9172dca69cfe8f695bd5498a6ed8"
+    },
+    {
+      "path": "assets/resources/audio/win-normal-sapphire-harp.wav",
+      "sha256": "1b37b3ba1d682e197964baa0280235b5f41b44a6ebbe73c292e7bc37e8120065",
+      "bytes": 158764,
+      "artifactPath": "build/web-mobile/assets/resources/native/8f/8fc10061-9782-475f-b6cb-f0a95bfa1ab4.wav",
+      "artifactSha256": "1b37b3ba1d682e197964baa0280235b5f41b44a6ebbe73c292e7bc37e8120065"
+    },
+    {
+      "path": "assets/resources/audio/win-normal.wav",
+      "sha256": "ef336b697865438045e1a6886bd0f18953717bd82ca68b7212973ac390abeced",
+      "bytes": 158764,
+      "artifactPath": "build/web-mobile/assets/resources/native/8d/8db57db4-9152-460f-a1ac-10ae779eadfa.wav",
+      "artifactSha256": "ef336b697865438045e1a6886bd0f18953717bd82ca68b7212973ac390abeced"
+    },
+    {
+      "path": "assets/resources/audio/win-super-pearl-rhythm.wav",
+      "sha256": "ae3d9a113f57c649f2d6156b6e93f90215261f60be66b8e826f95825543fd5cd",
+      "bytes": 556844,
+      "artifactPath": "build/web-mobile/assets/resources/native/88/88bc98a7-0e23-4836-b946-a3f96b0f806e.wav",
+      "artifactSha256": "ae3d9a113f57c649f2d6156b6e93f90215261f60be66b8e826f95825543fd5cd"
+    },
+    {
+      "path": "assets/resources/audio/win-super-resolve-pearl-rhythm.wav",
+      "sha256": "a29e8aace7415bfd1dd822cd9e61ef88192a9430035364725cf1a12043a7bfb0",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/1e/1e223a79-ae27-4216-af7a-b79dba2bf0c3.wav",
+      "artifactSha256": "a29e8aace7415bfd1dd822cd9e61ef88192a9430035364725cf1a12043a7bfb0"
+    },
+    {
+      "path": "assets/resources/audio/win-super-resolve-ruby-brass.wav",
+      "sha256": "4bbd4b61f9c154c8872066678454496ef3511c1ce066eb7a78a1662a80b43f96",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/3f/3f0624cb-6748-49e4-822e-ddb7cca3343e.wav",
+      "artifactSha256": "4bbd4b61f9c154c8872066678454496ef3511c1ce066eb7a78a1662a80b43f96"
+    },
+    {
+      "path": "assets/resources/audio/win-super-resolve-sapphire-harp.wav",
+      "sha256": "f8c17b01736d1ff2753872306c7260d00f0625c5315e4aa6ecb96ce2d48adabe",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/3e/3e4601a2-cc74-4979-8869-97ff2234c55a.wav",
+      "artifactSha256": "f8c17b01736d1ff2753872306c7260d00f0625c5315e4aa6ecb96ce2d48adabe"
+    },
+    {
+      "path": "assets/resources/audio/win-super-resolve.wav",
+      "sha256": "1bf0713fff4dc89cd7195c608c4e6a51c8eae843fdb28523c41081e0141563ae",
+      "bytes": 483884,
+      "artifactPath": "build/web-mobile/assets/resources/native/43/4366b504-f137-46b7-a4a5-55f9641c924a.wav",
+      "artifactSha256": "1bf0713fff4dc89cd7195c608c4e6a51c8eae843fdb28523c41081e0141563ae"
+    },
+    {
+      "path": "assets/resources/audio/win-super-ruby-brass.wav",
+      "sha256": "f38e0b999e119118eea7109744e2cd7375dfb5da8249fa4643d6f198d2623eac",
+      "bytes": 556844,
+      "artifactPath": "build/web-mobile/assets/resources/native/44/44bc6e2c-2cfd-46f0-8232-b228b48c8898.wav",
+      "artifactSha256": "f38e0b999e119118eea7109744e2cd7375dfb5da8249fa4643d6f198d2623eac"
+    },
+    {
+      "path": "assets/resources/audio/win-super-sapphire-harp.wav",
+      "sha256": "4d3d01ad53eb500e2bb6809a32301a19a880d43d55943b40fcc137af91ad03d2",
+      "bytes": 556844,
+      "artifactPath": "build/web-mobile/assets/resources/native/b7/b7d52e09-961c-4555-9bd2-5719da49f72d.wav",
+      "artifactSha256": "4d3d01ad53eb500e2bb6809a32301a19a880d43d55943b40fcc137af91ad03d2"
+    },
+    {
+      "path": "assets/resources/audio/win-super.wav",
+      "sha256": "bcca6b18876c25c8497033fa00b9f7f292825cc26952a41e7709ecb510bef3c8",
+      "bytes": 556844,
+      "artifactPath": "build/web-mobile/assets/resources/native/7d/7dbf93b9-7811-4b33-b796-1ed18a858ea1.wav",
+      "artifactSha256": "bcca6b18876c25c8497033fa00b9f7f292825cc26952a41e7709ecb510bef3c8"
+    }
+  ],
+  "audioAuthoring": [
+    {
+      "path": "art-source/compose_audio.py",
+      "sha256": "4af0471de10b02f9307485e288449cd7b491f77ea6f8966dfcd2aace098782ad",
+      "bytes": 15549
+    },
+    {
+      "path": "art-source/symphony-score.json",
+      "sha256": "ada20246b1c83527f0527531c76aa02b9bc48e1d444983ae4a06f0e9904e4b2b",
+      "bytes": 258411
+    },
+    {
+      "path": "docs/audio-provenance.json",
+      "sha256": "08cac00572399444b5c8a329246f11f58d9fde3ac0d89fe7ed0b63bf21bad940",
+      "bytes": 43531
+    }
+  ],
+  "environments": [
+    {
+      "path": "assets/resources/art/golden-strings-room-continuous.png",
+      "sha256": "1f58fa2b9906e41c28f51a6acb84bf734171c7ecca7c8c72080783e64acca99c",
+      "bytes": 14890507
+    },
+    {
+      "path": "assets/resources/art/pearl-rhythm-room-continuous.png",
+      "sha256": "5a0b257b67fcda0b03e4c51c6cd0c42b640a4a197b431e7ed100544d855e3497",
+      "bytes": 14862009
+    },
+    {
+      "path": "assets/resources/art/ruby-brass-room-continuous.png",
+      "sha256": "3a6e260a4f70aceb493468550600a177e0f329485807f8fc4d92f48b300f5ae3",
+      "bytes": 15792798
+    },
+    {
+      "path": "assets/resources/art/sapphire-harp-room-continuous.png",
+      "sha256": "0787be44d15560fc57a696877aa34b18c7c94fbcb42496c998ae4724bc9855bb",
+      "bytes": 16881311
+    }
+  ]
+}

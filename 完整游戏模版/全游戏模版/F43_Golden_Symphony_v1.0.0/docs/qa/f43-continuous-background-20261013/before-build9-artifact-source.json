@@ -1,0 +1,339 @@
+{
+  "build": 9,
+  "createdAt": "2026-10-13T11:45:48.305717+08:00",
+  "creatorVersion": "3.8.8",
+  "command": "CocosCreator --project \"$PWD\" --build \"configPath=$PWD/tools/web-mobile-release-build.json\"",
+  "cliExitCode": 36,
+  "logFinishedInSeconds": 26,
+  "note": "Creator reported Finished and emitted a usable artifact. CLI exit was 36; script-worker SIGTERM appears in the log. No zero-exit success or cause is claimed. Global Creator configuration was not edited.",
+  "verifiedArtifacts": [
+    {
+      "path": "build/web-mobile/index.html",
+      "sha256": "4e95d175f277b96e9ac6448d90b34c94f24c8038d516c26399f75b01bfd88881",
+      "bytes": 2191
+    },
+    {
+      "path": "build/web-mobile/application.js",
+      "sha256": "359f85dd922e2568aa991af95a5c356a0102042c8918252987bfbd37f2153eb2",
+      "bytes": 3302
+    }
+  ],
+  "source": [
+    {
+      "path": "assets/scripts/LocalCoinStore.ts",
+      "sha256": "aae60255c00707df92d9e16d79672e15b091578d6c14706d034a6e963df04a6b"
+    },
+    {
+      "path": "assets/scripts/audio/AudioManager.ts",
+      "sha256": "8152a8e98edcd3876a07baf19942e95f2692e64cc52bb294249423d621278e30"
+    },
+    {
+      "path": "assets/scripts/audio/AudioPalette.ts",
+      "sha256": "d9f366f25284c97d4cb5ebd9d5c58aa927732f965a39d65fbc0c39f6e915b218"
+    },
+    {
+      "path": "assets/scripts/core/GameBootstrap.ts",
+      "sha256": "644f2a2c13bfcbff432e85970b8d80686e7b08887d4e35d8f84e68df2fcca68a"
+    },
+    {
+      "path": "assets/scripts/core/GameStateMachine.ts",
+      "sha256": "2e677c24e0f9707607cb5d9e092c7ffe38f24cf4c30d14187720d26fd4baebb0"
+    },
+    {
+      "path": "assets/scripts/core/ReleaseConfig.ts",
+      "sha256": "cda46a23d277f2085663a6c75d1caa1f132802d5e416e56227830d298338fc6d"
+    },
+    {
+      "path": "assets/scripts/core/SceneRouter.ts",
+      "sha256": "8763652b42e1ced85cfa4b57779e33155d092d3336f7061fe35e4d6adc40c62d"
+    },
+    {
+      "path": "assets/scripts/core/SecureRNG.ts",
+      "sha256": "1521eb182b499a688baea2dae61c1741233e826462f58e6c4ecada594a7e353d"
+    },
+    {
+      "path": "assets/scripts/core/SeededRNG.ts",
+      "sha256": "af9d0adede0cb24deddaa5c95f6abb88318059093199374f3407b8ce63c7066c"
+    },
+    {
+      "path": "assets/scripts/math/CabinetProfiles.ts",
+      "sha256": "7c508fd0bd7f11daa0e96dc7d74186f3e9ebbdcee0de84eaa3000f228b342592"
+    },
+    {
+      "path": "assets/scripts/math/CoreGame.ts",
+      "sha256": "75dd8eea0ddba949be5f9f1385dea1eadeb90b68e8c083c8127f2e3b92d2254a"
+    },
+    {
+      "path": "assets/scripts/math/EconomyProfile.ts",
+      "sha256": "978567ce1eb82d6a40912b9fe9deb995dd98a576a1395ffec3a4e90ec9db6134"
+    },
+    {
+      "path": "assets/scripts/math/Evaluators.ts",
+      "sha256": "e830e231f055d4c455e594153002b8c0f3e8a6ae52ecb4836127ca336a4eae57"
+    },
+    {
+      "path": "assets/scripts/math/FeatureControllers.ts",
+      "sha256": "4f92c665b576a1bdc8ddb770996a7e581cf2c9b69f24c686e7c310858d1f0661"
+    },
+    {
+      "path": "assets/scripts/math/GameConfigs.ts",
+      "sha256": "f78c34197006f6e93b914295516dcc256795900e3b55d6aafef7ab0fac5a38b6"
+    },
+    {
+      "path": "assets/scripts/math/IndependentCore.ts",
+      "sha256": "09052059b18413d245bae7b8d781e3b66e81905df233436d1d5a4550aeb96eef"
+    },
+    {
+      "path": "assets/scripts/math/NewcomerGuarantee.ts",
+      "sha256": "860d7a56041b1ac124a2c8724d2165c8fb44131c6c2b8acae3cb607c8c3dccb1"
+    },
+    {
+      "path": "assets/scripts/math/PaytableDisplay.ts",
+      "sha256": "cf3d4b33e3e03ae1ce47fcb7c45d4493f6418054ddd4579d20a47f63bff56dd0"
+    },
+    {
+      "path": "assets/scripts/math/PrimaryRuleText.ts",
+      "sha256": "17dac7e20158710ed0799aee98c1036568386bf75d831083f5a4508506091823"
+    },
+    {
+      "path": "assets/scripts/math/PrimaryRuleVariants.ts",
+      "sha256": "4dbf4ff289653926e041632746f381ac8a7703c7bb1626f049aa89339aa45bd5"
+    },
+    {
+      "path": "assets/scripts/math/ResultGenerator.ts",
+      "sha256": "0290b2dcbae928c6e20fc65401390d3cab3bed9dd8d251d38b652b8bd5255293"
+    },
+    {
+      "path": "assets/scripts/math/RoundAwards.ts",
+      "sha256": "3058d0a46f0196dc58cb9c5f26bf5e3ee99681b3aac3ac55df7cd35d7c5fcf1b"
+    },
+    {
+      "path": "assets/scripts/math/RuleGeometry.ts",
+      "sha256": "6f4a92d7dc74bf0aa8a4ae49537d4591fb63c39fddd668e55815db48f07eac21"
+    },
+    {
+      "path": "assets/scripts/math/SignatureFeature.ts",
+      "sha256": "a8e5e10e602da87e68074bbf6a09e93d851bccc2ea1f29b3e91044b2ddd298ef"
+    },
+    {
+      "path": "assets/scripts/math/paylines.ts",
+      "sha256": "3b6968da15e1ef52045becdee55a49631eafb21deed668fc969ad9eeda0453c2"
+    },
+    {
+      "path": "assets/scripts/math/types.ts",
+      "sha256": "fd7477311ba6150303e871469ecd09fa3107235ab752044ca9ea862c3db4d7c5"
+    },
+    {
+      "path": "assets/scripts/reels/CoreReelGuide.ts",
+      "sha256": "c39cfbe25cae1e01e6b556d2445bf25cc56d571f3f6f233e3c88bd8024fb9d19"
+    },
+    {
+      "path": "assets/scripts/reels/ReelMotion.ts",
+      "sha256": "a4d59e75247ae3a0fdc9d2ca2af4552d4bdfb7dc8178e3635545ab727eb1a9d5"
+    },
+    {
+      "path": "assets/scripts/reels/ReelStripConfig.ts",
+      "sha256": "fc64d15491a0707a2884bed4619a2abfeaceed4a14ef331732f280c184bfdd1b"
+    },
+    {
+      "path": "assets/scripts/reels/SalonReels.ts",
+      "sha256": "2b18ad1223d110e2f533be426b0cc617e40d660b63292560b2513ce3968081ff"
+    },
+    {
+      "path": "assets/scripts/services/AchievementService.ts",
+      "sha256": "df2accca5314b98bb66a2665e307372c5ffef16f2a949e1eafb7cb5c6cc6238c"
+    },
+    {
+      "path": "assets/scripts/services/AppleSignInService.ts",
+      "sha256": "bbe02573b2a95f079d498f700d11fc88625ed4475064bb583b3354174d8586f7"
+    },
+    {
+      "path": "assets/scripts/services/AuthService.ts",
+      "sha256": "1d6ab5c522e0134b80b80d010db81a72dea9f1ab15ed3291c53d9eef3036ec5b"
+    },
+    {
+      "path": "assets/scripts/services/CredentialService.ts",
+      "sha256": "1b599f72a9bcc73a508ff2ac3f48ae9447f5d1680d663b26da05845cafa5117e"
+    },
+    {
+      "path": "assets/scripts/services/EconomyService.ts",
+      "sha256": "cf7421e436b54e5eb11f977ce8400726a83629cd3630b991b78d330ef4f9ef36"
+    },
+    {
+      "path": "assets/scripts/services/ExpeditionService.ts",
+      "sha256": "483d1ebbc092f4ecdd6fd87211187cc1a37dacaa51f474a31af840efda80f7f1"
+    },
+    {
+      "path": "assets/scripts/services/LocalAuthService.ts",
+      "sha256": "2c1c4f76e62719db4c462ed664d37b2af9ed15319fb308e66a9180c66d6e4102"
+    },
+    {
+      "path": "assets/scripts/services/MailService.ts",
+      "sha256": "0411997051b07c87eb0f31875dc7e9c26d093b875611630e95773f4cec8fa2ac"
+    },
+    {
+      "path": "assets/scripts/services/PlayerProfileService.ts",
+      "sha256": "84ac15807605d666728e7485a0120d53e48384c7e48265cb7e5b11c4ecc1bbab"
+    },
+    {
+      "path": "assets/scripts/services/ProductionApiClient.ts",
+      "sha256": "587ec229475bfcf196924d61df915451daab074a0ad2fe6ee512164ccf7a7d69"
+    },
+    {
+      "path": "assets/scripts/services/RankService.ts",
+      "sha256": "de13c0f4dfd03cca9629a3658ca41262c5832ba14c187ab6dd2f012019c86049"
+    },
+    {
+      "path": "assets/scripts/services/RedDotManager.ts",
+      "sha256": "2c3431cea644ebbe52a97af878cafac26f5cff22934835112c42b7be4df92ca2"
+    },
+    {
+      "path": "assets/scripts/services/RemoteAuthService.ts",
+      "sha256": "e5aa057896e83cbce08e5e9d54d35cffbbd0afdd675f7d90cdd3b5152aabe292"
+    },
+    {
+      "path": "assets/scripts/services/RemoteSpinJournal.ts",
+      "sha256": "0b8064779f3033264b2bcf44273d26af2f90b68242348048da93f98ef6bc325c"
+    },
+    {
+      "path": "assets/scripts/services/RewardService.ts",
+      "sha256": "034ee6f58219520c3cc42eda18b065c4c897c56aca7738990af54e7e181ad5ff"
+    },
+    {
+      "path": "assets/scripts/services/SaveService.ts",
+      "sha256": "edf89f428d3d3064873a6306653dbb25a8205d86c85c22ac1cac593434365521"
+    },
+    {
+      "path": "assets/scripts/services/StoreService.ts",
+      "sha256": "c04f87e2f6704cb3fe5ba9fad293c8fe7df903865f89d5a01d79ef3b9c22e496"
+    },
+    {
+      "path": "assets/scripts/ui/AureliaApp.ts",
+      "sha256": "38d8ba9337ecb910d00765903b181fbb941de7f42f6878e65f911f7d85d55079"
+    },
+    {
+      "path": "assets/scripts/ui/CabinetGeometry.ts",
+      "sha256": "187a9b0eed7dc2380f38ba5a02ab0cc0d3a0bb70e4ccff63458a6d56eca2b3e8"
+    },
+    {
+      "path": "assets/scripts/ui/CabinetToolText.ts",
+      "sha256": "9feda7ecd8d6a329aceabc73d9d1254838e41804d745af0224d7b41d05bd2d82"
+    },
+    {
+      "path": "assets/scripts/ui/CabinetTranslations.ts",
+      "sha256": "4ec398752f50ff3b90d56228ab68c79c13d70a49df505487b115890b58ca8b9f"
+    },
+    {
+      "path": "assets/scripts/ui/ClockworkLocale.ts",
+      "sha256": "66cbf518c989e2bce7a75d2df798c051f2607276bb24eacd64fececceb52d8b8"
+    },
+    {
+      "path": "assets/scripts/ui/FestivalLocale.ts",
+      "sha256": "684c3cc7cb120d095df865bc5eec448800de6df699d23119694e0766515a439f"
+    },
+    {
+      "path": "assets/scripts/ui/Language.ts",
+      "sha256": "2ae869a053f1d2c996270e6b6ab107b7c61970f4916273d65e9bd2d74c0c7fe6"
+    },
+    {
+      "path": "assets/scripts/ui/LegalContent.ts",
+      "sha256": "7dc57becdb96dbcb421572f8e820891662e67828216491a8a571b7db071b382d"
+    },
+    {
+      "path": "assets/scripts/ui/PrimaryTranslations.ts",
+      "sha256": "d875b242c2764e0f7fb283d739065ebce2b49742f4aec4f4a1c86b84b1dd7f5e"
+    },
+    {
+      "path": "assets/scripts/ui/RuleHelp.ts",
+      "sha256": "ca2aa82d4c60507b5d916a39fc0af41f5b66a9474cc29f8e496675a1670b4be9"
+    },
+    {
+      "path": "assets/scripts/ui/RulePages.ts",
+      "sha256": "190023ee3842f535bf2804003ba2ddd3ff7ecf5df1aa0e062e43d6bc2668aa2c"
+    },
+    {
+      "path": "assets/scripts/ui/RuleText.ts",
+      "sha256": "c37ae80f5791f7a63ebee3b58d1de9518750304ee9645f74433ca4554471aed0"
+    },
+    {
+      "path": "assets/scripts/ui/SafeAreaAdapter.ts",
+      "sha256": "f17f8cf2f0df60e861fa6982ba08719b09a5d2ad9d808d0586aa6e37e431646e"
+    },
+    {
+      "path": "assets/scripts/ui/SalonArt.ts",
+      "sha256": "d65ad5e2d5384cd654b73c634a7c05ac85eb1c6126fbf3f89fe374d35d514547"
+    },
+    {
+      "path": "assets/scripts/ui/SymbolCrop.ts",
+      "sha256": "7921af4d263b233507ccf97d5a1909c3f75f257db59d19c30be7b413d6d202f2"
+    },
+    {
+      "path": "assets/scripts/ui/SymphonyLocale.ts",
+      "sha256": "159b74e329ff8e1a66995ee070f2a0a850283a5f82fe751b28c62bd28ae56380"
+    },
+    {
+      "path": "assets/scripts/ui/TextFit.ts",
+      "sha256": "5ec0b9ae649a0671e1e96c1f7231b9642304572ba0da5320a9a85efedb3eb5d8"
+    },
+    {
+      "path": "assets/scripts/ui/UiLocaleAdditions.ts",
+      "sha256": "fabc4bff872f4dfc5fac2e90ed237cfad39eb1a56483bc615f30c85fb9f031c8"
+    },
+    {
+      "path": "assets/scripts/vfx/AwardChoreography.ts",
+      "sha256": "e81c6c57d4b907d1fa4949a95bc985129327c997bd3e569a9f44e06a25de7f20"
+    },
+    {
+      "path": "assets/scripts/vfx/AwardDigits.ts",
+      "sha256": "3daf0e0917369fbe11a63c0d55c8c81b62a110ea1870be57ddbc3cdf434c4764"
+    },
+    {
+      "path": "assets/scripts/vfx/AwardStageLayout.ts",
+      "sha256": "e30261dfe10f2db081f4a419502ea5016d8ef3372ac79d7e07be86cf3bdb2df2"
+    },
+    {
+      "path": "assets/scripts/vfx/AwardTiming.ts",
+      "sha256": "03f42de97447977db78b677734272d5e8de67be8c618e2422d5473ab2de28ea7"
+    },
+    {
+      "path": "assets/scripts/vfx/CabinetGuardian.ts",
+      "sha256": "c47d0ff213a396415b559e8129bc8ef58436a2ef561ddf9f39a7a54c161d7881"
+    },
+    {
+      "path": "assets/scripts/vfx/CanopyLeaves.ts",
+      "sha256": "bf8580ad24805f2ca0777a5442864990242ff59394a991116a802ca9c3efccda"
+    },
+    {
+      "path": "assets/scripts/vfx/FestivalArrival.ts",
+      "sha256": "95216eec9a118f6b727ac3f9ffbdb05120b2df0d6b6aa62cdec590a24d6d47ad"
+    },
+    {
+      "path": "assets/scripts/vfx/GuardianEyelids.ts",
+      "sha256": "876b5843e41cb059f43b8f3b794502af73a8564c19838170a430b4e3e23d4c51"
+    },
+    {
+      "path": "assets/scripts/vfx/GuardianMesh.ts",
+      "sha256": "61bfb0be785f1486b4d6de98f569285a88cdc6885506e89bc6fda803a1c2762a"
+    },
+    {
+      "path": "assets/scripts/vfx/HallSelectionAccent.ts",
+      "sha256": "02d3dac3f4590c9bc42caefbd459b2ef45b82bd8d3cbd5f294649241bf416d8d"
+    },
+    {
+      "path": "assets/scripts/vfx/OrdinaryWinStage.ts",
+      "sha256": "abc5f785a1ce6cd5ede70ada462d46ebec9edc7fd08a7ca86858ad2b6946fb9a"
+    },
+    {
+      "path": "assets/scripts/vfx/SalonAtmosphere.ts",
+      "sha256": "a13e6170d5e0fc5033713f61b30d8ff93e33d7c0ae09380c6872d30efecc9fcc"
+    },
+    {
+      "path": "assets/scripts/vfx/SalonWinStage.ts",
+      "sha256": "a3cdfcff5501579b6ab564501742cfaa673e676ea37f6b3fd9f30389455de8b2"
+    },
+    {
+      "path": "assets/scripts/vfx/WinPresentation.ts",
+      "sha256": "c2318bc5de63b3fea276407ee5abe5ffb36d91a2fbb1c79e83695d8dfc780f8e"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "version": "f43-concert-awards-20261013",
+  "build": {
+    "creatorVersion": "3.8.8",
+    "logFinishedInSeconds": 15,
+    "cliExitCode": 36,
+    "note": "Creator emitted a build and reported Finished in 15s, then exited 36 with script-worker SIGTERM. Browser artifact was validated separately. No zero-exit or root cause is claimed.",
+    "evidence": "build11.log",
+    "sourceArtifactEvidence": "build11-artifact-source.json"
+  },
+  "date": "2026-10-13",
+  "scope": "Cocos Creator 3.8.8 desktop browser preview; no native device or subjective audio listening claim",
+  "changes": {
+    "audioVersion": "concert-ensemble-v4-20261013",
+    "renderedWavFiles": 90,
+    "currentAudioByteIdenticalToF40": 0,
+    "themes": [
+      "Hall: piano promenade",
+      "Golden Strings: string waltz",
+      "Sapphire Harp: harp in 6/8",
+      "Ruby Brass: warm lower-register brass swing",
+      "Pearl Rhythm: mallet and percussion ensemble"
+    ],
+    "awardResolutionCrestsSeconds": [
+      0.2,
+      1.05,
+      1.9
+    ],
+    "effects": [
+      "Three timed waves of gold firework textures behind the guardian",
+      "Twelve highlights following the cabinet metal frame",
+      "Two material reflections restricted to gold trim",
+      "Longer tier-dependent coin stream, burst and encore",
+      "Title reflection synchronized to the award score"
+    ],
+    "preserved": [
+      "Single opaque continuous room sprite",
+      "Fixed guardian body with local limb and eyelid movement",
+      "Probability and payment/settlement rules",
+      "Clear title, amount and wallet protection regions"
+    ]
+  },
+  "checks": {
+    "clientTypecheck": {
+      "passed": true,
+      "evidence": "typecheck.log"
+    },
+    "awardContracts": {
+      "passed": true,
+      "evidence": "award-tests.log"
+    },
+    "awardLayouts": {
+      "count": 32,
+      "errors": 0,
+      "modes": 4,
+      "tiers": [
+        "BIG",
+        "SUPER",
+        "MEGA",
+        "EPIC"
+      ],
+      "viewports": [
+        "320x568",
+        "390x844"
+      ],
+      "fixture": "Presentation-only; 60-second hold for layout capture, not production timing or probability",
+      "evidence": "awards/award-audit.json"
+    },
+    "continuousPaidDebugRounds": [
+      {
+        "mode": "golden-strings",
+        "bet": 80,
+        "balanceBefore": 27000,
+        "win": 2000,
+        "balanceAfter": 28920,
+        "roundsBefore": 0,
+        "roundsAfter": 1,
+        "stateAfter": "idle",
+        "audioTracks": 1
+      },
+      {
+        "mode": "sapphire-harp",
+        "bet": 80,
+        "balanceBefore": 27000,
+        "win": 2000,
+        "balanceAfter": 28920,
+        "roundsBefore": 0,
+        "roundsAfter": 1,
+        "stateAfter": "idle",
+        "audioTracks": 1
+      },
+      {
+        "mode": "ruby-brass",
+        "bet": 80,
+        "balanceBefore": 27000,
+        "win": 2233,
+        "balanceAfter": 29153,
+        "roundsBefore": 0,
+        "roundsAfter": 1,
+        "stateAfter": "idle",
+        "audioTracks": 1
+      },
+      {
+        "mode": "pearl-rhythm",
+        "bet": 80,
+        "balanceBefore": 27000,
+        "win": 2000,
+        "balanceAfter": 28920,
+        "roundsBefore": 0,
+        "roundsAfter": 1,
+        "stateAfter": "idle",
+        "audioTracks": 1
+      }
+    ],
+    "motionErrors": [],
+    "audioLifecycle": {
+      "checks": 31,
+      "errors": 0,
+      "evidence": "audio-runtime/runtime-audit.json"
+    },
+    "interactionScenarios": {
+      "checks": 3,
+      "errors": 0,
+      "evidence": "interactions/interaction-audit.json"
+    },
+    "pcmSignal": {
+      "files": 90,
+      "clippedSamples": 0,
+      "loopSeams": 6,
+      "evidence": "audio/signal-audit.json"
+    },
+    "recordedMix": {
+      "files": [
+        {
+          "file": "golden-strings-spin-award.webm",
+          "seconds": 19.56,
+          "channels": 2,
+          "sampleRate": 48000,
+          "peak": 0.3738240897655487,
+          "rms": 0.05885762410915832,
+          "clippedSamples": 0,
+          "secondsWithSignal": 20
+        },
+        {
+          "file": "pearl-rhythm-spin-award.webm",
+          "seconds": 19.44,
+          "channels": 2,
+          "sampleRate": 48000,
+          "peak": 0.39375409483909607,
+          "rms": 0.059277385219352434,
+          "clippedSamples": 0,
+          "secondsWithSignal": 20
+        },
+        {
+          "file": "ruby-brass-spin-award.webm",
+          "seconds": 23.82,
+          "channels": 2,
+          "sampleRate": 48000,
+          "peak": 0.36790749430656433,
+          "rms": 0.05488841681196884,
+          "clippedSamples": 0,
+          "secondsWithSignal": 24
+        },
+        {
+          "file": "sapphire-harp-spin-award.webm",
+          "seconds": 19.44,
+          "channels": 2,
+          "sampleRate": 48000,
+          "peak": 0.3795751631259918,
+          "rms": 0.05880043588670057,
+          "clippedSamples": 0,
+          "secondsWithSignal": 20
+        }
+      ],
+      "evidence": "motion/recorded-audio-audit.json"
+    },
+    "sourceFrameTiming": [
+      {
+        "video": "direct-canvas/golden-strings-spin-award.webm",
+        "decodedFrames": 580,
+        "endSeconds": 19.533,
+        "maxSourceGapSeconds": 0.151,
+        "gapsOver100ms": 2,
+        "method": "sequential original recorded frames, no interpolation"
+      },
+      {
+        "video": "direct-canvas/pearl-rhythm-spin-award.webm",
+        "decodedFrames": 569,
+        "endSeconds": 19.448,
+        "maxSourceGapSeconds": 0.173,
+        "gapsOver100ms": 3,
+        "method": "sequential original recorded frames, no interpolation"
+      },
+      {
+        "video": "direct-canvas/ruby-brass-spin-award.webm",
+        "decodedFrames": 697,
+        "endSeconds": 23.798,
+        "maxSourceGapSeconds": 0.17,
+        "gapsOver100ms": 5,
+        "method": "sequential original recorded frames, no interpolation"
+      },
+      {
+        "video": "direct-canvas/sapphire-harp-spin-award.webm",
+        "decodedFrames": 578,
+        "endSeconds": 19.432000000000002,
+        "maxSourceGapSeconds": 0.151,
+        "gapsOver100ms": 2,
+        "method": "sequential original recorded frames, no interpolation"
+      }
+    ]
+  },
+  "visualReview": {
+    "observed": "Four complete sequential source-frame contact sheets and all 32 award captures reviewed via four overview sheets; no interpolation",
+    "evidence": [
+      "motion/golden-strings-spin-award-sequence.jpg",
+      "motion/sapphire-harp-spin-award-sequence.jpg",
+      "motion/ruby-brass-spin-award-sequence.jpg",
+      "motion/pearl-rhythm-spin-award-sequence.jpg",
+      "awards/review-320x568-1.jpg",
+      "awards/review-320x568-2.jpg",
+      "awards/review-390x844-1.jpg",
+      "awards/review-390x844-2.jpg"
+    ]
+  },
+  "limits": [
+    "Localhost debug SUPER uses real payment and settlement but does not demonstrate natural win probability.",
+    "Award fixtures extend the hold only for screenshots. Natural exit is checked separately.",
+    "Original browser recordings contain maximum source-frame gaps of 151–173 ms; these are not native device performance results.",
+    "PCM and recorded-mix checks do not establish subjective listening quality or phone audio output.",
+    "Creator reported a completed artifact but exited 36 with script-worker SIGTERM; no zero exit or root cause is claimed."
+  ],
+  "git": {
+    "committed": false,
+    "pushed": false
+  }
+}

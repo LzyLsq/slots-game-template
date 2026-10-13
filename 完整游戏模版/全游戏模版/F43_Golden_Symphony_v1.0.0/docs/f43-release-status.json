@@ -1,0 +1,30 @@
+{
+  "project": "F43_Golden_Symphony_v1.0.0",
+  "reviewedOn": "2026-10-13",
+  "engine": "Cocos Creator 3.8.8",
+  "readyForSubmission": false,
+  "localTemplateComplete": true,
+  "requiresImplementation": [
+    "Executable iOS Sign in with Apple authorization bridge for the defined native contract",
+    "Executable iOS StoreKit 2 purchase, transaction observer and finish bridge for the defined native contract",
+    "Publisher identity, product identifiers, final legal content and hosted HTTPS support/privacy URLs",
+    "Configured and deployed production API/PostgreSQL service, Apple identity/transaction verification and credentials"
+  ],
+  "requiresAcceptance": [
+    "iOS device rendering, touch, audio, memory and sustained performance",
+    "Signed native build, Apple login and account-deletion flows",
+    "StoreKit Sandbox/TestFlight purchase, duplicate notifications, refund and interrupted-round recovery",
+    "Production service, privacy declarations and asset/sample rights review",
+    "App Store submission and actual review decision"
+  ],
+  "implementedBoundaries": [
+    "Cocos scenes and game logic, local debug account/economy with explicit service availability",
+    "Remote auth/wallet/round/reward/rank/profile API clients and source contracts",
+    "Server Apple identity/transaction verification paths and persistent PostgreSQL schema"
+  ],
+  "notes": [
+    "Browser captures and source tests do not establish native executable integration or production operation.",
+    "Game art was commissioned through local CC Switch; music uses original event scores rendered with a disclosed sample library. Final sample clearance remains separate.",
+    "No App Store approval is claimed; no Git push was requested for F43."
+  ]
+}

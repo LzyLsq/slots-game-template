@@ -1,0 +1,473 @@
+{
+  "art": {
+    "currentFiles": 129,
+    "byteIdenticalFiles": 1,
+    "differentFiles": 128,
+    "identical": [
+      {
+        "f43": "assets/resources/art/apple-mark.png",
+        "baselineFiles": [
+          "assets/resources/art/apple-mark.png"
+        ],
+        "sha256": "45e03c5728d446343ad64517f434df7d47b92f1119eeb0404c1a83968f8dc148"
+      }
+    ]
+  },
+  "audio": {
+    "currentFiles": 90,
+    "byteIdenticalFiles": 0,
+    "differentFiles": 90,
+    "identical": [],
+    "reviewedOn": "2026-10-13",
+    "version": "concert-ensemble-v4-20261013",
+    "method": "SHA-256 of all current WAVs against every F40 WAV, regardless of filename"
+  },
+  "reviewedOn": "2026-10-13",
+  "scope": "Initial art baseline (before four continuous-room additions) plus current concert audio comparison; initial audio comparison retained separately.",
+  "notes": [
+    "The only identical visual is the standard Apple platform mark. All 128 theme raster assets differ from the F40 baseline.",
+    "Concert backgrounds and award scores have scene-specific arrangements. All 90 WAV files were re-rendered with concert-ensemble-v4-20261013; some internally authored tactile cue motifs or aliases remain conceptually inherited. Waveform differences do not imply every motif is newly composed.",
+    "Sample provenance and final rights clearance remain separate from composition authorship."
+  ],
+  "initialAudioComparison": {
+    "reviewedOn": "2026-10-13",
+    "currentFiles": 90,
+    "byteIdenticalFiles": 53,
+    "differentFiles": 37,
+    "identical": [
+      {
+        "f43": "assets/resources/audio/award-accent-pearl-rhythm.wav",
+        "baselineFiles": [
+          "assets/resources/audio/award-accent-jade-dragon.wav"
+        ],
+        "sha256": "a54c06b1eeeccd140a557e08fcef303ac50c92f64618c15eb5c65477205bbafe"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-3.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-5.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-3.wav"
+        ],
+        "sha256": "89051975cdb6f4c0403ff18f8f5804fdf682279b7c6c8a23d3346c11b72154a0"
+      },
+      {
+        "f43": "assets/resources/audio/award-accent.wav",
+        "baselineFiles": [
+          "assets/resources/audio/award-accent-jade-dragon.wav"
+        ],
+        "sha256": "a54c06b1eeeccd140a557e08fcef303ac50c92f64618c15eb5c65477205bbafe"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-ruby-brass-1.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-1.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix.wav"
+        ],
+        "sha256": "e9b098d44a89924ef1dd369967cbbe15c4b0bb918d31e4360bc72e21eb9f1991"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-2.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-1.wav",
+          "assets/resources/audio/reel-stop-amber-panda-4.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-1.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-3.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-2.wav"
+        ],
+        "sha256": "a9fb19e85af27651e51ef566cc73cb0c6b9eab0ff74c4638fb62dc9559426b65"
+      },
+      {
+        "f43": "assets/resources/audio/reel-start.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-start.wav"
+        ],
+        "sha256": "a50502b491cc6abe775714e5ef4585aa3a62571af1d5c0cfa5cd614373773932"
+      },
+      {
+        "f43": "assets/resources/audio/win-normal-sapphire-harp.wav",
+        "baselineFiles": [
+          "assets/resources/audio/win-normal-golden-phoenix.wav"
+        ],
+        "sha256": "71e0e48a3e96a71f93209ecf33d95901ec662bc864a9a7ce1df2252a44c1ed18"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-ruby-brass-3.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-3.wav",
+          "assets/resources/audio/reel-stop.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-1.wav"
+        ],
+        "sha256": "270fee80e8aad61d823cb973fceec781e5a80d0e6643be577f451b8ac07edc01"
+      },
+      {
+        "f43": "assets/resources/audio/feature-pearl-rhythm.wav",
+        "baselineFiles": [
+          "assets/resources/audio/feature-jade-dragon.wav"
+        ],
+        "sha256": "ba9533d0ad259770921e7308a30ecc2401736220e145adaf74957b392453ecc6"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-ruby-brass-2.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-2.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-1.wav"
+        ],
+        "sha256": "ea57ae78f0de3cd0d5f229a1d6af00791d453d8d37c1637b8a8f4535628aa02e"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-1.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-3.wav",
+          "assets/resources/audio/reel-stop.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-1.wav"
+        ],
+        "sha256": "270fee80e8aad61d823cb973fceec781e5a80d0e6643be577f451b8ac07edc01"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-5.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-jade-dragon-5.wav"
+        ],
+        "sha256": "4de01b4b1440cdba5dc8c7a4fe5329dbdeb13f0750b151e80bd27337befffb5a"
+      },
+      {
+        "f43": "assets/resources/audio/award-accent-ruby-brass.wav",
+        "baselineFiles": [
+          "assets/resources/audio/award-accent-amber-panda.wav"
+        ],
+        "sha256": "edd6a765cf5f4e6b54674752244a4d96ba5fb9c8c2b5858af9aa2efff930ae16"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-4.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-3.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-3.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-5.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-4.wav"
+        ],
+        "sha256": "405a6d791c4194b0b3aa37e056440907cc53b403bad1bceeb869a686b1376d5d"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-ruby-brass-5.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-5.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-3.wav"
+        ],
+        "sha256": "89051975cdb6f4c0403ff18f8f5804fdf682279b7c6c8a23d3346c11b72154a0"
+      },
+      {
+        "f43": "assets/resources/audio/reel-roll.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-roll.wav"
+        ],
+        "sha256": "152bb2e4bd1ee2de058f5dd22e3654ada2d3ae95bafda1ffd147ac11b884b0de"
+      },
+      {
+        "f43": "assets/resources/audio/coin-collect-pearl-rhythm.wav",
+        "baselineFiles": [
+          "assets/resources/audio/coin-collect-jade-dragon.wav"
+        ],
+        "sha256": "e49760f8dc88282674e2977d69adf460fd19feef9ef52f4b18731fb1e6643e83"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-ruby-brass-4.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-1.wav",
+          "assets/resources/audio/reel-stop-amber-panda-4.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-1.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-3.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-2.wav"
+        ],
+        "sha256": "a9fb19e85af27651e51ef566cc73cb0c6b9eab0ff74c4638fb62dc9559426b65"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-pearl-rhythm-5.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-jade-dragon-5.wav"
+        ],
+        "sha256": "4de01b4b1440cdba5dc8c7a4fe5329dbdeb13f0750b151e80bd27337befffb5a"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-pearl-rhythm-4.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-3.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-3.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-5.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-4.wav"
+        ],
+        "sha256": "405a6d791c4194b0b3aa37e056440907cc53b403bad1bceeb869a686b1376d5d"
+      },
+      {
+        "f43": "assets/resources/audio/win-normal-pearl-rhythm.wav",
+        "baselineFiles": [
+          "assets/resources/audio/win-normal-jade-dragon.wav"
+        ],
+        "sha256": "5708a24282df939168062a9960d4302945b0984301ad0c84eb401fa0cd0e38c3"
+      },
+      {
+        "f43": "assets/resources/audio/award-accent-golden-strings.wav",
+        "baselineFiles": [
+          "assets/resources/audio/award-accent.wav",
+          "assets/resources/audio/award-accent-pearl-qilin.wav"
+        ],
+        "sha256": "84243c5b20571eb943862fb0d8eb975c2e5022cb35403817795225a5764e3cb5"
+      },
+      {
+        "f43": "assets/resources/audio/coin-collect-sapphire-harp.wav",
+        "baselineFiles": [
+          "assets/resources/audio/coin-collect-golden-phoenix.wav"
+        ],
+        "sha256": "20785e529b698d5703913ee6084c1d6d7c7b15c848fa1d34124e6387348f9f1b"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-pearl-rhythm-3.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-5.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-3.wav"
+        ],
+        "sha256": "89051975cdb6f4c0403ff18f8f5804fdf682279b7c6c8a23d3346c11b72154a0"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-pearl-rhythm-2.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-1.wav",
+          "assets/resources/audio/reel-stop-amber-panda-4.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-1.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-3.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-2.wav"
+        ],
+        "sha256": "a9fb19e85af27651e51ef566cc73cb0c6b9eab0ff74c4638fb62dc9559426b65"
+      },
+      {
+        "f43": "assets/resources/audio/feature.wav",
+        "baselineFiles": [
+          "assets/resources/audio/feature-jade-dragon.wav"
+        ],
+        "sha256": "ba9533d0ad259770921e7308a30ecc2401736220e145adaf74957b392453ecc6"
+      },
+      {
+        "f43": "assets/resources/audio/win-normal.wav",
+        "baselineFiles": [
+          "assets/resources/audio/win-normal-jade-dragon.wav"
+        ],
+        "sha256": "5708a24282df939168062a9960d4302945b0984301ad0c84eb401fa0cd0e38c3"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-pearl-rhythm-1.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-3.wav",
+          "assets/resources/audio/reel-stop.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-1.wav"
+        ],
+        "sha256": "270fee80e8aad61d823cb973fceec781e5a80d0e6643be577f451b8ac07edc01"
+      },
+      {
+        "f43": "assets/resources/audio/feature-ruby-brass.wav",
+        "baselineFiles": [
+          "assets/resources/audio/feature-amber-panda.wav"
+        ],
+        "sha256": "1f64b29e4d4896b708bbedfb125a183a84593a82c8372e9fcef3ea2c8272781c"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-golden-strings-2.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-2.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-2.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-4.wav"
+        ],
+        "sha256": "d70f47c92b61e6262bc580e8364021147b2fbe56e3cbc9ba0c5e0ba7d74413da"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-jade-dragon.wav"
+        ],
+        "sha256": "f3d0afff72993ac79dfb3bda0a3a2eea4dca702d9fd84c4d7e9cc8160e30a30d"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-pearl-rhythm.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-jade-dragon.wav"
+        ],
+        "sha256": "f3d0afff72993ac79dfb3bda0a3a2eea4dca702d9fd84c4d7e9cc8160e30a30d"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-golden-strings-3.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-3.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-3.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-5.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-4.wav"
+        ],
+        "sha256": "405a6d791c4194b0b3aa37e056440907cc53b403bad1bceeb869a686b1376d5d"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-golden-strings-1.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-1.wav",
+          "assets/resources/audio/reel-stop-amber-panda-4.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-1.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-3.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-2.wav"
+        ],
+        "sha256": "a9fb19e85af27651e51ef566cc73cb0c6b9eab0ff74c4638fb62dc9559426b65"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-sapphire-harp-4.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-2.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-2.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-4.wav"
+        ],
+        "sha256": "d70f47c92b61e6262bc580e8364021147b2fbe56e3cbc9ba0c5e0ba7d74413da"
+      },
+      {
+        "f43": "assets/resources/audio/feature-golden-strings.wav",
+        "baselineFiles": [
+          "assets/resources/audio/feature-pearl-qilin.wav",
+          "assets/resources/audio/feature.wav"
+        ],
+        "sha256": "0b2cb457ecb6876086e80c4a68100f8231e829b440fa5413c25f1b532832956c"
+      },
+      {
+        "f43": "assets/resources/audio/win-normal-ruby-brass.wav",
+        "baselineFiles": [
+          "assets/resources/audio/win-normal-amber-panda.wav"
+        ],
+        "sha256": "0f645854466f95d6d4ca8e609617894e3e5300836834b98773d6e527d7f4b1ce"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-sapphire-harp-5.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-3.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-3.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-5.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-4.wav"
+        ],
+        "sha256": "405a6d791c4194b0b3aa37e056440907cc53b403bad1bceeb869a686b1376d5d"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-golden-strings-4.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-4.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-4.wav"
+        ],
+        "sha256": "494b33f16955386e82f1d8e34ee3a150c86dc3b6a9e377318a8933e6c952a34c"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-sapphire-harp-1.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-2.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-1.wav"
+        ],
+        "sha256": "ea57ae78f0de3cd0d5f229a1d6af00791d453d8d37c1637b8a8f4535628aa02e"
+      },
+      {
+        "f43": "assets/resources/audio/win-normal-golden-strings.wav",
+        "baselineFiles": [
+          "assets/resources/audio/win-normal.wav",
+          "assets/resources/audio/win-normal-pearl-qilin.wav"
+        ],
+        "sha256": "b4fcdb79b9ace96d1b33345363034dacfbe015ef2020518df2e4fa61646376a5"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-sapphire-harp.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-1.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix.wav"
+        ],
+        "sha256": "e9b098d44a89924ef1dd369967cbbe15c4b0bb918d31e4360bc72e21eb9f1991"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-golden-strings-5.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-5.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-5.wav"
+        ],
+        "sha256": "d30244a98b74190d2ae91ff0a565cf7cd3d26bb4d3f8f2dc03ee042bb898e99d"
+      },
+      {
+        "f43": "assets/resources/audio/ui-touch.wav",
+        "baselineFiles": [
+          "assets/resources/audio/ui-touch.wav"
+        ],
+        "sha256": "f94c876ffab188dd32c0b5a7cd0b36791d3fc793ae51905adaf62fb83a42b7a9"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-sapphire-harp-2.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-golden-phoenix-2.wav"
+        ],
+        "sha256": "3725aafd2d99cf8448b2d8da258100938eda2134e337d0ae1bf69321a2dbee03"
+      },
+      {
+        "f43": "assets/resources/audio/coin-collect-golden-strings.wav",
+        "baselineFiles": [
+          "assets/resources/audio/coin-collect-pearl-qilin.wav",
+          "assets/resources/audio/coin-collect.wav"
+        ],
+        "sha256": "ceb7830d1bb9a3b2b6cf3ae5ead18e31d9df5aa9e7156e5f1642b514808171e8"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-sapphire-harp-3.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-1.wav",
+          "assets/resources/audio/reel-stop-amber-panda-4.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin-1.wav",
+          "assets/resources/audio/reel-stop-golden-phoenix-3.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-2.wav"
+        ],
+        "sha256": "a9fb19e85af27651e51ef566cc73cb0c6b9eab0ff74c4638fb62dc9559426b65"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-golden-strings.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda-3.wav",
+          "assets/resources/audio/reel-stop.wav",
+          "assets/resources/audio/reel-stop-pearl-qilin.wav",
+          "assets/resources/audio/reel-stop-jade-dragon-1.wav"
+        ],
+        "sha256": "270fee80e8aad61d823cb973fceec781e5a80d0e6643be577f451b8ac07edc01"
+      },
+      {
+        "f43": "assets/resources/audio/coin-collect.wav",
+        "baselineFiles": [
+          "assets/resources/audio/coin-collect-jade-dragon.wav"
+        ],
+        "sha256": "e49760f8dc88282674e2977d69adf460fd19feef9ef52f4b18731fb1e6643e83"
+      },
+      {
+        "f43": "assets/resources/audio/coin-collect-ruby-brass.wav",
+        "baselineFiles": [
+          "assets/resources/audio/coin-collect-amber-panda.wav"
+        ],
+        "sha256": "80f1e339b523e058552f7b404fe16111e7980b27464d9218d3e97fb4e4c21596"
+      },
+      {
+        "f43": "assets/resources/audio/reel-stop-ruby-brass.wav",
+        "baselineFiles": [
+          "assets/resources/audio/reel-stop-amber-panda.wav"
+        ],
+        "sha256": "24b4b1f08f84faa9bc65296eb54fd3c25d08df46f2e78bbda2ad7511f47384cd"
+      },
+      {
+        "f43": "assets/resources/audio/award-accent-sapphire-harp.wav",
+        "baselineFiles": [
+          "assets/resources/audio/award-accent-golden-phoenix.wav"
+        ],
+        "sha256": "672039d092d87aa3d4b0fa8ac1fc7fb1634ee2ffba1a4c935d1553df9147a273"
+      },
+      {
+        "f43": "assets/resources/audio/feature-sapphire-harp.wav",
+        "baselineFiles": [
+          "assets/resources/audio/feature-golden-phoenix.wav"
+        ],
+        "sha256": "bb5e5a64bb6aca3abf2804a63813de599bcaa45b061f7325abc87d3fb82216ff"
+      }
+    ],
+    "note": "Initial project comparison, before concert-ensemble-v4-20261013 re-rendering."
+  }
+}

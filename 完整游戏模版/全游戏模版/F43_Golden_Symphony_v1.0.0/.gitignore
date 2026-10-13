@@ -1,0 +1,21 @@
+/library/
+/temp/
+/local/
+/profiles/
+/build/
+/node_modules
+.DS_Store
+.env
+.env.*
+!.env.example
+/art-source/raw/
+/docs/**/*.webm
+/docs/**/*.gif
+__pycache__/
+
+# Keep historical image iterations local; publish the current delivery captures.
+/docs/**/*.png
+/docs/**/*.jpg
+/docs/**/*.jpeg
+!/docs/screenshots/f43-final-20261013/**
+/art-source/room-extension/

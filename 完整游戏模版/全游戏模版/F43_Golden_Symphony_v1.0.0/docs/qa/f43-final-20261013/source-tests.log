@@ -1,0 +1,314 @@
+
+> f43-golden-symphony@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:win-presentation && npm run test:expedition && npm run test:probability
+
+
+> f43-golden-symphony@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-strings": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 183917,
+      "wins": 526,
+      "features": 37,
+      "maxWin": 7432
+    },
+    "sapphire-harp": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 180167,
+      "wins": 635,
+      "features": 35,
+      "maxWin": 4139
+    },
+    "ruby-brass": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 193605,
+      "wins": 332,
+      "features": 309,
+      "maxWin": 8754
+    },
+    "pearl-rhythm": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 168615,
+      "wins": 296,
+      "features": 2,
+      "maxWin": 2292
+    }
+  }
+}
+
+> f43-golden-symphony@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f43-golden-symphony@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f43-golden-symphony@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 40 cabinet/viewport combinations: enlarged glass, essential bounds, symbol crop and breathing room.
+
+> f43-golden-symphony@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts && node --import tsx tools/rule-contract-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+PASS rule contracts: 81 deterministic assertions across 4 genuinely distinct cabinets
+
+> f43-golden-symphony@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+All four feature rule sets translated in all five interface languages.
+
+> f43-golden-symphony@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f43-golden-symphony@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-strings',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 106,
+    featurePaidHits: 104,
+    coreHits: 1522,
+    coreReturn: 0.653537037037037,
+    hits: 1593,
+    sampleReturn: 0.9360259259259259,
+    layoutVariants: 1
+  },
+  {
+    id: 'sapphire-harp',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 110,
+    featurePaidHits: 110,
+    coreHits: 1846,
+    coreReturn: 0.7440722222222222,
+    hits: 1921,
+    sampleReturn: 0.9228388888888889,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-brass',
+    family: 'cluster-avalanche',
+    columns: 4,
+    rows: 4,
+    spins: 3000,
+    features: 882,
+    featurePaidHits: 177,
+    coreHits: 882,
+    coreReturn: 0.439162962962963,
+    hits: 954,
+    sampleReturn: 0.8957555555555555,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-rhythm',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 14,
+    featurePaidHits: 10,
+    coreHits: 877,
+    coreReturn: 0.946324074074074,
+    hits: 886,
+    sampleReturn: 0.9590462962962963,
+    layoutVariants: 1
+  }
+]
+
+> f43-golden-symphony@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-strings',
+    core: 'lines',
+    feature: 'sticky-free',
+    samples: 6000,
+    features: 208,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'sapphire-harp',
+    core: 'ways',
+    feature: 'coin-vault',
+    samples: 6000,
+    features: 249,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'ruby-brass',
+    core: 'clusters',
+    feature: 'scatter-cascade',
+    samples: 6000,
+    features: 1790,
+    motions: [ 'drop' ]
+  },
+  {
+    id: 'pearl-rhythm',
+    core: 'lines',
+    feature: 'mystery-free',
+    samples: 6000,
+    features: 35,
+    motions: [ 'respin', 'transform' ]
+  }
+]
+
+> f43-golden-symphony@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-strings',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 106,
+    featurePaidHits: 104,
+    coreHits: 1522,
+    coreReturn: 0.653537037037037,
+    hits: 1593,
+    sampleReturn: 0.9360259259259259,
+    layoutVariants: 1
+  },
+  {
+    id: 'sapphire-harp',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 110,
+    featurePaidHits: 110,
+    coreHits: 1846,
+    coreReturn: 0.7440722222222222,
+    hits: 1921,
+    sampleReturn: 0.9228388888888889,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-brass',
+    family: 'cluster-avalanche',
+    columns: 4,
+    rows: 4,
+    spins: 3000,
+    features: 882,
+    featurePaidHits: 177,
+    coreHits: 882,
+    coreReturn: 0.439162962962963,
+    hits: 954,
+    sampleReturn: 0.8957555555555555,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-rhythm',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 14,
+    featurePaidHits: 10,
+    coreHits: 877,
+    coreReturn: 0.946324074074074,
+    hits: 886,
+    sampleReturn: 0.9590462962962963,
+    layoutVariants: 1
+  }
+]
+
+> f43-golden-symphony@1.0.0 test:win-presentation
+> node --import tsx tools/win-presentation-test.ts
+
+PASS strict charged-bet boundaries, retained tiers, translated captions and cabinet-anchored award text across phone proportions.
+PASS all three coin layers across four tiers and cabinets: full rotated bounds clear every reading/control band; both volleys finish before exit.
+PASS paired light crests after early and automatic reveals; all opacity values remain in the render range.
+PASS measured count, genuine tier upgrades, bounded title accents and integer payout motion.
+PASS shared musical impact markers, two material crests and complete light decay before collection.
+
+> f43-golden-symphony@1.0.0 test:expedition
+> node --import tsx tools/expedition-test.ts
+
+PASS repertoire: three act gates, settlement-only progress, duplicate claims, reload and midnight persistence, account isolation, capped ledger and pending refund.
+
+> f43-golden-symphony@1.0.0 test:probability
+> node --import tsx tools/probability-test.ts && node --import tsx tools/exact-panda-audit.ts
+
+PASS connected groups, WILD substitution, single ownership, 16489 cascade boards, stake-independent grids/features.
+{
+  "gameId": "pearl-rhythm",
+  "combinations": 148877,
+  "triggers": 729,
+  "featureTriggerRate": 0.004896659658644384,
+  "payoutScale": 1.5913,
+  "recommendedScale": 1.5913,
+  "recommendedMaxError": 0.0008008280563319703,
+  "method": "Exact single 3×3 board stops, six uniform mystery replacements, five independently rounded lines; three free spins and no retriggers.",
+  "results": [
+    {
+      "bet": 30,
+      "baseRtp": 0.9440936701661998,
+      "featureRtp": 0.016314348962979307,
+      "rtp": 0.9604080191291792,
+      "difference": 0.0004080191291792046
+    },
+    {
+      "bet": 80,
+      "baseRtp": 0.9429596243879176,
+      "featureRtp": 0.016297794693250326,
+      "rtp": 0.9592574190811679,
+      "difference": -0.0007425809188320587
+    },
+    {
+      "bet": 180,
+      "baseRtp": 0.9429027168587343,
+      "featureRtp": 0.01629645508493375,
+      "rtp": 0.959199171943668,
+      "difference": -0.0008008280563319703
+    },
+    {
+      "bet": 400,
+      "baseRtp": 0.943745843884549,
+      "featureRtp": 0.016310021377156203,
+      "rtp": 0.9600558652617052,
+      "difference": 0.00005586526170520134
+    },
+    {
+      "bet": 500,
+      "baseRtp": 0.9435681132747167,
+      "featureRtp": 0.01630709378138106,
+      "rtp": 0.9598752070560977,
+      "difference": -0.00012479294390221884
+    },
+    {
+      "bet": 900,
+      "baseRtp": 0.9433911513829836,
+      "featureRtp": 0.016304288812871562,
+      "rtp": 0.9596954401958552,
+      "difference": -0.00030455980414478834
+    }
+  ]
+}
