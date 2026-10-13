@@ -1,0 +1,900 @@
+{
+  "checks": [
+    "golden-otter: 33 prepared clips",
+    "golden-otter: counting score audible",
+    "golden-otter: background pauses all music",
+    "golden-otter: live score resumes at saved position",
+    "golden-otter: early reveal uses cadence and retires count",
+    "golden-otter: duplicate reveal does not restart music",
+    "golden-otter: effect mute stops both award voices",
+    "golden-otter: unmute does not replay an old award",
+    "golden-otter: fixture leaves one room loop",
+    "golden-otter: one actual bet and one settlement",
+    "golden-otter: wallet and round state conserved",
+    "golden-otter: actual paid round traverses count reveal and exit",
+    "golden-otter: paid exit leaves no award voices or modal",
+    "moon-rabbit: 33 prepared clips",
+    "moon-rabbit: counting score audible",
+    "moon-rabbit: background pauses all music",
+    "moon-rabbit: live score resumes at saved position",
+    "moon-rabbit: early reveal uses cadence and retires count",
+    "moon-rabbit: duplicate reveal does not restart music",
+    "moon-rabbit: effect mute stops both award voices",
+    "moon-rabbit: unmute does not replay an old award",
+    "moon-rabbit: fixture leaves one room loop",
+    "moon-rabbit: one actual bet and one settlement",
+    "moon-rabbit: wallet and round state conserved",
+    "moon-rabbit: actual paid round traverses count reveal and exit",
+    "moon-rabbit: paid exit leaves no award voices or modal",
+    "star-fox: 33 prepared clips",
+    "star-fox: counting score audible",
+    "star-fox: background pauses all music",
+    "star-fox: live score resumes at saved position",
+    "star-fox: early reveal uses cadence and retires count",
+    "star-fox: duplicate reveal does not restart music",
+    "star-fox: effect mute stops both award voices",
+    "star-fox: unmute does not replay an old award",
+    "star-fox: fixture leaves one room loop",
+    "star-fox: one actual bet and one settlement",
+    "star-fox: wallet and round state conserved",
+    "star-fox: actual paid round traverses count reveal and exit",
+    "star-fox: paid exit leaves no award voices or modal",
+    "cloud-elephant: 33 prepared clips",
+    "cloud-elephant: counting score audible",
+    "cloud-elephant: background pauses all music",
+    "cloud-elephant: live score resumes at saved position",
+    "cloud-elephant: early reveal uses cadence and retires count",
+    "cloud-elephant: duplicate reveal does not restart music",
+    "cloud-elephant: effect mute stops both award voices",
+    "cloud-elephant: unmute does not replay an old award",
+    "cloud-elephant: fixture leaves one room loop",
+    "cloud-elephant: one actual bet and one settlement",
+    "cloud-elephant: wallet and round state conserved",
+    "cloud-elephant: actual paid round traverses count reveal and exit",
+    "cloud-elephant: paid exit leaves no award voices or modal"
+  ],
+  "rounds": [
+    {
+      "mode": "golden-otter",
+      "checks": [
+        "33 prepared clips",
+        "counting score audible",
+        "background pauses all music",
+        "live score resumes at saved position",
+        "early reveal uses cadence and retires count",
+        "duplicate reveal does not restart music",
+        "effect mute stops both award voices",
+        "unmute does not replay an old award",
+        "fixture leaves one room loop",
+        "one actual bet and one settlement",
+        "wallet and round state conserved",
+        "actual paid round traverses count reveal and exit",
+        "paid exit leaves no award voices or modal"
+      ],
+      "trace": [
+        {
+          "phase": "score",
+          "at": 15672.299999713898,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.06569999980926511,
+            "volume": 0.30730398859298674,
+            "clip": "win-epic"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.20432007494496246
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "hide",
+          "at": 15672.900000095367,
+          "hidden": true,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": false,
+            "time": 0.06609999990463145,
+            "volume": 0.30730398859298674,
+            "clip": "win-epic"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": false,
+              "volume": 0.20432007494496246
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "show",
+          "at": 15794.400000095367,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.06609999990463145,
+            "volume": 0.30730398859298674,
+            "clip": "win-epic"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.20432007494496246
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "reveal",
+          "at": 15955,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": true,
+          "score": {
+            "playing": false,
+            "time": 0,
+            "volume": 0,
+            "clip": "win-epic"
+          },
+          "cadence": {
+            "playing": true,
+            "time": 0.16040000009536826,
+            "volume": 0.5443904805694784,
+            "clip": "win-epic-resolve"
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.08209248914178381
+            }
+          ],
+          "modal": false,
+          "busy": false
+        }
+      ],
+      "before": {
+        "balance": 27000,
+        "played": 0,
+        "ids": []
+      },
+      "after": {
+        "balance": 38920,
+        "played": 1,
+        "pending": false,
+        "at": 30370.599999904633,
+        "hidden": false,
+        "celebrating": false,
+        "resolved": true,
+        "score": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic"
+        },
+        "cadence": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic-resolve"
+        },
+        "music": [
+          {
+            "playing": false,
+            "volume": 0
+          },
+          {
+            "playing": true,
+            "volume": 0.405477658398172
+          }
+        ],
+        "modal": false,
+        "busy": false
+      },
+      "transactions": [
+        {
+          "id": "tx-f4d91817b0a7bfdd4f823c5f893cfe21",
+          "type": "spin-win",
+          "amount": 12000
+        },
+        {
+          "id": "tx-67a0b3193c7fdfb5cf028f14533e3d8f",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "events": [
+        {
+          "event": "count",
+          "ratio": 150,
+          "at": 20556.599999904633,
+          "clip": "win-epic"
+        },
+        {
+          "event": "reveal",
+          "at": 25858.599999904633,
+          "clip": "win-epic-resolve"
+        },
+        {
+          "event": "close",
+          "seconds": 0.64,
+          "at": 28370.099999904633
+        }
+      ],
+      "scope": "In-page audio fixtures plus real local spin controller with QA forced EPIC; RNG and economic rules unchanged. Not native interruption or speaker listening."
+    },
+    {
+      "mode": "moon-rabbit",
+      "checks": [
+        "33 prepared clips",
+        "counting score audible",
+        "background pauses all music",
+        "live score resumes at saved position",
+        "early reveal uses cadence and retires count",
+        "duplicate reveal does not restart music",
+        "effect mute stops both award voices",
+        "unmute does not replay an old award",
+        "fixture leaves one room loop",
+        "one actual bet and one settlement",
+        "wallet and round state conserved",
+        "actual paid round traverses count reveal and exit",
+        "paid exit leaves no award voices or modal"
+      ],
+      "trace": [
+        {
+          "phase": "score",
+          "at": 13304.699999809265,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.06390000009536756,
+            "volume": 0.3076285235478695,
+            "clip": "win-epic-moon-rabbit"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.20428340089630873
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "hide",
+          "at": 13305.099999904633,
+          "hidden": true,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": false,
+            "time": 0.0641000003814689,
+            "volume": 0.3076285235478695,
+            "clip": "win-epic-moon-rabbit"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": false,
+              "volume": 0.20428340089630873
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "show",
+          "at": 13428.699999809265,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.0641000003814689,
+            "volume": 0.3076285235478695,
+            "clip": "win-epic-moon-rabbit"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.20428340089630873
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "reveal",
+          "at": 13594.699999809265,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": true,
+          "score": {
+            "playing": false,
+            "time": 0,
+            "volume": 0,
+            "clip": "win-epic-moon-rabbit"
+          },
+          "cadence": {
+            "playing": true,
+            "time": 0.16559999990463226,
+            "volume": 0.5446809714412282,
+            "clip": "win-epic-resolve-moon-rabbit"
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.08202907089370208
+            }
+          ],
+          "modal": false,
+          "busy": false
+        }
+      ],
+      "before": {
+        "balance": 27000,
+        "played": 0,
+        "ids": []
+      },
+      "after": {
+        "balance": 38924,
+        "played": 1,
+        "pending": false,
+        "at": 30244.39999961853,
+        "hidden": false,
+        "celebrating": false,
+        "resolved": true,
+        "score": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic-moon-rabbit"
+        },
+        "cadence": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic-resolve-moon-rabbit"
+        },
+        "music": [
+          {
+            "playing": false,
+            "volume": 0
+          },
+          {
+            "playing": true,
+            "volume": 0.4054774225343395
+          }
+        ],
+        "modal": false,
+        "busy": false
+      },
+      "transactions": [
+        {
+          "id": "tx-e5a119b045ade7c212dee8b7bc6d9087",
+          "type": "spin-win",
+          "amount": 12004
+        },
+        {
+          "id": "tx-5d633bf799d6e506fab555d5dac2bff5",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "events": [
+        {
+          "event": "count",
+          "ratio": 150.05,
+          "at": 20415.599999904633,
+          "clip": "win-epic-moon-rabbit"
+        },
+        {
+          "event": "reveal",
+          "at": 25726.799999713898,
+          "clip": "win-epic-resolve-moon-rabbit"
+        },
+        {
+          "event": "close",
+          "seconds": 0.64,
+          "at": 28244.699999809265
+        }
+      ],
+      "scope": "In-page audio fixtures plus real local spin controller with QA forced EPIC; RNG and economic rules unchanged. Not native interruption or speaker listening."
+    },
+    {
+      "mode": "star-fox",
+      "checks": [
+        "33 prepared clips",
+        "counting score audible",
+        "background pauses all music",
+        "live score resumes at saved position",
+        "early reveal uses cadence and retires count",
+        "duplicate reveal does not restart music",
+        "effect mute stops both award voices",
+        "unmute does not replay an old award",
+        "fixture leaves one room loop",
+        "one actual bet and one settlement",
+        "wallet and round state conserved",
+        "actual paid round traverses count reveal and exit",
+        "paid exit leaves no award voices or modal"
+      ],
+      "trace": [
+        {
+          "phase": "score",
+          "at": 9273.199999809265,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.049099999904631986,
+            "volume": 0.2502028703992036,
+            "clip": "win-epic-star-fox"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.23719803691832653
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "hide",
+          "at": 9273.5,
+          "hidden": true,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": false,
+            "time": 0.049300000190735105,
+            "volume": 0.2502028703992036,
+            "clip": "win-epic-star-fox"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": false,
+              "volume": 0.23719803691832653
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "show",
+          "at": 9395.599999904633,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.0495000000000001,
+            "volume": 0.2502028703992036,
+            "clip": "win-epic-star-fox"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.23719803691832653
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "reveal",
+          "at": 9555.400000095367,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": true,
+          "score": {
+            "playing": false,
+            "time": 0,
+            "volume": 0,
+            "clip": "win-epic-star-fox"
+          },
+          "cadence": {
+            "playing": true,
+            "time": 0.15949999999999953,
+            "volume": 0.5441962142244179,
+            "clip": "win-epic-resolve-star-fox"
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.08571263651119607
+            }
+          ],
+          "modal": false,
+          "busy": false
+        }
+      ],
+      "before": {
+        "balance": 27000,
+        "played": 0,
+        "ids": []
+      },
+      "after": {
+        "balance": 38934,
+        "played": 1,
+        "pending": false,
+        "at": 27371.900000095367,
+        "hidden": false,
+        "celebrating": false,
+        "resolved": true,
+        "score": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic-star-fox"
+        },
+        "cadence": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic-resolve-star-fox"
+        },
+        "music": [
+          {
+            "playing": false,
+            "volume": 0
+          },
+          {
+            "playing": true,
+            "volume": 0.4054377482729289
+          }
+        ],
+        "modal": false,
+        "busy": false
+      },
+      "transactions": [
+        {
+          "id": "tx-94a9865916883cc2ce40ac5905f2d792",
+          "type": "spin-win",
+          "amount": 12014
+        },
+        {
+          "id": "tx-b52ce8d4d51b5c8848205bb6e028fa40",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "events": [
+        {
+          "event": "count",
+          "ratio": 150.175,
+          "at": 17557.400000095367,
+          "clip": "win-epic-star-fox"
+        },
+        {
+          "event": "reveal",
+          "at": 22854.900000095367,
+          "clip": "win-epic-resolve-star-fox"
+        },
+        {
+          "event": "close",
+          "seconds": 0.64,
+          "at": 25372.099999904633
+        }
+      ],
+      "scope": "In-page audio fixtures plus real local spin controller with QA forced EPIC; RNG and economic rules unchanged. Not native interruption or speaker listening."
+    },
+    {
+      "mode": "cloud-elephant",
+      "checks": [
+        "33 prepared clips",
+        "counting score audible",
+        "background pauses all music",
+        "live score resumes at saved position",
+        "early reveal uses cadence and retires count",
+        "duplicate reveal does not restart music",
+        "effect mute stops both award voices",
+        "unmute does not replay an old award",
+        "fixture leaves one room loop",
+        "one actual bet and one settlement",
+        "wallet and round state conserved",
+        "actual paid round traverses count reveal and exit",
+        "paid exit leaves no award voices or modal"
+      ],
+      "trace": [
+        {
+          "phase": "score",
+          "at": 21696.5,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.06559999990463439,
+            "volume": 0.3073039885929867,
+            "clip": "win-epic-cloud-elephant"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.2044421160980471
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "hide",
+          "at": 21697.099999904633,
+          "hidden": true,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": false,
+            "time": 0.06609999990463322,
+            "volume": 0.3073039885929867,
+            "clip": "win-epic-cloud-elephant"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": false,
+              "volume": 0.2044421160980471
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "show",
+          "at": 21818,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": false,
+          "score": {
+            "playing": true,
+            "time": 0.06609999990463322,
+            "volume": 0.3073039885929867,
+            "clip": "win-epic-cloud-elephant"
+          },
+          "cadence": {
+            "playing": false,
+            "time": 0,
+            "volume": 0
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.2044421160980471
+            }
+          ],
+          "modal": false,
+          "busy": false
+        },
+        {
+          "phase": "reveal",
+          "at": 21979.699999809265,
+          "hidden": false,
+          "celebrating": true,
+          "resolved": true,
+          "score": {
+            "playing": false,
+            "time": 0,
+            "volume": 0,
+            "clip": "win-epic-cloud-elephant"
+          },
+          "cadence": {
+            "playing": true,
+            "time": 0.16160000038146904,
+            "volume": 0.5442934076419478,
+            "clip": "win-epic-resolve-cloud-elephant"
+          },
+          "music": [
+            {
+              "playing": false,
+              "volume": 0
+            },
+            {
+              "playing": true,
+              "volume": 0.08212563157924702
+            }
+          ],
+          "modal": false,
+          "busy": false
+        }
+      ],
+      "before": {
+        "balance": 27000,
+        "played": 0,
+        "ids": []
+      },
+      "after": {
+        "balance": 38920,
+        "played": 1,
+        "pending": false,
+        "at": 36680.699999809265,
+        "hidden": false,
+        "celebrating": false,
+        "resolved": true,
+        "score": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic-cloud-elephant"
+        },
+        "cadence": {
+          "playing": false,
+          "time": 0,
+          "volume": 0,
+          "clip": "win-epic-resolve-cloud-elephant"
+        },
+        "music": [
+          {
+            "playing": false,
+            "volume": 0
+          },
+          {
+            "playing": true,
+            "volume": 0.4054540464225097
+          }
+        ],
+        "modal": false,
+        "busy": false
+      },
+      "transactions": [
+        {
+          "id": "tx-7525a387481a706d3b4865be548e90a9",
+          "type": "spin-win",
+          "amount": 12000
+        },
+        {
+          "id": "tx-4bcd35303fddc5405a70e9963f43c180",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "events": [
+        {
+          "event": "count",
+          "ratio": 150,
+          "at": 26865.099999904633,
+          "clip": "win-epic-cloud-elephant"
+        },
+        {
+          "event": "reveal",
+          "at": 32163.199999809265,
+          "clip": "win-epic-resolve-cloud-elephant"
+        },
+        {
+          "event": "close",
+          "seconds": 0.64,
+          "at": 34680.300000190735
+        }
+      ],
+      "scope": "In-page audio fixtures plus real local spin controller with QA forced EPIC; RNG and economic rules unchanged. Not native interruption or speaker listening."
+    }
+  ],
+  "errors": [],
+  "scope": "Owned Cocos browser export; transient states sampled inside page to avoid late CDP snapshots. No claim of phone, native interruption or subjective listening verification."
+}

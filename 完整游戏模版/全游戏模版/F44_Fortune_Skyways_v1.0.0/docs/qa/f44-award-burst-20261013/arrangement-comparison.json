@@ -1,0 +1,845 @@
+{
+  "changedClips": [
+    "award-accent-cloud-elephant",
+    "award-accent-golden-otter",
+    "award-accent-moon-rabbit",
+    "award-accent-star-fox",
+    "award-accent",
+    "win-epic-cloud-elephant",
+    "win-epic-moon-rabbit",
+    "win-epic-resolve-cloud-elephant",
+    "win-epic-resolve-moon-rabbit",
+    "win-epic-resolve-star-fox",
+    "win-epic-resolve",
+    "win-epic-star-fox",
+    "win-epic",
+    "win-grand-cloud-elephant",
+    "win-grand-moon-rabbit",
+    "win-grand-resolve-cloud-elephant",
+    "win-grand-resolve-moon-rabbit",
+    "win-grand-resolve-star-fox",
+    "win-grand-resolve",
+    "win-grand-star-fox",
+    "win-grand",
+    "win-mega-cloud-elephant",
+    "win-mega-moon-rabbit",
+    "win-mega-resolve-cloud-elephant",
+    "win-mega-resolve-moon-rabbit",
+    "win-mega-resolve-star-fox",
+    "win-mega-resolve",
+    "win-mega-star-fox",
+    "win-mega",
+    "win-super-cloud-elephant",
+    "win-super-moon-rabbit",
+    "win-super-resolve-cloud-elephant",
+    "win-super-resolve-moon-rabbit",
+    "win-super-resolve-star-fox",
+    "win-super-resolve",
+    "win-super-star-fox",
+    "win-super"
+  ],
+  "unchangedClips": [
+    "coin-collect-cloud-elephant",
+    "coin-collect-golden-otter",
+    "coin-collect-moon-rabbit",
+    "coin-collect-star-fox",
+    "coin-collect",
+    "feature-cloud-elephant",
+    "feature-golden-otter",
+    "feature-moon-rabbit",
+    "feature-star-fox",
+    "feature",
+    "music-cloud-elephant",
+    "music-golden-otter",
+    "music-moon-rabbit",
+    "music-salon",
+    "music-star-fox",
+    "reel-roll",
+    "reel-start",
+    "reel-stop-1",
+    "reel-stop-2",
+    "reel-stop-3",
+    "reel-stop-4",
+    "reel-stop-5",
+    "reel-stop-cloud-elephant-1",
+    "reel-stop-cloud-elephant-2",
+    "reel-stop-cloud-elephant-3",
+    "reel-stop-cloud-elephant-4",
+    "reel-stop-cloud-elephant-5",
+    "reel-stop-cloud-elephant",
+    "reel-stop-golden-otter-1",
+    "reel-stop-golden-otter-2",
+    "reel-stop-golden-otter-3",
+    "reel-stop-golden-otter-4",
+    "reel-stop-golden-otter-5",
+    "reel-stop-golden-otter",
+    "reel-stop-moon-rabbit-1",
+    "reel-stop-moon-rabbit-2",
+    "reel-stop-moon-rabbit-3",
+    "reel-stop-moon-rabbit-4",
+    "reel-stop-moon-rabbit-5",
+    "reel-stop-moon-rabbit",
+    "reel-stop-star-fox-1",
+    "reel-stop-star-fox-2",
+    "reel-stop-star-fox-3",
+    "reel-stop-star-fox-4",
+    "reel-stop-star-fox-5",
+    "reel-stop-star-fox",
+    "reel-stop",
+    "ui-touch",
+    "win-normal-cloud-elephant",
+    "win-normal-golden-otter",
+    "win-normal-moon-rabbit",
+    "win-normal-star-fox",
+    "win-normal"
+  ],
+  "unchangedSource": [
+    {
+      "path": "assets/scripts/audio/AudioManager.ts",
+      "sha256": "e81305117a784517c567c8b9fae1399e1beaa3906df0d5e92bc61ce6c3f4d464"
+    },
+    {
+      "path": "assets/scripts/audio/AudioPalette.ts",
+      "sha256": "95b66bef2dbf42f59163d59edc61ec22f30c09635fbab9d4aec2832e44f6867c"
+    },
+    {
+      "path": "assets/scripts/vfx/AwardTiming.ts",
+      "sha256": "03f42de97447977db78b677734272d5e8de67be8c618e2422d5473ab2de28ea7"
+    },
+    {
+      "path": "assets/scripts/vfx/SalonWinStage.ts",
+      "sha256": "8168034f2d97700c812e13053e1e192792e52ab410f457ba6f2272dcdc7406d0"
+    },
+    {
+      "path": "assets/scripts/vfx/AwardChoreography.ts",
+      "sha256": "e7854a6d8f4e1bebf819a1a000e274c684d6f9459b1eba1a9bedd3090f0bb98d"
+    },
+    {
+      "path": "assets/scripts/ui/AureliaApp.ts",
+      "sha256": "6c38c25259f3b39de4ade0ad818f10fcf59ff3222ee0f511b9f1011a0a543b97"
+    }
+  ],
+  "resolve": [
+    {
+      "name": "win-epic-resolve-cloud-elephant",
+      "before": {
+        "rms": 0.13513,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.004,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05953,
+            "burstRms": 0.20904,
+            "riseDb": 10.91,
+            "peak": 0.60983
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.06605,
+            "burstRms": 0.21201,
+            "riseDb": 10.13,
+            "peak": 0.59097
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.11339,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0085,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03945,
+            "burstRms": 0.21116,
+            "riseDb": 14.57,
+            "peak": 0.62073
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.0426,
+            "burstRms": 0.21221,
+            "riseDb": 13.95,
+            "peak": 0.65207
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-epic-resolve-moon-rabbit",
+      "before": {
+        "rms": 0.11265,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.004,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05157,
+            "burstRms": 0.18538,
+            "riseDb": 11.11,
+            "peak": 0.55878
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05532,
+            "burstRms": 0.15855,
+            "riseDb": 9.15,
+            "peak": 0.49042
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.12411,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0078,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.04168,
+            "burstRms": 0.2285,
+            "riseDb": 14.78,
+            "peak": 0.65207
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.04378,
+            "burstRms": 0.22934,
+            "riseDb": 14.38,
+            "peak": 0.57224
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-epic-resolve-star-fox",
+      "before": {
+        "rms": 0.11415,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.005,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.0516,
+            "burstRms": 0.22883,
+            "riseDb": 12.94,
+            "peak": 0.55801
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05101,
+            "burstRms": 0.2225,
+            "riseDb": 12.79,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10528,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0102,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03782,
+            "burstRms": 0.23944,
+            "riseDb": 16.03,
+            "peak": 0.65997
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03866,
+            "burstRms": 0.23264,
+            "riseDb": 15.59,
+            "peak": 0.65335
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-epic-resolve",
+      "before": {
+        "rms": 0.12061,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0044,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05475,
+            "burstRms": 0.22977,
+            "riseDb": 12.46,
+            "peak": 0.62631
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05713,
+            "burstRms": 0.2271,
+            "riseDb": 11.99,
+            "peak": 0.58023
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.09596,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0093,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03496,
+            "burstRms": 0.20526,
+            "riseDb": 15.37,
+            "peak": 0.65997
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03546,
+            "burstRms": 0.21002,
+            "riseDb": 15.45,
+            "peak": 0.56
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-grand-resolve-cloud-elephant",
+      "before": {
+        "rms": 0.11744,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0032,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05073,
+            "burstRms": 0.17459,
+            "riseDb": 10.73,
+            "peak": 0.60455
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05849,
+            "burstRms": 0.21182,
+            "riseDb": 11.18,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.1138,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0083,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.04239,
+            "burstRms": 0.22867,
+            "riseDb": 14.64,
+            "peak": 0.64044
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.04526,
+            "burstRms": 0.22919,
+            "riseDb": 14.09,
+            "peak": 0.64798
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-grand-resolve-moon-rabbit",
+      "before": {
+        "rms": 0.12767,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0028,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05095,
+            "burstRms": 0.18049,
+            "riseDb": 10.99,
+            "peak": 0.58472
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.06019,
+            "burstRms": 0.1889,
+            "riseDb": 9.93,
+            "peak": 0.46408
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10379,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0072,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03646,
+            "burstRms": 0.19254,
+            "riseDb": 14.45,
+            "peak": 0.50647
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03864,
+            "burstRms": 0.19804,
+            "riseDb": 14.2,
+            "peak": 0.57019
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-grand-resolve-star-fox",
+      "before": {
+        "rms": 0.10425,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0044,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.0478,
+            "burstRms": 0.21594,
+            "riseDb": 13.1,
+            "peak": 0.48767
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.04584,
+            "burstRms": 0.22056,
+            "riseDb": 13.65,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.11792,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.008,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.04135,
+            "burstRms": 0.25098,
+            "riseDb": 15.66,
+            "peak": 0.64642
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.04184,
+            "burstRms": 0.24504,
+            "riseDb": 15.35,
+            "peak": 0.65997
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-grand-resolve",
+      "before": {
+        "rms": 0.12301,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0034,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05095,
+            "burstRms": 0.21797,
+            "riseDb": 12.63,
+            "peak": 0.53116
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05237,
+            "burstRms": 0.22297,
+            "riseDb": 12.58,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10744,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0062,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03526,
+            "burstRms": 0.21928,
+            "riseDb": 15.87,
+            "peak": 0.65997
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03503,
+            "burstRms": 0.2102,
+            "riseDb": 15.56,
+            "peak": 0.50381
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-mega-resolve-cloud-elephant",
+      "before": {
+        "rms": 0.11685,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0037,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05253,
+            "burstRms": 0.19901,
+            "riseDb": 11.57,
+            "peak": 0.62997
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.06146,
+            "burstRms": 0.17158,
+            "riseDb": 8.92,
+            "peak": 0.4838
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.11095,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0079,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03812,
+            "burstRms": 0.2041,
+            "riseDb": 14.57,
+            "peak": 0.60306
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.04085,
+            "burstRms": 0.20067,
+            "riseDb": 13.83,
+            "peak": 0.55579
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-mega-resolve-moon-rabbit",
+      "before": {
+        "rms": 0.11839,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0037,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05352,
+            "burstRms": 0.20231,
+            "riseDb": 11.55,
+            "peak": 0.53491
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05893,
+            "burstRms": 0.17435,
+            "riseDb": 9.42,
+            "peak": 0.48868
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10655,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0075,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03585,
+            "burstRms": 0.19767,
+            "riseDb": 14.83,
+            "peak": 0.62924
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03769,
+            "burstRms": 0.19858,
+            "riseDb": 14.43,
+            "peak": 0.51443
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-mega-resolve-star-fox",
+      "before": {
+        "rms": 0.11169,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0049,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05212,
+            "burstRms": 0.23188,
+            "riseDb": 12.96,
+            "peak": 0.621
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.0532,
+            "burstRms": 0.23076,
+            "riseDb": 12.75,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10143,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0102,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03702,
+            "burstRms": 0.22831,
+            "riseDb": 15.8,
+            "peak": 0.63678
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03791,
+            "burstRms": 0.22993,
+            "riseDb": 15.66,
+            "peak": 0.65997
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-mega-resolve",
+      "before": {
+        "rms": 0.11113,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0039,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.0487,
+            "burstRms": 0.21448,
+            "riseDb": 12.88,
+            "peak": 0.59457
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05295,
+            "burstRms": 0.21074,
+            "riseDb": 12.0,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10639,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0081,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03698,
+            "burstRms": 0.21702,
+            "riseDb": 15.37,
+            "peak": 0.61246
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.0376,
+            "burstRms": 0.22284,
+            "riseDb": 15.46,
+            "peak": 0.65997
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-super-resolve-cloud-elephant",
+      "before": {
+        "rms": 0.12005,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0035,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05248,
+            "burstRms": 0.20061,
+            "riseDb": 11.65,
+            "peak": 0.57471
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05932,
+            "burstRms": 0.1995,
+            "riseDb": 10.54,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10802,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0084,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03907,
+            "burstRms": 0.20953,
+            "riseDb": 14.59,
+            "peak": 0.60828
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.04129,
+            "burstRms": 0.20457,
+            "riseDb": 13.9,
+            "peak": 0.60382
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-super-resolve-moon-rabbit",
+      "before": {
+        "rms": 0.11949,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0031,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.0493,
+            "burstRms": 0.17735,
+            "riseDb": 11.12,
+            "peak": 0.49554
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.0536,
+            "burstRms": 0.17646,
+            "riseDb": 10.35,
+            "peak": 0.47501
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10045,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0073,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03422,
+            "burstRms": 0.18555,
+            "riseDb": 14.68,
+            "peak": 0.50336
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03587,
+            "burstRms": 0.18803,
+            "riseDb": 14.39,
+            "peak": 0.62369
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-super-resolve-star-fox",
+      "before": {
+        "rms": 0.11299,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0042,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05035,
+            "burstRms": 0.23555,
+            "riseDb": 13.4,
+            "peak": 0.62256
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.04995,
+            "burstRms": 0.21342,
+            "riseDb": 12.61,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.10242,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0092,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03693,
+            "burstRms": 0.21962,
+            "riseDb": 15.49,
+            "peak": 0.54117
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03739,
+            "burstRms": 0.22835,
+            "riseDb": 15.72,
+            "peak": 0.65997
+          }
+        ]
+      }
+    },
+    {
+      "name": "win-super-resolve",
+      "before": {
+        "rms": 0.12606,
+        "peak": 0.62997,
+        "above5kHzPercent": 0.0036,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.05302,
+            "burstRms": 0.21814,
+            "riseDb": 12.29,
+            "peak": 0.62149
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.05818,
+            "burstRms": 0.24127,
+            "riseDb": 12.35,
+            "peak": 0.62997
+          }
+        ]
+      },
+      "after": {
+        "rms": 0.09751,
+        "peak": 0.65997,
+        "above5kHzPercent": 0.0065,
+        "impacts": [
+          {
+            "at": 0.2,
+            "pickupRms": 0.03144,
+            "burstRms": 0.18905,
+            "riseDb": 15.58,
+            "peak": 0.52902
+          },
+          {
+            "at": 1.05,
+            "pickupRms": 0.03149,
+            "burstRms": 0.18588,
+            "riseDb": 15.42,
+            "peak": 0.65997
+          }
+        ]
+      }
+    }
+  ],
+  "method": "Final stereo PCM before/after: 57 ms pickup versus 100 ms impact RMS; global peak and spectrum. Musical judgement and phone output remain separate."
+}

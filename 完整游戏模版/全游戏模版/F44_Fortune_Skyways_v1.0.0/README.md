@@ -10,10 +10,18 @@ Cocos Creator **3.8.8** 完整游戏模板。明亮云海中的香槟金空港�
 
 ```sh
 npm install
-python3 tools/preview_server.py --directory build/web-grand-prize-20261013 --port 6044
+python3 tools/preview_server.py --directory build/web-award-burst-20261013 --port 6044
 ```
 
-本轮预览使用独立目录 `build/web-grand-prize-20261013`，避免与并行的 Xcode 构建覆盖。普通重新导出仍可使用 `build/web-mobile` 并相应更改 `--directory`。从 Creator 导出时使用 `tools/web-mobile-release-build.json`；iOS 配置入口为 `tools/ios-preview-build.json`。原生发布仍需完成下述独立验收。
+本轮预览使用独立目录 `build/web-award-burst-20261013`，避免与并行的 Xcode 构建覆盖。普通重新导出仍可使用 `build/web-mobile` 并相应更改 `--directory`。从 Creator 导出时使用 `tools/web-mobile-release-build.json`；iOS 配置入口为 `tools/ios-preview-build.json`。原生发布仍需完成下述独立验收。
+
+## 2026-10-13 大奖音乐蓄势与迸发 · f44-award-burst-20261013
+
+四模式的 BIG / SUPER / MEGA / EPIC 重新编曲：开场宣告后以较安静的拨弦计数，铜管应答与加密鼓卷逐步蓄势；揭晓后的 0.20 秒、1.05 秒由铜管、弦乐、低鼓及竖琴齐奏形成两次高潮，第二次齐奏延长，最后回到钢琴与金币收尾。采用原有柔和频段处理，与画面重音同步。
+
+本轮重生成 37 个大奖相关片段，另外 53 个音频逐字节保持；演出、音频管理、反馈避让和结算源码保持原样。类型检查及 7 项演出专项通过；90 个 PCM、16 组游戏内实际混音、52 项音频生命周期及四个实际扣款/结算回合通过，零浏览器异常。旧固定时间采样的两次失败与改用页内取样的过程已保留；本轮没有声称原 31 项脚本全部通过。详见[混音](docs/qa/f44-award-burst-20261013/mix/award-mix-audit.json)、[生命周期](docs/qa/f44-award-burst-20261013/lifecycle/runtime-audit.json)和[验收记录](docs/acceptance.md)。
+
+游戏内完整试听录音保留本机：`docs/qa/f44-award-burst-20261013/mix/golden-otter-epic.wav`。录音与验证限于桌面 Cocos 导出；实机扬声器与耳机听感仍需另行验收。本轮音乐、验证报告及重新截取的[大厅、四柜机与大奖截图](docs/screenshots/f44-git-delivery-20261013/README.md)随 Git 交付。
 
 ## 2026-10-13 大奖升档与双高潮
 
@@ -68,7 +76,7 @@ BIG / SUPER / MEGA / EPIC 改为完整升档演出：艺术标题增大并在升
 ## 验收和截图
 
 - [验收记录](docs/acceptance.md)
-- [当前四柜机大奖高潮、恢复与录像](docs/screenshots/f44-git-delivery-20261013/README.md)
+- [当前大厅、四柜机与 EPIC 大奖截图](docs/screenshots/f44-git-delivery-20261013/README.md)
 - 前一轮获奖演出截图（本机历史：`docs/screenshots/f44-award-gilded-20261013/README.md`）
 - 前一轮大厅、四柜机与奖励截图（本机历史：`docs/screenshots/f44-polish-20261013/README.md`）
 - 初次交付基准截图（本机历史：`docs/screenshots/f44-final-20261013/README.md`）
@@ -84,4 +92,4 @@ npm run release:audit
 
 本地功能与手机比例检查是模板制作验收。**未验证 iPhone/iPad 实机、已签名 iOS 二进制、正式 Apple 登录、StoreKit Sandbox/TestFlight、生产服务及 App Store 审核**。发行身份、域名和产品编号仍是明确占位；`release:audit` 应报告这些阻断项。采样乐器源库的许可说明与部分样本来源不完整的说明均保留，正式发行须完成素材权利核查。
 
-2026-10-13 Git 交付使用独立分支 `codex/f44-grand-prize-20261013`，仅包含 F44。当前截图入口见上方；依赖、构建缓存、历史截图及原始 QA 媒体保留本机。
+2026-10-13 本轮大奖音乐与截图交付使用独立分支 `codex/f44-award-burst-20261013`，改动仅包含 F44。大厅、四台柜机及四台 EPIC 大奖单图从当前音频导出重新截取，替换本目录上一轮截图；九张单图、两张总览及截图记录均纳入仓库。前一轮视觉演出交付为 `codex/f44-grand-prize-20261013`。依赖、构建缓存、历史截图、原始录像和混音录音保留本机。

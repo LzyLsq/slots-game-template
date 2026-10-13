@@ -1,0 +1,23 @@
+{
+  "firstAttempt": "Two concurrent browsers: fixed-time score resume assertion and fixed 1.2-second BGM recovery assertion failed. No page error recorded.",
+  "secondAttempt": "Original lifecycle script alone passed Golden Otter; Moon Rabbit cadence.playing was false at its late CDP snapshot. Audit retained as fixed-time-retry-audit.json.",
+  "followupMethod": "Transient samples run inside the page rather than between CDP round trips. Music tail waits for real >0.405 recovery, with a five-second deadline. Assertions retain voice playback, saved-position resume, no duplicate reveal, mute/no replay, wallet invariants and clean exit. No runtime source changed.",
+  "captureObservedRecoverySeconds": [
+    1.3570999999046325,
+    1.3575999999046326,
+    1.3355999999046326,
+    1.3575999999046326,
+    1.3369000000953675,
+    1.3502999997138978,
+    1.350199999809265,
+    1.3425999999046325,
+    1.3296999998092651,
+    1.3609000000953675,
+    1.3527000002861023,
+    1.3383000001907348,
+    1.3538999996185304,
+    1.3502999997138978,
+    1.3478999996185304,
+    1.335
+  ]
+}

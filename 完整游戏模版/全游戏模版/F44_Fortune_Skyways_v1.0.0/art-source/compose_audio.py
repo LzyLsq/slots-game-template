@@ -1,4 +1,4 @@
-"""F44 v3 original score: sampled orchestral skyport voyage music and tactile feedback.
+"""F44 v4 original score: sampled orchestral skyport voyage music and tactile feedback.
 No finished-game melody, recording or extracted asset is used. GeneralUser GS
 sample provenance and author license are recorded separately from authorship.
 """
@@ -13,16 +13,23 @@ SF=Path(os.environ.get('F44_SOUNDFONT',ROOT/'art-source/raw/audio/GeneralUser-GS
 EXPECTED='9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe'
 if hashlib.sha256(SF.read_bytes()).hexdigest()!=EXPECTED: raise RuntimeError('Unexpected SoundFont revision')
 renderer=Renderer(SF)
-FEEDBACK_ONLY=os.environ.get('F44_AUDIO_SCOPE')=='feedback'
+AUDIO_SCOPE=os.environ.get('F44_AUDIO_SCOPE','all')
+if AUDIO_SCOPE not in ('all','feedback','awards'): raise ValueError('Unknown audio scope: '+AUDIO_SCOPE)
+FEEDBACK_ONLY=AUDIO_SCOPE=='feedback'
+AWARDS_ONLY=AUDIO_SCOPE=='awards'
+REVISION='skyways-award-burst-v3-20261013'
 REPORT=[]; SCORES=[]; RNG=np.random.default_rng(441012)
-if FEEDBACK_ONLY:
-    REPORT=[r for r in json.loads((ROOT/'docs/audio-provenance.json').read_text())['clips'] if r['name'].startswith('music-')]
-    SCORES=[r for r in json.loads((ROOT/'art-source/festival-score.json').read_text())['clips'] if r['name'].startswith('music-')]
+def award_clip(name):
+    return name.startswith(('win-grand','win-super','win-mega','win-epic','award-accent'))
+if AUDIO_SCOPE!='all':
+    keep=lambda name: not award_clip(name) if AWARDS_ONLY else name.startswith('music-')
+    REPORT=[r for r in json.loads((ROOT/'docs/audio-provenance.json').read_text())['clips'] if keep(r['name'])]
+    SCORES=[r for r in json.loads((ROOT/'art-source/festival-score.json').read_text())['clips'] if keep(r['name'])]
 IDS=['salon','golden-otter','moon-rabbit','star-fox','cloud-elephant']
 ROOTS=[53,55,50,57,48]; BPMS=[114,118,104,110,112]
 LEADS=['clarinet','horn','flute','piano','clarinet']
 KEYS=['F major','G major','D major','A major','C major']
-MASTERING={'revision':'skyways-orchestral-v2-20261013','highShelfHz':3300,'highShelfDb':-4.2,
+MASTERING={'revision':REVISION,'highShelfHz':3300,'highShelfDb':-4.2,
            'presenceHz':2700,'presenceDb':-2.0,'airRolloffHz':9200,
            'backgroundTargetRms':.115,'scoreTargetRms':.148,'ceiling':.68}
 
@@ -66,7 +73,7 @@ def output(name,score,peak=.60,rms=None,extra=None):
             'seamDelta':round(float(np.max(np.abs(track[-1]-track[0]))),7),
             'seamRms':round(float(np.sqrt(np.mean(edge**2))),5),
             'highBandEnergyPercent':round(float(spectrum[hz>=5000].sum()/max(1e-9,spectrum.sum())*100),4),
-            'bytes':(DEST/f'{name}.wav').stat().st_size,'sha256':hashlib.sha256((DEST/f'{name}.wav').read_bytes()).hexdigest()}
+            'masteringRevision':REVISION,'bytes':(DEST/f'{name}.wav').stat().st_size,'sha256':hashlib.sha256((DEST/f'{name}.wav').read_bytes()).hexdigest()}
     if extra:record.update(extra)
     REPORT.append(record);SCORES.append({'name':name,'seconds':score.seconds,'loop':score.loop,'events':score.events})
     print(name,record['duration'],'seconds · rms',record['rms'],flush=True)
@@ -93,7 +100,7 @@ B=[[(0,12,.8),(1.25,7,.65),(2.25,9,1.25)],
    [(0,5,.8),(1.25,2,.8),(2.5,7,1.15)]]
 CHORDS=[(0,[0,4,7,9]),(5,[0,4,7,11]),(-3,[0,3,7,10]),(7,[0,4,7,10]),
         (0,[0,4,7,11]),(-5,[0,3,7,10]),(5,[0,4,7,9]),(7,[0,4,7,10])]
-for idx,id in enumerate(IDS if not FEEDBACK_ONLY else []):
+for idx,id in enumerate(IDS if AUDIO_SCOPE=='all' else []):
     root=ROOTS[idx];beat=60/BPMS[idx];s=Score(beat*96,True)
     for bar in range(24):
         start=bar*4*beat;offset,intervals=CHORDS[bar%8];ch=[root+offset+x for x in intervals]
@@ -125,33 +132,40 @@ for idx,id in enumerate(IDS if not FEEDBACK_ONLY else []):
             s.drum(45,start+3.5*beat,35);s.drum(47,start+3.75*beat,31)
     output('music-'+id,s,.60,MASTERING['backgroundTargetRms'],{'key':KEYS[idx],'bpm':BPMS[idx],'bars':24,'form':'Sail-away A / cloud-sea response / return-to-port reprise'})
 
-# UI: lacquered-button contact and a low, muted wood click. Deliberately short.
-s=Score(.20);s.note('wood',67,0,.058,58);s.note('pizz',57,.015,.052,44);s.note('harp',53,.024,.070,32);s.drum(37,0,22)
-output('ui-touch',s,.32)
-s=Score(.52);s.drum(36,0,38)
-for i,n in enumerate([53,57,60,65]):s.note('pizz',n,.014+i*.045,.13,59-i*3)
-output('reel-start',s,.41)
-s=Score(.96,True)
-for i in range(12):s.drum(82,i*.08,21+i%3*2);s.drum(37,i*.08+.033,15)
-output('reel-roll',s,.24)
+if not AWARDS_ONLY:
+    # UI: lacquered-button contact and a low, muted wood click. Deliberately short.
+    s=Score(.20);s.note('wood',67,0,.058,58);s.note('pizz',57,.015,.052,44);s.note('harp',53,.024,.070,32);s.drum(37,0,22)
+    output('ui-touch',s,.32)
+    s=Score(.52);s.drum(36,0,38)
+    for i,n in enumerate([53,57,60,65]):s.note('pizz',n,.014+i*.045,.13,59-i*3)
+    output('reel-start',s,.41)
+    s=Score(.96,True)
+    for i in range(12):s.drum(82,i*.08,21+i%3*2);s.drum(37,i*.08+.033,15)
+    output('reel-roll',s,.24)
 # Tonal feedback follows the room's key; stops rise within one pentatonic octave.
 for idx,id in enumerate(IDS):
     root=ROOTS[idx];suffix='' if id=='salon' else '-'+id
-    for tag,notes,step,length in [('coin-collect',[0,4,7,12,9],.065,.85),('win-normal',[0,2,7,4,9,12],.085,1.24),('feature',[0,5,9,7,12],.095,1.32)]:
-        s=Score(length)
-        s.chord('harp',[root,root+4,root+9],0,.52,49)
-        for i,v in enumerate(notes):s.note('vibes' if tag=='coin-collect' else 'piano',root+(0 if tag in ('coin-collect','feature') else 12)+v,i*step,.24,61+i*2)
-        if tag!='coin-collect':s.chord('strings',[root+4,root+7,root+12],.12,.8,46)
-        output(tag+suffix,s,.43 if tag=='coin-collect' else .47)
-    for column,degree in enumerate([0,4,7,9,12,16]):
-        s=Score(.30);s.drum(37,0,45)
-        s.note('wood',root+7+degree,.006,.075,44);s.note('harp',root+12+degree,.014,.125,48)
-        name='reel-stop'+suffix+('' if column==0 else '-'+str(column))
-        output(name,s,.36,extra={'column':column,'key':KEYS[idx]})
-    # A short musical punctuation for each real visible tier upgrade.
-    s=Score(.58);s.chord('horn',[root,root+4,root+9],.021,.26,54)
-    s.drum(45,0,37);s.note('harp',root+7,.065,.28,49);s.note('pizz',root+12,.135,.16,43)
-    output('award-accent'+suffix,s,.39)
+    if not AWARDS_ONLY:
+        for tag,notes,step,length in [('coin-collect',[0,4,7,12,9],.065,.85),('win-normal',[0,2,7,4,9,12],.085,1.24),('feature',[0,5,9,7,12],.095,1.32)]:
+            s=Score(length)
+            s.chord('harp',[root,root+4,root+9],0,.52,49)
+            for i,v in enumerate(notes):s.note('vibes' if tag=='coin-collect' else 'piano',root+(0 if tag in ('coin-collect','feature') else 12)+v,i*step,.24,61+i*2)
+            if tag!='coin-collect':s.chord('strings',[root+4,root+7,root+12],.12,.8,46)
+            output(tag+suffix,s,.43 if tag=='coin-collect' else .47)
+        for column,degree in enumerate([0,4,7,9,12,16]):
+            s=Score(.30);s.drum(37,0,45)
+            s.note('wood',root+7+degree,.006,.075,44);s.note('harp',root+12+degree,.014,.125,48)
+            name='reel-stop'+suffix+('' if column==0 else '-'+str(column))
+            output(name,s,.36,extra={'column':column,'key':KEYS[idx]})
+    # The actual visible tier upgrade gets one compact, warm orchestral attack.
+    # This is a punctuation, not another complete competing fanfare.
+    s=Score(.58)
+    s.drum(36,.018,58);s.drum(43,.018,49);s.drum(38,.004,33);s.drum(38,.025,48)
+    s.chord('horn',[root,root+4,root+7],.022,.18,74,0)
+    s.note('trombone',root,.022,.16,57)
+    s.note('trumpet',root+7,.034,.13,51)
+    s.note('harp',root+12,.065,.23,51);s.note('pizz',root+7,.135,.12,43)
+    output('award-accent'+suffix,s,.44,extra={'form':'One tier-up brass/drum attack, plucked tail','key':KEYS[idx]})
 
 # Entry score lasts exactly through the existing count animation. The resolve
 # is a separate event at the exact amount reveal, so early collect is musical.
@@ -162,46 +176,83 @@ for idx,id in enumerate(IDS[1:],1):
     root=ROOTS[idx];suffix='' if idx==1 else '-'+id
     for tier,tag in enumerate(['grand','super','mega','epic']):
         duration=counts[tier];pulse=duration/8;s=Score(duration+.35)
-        # One major-key voyage motif travels from strings and plucks into
-        # warm brass. The final two pulses prepare the resolve, without a
-        # separate shrill melody competing with visible title upgrades.
+        # An opening declaration, then a quieter counting pickup. Short brass
+        # phrases answer the room's lead; increasing subdivisions/low drums
+        # create the rise rather than eight equal chords at one loudness.
+        s.chord('horn',[root,root+4,root+7],.028,.23,64+tier*3,0)
+        s.note('bass',root-12,.02,.25,69)
+        s.drum(36,.02,57+tier*3);s.drum(43,.02,43+tier*3)
         for b in range(8):
             at=b*pulse;rise=b/7;off=0 if b<3 else 5 if b<5 else 7
             notes=[root+off,root+off+4,root+off+7]
-            s.chord('strings',notes,at,pulse*.88,48+round(18*rise)+tier*3,0)
-            s.note('bass',root+off-12,at,pulse*.7,65+tier*3)
-            s.drum(36,at,43+tier*4);s.drum(37,at+pulse*.48,28+round(12*rise))
-            s.note('harp',notes[(b+1)%3]+12,at+.028,pulse*.64,53+round(16*rise))
+            s.chord('strings',notes,at+.018,pulse*.56,37+round(24*rise)+tier*2,0)
+            s.note('bass',root+off-12,at,pulse*.45,50+round(18*rise)+tier*2)
+            s.note('pizz',notes[b%3],at+.04,pulse*.35,46+round(17*rise))
+            s.note('harp',notes[(b+1)%3]+12,at+pulse*.32,pulse*.45,45+round(15*rise))
+            if b>0:s.drum(36,at,34+round(23*rise)+tier*2)
+            s.drum(38,at+pulse*.5,22+round(25*rise)+tier*2)
             if b>=2:
                 lead='piano' if idx==1 else LEADS[idx]
-                s.note(lead,root+12+[0,2,7,4,9,7,12,9][b],at,pulse*.74,60+tier*3)
-            if tier>=1:s.chord('horn',notes,at+pulse*.10,pulse*.66,45+round(14*rise)+tier*3,0)
-            if tier>=2:s.drum(45,at+pulse*.74,37+tier*4)
-            if tier==3:s.note('trombone',root+off,at,pulse*.76,57)
-            if b>=6:s.drum(47,at+pulse*.86,34+tier*3)
-        output('win-'+tag+suffix,s,.61,MASTERING['scoreTargetRms']+tier*.007,{'countSeconds':duration,'tier':tag,'key':KEYS[idx]})
+                s.note(lead,root+12+[0,2,7,4,9,7,12,9][b],at+.025,pulse*.55,56+tier*2)
+            if b in (3,5,6):
+                s.chord('horn',notes,at+.016,pulse*.42,60+round(14*rise)+tier*2,0)
+                if tier>=1:s.note('trombone',root+off,at+.016,pulse*.42,52+tier*3)
+                s.drum(43,at,49+tier*4)
+            if tier>=2 and b>=4:
+                s.note('trumpet',root+off+7,at+.026,pulse*.24,52+round(9*rise))
+                s.drum(45,at+pulse*.75,36+round(12*rise))
+            if tier==3 and b>=5:
+                s.note('strings',root+off+12,at+pulse*.25,pulse*.20,57)
+                s.note('strings',root+off+7,at+pulse*.75,pulse*.20,62)
+        # End on a short dominant roll with room for the reveal's own pickup.
+        # Cadence can start early via the existing managed crossfade.
+        for i in range(7+tier*2):
+            at=duration-.42+i*(.30/(6+tier*2))
+            s.drum(38,at,30+round(i/(6+tier*2)*27))
+            if i%2==0:s.drum(43 if i<4 else 47,at,36+i*2)
+        output('win-'+tag+suffix,s,.64,.154+tier*.006,
+               {'countSeconds':duration,'tier':tag,'key':KEYS[idx],
+                'form':'Opening declaration / quieter plucked count / brass answers / accelerating dominant pickup'})
         s=Score(3.22)
-        # Soft rolling pickup, two rounded brass attacks shared with the
-        # cabinet's light crests, then a descending plucked receipt cadence.
-        s.chord('strings',[root,root+4,root+9],0,2.55,50+tier*3,0)
-        for n,at in enumerate([.015,.085,.15]):s.drum(45+n,at,32+n*6+tier*2)
+        # A 200 ms rising drum pickup leaves space before the amount reveal.
+        # The two brass/kick impacts share the exact visual crest times. Low
+        # trombone and short trumpet answers supply attack, never a shrill solo.
+        for i,at in enumerate([.010,.064,.116,.160]):
+            s.drum([41,43,45,47][i],at,17+i*6+tier)
+            s.drum(38,at+.006,13+i*4)
+        s.note('pizz',root+7,.012,.065,38)
         for volley,at in enumerate(impacts):
-            velocity=70+tier*3+(4 if volley else 0)
-            s.chord('horn',[root,root+7,root+12],at,.67 if volley==0 else 1.05,velocity-2,0)
-            s.note('bass',root-12,at,.70,78+tier*3)
-            s.drum(36,at,56+tier*4)
-            if tier>=2:s.note('trombone',root,at,.72,58+tier*3)
-            if tier>=1:s.drum(49,at,24+tier*3)
-            for i,v in enumerate([0,2,7,9,12]):s.note('harp',root+12+v,at+.022+i*.09,.39,54+i*3+tier*2)
-            if volley:s.chord('strings',[root+4,root+7,root+12],at,1.30,62+tier*3,0)
-        # The second pickup is separate from its actual impact, matching
-        # fountain growth. No repeated full fanfare during the payout hold.
-        for i,n in enumerate([45,47,50]):s.drum(n,impacts[1]-.19+i*.055,35+i*4+tier*2)
-        for i,v in enumerate([12,9,7,2,0]):s.note('piano',root+12+v,1.66+i*.105,.38,54-i*3)
-        s.chord('pizz',[root,root+4,root+7],2.24,.28,47,0)
-        output('win-'+tag+'-resolve'+suffix,s,.63,.152+tier*.006,{'tier':tag,'key':KEYS[idx],'revealImpactSeconds':impacts})
+            strength=3 if volley else 0
+            s.chord('horn',[root,root+7,root+12],at,.42 if not volley else .79,89+tier*2+strength,0)
+            s.chord('trombone',[root-12,root],at,.25 if not volley else .51,67+tier*2+strength,0)
+            s.note('trumpet',root+7,at+.012,.19 if not volley else .33,66+tier*2)
+            s.note('trumpet',root+12,at+.014,.19 if not volley else .33,57+tier*2)
+            s.chord('strings',[root+4,root+7,root+12],at+.008,.44 if not volley else 1.12,70+tier*2,0)
+            s.note('bass',root-12,at,.36 if not volley else .75,88+tier*2)
+            s.drum(36,at,74+tier*3+strength);s.drum(41,at,55+tier*3)
+            s.drum(38,at-.014,29);s.drum(38,at+.007,55+tier*2)
+            s.drum(49,at+.002,32+tier*2+strength)
+            for i,v in enumerate([0,4,7,9,12]):
+                s.note('harp',root+12+v,at+.026+i*.044,.26,52+i*2+tier*2)
+            # Each burst answers with a rhythmic major-key victory phrase.
+            # Stop the first phrase before the second pickup, so it can erupt.
+            for j,v in enumerate([4,7,12] if volley else [4,7]):
+                pos=at+[.31,.48,.65][j]
+                s.note('horn',root+v,pos,.13 if j<2 else .39,69+tier*2)
+                if tier>=1:s.note('trumpet',root+v,pos+.01,.10 if j<2 else .29,54+tier*2)
+                s.drum(36,pos,44+tier*2)
+        for i,n in enumerate([41,43,45,47]):
+            at=impacts[1]-.23+i*.055
+            s.drum(n,at,20+i*6+tier);s.drum(38,at+.009,14+i*4)
+        # Settled major cadence and coins, beneath the final visible amount.
+        for i,v in enumerate([12,9,7,4,0]):s.note('piano',root+12+v,1.86+i*.078,.28,52-i*3)
+        s.chord('pizz',[root,root+4,root+7],2.28,.19,43,0)
+        output('win-'+tag+'-resolve'+suffix,s,.66,.158+tier*.006,
+               {'tier':tag,'key':KEYS[idx],'revealImpactSeconds':impacts,
+                'form':'Quiet drum pickup / brass-and-bass burst / second pickup / larger victory burst / receipt cadence',
+                'impactInstruments':['horn','trombone','trumpet','strings','bass','kick','floor-tom','snare','restrained-crash','harp']})
 
 sf_source=json.loads((ROOT/'art-source/audio-sample-source.json').read_text())
-(ROOT/'docs/audio-provenance.json').write_text(json.dumps({'originalCompositions':True,'source':'F44 original MIDI event score rendered offline with sampled instruments','revision':'skyways-orchestral-v2-20261013','livePerformance':False,'extractedGameAudio':False,'sampleLibrary':sf_source,'mastering':MASTERING,'clips':REPORT},indent=2)+'\n')
+(ROOT/'docs/audio-provenance.json').write_text(json.dumps({'originalCompositions':True,'source':'F44 original MIDI event score rendered offline with sampled instruments','revision':REVISION,'updatedScope':AUDIO_SCOPE,'livePerformance':False,'extractedGameAudio':False,'sampleLibrary':sf_source,'mastering':MASTERING,'clips':REPORT},indent=2)+'\n')
 (ROOT/'art-source/festival-score.json').write_text(json.dumps({'rate':RATE,'eventFormat':['sample','noteOn','channel','midi','velocity'],'clips':SCORES},separators=(',',':'))+'\n')
 print('Completed',len(REPORT),'clips',flush=True)

@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-13T14:22:00.234273",
+  "audioLifecycleFailure": "score.playing was false at fixed 300 ms early-score assertion",
+  "mixCaptureFailure": "music volume had not recovered to >0.405 after fixed 1.2 s tail",
+  "action": "Investigate timing and audio source state before deciding whether this is export, runtime or sampling issue; no game source changed."
+}

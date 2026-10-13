@@ -1,0 +1,392 @@
+{
+  "checks": [
+    "golden-otter: 33 hall and destination clips / 11 managed sources",
+    "Live score resumes at position after engine hide/show",
+    "golden-otter: counting score → reveal cadence",
+    "golden-otter: one wallet receipt / early reveal has no overlapping tier fanfare",
+    "golden-otter: 3 actual column stops / tier accents / single charge and settlement / clean exit",
+    "golden-otter: 30 immediate taps accept one voice and recover",
+    "golden-otter: all-voice mute persists on reload",
+    "golden-otter: scene crossfade leaves one hall loop",
+    "moon-rabbit: 33 hall and destination clips / 11 managed sources"
+  ],
+  "rounds": [
+    {
+      "mode": "golden-otter",
+      "loaded": {
+        "count": 33,
+        "clips": [
+          {
+            "name": "ui-touch",
+            "duration": 0.2
+          },
+          {
+            "name": "reel-start",
+            "duration": 0.52
+          },
+          {
+            "name": "reel-roll",
+            "duration": 0.96
+          },
+          {
+            "name": "win-normal",
+            "duration": 1.24
+          },
+          {
+            "name": "music-salon",
+            "duration": 50.526313
+          },
+          {
+            "name": "coin-collect",
+            "duration": 0.85
+          },
+          {
+            "name": "feature",
+            "duration": 1.32
+          },
+          {
+            "name": "award-accent",
+            "duration": 0.58
+          },
+          {
+            "name": "reel-stop",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-5",
+            "duration": 0.3
+          },
+          {
+            "name": "win-normal-golden-otter",
+            "duration": 1.24
+          },
+          {
+            "name": "coin-collect-golden-otter",
+            "duration": 0.85
+          },
+          {
+            "name": "feature-golden-otter",
+            "duration": 1.32
+          },
+          {
+            "name": "music-golden-otter",
+            "duration": 48.813563
+          },
+          {
+            "name": "award-accent-golden-otter",
+            "duration": 0.58
+          },
+          {
+            "name": "reel-stop-golden-otter",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-otter-1",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-otter-2",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-otter-4",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-otter-3",
+            "duration": 0.3
+          },
+          {
+            "name": "reel-stop-golden-otter-5",
+            "duration": 0.3
+          },
+          {
+            "name": "win-grand",
+            "duration": 3.45
+          },
+          {
+            "name": "win-grand-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-super",
+            "duration": 4.35
+          },
+          {
+            "name": "win-super-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-mega",
+            "duration": 5.05
+          },
+          {
+            "name": "win-mega-resolve",
+            "duration": 3.22
+          },
+          {
+            "name": "win-epic",
+            "duration": 5.65
+          },
+          {
+            "name": "win-epic-resolve",
+            "duration": 3.22
+          }
+        ],
+        "sources": 11,
+        "columns": 3
+      },
+      "sourcePlayRequests": [
+        {
+          "time": 33326.699999809265,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 33328.699999809265,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 33328.699999809265,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 33330.199999809265,
+          "source": "Managed feedback 0",
+          "clip": "ui-touch"
+        },
+        {
+          "time": 33330.39999961853,
+          "source": "Reel mechanism",
+          "clip": "reel-roll"
+        },
+        {
+          "time": 33330.39999961853,
+          "source": "Managed feedback 1",
+          "clip": "reel-start"
+        },
+        {
+          "time": 35269.2999997139,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-golden-otter"
+        },
+        {
+          "time": 35270.7999997139,
+          "source": "Managed feedback 2",
+          "clip": "reel-stop-golden-otter"
+        },
+        {
+          "time": 35403,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-golden-otter-1"
+        },
+        {
+          "time": 35405,
+          "source": "Managed feedback 3",
+          "clip": "reel-stop-golden-otter-1"
+        },
+        {
+          "time": 35552.699999809265,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-golden-otter-2"
+        },
+        {
+          "time": 35557.09999990463,
+          "source": "Managed feedback 5",
+          "clip": "win-normal-golden-otter"
+        },
+        {
+          "time": 35558.09999990463,
+          "source": "Managed feedback 4",
+          "clip": "reel-stop-golden-otter-2"
+        },
+        {
+          "time": 35558.59999990463,
+          "source": "Managed feedback 5",
+          "clip": "win-normal-golden-otter"
+        },
+        {
+          "time": 38726.199999809265,
+          "source": "Award performance score",
+          "clip": "win-epic"
+        },
+        {
+          "time": 38768,
+          "source": "Award performance score",
+          "clip": "win-epic"
+        },
+        {
+          "time": 39287.199999809265,
+          "source": "Managed feedback 0",
+          "clip": "award-accent-golden-otter"
+        },
+        {
+          "time": 39290.7999997139,
+          "source": "Managed feedback 0",
+          "clip": "award-accent-golden-otter"
+        },
+        {
+          "time": 40153.39999961853,
+          "source": "Managed feedback 1",
+          "clip": "award-accent-golden-otter"
+        },
+        {
+          "time": 40158.7999997139,
+          "source": "Managed feedback 1",
+          "clip": "award-accent-golden-otter"
+        },
+        {
+          "time": 41120.699999809265,
+          "source": "Managed feedback 2",
+          "clip": "award-accent-golden-otter"
+        },
+        {
+          "time": 41125.5,
+          "source": "Managed feedback 2",
+          "clip": "award-accent-golden-otter"
+        },
+        {
+          "time": 42467.7999997139,
+          "source": "Music 1",
+          "clip": "music-golden-otter"
+        },
+        {
+          "time": 42467.89999961853,
+          "source": "Award performance score",
+          "clip": "win-epic"
+        },
+        {
+          "time": 44119.89999961853,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve"
+        },
+        {
+          "time": 44125.699999809265,
+          "source": "Award resolution score",
+          "clip": "win-epic-resolve"
+        },
+        {
+          "time": 46619.89999961853,
+          "source": "Managed feedback 3",
+          "clip": "coin-collect-golden-otter"
+        },
+        {
+          "time": 46623.39999961853,
+          "source": "Managed feedback 3",
+          "clip": "coin-collect-golden-otter"
+        }
+      ],
+      "acceptedFeedback": [
+        {
+          "time": 33326.699999809265,
+          "clip": "ui-touch",
+          "category": "tap",
+          "level": 0.4
+        },
+        {
+          "time": 33328.699999809265,
+          "clip": "reel-start",
+          "category": "spin",
+          "level": 0.55
+        },
+        {
+          "time": 35269.2999997139,
+          "clip": "reel-stop-golden-otter",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 35403.09999990463,
+          "clip": "reel-stop-golden-otter-1",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 35552.7999997139,
+          "clip": "reel-stop-golden-otter-2",
+          "category": "reel-stop",
+          "level": 0.53
+        },
+        {
+          "time": 35557.09999990463,
+          "clip": "win-normal-golden-otter",
+          "category": "win-normal",
+          "level": 0.58
+        },
+        {
+          "time": 39287.199999809265,
+          "clip": "award-accent-golden-otter",
+          "category": "award-accent",
+          "level": 0.3
+        },
+        {
+          "time": 40153.39999961853,
+          "clip": "award-accent-golden-otter",
+          "category": "award-accent",
+          "level": 0.33499999999999996
+        },
+        {
+          "time": 41120.699999809265,
+          "clip": "award-accent-golden-otter",
+          "category": "award-accent",
+          "level": 0.37
+        },
+        {
+          "time": 46620,
+          "clip": "coin-collect-golden-otter",
+          "category": "award-collect",
+          "level": 0.38
+        }
+      ],
+      "reelLandings": [
+        {
+          "column": 0,
+          "time": 35269.2999997139
+        },
+        {
+          "column": 1,
+          "time": 35403
+        },
+        {
+          "column": 2,
+          "time": 35552.699999809265
+        }
+      ],
+      "transactions": [
+        {
+          "id": "tx-126c9851f2582d4763f13591605b589c",
+          "type": "spin-win",
+          "amount": 12434
+        },
+        {
+          "id": "tx-7236b4c5c03df2ac790218b651320033",
+          "type": "spin-bet",
+          "amount": -80
+        }
+      ],
+      "balanceBefore": 27000,
+      "balanceAfter": 39354,
+      "forced": "QA epic result; real local charge/settlement; production RNG unchanged"
+    }
+  ],
+  "errors": [],
+  "scope": "Owned desktop browser; engine hide/show lifecycle fixtures. Not phone listening or native OS interruption testing."
+}
