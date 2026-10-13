@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Cocos EditBox creates inline CSS for its native DOM input overlay. Scripts remain restricted to self. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>F40 · Fortune Festival</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="csw-preloader" role="status" aria-label="Loading Fortune Festival">
+    <div class="loading-sign">
+      <img src="festival-brand.webp" class="wordmark" alt="Fortune Festival">
+      <p class="invitation">FOUR FORTUNE HOUSES</p>
+      <img src="festival-loading-plate.webp" class="loading-mount" alt="" aria-hidden="true">
+      <div class="loading-track" role="progressbar" aria-label="Loading game assets" aria-valuemin="0" aria-valuemax="100" aria-valuetext="Preparing game assets"><span class="loading-wait" aria-hidden="true"></span><span id="loading-progress" aria-hidden="true"></span></div>
+      <p id="loading-copy">Opening Fortune Festival…</p>
+      <button id="loading-retry" hidden>Try again</button>
+    </div>
+    <p class="virtual-notice">Virtual coins · No cash value or cash-out</p>
+  </div>
+  <div id="GameDiv" cc_exact_fit_screen="true"><div id="Cocos3dGameContainer"><canvas id="GameCanvas" tabindex="0" aria-label="Fortune Festival game"></canvas></div></div>
+  <script src="src/polyfills.bundle.js" charset="utf-8"></script>
+  <script src="src/system.bundle.js" charset="utf-8"></script>
+  <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"></script>
+  <script src="bootstrap.js" charset="utf-8"></script>
+</body>
+</html>

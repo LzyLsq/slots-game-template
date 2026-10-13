@@ -1,0 +1,1169 @@
+[
+  {
+    "id": 33,
+    "slug": "Golden_Library",
+    "name": "GoldenLibrary",
+    "title": "Golden Library",
+    "source": "完整游戏模版/全游戏模版/F33_Golden_Library_v1.0.0",
+    "bundle": "com.xzkj.goldenlibraryh5",
+    "port": 19333,
+    "folder": "F33_Golden_Library_OC_StoreKit2_Xcode",
+    "project": "F33_Golden_Library_OC_StoreKit2_Xcode/DBGame/GoldenLibraryH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlibrary.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlibrary.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlibrary.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlibrary.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlibrary.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlibrary.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlibrary.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlibrary.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenlibrary.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenlibrary.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenlibrary.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenlibrary.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 70,
+      "before": 99547643,
+      "after": 23727294,
+      "savedBytes": 75820349,
+      "originalBytes": 89008344,
+      "encodedBytes": 13188058
+    },
+    "iconSource": "Xcode_H5/WebP_IAP_20261010/F33_Golden_Library_OC_StoreKit2_Xcode/F33_H5/ios-wrapper/App/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+    "webBytes": 23727294
+  },
+  {
+    "id": 34,
+    "slug": "Aurum_Atelier",
+    "name": "AurumAtelier",
+    "title": "Aurum Atelier",
+    "source": "完整游戏模版/全游戏模版/F34_Aurum_Atelier_v1.0.0",
+    "bundle": "com.xzkj.f34aurumatelierh5",
+    "port": 19334,
+    "folder": "F34_Aurum_Atelier_OC_StoreKit2_Xcode",
+    "project": "F34_Aurum_Atelier_OC_StoreKit2_Xcode/DBGame/AurumAtelierH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.f34aurumatelier.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 122,
+      "before": 197312365,
+      "after": 64664114,
+      "savedBytes": 132648251,
+      "originalBytes": 153531761,
+      "encodedBytes": 20883626
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F34_Aurum_Atelier_v1.0.0/assets/resources/art/mascot-coin.png",
+    "webBytes": 64664114
+  },
+  {
+    "id": 35,
+    "slug": "Sovereign_Mint",
+    "name": "SovereignMint",
+    "title": "Sovereign Mint",
+    "source": "完整游戏模版/全游戏模版/F35_Sovereign_Mint_v1.0.0",
+    "bundle": "com.xzkj.f35sovereignminth5",
+    "port": 19335,
+    "folder": "F35_Sovereign_Mint_OC_StoreKit2_Xcode",
+    "project": "F35_Sovereign_Mint_OC_StoreKit2_Xcode/DBGame/SovereignMintH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.sovereignmint.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.sovereignmint.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.sovereignmint.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.sovereignmint.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.sovereignmint.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.sovereignmint.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.sovereignmint.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.sovereignmint.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.sovereignmint.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.sovereignmint.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.sovereignmint.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.sovereignmint.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 82,
+      "before": 97438222,
+      "after": 26935716,
+      "savedBytes": 70502506,
+      "originalBytes": 84994136,
+      "encodedBytes": 14491708
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F35_Sovereign_Mint_v1.0.0/assets/resources/art/canopy-guardian.png",
+    "webBytes": 26935716
+  },
+  {
+    "id": 36,
+    "slug": "Golden_Wilds",
+    "name": "GoldenWilds",
+    "title": "Golden Wilds",
+    "source": "完整游戏模版/全游戏模版/F36_Golden_Wilds_v1.0.0",
+    "bundle": "com.xzkj.f36goldenwildsh5",
+    "port": 19336,
+    "folder": "F36_Golden_Wilds_OC_StoreKit2_Xcode",
+    "project": "F36_Golden_Wilds_OC_StoreKit2_Xcode/DBGame/GoldenWildsH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenwilds.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenwilds.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenwilds.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenwilds.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenwilds.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenwilds.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenwilds.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenwilds.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldenwilds.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldenwilds.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldenwilds.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldenwilds.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 135,
+      "before": 218214110,
+      "after": 72165989,
+      "savedBytes": 146048121,
+      "originalBytes": 173015474,
+      "encodedBytes": 26967480
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F36_Golden_Wilds_v1.0.0/assets/resources/art/mascot-coin.png",
+    "webBytes": 72165989
+  },
+  {
+    "id": 37,
+    "slug": "Fortune_Caravan",
+    "name": "FortuneCaravan",
+    "title": "Fortune Caravan",
+    "source": "完整游戏模版/全游戏模版/F37_Fortune_Caravan_v1.0.0",
+    "bundle": "com.xzkj.f37fortunecaravanh5",
+    "port": 19337,
+    "folder": "F37_Fortune_Caravan_OC_StoreKit2_Xcode",
+    "project": "F37_Fortune_Caravan_OC_StoreKit2_Xcode/DBGame/FortuneCaravanH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunecaravan.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunecaravan.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunecaravan.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunecaravan.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunecaravan.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunecaravan.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunecaravan.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunecaravan.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunecaravan.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunecaravan.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunecaravan.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunecaravan.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 70,
+      "before": 71216178,
+      "after": 25644376,
+      "savedBytes": 45571802,
+      "originalBytes": 53330544,
+      "encodedBytes": 7758808
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F37_Fortune_Caravan_v1.0.0/assets/resources/art/caravan-guardian.png",
+    "webBytes": 25644376
+  },
+  {
+    "id": 38,
+    "slug": "Golden_Gala",
+    "name": "GoldenGala",
+    "title": "Golden Gala",
+    "source": "完整游戏模版/全游戏模版/F38_Golden_Gala_v1.0.0",
+    "bundle": "com.xzkj.f38goldengalah5",
+    "port": 19338,
+    "folder": "F38_Golden_Gala_OC_StoreKit2_Xcode",
+    "project": "F38_Golden_Gala_OC_StoreKit2_Xcode/DBGame/GoldenGalaH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldengala.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldengala.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldengala.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldengala.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldengala.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldengala.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldengala.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldengala.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldengala.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldengala.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldengala.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldengala.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 97,
+      "before": 85674968,
+      "after": 28004965,
+      "savedBytes": 57670003,
+      "originalBytes": 67268778,
+      "encodedBytes": 9598868
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F38_Golden_Gala_v1.0.0/assets/resources/art/gala-guardian.png",
+    "webBytes": 28004965
+  },
+  {
+    "id": 40,
+    "slug": "Fortune_Festival",
+    "name": "FortuneFestival",
+    "title": "Fortune Festival",
+    "source": "完整游戏模版/全游戏模版/F40_Fortune_Festival_v1.0.0",
+    "bundle": "com.xzkj.f40fortunefestivalh5",
+    "port": 19340,
+    "folder": "F40_Fortune_Festival_OC_StoreKit2_Xcode",
+    "project": "F40_Fortune_Festival_OC_StoreKit2_Xcode/DBGame/FortuneFestivalH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunefestival.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunefestival.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunefestival.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunefestival.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunefestival.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunefestival.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunefestival.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunefestival.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortunefestival.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortunefestival.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortunefestival.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortunefestival.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 135,
+      "before": 241728808,
+      "after": 88649222,
+      "savedBytes": 153079586,
+      "originalBytes": 180803418,
+      "encodedBytes": 27723960
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F40_Fortune_Festival_v1.0.0/assets/resources/art/mascot-coin.png",
+    "webBytes": 88649222
+  },
+  {
+    "id": 42,
+    "slug": "Fortune_Conservatory",
+    "name": "FortuneConservatory",
+    "title": "Fortune Conservatory",
+    "source": "完整游戏模版/全游戏模版/F42_Fortune_Conservatory_v1.0.0",
+    "bundle": "com.xzkj.f42fortuneconservatoryh5",
+    "port": 19342,
+    "folder": "F42_Fortune_Conservatory_OC_StoreKit2_Xcode",
+    "project": "F42_Fortune_Conservatory_OC_StoreKit2_Xcode/DBGame/FortuneConservatoryH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortuneconservatory.coins.purse.v1",
+        "credits": 2000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortuneconservatory.coins.chest.v1",
+        "credits": 6000,
+        "bonus": 0,
+        "label": "GARDEN CHEST",
+        "debugPrice": "$2.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortuneconservatory.coins.vault.v1",
+        "credits": 16000,
+        "bonus": 0,
+        "label": "CONSERVATORY VAULT",
+        "debugPrice": "$4.99"
+      }
+    ],
+    "legacyProducts": [],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 1,
+      "before": 19011659,
+      "after": 18883510,
+      "savedBytes": 128149,
+      "originalBytes": 144984,
+      "encodedBytes": 16732
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F42_Fortune_Conservatory_v1.0.0/assets/art/app-icon.png",
+    "webBytes": 18883506
+  },
+  {
+    "id": 43,
+    "slug": "Golden_Symphony",
+    "name": "GoldenSymphony",
+    "title": "Golden Symphony",
+    "source": "完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0",
+    "bundle": "com.xzkj.f43goldensymphonyh5",
+    "port": 19343,
+    "folder": "F43_Golden_Symphony_OC_StoreKit2_Xcode",
+    "project": "F43_Golden_Symphony_OC_StoreKit2_Xcode/DBGame/GoldenSymphonyH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldensymphony.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldensymphony.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldensymphony.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldensymphony.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldensymphony.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldensymphony.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldensymphony.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldensymphony.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.goldensymphony.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.goldensymphony.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.goldensymphony.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.goldensymphony.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 132,
+      "before": 241969581,
+      "after": 86959359,
+      "savedBytes": 155010222,
+      "originalBytes": 181152625,
+      "encodedBytes": 26142528
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/assets/resources/art/golden-strings-guardian.png",
+    "webBytes": 86959359
+  },
+  {
+    "id": 44,
+    "slug": "Fortune_Skyways",
+    "name": "FortuneSkyways",
+    "title": "Fortune Skyways",
+    "source": "完整游戏模版/全游戏模版/F44_Fortune_Skyways_v1.0.0",
+    "bundle": "com.xzkj.f44fortuneskywaysh5",
+    "port": 19344,
+    "folder": "F44_Fortune_Skyways_OC_StoreKit2_Xcode",
+    "project": "F44_Fortune_Skyways_OC_StoreKit2_Xcode/DBGame/FortuneSkywaysH5.xcodeproj",
+    "team": "DQK6C4RU3Y",
+    "minimumIOS": "15.4",
+    "products": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortuneskyways.coins.purse.v3",
+        "credits": 5000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortuneskyways.coins.bullion.v3",
+        "credits": 25000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortuneskyways.coins.chest.v3",
+        "credits": 50000,
+        "bonus": 20000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortuneskyways.coins.vault.v3",
+        "credits": 100000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "legacyProducts": [
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortuneskyways.coins.purse.v2",
+        "credits": 5400,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortuneskyways.coins.bullion.v2",
+        "credits": 18000,
+        "bonus": 1800,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortuneskyways.coins.chest.v2",
+        "credits": 45000,
+        "bonus": 7200,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortuneskyways.coins.vault.v2",
+        "credits": 108000,
+        "bonus": 21600,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      },
+      {
+        "id": "purse",
+        "appleProductId": "com.publisher.fortuneskyways.coins.purse",
+        "credits": 10000,
+        "bonus": 0,
+        "label": "COIN PURSE",
+        "debugPrice": "$0.99"
+      },
+      {
+        "id": "bullion",
+        "appleProductId": "com.publisher.fortuneskyways.coins.bullion",
+        "credits": 50000,
+        "bonus": 5000,
+        "label": "GOLD RESERVE",
+        "debugPrice": "$4.99"
+      },
+      {
+        "id": "chest",
+        "appleProductId": "com.publisher.fortuneskyways.coins.chest",
+        "credits": 120000,
+        "bonus": 18000,
+        "label": "TREASURE CHEST",
+        "debugPrice": "$9.99"
+      },
+      {
+        "id": "vault",
+        "appleProductId": "com.publisher.fortuneskyways.coins.vault",
+        "credits": 300000,
+        "bonus": 60000,
+        "label": "ROYAL VAULT",
+        "debugPrice": "$19.99"
+      }
+    ],
+    "compression": {
+      "format": "PNG/JPEG to WebP quality 85, exact alpha, original dimensions; no duplicate image fallback",
+      "count": 135,
+      "before": 234437403,
+      "after": 86757308,
+      "savedBytes": 147680095,
+      "originalBytes": 174213099,
+      "encodedBytes": 26533132
+    },
+    "iconSource": "完整游戏模版/全游戏模版/F44_Fortune_Skyways_v1.0.0/assets/resources/art/mascot-coin.png",
+    "webBytes": 86757308
+  }
+]

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,19 +40,19 @@
 /* Begin PBXFileReference section */
 		0086E70465FE017700FF6A97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1502A20746CB6735251A5876 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenHarvestH5Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenHarvestH5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA3833A3A0F190E0DDBBF53 /* GoldenHarvest.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = GoldenHarvest.entitlements; sourceTree = "<group>"; };
 		1F6A5B0100F6B87F36AF0DEA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		28ACA26D96B4B994BAE39A26 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		33F86BAF5DCB7D24BB2CC528 /* StoreKitBackend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitBackend.swift; sourceTree = "<group>"; };
 		370EBC8CB3ED61B433DC2782 /* AppleLogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppleLogin.m; sourceTree = "<group>"; };
-		40EE627C29042DF99DD6CA3D /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; path = Info.plist.in; sourceTree = "<group>"; };
+		40EE627C29042DF99DD6CA3D /* Info.plist.in */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = Info.plist.in; sourceTree = "<group>"; };
 		5AFD4E5FFAE2E7D9C2C8E56B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		5E02FE13F5CCD3A64E2FE762 /* H5LocalServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = H5LocalServer.m; sourceTree = "<group>"; };
 		6AC44C98DF3E738A529A4F60 /* StoreKitTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKitTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/StoreKitTest.framework; sourceTree = DEVELOPER_DIR; };
 		6C7164A451CBD2C6A5BD3570 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B889C315E2A8587770A6B32 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8B16754E3197C583FB981387 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		8B16754E3197C583FB981387 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		8F686FFC45001EBC5F5B1B21 /* CopyWebAssets.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = CopyWebAssets.sh; sourceTree = "<group>"; };
 		95BB7D7925987EB4FDCB37E3 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
 		9A69C3BCBE9DBB0AC5C5E964 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		B555A1D6225477339DBF1DA8 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
 		BDF4D154B218881CA57096FB /* LocalStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalStore.h; sourceTree = "<group>"; };
 		D3B8D028003D44FF68076329 /* AppleLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppleLogin.h; sourceTree = "<group>"; };
-		D7434B7B9E25D6EB4CAB6BD0 /* GoldenHarvest.storekit */ = {isa = PBXFileReference; includeInIndex = 1; path = GoldenHarvest.storekit; sourceTree = "<group>"; };
+		D7434B7B9E25D6EB4CAB6BD0 /* GoldenHarvest.storekit */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = GoldenHarvest.storekit; sourceTree = "<group>"; };
 		E986BA9BCFFCEEFE0A431F32 /* GoldenHarvestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenHarvestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F867D633A4D61CC42C77A116 /* H5LocalServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = H5LocalServer.h; sourceTree = "<group>"; };
 		FBD9BF987225326B151D3365 /* LocalStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LocalStore.m; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		41613314CB9309995874D0AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5Host.app */,
+				1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5.app */,
 				E986BA9BCFFCEEFE0A431F32 /* GoldenHarvestTests.xctest */,
 			);
 			name = Products;
@@ -193,7 +193,7 @@
 			);
 			name = GoldenHarvestH5Host;
 			productName = GoldenHarvestH5Host;
-			productReference = 1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5Host.app */;
+			productReference = 1AE4CD91BF87ACF620E627EA /* GoldenHarvestH5.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -214,8 +214,6 @@
 				Base,
 			);
 			mainGroup = 9D192AE4B52B81B33F7D0B14;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 41613314CB9309995874D0AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,11 +364,15 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F13_H5/ios-wrapper/App/GoldenHarvest.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../F13_H5/ios-wrapper/App/Info.plist.in";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5;
 				PRODUCT_MODULE_NAME = GoldenHarvestH5;
 				PRODUCT_NAME = GoldenHarvestH5;
@@ -397,7 +399,11 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5.tests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -418,7 +424,11 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5.tests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -499,11 +509,15 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/../F13_H5/ios-wrapper/App/GoldenHarvest.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQK6C4RU3Y;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../F13_H5/ios-wrapper/App/Info.plist.in";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzkj.goldenharvesth5;
 				PRODUCT_MODULE_NAME = GoldenHarvestH5;
 				PRODUCT_NAME = GoldenHarvestH5;

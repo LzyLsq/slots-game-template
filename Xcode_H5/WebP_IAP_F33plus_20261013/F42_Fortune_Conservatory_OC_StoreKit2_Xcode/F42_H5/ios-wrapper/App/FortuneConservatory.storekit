@@ -1,0 +1,64 @@
+{
+  "identifier": "F42-LOCAL-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "0.99",
+      "familyShareable": false,
+      "internalID": "4200",
+      "localizations": [
+        {
+          "description": "2000 virtual coins. No cash value.",
+          "displayName": "Fortune Conservatory COIN PURSE",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.fortuneconservatory.coins.purse.v1",
+      "referenceName": "purse 2000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "2.99",
+      "familyShareable": false,
+      "internalID": "4201",
+      "localizations": [
+        {
+          "description": "6000 virtual coins. No cash value.",
+          "displayName": "Fortune Conservatory GARDEN CHEST",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.fortuneconservatory.coins.chest.v1",
+      "referenceName": "chest 6000",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "4202",
+      "localizations": [
+        {
+          "description": "16000 virtual coins. No cash value.",
+          "displayName": "Fortune Conservatory CONSERVATORY VAULT",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.publisher.fortuneconservatory.coins.vault.v1",
+      "referenceName": "vault 16000",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}
