@@ -91,6 +91,7 @@ export class PhysicalControls{
   const label=button.querySelector(':scope > .control-label');if(!label)return;
   const box=g.label;Object.assign(label.style,{left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});
   const gleam=button.querySelector(':scope > .control-reflection');if(gleam)Object.assign(gleam.style,{left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});
+  if(!label.textContent.trim())return;
   let size=parseFloat(getComputedStyle(button).fontSize);label.style.fontSize=size+'px';
   // Re-measure actual glyphs after shrinking: flex gaps, font rounding and
   // stacked BET/value labels do not scale linearly with the nominal font size.

@@ -294,4 +294,5 @@ html[lang=en] .game-status{font-size:10px;line-height:1.3}
 @media(max-width:350px){.house-tab,.game-switch .plate-btn,html[lang=en] .game-switch .plate-btn{font-size:10px}}
 @media(orientation:landscape) and (max-height:520px){.game .game-switch .plate-btn,html[lang=en] .game .game-switch .plate-btn{font-size:11px}}
 
+.deck .bet-display,.deck .plate-btn,html[lang=en] .deck .plate-btn{height:76%}
 .deck .physical-control:active:not(:disabled){transform:none;filter:none}
