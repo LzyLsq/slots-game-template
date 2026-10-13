@@ -273,8 +273,9 @@ html[lang=en] .game-status{font-size:10px;line-height:1.3}
 .portrait-button>.control-label{display:grid;place-items:center}
 .portrait-button .control-label img{width:100%;height:100%;margin:0;object-fit:contain}
 .header .utility>.control-label{max-width:none}
-.header .utility b,html[lang=en] .header .utility[data-action=home] b{font-size:inherit;max-width:none}
+.header .utility b,html[lang=en] .header .utility b,html[lang=en] .header .utility[data-action=home] b{font-size:inherit;max-width:none}
 .header .utility{font-size:10px}
+.header .utility,.header .portrait-button{min-width:44px;min-height:44px}
 .header .utility[data-action=shop]{font-size:21px}
 .modal-close.utility{font-size:20px;width:44px;height:44px}
 .bet-display .control-label{gap:4px;font-variant-numeric:tabular-nums}

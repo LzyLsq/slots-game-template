@@ -1,0 +1,10 @@
+PASS feedback mix salon
+AssertionError [ERR_ASSERTION]: hide and resume: music did not recover
+    at restored (/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/tools/qa/audio-mix.cjs:45:27)
+    at /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/tools/qa/audio-mix.cjs:139:71 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}

@@ -12,7 +12,7 @@ python3 tools/preview_server.py --port 6043
 
 客户端类型检查需要 Creator 导入后生成的 `temp/tsconfig.cocos.json`。Playwright 是单独的 QA 依赖，可使用已有的安装设置 `NODE_PATH`；图像解码/信号审查分别需要 Pillow、OpenCV/numpy。浏览器默认使用本机 Google Chrome，部分脚本提供 `BROWSER_EXECUTABLE`。
 
-明确设置 `QA_OUTPUT` 和 `QA_VERSION`；部分脚本仍保留早期目录名称作为默认值。最新build11演出/声音证据在 `docs/qa/f43-concert-awards-20261013/`；基础页面检查在 `docs/qa/f43-final-20261013/`，基础截图在 `docs/screenshots/f43-final-20261013/`，来源版本分别标注。以[本轮报告](../../docs/validation-20261013.md)记录的实际结果为准，不把脚本存在当作已通过。
+明确设置 `QA_OUTPUT` 和 `QA_VERSION`；部分脚本仍保留早期目录名称作为默认值。当前build12混音证据在 `docs/qa/f43-feedback-mix-20261013/`；build11演出/编曲证据在 `docs/qa/f43-concert-awards-20261013/`；基础页面检查在 `docs/qa/f43-final-20261013/`，基础截图在 `docs/screenshots/f43-final-20261013/`，来源版本分别标注。以[本轮报告](../../docs/validation-20261013.md)记录的实际结果为准，不把脚本存在当作已通过。
 
 | 脚本 | 检查范围 |
 |---|---|
@@ -30,6 +30,7 @@ python3 tools/preview_server.py --port 6043
 | `decode-award-recordings.py` | 顺序解码连续录制，保留原始时间间隔；无补帧 |
 | `guardian-eyelids-gpu.cjs` | 四角色眼部局部像素与睁眼后原图恢复 |
 | `hall-motion.cjs` | 实际大厅录制、四个入口触摸选中、稳定位置与唯一选中状态 |
+| `audio-mix.cjs` | 大厅/四模式实际WebAudio音量曲线、完整反馈尾部、连续停轮、重复点击、收场到账及实际混音录音 |
 | `audio.cjs` | 四模式声音资源、点击/落定/演出、静音和后台生命周期 |
 | `audio-signal.py` | PCM 峰值/能量/高频与循环接缝，不替代主观试听 |
 | `recorded-audio.cjs` | 解码实际有声Canvas录像的WebAudio混音，检查信号与削波；不替代主观试听 |
@@ -45,6 +46,8 @@ QA_OUTPUT=/tmp/f43-text QA_VERSION=f43-final-20261013 node tools/qa/text-centeri
 QA_OUTPUT=/tmp/f43-awards QA_VERSION=f43-final-20261013 node tools/qa/awards.cjs
 QA_AUDIO=1 QA_LONG_AWARD=1 QA_OUTPUT=/tmp/f43-motion QA_VERSION=f43-concert-awards-20261013 node tools/qa/direct-motion.cjs
 node tools/qa/recorded-audio.cjs /tmp/f43-motion
+QA_OUTPUT=/tmp/f43-mix QA_VERSION=f43-feedback-mix-20261013 node tools/qa/audio-mix.cjs
+node tools/qa/recorded-audio.cjs /tmp/f43-mix
 python3 tools/qa/decode-award-recordings.py /tmp/f43-motion
 ```
 
@@ -55,3 +58,5 @@ python3 tools/qa/decode-award-recordings.py /tmp/f43-motion
 本地 Cocos 浏览器、源代码合同、静态截图及桌面录制均不能代替原生桥接、真实设备性能、音乐主观试听、正式服务、资源权利和商店审核验收。
 
 `direct-motion.cjs` 的 `QA_AUDIO=1` 将实际WebAudio最终混音镜像到录制流，不替换音源；`QA_LONG_AWARD=1` 等待正常演出自动退出，不延长产品时序。关键帧按实际演出状态取Canvas帧，避免截图耗时导致错过收场。
+
+`audio-mix.cjs`直接调用真实已解码的Cocos声音，记录组件请求与下游WebAudio gain；录音镜像最终混音，不替换或合成音源。Cocos增益命令在WebAudio中有短暂平滑延迟，因此稳定段衰减、实际音效尾部及恢复都单独检查，不要求瞬间值逐采样相等。慢帧条件下等待实际恢复，额外等待有4秒上限。`recorded-audio.cjs`同时支持Canvas录像目录及这些纯音频WebM。

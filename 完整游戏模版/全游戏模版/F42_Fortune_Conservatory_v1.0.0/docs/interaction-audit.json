@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-13T04:30:57.475Z",
-  "sourceFingerprint": "a168bd6e766f1ccacc7e655a414e833ace9c2e51825ecb44089f1fb8388bfdfb",
+  "date": "2026-10-13T05:09:51.209Z",
+  "sourceFingerprint": "b005dd8d3853af52a1c6a38500abb1959cace5f6f4d53376404e27eb1ea8c013",
   "checks": [
     "tiger-treasury fixed mounting",
     "tiger-treasury inset face presses independently",
@@ -18,6 +18,12 @@
     "tortoise-vault inset face presses independently",
     "tortoise-vault pointer cancel restores neutral",
     "tortoise-vault dedicated carved spin material",
+    "native mouse hold does not shrink the carved mounting",
+    "drag-release outside the control restores neutral without opening rules",
+    "pointer cancellation only restores its own control",
+    "rapid taps do not accumulate rebound animations",
+    "disabling a held control clears its depressed state",
+    "keyboard holds the same inset face without deforming its socket",
     "keyboard opens rules with intact labels",
     "lobby selection face cleanup tiger-treasury",
     "lobby selection face cleanup koi-reserve",
@@ -39,6 +45,8 @@
     "mega clears transient coin layers",
     "OS reduced motion disables moving button faces",
     "reduced motion caps particles",
+    "BET uses the same carved mechanical mounting",
+    "live button labels are fully contained in their inset faces",
     "no interaction runtime errors"
   ],
   "tiers": [

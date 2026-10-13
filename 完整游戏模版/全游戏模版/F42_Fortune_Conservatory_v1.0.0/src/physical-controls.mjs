@@ -88,7 +88,7 @@ export class PhysicalControls{
   const size=parseFloat(getComputedStyle(button).fontSize);label.style.fontSize=size+'px';
   // Measure the rendered glyphs, including the currently selected language/value.
   const range=document.createRange();range.selectNodeContents(label);const r=range.getBoundingClientRect();
-  if(r.width>0&&r.height>0){const fit=Math.min(1,(box.width-4)/r.width,(box.height-2)/r.height);label.style.fontSize=Math.max(1,size*fit)+'px';}
+  if(r.width>0&&r.height>0){const fit=Math.min(1,(box.width-2)/r.width,(box.height-1)/r.height);label.style.fontSize=Math.max(1,size*fit)+'px';}
  }
  label(button,text){if(!button)return;const label=button.querySelector(':scope > .control-label');(label||button).textContent=text;this.layout(button);}
  stopReactions(button){const list=this.reactions.get(button);if(list){list.forEach(a=>a.cancel());this.reactions.delete(button);}}

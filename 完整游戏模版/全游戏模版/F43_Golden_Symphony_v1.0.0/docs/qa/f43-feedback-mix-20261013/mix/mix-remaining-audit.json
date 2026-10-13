@@ -1,0 +1,133 @@
+{
+  "version": "f43-feedback-mix-20261013",
+  "checks": [
+    "ruby-brass: tap onset, full tail, native gain and smooth recovery",
+    "ruby-brass: real rolling voice and four stops keep music/rolling below feedback",
+    "ruby-brass: normal win/reward/feature retain priority over later short tap",
+    "ruby-brass: twelve rapid taps reuse managed voices and recover without pumping",
+    "ruby-brass: wallet receipt remains in foreground through completed award exit",
+    "ruby-brass: effects mute releases duck and does not create silent holds",
+    "ruby-brass: foreground returns without stale feedback or duck",
+    "pearl-rhythm: tap onset, full tail, native gain and smooth recovery",
+    "pearl-rhythm: real rolling voice and four stops keep music/rolling below feedback",
+    "pearl-rhythm: normal win/reward/feature retain priority over later short tap",
+    "pearl-rhythm: twelve rapid taps reuse managed voices and recover without pumping",
+    "pearl-rhythm: wallet receipt remains in foreground through completed award exit",
+    "pearl-rhythm: effects mute releases duck and does not create silent holds",
+    "pearl-rhythm: foreground returns without stale feedback or duck"
+  ],
+  "reports": [
+    {
+      "mode": "ruby-brass",
+      "fixtures": [
+        {
+          "label": "tap",
+          "baseline": 0.41768664429839386,
+          "samples": 120,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.4115266243033379
+        },
+        {
+          "label": "rolling and sequential stops",
+          "baseline": 0.4124210594519777,
+          "samples": 153,
+          "minMusic": 0.0924,
+          "finalMusic": 0.41006536149391154
+        },
+        {
+          "label": "normal win and overlapping receipts",
+          "baseline": 0.4107534573763304,
+          "samples": 195,
+          "minMusic": 0.0756,
+          "finalMusic": 0.4072578565219491
+        },
+        {
+          "label": "rapid taps",
+          "baseline": 0.4090010064613085,
+          "samples": 163,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.4057570462662622
+        },
+        {
+          "label": "award exit and wallet receipt",
+          "baseline": 0.4077164335287413,
+          "samples": 195,
+          "minMusic": 0.06720000000000001,
+          "finalMusic": 0.40882310850756914
+        },
+        {
+          "label": "effects off",
+          "baseline": 0.41503007901215627,
+          "samples": 114,
+          "minMusic": 0.0756,
+          "finalMusic": 0.4124076807892345
+        },
+        {
+          "label": "hide and resume",
+          "baseline": 0.41293668220411445,
+          "samples": 139,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41183724650367753
+        }
+      ],
+      "recording": "ruby-brass-mix.webm"
+    },
+    {
+      "mode": "pearl-rhythm",
+      "fixtures": [
+        {
+          "label": "tap",
+          "baseline": 0.41915930224066056,
+          "samples": 119,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.4115397948689311
+        },
+        {
+          "label": "rolling and sequential stops",
+          "baseline": 0.4162497673984009,
+          "samples": 108,
+          "minMusic": 0.0924,
+          "finalMusic": 0.40595538510138957
+        },
+        {
+          "label": "normal win and overlapping receipts",
+          "baseline": 0.41944009221650946,
+          "samples": 178,
+          "minMusic": 0.0756,
+          "finalMusic": 0.4068025187848289
+        },
+        {
+          "label": "rapid taps",
+          "baseline": 0.41730989143823904,
+          "samples": 163,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.40577918474275887
+        },
+        {
+          "label": "award exit and wallet receipt",
+          "baseline": 0.4101793772931943,
+          "samples": 168,
+          "minMusic": 0.06720000002578583,
+          "finalMusic": 0.40751159383005664
+        },
+        {
+          "label": "effects off",
+          "baseline": 0.41602014593674497,
+          "samples": 114,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41239924019064733
+        },
+        {
+          "label": "hide and resume",
+          "baseline": 0.41269077604287024,
+          "samples": 139,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41183180285020266
+        }
+      ],
+      "recording": "pearl-rhythm-mix.webm"
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Cocos AudioSource and WebAudio downstream gain in an isolated desktop browser. Direct audio fixtures; no subjective/phone listening or natural-probability claim."
+}

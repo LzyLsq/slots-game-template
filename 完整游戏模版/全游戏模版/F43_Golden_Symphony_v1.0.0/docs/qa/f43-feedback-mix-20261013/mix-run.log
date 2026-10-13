@@ -1,1 +1,12 @@
 PASS feedback mix salon
+PASS feedback mix golden-strings
+PASS feedback mix sapphire-harp
+AssertionError [ERR_ASSERTION]: Downstream music gain does not follow the component envelope
+    at nativeEvidence (/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/tools/qa/audio-mix.cjs:63:5)
+    at /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/tools/qa/audio-mix.cjs:132:76 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}

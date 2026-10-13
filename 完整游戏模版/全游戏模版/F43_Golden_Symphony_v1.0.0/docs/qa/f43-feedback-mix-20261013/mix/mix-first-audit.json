@@ -1,0 +1,184 @@
+{
+  "version": "f43-feedback-mix-20261013",
+  "checks": [
+    "salon: tap onset, full tail, native gain and smooth recovery",
+    "salon: normal win/reward/feature retain priority over later short tap",
+    "salon: twelve rapid taps reuse managed voices and recover without pumping",
+    "salon: effects mute releases duck and does not create silent holds",
+    "salon: foreground returns without stale feedback or duck",
+    "golden-strings: tap onset, full tail, native gain and smooth recovery",
+    "golden-strings: real rolling voice and four stops keep music/rolling below feedback",
+    "golden-strings: normal win/reward/feature retain priority over later short tap",
+    "golden-strings: twelve rapid taps reuse managed voices and recover without pumping",
+    "golden-strings: wallet receipt remains in foreground through completed award exit",
+    "golden-strings: effects mute releases duck and does not create silent holds",
+    "golden-strings: foreground returns without stale feedback or duck",
+    "sapphire-harp: tap onset, full tail, native gain and smooth recovery",
+    "sapphire-harp: real rolling voice and four stops keep music/rolling below feedback",
+    "sapphire-harp: normal win/reward/feature retain priority over later short tap",
+    "sapphire-harp: twelve rapid taps reuse managed voices and recover without pumping",
+    "sapphire-harp: wallet receipt remains in foreground through completed award exit",
+    "sapphire-harp: effects mute releases duck and does not create silent holds",
+    "sapphire-harp: foreground returns without stale feedback or duck",
+    "ruby-brass: tap onset, full tail, native gain and smooth recovery",
+    "ruby-brass: real rolling voice and four stops keep music/rolling below feedback",
+    "ruby-brass: normal win/reward/feature retain priority over later short tap",
+    "ruby-brass: twelve rapid taps reuse managed voices and recover without pumping"
+  ],
+  "reports": [
+    {
+      "mode": "salon",
+      "fixtures": [
+        {
+          "label": "tap",
+          "baseline": 0.4173748353976298,
+          "samples": 120,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.4118244237865839
+        },
+        {
+          "label": "normal win and overlapping receipts",
+          "baseline": 0.4124143196112526,
+          "samples": 195,
+          "minMusic": 0.0756,
+          "finalMusic": 0.4076892798533435
+        },
+        {
+          "label": "rapid taps",
+          "baseline": 0.41016204152980096,
+          "samples": 163,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.4059300673072335
+        },
+        {
+          "label": "effects off",
+          "baseline": 0.4102120582141443,
+          "samples": 114,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41242285025474146
+        },
+        {
+          "label": "hide and resume",
+          "baseline": 0.41293982076344865,
+          "samples": 139,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41152862644922106
+        }
+      ],
+      "recording": "salon-mix.webm"
+    },
+    {
+      "mode": "golden-strings",
+      "fixtures": [
+        {
+          "label": "tap",
+          "baseline": 0.4172125042845063,
+          "samples": 119,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.4118389452359793
+        },
+        {
+          "label": "rolling and sequential stops",
+          "baseline": 0.41296477989571795,
+          "samples": 154,
+          "minMusic": 0.0924,
+          "finalMusic": 0.41005932509935417
+        },
+        {
+          "label": "normal win and overlapping receipts",
+          "baseline": 0.4111046932632323,
+          "samples": 185,
+          "minMusic": 0.0756,
+          "finalMusic": 0.40724935892200914
+        },
+        {
+          "label": "rapid taps",
+          "baseline": 0.4085902250488255,
+          "samples": 164,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.40575704626626224
+        },
+        {
+          "label": "award exit and wallet receipt",
+          "baseline": 0.4077164335287414,
+          "samples": 195,
+          "minMusic": 0.06720000000000004,
+          "finalMusic": 0.40876082068016945
+        },
+        {
+          "label": "effects off",
+          "baseline": 0.40955088863202926,
+          "samples": 114,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41240936778222204
+        },
+        {
+          "label": "hide and resume",
+          "baseline": 0.41240936778222204,
+          "samples": 139,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41182453900088284
+        }
+      ],
+      "recording": "golden-strings-mix.webm"
+    },
+    {
+      "mode": "sapphire-harp",
+      "fixtures": [
+        {
+          "label": "tap",
+          "baseline": 0.4168360847418474,
+          "samples": 120,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.41184257156206155
+        },
+        {
+          "label": "rolling and sequential stops",
+          "baseline": 0.4121380073889994,
+          "samples": 154,
+          "minMusic": 0.0924,
+          "finalMusic": 0.41005711581712767
+        },
+        {
+          "label": "normal win and overlapping receipts",
+          "baseline": 0.4107683766060046,
+          "samples": 195,
+          "minMusic": 0.0756,
+          "finalMusic": 0.4072606878055903
+        },
+        {
+          "label": "rapid taps",
+          "baseline": 0.4085952949404413,
+          "samples": 164,
+          "minMusic": 0.10079999999999999,
+          "finalMusic": 0.4063003070426954
+        },
+        {
+          "label": "award exit and wallet receipt",
+          "baseline": 0.40727748292814564,
+          "samples": 195,
+          "minMusic": 0.06720000000000001,
+          "finalMusic": 0.40879073242433034
+        },
+        {
+          "label": "effects off",
+          "baseline": 0.4095902704871643,
+          "samples": 114,
+          "minMusic": 0.0756,
+          "finalMusic": 0.4121241290792655
+        },
+        {
+          "label": "hide and resume",
+          "baseline": 0.4126842760726595,
+          "samples": 139,
+          "minMusic": 0.0756,
+          "finalMusic": 0.41182453900088284
+        }
+      ],
+      "recording": "sapphire-harp-mix.webm"
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Cocos AudioSource and WebAudio downstream gain in an isolated desktop browser. Direct audio fixtures; no subjective/phone listening or natural-probability claim.",
+  "runStatus": "Partial run: salon/Golden/Sapphire completed. Ruby probe stopped on an overly strict instantaneous WebAudio/component gain equality check during award attack."
+}
