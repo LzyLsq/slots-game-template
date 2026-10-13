@@ -1,0 +1,61 @@
+
+> f26-fortune-tides@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ browser cannot impersonate a successful Apple login (2.52775ms)
+✔ native cancellation and failure propagate without manufacturing a session (0.137875ms)
+✔ credential-state checks are delegated to native authentication (0.105875ms)
+✔ account registration, logout and reload restore only the correct independent save (305.578917ms)
+✔ registration validation and protected account deletion preserve other accounts (531.924292ms)
+✔ storage failure never reports a successful login or logout (1.587167ms)
+✔ mint: 20 distinct paylines, first-reel adjacency, wild substitution (7.107542ms)
+✔ pearl: all 256 ways, substitution and pure wild once (1.624208ms)
+✔ reef: eight anywhere, no wild substitution, all paying groups removed (0.54475ms)
+✔ reef: gravity, fresh refill and hard eight-cascade limit (6.40025ms)
+✔ beacon: 3/4/5 base coins pay fixed totals (0.972333ms)
+✔ beacon: locked values survive failed respins and new coin resets counter (3.0425ms)
+✔ all-coins feature collects immediately with no respins (0.665083ms)
+✔ all modes deterministic; stage totals, dimensions and final empty stage hold (576.518959ms)
+✔ invalid requests fail explicitly (9.998708ms)
+✔ pearl: leading all-wild prefix belongs only to wild, with exact winning cells (1.462291ms)
+✔ evaluations preserve input, snapshots independent, exported rules deeply immutable (1.7375ms)
+✔ seeded winning cells correspond to the evaluated symbol and dimensions (45.790875ms)
+✔ spin begins on the existing symbols and smoothly lands on exact target cells (66.016291ms)
+✔ held coins retain their original symbol while other cells spin inside clips (2.762167ms)
+✔ wins are deduplicated and never leak into a new board or removed cell (0.783833ms)
+✔ cascade offsets preserve survivor ordering and complete before app advances (5.695584ms)
+✔ reduced motion has no rolling, bounce, particles or delayed drop (2.5645ms)
+✔ all drawing is enclosed by glass clipping and destroy cancels work and input (1.339291ms)
+✔ every symbol silhouette is centered and constrained to its cell (0.830167ms)
+✔ all mode profiles finish within app timing and keep the exact supplied board (33.122042ms)
+✔ the rolling strip converges on each final symbol without a last-frame swap (4.010916ms)
+✔ restarting a spin discards old outcomes and copies held values (31.58125ms)
+✔ winning symbols keep a restrained pulse while their positions remain settled (70.92475ms)
+✔ pearl ways connect one award at a time without crossing paying symbols (2.102708ms)
+✔ reef scatter highlights never suggest an adjacency requirement (11.8515ms)
+✔ outer reel rows preserve their proportions across the landing boundary (9.835958ms)
+✔ particle paths exclude coin value badges while keeping surrounding sparkles (1.027375ms)
+✔ idle glint moves only along the glass lip and respects reduced motion (0.448ms)
+✔ short respins keep cruise speed near a normal spin and still arrive on the target strip (15.275625ms)
+✔ cascade recoil joins the falling trajectory without a velocity kick (3.886708ms)
+✔ unchanged resize notifications preserve the canvas and in-flight particles (0.197417ms)
+✔ prepared symbol sprites preserve source crops and are released on destroy (0.547334ms)
+✔ settling preserves live landing sparks but the next spin discards them (1.369083ms)
+✔ idle invitation stays within each cell and never moves held-value symbols (236.711833ms)
+✔ defaults and corrupted storage recover safely (2.349083ms)
+✔ state is a detached snapshot and committed profile survives reload (1.028209ms)
+✔ spin debit and payout are atomic including decimal wins (2.841875ms)
+✔ mail reward cannot be claimed twice, including reload (0.318375ms)
+✔ daily gift claims once per UTC calendar day (11.256458ms)
+✔ mail awards are trusted catalog values, not stored amounts (0.568417ms)
+✔ storage failures preserve a playable in-memory session and report persistence (0.739ms)
+✔ shop never grants coins and ranks identify examples (0.538667ms)
+✔ five languages have complete labels and interpolation (1.871167ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1314.691791

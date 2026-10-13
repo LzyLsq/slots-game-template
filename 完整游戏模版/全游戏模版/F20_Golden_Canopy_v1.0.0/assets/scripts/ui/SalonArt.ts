@@ -1,7 +1,5 @@
 import { StationaryArtwork } from '../vfx/StationaryArtwork';
-import { LivingMascotRig } from '../vfx/LivingMascotRig';
-import { FullBodyMascotRig } from '../vfx/FullBodyMascotRig';
-import { ArticulatedMascot } from '../vfx/ArticulatedMascot';
+import { CanopyBlinkRig } from '../vfx/CanopyBlinkRig';
 import {rewardArtwork,rewardInk,rewardTextWidth,type RewardPlateKind} from './RewardArtwork';
 import {TextFit} from './TextFit';
 import {tr,language} from './Language';
@@ -14,7 +12,7 @@ export class SalonArt {
   private textures = new Map<string, Texture2D>();
   private frames = new Map<string, SpriteFrame>();
   public async load(names: readonly string[], progress?: (done: number, total: number) => void): Promise<void> {
-    await LivingMascotRig.prepare(names);
+    await CanopyBlinkRig.prepare(names);
     let done = 0;
     // Two concurrent decodes prevent a 16-texture upload spike on mobile.
     const queue = [...names];
@@ -24,7 +22,7 @@ export class SalonArt {
         if (!this.textures.has(name)) {
           const tex = await new Promise<Texture2D>((resolve, reject) => {
             const timeout=setTimeout(()=>reject(new Error('Artwork load timed out: '+name)),20000);
-            resources.load(`art/${LivingMascotRig.file(name)}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
+            resources.load(`art/${name}/texture`,Texture2D,(error,asset)=>{clearTimeout(timeout);if(error)reject(error);else resolve(asset);});
           });
           tex.setFilters(Texture2D.Filter.LINEAR, Texture2D.Filter.LINEAR); this.textures.set(name, tex);
         }
@@ -61,7 +59,7 @@ export class SalonArt {
     this.frames.set(key, sf); return sf;
   }
   public image(parent: Node, name: string, x: number, y: number, w: number, h: number, index = -1): Node {
-    const n = box(parent, name, x, y, w, h); StationaryArtwork.mark(n,name); const s = FullBodyMascotRig.supports(name) ? n.addComponent(ArticulatedMascot) : n.addComponent(Sprite);
+    const n = box(parent, name, x, y, w, h); StationaryArtwork.mark(n,name); const s = n.addComponent(Sprite);
     // Set CUSTOM before the frame: RAW would overwrite the authored hit/layout box.
     s.sizeMode = Sprite.SizeMode.CUSTOM; s.spriteFrame = this.frame(name, index);
     if (name.startsWith('canopy-frame-') || name === 'surfaces' || name === 'ledgers' || (name.startsWith('canopy-plate-')||name.startsWith('canopy-soft-plate-'))) s.type = Sprite.Type.SLICED;
@@ -73,8 +71,7 @@ export class SalonArt {
       w = frame.rect.width * scale; h = frame.rect.height * scale;
     }
     n.getComponent(UITransform)!.setContentSize(w, h);
-    if (FullBodyMascotRig.supports(name)) n.addComponent(FullBodyMascotRig).setup(s as ArticulatedMascot,name);
-    else LivingMascotRig.attach(s,name,index);
+    CanopyBlinkRig.attach(s,name,index);
     return n;
   }
   public cover(parent: Node, name: string, x: number, y: number, w: number, h: number, index=-1, radius=0): Node {

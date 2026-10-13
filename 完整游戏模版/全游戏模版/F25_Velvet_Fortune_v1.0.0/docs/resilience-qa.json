@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-17",
+  "result": "pass",
+  "checks": [
+    "storage write failure rolls back state",
+    "multi-tab storage lock",
+    "interrupted round settles once across reload",
+    "auto stop finishes current round and does not begin another",
+    "reduced motion covers overlays and count-up"
+  ]
+}

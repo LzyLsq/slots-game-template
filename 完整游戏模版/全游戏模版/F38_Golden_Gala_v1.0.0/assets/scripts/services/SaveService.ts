@@ -131,7 +131,7 @@ const sanitizeScope = (value: unknown): PlayerScopedSave => {
   const caravan=objectValue(raw.caravan);
   next.caravan={rounds:Math.floor(numberValue(caravan.rounds,0,0,1_000_000)),visited:Array.isArray(caravan.visited)?Array.from(new Set(caravan.visited.filter((v):v is string=>typeof v==='string'&&GAME_CONFIGS.some(c=>c.id===v)))):[],claimed:Array.isArray(caravan.claimed)?Array.from(new Set(caravan.claimed.filter((v):v is string=>typeof v==='string'&&['crown-club','emerald-fortune','ruby-royale','vault-reserve'].includes(v)))):[]};
   next.settledSpinIds = Array.isArray(raw.settledSpinIds) ? raw.settledSpinIds.filter((id): id is string => typeof id === 'string').slice(-200) : [];
-  next.creditedPurchaseIds = Array.isArray(raw.creditedPurchaseIds) ? raw.creditedPurchaseIds.filter((id): id is string => typeof id === 'string' && /^[A-Za-z0-9._:-]{3,160}$/.test(id)).slice(-500) : [];
+  next.creditedPurchaseIds = Array.isArray(raw.creditedPurchaseIds) ? raw.creditedPurchaseIds.filter((id): id is string => typeof id === 'string' && /^[A-Za-z0-9._:-]{3,160}$/.test(id)) : [];
   return next;
 };
 

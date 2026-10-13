@@ -1,0 +1,39 @@
+
+> f28-treasure-regatta@0.1.0 test
+> tsx --test tests/*.test.ts
+
+✔ motion has continuous position and velocity across every phase join (10.9945ms)
+✔ all frame rates end exactly on integer cell positions with left-to-right stops (1.327958ms)
+✔ press cancels drags, ignores second pointer, activates only once (0.325375ms)
+✔ container-relative reel bounds and scene cover across 24 viewport/safe-area combinations (2.254666ms)
+✔ rules paginate without losing or duplicating words (14.013292ms)
+✔ empty pages and invalid layout budgets are handled (1.263792ms)
+✔ native random-word failures are rejected, including bridge false/negative sentinel (1.653666ms)
+✔ failed native entropy never charges the wallet (1.340917ms)
+✔ four modes have independent symbol identities and explicit rules (1.184041ms)
+✔ captain pays only the center row (0.858875ms)
+✔ ways use consecutive left columns and count all matching combinations once (0.746542ms)
+✔ cargo lines divide total bet and ignore cargo coins as line wins (0.152917ms)
+✔ clusters are orthogonal; full grid pays one cluster with declared cascade multiplier (0.543792ms)
+✔ collapse preserves survivor order and moves survivors down (1.364833ms)
+✔ cargo feature pays once and stops on a full board (0.687292ms)
+✔ cascades have a hard limit and exact evidence (0.729125ms)
+✔ 20,000 seeded rounds: integer money, bounded features, exact winning-cell evidence (184.902708ms)
+✔ invalid inputs fail before a result is created (0.51ms)
+✔ secure RNG rejects biased upper tail (0.113625ms)
+✔ deduct exactly once, settle exactly once, receipt copies cannot mutate balance (2.031417ms)
+✔ reload of pending round preserves outcome and recovery does not deduct again (0.589334ms)
+✔ failed save rolls back memory; retrying settlement credits only once (0.181792ms)
+✔ rewards are claimed once per UTC day; corrupted saves fail closed (1.304583ms)
+✔ stale session cannot overwrite another session’s changes (0.371375ms)
+✔ session ignores double clicks/stops; skip presentation cannot repeat settlement (0.444416ms)
+✔ backgrounding cancels auto; showing never causes another automatic bet (0.288917ms)
+✔ auto makes exactly the requested number of spins (0.67225ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 635.263833

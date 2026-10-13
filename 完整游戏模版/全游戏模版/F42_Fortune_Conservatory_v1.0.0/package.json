@@ -1,0 +1,25 @@
+{
+  "name": "f42-fortune-conservatory",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "F42 \u00b7 \u91d1\u66dc\u8d22\u82d1 \u2014 original four-house social slots game",
+  "scripts": {
+    "dev": "node tools/serve.mjs --port 6142",
+    "start": "node tools/serve.mjs --port 6142",
+    "build": "node tools/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "audit:math": "node tools/math-audit.mjs",
+    "audit:assets": "node tools/asset-audit.mjs",
+    "release:audit": "node tools/release-audit.mjs",
+    "qa:runtime": "node tools/qa-runtime.mjs",
+    "qa:responsive": "node tools/qa-responsive.mjs",
+    "qa:workflows": "node tools/qa-workflows.mjs",
+    "qa:views": "node tools/qa-view.mjs",
+    "qa:guardians": "node tools/qa-guardians.mjs",
+    "qa:interactions": "node tools/qa-interactions.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

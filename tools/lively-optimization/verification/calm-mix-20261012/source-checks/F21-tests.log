@@ -1,0 +1,258 @@
+
+> f21-royal-jubilee@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:primary
+
+
+> f21-royal-jubilee@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 450000,
+      "won": 451714,
+      "wins": 628,
+      "features": 469,
+      "maxWin": 6330
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 450000,
+      "won": 405212,
+      "wins": 431,
+      "features": 2,
+      "maxWin": 30633
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 450000,
+      "won": 395243,
+      "wins": 618,
+      "features": 576,
+      "maxWin": 6335
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 450000,
+      "won": 443184,
+      "wins": 894,
+      "features": 113,
+      "maxWin": 6592
+    }
+  }
+}
+
+> f21-royal-jubilee@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f21-royal-jubilee@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f21-royal-jubilee@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 32 cabinet/viewport combinations: shared transform, essential bounds, symbol breathing room.
+
+> f21-royal-jubilee@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'twin-boards',
+    columns: 3,
+    rows: 6,
+    spins: 3000,
+    features: 1421,
+    featurePaidHits: 1057,
+    coreHits: 1331,
+    coreReturn: 0.23893703703703703,
+    hits: 1919,
+    sampleReturn: 0.9304459259259259,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 9,
+    featurePaidHits: 9,
+    coreHits: 1224,
+    coreReturn: 0.7433644444444445,
+    hits: 1231,
+    sampleReturn: 0.9304111111111111,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1765,
+    featurePaidHits: 540,
+    coreHits: 1765,
+    coreReturn: 0.44710074074074074,
+    hits: 1905,
+    sampleReturn: 0.9157837037037037,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 315,
+    featurePaidHits: 315,
+    coreHits: 2637,
+    coreReturn: 0.3764037037037037,
+    hits: 2723,
+    sampleReturn: 0.9707481481481481,
+    layoutVariants: 1
+  }
+]
+
+> f21-royal-jubilee@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+
+> f21-royal-jubilee@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f21-royal-jubilee@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'twin-boards',
+    columns: 3,
+    rows: 6,
+    spins: 3000,
+    features: 1421,
+    featurePaidHits: 1057,
+    coreHits: 1331,
+    coreReturn: 0.23893703703703703,
+    hits: 1919,
+    sampleReturn: 0.9304459259259259,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 9,
+    featurePaidHits: 9,
+    coreHits: 1224,
+    coreReturn: 0.7433644444444445,
+    hits: 1231,
+    sampleReturn: 0.9304111111111111,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1765,
+    featurePaidHits: 540,
+    coreHits: 1765,
+    coreReturn: 0.44710074074074074,
+    hits: 1905,
+    sampleReturn: 0.9157837037037037,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 315,
+    featurePaidHits: 315,
+    coreHits: 2637,
+    coreReturn: 0.3764037037037037,
+    hits: 2723,
+    sampleReturn: 0.9707481481481481,
+    layoutVariants: 1
+  }
+]
+
+> f21-royal-jubilee@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'twin-boards',
+    columns: 3,
+    rows: 6,
+    spins: 3000,
+    features: 1421,
+    featurePaidHits: 1057,
+    coreHits: 1331,
+    coreReturn: 0.23893703703703703,
+    hits: 1919,
+    sampleReturn: 0.9304459259259259,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 9,
+    featurePaidHits: 9,
+    coreHits: 1224,
+    coreReturn: 0.7433644444444445,
+    hits: 1231,
+    sampleReturn: 0.9304111111111111,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1765,
+    featurePaidHits: 540,
+    coreHits: 1765,
+    coreReturn: 0.44710074074074074,
+    hits: 1905,
+    sampleReturn: 0.9157837037037037,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 315,
+    featurePaidHits: 315,
+    coreHits: 2637,
+    coreReturn: 0.3764037037037037,
+    hits: 2723,
+    sampleReturn: 0.9707481481481481,
+    layoutVariants: 1
+  }
+]

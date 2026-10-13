@@ -1,0 +1,290 @@
+
+> f19-fortune-treasury@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary
+
+
+> f19-fortune-treasury@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 500000,
+      "won": 521552,
+      "wins": 535,
+      "features": 163,
+      "maxWin": 4869
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 500000,
+      "won": 459910,
+      "wins": 525,
+      "features": 525,
+      "maxWin": 5692
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 500000,
+      "won": 516274,
+      "wins": 584,
+      "features": 15,
+      "maxWin": 15196
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 500000,
+      "won": 477751,
+      "wins": 683,
+      "features": 424,
+      "maxWin": 2550
+    }
+  }
+}
+
+> f19-fortune-treasury@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f19-fortune-treasury@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f19-fortune-treasury@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 32 cabinet/viewport combinations: shared transform, essential bounds, symbol breathing room.
+
+> f19-fortune-treasury@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 445,
+    featurePaidHits: 445,
+    coreHits: 1292,
+    coreReturn: 0.20148466666666667,
+    hits: 1563,
+    sampleReturn: 0.9387413333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1581,
+    featurePaidHits: 1530,
+    coreHits: 1581,
+    coreReturn: 0.16055533333333333,
+    hits: 1581,
+    sampleReturn: 0.984486,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 41,
+    featurePaidHits: 41,
+    coreHits: 1765,
+    coreReturn: 0.6584246666666667,
+    hits: 1783,
+    sampleReturn: 0.9869026666666667,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1308,
+    featurePaidHits: 1308,
+    coreHits: 1639,
+    coreReturn: 0.048899333333333336,
+    hits: 2066,
+    sampleReturn: 0.9894053333333334,
+    layoutVariants: 1
+  }
+]
+
+> f19-fortune-treasury@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f19-fortune-treasury@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 445,
+    featurePaidHits: 445,
+    coreHits: 1292,
+    coreReturn: 0.20148466666666667,
+    hits: 1563,
+    sampleReturn: 0.9387413333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1581,
+    featurePaidHits: 1530,
+    coreHits: 1581,
+    coreReturn: 0.16055533333333333,
+    hits: 1581,
+    sampleReturn: 0.984486,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 41,
+    featurePaidHits: 41,
+    coreHits: 1765,
+    coreReturn: 0.6584246666666667,
+    hits: 1783,
+    sampleReturn: 0.9869026666666667,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1308,
+    featurePaidHits: 1308,
+    coreHits: 1639,
+    coreReturn: 0.048899333333333336,
+    hits: 2066,
+    sampleReturn: 0.9894053333333334,
+    layoutVariants: 1
+  }
+]
+
+> f19-fortune-treasury@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-hour',
+    core: 'independent-collector-grid',
+    feature: 'coin-vault',
+    samples: 6000,
+    features: 982,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'jade-treasury',
+    core: 'independent-any-reel-ways',
+    feature: 'key-respin',
+    samples: 6000,
+    features: 3235,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'pearl-palace',
+    core: 'independent-cluster-avalanche',
+    feature: 'symbol-collector',
+    samples: 6000,
+    features: 89,
+    motions: [ 'collect', 'respin' ]
+  },
+  {
+    id: 'ruby-revel',
+    core: 'independent-line-reels',
+    feature: 'mystery-cross',
+    samples: 6000,
+    features: 2516,
+    motions: [ 'transform' ]
+  }
+]
+
+> f19-fortune-treasury@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 445,
+    featurePaidHits: 445,
+    coreHits: 1292,
+    coreReturn: 0.20148466666666667,
+    hits: 1563,
+    sampleReturn: 0.9387413333333333,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1581,
+    featurePaidHits: 1530,
+    coreHits: 1581,
+    coreReturn: 0.16055533333333333,
+    hits: 1581,
+    sampleReturn: 0.984486,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 41,
+    featurePaidHits: 41,
+    coreHits: 1765,
+    coreReturn: 0.6584246666666667,
+    hits: 1783,
+    sampleReturn: 0.9869026666666667,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1308,
+    featurePaidHits: 1308,
+    coreHits: 1639,
+    coreReturn: 0.048899333333333336,
+    hits: 2066,
+    sampleReturn: 0.9894053333333334,
+    layoutVariants: 1
+  }
+]

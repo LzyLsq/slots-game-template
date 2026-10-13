@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-13T04:30:00.941Z",
+  "sourceFingerprint": "a168bd6e766f1ccacc7e655a414e833ace9c2e51825ecb44089f1fb8388bfdfb",
+  "checks": [
+    "first launch English",
+    "real login shown",
+    "consent blocks entry",
+    "four lobby choices",
+    "in-place lobby tiger-treasury",
+    "in-place lobby koi-reserve",
+    "in-place lobby crane-palace",
+    "in-place lobby tortoise-vault",
+    "direct PLAY enters fourth mode",
+    "Chinese switch",
+    "Chinese choice survives reload",
+    "game switch tiger-treasury",
+    "reels geometry tiger-treasury",
+    "game switch koi-reserve",
+    "reels geometry koi-reserve",
+    "game switch crane-palace",
+    "reels geometry crane-palace",
+    "game switch tortoise-vault",
+    "reels geometry tortoise-vault",
+    "web purchases unavailable without native bridge",
+    "unavailable purchases never credit coins",
+    "daily claim disabled afterwards",
+    "fourth avatar selection",
+    "custom name preserved",
+    "fifth-round newcomer SUPER benefit",
+    "no pending presentation after collect",
+    "all audio decoded",
+    "one music track in steady state",
+    "award text fits normal",
+    "award text fits big",
+    "award text fits super",
+    "award text fits mega",
+    "wallet persists after reload"
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "untranslated": {
+    "bet": [],
+    "rules": [],
+    "shop": [],
+    "daily": [],
+    "club": [],
+    "rank": [],
+    "profile": [],
+    "ledger": [],
+    "settings": [],
+    "privacy": [],
+    "terms": []
+  },
+  "final": {
+    "screen": "home",
+    "selected": "tiger-treasury",
+    "busy": false,
+    "auto": 0,
+    "profile": {
+      "id": "27093fd8-1ec4-4959-9dd0-e598ca3fa2c4",
+      "name": "Gold Guest",
+      "avatar": "tortoise",
+      "createdAt": 1791865743189,
+      "balance": 11340,
+      "rounds": 5,
+      "superReached": true,
+      "pending": null,
+      "stats": {
+        "tiger-treasury": {
+          "rounds": 0,
+          "win": 0,
+          "features": 0
+        },
+        "koi-reserve": {
+          "rounds": 0,
+          "win": 0,
+          "features": 0
+        },
+        "crane-palace": {
+          "rounds": 0,
+          "win": 0,
+          "features": 0
+        },
+        "tortoise-vault": {
+          "rounds": 5,
+          "win": 1640,
+          "features": 0
+        }
+      },
+      "collection": [],
+      "daily": {
+        "day": "2026-10-13",
+        "index": 0
+      },
+      "ledger": [
+        {
+          "id": "16f838f3-7a7d-49c6-9e8b-1f99bcecd950:benefit",
+          "type": "benefit",
+          "amount": 1000,
+          "description": "新手第5局超级大奖补足 · 不改变转轴",
+          "balance": 11340,
+          "at": 1791865789221
+        },
+        {
+          "id": "16f838f3-7a7d-49c6-9e8b-1f99bcecd950:stake",
+          "type": "stake",
+          "amount": -100,
+          "description": "金龟宝藏 · 下注",
+          "balance": 10340,
+          "at": 1791865789221
+        },
+        {
+          "id": "af8541ef-2d8b-4ba3-ba1a-c6139b2fc9bb:win",
+          "type": "win",
+          "amount": 320,
+          "description": "自然转轴奖励",
+          "balance": 10440,
+          "at": 1791865787454
+        },
+        {
+          "id": "af8541ef-2d8b-4ba3-ba1a-c6139b2fc9bb:stake",
+          "type": "stake",
+          "amount": -100,
+          "description": "金龟宝藏 · 下注",
+          "balance": 10120,
+          "at": 1791865787454
+        },
+        {
+          "id": "cfe8403a-b265-4184-bf9f-26f3d15b060d:stake",
+          "type": "stake",
+          "amount": -100,
+          "description": "金龟宝藏 · 下注",
+          "balance": 10220,
+          "at": 1791865786021
+        },
+        {
+          "id": "7c4fa919-59d8-43fa-bf5f-21f4f06aa135:win",
+          "type": "win",
+          "amount": 320,
+          "description": "自然转轴奖励",
+          "balance": 10320,
+          "at": 1791865784221
+        },
+        {
+          "id": "7c4fa919-59d8-43fa-bf5f-21f4f06aa135:stake",
+          "type": "stake",
+          "amount": -100,
+          "description": "金龟宝藏 · 下注",
+          "balance": 10000,
+          "at": 1791865784221
+        },
+        {
+          "id": "b7d6e0ba-ecbe-4de2-a8b9-e1dc1c504979:stake",
+          "type": "stake",
+          "amount": -100,
+          "description": "金龟宝藏 · 下注",
+          "balance": 10100,
+          "at": 1791865782773
+        },
+        {
+          "id": "9ad36cf2-72a4-4fa2-bb1f-9eae0942bdad",
+          "type": "daily",
+          "amount": 200,
+          "description": "每日宝藏 · 第1天",
+          "balance": 10200,
+          "at": 1791865781940
+        },
+        {
+          "id": "welcome",
+          "type": "welcome",
+          "amount": 10000,
+          "balance": 10000,
+          "at": 1791865743189,
+          "description": "欢迎礼金 · 虚拟金币"
+        }
+      ],
+      "preferences": {
+        "music": 0.45,
+        "sfx": 0.65,
+        "motion": true,
+        "lang": "en"
+      }
+    },
+    "audio": {
+      "theme": "lobby",
+      "unlocked": false,
+      "decoded": 31,
+      "failed": false,
+      "playing": 0,
+      "voices": 0
+    },
+    "rects": []
+  },
+  "note": "Desktop Chrome mobile viewport emulation; not physical iPhone validation."
+}

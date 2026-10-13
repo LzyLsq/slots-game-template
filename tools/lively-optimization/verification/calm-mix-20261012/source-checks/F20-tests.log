@@ -1,0 +1,239 @@
+
+> f20-golden-canopy@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary
+
+
+> f20-golden-canopy@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 188097,
+      "wins": 647,
+      "features": 448,
+      "maxWin": 9758
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 169795,
+      "wins": 589,
+      "features": 589,
+      "maxWin": 1889
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 169128,
+      "wins": 949,
+      "features": 223,
+      "maxWin": 1469
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 159895,
+      "wins": 604,
+      "features": 604,
+      "maxWin": 3765
+    }
+  }
+}
+
+> f20-golden-canopy@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f20-golden-canopy@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f20-golden-canopy@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 32 cabinet/viewport combinations: shared transform, essential bounds, symbol breathing room.
+
+> f20-golden-canopy@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+
+> f20-golden-canopy@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+
+> f20-golden-canopy@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f20-golden-canopy@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1340,
+    featurePaidHits: 664,
+    coreHits: 1879,
+    coreReturn: 0.5479555555555555,
+    hits: 1945,
+    sampleReturn: 0.92325,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1773,
+    featurePaidHits: 1773,
+    coreHits: 1773,
+    coreReturn: 0.02707037037037037,
+    hits: 1773,
+    sampleReturn: 0.9964,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 688,
+    featurePaidHits: 688,
+    coreHits: 2731,
+    coreReturn: 0.1516074074074074,
+    hits: 2852,
+    sampleReturn: 0.9279333333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1854,
+    featurePaidHits: 844,
+    coreHits: 1854,
+    coreReturn: 0.44043333333333334,
+    hits: 1854,
+    sampleReturn: 0.9138166666666667,
+    layoutVariants: 1
+  }
+]
+
+> f20-golden-canopy@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-hour',
+    core: 'independent-any-reel-ways',
+    feature: 'vine-spread',
+    samples: 6000,
+    features: 2730,
+    motions: [ 'transform' ]
+  },
+  {
+    id: 'jade-treasury',
+    core: 'independent-cluster-avalanche',
+    feature: 'win-to-wild',
+    samples: 6000,
+    features: 3481,
+    motions: [ 'transform' ]
+  },
+  {
+    id: 'pearl-palace',
+    core: 'independent-scatter-groups',
+    feature: 'free-count-cascade',
+    samples: 6000,
+    features: 1417,
+    motions: [ 'respin', 'drop' ]
+  },
+  {
+    id: 'ruby-revel',
+    core: 'independent-line-reels',
+    feature: 'waterfall',
+    samples: 6000,
+    features: 3612,
+    motions: [ 'drop' ]
+  }
+]
+
+> f20-golden-canopy@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1340,
+    featurePaidHits: 664,
+    coreHits: 1879,
+    coreReturn: 0.5479555555555555,
+    hits: 1945,
+    sampleReturn: 0.92325,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'cluster-avalanche',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 1773,
+    featurePaidHits: 1773,
+    coreHits: 1773,
+    coreReturn: 0.02707037037037037,
+    hits: 1773,
+    sampleReturn: 0.9964,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 688,
+    featurePaidHits: 688,
+    coreHits: 2731,
+    coreReturn: 0.1516074074074074,
+    hits: 2852,
+    sampleReturn: 0.9279333333333334,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1854,
+    featurePaidHits: 844,
+    coreHits: 1854,
+    coreReturn: 0.44043333333333334,
+    hits: 1854,
+    sampleReturn: 0.9138166666666667,
+    layoutVariants: 1
+  }
+]

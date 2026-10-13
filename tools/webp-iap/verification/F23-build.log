@@ -1,0 +1,1364 @@
+init **** success
+Arguments:
+  /Applications/CocosCreator.app/Contents/MacOS/CocosCreator: true
+  project: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0
+  build: configPath=/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/webp-iap/verification/F23-build.json
+  dev: false
+  home: /Users/mengjunzhu/.CocosCreator
+ 
+[Package] metrics@1.0.0 enable
+[Package] menu@1.0.0 enable
+[Package] profile@1.0.0 enable
+[Package] project@1.0.6 enable
+[Package] messages@1.0.0 enable
+[Package] utils@1.0.0 enable
+[Package] program@1.0.4 enable
+[Package] tester@1.0.0 enable
+[Package] information@1.0.1 enable
+[Package] preferences@1.0.0 enable
+[EditorQuickCompiler]Version information looks good.
+Note, quick compiler does not get launched.
+engine:compile-builtin-engine-success (169ms)
+Load engine in /Applications/CocosCreator.app/Contents/Resources/resources/3d/engine
+Register native engine in /Applications/CocosCreator.app/Contents/Resources/resources/3d/engine/native
+[Package] engine@1.0.12 enable
+[Package] programming@1.0.0 enable
+[Package] window@1.0.0 enable
+Request namespace: device-list
+[Package] device@1.0.1 enable
+[Package] ui-kit@1.0.1 enable
+[Package] asset-db@1.0.0 enable
+[Package] scene@1.0.3 enable
+[Package] server@1.0.0 enable
+[Package] preview@1.0.1 enable
+[Package] animator@1.0.0 enable
+Preview import map: {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "cc/env": "cc/editor/populate-internal-constants",
+    "cce.env": "cc/editor/populate-internal-constants",
+    "cc/userland/macro": "./userland/macro"
+  }
+}
+[Build] internalRegister pkg(scene) in android platform success!
+[Package] builder@1.3.9 enable
+[Build] internalRegister pkg(scene) in google-play platform success!
+[Build] internalRegister pkg(scene) in ohos platform success!
+[Build] internalRegister pkg(scene) in harmonyos-next platform success!
+[Build] internalRegister pkg(scene) in huawei-agc platform success!
+[Build] internalRegister pkg(scene) in ios platform success!
+[Build] internalRegister pkg(scene) in windows platform success!
+[Build] internalRegister pkg(scene) in mac platform success!
+[Build] internalRegister pkg(scene) in linux platform success!
+[Build] internalRegister pkg(scene) in alipay-mini-game platform success!
+[Build] internalRegister pkg(scene) in taobao-creative-app platform success!
+[Build] internalRegister pkg(scene) in taobao-mini-game platform success!
+[Build] internalRegister pkg(scene) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(scene) in oppo-mini-game platform success!
+[Build] internalRegister pkg(scene) in huawei-quick-game platform success!
+[Build] internalRegister pkg(scene) in migu-mini-game platform success!
+[Build] internalRegister pkg(scene) in honor-mini-game platform success!
+[Build] internalRegister pkg(scene) in vivo-mini-game platform success!
+[Build] internalRegister pkg(scene) in xiaomi-quick-game platform success!
+[Build] internalRegister pkg(scene) in baidu-mini-game platform success!
+[Build] internalRegister pkg(scene) in wechatgame platform success!
+[Build] internalRegister pkg(scene) in wechatprogram platform success!
+[Build] internalRegister pkg(scene) in link-sure platform success!
+[Build] internalRegister pkg(scene) in qtt platform success!
+[Build] internalRegister pkg(scene) in fb-instant-games platform success!
+[Build] internalRegister pkg(scene) in web-desktop platform success!
+[Build] internalRegister pkg(scene) in web-mobile platform success!
+[Build] internalRegister pkg(scene) in cocos-runtime platform success!
+[Build] internalRegister pkg(scene) in platform-example platform success!
+[Build] internalRegister pkg(scene) in online platform success!
+[Build] internalRegister pkg(scene) in xr-meta platform success!
+[Build] internalRegister pkg(scene) in xr-huaweivr platform success!
+[Build] internalRegister pkg(scene) in xr-pico platform success!
+[Build] internalRegister pkg(scene) in xr-rokid platform success!
+[Build] internalRegister pkg(scene) in xr-monado platform success!
+[Build] internalRegister pkg(scene) in xr-spaces platform success!
+[Build] internalRegister pkg(scene) in xr-seed platform success!
+[Build] internalRegister pkg(scene) in ar-android platform success!
+[Build] internalRegister pkg(scene) in ar-ios platform success!
+[Build] internalRegister pkg(scene) in xr-gsxr platform success!
+[Build] internalRegister pkg(scene) in xr-yvr platform success!
+[Build] internalRegister pkg(scene) in xr-htc platform success!
+[Build] internalRegister pkg(scene) in xr-iqiyi platform success!
+[Build] internalRegister pkg(scene) in xr-skyworth platform success!
+[Build] internalRegister pkg(scene) in xr-ffalcon platform success!
+[Build] internalRegister pkg(scene) in xr-nreal platform success!
+[Build] internalRegister pkg(scene) in xr-inmo platform success!
+[Build] internalRegister pkg(scene) in xr-lenovo platform success!
+[Build] internalRegister pkg(scene) in android-hmi platform success!
+[Build-plugin] register pkg scene: 16ms
+Builder PluginManager init: 16ms
+[Package] shortcuts@1.0.1 enable
+[Package] animation-graph@1.0.0 enable
+[Package] about@1.0.0 enable
+[Package] assets@1.0.0 enable
+[Package] console@1.0.0 enable
+[Package] crash-reporter@1.0.0 enable
+[Package] extension@3.1.4 enable
+[Package] feedback@1.0.0 enable
+[Package] hierarchy@1.0.0 enable
+[Package] inspector@1.0.0 enable
+[Package] light-probe@1.0.4 enable
+[Package] lightmap@1.0.4 enable
+[Package] node-library@1.0.1 enable
+[Package] package-asset@1.0.3 enable
+[Package] process@1.0.0 enable
+[Package] reference-image@1.0.0 enable
+[Package] reflection-probe@1.0.4 enable
+[Package] engine-extends@1.0.0 enable
+[Package] adsense-h5g-plugin@1.0.1 enable
+[Build] internalRegister pkg(adsense-h5g-plugin) in android platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in google-play platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ohos platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in harmonyos-next platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in huawei-agc platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ios platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in windows platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in mac platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in linux platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in alipay-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in taobao-creative-app platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in taobao-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in oppo-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in huawei-quick-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in migu-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in honor-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in vivo-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xiaomi-quick-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in baidu-mini-game platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in wechatgame platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in wechatprogram platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in link-sure platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in qtt platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in fb-instant-games platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-desktop platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-mobile platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in cocos-runtime platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in platform-example platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in online platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-meta platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-huaweivr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-pico platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-rokid platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-monado platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-spaces platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-seed platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ar-android platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in ar-ios platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-gsxr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-yvr platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-htc platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-iqiyi platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-skyworth platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-ffalcon platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-nreal platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-inmo platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in xr-lenovo platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in android-hmi platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-desktop platform success!
+[Build] internalRegister pkg(adsense-h5g-plugin) in web-mobile platform success!
+[Build-plugin] register pkg adsense-h5g-plugin: 2ms
+[Package] alipay-mini-game@1.0.2 enable
+[Build] internalRegister pkg(alipay-mini-game) in alipay-mini-game platform success!
+[Build-plugin] register pkg alipay-mini-game: 4ms
+[Package] android@1.0.1 enable
+[Build] internalRegister pkg(android) in android platform success!
+[Build] internalRegister pkg(android) in huawei-agc platform success!
+[Build-plugin] register pkg android: 4ms
+[Package] bytedance-mini-game@1.0.3 enable
+[Build] internalRegister pkg(bytedance-mini-game) in bytedance-mini-game platform success!
+[Build-plugin] register pkg bytedance-mini-game: 2ms
+[Package] certificate@1.0.0 enable
+[Package] channel-upload-tools@1.0.0 enable
+[Package] fb-instant-games@1.0.0 enable
+[Build] internalRegister pkg(fb-instant-games) in fb-instant-games platform success!
+[Build-plugin] register pkg fb-instant-games: 3ms
+[Package] google-play@1.0.1 enable
+[Build] internalRegister pkg(google-play) in google-play platform success!
+[Build-plugin] register pkg google-play: 6ms
+[Package] harmonyos-next@1.0.0 enable
+[Build] internalRegister pkg(harmonyos-next) in harmonyos-next platform success!
+[Build-plugin] register pkg harmonyos-next: 3ms
+[Package] honor-mini-game@1.0.0 enable
+[Build] internalRegister pkg(honor-mini-game) in honor-mini-game platform success!
+[Build-plugin] register pkg honor-mini-game: 4ms
+[Package] huawei-agc@1.0.0 enable
+[Build] internalRegister pkg(huawei-agc) in huawei-agc platform success!
+[Build-plugin] register pkg huawei-agc: 5ms
+[Package] huawei-quick-game@1.0.3 enable
+[Build] internalRegister pkg(huawei-quick-game) in huawei-quick-game platform success!
+[Build-plugin] register pkg huawei-quick-game: 4ms
+[Package] ios@1.0.1 enable
+[Build] internalRegister pkg(ios) in ios platform success!
+[Build-plugin] register pkg ios: 7ms
+[Package] linux@1.0.0 enable
+平台 linux 不存在，无法添加该平台
+[Package] mac@1.0.0 enable
+[Build] internalRegister pkg(mac) in mac platform success!
+[Build-plugin] register pkg mac: 6ms
+[Package] migu-mini-game@1.0.0 enable
+[Build] internalRegister pkg(migu-mini-game) in migu-mini-game platform success!
+[Build-plugin] register pkg migu-mini-game: 4ms
+[Package] native@1.0.2 enable
+[Build] internalRegister pkg(native) in ios platform success!
+[Build] internalRegister pkg(native) in android platform success!
+[Build] internalRegister pkg(native) in huawei-agc platform success!
+[Build] internalRegister pkg(native) in windows platform success!
+[Build] internalRegister pkg(native) in mac platform success!
+[Build] internalRegister pkg(native) in google-play platform success!
+[Build] internalRegister pkg(native) in ohos platform success!
+[Build] internalRegister pkg(native) in harmonyos-next platform success!
+平台 linux 不存在，不支持向该平台注册任何内容
+[Build] internalRegister pkg(native) in xr-huaweivr platform success!
+[Build] internalRegister pkg(native) in xr-meta platform success!
+[Build] internalRegister pkg(native) in xr-pico platform success!
+[Build] internalRegister pkg(native) in xr-rokid platform success!
+[Build] internalRegister pkg(native) in xr-monado platform success!
+[Build] internalRegister pkg(native) in ar-android platform success!
+[Build] internalRegister pkg(native) in ar-ios platform success!
+[Build] internalRegister pkg(native) in xr-spaces platform success!
+[Build] internalRegister pkg(native) in xr-seed platform success!
+[Build] internalRegister pkg(native) in xr-gsxr platform success!
+[Build] internalRegister pkg(native) in xr-yvr platform success!
+[Build] internalRegister pkg(native) in xr-htc platform success!
+[Build] internalRegister pkg(native) in xr-iqiyi platform success!
+[Build] internalRegister pkg(native) in xr-skyworth platform success!
+[Build] internalRegister pkg(native) in xr-ffalcon platform success!
+[Build] internalRegister pkg(native) in xr-nreal platform success!
+[Build] internalRegister pkg(native) in xr-inmo platform success!
+[Build] internalRegister pkg(native) in xr-lenovo platform success!
+[Build-plugin] register pkg native: 4ms
+[Package] ohos@1.0.0 enable
+[Build] internalRegister pkg(ohos) in ohos platform success!
+[Build-plugin] register pkg ohos: 2ms
+[Package] oppo-mini-game@1.0.3 enable
+[Build] internalRegister pkg(oppo-mini-game) in oppo-mini-game platform success!
+[Build-plugin] register pkg oppo-mini-game: 4ms
+[Package] runtime-dev-tools@1.0.0 enable
+[Package] taobao-mini-game@1.0.1 enable
+[Build] internalRegister pkg(taobao-mini-game) in taobao-mini-game platform success!
+[Build-plugin] register pkg taobao-mini-game: 4ms
+[Package] vivo-mini-game@1.0.3 enable
+[Build] internalRegister pkg(vivo-mini-game) in vivo-mini-game platform success!
+[Build-plugin] register pkg vivo-mini-game: 3ms
+[Package] web-desktop@1.0.1 enable
+[Build] internalRegister pkg(web-desktop) in web-desktop platform success!
+[Build-plugin] register pkg web-desktop: 4ms
+[Package] web-mobile@1.0.1 enable
+[Build] internalRegister pkg(web-mobile) in web-mobile platform success!
+[Build-plugin] register pkg web-mobile: 4ms
+[Package] wechatgame@1.0.4 enable
+[Build] internalRegister pkg(wechatgame) in wechatgame platform success!
+[Build-plugin] register pkg wechatgame: 3ms
+[Package] wechatprogram@1.0.2 enable
+平台 wechatprogram 不存在，无法添加该平台
+[Package] windows@1.0.1 enable
+[Build-plugin] register pkg windows: 4ms
+[Package] xiaomi-quick-game@1.0.2 enable
+[Build] internalRegister pkg(xiaomi-quick-game) in xiaomi-quick-game platform success!
+[Build-plugin] register pkg xiaomi-quick-game: 2ms
+[Package] cocos-service@3.0.9 enable
+[Build] internalRegister pkg(cocos-service) in android platform success!
+[Build] internalRegister pkg(cocos-service) in google-play platform success!
+[Build] internalRegister pkg(cocos-service) in ohos platform success!
+[Build] internalRegister pkg(cocos-service) in harmonyos-next platform success!
+[Build] internalRegister pkg(cocos-service) in huawei-agc platform success!
+[Build] internalRegister pkg(cocos-service) in ios platform success!
+[Build] internalRegister pkg(cocos-service) in windows platform success!
+[Build] internalRegister pkg(cocos-service) in mac platform success!
+[Build] internalRegister pkg(cocos-service) in linux platform success!
+[Build] internalRegister pkg(cocos-service) in alipay-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in taobao-creative-app platform success!
+[Build] internalRegister pkg(cocos-service) in taobao-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in bytedance-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in oppo-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in huawei-quick-game platform success!
+[Build] internalRegister pkg(cocos-service) in migu-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in honor-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in vivo-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in xiaomi-quick-game platform success!
+[Build] internalRegister pkg(cocos-service) in baidu-mini-game platform success!
+[Build] internalRegister pkg(cocos-service) in wechatgame platform success!
+[Build] internalRegister pkg(cocos-service) in wechatprogram platform success!
+[Build] internalRegister pkg(cocos-service) in link-sure platform success!
+[Build] internalRegister pkg(cocos-service) in qtt platform success!
+[Build] internalRegister pkg(cocos-service) in fb-instant-games platform success!
+[Build] internalRegister pkg(cocos-service) in web-desktop platform success!
+[Build] internalRegister pkg(cocos-service) in web-mobile platform success!
+[Build] internalRegister pkg(cocos-service) in cocos-runtime platform success!
+[Build] internalRegister pkg(cocos-service) in platform-example platform success!
+[Build] internalRegister pkg(cocos-service) in online platform success!
+[Build] internalRegister pkg(cocos-service) in xr-meta platform success!
+[Build] internalRegister pkg(cocos-service) in xr-huaweivr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-pico platform success!
+[Build] internalRegister pkg(cocos-service) in xr-rokid platform success!
+[Build] internalRegister pkg(cocos-service) in xr-monado platform success!
+[Build] internalRegister pkg(cocos-service) in xr-spaces platform success!
+[Build] internalRegister pkg(cocos-service) in xr-seed platform success!
+[Build] internalRegister pkg(cocos-service) in ar-android platform success!
+[Build] internalRegister pkg(cocos-service) in ar-ios platform success!
+[Build] internalRegister pkg(cocos-service) in xr-gsxr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-yvr platform success!
+[Build] internalRegister pkg(cocos-service) in xr-htc platform success!
+[Build] internalRegister pkg(cocos-service) in xr-iqiyi platform success!
+[Build] internalRegister pkg(cocos-service) in xr-skyworth platform success!
+[Build] internalRegister pkg(cocos-service) in xr-ffalcon platform success!
+[Build] internalRegister pkg(cocos-service) in xr-nreal platform success!
+[Build] internalRegister pkg(cocos-service) in xr-inmo platform success!
+[Build] internalRegister pkg(cocos-service) in xr-lenovo platform success!
+[Build] internalRegister pkg(cocos-service) in android-hmi platform success!
+[Build-plugin] register pkg cocos-service: 3ms
+[Package] im-plugin@3.0.14 enable
+[Package] placeholder@1.0.0 enable
+Start enter command build with options {"configPath":"/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/webp-iap/verification/F23-build.json"}
+Read config from path /Users/mengjunzhu/Desktop/slots/slots-game-template/tools/webp-iap/verification/F23-build.json...
+adsense-h5g-plugin 插件构建配置无版本号，将跳过数据迁移
+web-mobile 插件构建配置无版本号，将跳过数据迁移
+init builder manager success
+[[Facet.reload]], before lock, count: 1
+[[Facet.reload]], after lock, count: 1
+[[Facet.reload]], before unlock, count: 1
+[[Facet.reload]], after unlock, count: 1
+auto refresh because script compiled or scene changed
+trackTimeEnd failed! Can not find the track time asset-db:worker-startup-database[internal] start
+trackTimeEnd failed! Can not find the track time asset-db:worker-startup-database[assets] start
+asset-db is ready!
+Check and complete build options {
+  platform: 'web-mobile',
+  debug: false,
+  buildPath: 'project://build',
+  outputName: 'web-mobile',
+  md5Cache: false,
+  taskName: 'web-mobile',
+  buildMode: 'normal',
+  mainBundleCompressionType: 'merge_dep',
+  packages: {
+    'adsense-h5g-plugin': { enableAdsense: false, enableTestAd: false },
+    'web-mobile': { useWebGPU: false, orientation: 'auto', embedWebDebugger: false }
+  },
+  name: 'f23-golden_lamp',
+  server: '',
+  engineModulesConfigKey: 'defaultConfig',
+  mangleProperties: false,
+  skipCompressTexture: false,
+  sourceMaps: false,
+  overwriteProjectSettings: {
+    includeModules: {
+      'gfx-webgl2': 'on',
+      physics: 'inherit-project-setting',
+      'physics-2d': 'inherit-project-setting'
+    },
+    macroConfig: { cleanupImageCache: 'inherit-project-setting' }
+  },
+  nativeCodeBundleMode: 'both',
+  polyfills: { asyncFunctions: true },
+  experimentalEraseModules: false,
+  startSceneAssetBundle: false,
+  bundleConfigs: [],
+  inlineEnum: true,
+  useBuiltinServer: false,
+  md5CacheOptions: {
+    excludes: [],
+    includes: [],
+    replaceOnly: [],
+    handleTemplateMd5Link: true
+  },
+  mainBundleIsRemote: false,
+  useSplashScreen: true,
+  bundleCommonChunk: false,
+  packAutoAtlas: true,
+  startScene: 'e6f4e0a7-9acf-497a-b5f5-a7c4490d1802',
+  scenes: [
+    {
+      url: 'db://assets/scenes/GildedExpress.scene',
+      uuid: 'e6f4e0a7-9acf-497a-b5f5-a7c4490d1802'
+    }
+  ],
+  wasmCompressionMode: false,
+  binGroupConfig: { threshold: 16, enable: false }
+}
+start preview settings manager
+2026-10-10 10:17:03 - debug: =================================== build Task (web-mobile) Start ================================
+
+2026-10-10 10:17:03 - debug: Start build task, options:{"platform":"web-mobile","debug":false,"buildPath":"project://build","outputName":"web-mobile","md5Cache":false,"taskName":"web-mobile","buildMode":"normal","mainBundleCompressionType":"merge_dep","packages":{"adsense-h5g-plugin":{"enableAdsense":false,"enableTestAd":false},"web-mobile":{"useWebGPU":false,"orientation":"auto","embedWebDebugger":false}},"name":"f23-golden_lamp","server":"","engineModulesConfigKey":"defaultConfig","mangleProperties":false,"skipCompressTexture":false,"sourceMaps":false,"overwriteProjectSettings":{"includeModules":{"gfx-webgl2":"on","physics":"inherit-project-setting","physics-2d":"inherit-project-setting"},"macroConfig":{"cleanupImageCache":"inherit-project-setting"}},"nativeCodeBundleMode":"both","polyfills":{"asyncFunctions":true},"experimentalEraseModules":false,"startSceneAssetBundle":false,"bundleConfigs":[],"inlineEnum":true,"useBuiltinServer":false,"md5CacheOptions":{"excludes":[],"includes":[],"replaceOnly":[],"handleTemplateMd5Link":true},"mainBundleIsRemote":false,"useSplashScreen":true,"bundleCommonChunk":false,"packAutoAtlas":true,"startScene":"e6f4e0a7-9acf-497a-b5f5-a7c4490d1802","scenes":[{"url":"db://assets/scenes/GildedExpress.scene","uuid":"e6f4e0a7-9acf-497a-b5f5-a7c4490d1802"}],"wasmCompressionMode":false,"binGroupConfig":{"threshold":16,"enable":false},"logDest":"project://temp/builder/log/web-mobile10-10-2026 10-16.log"}
+
+2026-10-10 10:17:03 - debug: Build with Cocos Creator 3.8.8
+
+[[Facet.reload]], before lock, count: 2
+[[Facet.reload]], after lock, count: 2
+[[Facet.reload]], before unlock, count: 2
+[[Facet.reload]], after unlock, count: 2
+2026-10-10 10:17:03 - debug: cocos-service:(onBeforeBuild) start..., progress: 0%
+
+2026-10-10 10:17:03 - debug: // ---- build task cocos-service：onBeforeBuild ----
+
+2026-10-10 10:17:03 - debug: // ---- build task cocos-service：onBeforeBuild ---- (2ms)
+
+2026-10-10 10:17:03 - debug: cocos-service:(onBeforeBuild) in 2 ms ✓, progress: 2%
+
+2026-10-10 10:17:03 - debug: scene:(onBeforeBuild) start..., progress: 2%
+
+2026-10-10 10:17:03 - debug: // ---- build task scene：onBeforeBuild ----
+
+2026-10-10 10:17:03 - debug: // ---- build task scene：onBeforeBuild ---- (1ms)
+
+2026-10-10 10:17:03 - debug: scene:(onBeforeBuild) in 1 ms ✓, progress: 4%
+
+2026-10-10 10:17:03 - debug: Start lock asset db..., progress: 4%
+
+2026-10-10 10:17:03 - log: Asset DB is paused with build!
+
+2026-10-10 10:17:03 - debug: Query all assets info in project
+
+2026-10-10 10:17:03 - debug: init custom config: keepNodeUuid: false, useCache: true
+
+2026-10-10 10:17:03 - debug: web-mobile:(onAfterInit) start..., progress: 4%
+
+2026-10-10 10:17:03 - debug: // ---- build task web-mobile：onAfterInit ----
+
+2026-10-10 10:17:03 - debug: // ---- build task web-mobile：onAfterInit ---- (2ms)
+
+2026-10-10 10:17:03 - debug: web-mobile:(onAfterInit) in 2 ms ✓, progress: 5%
+
+2026-10-10 10:17:03 - debug: cocos-service:(onAfterInit) start..., progress: 5%
+
+2026-10-10 10:17:03 - debug: // ---- build task cocos-service：onAfterInit ----
+
+2026-10-10 10:17:03 - debug: // ---- build task cocos-service：onAfterInit ---- (6ms)
+
+2026-10-10 10:17:03 - debug: cocos-service:(onAfterInit) in 6 ms ✓, progress: 7%
+
+2026-10-10 10:17:03 - debug: Skip compress image, progress: 0%
+
+2026-10-10 10:17:03 - debug: adsense-h5g-plugin:(onBeforeBundleInit) start..., progress: 7%
+
+2026-10-10 10:17:03 - debug: adsense-h5g-plugin:(onBeforeBundleInit) start..., progress: 0%
+
+2026-10-10 10:17:03 - debug: // ---- build task adsense-h5g-plugin：onBeforeBundleInit ----
+
+2026-10-10 10:17:03 - debug: [adsense-h5g-plugin] remove script success
+
+2026-10-10 10:17:03 - debug: // ---- build task adsense-h5g-plugin：onBeforeBundleInit ---- (3ms)
+
+2026-10-10 10:17:03 - debug(2): adsense-h5g-plugin:(onBeforeBundleInit) in 3 ms ✓, progress: 7%
+
+2026-10-10 10:17:03 - debug(2): Init all bundles start..., progress: 7%
+
+2026-10-10 10:17:03 - debug(2): Num of bundles: 3..., progress: 7%
+
+2026-10-10 10:17:03 - debug(2): web-mobile:(onAfterBundleInit) start..., progress: 7%
+
+2026-10-10 10:17:03 - debug: // ---- build task web-mobile：onAfterBundleInit ----
+
+2026-10-10 10:17:03 - debug: // ---- build task web-mobile：onAfterBundleInit ---- (2ms)
+
+2026-10-10 10:17:03 - debug: web-mobile:(onAfterBundleInit) in 2 ms ✓, progress: 7%
+
+2026-10-10 10:17:03 - debug: web-mobile:(onAfterBundleInit) in 2 ms ✓, progress: 13%
+
+2026-10-10 10:17:03 - debug: 查询 Asset Bundle start, progress: 7%
+
+2026-10-10 10:17:03 - debug: // ---- build task 查询 Asset Bundle ----
+
+2026-10-10 10:17:03 - debug: Init bundle root assets start..., progress: 7%
+
+2026-10-10 10:17:03 - debug: Init bundle root assets start..., progress: 13%
+
+2026-10-10 10:17:03 - debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,9361fd90-ba52-4f84-aa93-6e878fd576ca,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,ba21476f-2866-4f81-9c4d-6e359316e448,871c3b6c-7379-419d-bda3-794b239ab90d,1d08ef62-a503-4ce2-8b9a-46c90873f7d3,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1,5c601d96-e4c7-4698-991b-7ee674b11079
+
+2026-10-10 10:17:03 - debug:   Number of all scenes: 1
+
+2026-10-10 10:17:03 - debug:   Number of all scripts: 78
+
+2026-10-10 10:17:03 - debug:   Number of other assets: 428
+
+2026-10-10 10:17:03 - debug: Init bundle root assets success..., progress: 7%
+
+2026-10-10 10:17:03 - debug: Init bundle root assets success..., progress: 13%
+
+2026-10-10 10:17:03 - debug: reload all scripts.
+
+2026-10-10 10:17:03 - log: creating executor ...
+
+2026-10-10 10:17:03 - debug: [[Executor]] reload before lock
+
+2026-10-10 10:17:03 - debug: Set detail map pack:///resolution-detail-map.json: {}
+
+2026-10-10 10:17:03 - groupCollapsed: Invalidate all modules
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-empty" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgpu" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/rich-text" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/mask" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/graphics" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui-skew" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/affine-transform" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting-2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-cannon" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-physx" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-ammo" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-builtin" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-jsb" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-builtin" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-wasm" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/light-probe" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/vendor-google" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline-post-process" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/legacy-pipeline" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-empty" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgpu" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/animation" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/skeletal-animation" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/rich-text" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/mask" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/graphics" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui-skew" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/affine-transform" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/sorting-2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-cannon" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-physx" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-ammo" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-builtin" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-builtin" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-wasm" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/geometry-renderer" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/xr" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/light-probe" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/custom-pipeline-post-process" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/legacy-pipeline" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/vendor-google" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-box2d-jsb" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js" loaded.
+
+2026-10-10 10:17:03 - debug: Invalidating 'pack:///chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js'
+
+2026-10-10 10:17:03 - groupEnd: Invalidate all modules
+
+2026-10-10 10:17:03 - groupCollapsed: Imports all modules
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8e/8e544029a46c8d6ddc931c6b067ef939cd33f5cb.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8e/8e544029a46c8d6ddc931c6b067ef939cd33f5cb.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/d6/d69f4ae4d540946d5aac216a5e7af51dc2dbc33c.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/d6/d69f4ae4d540946d5aac216a5e7af51dc2dbc33c.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/78/7878f08044c4fad1bffb8afb739c7a757b6bc85b.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/78/7878f08044c4fad1bffb8afb739c7a757b6bc85b.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/61/6176b58422b890b199acf76238093af78d87f783.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/61/6176b58422b890b199acf76238093af78d87f783.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f9/f9c58d50719da6499facf2ea40efa1529fffcf4a.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f9/f9c58d50719da6499facf2ea40efa1529fffcf4a.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/engine-export-to-editor/cc/editor/populate-internal-constants" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/f9/f9c58d50719da6499facf2ea40efa1529fffcf4a.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "cce:/internal/x/engine-export-to-editor/cc/editor/populate-internal-constants" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register BuiltinPipelineSettings
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/d6/d69f4ae4d540946d5aac216a5e7af51dc2dbc33c.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/61/6176b58422b890b199acf76238093af78d87f783.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register BuiltinPipelinePassBuilder
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/78/7878f08044c4fad1bffb8afb739c7a757b6bc85b.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register BuiltinDepthOfFieldPass
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/8e/8e544029a46c8d6ddc931c6b067ef939cd33f5cb.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/e9/e9e346b5b070acaeae4176fa2e9ee9f84835bec0.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/e9/e9e346b5b070acaeae4176fa2e9ee9f84835bec0.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register DebugViewRuntimeControl
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/e9/e9e346b5b070acaeae4176fa2e9ee9f84835bec0.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/48/48914ca74109c35512e5f66dd8b9151e396a86e0.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/48/48914ca74109c35512e5f66dd8b9151e396a86e0.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/48/48914ca74109c35512e5f66dd8b9151e396a86e0.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/85/859ff504612890ff038a91852f71fc5c6069dba0.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/85/859ff504612890ff038a91852f71fc5c6069dba0.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register AudioManager
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/85/859ff504612890ff038a91852f71fc5c6069dba0.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/a8/a86cfc12cb6ad9416b254f43e0faeb7ad92d5cd7.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/a8/a86cfc12cb6ad9416b254f43e0faeb7ad92d5cd7.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/7a/7a7c93eedde6eb1f3479a5bdaa7247fb6cbeb342.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/7a/7a7c93eedde6eb1f3479a5bdaa7247fb6cbeb342.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/79/7974114719ae3a4be5149bda1c036bdc29f0a2d5.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/79/7974114719ae3a4be5149bda1c036bdc29f0a2d5.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f3/f3a81b8a7a7f03208f6d3f575fb3b7783583635d.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f3/f3a81b8a7a7f03208f6d3f575fb3b7783583635d.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/5f/5f0c4cf8c83bcfa4811a435d4a3fe6be5c09f932.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/5f/5f0c4cf8c83bcfa4811a435d4a3fe6be5c09f932.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/4e/4ea99acf37ccfacd73151418d63ac7ca84793cfd.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/4e/4ea99acf37ccfacd73151418d63ac7ca84793cfd.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c6/c6d1519ac3a85044f612ac1b0ad4b9d01166fe95.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c6/c6d1519ac3a85044f612ac1b0ad4b9d01166fe95.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/b1/b17cbcebaa146bba45276a55b8c312a975e490a8.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/b1/b17cbcebaa146bba45276a55b8c312a975e490a8.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/2d/2d1aaecc51b844dc138df6b35adc6a9da08a3c86.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/2d/2d1aaecc51b844dc138df6b35adc6a9da08a3c86.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/50/5083c970c077ed2354b4c71be0eb69fe9d7a0fb8.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/50/5083c970c077ed2354b4c71be0eb69fe9d7a0fb8.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/75/75031bca1a57f29559e6067e5d099583ac488bc1.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/75/75031bca1a57f29559e6067e5d099583ac488bc1.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f0/f00180fb25ad9764dd7ec6b007e5e090fe47e6d5.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f0/f00180fb25ad9764dd7ec6b007e5e090fe47e6d5.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/69/6941b1c0c20d2a898b260e52cfb0cfff61801b43.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/69/6941b1c0c20d2a898b260e52cfb0cfff61801b43.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/a2/a2f2b21869c1955a94761599b23dd1bd6114a380.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/a2/a2f2b21869c1955a94761599b23dd1bd6114a380.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/43/439c8fd52db9c307bb754aca22602940cbe449d8.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/43/439c8fd52db9c307bb754aca22602940cbe449d8.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/5d/5d1fd12effe1bb6795b4d730e15abe5280178432.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/5d/5d1fd12effe1bb6795b4d730e15abe5280178432.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/11/119b8876eab1aab442727fccf74180a2637df681.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/11/119b8876eab1aab442727fccf74180a2637df681.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/82/824b1013e7ce5504a3c3d7d8176721f2d0209631.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/82/824b1013e7ce5504a3c3d7d8176721f2d0209631.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/fb/fb0ee616717ff3603356a9f585d08eb8576ee00a.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/fb/fb0ee616717ff3603356a9f585d08eb8576ee00a.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/41/4178dd5c852bb9e88df6c5ae818d11d28b5ae770.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/41/4178dd5c852bb9e88df6c5ae818d11d28b5ae770.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/35/3575c833c92770984cafcbb41da218b6dd66f4d0.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/35/3575c833c92770984cafcbb41da218b6dd66f4d0.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/9a/9ab3dba4afbb0792dae942128cb9a0a371a214b2.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/9a/9ab3dba4afbb0792dae942128cb9a0a371a214b2.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/9b/9b23af47a5d15e968995d4921fc4e3b78172a1ec.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/9b/9b23af47a5d15e968995d4921fc4e3b78172a1ec.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/fb/fb0ee616717ff3603356a9f585d08eb8576ee00a.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/5f/5f0c4cf8c83bcfa4811a435d4a3fe6be5c09f932.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/43/439c8fd52db9c307bb754aca22602940cbe449d8.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/a2/a2f2b21869c1955a94761599b23dd1bd6114a380.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/7a/7a7c93eedde6eb1f3479a5bdaa7247fb6cbeb342.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/11/119b8876eab1aab442727fccf74180a2637df681.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/5d/5d1fd12effe1bb6795b4d730e15abe5280178432.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/9b/9b23af47a5d15e968995d4921fc4e3b78172a1ec.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/9a/9ab3dba4afbb0792dae942128cb9a0a371a214b2.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/35/3575c833c92770984cafcbb41da218b6dd66f4d0.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/41/4178dd5c852bb9e88df6c5ae818d11d28b5ae770.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/69/6941b1c0c20d2a898b260e52cfb0cfff61801b43.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/79/7974114719ae3a4be5149bda1c036bdc29f0a2d5.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/82/824b1013e7ce5504a3c3d7d8176721f2d0209631.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/f3/f3a81b8a7a7f03208f6d3f575fb3b7783583635d.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/b1/b17cbcebaa146bba45276a55b8c312a975e490a8.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/4e/4ea99acf37ccfacd73151418d63ac7ca84793cfd.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/2d/2d1aaecc51b844dc138df6b35adc6a9da08a3c86.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/50/5083c970c077ed2354b4c71be0eb69fe9d7a0fb8.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/c6/c6d1519ac3a85044f612ac1b0ad4b9d01166fe95.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/75/75031bca1a57f29559e6067e5d099583ac488bc1.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/f0/f00180fb25ad9764dd7ec6b007e5e090fe47e6d5.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/a8/a86cfc12cb6ad9416b254f43e0faeb7ad92d5cd7.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/63/63db29aec7429dd8ae90c3ac44a1b05b6665a851.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/63/63db29aec7429dd8ae90c3ac44a1b05b6665a851.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/63/63db29aec7429dd8ae90c3ac44a1b05b6665a851.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/de/deebfa2e700929f7933d84c72fbd524fb0de4adc.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/de/deebfa2e700929f7933d84c72fbd524fb0de4adc.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/de/deebfa2e700929f7933d84c72fbd524fb0de4adc.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/b7/b74431749b1b1ed1cfc4901a97380dbae41666de.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/b7/b74431749b1b1ed1cfc4901a97380dbae41666de.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/b7/b74431749b1b1ed1cfc4901a97380dbae41666de.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/bb/bba90b18c1fa9e164f21ba79e0c0442886997976.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/bb/bba90b18c1fa9e164f21ba79e0c0442886997976.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/bb/bba90b18c1fa9e164f21ba79e0c0442886997976.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/2c/2c69edf3f451a877fd29b65149c6f7339f6652c1.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/2c/2c69edf3f451a877fd29b65149c6f7339f6652c1.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/2c/2c69edf3f451a877fd29b65149c6f7339f6652c1.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/af/afe7e85b94fdb44125893ffdcce056936f8ba45b.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/af/afe7e85b94fdb44125893ffdcce056936f8ba45b.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8e/8ea6f41ec10b8eae6f3afafe1bab5e38094b6362.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8e/8ea6f41ec10b8eae6f3afafe1bab5e38094b6362.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/8e/8ea6f41ec10b8eae6f3afafe1bab5e38094b6362.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/af/afe7e85b94fdb44125893ffdcce056936f8ba45b.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8b/8bfd26062d5b2f4a5fac43436e04fc7c6a3cf4c2.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8b/8bfd26062d5b2f4a5fac43436e04fc7c6a3cf4c2.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/8b/8bfd26062d5b2f4a5fac43436e04fc7c6a3cf4c2.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/5a/5abd8fe0d37970aa49e8116e98d0e7e75b36ec70.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/5a/5abd8fe0d37970aa49e8116e98d0e7e75b36ec70.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/81/8167b2758401e0120e6700e6c10f9de2a9f075a8.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/81/8167b2758401e0120e6700e6c10f9de2a9f075a8.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8e/8e37ca244846905829ee6b797af72893559b9bb8.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/8e/8e37ca244846905829ee6b797af72893559b9bb8.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/81/8167b2758401e0120e6700e6c10f9de2a9f075a8.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/8e/8e37ca244846905829ee6b797af72893559b9bb8.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/5a/5abd8fe0d37970aa49e8116e98d0e7e75b36ec70.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/37/376930859ca26c4dbeebd8f6edd4ef78b2197950.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/37/376930859ca26c4dbeebd8f6edd4ef78b2197950.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/37/376930859ca26c4dbeebd8f6edd4ef78b2197950.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/e7/e794c102b27549d11ea8248a338175afd59593cc.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/e7/e794c102b27549d11ea8248a338175afd59593cc.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/e7/e794c102b27549d11ea8248a338175afd59593cc.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/a8/a88fa56b94ef6e9332e082d0a1df233f21f717be.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/a8/a88fa56b94ef6e9332e082d0a1df233f21f717be.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/a8/a88fa56b94ef6e9332e082d0a1df233f21f717be.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/06/06b1cf539dcf56d2376d786953e9e64ebd78de08.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/06/06b1cf539dcf56d2376d786953e9e64ebd78de08.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c5/c59b3d0d62e9d9930615172a07a907439650c2f0.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c5/c59b3d0d62e9d9930615172a07a907439650c2f0.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/63/637c1727d22543796c2b79d7f8ae013607c5fd1a.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/63/637c1727d22543796c2b79d7f8ae013607c5fd1a.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3c/3c16ee773124d8ffa31c63184feef7066a469e9a.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3c/3c16ee773124d8ffa31c63184feef7066a469e9a.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/ae/aebfb0e267b461b71b2f5254bad4fa6b4f6fa430.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/ae/aebfb0e267b461b71b2f5254bad4fa6b4f6fa430.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c8/c860d0089edb36550416ef5e3f4cecceb34728a8.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c8/c860d0089edb36550416ef5e3f4cecceb34728a8.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c7/c79745040d54058f156f347932596c66f4ad383d.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c7/c79745040d54058f156f347932596c66f4ad383d.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f3/f32b7ea54b33e158add4b462355552cb490df822.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/f3/f32b7ea54b33e158add4b462355552cb490df822.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/cc/cc90315873152bfa9c19b1495e79560875710181.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/cc/cc90315873152bfa9c19b1495e79560875710181.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/11/11c1c1a48216ed7642e57e423759eadfc6cd5e5c.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/11/11c1c1a48216ed7642e57e423759eadfc6cd5e5c.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/4c/4c997f2c235d5242be6245af1c3068537d53aa96.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/4c/4c997f2c235d5242be6245af1c3068537d53aa96.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/cb/cbfccfbf0b56a93102f7039d9ed32fa8e07b6e04.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/cb/cbfccfbf0b56a93102f7039d9ed32fa8e07b6e04.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/39/396cdf0fb3e1bcc2c7e84ed318dabdb3e9a1a718.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/39/396cdf0fb3e1bcc2c7e84ed318dabdb3e9a1a718.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/63/637c1727d22543796c2b79d7f8ae013607c5fd1a.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/cc/cc90315873152bfa9c19b1495e79560875710181.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/11/11c1c1a48216ed7642e57e423759eadfc6cd5e5c.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register ThemeMotion
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/f3/f32b7ea54b33e158add4b462355552cb490df822.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register LivingMascotRig
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/ae/aebfb0e267b461b71b2f5254bad4fa6b4f6fa430.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register CabinetReliefGlow
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/3c/3c16ee773124d8ffa31c63184feef7066a469e9a.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register TextFit
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/c8/c860d0089edb36550416ef5e3f4cecceb34728a8.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/4c/4c997f2c235d5242be6245af1c3068537d53aa96.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/cb/cbfccfbf0b56a93102f7039d9ed32fa8e07b6e04.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/39/396cdf0fb3e1bcc2c7e84ed318dabdb3e9a1a718.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/c7/c79745040d54058f156f347932596c66f4ad383d.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/c5/c59b3d0d62e9d9930615172a07a907439650c2f0.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register CoreReelGuide
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/06/06b1cf539dcf56d2376d786953e9e64ebd78de08.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/d2/d212e559fc8f068b8ed9bd9e77558e14abe39d5a.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/d2/d212e559fc8f068b8ed9bd9e77558e14abe39d5a.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/d2/d212e559fc8f068b8ed9bd9e77558e14abe39d5a.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/7a/7a6908b550d7c3f63f522ac4cac6d526992cb472.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/7a/7a6908b550d7c3f63f522ac4cac6d526992cb472.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/7a/7a6908b550d7c3f63f522ac4cac6d526992cb472.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/9c/9c2c0dac738a1f321b64b4dbb50c1a4a67ec3c53.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/9c/9c2c0dac738a1f321b64b4dbb50c1a4a67ec3c53.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/14/14706ed53c2818a32764835707d2f517f75aad00.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/14/14706ed53c2818a32764835707d2f517f75aad00.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/14/14706ed53c2818a32764835707d2f517f75aad00.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register SalonReels
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/9c/9c2c0dac738a1f321b64b4dbb50c1a4a67ec3c53.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/99/990b163424ee3a22b09aa07bcd1cda7eb0f3c097.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/99/990b163424ee3a22b09aa07bcd1cda7eb0f3c097.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/99/990b163424ee3a22b09aa07bcd1cda7eb0f3c097.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3c/3cb787c98c3e9b7a1e2f58c1f410870c0a194eeb.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3c/3cb787c98c3e9b7a1e2f58c1f410870c0a194eeb.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/3c/3cb787c98c3e9b7a1e2f58c1f410870c0a194eeb.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/91/911b22d92a38881ece4191e436a40283bcc6763e.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/91/911b22d92a38881ece4191e436a40283bcc6763e.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/91/911b22d92a38881ece4191e436a40283bcc6763e.js" loaded.
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3f/3f8840e16d7308abf0984bab4e98e0c98becdc2e.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3f/3f8840e16d7308abf0984bab4e98e0c98becdc2e.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/73/73b5900bc401d4fa6fca655a186c325f5f19c1a0.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/73/73b5900bc401d4fa6fca655a186c325f5f19c1a0.js is not in module cache!
+
+auto refresh because script compiled or scene changed
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/7d/7d8a9698dfdda3900273da5c9df1d7c1b68ecc82.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/7d/7d8a9698dfdda3900273da5c9df1d7c1b68ecc82.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/da/da3d6d892d18d46b5aea470f5a415129b6a15ecd.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/da/da3d6d892d18d46b5aea470f5a415129b6a15ecd.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c1/c1016048433ad67381b181b963764288cc4259a4.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/c1/c1016048433ad67381b181b963764288cc4259a4.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/1e/1e0d712323cdb81aadda727a0dd2975ac8519112.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/1e/1e0d712323cdb81aadda727a0dd2975ac8519112.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3a/3a823da65d7e9feb64c774f9659d2f3a38a7053d.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/3a/3a823da65d7e9feb64c774f9659d2f3a38a7053d.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/90/906d87cecda3d4f66aa4333782d04c25e1dd6c01.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/90/906d87cecda3d4f66aa4333782d04c25e1dd6c01.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/91/919559311de3e7aef8b7ac4b32222eeff79e3550.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/91/919559311de3e7aef8b7ac4b32222eeff79e3550.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/d3/d3f24b83d74caa3c77b03f4eadd220da934127e9.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/d3/d3f24b83d74caa3c77b03f4eadd220da934127e9.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/44/443b628cbde8cbea2c0913837a36b2eaa6a07af7.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/44/443b628cbde8cbea2c0913837a36b2eaa6a07af7.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/91/915f0778d4f46acac8f304b1b8f3b54dce5f301b.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/91/915f0778d4f46acac8f304b1b8f3b54dce5f301b.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/2b/2b7f31107a5719224511a320514587b69c0f924a.js resolved to /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/temp/programming/packer-driver/targets/editor/chunks/2b/2b7f31107a5719224511a320514587b69c0f924a.js is not in module cache!
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register OrdinaryWinStage
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/7d/7d8a9698dfdda3900273da5c9df1d7c1b68ecc82.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/1e/1e0d712323cdb81aadda727a0dd2975ac8519112.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/c1/c1016048433ad67381b181b963764288cc4259a4.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/2b/2b7f31107a5719224511a320514587b69c0f924a.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/73/73b5900bc401d4fa6fca655a186c325f5f19c1a0.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/da/da3d6d892d18d46b5aea470f5a415129b6a15ecd.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register SalonAtmosphere
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/3a/3a823da65d7e9feb64c774f9659d2f3a38a7053d.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register ThemeFestivity
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/90/906d87cecda3d4f66aa4333782d04c25e1dd6c01.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register CanopyLeaves
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/d3/d3f24b83d74caa3c77b03f4eadd220da934127e9.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register SalonWinStage
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/91/919559311de3e7aef8b7ac4b32222eeff79e3550.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register SafeAreaAdapter
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/44/443b628cbde8cbea2c0913837a36b2eaa6a07af7.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/91/915f0778d4f46acac8f304b1b8f3b54dce5f301b.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Register AureliaApp
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/3f/3f8840e16d7308abf0984bab4e98e0c98becdc2e.js" loaded.
+
+2026-10-10 10:17:03 - debug: [[Executor]] Module "pack:///chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js" loaded.
+
+2026-10-10 10:17:03 - groupEnd: Imports all modules
+
+2026-10-10 10:17:03 - debug: [[Executor]] after unlock
+
+2026-10-10 10:17:03 - debug: Incremental keys: regeneratorRuntime,b2jsb
+
+2026-10-10 10:17:03 - debug: Init bundle share assets start..., progress: 7%
+
+2026-10-10 10:17:03 - debug: Init bundle share assets start..., progress: 13%
+
+2026-10-10 10:17:03 - debug: Init bundle share assets success..., progress: 7%
+
+2026-10-10 10:17:03 - debug: Init bundle share assets success..., progress: 13%
+
+2026-10-10 10:17:03 - debug: handle json group in bundle internal
+
+2026-10-10 10:17:03 - debug: handle json group in bundle internal success
+
+2026-10-10 10:17:03 - debug: handle json group in bundle resources
+
+2026-10-10 10:17:03 - debug: handle json group in bundle main
+
+2026-10-10 10:17:03 - debug: init image compress task 0 in bundle internal
+
+2026-10-10 10:17:03 - debug: handle json group in bundle main success
+
+2026-10-10 10:17:03 - debug: init image compress task 0 in bundle main
+
+2026-10-10 10:17:03 - debug: handle json group in bundle resources success
+
+2026-10-10 10:17:03 - debug: init image compress task 0 in bundle resources
+
+2026-10-10 10:17:03 - debug: // ---- build task 查询 Asset Bundle ---- (469ms)
+
+2026-10-10 10:17:03 - log: run build task 查询 Asset Bundle success in 469 ms√, progress: 12%
+
+2026-10-10 10:17:03 - debug: [Build Memory track]: 查询 Asset Bundle start:294.96MB, end 297.67MB, increase: 2.72MB
+
+2026-10-10 10:17:03 - debug: 查询 Asset Bundle start, progress: 12%
+
+2026-10-10 10:17:03 - debug: // ---- build task 查询 Asset Bundle ----
+
+2026-10-10 10:17:03 - debug: // ---- build task 查询 Asset Bundle ---- (7ms)
+
+2026-10-10 10:17:03 - log: run build task 查询 Asset Bundle success in 7 ms√, progress: 17%
+
+2026-10-10 10:17:03 - debug: [Build Memory track]: 查询 Asset Bundle start:297.70MB, end 297.85MB, increase: 153.18KB
+
+2026-10-10 10:17:03 - debug: 打包脚本 start, progress: 17%
+
+2026-10-10 10:17:03 - debug: // ---- build task 打包脚本 ----
+
+2026-10-10 10:17:06 - log: [buildPolyfillsCommand]enter sub process 10508, 9229, see: chrome://inspect/#devices
+
+2026-10-10 10:17:21 - debug: execute-script-end with buildPolyfillsCommand 17293ms
+
+2026-10-10 10:17:21 - debug: Generate systemJs..., progress: 17%
+
+2026-10-10 10:17:24 - debug: execute-script-end with buildSystemJsCommand 3694ms
+
+2026-10-10 10:17:24 - debug: 构建项目脚本 start..., progress: 17%
+
+2026-10-10 10:17:24 - debug: 构建项目脚本 start..., progress: 13%
+
+2026-10-10 10:17:42 - log: [buildScriptCommand]Number of non-entry chunks: 3
+
+2026-10-10 10:17:42 - debug: execute-script-end with buildScriptCommand 17896ms
+
+2026-10-10 10:17:42 - debug: Copy externalScripts success!
+
+2026-10-10 10:17:42 - debug: 构建项目脚本 in (17941 ms) √, progress: 17%
+
+2026-10-10 10:17:42 - debug: 构建项目脚本 in (17941 ms) √, progress: 13%
+
+2026-10-10 10:17:42 - debug: 构建引擎脚本 start..., progress: 17%
+
+2026-10-10 10:17:42 - debug: mangleProperties is enabled, found engine-mangle-config.json, use it
+
+2026-10-10 10:17:42 - debug: Error: Exit process with code:null, signal:SIGTERM in task build-script    at ChildProcess.<anonymous> (/Applications/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/worker-pools/sub-process-manager.ccc:1:2409)    at ChildProcess.emit (node:events:519:28)    at Process.ChildProcess._handle.onexit (node:internal/child_process:294:12)
+
+2026-10-10 10:17:43 - debug: Use cache engine: {link(/var/folders/_j/9pm8s1m52csb33rf6l_3flj80000gn/T/CocosCreator/3.8.8/builder/engine/27a172f935018a783e74920b105734dd)}
+
+2026-10-10 10:17:43 - debug: Use cache, md5String: debug=false,sourceMaps=false,includeModules=["2d","3d","affine-transform","animation","audio","base","custom-pipeline","dragon-bones","gfx-webgl","graphics","intersection-2d","light-probe","marionette","mask","particle","particle-2d","physics-2d-box2d","physics-ammo","primitive","profiler","rich-text","skeletal-animation","spine-3.8","terrain","tiled-map","tween","ui","ui-skew","video","websocket","webview","gfx-webgl2","custom-pipeline-builtin-scripts"],engineVersion="3.8.8",platformType="HTML5",split=false,nativeCodeBundleMode="both",targets=undefined,entry="/Applications/CocosCreator.app/Contents/Resources/resources/3d/engine",noDeprecatedFeatures=undefined,loose=true,assetURLFormat="runtime-resolved",flags={"DEBUG":false,"LOAD_BULLET_MANUALLY":false,"LOAD_SPINE_MANUALLY":false,"WEBGPU":false},preserveType=undefined,wasmCompressionMode=false,enableNamedRegisterForSystemJSModuleFormat=undefined,mangleProperties=false,inlineEnum=true,
+
+2026-10-10 10:17:43 - debug: Use cache, options: {  "entry": "/Applications/CocosCreator.app/Contents/Resources/resources/3d/engine",  "debug": false,  "mangleProperties": false,  "inlineEnum": true,  "sourceMaps": false,  "includeModules": [    "2d",    "3d",    "affine-transform",    "animation",    "audio",    "base",    "custom-pipeline",    "dragon-bones",    "gfx-webgl",    "graphics",    "intersection-2d",    "light-probe",    "marionette",    "mask",    "particle",    "particle-2d",    "physics-2d-box2d",    "physics-ammo",    "primitive",    "profiler",    "rich-text",    "skeletal-animation",    "spine-3.8",    "terrain",    "tiled-map",    "tween",    "ui",    "ui-skew",    "video",    "websocket",    "webview",    "gfx-webgl2",    "custom-pipeline-builtin-scripts"  ],  "engineVersion": "3.8.8",  "md5Map": [],  "engineName": "cocos-js",  "output": "/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F23_Golden_Lamp_v1.0.0/build/web-mobile/cocos-js",  "platformType": "HTML5",  "useCache": true,  "nativeCodeBundleMode": "both",  "wasmCompressionMode": false,  "split": false,  "assetURLFormat": "runtime-resolved",  "flags": {    "DEBUG": false,    "LOAD_BULLET_MANUALLY": false,    "LOAD_SPINE_MANUALLY": false,    "WEBGPU": false  }}
+
+2026-10-10 10:17:43 - debug: 构建引擎脚本 in (216 ms) √, progress: 17%
+
+2026-10-10 10:17:43 - debug: Copy plugin script ..., progress: 17%
+
+2026-10-10 10:17:43 - debug: Generate import-map..., progress: 17%
+
+2026-10-10 10:17:43 - debug: // ---- build task 打包脚本 ---- (39168ms)
+
+2026-10-10 10:17:43 - log: run build task 打包脚本 success in 39 s√, progress: 22%
+
+2026-10-10 10:17:43 - debug: [Build Memory track]: 打包脚本 start:297.98MB, end 226.61MB, increase: -73080.65KB
+
+2026-10-10 10:17:43 - debug: Build Assets start, progress: 22%
+
+2026-10-10 10:17:43 - debug: // ---- build task Build Assets ----
+
+2026-10-10 10:17:43 - debug: Build bundles..., progress: 22%
+
+2026-10-10 10:17:43 - debug: Pack Images start, progress: 22%
+
+2026-10-10 10:17:43 - debug: Pack Images start, progress: 13%
+
+2026-10-10 10:17:43 - debug: Number of pac assets: 1
+
+2026-10-10 10:17:43 - debug: No pack results
+
+2026-10-10 10:17:43 - debug: Compress image start..., progress: 22%
+
+2026-10-10 10:17:43 - debug: Compress image start..., progress: 13%
+
+2026-10-10 10:17:43 - group: Compress image...
+
+2026-10-10 10:17:43 - debug: sort compress task {}
+
+2026-10-10 10:17:43 - debug: Num of all image compress task 0, really: 0, configTasks: 0
+
+2026-10-10 10:17:43 - debug: No image need to compress
+
+2026-10-10 10:17:43 - groupEnd: Compress image...
+
+2026-10-10 10:17:43 - debug: Compress image success..., progress: 22%
+
+2026-10-10 10:17:43 - debug: Compress image success..., progress: 13%
+
+2026-10-10 10:17:43 - debug: Output asset in bundles start, progress: 22%
+
+2026-10-10 10:17:43 - debug: Output asset in bundles start, progress: 13%
+
+2026-10-10 10:17:43 - debug: Handle all json groups in bundle internal
+
+2026-10-10 10:17:43 - debug: handle json group
+
+2026-10-10 10:17:43 - debug: Handle all json groups in bundle resources
+
+2026-10-10 10:17:43 - debug: handle json group
+
+2026-10-10 10:17:43 - debug: Handle all json groups in bundle main
+
+2026-10-10 10:17:43 - debug: handle json group
+
+2026-10-10 10:17:43 - debug(2): handle single json
+
+2026-10-10 10:17:43 - debug: Json group(07d3aae9f) compile success，json number: 6
+
+2026-10-10 10:17:43 - debug: handle single json
+
+2026-10-10 10:17:43 - debug: Output asset in bundles success, progress: 22%
+
+2026-10-10 10:17:43 - debug: Output asset in bundles success, progress: 13%
+
+2026-10-10 10:17:43 - debug: Output asset in bundles start, progress: 22%
+
+2026-10-10 10:17:43 - debug: Output asset in bundles start, progress: 13%
+
+2026-10-10 10:17:43 - debug: compress config of bundle internal...
+
+2026-10-10 10:17:43 - debug: compress config of bundle internal success
+
+2026-10-10 10:17:43 - debug: compress config of bundle resources...
+
+2026-10-10 10:17:43 - debug: compress config of bundle resources success
+
+2026-10-10 10:17:43 - debug: compress config of bundle main...
+
+2026-10-10 10:17:43 - debug: compress config of bundle main success
+
+2026-10-10 10:17:43 - debug: output config of bundle internal
+
+2026-10-10 10:17:43 - debug: output config of bundle internal success
+
+2026-10-10 10:17:43 - debug: output config of bundle resources
+
+2026-10-10 10:17:43 - debug: output config of bundle resources success
+
+2026-10-10 10:17:43 - debug: output config of bundle main
+
+2026-10-10 10:17:43 - debug: output config of bundle main success
+
+2026-10-10 10:17:43 - debug: Output asset in bundles success, progress: 22%
+
+2026-10-10 10:17:43 - debug: Output asset in bundles success, progress: 13%
+
+2026-10-10 10:17:43 - debug: // ---- build task Build Assets ---- (684ms)
+
+2026-10-10 10:17:43 - log: run build task Build Assets success in 684 ms√, progress: 27%
+
+2026-10-10 10:17:43 - debug: [Build Memory track]: Build Assets start:226.65MB, end 233.21MB, increase: 6.56MB
+
+2026-10-10 10:17:43 - debug: 整理部分构建选项内数据到 settings.json start, progress: 27%
+
+2026-10-10 10:17:43 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+
+2026-10-10 10:17:43 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (2ms)
+
+2026-10-10 10:17:43 - log: run build task 整理部分构建选项内数据到 settings.json success in 2 ms√, progress: 29%
+
+2026-10-10 10:17:43 - debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:233.29MB, end 233.34MB, increase: 45.98KB
+
+2026-10-10 10:17:43 - debug: 填充脚本数据到 settings.json start, progress: 29%
+
+2026-10-10 10:17:43 - debug: // ---- build task 填充脚本数据到 settings.json ----
+
+2026-10-10 10:17:43 - debug: // ---- build task 填充脚本数据到 settings.json ---- (1ms)
+
+2026-10-10 10:17:43 - log: run build task 填充脚本数据到 settings.json success in 1 ms√, progress: 31%
+
+2026-10-10 10:17:43 - debug: [Build Memory track]: 填充脚本数据到 settings.json start:233.38MB, end 233.42MB, increase: 38.01KB
+
+2026-10-10 10:17:43 - debug: 整理部分构建选项内数据到 settings.json start, progress: 31%
+
+2026-10-10 10:17:43 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+
+2026-10-10 10:17:43 - debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (8ms)
+
+2026-10-10 10:17:43 - log: run build task 整理部分构建选项内数据到 settings.json success in 8 ms√, progress: 32%
+
+2026-10-10 10:17:43 - debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:233.46MB, end 233.60MB, increase: 144.72KB
+
+2026-10-10 10:17:43 - debug: web-mobile:(onBeforeCompressSettings) start..., progress: 32%
+
+2026-10-10 10:17:43 - debug: // ---- build task web-mobile：onBeforeCompressSettings ----
+
+2026-10-10 10:17:43 - debug: web-mobile:(onBeforeCompressSettings) in 0 ms ✓, progress: 34%
+
+2026-10-10 10:17:43 - debug: cocos-service:(onBeforeCompressSettings) start..., progress: 34%
+
+2026-10-10 10:17:43 - debug: // ---- build task cocos-service：onBeforeCompressSettings ----
+
+2026-10-10 10:17:43 - debug: // ---- build task cocos-service：onBeforeCompressSettings ---- (3ms)
+
+2026-10-10 10:17:43 - debug: cocos-service:(onBeforeCompressSettings) in 3 ms ✓, progress: 36%
+
+2026-10-10 10:17:43 - debug: 整理静态模板文件 start, progress: 36%
+
+2026-10-10 10:17:43 - debug: // ---- build task 整理静态模板文件 ----
+
+2026-10-10 10:17:43 - debug: // ---- build task 整理静态模板文件 ---- (97ms)
+
+2026-10-10 10:17:43 - log: run build task 整理静态模板文件 success in 97 ms√, progress: 41%
+
+2026-10-10 10:17:43 - debug: [Build Memory track]: 整理静态模板文件 start:233.77MB, end 236.17MB, increase: 2.40MB
+
+2026-10-10 10:17:43 - debug: cocos-service:(onAfterCompressSettings) start..., progress: 41%
+
+2026-10-10 10:17:43 - debug: // ---- build task cocos-service：onAfterCompressSettings ----
+
+2026-10-10 10:17:43 - debug: // ---- build task cocos-service：onAfterCompressSettings ---- (3ms)
+
+2026-10-10 10:17:43 - debug: cocos-service:(onAfterCompressSettings) in 3 ms ✓, progress: 43%
+
+2026-10-10 10:17:43 - debug: web-mobile:(onBeforeCopyBuildTemplate) start..., progress: 43%
+
+2026-10-10 10:17:43 - debug: // ---- build task web-mobile：onBeforeCopyBuildTemplate ----
+
+2026-10-10 10:17:43 - debug: // ---- build task web-mobile：onBeforeCopyBuildTemplate ---- (21ms)
+
+2026-10-10 10:17:43 - debug: web-mobile:(onBeforeCopyBuildTemplate) in 21 ms ✓, progress: 45%
+
+2026-10-10 10:17:44 - debug: 给所有的资源加上 MD5 后缀 start, progress: 45%
+
+2026-10-10 10:17:44 - debug: // ---- build task 给所有的资源加上 MD5 后缀 ----
+
+2026-10-10 10:17:44 - debug: // ---- build task 给所有的资源加上 MD5 后缀 ---- (1ms)
+
+2026-10-10 10:17:44 - log: run build task 给所有的资源加上 MD5 后缀 success in 1 ms√, progress: 55%
+
+2026-10-10 10:17:44 - debug: [Build Memory track]: 给所有的资源加上 MD5 后缀 start:237.08MB, end 237.11MB, increase: 31.85KB
+
+2026-10-10 10:17:44 - debug: web-mobile:(onAfterBuild) start..., progress: 55%
+
+2026-10-10 10:17:44 - debug: // ---- build task web-mobile：onAfterBuild ----
+
+2026-10-10 10:17:44 - debug: // ---- build task web-mobile：onAfterBuild ---- (1ms)
+
+2026-10-10 10:17:44 - debug: web-mobile:(onAfterBuild) in 1 ms ✓, progress: 56%
+
+2026-10-10 10:17:44 - debug: cocos-service:(onAfterBuild) start..., progress: 56%
+
+2026-10-10 10:17:44 - debug: // ---- build task cocos-service：onAfterBuild ----
+
+2026-10-10 10:17:44 - debug: // ---- build task cocos-service：onAfterBuild ---- (2ms)
+
+2026-10-10 10:17:44 - debug: cocos-service:(onAfterBuild) in 2 ms ✓, progress: 58%
+
+2026-10-10 10:17:44 - debug: adsense-h5g-plugin:(onAfterBuild) start..., progress: 58%
+
+2026-10-10 10:17:44 - debug: // ---- build task adsense-h5g-plugin：onAfterBuild ----
+
+2026-10-10 10:17:44 - debug: // ---- build task adsense-h5g-plugin：onAfterBuild ---- (3ms)
+
+2026-10-10 10:17:44 - debug: adsense-h5g-plugin:(onAfterBuild) in 3 ms ✓, progress: 60%
+
+2026-10-10 10:17:44 - log: Asset DB is resume!
+
+2026-10-10 10:17:44 - debug: builder:build-project-total (40890ms)
+
+2026-10-10 10:17:44 - debug: build task(web-mobile) in 40890!
+
+2026-10-10 10:17:44 - debug: [Build Memory track]: builder:build-project-total start:291.94MB, end 235.41MB, increase: -57885.61KB
+
+2026-10-10 10:17:44 - debug: ================================ build Task (web-mobile) Finished in (40 s)ms ================================
+

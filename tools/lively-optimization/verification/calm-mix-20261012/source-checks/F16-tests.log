@@ -1,0 +1,91 @@
+
+> f16-treasure-jamboree@1.0.0 test
+> npm run test:math && npm run test:economy && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:motion && npm run test:press
+
+
+> f16-treasure-jamboree@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 198835,
+      "wins": 77,
+      "features": 19,
+      "maxWin": 8970
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 164391,
+      "wins": 387,
+      "features": 4,
+      "maxWin": 4456
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 154217,
+      "wins": 804,
+      "features": 26,
+      "maxWin": 6194
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 200000,
+      "won": 180793,
+      "wins": 367,
+      "features": 367,
+      "maxWin": 5329
+    }
+  }
+}
+
+> f16-treasure-jamboree@1.0.0 test:economy
+> node --import tsx tools/economy-test.ts
+
+PASS guest ledger: write failure, stale tabs, debit/settlement/refund replay, safe amounts, atomic rewards, midnight recovery and isolated persistence.
+
+> f16-treasure-jamboree@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f16-treasure-jamboree@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS mixed standings: score order, player promotion, ties, zero score and immutable source
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f16-treasure-jamboree@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 32 cabinet/viewport combinations: shared transform, essential bounds, symbol breathing room.
+
+> f16-treasure-jamboree@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS 630 rule coin awards match real evaluators, including wilds and cluster thresholds.
+PASS 1,000 winning breakdowns reconcile to settlement with valid original-grid positions.
+
+> f16-treasure-jamboree@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+F16 preference isolation, legacy migration and navigation localization passed.
+
+> f16-treasure-jamboree@1.0.0 test:motion
+> node --import tsx tools/reel-motion-test.ts
+
+PASS 40,200 motion samples: four profiles, normal/turbo, monotone braking, exact 30/60/90/120Hz stops.
+PASS C1 launch, bounded settle, result-row mapping, late-result delivery. Runtime visual/performance QA remains separate.
+
+> f16-treasure-jamboree@1.0.0 test:press
+> node --import tsx tools/press-test.ts
+
+PASS press ownership, duplicate release, exit/reentry, drag, cancel/hide, outside release and touch jitter.

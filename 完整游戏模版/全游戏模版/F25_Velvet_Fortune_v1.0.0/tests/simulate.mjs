@@ -1,0 +1,3 @@
+import {GAMES,seeded,makeRound} from '../engine.js';
+const samples=Number(process.env.SAMPLES)||50000,seed=Number(process.env.SEED)||250917;
+const stats=GAMES.map((g,i)=>{const rng=seeded(seed+i);let paid=0,wins=0,features=0,big=0,max=0,sumSq=0;for(let n=0;n<samples;n++){const r=makeRound(g,100,rng);paid+=r.total;sumSq+=(r.total/100)**2;if(r.total)wins++;if(r.steps.length>1)features++;if(r.total>=1000)big++;max=Math.max(max,r.total)}const mean=paid/(samples*100);return{id:g.id,samples,seed:seed+i,scale:g.scale,return:mean,standardError:Math.sqrt(Math.max(0,sumSq/samples-mean*mean)/samples),hitRate:wins/samples,bonusRate:features/samples,bigWinRate:big/samples,maxMultiple:max/100}});console.log(JSON.stringify(stats,null,2));

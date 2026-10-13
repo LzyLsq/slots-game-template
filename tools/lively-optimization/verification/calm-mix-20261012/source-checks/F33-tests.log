@@ -1,0 +1,239 @@
+
+> f33-golden-library@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary
+
+
+> f33-golden-library@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 173364,
+      "wins": 367,
+      "features": 274,
+      "maxWin": 3291
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 170034,
+      "wins": 600,
+      "features": 600,
+      "maxWin": 3276
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 151003,
+      "wins": 636,
+      "features": 56,
+      "maxWin": 3851
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 184235,
+      "wins": 819,
+      "features": 819,
+      "maxWin": 2349
+    }
+  }
+}
+
+> f33-golden-library@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f33-golden-library@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f33-golden-library@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 32 cabinet/viewport combinations: enlarged glass, essential bounds, symbol crop and breathing room.
+
+> f33-golden-library@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+
+> f33-golden-library@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+
+> f33-golden-library@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f33-golden-library@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 864,
+    featurePaidHits: 246,
+    coreHits: 870,
+    coreReturn: 0.5855296296296296,
+    hits: 1030,
+    sampleReturn: 0.859562962962963,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1772,
+    featurePaidHits: 1772,
+    coreHits: 1495,
+    coreReturn: 0.023368518518518518,
+    hits: 1772,
+    sampleReturn: 0.9663148148148148,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'variable-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 129,
+    featurePaidHits: 128,
+    coreHits: 1788,
+    coreReturn: 0.4416351851851852,
+    hits: 1855,
+    sampleReturn: 0.8852518518518518,
+    layoutVariants: 243
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 2360,
+    featurePaidHits: 1320,
+    coreHits: 2360,
+    coreReturn: 0.29305,
+    hits: 2360,
+    sampleReturn: 0.9009203703703703,
+    layoutVariants: 1
+  }
+]
+
+> f33-golden-library@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-hour',
+    core: 'lines',
+    feature: 'vine-spread',
+    samples: 6000,
+    features: 1821,
+    motions: [ 'transform' ]
+  },
+  {
+    id: 'jade-treasury',
+    core: 'ways',
+    feature: 'win-to-wild',
+    samples: 6000,
+    features: 3552,
+    motions: [ 'transform' ]
+  },
+  {
+    id: 'pearl-palace',
+    core: 'ways',
+    feature: 'free-count-cascade',
+    samples: 6000,
+    features: 266,
+    motions: [ 'respin', 'drop' ]
+  },
+  {
+    id: 'ruby-revel',
+    core: 'scatterpay',
+    feature: 'waterfall',
+    samples: 6000,
+    features: 4714,
+    motions: [ 'drop' ]
+  }
+]
+
+> f33-golden-library@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 864,
+    featurePaidHits: 246,
+    coreHits: 870,
+    coreReturn: 0.5855296296296296,
+    hits: 1030,
+    sampleReturn: 0.859562962962963,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1772,
+    featurePaidHits: 1772,
+    coreHits: 1495,
+    coreReturn: 0.023368518518518518,
+    hits: 1772,
+    sampleReturn: 0.9663148148148148,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'variable-ways',
+    columns: 5,
+    rows: 4,
+    spins: 3000,
+    features: 129,
+    featurePaidHits: 128,
+    coreHits: 1788,
+    coreReturn: 0.4416351851851852,
+    hits: 1855,
+    sampleReturn: 0.8852518518518518,
+    layoutVariants: 243
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 2360,
+    featurePaidHits: 1320,
+    coreHits: 2360,
+    coreReturn: 0.29305,
+    hits: 2360,
+    sampleReturn: 0.9009203703703703,
+    layoutVariants: 1
+  }
+]

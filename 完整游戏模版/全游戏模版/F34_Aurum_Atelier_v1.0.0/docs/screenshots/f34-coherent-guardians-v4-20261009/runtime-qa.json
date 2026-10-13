@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-09",
+  "artVersion": "coherent-v4",
+  "scope": "Isolated Cocos preview contexts, no spins, purchases or real-save edits. Continuous guardian idle cycles, component anticipation/celebration responses and reduced motion. Response probes are not gameplay winnings.",
+  "cases": [
+    {
+      "tag": "pearl-390x844",
+      "mode": "pearl-palace",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": false,
+      "sampleCount": 1052,
+      "durationMs": 19610.900000095367,
+      "angleMin": -2.3748930722929713,
+      "angleMax": 7.478281092970597,
+      "frameClock": {
+        "medianMs": 16.699999809265137,
+        "p95Ms": 20.40000009536743,
+        "maximumMs": 238.69999980926514
+      },
+      "shoulderBehindTorso": true,
+      "solePivotStationary": true,
+      "offeringStationary": true,
+      "responseProbed": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "ruby-390x844",
+      "mode": "ruby-revel",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": false,
+      "sampleCount": 1037,
+      "durationMs": 19610.39999961853,
+      "angleMin": -1.0620024106315435,
+      "angleMax": 10.969440507448699,
+      "frameClock": {
+        "medianMs": 16.699999809265137,
+        "p95Ms": 29.90000009536743,
+        "maximumMs": 158.7000002861023
+      },
+      "shoulderBehindTorso": true,
+      "solePivotStationary": true,
+      "offeringStationary": false,
+      "responseProbed": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "pearl-320x568",
+      "mode": "pearl-palace",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": false,
+      "sampleCount": 528,
+      "durationMs": 9613.400000095367,
+      "angleMin": 0,
+      "angleMax": 7.4792037453386655,
+      "frameClock": {
+        "medianMs": 16.699999809265137,
+        "p95Ms": 30.300000190734863,
+        "maximumMs": 96.2000002861023
+      },
+      "shoulderBehindTorso": true,
+      "solePivotStationary": true,
+      "offeringStationary": true,
+      "responseProbed": false,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "ruby-320x568",
+      "mode": "ruby-revel",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": false,
+      "sampleCount": 462,
+      "durationMs": 9613.200000286102,
+      "angleMin": 0,
+      "angleMax": 10.958430558455102,
+      "frameClock": {
+        "medianMs": 16.700000286102295,
+        "p95Ms": 33.5,
+        "maximumMs": 89.5
+      },
+      "shoulderBehindTorso": true,
+      "solePivotStationary": true,
+      "offeringStationary": false,
+      "responseProbed": false,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "pearl-320x568-reduced",
+      "mode": "pearl-palace",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": true,
+      "sampleCount": 83,
+      "durationMs": 1609.6000003814697,
+      "angleMin": 0,
+      "angleMax": 0,
+      "frameClock": {
+        "medianMs": 16.699999809265137,
+        "p95Ms": 33.5,
+        "maximumMs": 34.700000286102295
+      },
+      "shoulderBehindTorso": true,
+      "solePivotStationary": true,
+      "offeringStationary": true,
+      "responseProbed": false,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "ruby-320x568-reduced",
+      "mode": "ruby-revel",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": true,
+      "sampleCount": 83,
+      "durationMs": 1613.8000001907349,
+      "angleMin": 0,
+      "angleMax": 0,
+      "frameClock": {
+        "medianMs": 16.700000286102295,
+        "p95Ms": 33.200000286102295,
+        "maximumMs": 33.69999980926514
+      },
+      "shoulderBehindTorso": true,
+      "solePivotStationary": true,
+      "offeringStationary": false,
+      "responseProbed": false,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    }
+  ]
+}

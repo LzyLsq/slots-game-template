@@ -1,0 +1,36 @@
+{
+  "startedAt": "2026-10-12T03:55:40.216Z",
+  "scope": "Actual local desktop Xcode projects; unsigned simulator build, existing XCTest runtime/WebP/local StoreKit checks, installed-app launch, screenshot and packaged-Web hashes. Not a real iPhone, real Apple login, payment or full manual gameplay test.",
+  "delivery": "/Users/mengjunzhu/Desktop/Xcode_H5/WebP_IAP_20261010",
+  "destination": "2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9",
+  "derivedData": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/webp-iap/verification/DerivedData",
+  "out": "/Users/mengjunzhu/Desktop/slots/slots-game-template/tools/lively-optimization/verification/xcode-all-20261012.xnBNaw",
+  "xcode": "Xcode 26.3\nBuild version 17C529",
+  "nativeFilesProtected": 92,
+  "results": [
+    {
+      "id": 29,
+      "title": "Jade Lantern Court",
+      "project": "/Users/mengjunzhu/Desktop/Xcode_H5/WebP_IAP_20261010/F29_Jade_Lantern_Court_OC_StoreKit2_Xcode/DBGame/JadeLanternCourtH5.xcodeproj",
+      "scheme": "JadeLanternCourt-LocalTest",
+      "passed": false,
+      "error": "Less than 1.2 GiB free; stopped to protect user files"
+    }
+  ],
+  "simulator": {
+    "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-17-5",
+    "lastBootedAt": "2026-10-12T03:34:27Z",
+    "dataPath": "/Users/mengjunzhu/Library/Developer/CoreSimulator/Devices/2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9/data",
+    "dataPathSize": 3002146816,
+    "logPath": "/Users/mengjunzhu/Library/Logs/CoreSimulator/2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9",
+    "udid": "2C45F638-CEBE-4BC8-9D79-28D0EADB4BF9",
+    "isAvailable": true,
+    "logPathSize": 389120,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-11",
+    "state": "Booted",
+    "name": "Lively Optimization Verification"
+  },
+  "nativeFilesChanged": [],
+  "finishedAt": "2026-10-12T03:55:45.082Z",
+  "passed": false
+}

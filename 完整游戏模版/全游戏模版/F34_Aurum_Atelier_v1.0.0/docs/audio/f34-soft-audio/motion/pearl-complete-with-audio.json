@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-08",
+  "capture": "Canvas VP8 and actual managed WebAudio Opus share one MediaRecorder clock; no external audio track",
+  "mode": "pearl-palace",
+  "tier": "big",
+  "fixture": false,
+  "frameClock": {
+    "samples": 1411,
+    "medianMs": 16.69999999999891,
+    "p95Ms": 16.700000000000728,
+    "maximumMs": 66.69999999999982,
+    "gapsOver50Ms": 1,
+    "gaps": [
+      {
+        "fromSeconds": 0.007300000381469544,
+        "toSeconds": 0.07400000038146937,
+        "durationMs": 66.69999999999982
+      }
+    ]
+  },
+  "marks": [
+    {
+      "name": "Idle: full fortune-guardian cycle",
+      "seconds": 0.0018000001907348632
+    },
+    {
+      "name": "Spin: pearl-palace seeded round, isolated QA context",
+      "seconds": 8.005700000286103
+    },
+    {
+      "name": "Counting: BIG automatic performance",
+      "seconds": 13.00710000038147
+    },
+    {
+      "name": "Resolution: first volley, title sweep and treasure light fans",
+      "seconds": 14.83360000038147
+    },
+    {
+      "name": "Second treasure volley",
+      "seconds": 15.566300000190735
+    },
+    {
+      "name": "Automatic finish: cabinet and music restored",
+      "seconds": 18.567800000190736
+    },
+    {
+      "name": "Salon music crossfade",
+      "seconds": 23.5897000002861
+    }
+  ],
+  "payout": 87,
+  "chargedBet": 80,
+  "automaticCleanup": true,
+  "errors": []
+}

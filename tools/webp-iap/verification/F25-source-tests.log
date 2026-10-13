@@ -1,0 +1,34 @@
+
+> f25-velvet-fortune-cocos@1.0.0 test
+> node --import tsx --test tests/*.test.mjs
+
+✔ local auth validates input and consent before storing (2.775416ms)
+✔ account credentials, guest progress and profiles remain separate (720.243291ms)
+✔ failed registration restores the active profile and removes partial save (63.223667ms)
+✔ classic: five lines pay once and use total-bet normalization (5.832042ms)
+✔ wild substitutes; best line is not paid for every candidate symbol (0.637583ms)
+✔ both directions: an identical winning path is paid once, right edge works (7.561584ms)
+✔ 243 ways: short paths are deduplicated; full board contains 243 distinct paths (20.87625ms)
+✔ wild path boosts once, not once per wild (2.086167ms)
+✔ scatter counts distinct reels, not three cells on a single reel (8.0205ms)
+✔ free rounds contain exactly eight extra boards, ramp multipliers, share round cap (3.94775ms)
+✔ mirror scatter independent award; exact 3/4/5-reel multipliers (0.521125ms)
+✔ invalid boards and wagers are rejected (2.883375ms)
+✔ local ledger: one deduction, one settlement, survives serialized pending round (0.584917ms)
+✔ daily claim uses local calendar date and is idempotent (12.311708ms)
+✔ 20,000 natural rounds: finite nonnegative conserved awards, no extra feature wagers (4056.570875ms)
+✔ mail attachment can be claimed once and survives local save (5.886875ms)
+✔ information mail and invalid ids never create credits (0.210833ms)
+✔ older saves migrate mail state without losing wallet (0.498ms)
+✔ Drum trajectory remains continuous and settles exactly (fast=false) (14.191583ms)
+✔ Drum trajectory remains continuous and settles exactly (fast=true) (3.418583ms)
+✔ malformed state is rejected and field corruption is repaired (12.600125ms)
+✔ all five language choices survive state normalization (3.789417ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6964.253833

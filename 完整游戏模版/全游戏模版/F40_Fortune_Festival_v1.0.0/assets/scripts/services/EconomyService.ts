@@ -59,7 +59,7 @@ export class EconomyService {
     this.save.update((state) => {
       const player = state.players[userId]; const data = state.playerData[userId];
       if (data.creditedPurchaseIds.includes(transactionId)) return;
-      const before=player.credits;player.credits = Math.min(1_000_000_000-(data.pendingSpin?.bet??0),authoritativeBalance ?? before+amount);const credited=player.credits-before; data.creditedPurchaseIds.push(transactionId); data.creditedPurchaseIds = data.creditedPurchaseIds.slice(-500);
+      const before=player.credits;player.credits = Math.min(1_000_000_000-(data.pendingSpin?.bet??0),authoritativeBalance ?? before+amount);const credited=player.credits-before; data.creditedPurchaseIds.push(transactionId);
       this.addTransaction(data.transactions, player.credits, credited, 'store-iap', transactionId);
     });
     return true;

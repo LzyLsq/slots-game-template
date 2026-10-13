@@ -1,0 +1,1303 @@
+{
+  "date": "2026-09-30",
+  "standard": [
+    {
+      "mode": "ruby-revel",
+      "before": {
+        "page": "game",
+        "mode": "ruby-revel",
+        "kind": "idle",
+        "balance": 27000,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 0,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "ruby-revel",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "spinning": {
+        "page": "game",
+        "mode": "ruby-revel",
+        "kind": "spinning",
+        "balance": 26943,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 1,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "ruby-revel",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "result": {
+        "win": 23,
+        "base": 23,
+        "wins": [
+          {
+            "symbol": "chip",
+            "positions": [
+              1,
+              2,
+              4,
+              6,
+              10,
+              11,
+              17,
+              18,
+              21,
+              22
+            ],
+            "credits": 23
+          }
+        ],
+        "grid": [
+          "bars",
+          "chip",
+          "chip",
+          "ruby",
+          "chip",
+          "bars",
+          "chip",
+          "bars",
+          "pouch",
+          "crown",
+          "chip",
+          "chip",
+          "pouch",
+          "bars",
+          "ruby",
+          "ruby",
+          "pouch",
+          "chip",
+          "chip",
+          "bars",
+          "pouch",
+          "chip",
+          "chip",
+          "bars",
+          "bars"
+        ]
+      },
+      "settled": {
+        "page": "game",
+        "mode": "ruby-revel",
+        "kind": "idle",
+        "balance": 26943,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 1,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "ruby-revel",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      }
+    },
+    {
+      "mode": "ruby-revel",
+      "check": "AUTO start then stop during spin",
+      "before": {
+        "page": "game",
+        "mode": "ruby-revel",
+        "kind": "idle",
+        "balance": 26943,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 1,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "ruby-revel",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "running": {
+        "page": "game",
+        "mode": "ruby-revel",
+        "kind": "spinning",
+        "balance": 26886,
+        "bet": 80,
+        "auto": true,
+        "sound": true,
+        "played": 2,
+        "autoText": "AUTO ON",
+        "autoColor": "c8f7da",
+        "audio": {
+          "scene": "ruby-revel",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "rounds": [
+        {
+          "win": 23,
+          "base": 23,
+          "mode": "ruby-revel"
+        }
+      ],
+      "settled": {
+        "page": "game",
+        "mode": "ruby-revel",
+        "kind": "idle",
+        "balance": 26886,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 2,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "ruby-revel",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      }
+    },
+    {
+      "mode": "golden-hour",
+      "check": "Real spin and bet controls",
+      "before": {
+        "page": "game",
+        "mode": "golden-hour",
+        "kind": "idle",
+        "balance": 26886,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 2,
+        "autoText": "AUTO OFF",
+        "autoColor": "49301d",
+        "audio": {
+          "scene": "golden-hour",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "up": 180,
+      "down": 80,
+      "spinning": {
+        "page": "game",
+        "mode": "golden-hour",
+        "kind": "spinning",
+        "balance": 27204,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 3,
+        "autoText": "AUTO OFF",
+        "autoColor": "49301d",
+        "audio": {
+          "scene": "golden-hour",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "result": {
+        "win": 398,
+        "base": 0,
+        "feature": "cabinet-feature",
+        "wins": [],
+        "grid": [
+          "safe",
+          "bell",
+          "bell",
+          "safe",
+          "safe",
+          "safe",
+          "ring",
+          "chip",
+          "safe"
+        ]
+      },
+      "settled": {
+        "page": "game",
+        "mode": "golden-hour",
+        "kind": "idle",
+        "balance": 27204,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 3,
+        "autoText": "AUTO OFF",
+        "autoColor": "49301d",
+        "audio": {
+          "scene": "golden-hour",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      }
+    },
+    {
+      "mode": "jade-treasury",
+      "check": "Real spin and bet controls",
+      "before": {
+        "page": "game",
+        "mode": "jade-treasury",
+        "kind": "idle",
+        "balance": 27204,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 3,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "jade-treasury",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "up": 180,
+      "spinning": {
+        "page": "game",
+        "mode": "jade-treasury",
+        "kind": "spinning",
+        "balance": 27124,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 4,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "jade-treasury",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "result": {
+        "win": 0,
+        "base": 0,
+        "wins": [
+          {
+            "symbol": "key",
+            "positions": [
+              0,
+              4,
+              8
+            ],
+            "credits": 0
+          }
+        ],
+        "grid": [
+          "key",
+          "coin",
+          "chip",
+          "bars",
+          "key",
+          "coin",
+          "chest",
+          "chest",
+          "key",
+          "chest",
+          "chip",
+          "chip",
+          "chest",
+          "chip",
+          "chest"
+        ]
+      },
+      "settled": {
+        "page": "game",
+        "mode": "jade-treasury",
+        "kind": "idle",
+        "balance": 27124,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 4,
+        "autoText": "AUTO OFF",
+        "autoColor": "fff2d5",
+        "audio": {
+          "scene": "jade-treasury",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      }
+    },
+    {
+      "mode": "pearl-palace",
+      "check": "Real spin and bet controls",
+      "before": {
+        "page": "game",
+        "mode": "pearl-palace",
+        "kind": "idle",
+        "balance": 27124,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 4,
+        "autoText": "AUTO OFF",
+        "autoColor": "49301d",
+        "audio": {
+          "scene": "pearl-palace",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "up": 180,
+      "spinning": {
+        "page": "game",
+        "mode": "pearl-palace",
+        "kind": "spinning",
+        "balance": 27444,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 5,
+        "autoText": "AUTO OFF",
+        "autoColor": "49301d",
+        "audio": {
+          "scene": "pearl-palace",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      },
+      "result": {
+        "win": 400,
+        "base": 400,
+        "wins": [
+          {
+            "symbol": "newcomer-benefit",
+            "positions": [],
+            "credits": 400
+          }
+        ],
+        "grid": [
+          "bars",
+          "pearl",
+          "chip",
+          "ring",
+          "chip",
+          "ring",
+          "safe",
+          "bars",
+          "aqua",
+          "aqua",
+          "chip",
+          "bars",
+          "chip",
+          "aqua",
+          "chip",
+          "chip",
+          "chip",
+          "pearl",
+          "chip",
+          "aqua"
+        ]
+      },
+      "settled": {
+        "page": "game",
+        "mode": "pearl-palace",
+        "kind": "idle",
+        "balance": 27444,
+        "bet": 80,
+        "auto": false,
+        "sound": true,
+        "played": 5,
+        "autoText": "AUTO OFF",
+        "autoColor": "49301d",
+        "audio": {
+          "scene": "pearl-palace",
+          "clips": 12,
+          "music": true,
+          "effects": true
+        }
+      }
+    }
+  ],
+  "small": [
+    {
+      "page": "game",
+      "mode": "golden-hour",
+      "kind": "idle",
+      "balance": 27000,
+      "bet": 80,
+      "auto": false,
+      "sound": true,
+      "played": 0,
+      "autoText": "AUTO OFF",
+      "autoColor": "49301d",
+      "audio": {
+        "scene": "golden-hour",
+        "clips": 12,
+        "music": true,
+        "effects": true
+      }
+    },
+    {
+      "page": "game",
+      "mode": "jade-treasury",
+      "kind": "idle",
+      "balance": 27000,
+      "bet": 80,
+      "auto": false,
+      "sound": true,
+      "played": 0,
+      "autoText": "AUTO OFF",
+      "autoColor": "fff2d5",
+      "audio": {
+        "scene": "jade-treasury",
+        "clips": 12,
+        "music": true,
+        "effects": true
+      }
+    },
+    {
+      "page": "game",
+      "mode": "pearl-palace",
+      "kind": "idle",
+      "balance": 27000,
+      "bet": 80,
+      "auto": false,
+      "sound": true,
+      "played": 0,
+      "autoText": "AUTO OFF",
+      "autoColor": "49301d",
+      "audio": {
+        "scene": "pearl-palace",
+        "clips": 12,
+        "music": true,
+        "effects": true
+      }
+    },
+    {
+      "page": "game",
+      "mode": "ruby-revel",
+      "kind": "idle",
+      "balance": 27000,
+      "bet": 80,
+      "auto": false,
+      "sound": true,
+      "played": 0,
+      "autoText": "AUTO OFF",
+      "autoColor": "fff2d5",
+      "audio": {
+        "scene": "ruby-revel",
+        "clips": 12,
+        "music": true,
+        "effects": true
+      }
+    }
+  ],
+  "smallControls": [
+    {
+      "mode": "golden-hour",
+      "before": 27000,
+      "win": 0,
+      "after": 26920,
+      "autoStopped": true,
+      "rulesClosed": true,
+      "soundRestored": true
+    },
+    {
+      "mode": "jade-treasury",
+      "before": 26920,
+      "win": 3,
+      "after": 26843,
+      "autoStopped": true,
+      "rulesClosed": true,
+      "soundRestored": true
+    },
+    {
+      "mode": "pearl-palace",
+      "before": 26843,
+      "win": 6,
+      "after": 26769,
+      "autoStopped": true,
+      "rulesClosed": true,
+      "soundRestored": true
+    },
+    {
+      "mode": "ruby-revel",
+      "before": 26769,
+      "win": 36,
+      "after": 26725,
+      "autoStopped": true,
+      "rulesClosed": true,
+      "soundRestored": true
+    }
+  ],
+  "motion": [
+    {
+      "mode": "golden-hour",
+      "frame": 0,
+      "angle": 8.995261476214209,
+      "bodyScale": [
+        1.0015908813627499,
+        1.002386322044125
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 1,
+      "angle": 2.839442219442123,
+      "bodyScale": [
+        1.0057722842659034,
+        1.0086584263988552
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 2,
+      "angle": 7.820293491499203,
+      "bodyScale": [
+        1.0079997055882064,
+        1.0119995583823096
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 3,
+      "angle": 0,
+      "bodyScale": [
+        1.0060208539188478,
+        1.0090312808782715
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 4,
+      "angle": 0,
+      "bodyScale": [
+        1.0020843876320324,
+        1.0031265814480488
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 5,
+      "angle": 1.7960284991793658,
+      "bodyScale": [
+        1.0000035694476128,
+        1.0000053541714193
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 6,
+      "angle": 7.595389465942974,
+      "bodyScale": [
+        1.0020444994375104,
+        1.0030667491562657
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 7,
+      "angle": 8.065923061925357,
+      "bodyScale": [
+        1.0063042072950994,
+        1.0094563109426489
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "golden-hour",
+      "frame": 8,
+      "angle": 1.5590647307066021,
+      "bodyScale": [
+        1.0079618457740207,
+        1.011942768661031
+      ],
+      "standing": [
+        -262,
+        -931.9765625
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 0,
+      "angle": 0,
+      "bodyScale": [
+        1.0000605267691987,
+        1.000090790153798
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 1,
+      "angle": -9.983635439798004,
+      "bodyScale": [
+        1.002776775647707,
+        1.0041651634715605
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 2,
+      "angle": -3.412160547431926,
+      "bodyScale": [
+        1.0068546324036285,
+        1.0102819486054426
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 3,
+      "angle": -4.939890960941573,
+      "bodyScale": [
+        1.0078348273789641,
+        1.011752241068446
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 4,
+      "angle": 0,
+      "bodyScale": [
+        1.005073453180575,
+        1.0076101797708623
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 5,
+      "angle": 0,
+      "bodyScale": [
+        1.0012507755212114,
+        1.0018761632818172
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 6,
+      "angle": -0.9088818716021789,
+      "bodyScale": [
+        1.0001071774653352,
+        1.000160766198003
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 7,
+      "angle": -7.377993339396674,
+      "bodyScale": [
+        1.0030748194885994,
+        1.0046122292328994
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "jade-treasury",
+      "frame": 8,
+      "angle": -6.915969914289339,
+      "bodyScale": [
+        1.0070620825869128,
+        1.010593123880369
+      ],
+      "standing": [
+        268,
+        -936.875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 0,
+      "angle": 0,
+      "bodyScale": [
+        1,
+        1
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 1,
+      "angle": 0.782603587141074,
+      "bodyScale": [
+        1.0004869547261452,
+        1.000730432089218
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 2,
+      "angle": 5.243384205839457,
+      "bodyScale": [
+        1.0040544525920145,
+        1.0060816788880218
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 3,
+      "angle": 4.6664866106630685,
+      "bodyScale": [
+        1.0075640260967536,
+        1.0113460391451303
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 4,
+      "angle": 1.5514522390305898,
+      "bodyScale": [
+        1.0073623707363926,
+        1.011043556104589
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 5,
+      "angle": 0,
+      "bodyScale": [
+        1.0038773887638368,
+        1.005816083145755
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 6,
+      "angle": 0,
+      "bodyScale": [
+        1.0005469280295753,
+        1.000820392044363
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 7,
+      "angle": 2.674887401982509e-17,
+      "bodyScale": [
+        1.0005240912076887,
+        1.000786136811533
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "pearl-palace",
+      "frame": 8,
+      "angle": 5.5746961770075245,
+      "bodyScale": [
+        1.0041312252110752,
+        1.0061968378166126
+      ],
+      "standing": [
+        294,
+        -949.01171875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 0,
+      "angle": 0,
+      "bodyScale": [
+        1,
+        1
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 1,
+      "angle": 0,
+      "bodyScale": [
+        1,
+        1
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 2,
+      "angle": 7.863938887183626,
+      "bodyScale": [
+        1.0013401212460475,
+        1.0020101818690714
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 3,
+      "angle": 3.433382948012831,
+      "bodyScale": [
+        1.005475959472076,
+        1.0082139392081138
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 4,
+      "angle": 8.292815836097938,
+      "bodyScale": [
+        1.0079846568571513,
+        1.011976985285727
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 5,
+      "angle": 0.037909549761641514,
+      "bodyScale": [
+        1.00627585124488,
+        1.00941377686732
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 6,
+      "angle": 0,
+      "bodyScale": [
+        1.0024209582195205,
+        1.0036314373292807
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 7,
+      "angle": 0,
+      "bodyScale": [
+        1.0000368519803449,
+        1.0000552779705172
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    },
+    {
+      "mode": "ruby-revel",
+      "frame": 8,
+      "angle": 3.117671242786915,
+      "bodyScale": [
+        1.0017034073083966,
+        1.002555110962595
+      ],
+      "standing": [
+        -262,
+        -973.421875
+      ]
+    }
+  ],
+  "reduced": {
+    "before": {
+      "reduced": true,
+      "angle": 0,
+      "scale": [
+        1,
+        1
+      ],
+      "coins": 27000
+    },
+    "after": {
+      "reduced": true,
+      "angle": 0,
+      "scale": [
+        1,
+        1
+      ],
+      "coins": 27000
+    },
+    "settled": {
+      "page": "game",
+      "mode": "pearl-palace",
+      "kind": "idle",
+      "balance": 26923,
+      "bet": 80,
+      "auto": false,
+      "sound": true,
+      "played": 1,
+      "autoText": "AUTO OFF",
+      "autoColor": "49301d",
+      "audio": {
+        "scene": "pearl-palace",
+        "clips": 12,
+        "music": true,
+        "effects": true
+      }
+    }
+  },
+  "hallEntryAllFour": true,
+  "rubyViaHall": {
+    "page": "game",
+    "mode": "ruby-revel",
+    "kind": "idle",
+    "balance": 27444,
+    "bet": 80,
+    "auto": false,
+    "sound": true,
+    "played": 5,
+    "autoText": "AUTO OFF",
+    "autoColor": "fff2d5",
+    "audio": {
+      "scene": "ruby-revel",
+      "clips": 12,
+      "music": true,
+      "effects": true
+    }
+  },
+  "errors": [],
+  "deviceRotation": {
+    "date": "2026-09-30",
+    "desktopGuard": {
+      "isMobile": false,
+      "isNative": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "guard": false,
+      "content": [
+        3413.3333333333335,
+        1920
+      ]
+    },
+    "mobileLandscapeGuard": {
+      "isMobile": true,
+      "isNative": false,
+      "viewport": [
+        844,
+        390
+      ],
+      "guard": true,
+      "content": [
+        4155.076923076923,
+        1920
+      ]
+    },
+    "mobilePortraitGuard": {
+      "isMobile": true,
+      "isNative": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "guard": false,
+      "content": [
+        1080,
+        2337.230769230769
+      ]
+    },
+    "rounds": [
+      {
+        "device": "desktop",
+        "before": {
+          "page": "game",
+          "mode": "pearl-palace",
+          "kind": "idle",
+          "balance": 27000,
+          "bet": 80,
+          "auto": false,
+          "sound": true,
+          "played": 0,
+          "autoText": "AUTO OFF",
+          "autoColor": "49301d",
+          "audio": {
+            "scene": "pearl-palace",
+            "clips": 12,
+            "music": true,
+            "effects": true
+          }
+        },
+        "during": {
+          "page": "game",
+          "mode": "pearl-palace",
+          "kind": "spinning",
+          "balance": 27022,
+          "bet": 80,
+          "auto": false,
+          "sound": true,
+          "played": 1,
+          "autoText": "AUTO OFF",
+          "autoColor": "49301d",
+          "audio": {
+            "scene": "pearl-palace",
+            "clips": 12,
+            "music": true,
+            "effects": true
+          }
+        },
+        "round": {
+          "state": {
+            "kind": "spinning",
+            "requestId": "salon-spin-3e3da07aa6e471373a13c6af4acd3ecb"
+          }
+        },
+        "after": {
+          "page": "game",
+          "mode": "pearl-palace",
+          "kind": "idle",
+          "balance": 27022,
+          "bet": 80,
+          "auto": false,
+          "sound": true,
+          "played": 1,
+          "autoText": "AUTO OFF",
+          "autoColor": "49301d",
+          "audio": {
+            "scene": "pearl-palace",
+            "clips": 12,
+            "music": true,
+            "effects": true
+          }
+        },
+        "settlement": {
+          "transactions": [
+            {
+              "id": "tx-e43dbce592e1e015c2627ace1c79429f",
+              "at": "2026-09-30T03:58:05.752Z",
+              "type": "spin-win",
+              "amount": 102,
+              "balance": 27022,
+              "reference": "salon-spin-3e3da07aa6e471373a13c6af4acd3ecb"
+            },
+            {
+              "id": "tx-fe741c3770a147e3895a7143631af949",
+              "at": "2026-09-30T03:58:05.749Z",
+              "type": "spin-bet",
+              "amount": -80,
+              "balance": 26920,
+              "reference": "salon-spin-3e3da07aa6e471373a13c6af4acd3ecb"
+            }
+          ],
+          "biggest": 102,
+          "total": 102
+        },
+        "accounting": {
+          "win": 102,
+          "expected": 27022,
+          "actual": 27022,
+          "pass": true
+        }
+      },
+      {
+        "device": "mobile-portrait",
+        "before": {
+          "page": "game",
+          "mode": "pearl-palace",
+          "kind": "idle",
+          "balance": 27000,
+          "bet": 80,
+          "auto": false,
+          "sound": true,
+          "played": 0,
+          "autoText": "AUTO OFF",
+          "autoColor": "49301d",
+          "audio": {
+            "scene": "pearl-palace",
+            "clips": 12,
+            "music": true,
+            "effects": true
+          }
+        },
+        "during": {
+          "page": "game",
+          "mode": "pearl-palace",
+          "kind": "spinning",
+          "balance": 26965,
+          "bet": 80,
+          "auto": false,
+          "sound": true,
+          "played": 1,
+          "autoText": "AUTO OFF",
+          "autoColor": "49301d",
+          "audio": {
+            "scene": "pearl-palace",
+            "clips": 12,
+            "music": true,
+            "effects": true
+          }
+        },
+        "round": {
+          "state": {
+            "kind": "spinning",
+            "requestId": "salon-spin-64a1a279f315a7baa960003d3f868ccc"
+          }
+        },
+        "after": {
+          "page": "game",
+          "mode": "pearl-palace",
+          "kind": "idle",
+          "balance": 26965,
+          "bet": 80,
+          "auto": false,
+          "sound": true,
+          "played": 1,
+          "autoText": "AUTO OFF",
+          "autoColor": "49301d",
+          "audio": {
+            "scene": "pearl-palace",
+            "clips": 12,
+            "music": true,
+            "effects": true
+          }
+        },
+        "settlement": {
+          "transactions": [
+            {
+              "id": "tx-30f73e48d57aff61ce2a3f4d31ec22df",
+              "at": "2026-09-30T03:58:05.753Z",
+              "type": "spin-win",
+              "amount": 45,
+              "balance": 26965,
+              "reference": "salon-spin-64a1a279f315a7baa960003d3f868ccc"
+            },
+            {
+              "id": "tx-9819846b463dacca9d26ce416c8a40bf",
+              "at": "2026-09-30T03:58:05.749Z",
+              "type": "spin-bet",
+              "amount": -80,
+              "balance": 26920,
+              "reference": "salon-spin-64a1a279f315a7baa960003d3f868ccc"
+            }
+          ],
+          "biggest": 45,
+          "total": 45
+        },
+        "accounting": {
+          "win": 45,
+          "expected": 26965,
+          "actual": 26965,
+          "pass": true
+        }
+      }
+    ],
+    "errors": []
+  }
+}

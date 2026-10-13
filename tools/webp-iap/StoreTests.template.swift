@@ -29,6 +29,16 @@ import WebKit
           return paths.length;
         """, arguments: ["paths": paths], in: nil, contentWorld: .page) as! Int
         XCTAssertEqual(loaded, paths.count)
+        if __ISOLATE__ {
+            let modulesLoaded = try await view.callAsyncJavaScript("""
+              for (const [src, mime] of [['src/app.mjs', 'text/javascript'], ['src/local-iap.mjs', 'text/javascript'], ['manifest.webmanifest', 'application/manifest+json']]) {
+                const response = await fetch(src);
+                if (!response.ok || !response.headers.get('content-type')?.includes(mime)) throw Error('Module HTTP/MIME '+src);
+              }
+              return true;
+            """, arguments: [:], in: nil, contentWorld: .page) as! Bool
+            XCTAssertTrue(modulesLoaded)
+        }
     }
     func testNativeVerificationRecoveryAndAccountIsolation() async throws {
         let session = try SKTestSession(configurationFileNamed: "__NAME__")

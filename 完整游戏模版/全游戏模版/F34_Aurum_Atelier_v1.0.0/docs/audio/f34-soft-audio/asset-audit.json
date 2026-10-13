@@ -1,0 +1,1344 @@
+{
+  "date": "2026-10-08",
+  "revision": "rounded-festive-20261008",
+  "scope": "Offline WAV measurements, comparison with exact pre-change backup. Spectral percentages are normalized to each clip\u2019s energy; they are not subjective listening or real-device acceptance.",
+  "clips": [
+    {
+      "name": "coin-collect",
+      "seconds": 1.13,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.649993896484375,
+        "rms": 0.16036498996257353,
+        "bands": {
+          "presence2to5k": 0.011969506472542028,
+          "high5kPlus": 0.0020439435614344695
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.55999755859375,
+        "rms": 0.12628562522683895,
+        "bands": {
+          "presence2to5k": 0.005939922636398839,
+          "high5kPlus": 0.0004797353112764285
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.042954553007547,
+        "high5kPlus": -6.294672134222877
+      },
+      "sha256": "9269b5052f4ae5b259af3a0590ea32bd8811f51ba791929a55b2c7001f683047"
+    },
+    {
+      "name": "feature",
+      "seconds": 1.33,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.649993896484375,
+        "rms": 0.16405147909447534,
+        "bands": {
+          "presence2to5k": 0.01010469261525177,
+          "high5kPlus": 0.002048122991224813
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.55999755859375,
+        "rms": 0.1301283700457893,
+        "bands": {
+          "presence2to5k": 0.004700700101020883,
+          "high5kPlus": 0.00041974246090027505
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.3236056220460135,
+        "high5kPlus": -6.883731283677768
+      },
+      "sha256": "646f6ebb7a8b66857e93c56a3927bb770783945dbbaf868c004da07d3b8b4379"
+    },
+    {
+      "name": "music-golden-hour",
+      "seconds": 30.96775,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": true,
+      "before": {
+        "peak": 0.639984130859375,
+        "rms": 0.15697621986334886,
+        "bands": {
+          "presence2to5k": 0.004955516140249117,
+          "high5kPlus": 0.0009295672964657953
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.569976806640625,
+        "rms": 0.12829424182563884,
+        "bands": {
+          "presence2to5k": 0.00177314233720384,
+          "high5kPlus": 0.00012314229229067067
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.46345295434799,
+        "high5kPlus": -8.778736024897327
+      },
+      "sha256": "0edb8d519709f206bfbfe61f897785db9d72ee46862e7fb3b03e906b75e7926c"
+    },
+    {
+      "name": "music-jade-treasury",
+      "seconds": 32.542375,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": true,
+      "before": {
+        "peak": 0.639984130859375,
+        "rms": 0.16397615894200349,
+        "bands": {
+          "presence2to5k": 0.03670801031632185,
+          "high5kPlus": 0.003560220984387714
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.569976806640625,
+        "rms": 0.13083728006840273,
+        "bands": {
+          "presence2to5k": 0.01832055786865508,
+          "high5kPlus": 0.0003099343619221956
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.018221511033634,
+        "high5kPlus": -10.602072272109986
+      },
+      "sha256": "255ce0c957a34735f8a94ab1fc42c52b9ddebe42bd4eea54f94169eb3ea07e37"
+    },
+    {
+      "name": "music-pearl-palace",
+      "seconds": 33.68421875,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": true,
+      "before": {
+        "peak": 0.639984130859375,
+        "rms": 0.1931562964101541,
+        "bands": {
+          "presence2to5k": 0.04979513059182579,
+          "high5kPlus": 0.00733487636849024
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.569976806640625,
+        "rms": 0.14922644896970574,
+        "bands": {
+          "presence2to5k": 0.023303650408924913,
+          "high5kPlus": 0.0019909062336789084
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.297629191070734,
+        "high5kPlus": -5.663419916703627
+      },
+      "sha256": "2531a15bea1756d2a6f3238afed679de53f8a9d201d3d838cfe271b7f349cc1f"
+    },
+    {
+      "name": "music-ruby-revel",
+      "seconds": 30.4761875,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": true,
+      "before": {
+        "peak": 0.639984130859375,
+        "rms": 0.18867752892732167,
+        "bands": {
+          "presence2to5k": 0.007733171822608719,
+          "high5kPlus": 0.0011035196306302775
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.569976806640625,
+        "rms": 0.15470228518202894,
+        "bands": {
+          "presence2to5k": 0.0031018576812049223,
+          "high5kPlus": 0.0002115701995622266
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.9673579210825816,
+        "high5kPlus": -7.173255675760682
+      },
+      "sha256": "289acea8d2ad61c26dc8f3b7eaec69a7286c3161ea5b8afa84af02438431014b"
+    },
+    {
+      "name": "music-salon",
+      "seconds": 33.1034375,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": true,
+      "before": {
+        "peak": 0.639984130859375,
+        "rms": 0.1585958789160774,
+        "bands": {
+          "presence2to5k": 0.008511570567979252,
+          "high5kPlus": 0.0012074149997451855
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.569976806640625,
+        "rms": 0.12806875800793172,
+        "bands": {
+          "presence2to5k": 0.003414148581466754,
+          "high5kPlus": 0.0002619457315130802
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.9672728676308395,
+        "high5kPlus": -6.636452409232433
+      },
+      "sha256": "d538cca6d5fd1c6dcb1a068534f0918261fc6d8f583080e94d1f1df4c2dc816a"
+    },
+    {
+      "name": "reel-roll",
+      "seconds": 1.2,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": true,
+      "before": {
+        "peak": 0.269989013671875,
+        "rms": 0.06887031072382743,
+        "bands": {
+          "presence2to5k": 0.028433403594512706,
+          "high5kPlus": 0.012325830299176943
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.269989013671875,
+        "rms": 0.06602975998185932,
+        "bands": {
+          "presence2to5k": 0.013357496647942281,
+          "high5kPlus": 0.0024063008079012664
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.2810377575609717,
+        "high5kPlus": -7.094662672404023
+      },
+      "sha256": "8e9d6d722faaac582951a2359c29d92c7c1716392c2047e2970229134e789c89"
+    },
+    {
+      "name": "reel-start",
+      "seconds": 0.48,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.589996337890625,
+        "rms": 0.21487879439026983,
+        "bands": {
+          "presence2to5k": 0.013345835835317095,
+          "high5kPlus": 0.0017290565654422387
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.529998779296875,
+        "rms": 0.18484527933370723,
+        "bands": {
+          "presence2to5k": 0.005465263695453338,
+          "high5kPlus": 0.0005294829019178739
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.877346571504128,
+        "high5kPlus": -5.139572608728144
+      },
+      "sha256": "c20591a91fade3fa42801e9a2cdc04f2490ed560ebdff0d8df67d7cf61f6ca4e"
+    },
+    {
+      "name": "reel-stop",
+      "seconds": 0.27,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.54998779296875,
+        "rms": 0.17442356264648237,
+        "bands": {
+          "presence2to5k": 0.0021321441766972075,
+          "high5kPlus": 0.00017486351287648963
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.47998046875,
+        "rms": 0.1484637201812681,
+        "bands": {
+          "presence2to5k": 0.000313895283686999,
+          "high5kPlus": 2.308368670991296e-05
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -8.320317781418805,
+        "high5kPlus": -8.793940273255284
+      },
+      "sha256": "02d859825a7721b368224373086b0d6598c66d6b678245bd19bf783693fe9473"
+    },
+    {
+      "name": "ui-touch",
+      "seconds": 0.19,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.47998046875,
+        "rms": 0.14384265382675335,
+        "bands": {
+          "presence2to5k": 0.01929410563151671,
+          "high5kPlus": 0.00032775355824163994
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.399993896484375,
+        "rms": 0.10840506671863068,
+        "bands": {
+          "presence2to5k": 0.0005773004841856894,
+          "high5kPlus": 8.412569418862952e-06
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -15.24022730129094,
+        "high5kPlus": -15.906187543268683
+      },
+      "sha256": "6b859ddb1bbe3742866fa5e9554f73c86a5c573be76065b2691ee892c4f063de"
+    },
+    {
+      "name": "win-epic-jade-treasury",
+      "seconds": 5.62,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.17892403651644734,
+        "bands": {
+          "presence2to5k": 0.021676561013992363,
+          "high5kPlus": 0.0024971242141010475
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.15311768963835617,
+        "bands": {
+          "presence2to5k": 0.005547493040724122,
+          "high5kPlus": 0.000495959485461786
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -5.918936164335337,
+        "high5kPlus": -7.019939451720885
+      },
+      "sha256": "4cd4ee1aaedcf4e990427c43598cfa1861d907dd2393b7f7d6f639c224a07887"
+    },
+    {
+      "name": "win-epic-pearl-palace",
+      "seconds": 5.62,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.19895645835982503,
+        "bands": {
+          "presence2to5k": 0.07271453766765397,
+          "high5kPlus": 0.011964415563639629
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.1611934948356352,
+        "bands": {
+          "presence2to5k": 0.025619644566457475,
+          "high5kPlus": 0.0033920876673851174
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.53048146864452,
+        "high5kPlus": -5.47424421174818
+      },
+      "sha256": "855edb9081c6837678146a2f7836b659d80ce4a0d5e97691aaae9f9a2f73feac"
+    },
+    {
+      "name": "win-epic-resolve-jade-treasury",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.16962612162100646,
+        "bands": {
+          "presence2to5k": 0.05451417038311299,
+          "high5kPlus": 0.0076738503828570675
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.12908698454312545,
+        "bands": {
+          "presence2to5k": 0.026781256200816148,
+          "high5kPlus": 0.0021994113552115725
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.086784630594805,
+        "high5kPlus": -5.427068645832401
+      },
+      "sha256": "606cd4fdb0b54bf6458c3f38ed3bb970cb862f072fb4e09e05d51e4e6aebe35e"
+    },
+    {
+      "name": "win-epic-resolve-pearl-palace",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.15387311308615367,
+        "bands": {
+          "presence2to5k": 0.08381648885754105,
+          "high5kPlus": 0.01308522233181135
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.11923306820253285,
+        "bands": {
+          "presence2to5k": 0.042681361360299694,
+          "high5kPlus": 0.004066724037821146
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -2.9309120073631414,
+        "high5kPlus": -5.07536403371475
+      },
+      "sha256": "1473af3e3808b0a1debba411d55053d361a6a855b52b71b531d3007681d24662"
+    },
+    {
+      "name": "win-epic-resolve-ruby-revel",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.12570358356833855,
+        "bands": {
+          "presence2to5k": 0.03424845622104126,
+          "high5kPlus": 0.005141261452597571
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.10467601327670374,
+        "bands": {
+          "presence2to5k": 0.015564546586073666,
+          "high5kPlus": 0.0014896507529831974
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.425045263848445,
+        "high5kPlus": -5.37985229474216
+      },
+      "sha256": "2ac634a901f864eb418d69c3e2d92cba2c46c014341bea28b8d33dc4bfe68a4b"
+    },
+    {
+      "name": "win-epic-resolve",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.17282633428992075,
+        "bands": {
+          "presence2to5k": 0.023006487863591243,
+          "high5kPlus": 0.0022676099456445283
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.13919322661565628,
+        "bands": {
+          "presence2to5k": 0.010428043353917175,
+          "high5kPlus": 0.0006646321690442726
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.4364749692409147,
+        "high5kPlus": -5.329869952629643
+      },
+      "sha256": "a3ea1750d5bea9be1b4134ac3bc0f299dbd6e2b35b46e749e04f385bfb62ee6a"
+    },
+    {
+      "name": "win-epic-ruby-revel",
+      "seconds": 5.62,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.18974364422163276,
+        "bands": {
+          "presence2to5k": 0.014449224430518054,
+          "high5kPlus": 0.0011006930707940401
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.1632245819618851,
+        "bands": {
+          "presence2to5k": 0.005259409670261152,
+          "high5kPlus": 0.00024735816463380375
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.389075361868207,
+        "high5kPlus": -6.483399826248513
+      },
+      "sha256": "3581cde4f9b5a14d87f17ea7c483bb3a3872f99bb24ff99c023a0cb7853ac727"
+    },
+    {
+      "name": "win-epic",
+      "seconds": 5.62,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.21019528011170588,
+        "bands": {
+          "presence2to5k": 0.004798677945371265,
+          "high5kPlus": 0.0005598570598668753
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.17537837982877405,
+        "bands": {
+          "presence2to5k": 0.0017771165318277928,
+          "high5kPlus": 9.966125799949623e-05
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.31405697051331,
+        "high5kPlus": -7.4955079422447755
+      },
+      "sha256": "a25c5decd0c352fe03b8c466ca34c5742989f1dbd47a09ce83d9aebfdb0dbd66"
+    },
+    {
+      "name": "win-grand-jade-treasury",
+      "seconds": 3.42,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.18588858474887113,
+        "bands": {
+          "presence2to5k": 0.015445670052974272,
+          "high5kPlus": 0.002056536875463354
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.15480650345907096,
+        "bands": {
+          "presence2to5k": 0.005561664845410147,
+          "high5kPlus": 0.00043783546834538415
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.436019392432323,
+        "high5kPlus": -6.7182556103337845
+      },
+      "sha256": "901c3a4ea366ac5ad7cddf412d02c7a7c4c0e5f2af0c9c6d7a874bf1cf74e5c0"
+    },
+    {
+      "name": "win-grand-pearl-palace",
+      "seconds": 3.42,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.17669259352527353,
+        "bands": {
+          "presence2to5k": 0.05936702151953784,
+          "high5kPlus": 0.009658594739757463
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.1471295985878269,
+        "bands": {
+          "presence2to5k": 0.028920923717884548,
+          "high5kPlus": 0.0028139725502668335
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.123331006846372,
+        "high5kPlus": -5.355940874358507
+      },
+      "sha256": "29be90e3339a6ed1630fcea4cddceb2b3570e926ad569c97b2460578e63aa27d"
+    },
+    {
+      "name": "win-grand-resolve-jade-treasury",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.16494250830729812,
+        "bands": {
+          "presence2to5k": 0.0527020745463996,
+          "high5kPlus": 0.00745076058425261
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.1274501686458984,
+        "bands": {
+          "presence2to5k": 0.02582186932486049,
+          "high5kPlus": 0.002123632480278921
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.098400319810073,
+        "high5kPlus": -5.451212492955553
+      },
+      "sha256": "1f5e963d32133d558b6fb4c31a4acc99887a1dafc60f2794ddb122b73cec7810"
+    },
+    {
+      "name": "win-grand-resolve-pearl-palace",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.15248885031860265,
+        "bands": {
+          "presence2to5k": 0.0820793637546361,
+          "high5kPlus": 0.013249816674229309
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.11883229945642342,
+        "bands": {
+          "presence2to5k": 0.041895914693586854,
+          "high5kPlus": 0.004143119219281576
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -2.9206230470400527,
+        "high5kPlus": -5.048824389637307
+      },
+      "sha256": "fa1efdc9e20c7ad8307243ba65691d379d69fa2794596a202b7986fd22ea7c86"
+    },
+    {
+      "name": "win-grand-resolve-ruby-revel",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.11968674325158056,
+        "bands": {
+          "presence2to5k": 0.034747815456561956,
+          "high5kPlus": 0.005052681947768675
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.10110272779721326,
+        "bands": {
+          "presence2to5k": 0.015649840227142192,
+          "high5kPlus": 0.0014614197024849162
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.4641759824494884,
+        "high5kPlus": -5.3874700337740045
+      },
+      "sha256": "ae64782d4e712d298e8a4f4ba2004ec01bf8ff71bf65f37d436906c567213bbf"
+    },
+    {
+      "name": "win-grand-resolve",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.16164179940585963,
+        "bands": {
+          "presence2to5k": 0.022347974246619978,
+          "high5kPlus": 0.002215380024111205
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.13301494189351226,
+        "bands": {
+          "presence2to5k": 0.01009682077730099,
+          "high5kPlus": 0.0006468981306802203
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.4505351479229813,
+        "high5kPlus": -5.346123392218098
+      },
+      "sha256": "d5d8c8bfa15d9161dcbfa799a5a0cee34f27679f4cd98a66304dd670fc8f4bcc"
+    },
+    {
+      "name": "win-grand-ruby-revel",
+      "seconds": 3.42,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.18702442176992007,
+        "bands": {
+          "presence2to5k": 0.013409250235194157,
+          "high5kPlus": 0.0008658120551717283
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.15912516161799764,
+        "bands": {
+          "presence2to5k": 0.005009149127775779,
+          "high5kPlus": 0.0002340277536086074
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.276405340917501,
+        "high5kPlus": -5.681562645128898
+      },
+      "sha256": "c4679968e58a6a7a55c06af66b437ef927c7f7a3d41293ef8c66154df39684f9"
+    },
+    {
+      "name": "win-grand",
+      "seconds": 3.42,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.1982683243478396,
+        "bands": {
+          "presence2to5k": 0.00430060562393898,
+          "high5kPlus": 0.00041668562057835923
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.16671085165444371,
+        "bands": {
+          "presence2to5k": 0.0015673776287212218,
+          "high5kPlus": 9.406220125136136e-05
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.383559747492838,
+        "high5kPlus": -6.46393375705159
+      },
+      "sha256": "4a4faa55777983bbc3cb8c96381d4b25f07584eb4e5d0236e3dad5fe0b1c8c40"
+    },
+    {
+      "name": "win-mega-jade-treasury",
+      "seconds": 5.02,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.178947477215485,
+        "bands": {
+          "presence2to5k": 0.021776525062328838,
+          "high5kPlus": 0.0021918849103877364
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.15018241341300426,
+        "bands": {
+          "presence2to5k": 0.005455870773590433,
+          "high5kPlus": 0.00045801457373492624
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -6.011245042516774,
+        "high5kPlus": -6.799384496486585
+      },
+      "sha256": "1f2f4dc80ee2f225d0c3707b1bccd20bcb385fe12f886030be8a1d896faf758f"
+    },
+    {
+      "name": "win-mega-pearl-palace",
+      "seconds": 5.02,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.17659861641129693,
+        "bands": {
+          "presence2to5k": 0.08076613405393414,
+          "high5kPlus": 0.011033122708225212
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.15234631729121387,
+        "bands": {
+          "presence2to5k": 0.030319651800860346,
+          "high5kPlus": 0.003132203726038751
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.255050860373114,
+        "high5kPlus": -5.468484464847205
+      },
+      "sha256": "ca9b9baddd0929ffd9b86b0edd12847eb08c40da807753bfeccb47753a2942fb"
+    },
+    {
+      "name": "win-mega-resolve-jade-treasury",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.1671015370240575,
+        "bands": {
+          "presence2to5k": 0.0540642630415778,
+          "high5kPlus": 0.007588963482050772
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.12726161096787875,
+        "bands": {
+          "presence2to5k": 0.026512226183453884,
+          "high5kPlus": 0.0021699490109817637
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.0946409124810104,
+        "high5kPlus": -5.437329340091248
+      },
+      "sha256": "5e2395621439dc7e6786228e3bcf4c9e9ce7f34b0ccac2f762b1d21eeec93f73"
+    },
+    {
+      "name": "win-mega-resolve-pearl-palace",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.15657590849939965,
+        "bands": {
+          "presence2to5k": 0.08349257415098567,
+          "high5kPlus": 0.013144402983931816
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.12224553070267545,
+        "bands": {
+          "presence2to5k": 0.042520095596450674,
+          "high5kPlus": 0.004089998460437998
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -2.930536186872008,
+        "high5kPlus": -5.070177207949453
+      },
+      "sha256": "5293de73bc65a479a4d958c2d045bb64d88555aea11d71f2b0b4a78a4aff1223"
+    },
+    {
+      "name": "win-mega-resolve-ruby-revel",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.12218033002510328,
+        "bands": {
+          "presence2to5k": 0.034451771884485914,
+          "high5kPlus": 0.005105425644160862
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.10474734979343595,
+        "bands": {
+          "presence2to5k": 0.015598996211661028,
+          "high5kPlus": 0.0014799333545968813
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.441149103591865,
+        "high5kPlus": -5.377897970939861
+      },
+      "sha256": "0faa37940ee8ecf29e8d9e7cf622f09d62ddb2772d5e8e3e2b746bfb85161dda"
+    },
+    {
+      "name": "win-mega-resolve",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.17222468672670022,
+        "bands": {
+          "presence2to5k": 0.022747867217529485,
+          "high5kPlus": 0.0022410478250244887
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.14000241399676555,
+        "bands": {
+          "presence2to5k": 0.010315665658858553,
+          "high5kPlus": 0.000655631287593438
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.434434267788609,
+        "high5kPlus": -5.337914541834748
+      },
+      "sha256": "6c53e629555930f675ecc498c972168916fbcaa49091c185d60b1bb8b4610066"
+    },
+    {
+      "name": "win-mega-ruby-revel",
+      "seconds": 5.02,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.18882510945930128,
+        "bands": {
+          "presence2to5k": 0.019834319557776675,
+          "high5kPlus": 0.0010883618230069533
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.16129241831198407,
+        "bands": {
+          "presence2to5k": 0.0049608489841705405,
+          "high5kPlus": 0.00023868243897826613
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -6.018612993773827,
+        "high5kPlus": -6.589528323816046
+      },
+      "sha256": "836b9cd7e31bbc945baa96f588bf60038c94cbb53e6327ac76de3e11e151153a"
+    },
+    {
+      "name": "win-mega",
+      "seconds": 5.02,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.20613926188056148,
+        "bands": {
+          "presence2to5k": 0.004783496948015092,
+          "high5kPlus": 0.0005855985099241499
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.17322037774198004,
+        "bands": {
+          "presence2to5k": 0.0017110637321429425,
+          "high5kPlus": 9.728763648254907e-05
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.464793151609706,
+        "high5kPlus": -7.795423102554495
+      },
+      "sha256": "4488c75300c4479daf54bdf97df692678e1b83e4846e4d907b92689b644c5a94"
+    },
+    {
+      "name": "win-normal",
+      "seconds": 1.31,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.649993896484375,
+        "rms": 0.15044272775389617,
+        "bands": {
+          "presence2to5k": 0.00654890657346286,
+          "high5kPlus": 0.000500832705757754
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.55999755859375,
+        "rms": 0.11894685116398791,
+        "bands": {
+          "presence2to5k": 0.002380958631583027,
+          "high5kPlus": 0.0001364992487128427
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.394169451001438,
+        "high5kPlus": -5.64562420715046
+      },
+      "sha256": "867362d4c8689450b0160d033697a00c915806f98ecc0e7e0a0ac6add2b2234b"
+    },
+    {
+      "name": "win-super-jade-treasury",
+      "seconds": 4.32,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.176221637938749,
+        "bands": {
+          "presence2to5k": 0.021780240435394782,
+          "high5kPlus": 0.002601141981372505
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.1532472933380355,
+        "bands": {
+          "presence2to5k": 0.00546140025798409,
+          "high5kPlus": 0.0005300154493068889
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -6.007586631841063,
+        "high5kPlus": -6.9087552953730516
+      },
+      "sha256": "e566196d34f2c00f02ec4049b7685b24a157dec803c2c033a7b5efd5467f9b1e"
+    },
+    {
+      "name": "win-super-pearl-palace",
+      "seconds": 4.32,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.17707069069668988,
+        "bands": {
+          "presence2to5k": 0.07967997431079124,
+          "high5kPlus": 0.012538351087076894
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.15006044448741254,
+        "bands": {
+          "presence2to5k": 0.02937139167863417,
+          "high5kPlus": 0.0035905961631539406
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.334246605959703,
+        "high5kPlus": -5.430738639070382
+      },
+      "sha256": "066096e1e165c8f6bc536bbfc901755729f5c06f90c0baa35398a526af105c81"
+    },
+    {
+      "name": "win-super-resolve-jade-treasury",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.16421836056549677,
+        "bands": {
+          "presence2to5k": 0.053381045930030284,
+          "high5kPlus": 0.007559251608930053
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.12755929911780567,
+        "bands": {
+          "presence2to5k": 0.026198792310975102,
+          "high5kPlus": 0.0021608944880015272
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.0910580689920417,
+        "high5kPlus": -5.438452393285803
+      },
+      "sha256": "b3c2d6fc64adc0d4d7a4ea82b25f6f5365ff0b27e47f7f646eb734817025d345"
+    },
+    {
+      "name": "win-super-resolve-pearl-palace",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.1540068309330478,
+        "bands": {
+          "presence2to5k": 0.08294652563666767,
+          "high5kPlus": 0.013189097366422875
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.11958775137480913,
+        "bands": {
+          "presence2to5k": 0.04229485704344862,
+          "high5kPlus": 0.004112686476987546
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -2.925106381580421,
+        "high5kPlus": -5.060894712410272
+      },
+      "sha256": "7b1ff0551ee070d9689613f9d79f6905a16c28fa750d9c89f39a872d9a0d0055"
+    },
+    {
+      "name": "win-super-resolve-ruby-revel",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.11715453987828715,
+        "bands": {
+          "presence2to5k": 0.034662327701786684,
+          "high5kPlus": 0.005063711255166021
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.10156260753870087,
+        "bands": {
+          "presence2to5k": 0.015666170086743016,
+          "high5kPlus": 0.001465565511333171
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.4489488647299806,
+        "high5kPlus": -5.384636968771201
+      },
+      "sha256": "2117d85bd067d0240205f624513769e44ea12d04e285c841d6db90b5e238d417"
+    },
+    {
+      "name": "win-super-resolve",
+      "seconds": 2.92,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.709991455078125,
+        "rms": 0.17156372950787388,
+        "bands": {
+          "presence2to5k": 0.022784037468571123,
+          "high5kPlus": 0.0022191414700019696
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.639984130859375,
+        "rms": 0.14111162735552163,
+        "bands": {
+          "presence2to5k": 0.01029572316000739,
+          "high5kPlus": 0.0006488723635387334
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -3.449738297778209,
+        "high5kPlus": -5.340257120456981
+      },
+      "sha256": "c9351688422372d2add6b08b3ac8368991d06dda0aae91ffcdad1a30846c7492"
+    },
+    {
+      "name": "win-super-ruby-revel",
+      "seconds": 4.32,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.1866346092785764,
+        "bands": {
+          "presence2to5k": 0.024209103280782164,
+          "high5kPlus": 0.0010969928395969523
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.1545357152223459,
+        "bands": {
+          "presence2to5k": 0.005968824254503393,
+          "high5kPlus": 0.0002319887945431754
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -6.08089911466022,
+        "high5kPlus": -6.747367845840655
+      },
+      "sha256": "6a808453e02da10a3cc9533f3fdc35c73933f3a67320ef3b2cf3d6e801d49d4e"
+    },
+    {
+      "name": "win-super",
+      "seconds": 4.32,
+      "uuidUnchanged": true,
+      "formatUnchanged": true,
+      "loop": false,
+      "before": {
+        "peak": 0.719970703125,
+        "rms": 0.20815417168151037,
+        "bands": {
+          "presence2to5k": 0.004912229138102845,
+          "high5kPlus": 0.0006162125505243522
+        },
+        "seamDelta": 0.0
+      },
+      "after": {
+        "peak": 0.649993896484375,
+        "rms": 0.17458233310750113,
+        "bands": {
+          "presence2to5k": 0.001760027277680309,
+          "high5kPlus": 0.0001000627797389786
+        },
+        "seamDelta": 0.0
+      },
+      "normalizedBandChangeDb": {
+        "presence2to5k": -4.4575921815198845,
+        "high5kPlus": -7.894579760398451
+      },
+      "sha256": "e0c615512b66e69c39c06172c5b66a7b5a43aa93e6238912b10280c2d52c05ea"
+    }
+  ],
+  "summary": {
+    "clips": 44,
+    "bgmPresenceMedianDb": -3.9672728676308395,
+    "bgmHighMedianDb": -7.173255675760682,
+    "awardPresenceMedianDb": -3.457355565186235,
+    "awardHighMedianDb": -5.437890866688525,
+    "peakMaximum": 0.649993896484375
+  },
+  "build": {
+    "audioCount": 44,
+    "allByteIdenticalToCurrentSources": true,
+    "creator": "3.8.8",
+    "typecheckPassed": true,
+    "cliExit": 36,
+    "completionLog": "build Task (web-mobile) Finished in (9 s)",
+    "scope": "Build completion and updated audio bytes checked; runtime verification tracked separately."
+  }
+}

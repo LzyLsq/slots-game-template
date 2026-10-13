@@ -1,0 +1,301 @@
+
+> f23-golden-lamp@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:contracts && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary
+
+
+> f23-golden-lamp@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-hour": {
+      "spins": 1000,
+      "wagered": 420000,
+      "won": 386844,
+      "wins": 474,
+      "features": 442,
+      "maxWin": 1987
+    },
+    "jade-treasury": {
+      "spins": 1000,
+      "wagered": 420000,
+      "won": 400249,
+      "wins": 539,
+      "features": 98,
+      "maxWin": 10080
+    },
+    "pearl-palace": {
+      "spins": 1000,
+      "wagered": 420000,
+      "won": 462708,
+      "wins": 785,
+      "features": 409,
+      "maxWin": 13181
+    },
+    "ruby-revel": {
+      "spins": 1000,
+      "wagered": 420000,
+      "won": 401311,
+      "wins": 950,
+      "features": 950,
+      "maxWin": 3127
+    }
+  }
+}
+
+> f23-golden-lamp@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f23-golden-lamp@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f23-golden-lamp@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 32 cabinet/viewport combinations: shared transform, essential bounds, symbol breathing room.
+
+> f23-golden-lamp@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1347,
+    featurePaidHits: 1347,
+    coreHits: 1347,
+    coreReturn: 0.019247619047619048,
+    hits: 1443,
+    sampleReturn: 0.9452,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 299,
+    featurePaidHits: 298,
+    coreHits: 1498,
+    coreReturn: 0.6766587301587301,
+    hits: 1590,
+    sampleReturn: 0.9817928571428571,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1275,
+    featurePaidHits: 1275,
+    coreHits: 2110,
+    coreReturn: 0.07105238095238095,
+    hits: 2399,
+    sampleReturn: 0.9224079365079365,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 2868,
+    featurePaidHits: 2477,
+    coreHits: 2868,
+    coreReturn: 0.17827857142857143,
+    hits: 2868,
+    sampleReturn: 0.9461873015873016,
+    layoutVariants: 1
+  }
+]
+
+> f23-golden-lamp@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+
+> f23-golden-lamp@1.0.0 test:contracts
+> node --import tsx tools/contract-test.ts
+
+PASS: 24 solvable routes; invalid moves/save normalization; charge caps; resume/undo; exactly-once album; account isolation; atomic local + remote spin charge; unchanged coin rewards; storage failure.
+
+> f23-golden-lamp@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f23-golden-lamp@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1347,
+    featurePaidHits: 1347,
+    coreHits: 1347,
+    coreReturn: 0.019247619047619048,
+    hits: 1443,
+    sampleReturn: 0.9452,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 299,
+    featurePaidHits: 298,
+    coreHits: 1498,
+    coreReturn: 0.6766587301587301,
+    hits: 1590,
+    sampleReturn: 0.9817928571428571,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1275,
+    featurePaidHits: 1275,
+    coreHits: 2110,
+    coreReturn: 0.07105238095238095,
+    hits: 2399,
+    sampleReturn: 0.9224079365079365,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 2868,
+    featurePaidHits: 2477,
+    coreHits: 2868,
+    coreReturn: 0.17827857142857143,
+    hits: 2868,
+    sampleReturn: 0.9461873015873016,
+    layoutVariants: 1
+  }
+]
+
+> f23-golden-lamp@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-hour',
+    core: 'independent-collector-grid',
+    feature: 'cash-collect',
+    samples: 6000,
+    features: 2735,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'jade-treasury',
+    core: 'independent-line-reels',
+    feature: 'sticky-reset',
+    samples: 6000,
+    features: 611,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'pearl-palace',
+    core: 'independent-any-reel-ways',
+    feature: 'sync-reels',
+    samples: 6000,
+    features: 2694,
+    motions: [ 'respin' ]
+  },
+  {
+    id: 'ruby-revel',
+    core: 'independent-scatter-groups',
+    feature: 'sticky-cascade',
+    samples: 6000,
+    features: 5731,
+    motions: [ 'drop' ]
+  }
+]
+
+> f23-golden-lamp@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-hour',
+    family: 'collector-grid',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1347,
+    featurePaidHits: 1347,
+    coreHits: 1347,
+    coreReturn: 0.019247619047619048,
+    hits: 1443,
+    sampleReturn: 0.9452,
+    layoutVariants: 1
+  },
+  {
+    id: 'jade-treasury',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 299,
+    featurePaidHits: 298,
+    coreHits: 1498,
+    coreReturn: 0.6766587301587301,
+    hits: 1590,
+    sampleReturn: 0.9817928571428571,
+    layoutVariants: 1
+  },
+  {
+    id: 'pearl-palace',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 1275,
+    featurePaidHits: 1275,
+    coreHits: 2110,
+    coreReturn: 0.07105238095238095,
+    hits: 2399,
+    sampleReturn: 0.9224079365079365,
+    layoutVariants: 1
+  },
+  {
+    id: 'ruby-revel',
+    family: 'scatter-groups',
+    columns: 6,
+    rows: 5,
+    spins: 3000,
+    features: 2868,
+    featurePaidHits: 2477,
+    coreHits: 2868,
+    coreReturn: 0.17827857142857143,
+    hits: 2868,
+    sampleReturn: 0.9461873015873016,
+    layoutVariants: 1
+  }
+]

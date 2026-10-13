@@ -1,0 +1,1468 @@
+{
+  "date": "2026-09-30",
+  "scope": "Cocos web-mobile automated preview, actual managed AudioSources and WebAudio output capture. Deterministic round fixtures exist only in isolated temporary test contexts.",
+  "cases": [
+    {
+      "id": "golden-hour",
+      "seed": 17,
+      "width": 390,
+      "height": 844,
+      "tier": 0,
+      "idleRms": 0.05828176533752282,
+      "awardRms": 0.05039917219629399,
+      "background": "music-golden-hour",
+      "awardScore": "win-grand",
+      "resolutionScore": "win-grand-resolve",
+      "reveal": "automatic",
+      "payout": 341,
+      "chargedBet": 80,
+      "mute": true,
+      "hideShow": true,
+      "cleanup": true,
+      "home": true,
+      "gestureDegrees": 10.944685785440736,
+      "errors": [],
+      "entrance": [
+        {
+          "elapsed": 0,
+          "veil": 0,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -290.6322115384615,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.24909999990463264,
+          "veil": 44.2483430465216,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -290.6322115384615,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.4832999997138978,
+          "veil": 147.07295782669192,
+          "titleAlpha": 56.221354317688586,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -290.6322115384615,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.7330999999046327,
+          "veil": 239.79187678085543,
+          "titleAlpha": 211.06352179125372,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -290.6322115384615,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.966799999713898,
+          "veil": 255,
+          "titleAlpha": 255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -290.6322115384615,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        }
+      ],
+      "seated": {
+        "elapsed": 3.3656999998092716,
+        "veil": 255,
+        "titleAlpha": 255,
+        "title": {
+          "position": {
+            "x": 0,
+            "y": 864
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "width": 800,
+          "height": 299.89701338825955
+        },
+        "countScale": {
+          "x": 1,
+          "y": 1
+        },
+        "plinthTop": -290.6322115384615,
+        "cabinetBetAlpha": 255,
+        "coins": [
+          {
+            "x": 244.40857141750752,
+            "y": -114.98404379051928,
+            "bottom": -137.24849766114494
+          },
+          {
+            "x": -254.27736841001047,
+            "y": -18.717157227612475,
+            "bottom": -45.278260090815024
+          },
+          {
+            "x": 264.2229657684446,
+            "y": 47.58297802627442,
+            "bottom": 16.35322192871344
+          },
+          {
+            "x": -314.0493548277035,
+            "y": 6.279787107296258,
+            "bottom": -12.060022012534073
+          },
+          {
+            "x": 362.7762790546866,
+            "y": -53.578478754241786,
+            "bottom": -75.84293262486744
+          },
+          {
+            "x": -184.72402596370515,
+            "y": -12.067783057439101,
+            "bottom": -38.62888592064165
+          },
+          {
+            "x": 195.92056679127222,
+            "y": 35.934101016088306,
+            "bottom": 4.70434491852733
+          },
+          {
+            "x": -244.54946767023796,
+            "y": 11.870645468515164,
+            "bottom": -6.469163651315167
+          },
+          {
+            "x": 255.66537633369506,
+            "y": 60.57740725212366,
+            "bottom": 38.312953381498005
+          }
+        ]
+      }
+    },
+    {
+      "id": "jade-treasury",
+      "seed": 13305,
+      "width": 390,
+      "height": 844,
+      "tier": 0,
+      "idleRms": 0.07895281530912773,
+      "awardRms": 0.07579789605224342,
+      "background": "music-jade-treasury",
+      "awardScore": "win-grand-jade-treasury",
+      "resolutionScore": "win-grand-resolve-jade-treasury",
+      "reveal": "automatic",
+      "payout": 105,
+      "chargedBet": 80,
+      "mute": true,
+      "hideShow": true,
+      "cleanup": true,
+      "home": true,
+      "gestureDegrees": 11.573618798749141,
+      "errors": [],
+      "entrance": [
+        {
+          "elapsed": 0,
+          "veil": 0,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -424.5360576923077,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.25039999961853027,
+          "veil": 44.57002651442295,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -424.5360576923077,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.4827999997138977,
+          "veil": 146.65376247960398,
+          "titleAlpha": 55.72397859537062,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -424.5360576923077,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.73339999961853,
+          "veil": 239.76954944778123,
+          "titleAlpha": 211.0130884058213,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -424.5360576923077,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.9827999997138974,
+          "veil": 255,
+          "titleAlpha": 255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -424.5360576923077,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        }
+      ],
+      "seated": {
+        "elapsed": 3.3825000000000016,
+        "veil": 255,
+        "titleAlpha": 255,
+        "title": {
+          "position": {
+            "x": 0,
+            "y": 864
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "width": 800,
+          "height": 299.89701338825955
+        },
+        "countScale": {
+          "x": 1,
+          "y": 1
+        },
+        "plinthTop": -424.5360576923077,
+        "cabinetBetAlpha": 255,
+        "coins": [
+          {
+            "x": 245.38311688311694,
+            "y": -119.525598166092,
+            "bottom": -141.79005203671767
+          },
+          {
+            "x": -255.2500000000001,
+            "y": -22.15815869174564,
+            "bottom": -48.71926155494819
+          },
+          {
+            "x": 265.19391634980997,
+            "y": 45.70485690723129,
+            "bottom": 14.475100809670312
+          },
+          {
+            "x": -315.0188172043012,
+            "y": 2.9774142552897445,
+            "bottom": -15.362394864540587
+          },
+          {
+            "x": 364.1046511627908,
+            "y": -59.30185394656654,
+            "bottom": -81.5663078171922
+          },
+          {
+            "x": -185.63311688311694,
+            "y": -14.685397886987005,
+            "bottom": -41.246500750189554
+          },
+          {
+            "x": 196.8319838056681,
+            "y": 34.9753681699992,
+            "bottom": 3.745612072438224
+          },
+          {
+            "x": -245.46292775665407,
+            "y": 9.311678923290458,
+            "bottom": -9.028130196539873
+          },
+          {
+            "x": 256.5806451612904,
+            "y": 59.49765465944543,
+            "bottom": 37.23320078881977
+          }
+        ]
+      }
+    },
+    {
+      "id": "pearl-palace",
+      "seed": 27,
+      "width": 390,
+      "height": 844,
+      "tier": 0,
+      "record": true,
+      "idleRms": 0.04902448167833346,
+      "awardRms": 0.06502231519394773,
+      "background": "music-pearl-palace",
+      "awardScore": "win-grand-pearl-palace",
+      "resolutionScore": "win-grand-resolve-pearl-palace",
+      "reveal": "automatic",
+      "payout": 87,
+      "chargedBet": 80,
+      "mute": true,
+      "hideShow": true,
+      "cleanup": true,
+      "home": true,
+      "gestureDegrees": 8.345642830136738,
+      "errors": [],
+      "entrance": [
+        {
+          "elapsed": 0,
+          "veil": 0,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -423.014423076923,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.24940000009536747,
+          "veil": 44.31974874178089,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -423.014423076923,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.5,
+          "veil": 154.76112347266536,
+          "titleAlpha": 65.6673113262948,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -423.014423076923,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.733300000190735,
+          "veil": 239.81418866799208,
+          "titleAlpha": 211.11393202677752,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -423.014423076923,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.9832000002861023,
+          "veil": 255,
+          "titleAlpha": 255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -423.014423076923,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        }
+      ],
+      "seated": {
+        "elapsed": 3.3506000003814718,
+        "veil": 255,
+        "titleAlpha": 255,
+        "title": {
+          "position": {
+            "x": 0,
+            "y": 864
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "width": 800,
+          "height": 299.89701338825955
+        },
+        "countScale": {
+          "x": 1,
+          "y": 1
+        },
+        "plinthTop": -423.014423076923,
+        "cabinetBetAlpha": 255,
+        "coins": [
+          {
+            "x": 243.53264071476934,
+            "y": -110.92794745427753,
+            "bottom": -133.1924013249032
+          },
+          {
+            "x": -253.40315791682207,
+            "y": -15.680436721767379,
+            "bottom": -42.24153958496993
+          },
+          {
+            "x": 263.3502661817429,
+            "y": 49.20194684159813,
+            "bottom": 17.972190744037153
+          },
+          {
+            "x": -313.1779928535545,
+            "y": 9.1966055261193,
+            "bottom": -9.143203593711032
+          },
+          {
+            "x": 361.58232561155825,
+            "y": -48.49366618020639,
+            "bottom": -70.75812005083205
+          },
+          {
+            "x": -183.9069264275688,
+            "y": -9.78017651697381,
+            "bottom": -36.34127938017636
+          },
+          {
+            "x": 195.10137653891388,
+            "y": 36.72383968682939,
+            "bottom": 5.494083589268417
+          },
+          {
+            "x": -243.7284410853804,
+            "y": 14.112257438478494,
+            "bottom": -4.227551681351837
+          },
+          {
+            "x": 254.8427240351196,
+            "y": 61.48367781960266,
+            "bottom": 39.219223948977
+          }
+        ]
+      }
+    },
+    {
+      "id": "ruby-revel",
+      "seed": 2,
+      "width": 390,
+      "height": 844,
+      "tier": 0,
+      "idleRms": 0.045412204546796,
+      "awardRms": 0.06666695039529863,
+      "background": "music-ruby-revel",
+      "awardScore": "win-grand-ruby-revel",
+      "resolutionScore": "win-grand-resolve-ruby-revel",
+      "reveal": "automatic",
+      "payout": 83,
+      "chargedBet": 80,
+      "mute": true,
+      "hideShow": true,
+      "cleanup": true,
+      "home": true,
+      "gestureDegrees": 11.579667754391664,
+      "errors": [],
+      "entrance": [
+        {
+          "elapsed": 0,
+          "veil": 0,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -302.8052884615384,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.2503999996185303,
+          "veil": 44.641636601432836,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -302.8052884615384,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.4835000000000002,
+          "veil": 147.0729580487327,
+          "titleAlpha": 56.22135458162806,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -302.8052884615384,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.7335000000000002,
+          "veil": 239.83648531892615,
+          "titleAlpha": 211.16431957932213,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -302.8052884615384,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.9668999996185306,
+          "veil": 255,
+          "titleAlpha": 255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 864
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 299.89701338825955
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -302.8052884615384,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        }
+      ],
+      "seated": {
+        "elapsed": 3.366099999904635,
+        "veil": 255,
+        "titleAlpha": 255,
+        "title": {
+          "position": {
+            "x": 0,
+            "y": 864
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "width": 800,
+          "height": 299.89701338825955
+        },
+        "countScale": {
+          "x": 1,
+          "y": 1
+        },
+        "plinthTop": -302.8052884615384,
+        "cabinetBetAlpha": 255,
+        "coins": [
+          {
+            "x": 244.43177488624286,
+            "y": -115.09183092590071,
+            "bottom": -137.35628479652638
+          },
+          {
+            "x": -254.30052631026837,
+            "y": -18.798326872974542,
+            "bottom": -45.35942973617709
+          },
+          {
+            "x": 264.24608364467855,
+            "y": 47.53919993006335,
+            "bottom": 16.30944383250237
+          },
+          {
+            "x": -314.0724372704825,
+            "y": 6.201855302759029,
+            "bottom": -12.137953817071303
+          },
+          {
+            "x": 362.8079069692037,
+            "y": -53.71395163832378,
+            "bottom": -75.97840550894944
+          },
+          {
+            "x": -184.74567099051055,
+            "y": -12.129224141646446,
+            "bottom": -38.690327004848996
+          },
+          {
+            "x": 195.9422672013041,
+            "y": 35.91225355630914,
+            "bottom": 4.682497458748163
+          },
+          {
+            "x": -244.57121672485277,
+            "y": 11.810510152080695,
+            "bottom": -6.529298967749636
+          },
+          {
+            "x": 255.68716845358585,
+            "y": 60.552572647141005,
+            "bottom": 38.28811877651535
+          }
+        ]
+      }
+    },
+    {
+      "id": "golden-hour",
+      "seed": 17,
+      "force": "super",
+      "width": 320,
+      "height": 568,
+      "tier": 1,
+      "idleRms": 0.0529427531656913,
+      "awardRms": 0.06748207571045908,
+      "background": "music-golden-hour",
+      "awardScore": "win-super",
+      "resolutionScore": "win-super-resolve",
+      "reveal": "early tap",
+      "payout": 2341,
+      "chargedBet": 80,
+      "mute": true,
+      "hideShow": true,
+      "cleanup": true,
+      "home": true,
+      "gestureDegrees": 12.160130198311764,
+      "errors": [],
+      "entrance": [
+        {
+          "elapsed": 0,
+          "veil": 0,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 795.7855361596011,
+            "height": 330
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -238.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.25010000038146973,
+          "veil": 44.57002668510044,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 795.7855361596011,
+            "height": 330
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -238.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.48350000000000004,
+          "veil": 147.11952175428655,
+          "titleAlpha": 56.27671613758041,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 795.7855361596011,
+            "height": 330
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -238.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.7332000002861024,
+          "veil": 239.79187678085543,
+          "titleAlpha": 211.06352179125372,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 795.7855361596011,
+            "height": 330
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -238.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.9668000001907351,
+          "veil": 255,
+          "titleAlpha": 255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 795.7855361596011,
+            "height": 330
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -238.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        }
+      ],
+      "seated": {
+        "elapsed": 1.7482000002861027,
+        "veil": 255,
+        "titleAlpha": 255,
+        "title": {
+          "position": {
+            "x": 0,
+            "y": 710
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "width": 795.7855361596011,
+          "height": 330
+        },
+        "countScale": {
+          "x": 1,
+          "y": 1
+        },
+        "plinthTop": -238.75,
+        "cabinetBetAlpha": 255,
+        "coins": [
+          {
+            "x": -140.59302327244782,
+            "y": 11.739761132151031,
+            "bottom": -6.6000479876793
+          },
+          {
+            "x": 150.57956711616353,
+            "y": -13.20002059902697,
+            "bottom": -35.46447446965263
+          },
+          {
+            "x": -160.6326315955112,
+            "y": -51.9200200152164,
+            "bottom": -78.48112287841894
+          },
+          {
+            "x": -220.70974912045253,
+            "y": -13.610606624169137,
+            "bottom": -31.950415743999468
+          },
+          {
+            "x": 234.8809302551802,
+            "y": -43.11465231050838,
+            "bottom": -65.37910618113405
+          },
+          {
+            "x": -156.6017490649858,
+            "y": -64.65338640951617,
+            "bottom": -82.99319552934651
+          }
+        ]
+      },
+      "fastExit": {
+        "initial": 0,
+        "reveal": 0.016599999904632567,
+        "fade": [
+          0.23989545347845864,
+          0.2316366641488908,
+          0.18505003814240217,
+          0.12891143158393079
+        ],
+        "exactPayout": 2341,
+        "cleanup": true
+      }
+    },
+    {
+      "id": "jade-treasury",
+      "seed": 1,
+      "force": "mega",
+      "width": 320,
+      "height": 568,
+      "tier": 2,
+      "idleRms": 0.07882231634059195,
+      "awardRms": 0.10655143031354809,
+      "background": "music-jade-treasury",
+      "awardScore": "win-mega-jade-treasury",
+      "resolutionScore": "win-mega-resolve-jade-treasury",
+      "reveal": "early tap",
+      "payout": 6003,
+      "chargedBet": 80,
+      "mute": true,
+      "hideShow": true,
+      "cleanup": true,
+      "home": true,
+      "gestureDegrees": 10.334445018451996,
+      "errors": [],
+      "entrance": [
+        {
+          "elapsed": 0,
+          "veil": 0,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 284.59152016546017
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -348.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.24940000009536747,
+          "veil": 44.35546880624258,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 284.59152016546017
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -348.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.48329999971389775,
+          "veil": 147.07295782669192,
+          "titleAlpha": 56.221354317688586,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 284.59152016546017
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -348.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.7334000000953675,
+          "veil": 239.85876651797537,
+          "titleAlpha": 211.21468395454255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 284.59152016546017
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -348.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.9831999998092653,
+          "veil": 255,
+          "titleAlpha": 255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 284.59152016546017
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -348.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        }
+      ],
+      "seated": {
+        "elapsed": 1.7482999997138982,
+        "veil": 255,
+        "titleAlpha": 255,
+        "title": {
+          "position": {
+            "x": 0,
+            "y": 710
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "width": 800,
+          "height": 284.59152016546017
+        },
+        "countScale": {
+          "x": 1,
+          "y": 1
+        },
+        "plinthTop": -348.75,
+        "cabinetBetAlpha": 255,
+        "coins": [
+          {
+            "x": -140.5988371926685,
+            "y": 11.748132882950642,
+            "bottom": -6.591676236879689
+          },
+          {
+            "x": 150.5853679487716,
+            "y": -13.185338740363122,
+            "bottom": -35.44979261098878
+          },
+          {
+            "x": -160.6384210360678,
+            "y": -51.901961595438706,
+            "bottom": -78.46306445864126
+          },
+          {
+            "x": -220.7155196967518,
+            "y": -13.593792819353098,
+            "bottom": -31.93360193918343
+          },
+          {
+            "x": 234.88883718668032,
+            "y": -43.089143279815005,
+            "bottom": -65.35359715044066
+          },
+          {
+            "x": -156.60718629623096,
+            "y": -64.636020124506,
+            "bottom": -82.97582924433634
+          }
+        ]
+      }
+    },
+    {
+      "id": "ruby-revel",
+      "seed": 3,
+      "force": "epic",
+      "width": 320,
+      "height": 568,
+      "tier": 3,
+      "idleRms": 0.045296851676491,
+      "awardRms": 0.08545527998194868,
+      "background": "music-ruby-revel",
+      "awardScore": "win-epic-ruby-revel",
+      "resolutionScore": "win-epic-resolve-ruby-revel",
+      "reveal": "early tap",
+      "payout": 12066,
+      "chargedBet": 80,
+      "mute": true,
+      "hideShow": true,
+      "cleanup": true,
+      "home": true,
+      "gestureDegrees": 11.858544156152192,
+      "errors": [],
+      "entrance": [
+        {
+          "elapsed": 0,
+          "veil": 0,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 301.53217568947906
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -248.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.24990000009536745,
+          "veil": 44.57002668510044,
+          "titleAlpha": 0,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 301.53217568947906
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -248.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.48319999980926515,
+          "veil": 147.0729578266919,
+          "titleAlpha": 56.221354317688586,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 301.53217568947906
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -248.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.7331999998092651,
+          "veil": 239.83648521264445,
+          "titleAlpha": 211.16431933911113,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 301.53217568947906
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -248.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        },
+        {
+          "elapsed": 0.9665000000000001,
+          "veil": 255,
+          "titleAlpha": 255,
+          "title": {
+            "position": {
+              "x": 0,
+              "y": 710
+            },
+            "scale": {
+              "x": 1,
+              "y": 1
+            },
+            "width": 800,
+            "height": 301.53217568947906
+          },
+          "countScale": {
+            "x": 1,
+            "y": 1
+          },
+          "plinthTop": -248.75,
+          "cabinetBetAlpha": 255,
+          "coins": []
+        }
+      ],
+      "seated": {
+        "elapsed": 1.7665999999046325,
+        "veil": 255,
+        "titleAlpha": 255,
+        "title": {
+          "position": {
+            "x": 0,
+            "y": 710
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "width": 800,
+          "height": 301.53217568947906
+        },
+        "countScale": {
+          "x": 1,
+          "y": 1
+        },
+        "plinthTop": -248.75,
+        "cabinetBetAlpha": 255,
+        "coins": [
+          {
+            "x": -141.6627906921298,
+            "y": 13.235893770338691,
+            "bottom": -5.10391534949164
+          },
+          {
+            "x": 151.64692640139427,
+            "y": -10.527038621070574,
+            "bottom": -32.79149249169623
+          },
+          {
+            "x": -161.69789473132082,
+            "y": -48.60999860828778,
+            "bottom": -75.17110147149033
+          },
+          {
+            "x": -221.7715412131347,
+            "y": -10.535779239179334,
+            "bottom": -28.875588359009665
+          },
+          {
+            "x": 236.33581394594768,
+            "y": -38.441108656821285,
+            "bottom": -60.70556252744694
+          },
+          {
+            "x": -157.60220531800852,
+            "y": -61.46576281734622,
+            "bottom": -79.80557193717655
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-13T04:30:40.981Z",
+  "sourceFingerprint": "a168bd6e766f1ccacc7e655a414e833ace9c2e51825ecb44089f1fb8388bfdfb",
+  "checks": [
+    "bet chooser exposes all five wagers",
+    "bet choice updates the engraved readout",
+    "bet choice closes dialog without changing wallet",
+    "reload during reels does not duplicate wallet credit",
+    "reload completes the original pending round once",
+    "rapid spin taps settle only one round",
+    "rapid mode taps leave one live scene",
+    "transition cleans up outgoing scene",
+    "reduced motion preference saved",
+    "reduced motion persists after reload",
+    "new local account starts independently",
+    "original account retains its own rounds",
+    "no workflow runtime errors"
+  ],
+  "errors": [],
+  "note": "Desktop Chrome browser automation; no physical device or real-money payment tested."
+}

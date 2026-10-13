@@ -149,7 +149,7 @@ export class AureliaApp extends Component {
     if(crossfade)tween(o).to(.38,{opacity:255},{easing:'sineInOut'}).call(complete).start();else complete();
   }
   private loadingProgress?: (value:number,caption:string)=>void;
-  private cabinetArt(id:GameId):string[]{return [id+'-motion-bg',id+'-animal'];}
+  private cabinetArt(id:GameId):string[]{return [id+'-tall'];}
   private async navigate(page:Page,config?:GameConfig):Promise<void>{
     if(this.state.kind!=='idle'&&this.page==='game'){this.toast('Finish the current round before leaving.');return;}
     if(this.busy)return;this.busy=true;this.auto=false;this.updateAuto();
@@ -225,7 +225,7 @@ export class AureliaApp extends Component {
     const exhibit=box(stage,'Canopy destination exhibit',0,0,870,910);
     const draw=()=>{
       const cfg=GAME_CONFIGS[this.selectedRoute];const piece=box(exhibit,'Destination '+cfg.id,0,0,870,910);
-      // The clean plate is fixed; its transparent mascot has independent joints.
+      // Original scenery and character stay fixed; only the local eyelids blink.
       const islandFoot=box(piece,'Destination grounded pivot',0,88-365,1,1);
       const island=this.art.image(islandFoot,'canopy-destinations',0,365,790,730,this.selectedRoute);
       this.edgeJewels(island,620,500,this.selectedRoute*.4);
@@ -371,20 +371,9 @@ export class AureliaApp extends Component {
   private gamePage():void{
     const cfg=this.config,g=CABINETS[cfg.id];
     this.plane=box(this.content!,'Cabinet-coordinate-plane',0,0,1024,2304);
-    this.art.image(this.plane,cfg.id+'-motion-bg',0,0,CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT);
-    // The background has its baked mascot removed. Animate only the extracted
-    // animal; the reels, frame and controls stay entirely stationary.
-    const mascotCrop:Record<GameId,readonly [number,number,number,number,number,number]>={
-      'golden-hour':[337,351,640,616,450,595],
-      'jade-treasury':[405,394,620,636,515,615],
-      'pearl-palace':[351,431,681,633,508,595],
-      'ruby-revel':[355,337,671,537,512,518],
-    };
-    const [left,top,right,bottom,footX,footY]=mascotCrop[cfg.id];
-    const pivot=box(this.plane,'Mascot foot pivot',footX*2-1024,2048-footY*2,1,1);
-    this.art.image(pivot,cfg.id+'-animal',(left+right-2*footX),2*footY-top-bottom,
-      (right-left)*2,(bottom-top)*2);
-    // Skinning acts on the alpha mascot only; the foot pivot and cabinet stay fixed.
+    // Keep the original integrated painting intact. Only registered eyelids
+    // animate: no cutout edges, skinning seams or moving ears/body fragments.
+    this.art.image(this.plane,cfg.id+'-tall',0,0,CABINET_ROOM_WIDTH,CABINET_ROOM_HEIGHT);
     // Ambient light must render over the opaque integrated environment plate.
     // It shares the cabinet's coordinate plane with the reels and controls.
     const ambient=box(this.plane,'Cabinet reflections',0,0,1024,2304).addComponent(SalonAtmosphere);
@@ -674,7 +663,7 @@ export class AureliaApp extends Component {
       const stage=box(this.root!,'Treasure celebration',0,0,1080,this.height);this.modal=stage;stage.addComponent(BlockInputEvents);
       // Keep the integrated scene visible, but do not let cabinet readouts and
       // controls show through the transparent celebration artwork.
-      const hidden=(this.plane?.children??[]).filter(n=>n.active&&!['Cabinet reflections','Reels',this.config.id+'-motion-bg','Mascot foot pivot'].includes(n.name));
+      const hidden=(this.plane?.children??[]).filter(n=>n.active&&!['Cabinet reflections','Reels',this.config.id+'-tall'].includes(n.name));
       for(const n of [this.hintLabel?.node,this.content?.getChildByName('Award hint material'),this.content?.getChildByName('Safe top tools')])if(n?.active)hidden.push(n);
       const fades=hidden.map(n=>({node:n,alpha:n.getComponent(UIOpacity)??n.addComponent(UIOpacity)}));
       const prior=fades.map(f=>f.alpha.opacity);

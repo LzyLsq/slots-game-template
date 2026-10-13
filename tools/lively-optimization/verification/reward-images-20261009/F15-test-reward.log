@@ -1,0 +1,6 @@
+
+> f15-honey-parade@1.0.0 test:reward
+> node --import tsx tools/reward-theme-test.ts && node tools/reward-stage-test.mjs
+
+PASS four distinct themes, six panel layouts, real source atlases, stage timings, collect isolation, local-only non-settling preview.
+PASS real reward renderer: 4 themes × 4 tiers; 20 small-win locale runs; exact amounts; two-step collect; no per-frame nodes; destruction resolves.

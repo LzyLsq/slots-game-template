@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-17",
+  "result": "pass",
+  "languages": 5,
+  "modes": 4,
+  "viewports": [
+    "320x568",
+    "390x844",
+    "430x932",
+    "768x1024"
+  ],
+  "cabinetConfigurations": 80,
+  "pageConfigurations": 100,
+  "checks": [
+    "control regions do not overlap",
+    "rules open in every mode and locale",
+    "no horizontal overflow",
+    "backup export/import round trip",
+    "12 consecutive pointer swipes",
+    "game entry progress bar",
+    "bet controls",
+    "no uncaught browser errors",
+    "no missing assets"
+  ],
+  "errors": [],
+  "missing": []
+}

@@ -1,0 +1,56 @@
+{
+  "samples": 60000,
+  "stake": 100,
+  "seed": 420042,
+  "method": "Natural settled base rounds including all free frames; newcomer gifts excluded. Seeded Monte Carlo, not certified RTP.",
+  "modes": [
+    {
+      "game": "tiger-treasury",
+      "meanReturn": 0.8986448333332789,
+      "confidence95": [
+        0.8784572011719803,
+        0.9188324654945775
+      ],
+      "hitRate": 0.30018333333333336,
+      "featureRate": 0.00635,
+      "superRate": 0.013833333333333333,
+      "maxObservedMultiplier": 77.28
+    },
+    {
+      "game": "koi-reserve",
+      "meanReturn": 0.946313833333358,
+      "confidence95": [
+        0.9262387181202602,
+        0.9663889485464557
+      ],
+      "hitRate": 0.5408666666666667,
+      "featureRate": 0.007483333333333333,
+      "superRate": 0.013516666666666666,
+      "maxObservedMultiplier": 56.4
+    },
+    {
+      "game": "crane-palace",
+      "meanReturn": 0.9080885000000313,
+      "confidence95": [
+        0.8905520191968739,
+        0.9256249808031887
+      ],
+      "hitRate": 0.4395833333333333,
+      "featureRate": 0.0133,
+      "superRate": 0.011666666666666667,
+      "maxObservedMultiplier": 58.69
+    },
+    {
+      "game": "tortoise-vault",
+      "meanReturn": 0.9220999999999665,
+      "confidence95": [
+        0.9005731897510868,
+        0.9436268102488462
+      ],
+      "hitRate": 0.1526,
+      "featureRate": 0.0057,
+      "superRate": 0.019033333333333333,
+      "maxObservedMultiplier": 64
+    }
+  ]
+}

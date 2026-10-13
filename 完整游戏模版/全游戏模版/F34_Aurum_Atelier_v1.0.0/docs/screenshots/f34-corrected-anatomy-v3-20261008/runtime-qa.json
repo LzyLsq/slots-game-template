@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-08",
+  "artVersion": "anatomy-v3",
+  "scope": "Isolated Cocos preview contexts, no spins, purchases or real-save edits. Continuous unmodified guardian idle cycles and reduced motion.",
+  "cases": [
+    {
+      "tag": "pearl-390x844",
+      "mode": "pearl-palace",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": false,
+      "sampleCount": 547,
+      "durationMs": 9609.699999809265,
+      "angleMin": 0,
+      "angleMax": 10.067629710535552,
+      "frameClock": {
+        "medianMs": 16.699999809265137,
+        "p95Ms": 17.90000009536743,
+        "maximumMs": 79.40000009536743
+      },
+      "shoulderBehindTorso": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "ruby-390x844",
+      "mode": "ruby-revel",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": false,
+      "sampleCount": 442,
+      "durationMs": 9628.599999904633,
+      "angleMin": 0,
+      "angleMax": 12.57832107159306,
+      "frameClock": {
+        "medianMs": 16.800000190734863,
+        "p95Ms": 34.700000286102295,
+        "maximumMs": 67.80000019073486
+      },
+      "shoulderBehindTorso": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "pearl-320x568",
+      "mode": "pearl-palace",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": false,
+      "sampleCount": 431,
+      "durationMs": 9608.5,
+      "angleMin": 0,
+      "angleMax": 10.066098458668714,
+      "frameClock": {
+        "medianMs": 17.09999990463257,
+        "p95Ms": 34.09999990463257,
+        "maximumMs": 50.09999990463257
+      },
+      "shoulderBehindTorso": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "ruby-320x568",
+      "mode": "ruby-revel",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": false,
+      "sampleCount": 562,
+      "durationMs": 9611.800000190735,
+      "angleMin": 0,
+      "angleMax": 12.586931967821993,
+      "frameClock": {
+        "medianMs": 16.699999809265137,
+        "p95Ms": 18.5,
+        "maximumMs": 48.59999990463257
+      },
+      "shoulderBehindTorso": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "pearl-320x568-reduced",
+      "mode": "pearl-palace",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": true,
+      "sampleCount": 82,
+      "durationMs": 1614.5,
+      "angleMin": 0,
+      "angleMax": 0,
+      "frameClock": {
+        "medianMs": 16.90000009536743,
+        "p95Ms": 33.59999990463257,
+        "maximumMs": 34.59999990463257
+      },
+      "shoulderBehindTorso": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    },
+    {
+      "tag": "ruby-320x568-reduced",
+      "mode": "ruby-revel",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": true,
+      "sampleCount": 91,
+      "durationMs": 1612,
+      "angleMin": 0,
+      "angleMax": 0,
+      "frameClock": {
+        "medianMs": 16.700000286102295,
+        "p95Ms": 33.30000019073486,
+        "maximumMs": 34
+      },
+      "shoulderBehindTorso": true,
+      "balance": 27000,
+      "state": "idle",
+      "errors": []
+    }
+  ]
+}

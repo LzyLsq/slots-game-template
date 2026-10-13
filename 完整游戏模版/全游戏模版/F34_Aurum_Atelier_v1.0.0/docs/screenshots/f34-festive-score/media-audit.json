@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-30",
+  "preview": {
+    "path": "festive-music-preview.wav",
+    "durationSeconds": 35.0,
+    "sampleRate": 32000,
+    "channels": 2,
+    "sampleBytes": 2,
+    "rmsDbfs": -15.337005621332453,
+    "peakDbfs": -3.8766158942488604
+  },
+  "recordings": [
+    {
+      "path": "motion/pearl-complete-with-audio.webm",
+      "duration": "00:00:25.05",
+      "audioTrack": "opus, 48000 Hz, stereo (default)",
+      "bytes": 4069378,
+      "probeOnly": true
+    },
+    {
+      "path": "motion/crown-epic-complete-with-audio.webm",
+      "duration": "00:00:27.83",
+      "audioTrack": "opus, 48000 Hz, stereo (default)",
+      "bytes": 8305025,
+      "probeOnly": true
+    }
+  ],
+  "scope": "Preview PCM signal and recorded container tracks; runtime WebAudio signals checked separately in runtime-qa.json. No subjective listening or mobile-device approval implied."
+}
