@@ -19,6 +19,12 @@ export function controlGeometry(material,width,height){
  return {left:(width-w)/2,top:(height-h)/2,width:w,height:h,cap,
   label:{left:(width-w)/2+inset,top:(height-h)/2+h*y0,width:w-inset*2,height:h*(y1-y0)}};
 }
+/** Fit visible glyph extents, not only a nominal line box (ascenders are asymmetric). */
+export function captionScale(text,box){
+ const cx=box.left+box.width/2,cy=box.top+box.height/2;
+ const w=2*Math.max(cx-text.left,text.right-cx),h=2*Math.max(cy-text.top,text.bottom-cy);
+ return Math.min(1,w>0?Math.max(0,box.width-2)/w:1,h>0?Math.max(0,box.height-2)/h:1);
+}
 export function pressFrames(down=false){
  return down?[{transform:'translateY(0) scale(1)',filter:'brightness(1)'},{transform:'translateY(1.25px) scale(.982)',filter:'brightness(.93)'}]:[
   {transform:'translateY(1.25px) scale(.982)',filter:'brightness(.93)',offset:0},
@@ -85,10 +91,15 @@ export class PhysicalControls{
   const label=button.querySelector(':scope > .control-label');if(!label)return;
   const box=g.label;Object.assign(label.style,{left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});
   const gleam=button.querySelector(':scope > .control-reflection');if(gleam)Object.assign(gleam.style,{left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});
-  const size=parseFloat(getComputedStyle(button).fontSize);label.style.fontSize=size+'px';
-  // Measure the rendered glyphs, including the currently selected language/value.
-  const range=document.createRange();range.selectNodeContents(label);const r=range.getBoundingClientRect();
-  if(r.width>0&&r.height>0){const fit=Math.min(1,(box.width-2)/r.width,(box.height-1)/r.height);label.style.fontSize=Math.max(1,size*fit)+'px';}
+  let size=parseFloat(getComputedStyle(button).fontSize);label.style.fontSize=size+'px';
+  // Re-measure actual glyphs after shrinking: flex gaps, font rounding and
+  // stacked BET/value labels do not scale linearly with the nominal font size.
+  const range=document.createRange();range.selectNodeContents(label);
+  for(let pass=0;pass<4;pass++){
+   const r=range.getBoundingClientRect();if(!r.width||!r.height)break;
+   const fit=captionScale(r,label.getBoundingClientRect());if(fit>=.999)break;
+   size=Math.max(1,size*fit);label.style.fontSize=size+'px';
+  }
  }
  label(button,text){if(!button)return;const label=button.querySelector(':scope > .control-label');(label||button).textContent=text;this.layout(button);}
  stopReactions(button){const list=this.reactions.get(button);if(list){list.forEach(a=>a.cancel());this.reactions.delete(button);}}

@@ -1,6 +1,6 @@
 # F44 本地模板验收
 
-日期：2026-10-13。工程为 Cocos Creator 3.8.8，浏览器运行的是引擎导出预览。完成的是完整本地模板；原生发行状态见 [发布清单](f44-release-status.json)。本任务未提交或推送 Git。
+日期：2026-10-13。工程为 Cocos Creator 3.8.8，浏览器运行的是引擎导出预览。完成的是完整本地模板；原生发行状态见 [发布清单](f44-release-status.json)。Git 交付使用独立分支 `codex/f44-grand-prize-20261013`，仅包含 F44。历史原始 QA 画面本机留存，当前九张单图及两张总览纳入仓库。
 
 ## 当前大奖升档与双高潮 · f44-grand-prize-20261013
 
@@ -11,7 +11,7 @@
 | 源码与导出 | 类型检查、演出专项测试退出 0。Creator 3.8.8 独立导出 Finished，62 秒；macOS CLI 退出阶段返回 36，实际产物通过以下浏览器检查 | [源码/导出哈希](qa/f44-grand-prize-20261013/delivery/manifest.json)、[构建日志](qa/f44-grand-prize-20261013/delivery/creator-build.log) |
 | 奖级与尺寸 | 四模式×BIG/SUPER/MEGA/EPIC×390×844/320×568，共 32 组通过；金额、标题及控制区检查，零浏览器异常 | [演出报告](qa/f44-grand-prize-20261013/awards/award-audit.json) |
 | 输入与恢复 | 常规及减少动态下，提前揭晓、领取、重复演出、尺寸变化、输入隔离与自动退出，共 3 组通过；转轴亮度恢复 | [交互报告](qa/f44-grand-prize-20261013/interactions/interaction-audit.json) |
-| 实际旋转至退场 | 四模式实际扣款强制 EPIC，均经过 0→1→2→3 升档与自动退出；一次扣款/结算、钱包守恒、回合数加一、待结算清空、音频/遮罩/转轴恢复。完整画布录像及解码高潮/退出帧已查看 | [连续报告与录像](qa/f44-grand-prize-20261013/motion/direct-canvas-audit.json)、[四模式截图](screenshots/f44-grand-prize-20261013/README.md) |
+| 实际旋转至退场 | 四模式实际扣款强制 EPIC，均经过 0→1→2→3 升档与自动退出；一次扣款/结算、钱包守恒、回合数加一、待结算清空、音频/遮罩/转轴恢复。完整画布录像及解码高潮/退出帧已查看 | [连续报告与录像](qa/f44-grand-prize-20261013/motion/direct-canvas-audit.json)、[四模式截图](screenshots/f44-git-delivery-20261013/README.md) |
 | 音乐衔接 | 31 项生命周期与四个实际付费回合通过：升档重音、揭晓、收尾、静音、后台/返回、场景切换及反馈避让；零浏览器异常 | [音频报告](qa/f44-grand-prize-20261013/audio/runtime-audit.json) |
 
 当前端口 6044 服务 `build/web-grand-prize-20261013`。演出夹具不扣款、不派奖；强制结果只验证表现和本地结算，不证明自然概率。本轮未重跑完整 13 组，未修改购买相关文件。完成的是桌面浏览器中的 Cocos 预览验收；手机实机、原生音频中断、扬声器/耳机听感、签名、正式服务与商店发布仍按下方边界记录。
@@ -37,11 +37,11 @@
 | 本轮范围 | 结果 | 证据 |
 |---|---|---|
 | 源码 | 类型检查、中奖演出专项测试退出 0；本轮未重跑完整 13 组 | [类型日志](qa/f44-award-gilded-20261013/delivery/typecheck.log)、[专项日志](qa/f44-award-gilded-20261013/delivery/win-presentation.log) |
-| 四模式与奖级 | 390×844 / 320×568，两尺寸×四模式×BIG/SUPER/MEGA/EPIC，共 32 项通过；零浏览器异常 | [演出报告](qa/f44-award-gilded-20261013/tiers/award-audit.json)、[小屏总览](qa/f44-award-gilded-20261013/tiers/small-screen-tiers.jpg) |
+| 四模式与奖级 | 390×844 / 320×568，两尺寸×四模式×BIG/SUPER/MEGA/EPIC，共 32 项通过；零浏览器异常 | [演出报告](qa/f44-award-gilded-20261013/tiers/award-audit.json)、小屏总览（本机历史：`qa/f44-award-gilded-20261013/tiers/small-screen-tiers.jpg`） |
 | 交互与退出 | 提前揭晓、领取、自动退出、重复进入、尺寸变化及减少动态检查通过 | [交互报告](qa/f44-award-gilded-20261013/interactions/interaction-audit.json) |
 | 实际扣款/结算与连续过程 | 四模式付费强制 EPIC、一次扣款与派奖、单个角色、原有眨眼/局部动作、退出无残留通过；1,181 个金额/钱包采样一致。实际查看从本轮录像解码的四条高光与退场序列 | [连续报告](qa/f44-award-gilded-20261013/motion/motion-audit.json)、[解码记录](qa/f44-award-gilded-20261013/motion/recorded-sequences.json) |
 | 嵌饰布局 | 每模式六个嵌饰、二十四个高光；新增嵌饰边界与标题、金额、余额及控制区保护范围相交数为 0 | [几何报告](qa/f44-award-gilded-20261013/ornament-geometry.json) |
-| 导出与当前截图 | Creator 3.8.8 独立导出 Finished，22 秒；CLI 退出阶段仍返回 36，产物通过本轮浏览器复查。四模式在一致高潮时点重新截图 | [源码/导出哈希和检查范围](qa/f44-award-gilded-20261013/delivery/manifest.json)、[该轮截图](screenshots/f44-award-gilded-20261013/README.md) |
+| 导出与当前截图 | Creator 3.8.8 独立导出 Finished，22 秒；CLI 退出阶段仍返回 36，产物通过本轮浏览器复查。四模式在一致高潮时点重新截图 | [源码/导出哈希和检查范围](qa/f44-award-gilded-20261013/delivery/manifest.json)、该轮截图（本机历史：`screenshots/f44-award-gilded-20261013/README.md`） |
 
 该轮预览指向 `build/web-award-gilded-20261013`，端口 6044。演出继续使用原有分级音乐和结算结果，本轮不改变规则、概率、音频素材或购买相关源码。强制演出夹具与实际付费强制结果都不能证明自然概率。上述结果限于桌面浏览器中的引擎导出，原生、真机和发布边界仍按本文下方记录。
 
@@ -53,9 +53,9 @@
 |---|---|---|
 | 当前源码 | 类型检查及完整 13 组测试通过 | [检查记录](qa/f44-polish-20261013/delivery/source-checks.txt)、[测试日志](qa/f44-polish-20261013/delivery/tests.log) |
 | 实际操作 | 16 项通过，覆盖四模式付费旋转、AUTO、奖励防重复、邮箱/头像/语言、本地注册登录、声音、加载失败返回和重试；零浏览器异常 | [操作报告](qa/f44-polish-20261013/operations/runtime-audit.json) |
-| 连续演出与钱包 | 四模式真实扣款强制 EPIC、局部角色动作、眨眼、退出及钱包守恒通过；1,052 帧中画面余额与钱包一致，金额单调且不超过实际回报，分隔符高度小于数字的 30% | [录制和逐帧报告](qa/f44-polish-20261013/motion/motion-audit.json)、[录制分段](qa/f44-polish-20261013/motion/recorded-contact.jpg) |
+| 连续演出与钱包 | 四模式真实扣款强制 EPIC、局部角色动作、眨眼、退出及钱包守恒通过；1,052 帧中画面余额与钱包一致，金额单调且不超过实际回报，分隔符高度小于数字的 30% | [录制和逐帧报告](qa/f44-polish-20261013/motion/motion-audit.json)、录制分段（本机历史：`qa/f44-polish-20261013/motion/recorded-contact.jpg`） |
 | 小屏金额排版 | 320×568，五语言×2,537/12,345,678，共十组通过；图片数字、语义金额、字形边界及无滚动检查通过，夹具不改钱包 | [排版报告](qa/f44-polish-20261013/award-copy/copy-audit.json) |
-| 最终导出与截图 | 独立 Cocos 导出完成；源码输入从导出开始到最终复查哈希一致；新截大厅、四柜机、四 EPIC 和小屏画面 | [哈希记录](qa/f44-polish-20261013/delivery/manifest.json)、[当前截图](screenshots/f44-polish-20261013/README.md) |
+| 最终导出与截图 | 独立 Cocos 导出完成；源码输入从导出开始到最终复查哈希一致；新截大厅、四柜机、四 EPIC 和小屏画面 | [哈希记录](qa/f44-polish-20261013/delivery/manifest.json)、当前截图（本机历史：`screenshots/f44-polish-20261013/README.md`） |
 
 本轮预览指向 `build/web-polish-20261013`，端口 6044，版本参数 `f44-polish-20261013`。Creator 报告 Finished（28 秒），macOS CLI 退出阶段仍返回 36，产物已通过实际浏览器复查。金额布局脚本曾在正常自动退出后尝试点击已移除的弹窗，已修正该辅助脚本并重跑通过；未为测试而延长游戏演出。
 
@@ -117,4 +117,4 @@
 
 尚未验收：iPhone/iPad 真机画面与性能、签名 iOS 包、Apple 登录、StoreKit Sandbox/TestFlight、生产账号与钱包、音箱/耳机主观听感、采样音源权利核查、商店元数据/隐私配置和外部 App Store 审核。音源许可文件与部分样本来源不完整的说明保留，发行前需完成核查。
 
-[该轮截图](screenshots/f44-award-gilded-20261013/README.md) · [功能清单](feature-inventory.md) · [独立产品差异](product-differences.md) · [参考实际运行审查](reference-runtime-audit.json)
+该轮截图（本机历史：`screenshots/f44-award-gilded-20261013/README.md`） · [功能清单](feature-inventory.md) · [独立产品差异](product-differences.md) · [参考实际运行审查](reference-runtime-audit.json)

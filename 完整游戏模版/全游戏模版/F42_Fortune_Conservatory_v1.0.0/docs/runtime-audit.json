@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-13T04:30:00.941Z",
-  "sourceFingerprint": "a168bd6e766f1ccacc7e655a414e833ace9c2e51825ecb44089f1fb8388bfdfb",
+  "date": "2026-10-13T05:10:38.121Z",
+  "sourceFingerprint": "b005dd8d3853af52a1c6a38500abb1959cace5f6f4d53376404e27eb1ea8c013",
   "checks": [
     "first launch English",
     "real login shown",
@@ -57,11 +57,11 @@
     "busy": false,
     "auto": 0,
     "profile": {
-      "id": "27093fd8-1ec4-4959-9dd0-e598ca3fa2c4",
+      "id": "6dba8b61-119e-4844-a2cd-7ec2a4b4007a",
       "name": "Gold Guest",
       "avatar": "tortoise",
-      "createdAt": 1791865743189,
-      "balance": 11340,
+      "createdAt": 1791868140695,
+      "balance": 11300,
       "rounds": 5,
       "superReached": true,
       "pending": null,
@@ -83,7 +83,7 @@
         },
         "tortoise-vault": {
           "rounds": 5,
-          "win": 1640,
+          "win": 1600,
           "features": 0
         }
       },
@@ -94,83 +94,75 @@
       },
       "ledger": [
         {
-          "id": "16f838f3-7a7d-49c6-9e8b-1f99bcecd950:benefit",
+          "id": "c4b738d6-5dbe-437c-9f1c-b636294d416e:benefit",
           "type": "benefit",
           "amount": 1000,
           "description": "新手第5局超级大奖补足 · 不改变转轴",
-          "balance": 11340,
-          "at": 1791865789221
+          "balance": 11300,
+          "at": 1791868209214
         },
         {
-          "id": "16f838f3-7a7d-49c6-9e8b-1f99bcecd950:stake",
+          "id": "c4b738d6-5dbe-437c-9f1c-b636294d416e:stake",
           "type": "stake",
           "amount": -100,
           "description": "金龟宝藏 · 下注",
-          "balance": 10340,
-          "at": 1791865789221
+          "balance": 10300,
+          "at": 1791868209214
         },
         {
-          "id": "af8541ef-2d8b-4ba3-ba1a-c6139b2fc9bb:win",
+          "id": "f3dd23b2-e5fb-4fce-8269-b7ded6581b5d:stake",
+          "type": "stake",
+          "amount": -100,
+          "description": "金龟宝藏 · 下注",
+          "balance": 10400,
+          "at": 1791868206399
+        },
+        {
+          "id": "d17cafce-727a-4cf5-b136-cd70521ed37a:win",
           "type": "win",
-          "amount": 320,
+          "amount": 600,
           "description": "自然转轴奖励",
-          "balance": 10440,
-          "at": 1791865787454
+          "balance": 10500,
+          "at": 1791868203999
         },
         {
-          "id": "af8541ef-2d8b-4ba3-ba1a-c6139b2fc9bb:stake",
+          "id": "d17cafce-727a-4cf5-b136-cd70521ed37a:stake",
           "type": "stake",
           "amount": -100,
           "description": "金龟宝藏 · 下注",
-          "balance": 10120,
-          "at": 1791865787454
+          "balance": 9900,
+          "at": 1791868203999
         },
         {
-          "id": "cfe8403a-b265-4184-bf9f-26f3d15b060d:stake",
-          "type": "stake",
-          "amount": -100,
-          "description": "金龟宝藏 · 下注",
-          "balance": 10220,
-          "at": 1791865786021
-        },
-        {
-          "id": "7c4fa919-59d8-43fa-bf5f-21f4f06aa135:win",
-          "type": "win",
-          "amount": 320,
-          "description": "自然转轴奖励",
-          "balance": 10320,
-          "at": 1791865784221
-        },
-        {
-          "id": "7c4fa919-59d8-43fa-bf5f-21f4f06aa135:stake",
+          "id": "98ede550-5de7-43dc-8913-a7bbb3ff2c66:stake",
           "type": "stake",
           "amount": -100,
           "description": "金龟宝藏 · 下注",
           "balance": 10000,
-          "at": 1791865784221
+          "at": 1791868202366
         },
         {
-          "id": "b7d6e0ba-ecbe-4de2-a8b9-e1dc1c504979:stake",
+          "id": "de6109de-1eef-44ec-9740-8d91619fbf22:stake",
           "type": "stake",
           "amount": -100,
           "description": "金龟宝藏 · 下注",
           "balance": 10100,
-          "at": 1791865782773
+          "at": 1791868200833
         },
         {
-          "id": "9ad36cf2-72a4-4fa2-bb1f-9eae0942bdad",
+          "id": "804cd290-d076-4219-bf01-cb2127083c94",
           "type": "daily",
           "amount": 200,
           "description": "每日宝藏 · 第1天",
           "balance": 10200,
-          "at": 1791865781940
+          "at": 1791868199453
         },
         {
           "id": "welcome",
           "type": "welcome",
           "amount": 10000,
           "balance": 10000,
-          "at": 1791865743189,
+          "at": 1791868140695,
           "description": "欢迎礼金 · 虚拟金币"
         }
       ],

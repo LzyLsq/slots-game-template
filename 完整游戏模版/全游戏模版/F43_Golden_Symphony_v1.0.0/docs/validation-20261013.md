@@ -1,6 +1,6 @@
 # F43 本地模板验收 · 2026-10-13
 
-F43 Golden Symphony / 黄金交响殿堂是 Cocos Creator 3.8.8 工程。大厅、四种传统 slot、永久三幕乐章册及完整本地账户/服务页面已实现；本机预览端口6043。当前验收为源代码与桌面浏览器，`localTemplateComplete: true`，`readyForSubmission: false`。没有执行F43 Git暂存、提交或推送。
+F43 Golden Symphony / 黄金交响殿堂是 Cocos Creator 3.8.8 工程。大厅、四种传统 slot、永久三幕乐章册及完整本地账户/服务页面已实现；本机预览端口6043。当前验收为源代码与桌面浏览器，`localTemplateComplete: true`，`readyForSubmission: false`。本次音频调整未执行Git暂存、提交或推送命令；仓库实时状态以Git记录为准。
 
 ## 本轮完成范围
 
@@ -14,9 +14,9 @@ build8更正示例排行的角色名和返回音乐大厅措辞；build9将条�
 
 背景音乐在点击、旋转、停轮、普通奖、奖励和到账反馈前降低，按实际解码时长及80ms尾部保持；并发声音按各自生命周期跟踪。常态0.42，点击稳定段0.1008、停轮0.0924、普通奖/奖励0.0756、到账0.084；恢复使用450ms时间常数。滚动状态不再覆盖停轮衰减，滚动机械声也降低；原音效播放音量保持原值。
 
-大厅与四模式共33项实际混音检查通过，记录组件请求和下游WebAudio gain，包含完整尾部、重叠、12次连续点击、收场到账、独立音效静音和后台恢复。类型检查与演出时序合同通过。见[混音录音及曲线](qa/f43-feedback-mix-20261013/README.md)。直接声音fixture不证明真实结算或自然概率；运行生命周期另记录。
+大厅与四模式共33项实际混音检查通过，记录组件请求和下游WebAudio gain，包含完整尾部、重叠、12次连续点击、收场到账、独立音效静音和后台恢复。类型检查与演出时序合同通过。见[混音录音及曲线](qa/f43-feedback-mix-20261013/README.md)。[31项声音生命周期检查](qa/f43-feedback-mix-20261013/audio-runtime/runtime-audit.json)另覆盖四个模式的真实本地扣款及QA强制EPIC结算、逐轴反馈、静音持久化、后台恢复和过期演出不重播，错误0。[五段实际混音信号审查](qa/f43-feedback-mix-20261013/mix/recorded-audio-audit.json)均有声音，削波采样数0；峰值0.4072–0.5700。见[本轮摘要](qa/f43-feedback-mix-20261013/summary.json)。强制结果和声音fixture不证明自然概率，录音信号检查不替代手机主观试听。
 
-Creator报告72秒完成，CLI退出36并记录script-worker SIGTERM；[日志和源码/产物指纹](qa/f43-feedback-mix-20261013/build12-artifact-source.json)保留，浏览器产物另验证。生产源码仅AudioManager改变，90个音频文件、主题连续背景、角色和演出美术与build11指纹一致。本轮未暂存、提交或推送Git。
+Creator报告72秒完成，CLI退出36并记录script-worker SIGTERM；[日志和源码/产物指纹](qa/f43-feedback-mix-20261013/build12-artifact-source.json)保留，浏览器产物另验证。生产源码仅AudioManager改变，90个音频文件、主题连续背景、角色和演出美术与build11指纹一致。本次音频调整未执行Git暂存、提交或推送命令。
 
 ## 场景配乐与三段大奖演出 · build11
 

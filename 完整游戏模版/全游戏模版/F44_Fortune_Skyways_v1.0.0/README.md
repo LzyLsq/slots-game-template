@@ -19,7 +19,7 @@ python3 tools/preview_server.py --directory build/web-grand-prize-20261013 --por
 
 BIG / SUPER / MEGA / EPIC 改为完整升档演出：艺术标题增大并在升级时柔和交接，柜机侧轨从财宝底座向上点亮，角色后方金光与主题烟花展开，金币在升档和最终揭晓时分波喷出。最终金额有两次与音乐重音对齐的高潮；原转轴在玻璃内柔和压暗，退出时恢复。角色、余额与柜机保留在同一空间，普通奖与原有结算规则继续保留。
 
-类型检查与演出专项测试通过；四模式×四奖级×两种手机比例共 32 组画面、3 组交互/退出、四模式实际扣款强制 EPIC 连续录像，以及 31 项音频生命周期检查通过，零浏览器异常。提前揭晓、连续演出、自动退出、尺寸变化和减少动态均覆盖；前一轮反馈音避让源码保持原样。本轮未重跑完整 13 组，也未改变自然概率。见[当前演出截图与录像](docs/screenshots/f44-grand-prize-20261013/README.md)、[交付哈希](docs/qa/f44-grand-prize-20261013/delivery/manifest.json)与[验收记录](docs/acceptance.md)。
+类型检查与演出专项测试通过；四模式×四奖级×两种手机比例共 32 组画面、3 组交互/退出、四模式实际扣款强制 EPIC 连续录像，以及 31 项音频生命周期检查通过，零浏览器异常。提前揭晓、连续演出、自动退出、尺寸变化和减少动态均覆盖；前一轮反馈音避让源码保持原样。本轮未重跑完整 13 组，也未改变自然概率。见[当前演出截图与录像](docs/screenshots/f44-git-delivery-20261013/README.md)、[交付哈希](docs/qa/f44-grand-prize-20261013/delivery/manifest.json)与[验收记录](docs/acceptance.md)。
 
 ## 前一轮反馈音优先混音 · 2026-10-13
 
@@ -31,7 +31,7 @@ BIG / SUPER / MEGA / EPIC 改为完整升档演出：艺术标题增大并在升
 
 四模式奖励增加主题宝石与罗盘嵌饰、二十四个金边错峰高光，增强标题扫光、金币反光、两波金色喷泉和柜机背后烟花。装饰使用 F44 已有精细图片，固定于柜机金属肩部与财宝底座，延续原有音乐、规则和钱包结算。
 
-本轮类型检查与演出专项测试通过；两手机比例、四模式、四奖级共 32 项检查通过，另检查提前揭晓、领取/自动退出、重复进入和减少动态。四模式真实付费强制 EPIC 的连续录制中，1,181 个金额/钱包采样一致。本轮没有重跑完整 13 组；历史结果保留在下方前一轮记录。详见[该轮演出截图](docs/screenshots/f44-award-gilded-20261013/README.md)与[验收记录](docs/acceptance.md)。
+本轮类型检查与演出专项测试通过；两手机比例、四模式、四奖级共 32 项检查通过，另检查提前揭晓、领取/自动退出、重复进入和减少动态。四模式真实付费强制 EPIC 的连续录制中，1,181 个金额/钱包采样一致。本轮没有重跑完整 13 组；历史结果保留在下方前一轮记录。详见该轮演出截图（本机历史：`docs/screenshots/f44-award-gilded-20261013/README.md`）与[验收记录](docs/acceptance.md)。
 
 ## 前一轮检查优化 · f44-polish-20261013
 
@@ -68,10 +68,10 @@ BIG / SUPER / MEGA / EPIC 改为完整升档演出：艺术标题增大并在升
 ## 验收和截图
 
 - [验收记录](docs/acceptance.md)
-- [当前四柜机大奖高潮、恢复与录像](docs/screenshots/f44-grand-prize-20261013/README.md)
-- [前一轮获奖演出截图](docs/screenshots/f44-award-gilded-20261013/README.md)
-- [前一轮大厅、四柜机与奖励截图](docs/screenshots/f44-polish-20261013/README.md)
-- [初次交付基准截图](docs/screenshots/f44-final-20261013/README.md)
+- [当前四柜机大奖高潮、恢复与录像](docs/screenshots/f44-git-delivery-20261013/README.md)
+- 前一轮获奖演出截图（本机历史：`docs/screenshots/f44-award-gilded-20261013/README.md`）
+- 前一轮大厅、四柜机与奖励截图（本机历史：`docs/screenshots/f44-polish-20261013/README.md`）
+- 初次交付基准截图（本机历史：`docs/screenshots/f44-final-20261013/README.md`）
 - [功能清单](docs/feature-inventory.md) · [与 F40 的差异](docs/product-differences.md)
 - [插画来源](docs/art-provenance.json) · [音频来源](docs/audio-provenance.json) · [资源比对](docs/resource-originality-audit.json)
 - [测试运行说明](tools/qa/README.md) · [发布状态](docs/f44-release-status.json)
@@ -84,4 +84,4 @@ npm run release:audit
 
 本地功能与手机比例检查是模板制作验收。**未验证 iPhone/iPad 实机、已签名 iOS 二进制、正式 Apple 登录、StoreKit Sandbox/TestFlight、生产服务及 App Store 审核**。发行身份、域名和产品编号仍是明确占位；`release:audit` 应报告这些阻断项。采样乐器源库的许可说明与部分样本来源不完整的说明均保留，正式发行须完成素材权利核查。
 
-2026-10-13。此任务未提交或推送 Git。
+2026-10-13 Git 交付使用独立分支 `codex/f44-grand-prize-20261013`，仅包含 F44。当前截图入口见上方；依赖、构建缓存、历史截图及原始 QA 媒体保留本机。

@@ -1,0 +1,69 @@
+{
+  "version": "f43-feedback-mix-20261013",
+  "build": {
+    "creatorVersion": "3.8.8",
+    "reportedSeconds": 72,
+    "cliExitCode": 36,
+    "note": "Creator reported a build in 72 seconds and emitted a runnable artifact, then exited 36 with script-worker SIGTERM. Browser artifact is checked separately; no zero-exit or root cause is claimed.",
+    "compiledAudioSourceMatches": true,
+    "sourceMapChecked": "temp/programming/packer-driver/targets/preview/chunks/35/35219ff29952399a9ffbb2d822172334b3f9ccd0.js.map",
+    "fingerprintsVerified": 182,
+    "evidence": "build12-artifact-source.json"
+  },
+  "date": "2026-10-13",
+  "completedAt": "2026-10-13T05:12:06.430Z",
+  "changedProductionScripts": [
+    "assets/scripts/audio/AudioManager.ts"
+  ],
+  "behavior": {
+    "normalMusicVolume": 0.42,
+    "feedbackMusicMultiplierRange": [
+      0.18,
+      0.28
+    ],
+    "stableMusicVolumes": {
+      "tap": 0.1008,
+      "reelStop": 0.0924,
+      "normalWinOrReward": 0.0756,
+      "collect": 0.084
+    },
+    "fullDecodedFeedbackDuration": true,
+    "tailSeconds": 0.08,
+    "recoveryTimeConstantSeconds": 0.45,
+    "feedbackPlaybackVolumesUnchanged": true,
+    "rollingSoundYieldsToFeedback": true
+  },
+  "checks": {
+    "mix": {
+      "passed": 33,
+      "scenes": 5,
+      "errors": 0,
+      "evidence": "mix/mix-audit.json"
+    },
+    "lifecycle": {
+      "passed": 31,
+      "realLocalRounds": 4,
+      "errors": 0,
+      "evidence": "audio-runtime/runtime-audit.json"
+    },
+    "recordings": {
+      "passed": 5,
+      "clippedSamples": 0,
+      "peakRange": [
+        0.40721946954727173,
+        0.5699781775474548
+      ],
+      "evidence": "mix/recorded-audio-audit.json"
+    },
+    "typecheck": {
+      "passed": true,
+      "evidence": "typecheck.log"
+    },
+    "awardTimingContract": {
+      "passed": true,
+      "evidence": "award-tests.log"
+    }
+  },
+  "scope": "Desktop Cocos WebAudio playback and lifecycle checks. No subjective listening, phone/native interruption or store release validation. Audio fixtures do not validate natural win probabilities.",
+  "gitOperationsExecutedForThisAudioRequest": false
+}

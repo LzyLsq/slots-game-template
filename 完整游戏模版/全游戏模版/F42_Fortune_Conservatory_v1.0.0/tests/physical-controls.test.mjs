@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {CONTROL_ART,controlGeometry,PhysicalControls} from '../src/physical-controls.mjs';
+import {CONTROL_ART,controlGeometry,captionScale,PhysicalControls} from '../src/physical-controls.mjs';
 const manifest=JSON.parse(readFileSync(new URL('../assets/art/manifest.json',import.meta.url)));
 test('button face geometry agrees with the actual high-resolution asset masks',()=>{
  for(const [name,art]of Object.entries(CONTROL_ART)){
@@ -44,4 +44,14 @@ test('disabled/disconnected buttons do not press; disabling held controls restor
 });
 test('reduced motion retains immediate held feedback without moving the face',()=>{
  const {controls:c,createButton}=fixture(false),b=createButton();c.press(b,'key: ');assert.ok(b.classList.contains('is-held'));assert.ok(!b.classList.contains('is-depressed'));assert.equal(b.animations.length,0);c.releaseOwner('key: ');assert.ok(!b.classList.contains('is-held'));assert.equal(c.reactions.size,0);
+});
+
+test('caption fitting includes asymmetric ascenders and fixed horizontal gaps',()=>{
+ const box={left:10,top:20,width:60,height:14};
+ assert.equal(captionScale({left:11,top:21,right:69,bottom:33},box),1);
+ const shifted={left:20,top:18,right:60,bottom:31};
+ const fit=captionScale(shifted,box);assert.ok(fit<1);
+ const cy=box.top+box.height/2;assert.ok(cy-(cy-shifted.top)*fit>=box.top+1);
+ const narrow=captionScale({left:0,top:22,right:80,bottom:32},box);assert.ok(narrow<1);
+ assert.ok(40-40*narrow>=box.left+1);
 });
