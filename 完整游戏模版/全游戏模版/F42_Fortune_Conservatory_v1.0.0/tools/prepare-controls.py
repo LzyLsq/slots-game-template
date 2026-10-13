@@ -32,6 +32,22 @@ def isolate(source):
             xs,ys=zip(*part);parts.append(tuple(map(int,(min(xs),min(ys),max(xs)+1,max(ys)+1))))
     return Image.fromarray(a),parts
 
+def clean_plate_silhouette(image):
+    """Discard atlas dust, not carving: retain the connected plate plus its AA fringe."""
+    a=np.array(image);h,w=a.shape[:2];solid=a[:,:,3]>32;seen=np.zeros((h,w),bool)
+    x,y=w//2,h//2
+    assert solid[y,x], 'The plate center must seed the intact solid silhouette'
+    q=collections.deque([(x,y)]);seen[y,x]=True
+    while q:
+        x,y=q.popleft()
+        for dx,dy in ((1,0),(-1,0),(0,1),(0,-1)):
+            nx,ny=x+dx,y+dy
+            if 0<=nx<w and 0<=ny<h and solid[ny,nx] and not seen[ny,nx]:
+                seen[ny,nx]=True;q.append((nx,ny))
+    fringe=np.array(Image.fromarray((seen*255).astype('uint8')).filter(ImageFilter.MaxFilter(5)))>0
+    a[~fringe]=0
+    return Image.fromarray(a)
+
 sheet,parts=isolate('controls-mechanical-v3.png')
 # The packed-sheet tiger / crane crowns touch; never cut either ornament short.
 # Replace the complete pair with a separately generated two-object atlas.
@@ -44,6 +60,7 @@ left,boxes=isolate('controls-spin-left-v4.png');assert len(boxes)==2,('Two isola
 boxes.sort();objects.update({n:(left,b,'controls-spin-left-v4.png')for n,b in zip(['button-spin-tiger','button-spin-crane'],boxes)})
 for name,(sheet,b,source)in objects.items():
     im=sheet.crop(b);padded=Image.new('RGBA',(im.width+8,im.height+8));padded.alpha_composite(im,(4,4));im=padded
+    if name in ['button-long','button-gold','button-jade']:im=clean_plate_silhouette(im)
     W,H=im.size;mask=Image.new('L',im.size)
     if 'spin-'in name:
         box=(.21*W,.245*H,.79*W,.805*H);ImageDraw.Draw(mask).ellipse(box,fill=255)
@@ -58,6 +75,7 @@ for name,(sheet,b,source)in objects.items():
     Image.fromarray(socket).save(OUT/(name+'.webp'),'WEBP',quality=96,method=6,exact=True)
     face.save(OUT/(name+'-face.webp'),'WEBP',quality=96,method=6,exact=True)
     entry={'source':source,'atlasCell':list(b),'trim':list(b),'width':W,'height':H,'transparent':True,'socketMask':list(box)}
+    if name in ['button-long','button-gold','button-jade']:entry['alphaCleanup']='primary silhouette + 2px antialias fringe'
     manifest[name]=entry;manifest[name+'-face']={**entry,'faceMask':list(box)}
     print(name,b,im.size)
 for old,new in [('button-spin','button-spin-tiger'),('button-spin-red','button-spin-crane')]:

@@ -155,8 +155,8 @@ html[lang=en] .game-status{font-size:10px;line-height:1.3}
 .physical-control{isolation:isolate;overflow:visible;transform:none;filter:none}
 .physical-control:active:not(:disabled){transform:none;filter:none}
 .physical-control>.control-label{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;max-width:100%;pointer-events:none;line-height:inherit;transform-origin:center}
-.physical-control>.control-face{position:absolute;inset:0;width:100%!important;height:100%!important;margin:0!important;object-fit:fill;pointer-events:none;z-index:1;transform-origin:center}
-.physical-control>.control-reflection{position:absolute;inset:18% 15%;width:70%!important;height:64%!important;margin:0!important;object-fit:fill;z-index:3;opacity:0;pointer-events:none;mix-blend-mode:screen}
+.physical-control>.control-face{position:absolute;inset:0;width:100%;height:100%;margin:0!important;object-fit:fill;pointer-events:none;z-index:1;transform-origin:center}
+.physical-control>.control-reflection{position:absolute;inset:18% 15%;width:70%;height:64%;margin:0!important;object-fit:fill;z-index:3;opacity:0;pointer-events:none;mix-blend-mode:screen}
 .spin-btn{background-image:url('../assets/art/button-spin-tiger.webp')}
 .game[data-game=koi-reserve] .spin-btn{background-image:url('../assets/art/button-spin-koi.webp')}
 .game[data-game=crane-palace] .spin-btn{background-image:url('../assets/art/button-spin-crane.webp')}
@@ -252,3 +252,45 @@ html[lang=en] .game-status{font-size:10px;line-height:1.3}
  .bet-display strong{font-size:10px;line-height:1.05}
  .bet-display small{font-size:6px;line-height:1.1;letter-spacing:0}
 }
+
+/* Carved raster caps keep their proportions; the polished middle is three-sliced.
+   Socket, moving face and measured text all share the same authored face bounds. */
+.physical-control[data-material]{background-image:none!important;user-select:none}
+.physical-control>.control-socket,.physical-control>.control-face{position:absolute;inset:auto;margin:0!important;max-width:none;max-height:none;pointer-events:none;object-fit:fill;width:auto;height:auto}
+.physical-control>.control-socket{z-index:0}
+.physical-control>.control-face{z-index:1}
+.sliced-control>.control-socket,.sliced-control>.control-face{border-style:solid;border-color:transparent;border-image-repeat:stretch}
+.physical-control>.control-label{position:absolute;inset:auto;max-width:none;max-height:none;padding:0;line-height:1.05;z-index:3;white-space:nowrap;gap:4px;letter-spacing:0;transform-origin:50% 50%}
+.physical-control>.control-label b,.physical-control>.control-label span{font-size:inherit;line-height:inherit}
+.physical-control>.control-reflection{inset:auto;margin:0!important;width:auto;height:auto;object-fit:contain;z-index:2;clip-path:ellipse(48% 44% at 50% 50%)}
+.sliced-control>.control-reflection{clip-path:inset(9% 3% round 20px)}
+.physical-control.is-held>.control-face{filter:brightness(.93)}
+.physical-control.is-held>.control-label{filter:brightness(.95)}
+.physical-control:disabled{opacity:1}
+.physical-control:disabled>.control-face{filter:saturate(.55) brightness(.92)}
+.physical-control:disabled>.control-label{opacity:.68}
+.physical-control:focus-visible{outline:2px solid #27644c;outline-offset:2px}
+.portrait-button>.control-label{display:grid;place-items:center}
+.portrait-button .control-label img{width:100%;height:100%;margin:0;object-fit:contain}
+.header .utility>.control-label{max-width:none}
+.header .utility b,html[lang=en] .header .utility[data-action=home] b{font-size:inherit;max-width:none}
+.header .utility{font-size:10px}
+.header .utility[data-action=shop]{font-size:21px}
+.modal-close.utility{font-size:20px;width:44px;height:44px}
+.bet-display .control-label{gap:4px;font-variant-numeric:tabular-nums}
+.bet-display .control-label strong{font-size:1em;line-height:1.05}
+.bet-display .control-label small{font-size:.55em;line-height:1.05}
+.deck .plate-btn,html[lang=en] .deck .plate-btn{font-size:clamp(9px,2.7cqw,11px)}
+.spin-btn{font-size:clamp(11px,3.2cqw,14px);text-shadow:0 1px 1px #194535}
+.house-tab img,.house-tab .control-label>img{display:none}
+.house-tab{font-size:11px;letter-spacing:.15px}
+.house-tab>.control-label{flex-direction:row;gap:0}
+.game-switch .plate-btn,html[lang=en] .game-switch .plate-btn{font-size:11px}
+.modal-content>.plate-btn{min-height:56px}
+.lobby-play>.control-reflection{animation:primary-reflection 10s ease-in-out infinite}
+.spinning .spin-btn>.control-reflection{animation:socket-reflection 2.8s ease-in-out infinite}
+@container (max-width:300px){.bet-display .control-label{flex-direction:column;gap:0}.bet-display{font-size:12px}}
+@media(max-width:350px){.house-tab,.game-switch .plate-btn,html[lang=en] .game-switch .plate-btn{font-size:10px}}
+@media(orientation:landscape) and (max-height:520px){.game .game-switch .plate-btn,html[lang=en] .game .game-switch .plate-btn{font-size:11px}}
+
+.deck .physical-control:active:not(:disabled){transform:none;filter:none}

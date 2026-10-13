@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-13",
+  "version": "f44-grand-prize-20261013",
+  "engine": "Cocos Creator 3.8.8",
+  "previewExport": "build/web-grand-prize-20261013",
+  "previewPort": 6044,
+  "changes": [
+    "Larger aspect-preserving art title and stable reading area",
+    "Tier-rise/crossfade, coordinated rail ignition and reveal response",
+    "Larger rear rays, square plumes and deliberate gold-coin volleys",
+    "Two final climaxes aligned to the existing musical impacts",
+    "Settled reels soften during major award and restore on all exits"
+  ],
+  "sourceChecks": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:win-presentation",
+      "exitCode": 0
+    }
+  ],
+  "sourceChecksNote": "Both targeted commands passed before this export; command outputs were not saved as separate log files. No complete 13-group test rerun in this iteration.",
+  "build": {
+    "finished": true,
+    "durationSeconds": 62,
+    "cliExitCode": 36,
+    "note": "Creator logged Finished. macOS subprocess shutdown returned 36; actual export then passed runtime checks."
+  },
+  "runtime": {
+    "awardFixtures": 32,
+    "interactionGroups": 3,
+    "actualPaidForcedEpicRounds": 4,
+    "audioLifecycleChecks": 31,
+    "audioPaidRounds": 4,
+    "browserErrors": 0
+  },
+  "audioManagerPreserved": {
+    "path": "assets/scripts/audio/AudioManager.ts",
+    "sha256": "e81305117a784517c567c8b9fae1399e1beaa3906df0d5e92bc61ce6c3f4d464"
+  },
+  "sources": [
+    {
+      "path": "assets/scripts/vfx/AwardStageLayout.ts",
+      "bytes": 2580,
+      "sha256": "bcb31708d8420a54dad50115716f16159fb809dbbd2406525a97706d4b80acef"
+    },
+    {
+      "path": "assets/scripts/vfx/AwardChoreography.ts",
+      "bytes": 5584,
+      "sha256": "e7854a6d8f4e1bebf819a1a000e274c684d6f9459b1eba1a9bedd3090f0bb98d"
+    },
+    {
+      "path": "assets/scripts/vfx/SalonWinStage.ts",
+      "bytes": 31009,
+      "sha256": "8168034f2d97700c812e13053e1e192792e52ab410f457ba6f2272dcdc7406d0"
+    },
+    {
+      "path": "assets/scripts/ui/AureliaApp.ts",
+      "bytes": 106974,
+      "sha256": "6c38c25259f3b39de4ade0ad818f10fcf59ff3222ee0f511b9f1011a0a543b97"
+    },
+    {
+      "path": "assets/scripts/audio/AudioManager.ts",
+      "bytes": 15351,
+      "sha256": "e81305117a784517c567c8b9fae1399e1beaa3906df0d5e92bc61ce6c3f4d464"
+    },
+    {
+      "path": "tools/win-presentation-test.ts",
+      "bytes": 10758,
+      "sha256": "9a8af1ae1d384acf2221a80d34857c50ad586247ef1ce4198786d0b44018bb11"
+    },
+    {
+      "path": "tools/qa/awards.cjs",
+      "bytes": 5966,
+      "sha256": "797932c0dcc769e5983708248379f2a54b47e469d8f40a85271d20f4d3b024db"
+    },
+    {
+      "path": "tools/qa/award-interactions.cjs",
+      "bytes": 6514,
+      "sha256": "e858e9e5870950f873e49a08c82103a96de7267cf82ce0ae8068984c57933071"
+    },
+    {
+      "path": "tools/qa/f44-continuous.cjs",
+      "bytes": 6774,
+      "sha256": "9695e76fb5a4aa34e81828d6874d3c63c8a67214e361ef1042293ab49a408746"
+    },
+    {
+      "path": "tools/qa/audio.cjs",
+      "bytes": 11754,
+      "sha256": "d11e65d37b272ec05bc58ab5b28010534997c22491a2c6f3d910ee1457230433"
+    },
+    {
+      "path": "tools/qa/direct-motion.cjs",
+      "bytes": 12071,
+      "sha256": "a81016e3b099bf80452ed96f6c6f0a675a2159d9e0d221ce82ae974870f994d1"
+    }
+  ],
+  "exportHashes": [
+    {
+      "path": "build/web-grand-prize-20261013/index.html",
+      "bytes": 2206,
+      "sha256": "0f8142aa5de582d0377e5bd815b66832d83990b0ed215f9fe679c51d3533bf21"
+    },
+    {
+      "path": "build/web-grand-prize-20261013/assets/main/index.js",
+      "bytes": 666113,
+      "sha256": "380ee97a88dccc3943913b89eb22a37a125ff7b15769645837cf185f27802b1e"
+    }
+  ],
+  "scope": [
+    "Owned desktop browser: Cocos export, four modes, 390x844 and 320x568 layouts",
+    "Full paid round recordings verify one charge, one settlement, cleared pending state and clean automatic exit",
+    "Forced EPIC results test presentation and local settlement, not natural probability",
+    "Visual award fixtures do not credit the wallet",
+    "Actual video-decoded reveal and exit frames reviewed"
+  ],
+  "notValidated": [
+    "iPhone/iPad device and native performance",
+    "Native audio interruptions and device listening",
+    "Signed iOS release, official authentication and payment services",
+    "App Store review"
+  ],
+  "git": "Not requested in this iteration; no commit or push performed"
+}

@@ -20,7 +20,23 @@ try{
   check(id+' dedicated carved spin material',before.material==='button-spin-'+id.split('-')[0]);
   rows.push({id,neutral,depressed,box});
  }
- await page.locator('[data-action=rules]').focus();await page.keyboard.press('Enter');await page.locator('.modal').waitFor();
+ const rules=page.locator('[data-action=rules]'),auto=page.locator('[data-action=auto]');
+ const ruleBox=await rules.boundingBox(),mount=await state('[data-action=rules]');
+ await page.mouse.move(ruleBox.x+ruleBox.width/2,ruleBox.y+ruleBox.height/2);await page.mouse.down();await page.waitForTimeout(90);
+ check('native mouse hold does not shrink the carved mounting', (await state('[data-action=rules]')).socket==='none');
+ await page.mouse.move(1,1);await page.mouse.up();await page.waitForTimeout(350);
+ check('drag-release outside the control restores neutral without opening rules', !(await state('[data-action=rules]')).depressed&&await page.locator('.modal').count()===0);
+ await rules.dispatchEvent('pointerdown',{button:0,pointerId:21});await auto.dispatchEvent('pointerdown',{button:0,pointerId:22});
+ await rules.dispatchEvent('pointercancel',{pointerId:21});check('pointer cancellation only restores its own control',!(await state('[data-action=rules]')).depressed&&(await state('[data-action=auto]')).depressed);
+ await auto.dispatchEvent('pointercancel',{pointerId:22});
+ for(let i=0;i<12;i++){await rules.dispatchEvent('pointerdown',{button:0,pointerId:31});await rules.dispatchEvent('pointerup',{pointerId:31});}
+ await rules.dispatchEvent('pointerdown',{button:0,pointerId:31});
+ check('rapid taps do not accumulate rebound animations',await rules.evaluate(b=>b.getAnimations({subtree:true}).length<=3));
+ await rules.evaluate(b=>b.disabled=true);await page.waitForTimeout(20);check('disabling a held control clears its depressed state',!(await state('[data-action=rules]')).depressed);
+ await rules.evaluate(b=>b.disabled=false);await rules.dispatchEvent('pointerup',{pointerId:31});
+ await rules.focus();await page.keyboard.down('Space');await page.waitForTimeout(90);
+ const keyState=await state('[data-action=rules]');check('keyboard holds the same inset face without deforming its socket',keyState.depressed&&keyState.socket==='none');
+ await page.keyboard.up('Space');await page.locator('.modal').waitFor();
  check('keyboard opens rules with intact labels',await page.locator('.modal-content').innerText().then(t=>t.length>100));
  await page.locator('.modal-close').click();
  await page.locator('[data-action=home]').click();await page.waitForFunction(()=>F42_QA.snapshot().screen==='home'&&!document.querySelector('.outgoing'));
@@ -42,6 +58,11 @@ try{
  await button.dispatchEvent('pointerdown',{button:0,pointerId:12});await page.waitForTimeout(100);check('OS reduced motion disables moving button faces',!(await state('[data-action=spin]')).depressed);await button.dispatchEvent('pointercancel',{pointerId:12});
  await page.evaluate(()=>{window.interactionPreview=false;F42_QA.showcase('mega').then(()=>window.interactionPreview=true);});await page.waitForTimeout(100);
  check('reduced motion caps particles',await page.locator('.wealth-flight>img').count()<=3);await page.locator('.award-continue').click();await page.waitForFunction(()=>window.interactionPreview);
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.locator('[data-action=bet]').click();await page.locator('[data-action=set-bet][data-index="4"]').click();await page.waitForTimeout(100);
+ check('BET uses the same carved mechanical mounting',await page.locator('.bet-display').getAttribute('data-material')==='button-gold');
+ const textFits=await page.locator('button.physical-control').evaluateAll(buttons=>buttons.every(b=>{const label=b.querySelector('.control-label'),r=label.getBoundingClientRect(),range=document.createRange();range.selectNodeContents(label);const t=range.getBoundingClientRect();return !t.width||(t.left>=r.left-1&&t.right<=r.right+1&&t.top>=r.top-1&&t.bottom<=r.bottom+1);}));
+ check('live button labels are fully contained in their inset faces',textFits);
  check('no interaction runtime errors',errors.length===0);
  await fs.writeFile('docs/interaction-audit.json',JSON.stringify({date:new Date().toISOString(),sourceFingerprint:await sourceFingerprint(),checks,tiers,errors,note:'Actual desktop Chrome interactions; no physical mobile frame-rate or manual audio sign-off.'},null,2));
  const picture=b=>'data:image/png;base64,'+b.toString('base64');await page.setViewportSize({width:1200,height:630});

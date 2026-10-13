@@ -2,7 +2,21 @@
 
 日期：2026-10-13。工程为 Cocos Creator 3.8.8，浏览器运行的是引擎导出预览。完成的是完整本地模板；原生发行状态见 [发布清单](f44-release-status.json)。本任务未提交或推送 Git。
 
-## 反馈音优先混音 · f44-feedback-mix-20261013
+## 当前大奖升档与双高潮 · f44-grand-prize-20261013
+
+增强的是演出编排：艺术标题按原比例增大，升档时交接并落定；柜机侧轨按财宝底座、肩部、顶部的次序点亮；角色后方增加金色放射光与方形烟花，减少持续漂浮金币，把较大的金币集中到升档和揭晓。最终揭晓的两次高潮跟随已有音乐重音。演出期间玻璃内转轴透明度为 116，退场恢复 255；原有余额、角色、普通奖和结算逻辑保留。反馈音优先混音源码哈希与前一轮一致。
+
+| 本轮检查 | 结果 | 证据 |
+|---|---|---|
+| 源码与导出 | 类型检查、演出专项测试退出 0。Creator 3.8.8 独立导出 Finished，62 秒；macOS CLI 退出阶段返回 36，实际产物通过以下浏览器检查 | [源码/导出哈希](qa/f44-grand-prize-20261013/delivery/manifest.json)、[构建日志](qa/f44-grand-prize-20261013/delivery/creator-build.log) |
+| 奖级与尺寸 | 四模式×BIG/SUPER/MEGA/EPIC×390×844/320×568，共 32 组通过；金额、标题及控制区检查，零浏览器异常 | [演出报告](qa/f44-grand-prize-20261013/awards/award-audit.json) |
+| 输入与恢复 | 常规及减少动态下，提前揭晓、领取、重复演出、尺寸变化、输入隔离与自动退出，共 3 组通过；转轴亮度恢复 | [交互报告](qa/f44-grand-prize-20261013/interactions/interaction-audit.json) |
+| 实际旋转至退场 | 四模式实际扣款强制 EPIC，均经过 0→1→2→3 升档与自动退出；一次扣款/结算、钱包守恒、回合数加一、待结算清空、音频/遮罩/转轴恢复。完整画布录像及解码高潮/退出帧已查看 | [连续报告与录像](qa/f44-grand-prize-20261013/motion/direct-canvas-audit.json)、[四模式截图](screenshots/f44-grand-prize-20261013/README.md) |
+| 音乐衔接 | 31 项生命周期与四个实际付费回合通过：升档重音、揭晓、收尾、静音、后台/返回、场景切换及反馈避让；零浏览器异常 | [音频报告](qa/f44-grand-prize-20261013/audio/runtime-audit.json) |
+
+当前端口 6044 服务 `build/web-grand-prize-20261013`。演出夹具不扣款、不派奖；强制结果只验证表现和本地结算，不证明自然概率。本轮未重跑完整 13 组，未修改购买相关文件。完成的是桌面浏览器中的 Cocos 预览验收；手机实机、原生音频中断、扬声器/耳机听感、签名、正式服务与商店发布仍按下方边界记录。
+
+## 前一轮反馈音优先混音 · f44-feedback-mix-20261013
 
 旧版点击反馈只轻微压低音乐，旋转分支还会覆盖停轮反馈的避让。现在每个受管理反馈有独立的真实音长包络，音乐采用场景与反馈中更低的目标音量；点击/停轮为 28%、启动为 32%、普通中奖/领取为 22%（相对于 0.42 的常态音乐源音量），演出原有更低的背景音乐目标仍有效。音乐及机械声以约 18 ms 的时间常数快速平滑降低，以 360 ms 的时间常数恢复；保留原反馈素材和播放音量。
 
@@ -14,7 +28,7 @@
 | 实际游戏音频通路 | 四模式实际扣款强制 EPIC、逐轴落定、分级音乐/揭晓/退出、单次扣款及结算、声音设置持久化和回大厅，共 31 项通过；零浏览器异常 | [音频运行报告](qa/f44-feedback-mix-20261013/lifecycle/runtime-audit.json) |
 | 导出 | Creator 3.8.8 独立导出 Finished，9 秒；macOS CLI 退出阶段返回 36，当前产物通过上述浏览器复查 | [构建日志](qa/f44-feedback-mix-20261013/delivery/creator-build.log)、[导出配置](qa/f44-feedback-mix-20261013/delivery/build-config.json) |
 
-当前端口 6044 服务 `build/web-feedback-mix-20261013`。这轮验证是桌面 Chrome 中 Cocos 导出的实际音量与 WebAudio 混音，未完成手机/耳机听感、原生音频中断及实机验收；也未重跑完整 13 组。直接反馈夹具不扣款、不结算，另用实际付费强制结果覆盖游戏音频通路，不将强制结果用于证明自然概率。购买相关源码没有在本轮修改；上架和原生支付边界仍按本文下方记录。
+该轮端口 6044 曾服务 `build/web-feedback-mix-20261013`。这轮验证是桌面 Chrome 中 Cocos 导出的实际音量与 WebAudio 混音，未完成手机/耳机听感、原生音频中断及实机验收；也未重跑完整 13 组。直接反馈夹具不扣款、不结算，另用实际付费强制结果覆盖游戏音频通路，不将强制结果用于证明自然概率。购买相关源码没有在本轮修改；上架和原生支付边界仍按本文下方记录。
 
 ## 前一轮获奖演出加强 · f44-award-gilded-20261013
 
@@ -27,7 +41,7 @@
 | 交互与退出 | 提前揭晓、领取、自动退出、重复进入、尺寸变化及减少动态检查通过 | [交互报告](qa/f44-award-gilded-20261013/interactions/interaction-audit.json) |
 | 实际扣款/结算与连续过程 | 四模式付费强制 EPIC、一次扣款与派奖、单个角色、原有眨眼/局部动作、退出无残留通过；1,181 个金额/钱包采样一致。实际查看从本轮录像解码的四条高光与退场序列 | [连续报告](qa/f44-award-gilded-20261013/motion/motion-audit.json)、[解码记录](qa/f44-award-gilded-20261013/motion/recorded-sequences.json) |
 | 嵌饰布局 | 每模式六个嵌饰、二十四个高光；新增嵌饰边界与标题、金额、余额及控制区保护范围相交数为 0 | [几何报告](qa/f44-award-gilded-20261013/ornament-geometry.json) |
-| 导出与当前截图 | Creator 3.8.8 独立导出 Finished，22 秒；CLI 退出阶段仍返回 36，产物通过本轮浏览器复查。四模式在一致高潮时点重新截图 | [源码/导出哈希和检查范围](qa/f44-award-gilded-20261013/delivery/manifest.json)、[当前截图](screenshots/f44-award-gilded-20261013/README.md) |
+| 导出与当前截图 | Creator 3.8.8 独立导出 Finished，22 秒；CLI 退出阶段仍返回 36，产物通过本轮浏览器复查。四模式在一致高潮时点重新截图 | [源码/导出哈希和检查范围](qa/f44-award-gilded-20261013/delivery/manifest.json)、[该轮截图](screenshots/f44-award-gilded-20261013/README.md) |
 
 该轮预览指向 `build/web-award-gilded-20261013`，端口 6044。演出继续使用原有分级音乐和结算结果，本轮不改变规则、概率、音频素材或购买相关源码。强制演出夹具与实际付费强制结果都不能证明自然概率。上述结果限于桌面浏览器中的引擎导出，原生、真机和发布边界仍按本文下方记录。
 
@@ -103,4 +117,4 @@
 
 尚未验收：iPhone/iPad 真机画面与性能、签名 iOS 包、Apple 登录、StoreKit Sandbox/TestFlight、生产账号与钱包、音箱/耳机主观听感、采样音源权利核查、商店元数据/隐私配置和外部 App Store 审核。音源许可文件与部分样本来源不完整的说明保留，发行前需完成核查。
 
-[当前截图](screenshots/f44-award-gilded-20261013/README.md) · [功能清单](feature-inventory.md) · [独立产品差异](product-differences.md) · [参考实际运行审查](reference-runtime-audit.json)
+[该轮截图](screenshots/f44-award-gilded-20261013/README.md) · [功能清单](feature-inventory.md) · [独立产品差异](product-differences.md) · [参考实际运行审查](reference-runtime-audit.json)

@@ -1,0 +1,10 @@
+AssertionError [ERR_ASSERTION]: Actual music gain differs from component: 0.12330438196659088 vs 0.1350013246844255
+    at close (/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/tools/qa/audio-mix.cjs:44:29)
+    at nativeEvidence (/Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/tools/qa/audio-mix.cjs:55:5)
+    at /Users/mengjunzhu/Desktop/slots/slots-game-template/完整游戏模版/全游戏模版/F43_Golden_Symphony_v1.0.0/tools/qa/audio-mix.cjs:93:34 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}

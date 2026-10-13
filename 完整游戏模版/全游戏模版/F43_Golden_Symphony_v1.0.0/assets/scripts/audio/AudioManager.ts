@@ -6,6 +6,14 @@ const { ccclass } = _decorator;
 import { audioAssets, AudioScene as Scene, AudioCue as Cue, AWARD_SCORES, awardName, ClipName, cueName, tonalName } from './AudioPalette';
 const FEEDBACK_LEVELS: Record<Cue, number> = {tap:.40, spin:.55, 'reel-stop':.53, win:.58, reward:.56};
 const FEEDBACK_GAPS: Record<Cue, number> = {tap:.065, spin:.12, 'reel-stop':.035, win:.24, reward:.18};
+// Music remains audible beneath the foreground cue; level is never added to
+// the effect itself. Per-voice holds cover the decoded clip and its last tail.
+const FEEDBACK_MUSIC_GAIN: Readonly<Record<string, number>> = {
+  tap:.24, spin:.28, 'reel-stop':.22, win:.18, reward:.18,
+  'win-normal':.18, feature:.18, 'award-accent':.28, 'award-collect':.20,
+};
+const FEEDBACK_TAIL = .08;
+const MUSIC_RECOVERY = .45;
 
 /** All audible voices are owned AudioSources, so mute, hide and scene exit can
  * stop them. Cocos playOneShot creates detached players that source.stop cannot
@@ -39,7 +47,8 @@ export class AudioManager extends Component {
   private scoreTarget = 0;
   private readonly musicVolume = .42;
   private clock = 0;
-  private feedbackDuck = 0;
+  private feedbackGain = 1;
+  private readonly feedbackDucks = new Map<AudioSource, {remaining: number; gain: number}>();
   private readonly lastFeedback = new Map<string, number>();
   private scorePaused = false;
   private cadencePaused = false;
@@ -190,12 +199,22 @@ export class AudioManager extends Component {
     if (this.hidden) return;
     const elapsed = Math.min(dt, .1);
     this.clock += elapsed;
-    if (this.feedbackDuck > 0) {
-      this.feedbackDuck = Math.max(0, this.feedbackDuck - elapsed); this.mixMusic();
+    if (this.feedbackDucks.size) {
+      this.feedbackDucks.forEach((duck, source) => {
+        duck.remaining -= elapsed;
+        // Native playback may be queued: never restore over a still-live tail.
+        if (duck.remaining <= 0 && !source.playing) this.feedbackDucks.delete(source);
+      });
+      this.mixMusic();
+    }
+    if (this.rolling.playing) {
+      const target = .20 * (this.feedbackGain < 1 ? .45 : 1);
+      const time = target < this.rolling.volume ? .018 : .18;
+      this.rolling.volume += (target - this.rolling.volume) * (1 - Math.exp(-elapsed / time));
     }
     for (let i = 0; i < this.music.length; i++) {
       const source = this.music[i];
-      const time = this.targets[i] < source.volume ? .075 : .36;
+      const time = this.targets[i] < source.volume ? .018 : MUSIC_RECOVERY;
       source.volume += (this.targets[i] - source.volume) * (1 - Math.exp(-elapsed / time));
       if (this.targets[i] === 0 && source.volume < .002 && source.playing) { source.stop(); source.volume = 0; }
     }
@@ -229,10 +248,19 @@ export class AudioManager extends Component {
     return source;
   }
   private mixMusic(): void {
+    this.feedbackGain = 1;
+    this.feedbackDucks.forEach(duck => { this.feedbackGain = Math.min(this.feedbackGain, duck.gain); });
     this.targets = [0, 0];
     if (this.active >= 0 && this.musicEnabled && !this.hidden) {
       const audibleAward = this.celebrating && this.effectsEnabled && (this.scoreTarget>0 || this.cadenceTarget>0);
-      const duck = audibleAward ? this.closing ? 1-.84*((this.closeRemaining/this.closeDuration)**2*(3-2*this.closeRemaining/this.closeDuration)) : .16 : this.spinning ? .76 : this.feedbackDuck > 0 ? .82 : 1;
+      const awardGain = audibleAward
+        ? this.closing
+          ? 1 - .84 * ((this.closeRemaining / this.closeDuration) ** 2 * (3 - 2 * this.closeRemaining / this.closeDuration))
+          : .16
+        : 1;
+      // Stops must also duck while other columns are still rolling. Award
+      // exits cannot restore music before the wallet receipt has finished.
+      const duck = Math.min(awardGain, this.spinning ? .76 : 1, this.feedbackGain);
       this.targets[this.active] = this.musicVolume * duck;
     }
   }
@@ -253,21 +281,30 @@ export class AudioManager extends Component {
     const previous = this.lastFeedback.get(category);
     if (previous !== undefined && this.clock - previous < gap) return;
     this.lastFeedback.set(category, this.clock);
-    this.feedbackDuck = Math.max(this.feedbackDuck, category === 'win-normal' || category === 'reward' || category === 'feature' ? .35 : .16);
-    this.mixMusic();
     // Rotate through bounded voices even during asynchronous native loading:
     // `playing` can still be false immediately after a queued play operation.
     const source = this.effects[this.voice++ % this.effects.length];
-    source.stop(); source.clip = clip; source.volume = volume; source.play();
+    source.stop(); source.clip = clip; source.volume = volume;
+    const duration = clip.getDuration();
+    this.feedbackDucks.set(source, {
+      remaining: (Number.isFinite(duration) && duration > 0 ? duration : .35) + FEEDBACK_TAIL,
+      gain: FEEDBACK_MUSIC_GAIN[category] ?? .24,
+    });
+    this.mixMusic();
+    // Arm the reduction before play, including an outgoing crossfade voice.
+    // Cocos' WebAudio player smooths its gain change; recovery uses update.
+    for (const music of this.music) music.volume = Math.min(music.volume, this.musicVolume * this.feedbackGain);
+    if (this.rolling.playing) this.rolling.volume = Math.min(this.rolling.volume, .09);
+    source.play();
   }
   private syncRolling(): void {
     if (!this.spinning || !this.effectsEnabled || this.hidden) { this.rolling.stop(); return; }
     const clip = this.clips.get('reel-roll'); if (!clip || this.rolling.playing) return;
-    this.rolling.clip = clip; this.rolling.volume = .20; this.rolling.play();
+    this.rolling.clip = clip; this.rolling.volume = .20 * (this.feedbackGain < 1 ? .45 : 1); this.rolling.play();
   }
   private stopFeedback(): void {
     this.effects.forEach(source => source.stop()); this.rolling.stop();
-    this.lastFeedback.clear(); this.feedbackDuck = 0;
+    this.lastFeedback.clear(); this.feedbackDucks.clear(); this.feedbackGain = 1;
   }
   private pause(): void {
     this.hidden = true;

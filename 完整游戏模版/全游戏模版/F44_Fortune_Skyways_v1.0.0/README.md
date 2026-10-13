@@ -10,12 +10,18 @@ Cocos Creator **3.8.8** 完整游戏模板。明亮云海中的香槟金空港�
 
 ```sh
 npm install
-python3 tools/preview_server.py --directory build/web-feedback-mix-20261013 --port 6044
+python3 tools/preview_server.py --directory build/web-grand-prize-20261013 --port 6044
 ```
 
-本轮预览使用独立目录 `build/web-feedback-mix-20261013`，避免与并行的 Xcode 构建覆盖。普通重新导出仍可使用 `build/web-mobile` 并相应更改 `--directory`。从 Creator 导出时使用 `tools/web-mobile-release-build.json`；iOS 配置入口为 `tools/ios-preview-build.json`。原生发布仍需完成下述独立验收。
+本轮预览使用独立目录 `build/web-grand-prize-20261013`，避免与并行的 Xcode 构建覆盖。普通重新导出仍可使用 `build/web-mobile` 并相应更改 `--directory`。从 Creator 导出时使用 `tools/web-mobile-release-build.json`；iOS 配置入口为 `tools/ios-preview-build.json`。原生发布仍需完成下述独立验收。
 
-## 2026-10-13 反馈音优先混音
+## 2026-10-13 大奖升档与双高潮
+
+BIG / SUPER / MEGA / EPIC 改为完整升档演出：艺术标题增大并在升级时柔和交接，柜机侧轨从财宝底座向上点亮，角色后方金光与主题烟花展开，金币在升档和最终揭晓时分波喷出。最终金额有两次与音乐重音对齐的高潮；原转轴在玻璃内柔和压暗，退出时恢复。角色、余额与柜机保留在同一空间，普通奖与原有结算规则继续保留。
+
+类型检查与演出专项测试通过；四模式×四奖级×两种手机比例共 32 组画面、3 组交互/退出、四模式实际扣款强制 EPIC 连续录像，以及 31 项音频生命周期检查通过，零浏览器异常。提前揭晓、连续演出、自动退出、尺寸变化和减少动态均覆盖；前一轮反馈音避让源码保持原样。本轮未重跑完整 13 组，也未改变自然概率。见[当前演出截图与录像](docs/screenshots/f44-grand-prize-20261013/README.md)、[交付哈希](docs/qa/f44-grand-prize-20261013/delivery/manifest.json)与[验收记录](docs/acceptance.md)。
+
+## 前一轮反馈音优先混音 · 2026-10-13
 
 点击、启动、停轮、普通中奖和领取反馈响起时，背景音乐按反馈类别降到原常态音量的 22%–32%。每个受管理音效按真实音长分别保护，采用约 18 ms 的快速平滑压低和 360 ms 的恢复时间常数；旋转状态不再覆盖这层避让，机械循环声在反馈期间也降低。反馈素材与原音量保持不变，关闭音效、切换场景或退后台会清除避让状态。
 
@@ -25,7 +31,7 @@ python3 tools/preview_server.py --directory build/web-feedback-mix-20261013 --po
 
 四模式奖励增加主题宝石与罗盘嵌饰、二十四个金边错峰高光，增强标题扫光、金币反光、两波金色喷泉和柜机背后烟花。装饰使用 F44 已有精细图片，固定于柜机金属肩部与财宝底座，延续原有音乐、规则和钱包结算。
 
-本轮类型检查与演出专项测试通过；两手机比例、四模式、四奖级共 32 项检查通过，另检查提前揭晓、领取/自动退出、重复进入和减少动态。四模式真实付费强制 EPIC 的连续录制中，1,181 个金额/钱包采样一致。本轮没有重跑完整 13 组；历史结果保留在下方前一轮记录。详见[当前演出截图](docs/screenshots/f44-award-gilded-20261013/README.md)与[验收记录](docs/acceptance.md)。
+本轮类型检查与演出专项测试通过；两手机比例、四模式、四奖级共 32 项检查通过，另检查提前揭晓、领取/自动退出、重复进入和减少动态。四模式真实付费强制 EPIC 的连续录制中，1,181 个金额/钱包采样一致。本轮没有重跑完整 13 组；历史结果保留在下方前一轮记录。详见[该轮演出截图](docs/screenshots/f44-award-gilded-20261013/README.md)与[验收记录](docs/acceptance.md)。
 
 ## 前一轮检查优化 · f44-polish-20261013
 
@@ -62,7 +68,8 @@ python3 tools/preview_server.py --directory build/web-feedback-mix-20261013 --po
 ## 验收和截图
 
 - [验收记录](docs/acceptance.md)
-- [当前四柜机获奖演出截图](docs/screenshots/f44-award-gilded-20261013/README.md)
+- [当前四柜机大奖高潮、恢复与录像](docs/screenshots/f44-grand-prize-20261013/README.md)
+- [前一轮获奖演出截图](docs/screenshots/f44-award-gilded-20261013/README.md)
 - [前一轮大厅、四柜机与奖励截图](docs/screenshots/f44-polish-20261013/README.md)
 - [初次交付基准截图](docs/screenshots/f44-final-20261013/README.md)
 - [功能清单](docs/feature-inventory.md) · [与 F40 的差异](docs/product-differences.md)
