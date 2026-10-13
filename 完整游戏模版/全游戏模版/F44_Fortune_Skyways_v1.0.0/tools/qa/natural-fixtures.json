@@ -1,0 +1,1527 @@
+{
+  "golden-otter": {
+    "seed": 15993345,
+    "bet": 80,
+    "ordinary": {
+      "spinId": "golden-otter-935008271-5",
+      "gameId": "golden-otter",
+      "seed": 935008271,
+      "stops": [
+        40,
+        42,
+        12,
+        45,
+        2
+      ],
+      "grid": [
+        "chest",
+        "safe",
+        "chip",
+        "bell",
+        "ring",
+        "chip",
+        "bell",
+        "chip",
+        "ring",
+        "crown",
+        "chip",
+        "chip",
+        "bell",
+        "ring",
+        "ring"
+      ],
+      "layout": {
+        "family": "line-reels"
+      },
+      "wins": [
+        {
+          "kind": "line",
+          "symbolId": "chip",
+          "count": 4,
+          "multiplier": 7.4349,
+          "credits": 59,
+          "positions": [
+            2,
+            5,
+            7,
+            11
+          ],
+          "lineIndex": 6
+        }
+      ],
+      "baseWin": 59,
+      "featureWin": 0,
+      "totalWin": 59,
+      "anticipationColumns": []
+    },
+    "ordinarySample": 4,
+    "feature": {
+      "spinId": "golden-otter-197265195-62",
+      "gameId": "golden-otter",
+      "seed": 197265195,
+      "stops": [
+        9,
+        20,
+        33,
+        33,
+        49
+      ],
+      "grid": [
+        "bell",
+        "ring",
+        "bars",
+        "chip",
+        "chip",
+        "bell",
+        "safe",
+        "bell",
+        "bell",
+        "bell",
+        "bars",
+        "safe",
+        "safe",
+        "chip",
+        "ring"
+      ],
+      "layout": {
+        "family": "line-reels"
+      },
+      "wins": [
+        {
+          "kind": "scatter",
+          "symbolId": "safe",
+          "count": 3,
+          "multiplier": 0.41305,
+          "credits": 33,
+          "positions": [
+            6,
+            11,
+            12
+          ]
+        }
+      ],
+      "baseWin": 33,
+      "featureWin": 948,
+      "totalWin": 981,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "chip",
+              "chip",
+              "chest",
+              "chip",
+              "chip",
+              "bars",
+              "ring",
+              "chip",
+              "ring",
+              "bars",
+              "bell",
+              "safe",
+              "chip",
+              "bell",
+              "bars"
+            ],
+            "wins": [
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 2.06525,
+                "credits": 17,
+                "positions": [
+                  1,
+                  4,
+                  7
+                ],
+                "lineIndex": 0
+              },
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 2.06525,
+                "credits": 17,
+                "positions": [
+                  0,
+                  3,
+                  7
+                ],
+                "lineIndex": 5
+              },
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 2.06525,
+                "credits": 17,
+                "positions": [
+                  0,
+                  4,
+                  7
+                ],
+                "lineIndex": 9
+              }
+            ],
+            "credits": 51,
+            "caption": "PHOENIX FLIGHT",
+            "motion": "respin",
+            "held": [],
+            "remaining": 4,
+            "multiplier": 1
+          },
+          {
+            "index": 2,
+            "grid": [
+              "bars",
+              "chest",
+              "safe",
+              "chip",
+              "bell",
+              "ring",
+              "ring",
+              "chip",
+              "ring",
+              "bell",
+              "bars",
+              "ring",
+              "chip",
+              "chip",
+              "bell"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PHOENIX FLIGHT",
+            "motion": "respin",
+            "held": [],
+            "remaining": 3,
+            "multiplier": 1
+          },
+          {
+            "index": 3,
+            "grid": [
+              "bell",
+              "chip",
+              "bell",
+              "chest",
+              "wild",
+              "wild",
+              "chip",
+              "chip",
+              "bars",
+              "chip",
+              "bell",
+              "bell",
+              "bell",
+              "bars",
+              "ring"
+            ],
+            "wins": [
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 2.06525,
+                "credits": 17,
+                "positions": [
+                  1,
+                  4,
+                  7
+                ],
+                "lineIndex": 0
+              },
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 2.06525,
+                "credits": 17,
+                "positions": [
+                  1,
+                  4,
+                  6
+                ],
+                "lineIndex": 7
+              }
+            ],
+            "credits": 34,
+            "caption": "PHOENIX FLIGHT",
+            "motion": "respin",
+            "held": [],
+            "remaining": 2,
+            "multiplier": 1
+          },
+          {
+            "index": 4,
+            "grid": [
+              "bell",
+              "chip",
+              "chip",
+              "wild",
+              "wild",
+              "wild",
+              "bell",
+              "ring",
+              "bell",
+              "bars",
+              "ring",
+              "wild",
+              "chip",
+              "ring",
+              "bell"
+            ],
+            "wins": [
+              {
+                "kind": "line",
+                "symbolId": "bell",
+                "count": 3,
+                "multiplier": 4.1305,
+                "credits": 33,
+                "positions": [
+                  0,
+                  3,
+                  6
+                ],
+                "lineIndex": 1
+              },
+              {
+                "kind": "line",
+                "symbolId": "bell",
+                "count": 3,
+                "multiplier": 4.1305,
+                "credits": 33,
+                "positions": [
+                  0,
+                  4,
+                  8
+                ],
+                "lineIndex": 3
+              }
+            ],
+            "credits": 66,
+            "caption": "PHOENIX FLIGHT",
+            "motion": "respin",
+            "held": [
+              4,
+              5
+            ],
+            "remaining": 1,
+            "multiplier": 1
+          },
+          {
+            "index": 5,
+            "grid": [
+              "wild",
+              "safe",
+              "ring",
+              "wild",
+              "wild",
+              "wild",
+              "bell",
+              "wild",
+              "chest",
+              "bell",
+              "ring",
+              "wild",
+              "chip",
+              "ring",
+              "chest"
+            ],
+            "wins": [
+              {
+                "kind": "line",
+                "symbolId": "bell",
+                "count": 4,
+                "multiplier": 14.8698,
+                "credits": 119,
+                "positions": [
+                  0,
+                  3,
+                  6,
+                  9
+                ],
+                "lineIndex": 1
+              },
+              {
+                "kind": "line",
+                "symbolId": "chest",
+                "count": 3,
+                "multiplier": 10.32625,
+                "credits": 83,
+                "positions": [
+                  0,
+                  4,
+                  8
+                ],
+                "lineIndex": 3
+              },
+              {
+                "kind": "line",
+                "symbolId": "bell",
+                "count": 4,
+                "multiplier": 14.8698,
+                "credits": 119,
+                "positions": [
+                  0,
+                  3,
+                  7,
+                  9
+                ],
+                "lineIndex": 5
+              },
+              {
+                "kind": "line",
+                "symbolId": "ring",
+                "count": 4,
+                "multiplier": 29.7396,
+                "credits": 238,
+                "positions": [
+                  2,
+                  5,
+                  7,
+                  11
+                ],
+                "lineIndex": 6
+              },
+              {
+                "kind": "line",
+                "symbolId": "ring",
+                "count": 4,
+                "multiplier": 29.7396,
+                "credits": 238,
+                "positions": [
+                  0,
+                  4,
+                  7,
+                  10
+                ],
+                "lineIndex": 9
+              }
+            ],
+            "credits": 797,
+            "caption": "PHOENIX FLIGHT",
+            "motion": "respin",
+            "held": [
+              4,
+              5,
+              3,
+              11
+            ],
+            "remaining": 0,
+            "multiplier": 1
+          }
+        ],
+        "totalCredits": 948,
+        "detail": "Three or more lantern SCATTER symbols start five free spins. New WILDs stay held for the remaining free spins. All ten lines are evaluated. Scatters do not retrigger. No extra stake is charged. Base and feature returns share the round limit."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 5
+      },
+      "anticipationColumns": []
+    },
+    "sample": 61
+  },
+  "moon-rabbit": {
+    "seed": 16058882,
+    "bet": 80,
+    "ordinary": {
+      "spinId": "moon-rabbit-16058882-1",
+      "gameId": "moon-rabbit",
+      "seed": 16058882,
+      "stops": [
+        36,
+        31,
+        43,
+        28,
+        17
+      ],
+      "grid": [
+        "bars",
+        "coin",
+        "chip",
+        "bars",
+        "pouch",
+        "key",
+        "bars",
+        "bars",
+        "chip",
+        "chip",
+        "bars",
+        "key",
+        "chip",
+        "wild",
+        "bars",
+        "chip",
+        "crown",
+        "pouch",
+        "chip",
+        "key"
+      ],
+      "layout": {
+        "family": "variable-ways",
+        "activeRows": [
+          3,
+          4,
+          3,
+          2,
+          4
+        ]
+      },
+      "wins": [
+        {
+          "kind": "ways",
+          "symbolId": "bars",
+          "count": 4,
+          "multiplier": 132.3594,
+          "credits": 21,
+          "positions": [
+            0,
+            6,
+            7,
+            10,
+            13
+          ],
+          "ways": 2
+        }
+      ],
+      "baseWin": 21,
+      "featureWin": 0,
+      "totalWin": 21,
+      "anticipationColumns": []
+    },
+    "ordinarySample": 0,
+    "feature": {
+      "spinId": "moon-rabbit-3103739923-7",
+      "gameId": "moon-rabbit",
+      "seed": 3103739923,
+      "stops": [
+        18,
+        5,
+        25,
+        39,
+        10
+      ],
+      "grid": [
+        "chip",
+        "pouch",
+        "bars",
+        "chip",
+        "coin",
+        "bars",
+        "pouch",
+        "pouch",
+        "coin",
+        "coin",
+        "chest",
+        "crown",
+        "bars",
+        "chip",
+        "chip",
+        "key",
+        "pouch",
+        "bars",
+        "wild",
+        "chip"
+      ],
+      "layout": {
+        "family": "variable-ways",
+        "activeRows": [
+          2,
+          4,
+          4,
+          3,
+          2
+        ]
+      },
+      "wins": [],
+      "baseWin": 0,
+      "featureWin": 588,
+      "totalWin": 588,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "chip",
+              "pouch",
+              "bars",
+              "chip",
+              "coin",
+              "bars",
+              "pouch",
+              "pouch",
+              "coin",
+              "coin",
+              "chest",
+              "crown",
+              "bars",
+              "chip",
+              "chip",
+              "key",
+              "pouch",
+              "bars",
+              "wild",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "collect",
+            "lockedSymbol": "coin",
+            "locked": {
+              "4": 49,
+              "8": 98,
+              "9": 98
+            },
+            "remaining": 3,
+            "focus": [
+              4,
+              8,
+              9
+            ]
+          },
+          {
+            "index": 2,
+            "grid": [
+              "chip",
+              "bars",
+              "pouch",
+              "chip",
+              "coin",
+              "chip",
+              "pouch",
+              "chip",
+              "coin",
+              "coin",
+              "chest",
+              "crown",
+              "chip",
+              "chip",
+              "wild",
+              "bars",
+              "pouch",
+              "chest",
+              "chip",
+              "crown"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "respin",
+            "held": [
+              4,
+              8,
+              9
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "4": 49,
+              "8": 98,
+              "9": 98
+            },
+            "remaining": 2,
+            "focus": []
+          },
+          {
+            "index": 3,
+            "grid": [
+              "chest",
+              "coin",
+              "chip",
+              "chip",
+              "coin",
+              "key",
+              "bars",
+              "coin",
+              "coin",
+              "coin",
+              "chip",
+              "bars",
+              "chip",
+              "pouch",
+              "bars",
+              "coin",
+              "key",
+              "pouch",
+              "chip",
+              "pouch"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "respin",
+            "held": [
+              4,
+              8,
+              9
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 196,
+              "4": 49,
+              "7": 49,
+              "8": 98,
+              "9": 98
+            },
+            "remaining": 3,
+            "focus": [
+              1,
+              7
+            ]
+          },
+          {
+            "index": 4,
+            "grid": [
+              "chip",
+              "coin",
+              "chip",
+              "crown",
+              "coin",
+              "chip",
+              "bars",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "chip",
+              "chest",
+              "chest",
+              "pouch",
+              "pouch",
+              "bars",
+              "wild",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "respin",
+            "held": [
+              1,
+              4,
+              7,
+              8,
+              9
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 196,
+              "4": 49,
+              "7": 49,
+              "8": 98,
+              "9": 98,
+              "10": 49,
+              "11": 49
+            },
+            "remaining": 3,
+            "focus": [
+              10,
+              11
+            ]
+          },
+          {
+            "index": 5,
+            "grid": [
+              "pouch",
+              "coin",
+              "chip",
+              "pouch",
+              "coin",
+              "bars",
+              "pouch",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "pouch",
+              "bars",
+              "chip",
+              "pouch",
+              "chest",
+              "chip",
+              "pouch",
+              "pouch"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "respin",
+            "held": [
+              1,
+              4,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 196,
+              "4": 49,
+              "7": 49,
+              "8": 98,
+              "9": 98,
+              "10": 49,
+              "11": 49
+            },
+            "remaining": 2,
+            "focus": []
+          },
+          {
+            "index": 6,
+            "grid": [
+              "chip",
+              "coin",
+              "key",
+              "bars",
+              "coin",
+              "chip",
+              "pouch",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "pouch",
+              "bars",
+              "chip",
+              "pouch",
+              "key",
+              "chest",
+              "chip",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "respin",
+            "held": [
+              1,
+              4,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 196,
+              "4": 49,
+              "7": 49,
+              "8": 98,
+              "9": 98,
+              "10": 49,
+              "11": 49
+            },
+            "remaining": 1,
+            "focus": []
+          },
+          {
+            "index": 7,
+            "grid": [
+              "chip",
+              "coin",
+              "pouch",
+              "chip",
+              "coin",
+              "key",
+              "bars",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "bars",
+              "chip",
+              "chip",
+              "pouch",
+              "crown",
+              "bars",
+              "wild",
+              "coin"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "respin",
+            "held": [
+              1,
+              4,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 196,
+              "4": 49,
+              "7": 49,
+              "8": 98,
+              "9": 98,
+              "10": 49,
+              "11": 49
+            },
+            "remaining": 0,
+            "focus": []
+          },
+          {
+            "index": 8,
+            "grid": [
+              "chip",
+              "coin",
+              "pouch",
+              "chip",
+              "coin",
+              "key",
+              "bars",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "coin",
+              "bars",
+              "chip",
+              "chip",
+              "pouch",
+              "crown",
+              "bars",
+              "wild",
+              "coin"
+            ],
+            "wins": [
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  1
+                ],
+                "multiplier": 2.45,
+                "credits": 196
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  4
+                ],
+                "multiplier": 0.6125,
+                "credits": 49
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  7
+                ],
+                "multiplier": 0.6125,
+                "credits": 49
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  8
+                ],
+                "multiplier": 1.225,
+                "credits": 98
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  9
+                ],
+                "multiplier": 1.225,
+                "credits": 98
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  10
+                ],
+                "multiplier": 0.6125,
+                "credits": 49
+              },
+              {
+                "kind": "bonus",
+                "symbolId": "coin",
+                "count": 1,
+                "positions": [
+                  11
+                ],
+                "multiplier": 0.6125,
+                "credits": 49
+              }
+            ],
+            "credits": 588,
+            "caption": "JADE TREASURE HOLD",
+            "motion": "collect",
+            "lockedSymbol": "coin",
+            "locked": {
+              "1": 196,
+              "4": 49,
+              "7": 49,
+              "8": 98,
+              "9": 98,
+              "10": 49,
+              "11": 49
+            },
+            "remaining": 0,
+            "focus": [
+              1,
+              4,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          }
+        ],
+        "totalCredits": 588,
+        "detail": "Three or more lantern SCATTER symbols in open cells start three treasure-hold respins. Lanterns hold. New lanterns reset the counter to three. Closed cells never receive treasures. Each lantern has a virtual coin value, paid once at the end. No extra stake is charged. The open reel heights stay fixed throughout this round."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 8
+      },
+      "anticipationColumns": []
+    },
+    "sample": 6
+  },
+  "star-fox": {
+    "seed": 16124419,
+    "bet": 80,
+    "feature": {
+      "spinId": "star-fox-1793352121-3",
+      "gameId": "star-fox",
+      "seed": 1793352121,
+      "stops": [
+        12,
+        33,
+        41,
+        2,
+        5,
+        11
+      ],
+      "grid": [
+        "chip",
+        "aqua",
+        "chest",
+        "pearl",
+        "chip",
+        "bars",
+        "safe",
+        "chip",
+        "chip",
+        "wild",
+        "bars",
+        "chest",
+        "safe",
+        "chip",
+        "chip",
+        "aqua",
+        "bars",
+        "aqua",
+        "wild",
+        "wild",
+        "chip",
+        "aqua",
+        "chip",
+        "bars"
+      ],
+      "layout": {
+        "family": "scatter-groups"
+      },
+      "wins": [
+        {
+          "kind": "cluster",
+          "symbolId": "chip",
+          "count": 8,
+          "positions": [
+            0,
+            4,
+            7,
+            8,
+            13,
+            14,
+            20,
+            22
+          ],
+          "multiplier": 0.10220800000000001,
+          "credits": 8
+        }
+      ],
+      "baseWin": 8,
+      "featureWin": 0,
+      "totalWin": 8,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "chest",
+              "aqua",
+              "chest",
+              "pearl",
+              "chip",
+              "chip",
+              "bars",
+              "safe",
+              "chip",
+              "wild",
+              "bars",
+              "chest",
+              "chip",
+              "aqua",
+              "safe",
+              "aqua",
+              "bars",
+              "aqua",
+              "wild",
+              "wild",
+              "safe",
+              "aqua",
+              "aqua",
+              "bars"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PEARL CELEBRATION",
+            "removed": [
+              0,
+              4,
+              7,
+              8,
+              13,
+              14,
+              20,
+              22
+            ],
+            "multiplier": 2,
+            "motion": "drop"
+          }
+        ],
+        "totalCredits": 0,
+        "detail": "A paid group of eight or more identical symbols starts celebration drops. Winning symbols clear; survivors fall and new symbols enter from above. Up to three extra drops pay at 2x, 4x and 6x. A losing drop ends the feature. Groups count anywhere; adjacency is not required. WILD pays only as its own symbol. No extra stake is charged."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 1
+      },
+      "anticipationColumns": []
+    },
+    "sample": 2,
+    "ordinary": {
+      "spinId": "star-fox-1793352121-3",
+      "gameId": "star-fox",
+      "seed": 1793352121,
+      "stops": [
+        12,
+        33,
+        41,
+        2,
+        5,
+        11
+      ],
+      "grid": [
+        "chip",
+        "aqua",
+        "chest",
+        "pearl",
+        "chip",
+        "bars",
+        "safe",
+        "chip",
+        "chip",
+        "wild",
+        "bars",
+        "chest",
+        "safe",
+        "chip",
+        "chip",
+        "aqua",
+        "bars",
+        "aqua",
+        "wild",
+        "wild",
+        "chip",
+        "aqua",
+        "chip",
+        "bars"
+      ],
+      "layout": {
+        "family": "scatter-groups"
+      },
+      "wins": [
+        {
+          "kind": "cluster",
+          "symbolId": "chip",
+          "count": 8,
+          "positions": [
+            0,
+            4,
+            7,
+            8,
+            13,
+            14,
+            20,
+            22
+          ],
+          "multiplier": 0.10220800000000001,
+          "credits": 8
+        }
+      ],
+      "baseWin": 8,
+      "featureWin": 0,
+      "totalWin": 8,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "chest",
+              "aqua",
+              "chest",
+              "pearl",
+              "chip",
+              "chip",
+              "bars",
+              "safe",
+              "chip",
+              "wild",
+              "bars",
+              "chest",
+              "chip",
+              "aqua",
+              "safe",
+              "aqua",
+              "bars",
+              "aqua",
+              "wild",
+              "wild",
+              "safe",
+              "aqua",
+              "aqua",
+              "bars"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PEARL CELEBRATION",
+            "removed": [
+              0,
+              4,
+              7,
+              8,
+              13,
+              14,
+              20,
+              22
+            ],
+            "multiplier": 2,
+            "motion": "drop"
+          }
+        ],
+        "totalCredits": 0,
+        "detail": "A paid group of eight or more identical symbols starts celebration drops. Winning symbols clear; survivors fall and new symbols enter from above. Up to three extra drops pay at 2x, 4x and 6x. A losing drop ends the feature. Groups count anywhere; adjacency is not required. WILD pays only as its own symbol. No extra stake is charged."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 1
+      },
+      "anticipationColumns": []
+    },
+    "ordinarySample": 2
+  },
+  "cloud-elephant": {
+    "seed": 16189956,
+    "bet": 80,
+    "ordinary": {
+      "spinId": "cloud-elephant-16189956-1",
+      "gameId": "cloud-elephant",
+      "seed": 16189956,
+      "stops": [
+        44,
+        36,
+        46,
+        26,
+        13,
+        24
+      ],
+      "grid": [
+        "pouch",
+        "crown",
+        "chip",
+        "bars",
+        "ruby",
+        "chest",
+        "ruby",
+        "chest",
+        "bars",
+        "chest",
+        "chip",
+        "chip",
+        "chip",
+        "chip",
+        "pouch",
+        "chest",
+        "chip",
+        "ruby"
+      ],
+      "layout": {
+        "family": "twin-boards",
+        "panels": 2
+      },
+      "wins": [
+        {
+          "kind": "line",
+          "symbolId": "chip",
+          "count": 3,
+          "multiplier": 6.417000000000001,
+          "credits": 51,
+          "positions": [
+            10,
+            13,
+            16
+          ],
+          "lineIndex": 5
+        }
+      ],
+      "baseWin": 51,
+      "featureWin": 0,
+      "totalWin": 51,
+      "anticipationColumns": []
+    },
+    "ordinarySample": 0,
+    "feature": {
+      "spinId": "cloud-elephant-185949165-7",
+      "gameId": "cloud-elephant",
+      "seed": 185949165,
+      "stops": [
+        35,
+        52,
+        21,
+        24,
+        31,
+        33
+      ],
+      "grid": [
+        "ruby",
+        "bars",
+        "safe",
+        "chip",
+        "pouch",
+        "chip",
+        "chip",
+        "pouch",
+        "bars",
+        "pouch",
+        "safe",
+        "chest",
+        "bars",
+        "wild",
+        "safe",
+        "chest",
+        "chest",
+        "chip"
+      ],
+      "layout": {
+        "family": "twin-boards",
+        "panels": 2
+      },
+      "wins": [
+        {
+          "kind": "line",
+          "symbolId": "chest",
+          "count": 3,
+          "multiplier": 32.085,
+          "credits": 257,
+          "positions": [
+            11,
+            13,
+            15
+          ],
+          "lineIndex": 9
+        }
+      ],
+      "baseWin": 257,
+      "featureWin": 102,
+      "totalWin": 359,
+      "featureResult": {
+        "type": "cabinet-feature",
+        "rounds": [
+          {
+            "index": 1,
+            "grid": [
+              "pouch",
+              "chip",
+              "pouch",
+              "chip",
+              "pouch",
+              "chip",
+              "chip",
+              "pouch",
+              "chip",
+              "ruby",
+              "ruby",
+              "chip",
+              "pouch",
+              "chip",
+              "ruby",
+              "bars",
+              "safe",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PANDA LANTERN REVEAL",
+            "motion": "respin",
+            "remaining": 2
+          },
+          {
+            "index": 2,
+            "grid": [
+              "pouch",
+              "chip",
+              "pouch",
+              "chip",
+              "pouch",
+              "chip",
+              "chip",
+              "pouch",
+              "chip",
+              "ruby",
+              "ruby",
+              "chip",
+              "pouch",
+              "chip",
+              "ruby",
+              "bars",
+              "bars",
+              "chip"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PANDA LANTERN REVEAL",
+            "motion": "transform",
+            "focus": [
+              16
+            ],
+            "remaining": 2
+          },
+          {
+            "index": 3,
+            "grid": [
+              "chip",
+              "pouch",
+              "chip",
+              "pouch",
+              "chip",
+              "chip",
+              "chip",
+              "chip",
+              "pouch",
+              "bars",
+              "chip",
+              "chip",
+              "chest",
+              "chip",
+              "pouch",
+              "pouch",
+              "chip",
+              "pouch"
+            ],
+            "wins": [
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 6.417000000000001,
+                "credits": 51,
+                "positions": [
+                  2,
+                  4,
+                  6
+                ],
+                "lineIndex": 4
+              },
+              {
+                "kind": "line",
+                "symbolId": "chip",
+                "count": 3,
+                "multiplier": 6.417000000000001,
+                "credits": 51,
+                "positions": [
+                  10,
+                  13,
+                  16
+                ],
+                "lineIndex": 5
+              }
+            ],
+            "credits": 102,
+            "caption": "PANDA LANTERN REVEAL",
+            "motion": "respin",
+            "remaining": 1
+          },
+          {
+            "index": 4,
+            "grid": [
+              "chip",
+              "pouch",
+              "chip",
+              "wild",
+              "chip",
+              "chip",
+              "crown",
+              "pouch",
+              "pouch",
+              "chip",
+              "wild",
+              "bars",
+              "bars",
+              "crown",
+              "pouch",
+              "chest",
+              "chip",
+              "ruby"
+            ],
+            "wins": [],
+            "credits": 0,
+            "caption": "PANDA LANTERN REVEAL",
+            "motion": "respin",
+            "remaining": 0
+          }
+        ],
+        "totalCredits": 102,
+        "detail": "Three lantern SCATTER symbols across both boards start three free spins. Each spin reveals all lanterns as one randomly selected ordinary symbol. Both boards evaluate their own five lines with half the stake. No extra stake is charged; free spins do not retrigger. All awards share the round limit."
+      },
+      "feature": {
+        "type": "cabinet-feature",
+        "count": 4
+      },
+      "anticipationColumns": []
+    },
+    "sample": 6
+  }
+}

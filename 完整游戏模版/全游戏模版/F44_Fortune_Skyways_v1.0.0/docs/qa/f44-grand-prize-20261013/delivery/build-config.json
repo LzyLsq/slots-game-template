@@ -1,0 +1,68 @@
+{
+  "platform": "web-mobile",
+  "debug": false,
+  "buildPath": "project://build",
+  "outputName": "web-grand-prize-20261013",
+  "md5Cache": false,
+  "taskName": "web-mobile",
+  "buildMode": "normal",
+  "mainBundleCompressionType": "merge_dep",
+  "packages": {
+    "adsense-h5g-plugin": {
+      "enableAdsense": false,
+      "enableTestAd": false
+    },
+    "web-mobile": {
+      "useWebGPU": false,
+      "orientation": "auto",
+      "embedWebDebugger": false
+    }
+  },
+  "name": "f44-fortune-skyways",
+  "server": "",
+  "engineModulesConfigKey": "defaultConfig",
+  "mangleProperties": false,
+  "skipCompressTexture": false,
+  "sourceMaps": false,
+  "overwriteProjectSettings": {
+    "includeModules": {
+      "gfx-webgl2": "on",
+      "physics": "inherit-project-setting",
+      "physics-2d": "inherit-project-setting"
+    },
+    "macroConfig": {
+      "cleanupImageCache": "inherit-project-setting"
+    }
+  },
+  "nativeCodeBundleMode": "both",
+  "polyfills": {
+    "asyncFunctions": true
+  },
+  "experimentalEraseModules": false,
+  "startSceneAssetBundle": false,
+  "bundleConfigs": [],
+  "inlineEnum": true,
+  "useBuiltinServer": false,
+  "md5CacheOptions": {
+    "excludes": [],
+    "includes": [],
+    "replaceOnly": [],
+    "handleTemplateMd5Link": true
+  },
+  "mainBundleIsRemote": false,
+  "useSplashScreen": true,
+  "bundleCommonChunk": false,
+  "packAutoAtlas": true,
+  "startScene": "ff0cf907-0917-42ed-9570-87d7e8e1bece",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/FortuneSkyways.scene",
+      "uuid": "ff0cf907-0917-42ed-9570-87d7e8e1bece"
+    }
+  ],
+  "wasmCompressionMode": false,
+  "binGroupConfig": {
+    "threshold": 16,
+    "enable": false
+  }
+}

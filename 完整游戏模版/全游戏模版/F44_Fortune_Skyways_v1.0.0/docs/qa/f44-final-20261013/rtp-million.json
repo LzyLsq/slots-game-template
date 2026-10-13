@@ -1,0 +1,98 @@
+{
+  "status": "TARGET_COMPATIBLE",
+  "naturalOnly": true,
+  "newcomerIncluded": false,
+  "forcedResultsIncluded": false,
+  "maxConfidence95HalfWidth": 0.01,
+  "note": "RTP is long-run total return divided by stake, not hit probability. The nominal target allows 0.4 percentage points for integer rounding. A compatible interval is not proof of exact target RTP.",
+  "results": [
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "golden-otter",
+      "spins": 1000000,
+      "seed": 427310044,
+      "bet": 180,
+      "payoutScale": 1.084773,
+      "targetRtp": 0.96,
+      "rtp": 0.9548291888888889,
+      "confidence95": [
+        0.9480524821455197,
+        0.9616058956322581
+      ],
+      "baseRtp": 0.6802576444444445,
+      "featureRtp": 0.2745715444444444,
+      "hitRate": 0.099332,
+      "featureRate": 0.268091,
+      "maxWin": 6834
+    },
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "moon-rabbit",
+      "spins": 1000000,
+      "seed": 427310044,
+      "bet": 180,
+      "payoutScale": 0.681982,
+      "targetRtp": 0.96,
+      "rtp": 0.9631060444444445,
+      "confidence95": [
+        0.95918030723734,
+        0.9670317816515489
+      ],
+      "baseRtp": 0.5295523666666667,
+      "featureRtp": 0.43355367777777776,
+      "hitRate": 0.640931,
+      "featureRate": 0.115242,
+      "maxWin": 9027
+    },
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "star-fox",
+      "spins": 1000000,
+      "seed": 427310044,
+      "bet": 180,
+      "payoutScale": 2.154759,
+      "targetRtp": 0.96,
+      "rtp": 0.9585819611111112,
+      "confidence95": [
+        0.955089723169315,
+        0.9620741990529074
+      ],
+      "baseRtp": 0.6088933611111111,
+      "featureRtp": 0.3496886,
+      "hitRate": 0.579565,
+      "featureRate": 0.579565,
+      "maxWin": 10686
+    },
+    {
+      "calibrationStatus": "TARGET_COMPATIBLE",
+      "targetTolerance": 0.004,
+      "targetCompatibleWithTolerance": true,
+      "sufficientlyPrecise": true,
+      "gameId": "cloud-elephant",
+      "spins": 1000000,
+      "seed": 427310044,
+      "bet": 180,
+      "payoutScale": 0.57492,
+      "targetRtp": 0.96,
+      "rtp": 0.9655532666666666,
+      "confidence95": [
+        0.9622216434283004,
+        0.9688848899050329
+      ],
+      "baseRtp": 0.83622765,
+      "featureRtp": 0.12932561666666667,
+      "hitRate": 0.568897,
+      "featureRate": 0.056804,
+      "maxWin": 6498
+    }
+  ]
+}

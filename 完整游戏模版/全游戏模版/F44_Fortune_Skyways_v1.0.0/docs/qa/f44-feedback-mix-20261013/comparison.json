@@ -1,0 +1,149 @@
+{
+  "cases": [
+    {
+      "mode": "salon",
+      "cue": "tap",
+      "before": {
+        "onsetMusicFraction": 0.9355023149042998,
+        "heldMusicFraction": 0.8683577965431065,
+        "restoredMusic": 0.4188855290412903,
+        "feedbackRms": 0.017172955278964522,
+        "accompanimentRms": 0.03460417866465758
+      },
+      "after": {
+        "onsetMusicFraction": 0.3942768484602483,
+        "heldMusicFraction": 0.28307152175325,
+        "restoredMusic": 0.41319361329078674,
+        "feedbackRms": 0.017172955278964522,
+        "accompanimentRms": 0.014443451244156802
+      }
+    },
+    {
+      "mode": "salon",
+      "cue": "spin",
+      "before": {
+        "onsetMusicFraction": 0.85889900012574,
+        "heldMusicFraction": 0.823445925981432,
+        "restoredMusic": 0.41739892959594727,
+        "feedbackRms": 0.05833832974526533,
+        "accompanimentRms": 0.030142243400933178
+      },
+      "after": {
+        "onsetMusicFraction": 0.35872107034917833,
+        "heldMusicFraction": 0.3210308778808299,
+        "restoredMusic": 0.4134272634983063,
+        "feedbackRms": 0.05651631790104566,
+        "accompanimentRms": 0.01506025262977755
+      }
+    },
+    {
+      "mode": "salon",
+      "cue": "reel-stop",
+      "before": {
+        "onsetMusicFraction": 1,
+        "heldMusicFraction": 1,
+        "restoredMusic": 0.41501757502555847,
+        "feedbackRms": 0.06204690089126876,
+        "accompanimentRms": 0.02131100157504762
+      },
+      "after": {
+        "onsetMusicFraction": 0.40395342920431443,
+        "heldMusicFraction": 0.37073072640824606,
+        "restoredMusic": 0.41052645444869995,
+        "feedbackRms": 0.06255672235340867,
+        "accompanimentRms": 0.010184312336796125
+      }
+    },
+    {
+      "mode": "salon",
+      "cue": "reward",
+      "before": {
+        "onsetMusicFraction": 0.91308375487637,
+        "heldMusicFraction": 0.9535225783212096,
+        "restoredMusic": 0.41963502764701843,
+        "feedbackRms": 0.05412942697936637,
+        "accompanimentRms": 0.03794360128541898
+      },
+      "after": {
+        "onsetMusicFraction": 0.2674687800931812,
+        "heldMusicFraction": 0.22296807753305767,
+        "restoredMusic": 0.41266727447509766,
+        "feedbackRms": 0.05412579030963171,
+        "accompanimentRms": 0.009888055314973079
+      }
+    },
+    {
+      "mode": "golden-otter",
+      "cue": "tap",
+      "before": {
+        "onsetMusicFraction": 0.9362714535740146,
+        "heldMusicFraction": 0.8684669679090844,
+        "restoredMusic": 0.418834388256073,
+        "feedbackRms": 0.017172955278964522,
+        "accompanimentRms": 0.029424406300010687
+      },
+      "after": {
+        "onsetMusicFraction": 0.3936195097133961,
+        "heldMusicFraction": 0.2814901725606197,
+        "restoredMusic": 0.41321438550949097,
+        "feedbackRms": 0.017172955278964522,
+        "accompanimentRms": 0.010873376224768602
+      }
+    },
+    {
+      "mode": "golden-otter",
+      "cue": "spin",
+      "before": {
+        "onsetMusicFraction": 0.8832318898211058,
+        "heldMusicFraction": 0.8107163830704572,
+        "restoredMusic": 0.41727617383003235,
+        "feedbackRms": 0.05646582658803826,
+        "accompanimentRms": 0.04438742540710069
+      },
+      "after": {
+        "onsetMusicFraction": 0.3625526514531638,
+        "heldMusicFraction": 0.3226653568234594,
+        "restoredMusic": 0.4131278693675995,
+        "feedbackRms": 0.05646582658803826,
+        "accompanimentRms": 0.01854488455963547
+      }
+    },
+    {
+      "mode": "golden-otter",
+      "cue": "reel-stop",
+      "before": {
+        "onsetMusicFraction": 1,
+        "heldMusicFraction": 1,
+        "restoredMusic": 0.4150272607803345,
+        "feedbackRms": 0.06306222524592024,
+        "accompanimentRms": 0.02925359024976236
+      },
+      "after": {
+        "onsetMusicFraction": 0.4682819549837427,
+        "heldMusicFraction": 0.3746300502073885,
+        "restoredMusic": 0.41050100326538086,
+        "feedbackRms": 0.062441898214418624,
+        "accompanimentRms": 0.014218804349819819
+      }
+    },
+    {
+      "mode": "golden-otter",
+      "cue": "reward",
+      "before": {
+        "onsetMusicFraction": 0.9138330929541995,
+        "heldMusicFraction": 0.9558290213167705,
+        "restoredMusic": 0.4196195602416992,
+        "feedbackRms": 0.05305756955514605,
+        "accompanimentRms": 0.03318878743420165
+      },
+      "after": {
+        "onsetMusicFraction": 0.2682659244891403,
+        "heldMusicFraction": 0.22285621224746213,
+        "restoredMusic": 0.4126407206058502,
+        "feedbackRms": 0.05305756955514605,
+        "accompanimentRms": 0.008959130644835191
+      }
+    }
+  ],
+  "method": "Same scene/cue fixtures, separate live engine runs. Cue PCM RMS and music gains measured; accompaniment content has independent loop time and must not be treated as a controlled same-note listening comparison."
+}

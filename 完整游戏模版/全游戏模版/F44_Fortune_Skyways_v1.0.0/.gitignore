@@ -1,0 +1,26 @@
+/library/
+/temp/
+/local/
+/profiles/
+/build/
+/node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+/art-source/raw/
+/art-source/room-extension*/
+__pycache__/
+/docs/**/*.webm
+
+# Git delivery: keep current screenshots; retain raw QA media locally.
+/node_modules
+/docs/qa/**/*.png
+/docs/qa/**/*.jpg
+/docs/qa/**/*.jpeg
+/docs/qa/**/*.webp
+/docs/qa/**/*.mp4
+/docs/qa/**/*.wav
+/docs/qa/**/*.html
+/docs/screenshots/*/
+!/docs/screenshots/f44-git-delivery-20261013/

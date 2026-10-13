@@ -1,0 +1,111 @@
+{
+  "revisions": [
+    "marquees-v2",
+    "rays-v3",
+    "optics-v2",
+    "airships-unlabelled-v2"
+  ],
+  "airships": {
+    "golden-otter": {
+      "index": 7,
+      "crop": [
+        8,
+        8,
+        240,
+        239
+      ],
+      "proportional": true,
+      "gutterPixels": 18,
+      "label": null
+    },
+    "moon-rabbit": {
+      "index": 7,
+      "crop": [
+        11,
+        8,
+        234,
+        240
+      ],
+      "proportional": true,
+      "gutterPixels": 18,
+      "label": null
+    },
+    "star-fox": {
+      "index": 7,
+      "crop": [
+        9,
+        8,
+        237,
+        240
+      ],
+      "proportional": true,
+      "gutterPixels": 18,
+      "label": null
+    },
+    "cloud-elephant": {
+      "index": 7,
+      "crop": [
+        10,
+        8,
+        236,
+        240
+      ],
+      "proportional": true,
+      "gutterPixels": 18,
+      "label": null
+    }
+  },
+  "extraction": {
+    "optics": {
+      "revision": "optics-v2",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "semanticOrder": [
+        "glint",
+        "aura",
+        "streak",
+        "twinkle"
+      ],
+      "outputSize": [
+        1024,
+        1024
+      ],
+      "gutterPixels": 18
+    },
+    "airships-unlabelled-v2": {
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "objects": 4,
+      "sourceBounds": [
+        [
+          24,
+          15,
+          615,
+          603
+        ],
+        [
+          650,
+          0,
+          1242,
+          610
+        ],
+        [
+          18,
+          619,
+          618,
+          1226
+        ],
+        [
+          641,
+          619,
+          1241,
+          1230
+        ]
+      ]
+    }
+  }
+}

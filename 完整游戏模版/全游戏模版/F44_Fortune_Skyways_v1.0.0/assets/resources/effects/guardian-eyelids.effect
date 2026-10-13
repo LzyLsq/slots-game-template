@@ -1,0 +1,88 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: guardian-vs:vert
+      frag: guardian-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        closedEyelids: { value: white }
+        eye0: { value: [0, 0, 0, 0] }
+        eye1: { value: [0, 0, 0, 0] }
+        eyelidState: { value: [0, 0, 0, 0] }
+}%
+CCProgram guardian-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec4 color;
+  out vec2 uv0;
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+    return pos;
+  }
+}%
+CCProgram guardian-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  in vec4 color;
+  in vec2 uv0;
+  #pragma builtin(local)
+  layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+  uniform sampler2D closedEyelids;
+  uniform Eyelids {
+    vec4 eye0;
+    vec4 eye1;
+    vec4 eyelidState;
+  };
+  float lidCoverage(vec4 eye) {
+    vec2 q = (uv0 - eye.xy) / max(eye.zw, vec2(0.00001));
+    float inside = step(0.0,q.x)*step(q.x,1.0)*step(0.0,q.y)*step(q.y,1.0);
+    // A curved upper eyelid descends, rests closed, then reopens. Only the
+    // antialiased lid boundary mixes; no whole-face or silhouette crossfade.
+    float edge = eyelidState.x * 1.28 - 0.14 - 0.12 * (q.x - 0.5) * (q.x - 0.5);
+    return inside * smoothstep(-0.025, 0.025, edge-q.y);
+  }
+  vec4 frag () {
+    vec4 original = CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+    float coverage = max(lidCoverage(eye0), lidCoverage(eye1));
+    vec3 closed = texture(closedEyelids, uv0).rgb;
+    vec4 o = vec4(mix(original.rgb, closed, coverage), original.a) * color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

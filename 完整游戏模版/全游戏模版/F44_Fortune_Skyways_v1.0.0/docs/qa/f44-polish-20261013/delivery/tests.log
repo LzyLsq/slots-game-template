@@ -1,0 +1,261 @@
+
+> f44-fortune-skyways@1.0.0 test
+> npm run test:math && npm run test:apple-auth && npm run test:rank && npm run test:layout && npm run test:rules && npm run test:language && npm run test:signature && npm run test:core && npm run test:cabinets && npm run test:primary && npm run test:win-presentation && npm run test:expedition && npm run test:probability
+
+
+> f44-fortune-skyways@1.0.0 test:math
+> node --import tsx tools/math-test.ts
+
+{
+  "status": "PASS",
+  "totalSpins": 4000,
+  "report": {
+    "golden-otter": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 195247,
+      "wins": 112,
+      "features": 273,
+      "maxWin": 5858
+    },
+    "moon-rabbit": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 195929,
+      "wins": 624,
+      "features": 126,
+      "maxWin": 3975
+    },
+    "star-fox": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 184526,
+      "wins": 585,
+      "features": 585,
+      "maxWin": 3220
+    },
+    "cloud-elephant": {
+      "spins": 1000,
+      "wagered": 180000,
+      "won": 159931,
+      "wins": 573,
+      "features": 72,
+      "maxWin": 1634
+    }
+  }
+}
+
+> f44-fortune-skyways@1.0.0 test:apple-auth
+> node --import tsx tools/apple-auth-test.ts
+
+PASS  Apple identity signature, audience, expiry and nonce verification
+
+> f44-fortune-skyways@1.0.0 test:rank
+> node --import tsx tools/rank-test.ts
+
+PASS  Guest totals persist and on-device ranking is sorted from real saved profiles.
+
+> f44-fortune-skyways@1.0.0 test:layout
+> node --import tsx tools/layout-test.ts
+
+PASS 40 cabinet/viewport combinations: enlarged glass, essential bounds, symbol crop and breathing room.
+
+> f44-fortune-skyways@1.0.0 test:rules
+> node --import tsx tools/rules-test.ts && node --import tsx tools/rule-contract-test.ts
+
+PASS actual evaluator awards, direction deduplication, Wild ownership and scatter invariance
+PASS rule contracts: 55 deterministic assertions across 4 genuinely distinct cabinets
+
+> f44-fortune-skyways@1.0.0 test:language
+> node --import tsx tools/language-test.ts
+
+Five languages: dictionary, number preservation, fallback and dynamic messages passed.
+English first-use default, saved language retention and unavailable storage passed.
+All four feature rule sets translated in all five interface languages.
+
+> f44-fortune-skyways@1.0.0 test:signature
+> node --import tsx tools/signature-test.ts
+
+PASS: signature mechanics, conservation, versioned products, historical order replay, persistent wallets and claims
+
+> f44-fortune-skyways@1.0.0 test:core
+> node --import tsx tools/core-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-otter',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 787,
+    featurePaidHits: 63,
+    coreHits: 247,
+    coreReturn: 0.7159092592592593,
+    hits: 310,
+    sampleReturn: 0.9672148148148149,
+    layoutVariants: 1
+  },
+  {
+    id: 'moon-rabbit',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 363,
+    featurePaidHits: 362,
+    coreHits: 1873,
+    coreReturn: 0.5592074074074074,
+    hits: 1930,
+    sampleReturn: 1.0337166666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'star-fox',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1744,
+    featurePaidHits: 578,
+    coreHits: 1744,
+    coreReturn: 0.6112925925925926,
+    hits: 1744,
+    sampleReturn: 0.9512944444444444,
+    layoutVariants: 1
+  },
+  {
+    id: 'cloud-elephant',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 140,
+    featurePaidHits: 140,
+    coreHits: 1639,
+    coreReturn: 0.8782203703703704,
+    hits: 1729,
+    sampleReturn: 0.9853907407407407,
+    layoutVariants: 1
+  }
+]
+
+> f44-fortune-skyways@1.0.0 test:cabinets
+> node --import tsx tools/cabinet-test.ts
+
+PASS 24,000 natural rounds: triggers, held cells, movement, gravity, single collection, capped conservation [
+  {
+    id: 'golden-otter',
+    core: 'lines',
+    feature: 'nudge',
+    samples: 6000,
+    features: 1679,
+    motions: [ 'move' ]
+  },
+  {
+    id: 'moon-rabbit',
+    core: 'ways',
+    feature: 'travelling-wild',
+    samples: 6000,
+    features: 710,
+    motions: [ 'move' ]
+  },
+  {
+    id: 'star-fox',
+    core: 'clusters',
+    feature: 'waterfall',
+    samples: 6000,
+    features: 3460,
+    motions: [ 'drop' ]
+  },
+  {
+    id: 'cloud-elephant',
+    core: 'lines',
+    feature: 'coin-vault',
+    samples: 6000,
+    features: 345,
+    motions: [ 'collect', 'respin' ]
+  }
+]
+
+> f44-fortune-skyways@1.0.0 test:primary
+> node --import tsx tools/primary-test.ts
+
+PASS distinct ordinary-spin rules, explicit winning/losing fixtures, actual paytables, layouts and 12,000 settled rounds [
+  {
+    id: 'golden-otter',
+    family: 'line-reels',
+    columns: 3,
+    rows: 3,
+    spins: 3000,
+    features: 787,
+    featurePaidHits: 63,
+    coreHits: 247,
+    coreReturn: 0.7159092592592593,
+    hits: 310,
+    sampleReturn: 0.9672148148148149,
+    layoutVariants: 1
+  },
+  {
+    id: 'moon-rabbit',
+    family: 'any-reel-ways',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 363,
+    featurePaidHits: 362,
+    coreHits: 1873,
+    coreReturn: 0.5592074074074074,
+    hits: 1930,
+    sampleReturn: 1.0337166666666666,
+    layoutVariants: 1
+  },
+  {
+    id: 'star-fox',
+    family: 'cluster-avalanche',
+    columns: 5,
+    rows: 5,
+    spins: 3000,
+    features: 1744,
+    featurePaidHits: 578,
+    coreHits: 1744,
+    coreReturn: 0.6112925925925926,
+    hits: 1744,
+    sampleReturn: 0.9512944444444444,
+    layoutVariants: 1
+  },
+  {
+    id: 'cloud-elephant',
+    family: 'line-reels',
+    columns: 5,
+    rows: 3,
+    spins: 3000,
+    features: 140,
+    featurePaidHits: 140,
+    coreHits: 1639,
+    coreReturn: 0.8782203703703704,
+    hits: 1729,
+    sampleReturn: 0.9853907407407407,
+    layoutVariants: 1
+  }
+]
+
+> f44-fortune-skyways@1.0.0 test:win-presentation
+> node --import tsx tools/win-presentation-test.ts
+
+PASS strict charged-bet boundaries, retained tiers, translated captions and cabinet-anchored award text across phone proportions.
+PASS all three coin layers across four tiers and cabinets: full rotated bounds clear every reading/control band; both volleys finish before exit.
+PASS paired light crests after early and automatic reveals; all opacity values remain in the render range.
+PASS measured count, genuine tier upgrades, bounded title accents and integer payout motion.
+PASS shared musical impact markers, two material crests and complete light decay before collection.
+PASS real gold glyph punctuation, stable counter spacing and long decimal amount bounds.
+
+> f44-fortune-skyways@1.0.0 test:expedition
+> node --import tsx tools/expedition-test.ts
+
+PASS permanent voyage: settlement-only progress, duplicate protection, four independent goals/final chest, reload, UTC rollover preserves voyage, account isolation, cap ledger and pending refund.
+
+> f44-fortune-skyways@1.0.0 test:probability
+> node --import tsx tools/probability-test.ts
+
+PASS 5+ orthogonally adjacent clusters, diagonal exclusion, no reused group cells, 21943 real cascade boards, stake-independent draws/layout/features.

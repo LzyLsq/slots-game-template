@@ -1,0 +1,982 @@
+{
+  "project": "F44 Fortune Skyways",
+  "updated": "2026-10-13",
+  "provider": "Authorized user-local CC Switch compatible image service",
+  "modelAlias": "gpt-image-2.5",
+  "priorTemplateRasterReuse": false,
+  "commissions": [
+    "salon",
+    "canopy-services",
+    "canopy-brand",
+    "golden-otter-panorama",
+    "canopy-title-0",
+    "golden-otter-guardian",
+    "symbols-golden-otter",
+    "controls-0",
+    "prize-golden-otter",
+    "arrival-golden-otter",
+    "moon-rabbit-panorama",
+    "canopy-title-1",
+    "moon-rabbit-guardian",
+    "symbols-moon-rabbit",
+    "controls-1",
+    "prize-moon-rabbit",
+    "arrival-moon-rabbit",
+    "star-fox-panorama",
+    "canopy-title-2",
+    "star-fox-guardian",
+    "symbols-star-fox",
+    "controls-2",
+    "prize-star-fox",
+    "arrival-star-fox",
+    "cloud-elephant-panorama",
+    "canopy-title-3",
+    "cloud-elephant-guardian",
+    "symbols-cloud-elephant",
+    "controls-3",
+    "prize-cloud-elephant",
+    "arrival-cloud-elephant",
+    "canopy-destinations",
+    "interfaces",
+    "portraits",
+    "plates",
+    "frames",
+    "ledger-frame-room",
+    "win-frames",
+    "award-titles",
+    "optics",
+    "award-coin-flight",
+    "interface-close",
+    "festival-firework-v1",
+    "festival-gold-rays-v2",
+    "festival-spark-plume-v2",
+    "festival-gold-digits-v2",
+    "optics-v2",
+    "rays-v3",
+    "marquees-v2",
+    "airships-unlabelled-v2"
+  ],
+  "atlasProcessing": "Component extraction, proportional packing, transparent RGB gutters, premultiplied-alpha blur; final corrections are reproducible with prepare_final_revisions.py.",
+  "scenePreservation": "Only F44-original rooms and mascots are preserved during intra-project corrections. This does not describe inherited prior-template rooms or bitmap reuse.",
+  "platformSymbolException": {
+    "file": "assets/resources/art/apple-mark.png",
+    "source": "macOS SF Symbols apple.logo rendered by art-source/rasterize_platform_mark.swift",
+    "purpose": "Apple platform identity button, not game illustration",
+    "commercialPlatformUsageReview": "Required before publisher submission"
+  },
+  "sourceFiles": [
+    {
+      "file": "art-source/raw/airships-unlabelled-v2.png",
+      "bytes": 2475783,
+      "sha256": "713d01c498c5ca29b64f1c3a08213c09ba98fb45fff301ee8861bdf52464f8af"
+    },
+    {
+      "file": "art-source/raw/arrival-cloud-elephant.png",
+      "bytes": 3061154,
+      "sha256": "6c3cf7bb97b9cb17cd9fdfce6b40065e44704cce4767e60d72ea62110ea81d53"
+    },
+    {
+      "file": "art-source/raw/arrival-golden-otter.png",
+      "bytes": 3285015,
+      "sha256": "8e72fcd7e3e7b9728649e1e13bfb6e56003ab83e93e7a34b4d2f92fc20d64287"
+    },
+    {
+      "file": "art-source/raw/arrival-moon-rabbit.png",
+      "bytes": 3171907,
+      "sha256": "6588d817c6db20b76a4dab247fd846725898fbdfd849ce995b2cbead2b91acda"
+    },
+    {
+      "file": "art-source/raw/arrival-star-fox.png",
+      "bytes": 3326173,
+      "sha256": "e17a7387bacb658149f6f4b0a621a05f60af7503ad2031fb71755ec5059c4328"
+    },
+    {
+      "file": "art-source/raw/award-coin-flight.png",
+      "bytes": 2627913,
+      "sha256": "ae372bcdc0e2f43fa36efc2f34596b1a2bed7fa845348257b1dd07a8d376d2ba"
+    },
+    {
+      "file": "art-source/raw/award-titles.png",
+      "bytes": 2973251,
+      "sha256": "b8a251d7f6e0fb952443d1c6f48b501b6681ca32532cd208be334809ef5faf55"
+    },
+    {
+      "file": "art-source/raw/canopy-brand.png",
+      "bytes": 2564076,
+      "sha256": "1f7f102b8bd71bd588eaa8c9601ccb35cde902b4ca978a476ecf9bfe0977ab6b"
+    },
+    {
+      "file": "art-source/raw/canopy-destinations.png",
+      "bytes": 2731066,
+      "sha256": "6e99292d04b58a9c01e814459840b60252c0d480bacef64f547b09d2fe0c2add"
+    },
+    {
+      "file": "art-source/raw/canopy-services.png",
+      "bytes": 3182335,
+      "sha256": "bfef8d59b7cfbd6a69c24e52f43c37b472fb679f6dd4fccb9611d1c65f77f467"
+    },
+    {
+      "file": "art-source/raw/canopy-title-0.png",
+      "bytes": 2083596,
+      "sha256": "54d4c737be869c00de5dc07816ebd61906c9b06de657d6e608e394493ab7d673"
+    },
+    {
+      "file": "art-source/raw/canopy-title-1.png",
+      "bytes": 1842635,
+      "sha256": "d9617438748271a2fe08ca9b3fe0da971d6a202e99d8b9ee23f130d051f00740"
+    },
+    {
+      "file": "art-source/raw/canopy-title-2.png",
+      "bytes": 1813620,
+      "sha256": "c6aca84d52e8d63b5011759a5f43012273da86bd4b9616206ff2cf4646dc625c"
+    },
+    {
+      "file": "art-source/raw/canopy-title-3.png",
+      "bytes": 1986629,
+      "sha256": "a99727b81018c8cf75b5f794e2035252408b24494508ca6070832d7ccd97b792"
+    },
+    {
+      "file": "art-source/raw/cloud-elephant-guardian.png",
+      "bytes": 2217137,
+      "sha256": "10f99aaceccbb641187b2f16b7ce22cbcc9e23f07e7ac7402550a40db866b9aa"
+    },
+    {
+      "file": "art-source/raw/cloud-elephant-panorama.png",
+      "bytes": 3199648,
+      "sha256": "4508c8c12fa1ce7e41bb3eea634ecb04d96b9bfd959edffea626664c56cc6ae4"
+    },
+    {
+      "file": "art-source/raw/controls-0.png",
+      "bytes": 1971798,
+      "sha256": "c0bfe672f0c5b522ebd233af564c205ee14393067ce7fa3e0df2c4adbb18dc6b"
+    },
+    {
+      "file": "art-source/raw/controls-1.png",
+      "bytes": 1879277,
+      "sha256": "36819f55b3164543e1f1001721bdfc5f4ce1a63787523f4d2115802afac9dc4e"
+    },
+    {
+      "file": "art-source/raw/controls-2.png",
+      "bytes": 2132959,
+      "sha256": "267957b256411718382636b4e8fdf311fb465f76e9be0a70be9866b404f33720"
+    },
+    {
+      "file": "art-source/raw/controls-3.png",
+      "bytes": 1880076,
+      "sha256": "390c033c7a95e1396270df1615bef279640ed34a66eef872689c5cfd87ee3b0c"
+    },
+    {
+      "file": "art-source/raw/festival-firework-v1.png",
+      "bytes": 2731206,
+      "sha256": "f0b5cff9408f57a31b7729a54035d479d1a7bfac361912854be0f6dbd7567335"
+    },
+    {
+      "file": "art-source/raw/festival-gold-digits-v2.png",
+      "bytes": 996304,
+      "sha256": "258b05d587964f52d8c787f0e1afdfe1ee80d0f50e94825396ba3f6f290727b7"
+    },
+    {
+      "file": "art-source/raw/festival-gold-rays-v2.png",
+      "bytes": 3287562,
+      "sha256": "920cbc6f4366137eb227e6579b0bb360c137c2e4760d70e40780ce2addcdf641"
+    },
+    {
+      "file": "art-source/raw/festival-spark-plume-v2.png",
+      "bytes": 2105201,
+      "sha256": "caae50052c5cd0a75a121b4d87ed8805dd97c6c2f78c41b77589bc5731b51740"
+    },
+    {
+      "file": "art-source/raw/frames.png",
+      "bytes": 2174783,
+      "sha256": "ac523c9ed9d767d5294ab282e1248a2f0c649918c655df4ceadd9a5422f79d62"
+    },
+    {
+      "file": "art-source/raw/golden-otter-guardian.png",
+      "bytes": 1879061,
+      "sha256": "7cd444669a1189b091994ac255e74db75cb27d0333ce664523cffcc4854bac3b"
+    },
+    {
+      "file": "art-source/raw/golden-otter-panorama.png",
+      "bytes": 3378468,
+      "sha256": "db91df7771fc5f252333ed6ceff0e6d26075dae5326bfb5386108a7eaa6a5cb5"
+    },
+    {
+      "file": "art-source/raw/interface-close.png",
+      "bytes": 1772832,
+      "sha256": "af14665862263c39b99887eb0d47b14d49b878742e326dbfcc4d856eb6d5d606"
+    },
+    {
+      "file": "art-source/raw/interfaces.png",
+      "bytes": 2382245,
+      "sha256": "4e86c5d796b6164de4cf5a0928da67b06fa4bf73672563638885f04fcd589a49"
+    },
+    {
+      "file": "art-source/raw/ledger-frame-room.png",
+      "bytes": 2680582,
+      "sha256": "af84a808d133a5471cf0213c2ca5b53a0966fcb38a2a2122b3c39419b2103c29"
+    },
+    {
+      "file": "art-source/raw/marquees-v2.png",
+      "bytes": 1676528,
+      "sha256": "05e057262d0df9ae50d4d7fb4784e9558a276572eaf5e1a2133a279a6181d4a5"
+    },
+    {
+      "file": "art-source/raw/moon-rabbit-guardian.png",
+      "bytes": 1746568,
+      "sha256": "018a2e3244de4e13ccdba6c8b558858e542f1cfb830fa774cf6f23cb0b00caba"
+    },
+    {
+      "file": "art-source/raw/moon-rabbit-panorama.png",
+      "bytes": 3197149,
+      "sha256": "ca7ce78c43251036be24a6c24b666261f657c86c6e253bbd6c63ed2b3f2c0506"
+    },
+    {
+      "file": "art-source/raw/optics-v2.png",
+      "bytes": 1172932,
+      "sha256": "d78dc7b2912e1c985ef93b63e5d1a103f12550a9ed72043217d573e209504b29"
+    },
+    {
+      "file": "art-source/raw/optics.png",
+      "bytes": 2880018,
+      "sha256": "30aea4c40ff273779226ed6a878dca1dd797d34163276e662c7598d9a58be19e"
+    },
+    {
+      "file": "art-source/raw/plates.png",
+      "bytes": 1806916,
+      "sha256": "b49a24c2be889f8dc4490465ec865a5913fc012ea36b0c1006882c5f47976e28"
+    },
+    {
+      "file": "art-source/raw/portraits.png",
+      "bytes": 2969301,
+      "sha256": "61fee838ba13040499a5745cafa230eaf24d7e4127ddc5ebf820a0619d7e139b"
+    },
+    {
+      "file": "art-source/raw/prize-cloud-elephant.png",
+      "bytes": 3061081,
+      "sha256": "492297023c784225b25996f36fd2a891f1be1b822937f608ff06f35685db6788"
+    },
+    {
+      "file": "art-source/raw/prize-golden-otter.png",
+      "bytes": 3022410,
+      "sha256": "f7cb25e288e62b0338bf0ca0b64ca1fccf94b0d1239e1be6c3577327a9249e9a"
+    },
+    {
+      "file": "art-source/raw/prize-moon-rabbit.png",
+      "bytes": 3270372,
+      "sha256": "f42647f114814a86c2e87ec428385c8186cb69dc1c2cf257efaa4ef9dea37b92"
+    },
+    {
+      "file": "art-source/raw/prize-star-fox.png",
+      "bytes": 3261237,
+      "sha256": "7ea89a8cbc0776f5385db8adbc4c0d6bbd1a9e34e5fb24535156637f14ac9af3"
+    },
+    {
+      "file": "art-source/raw/rays-v3.png",
+      "bytes": 2029400,
+      "sha256": "d70349b8f84f6713251ac8371f57365f84d2ae02fa05c792946ff23c645fd515"
+    },
+    {
+      "file": "art-source/raw/salon.png",
+      "bytes": 3696636,
+      "sha256": "deb0ad34cd230970414c5a5fd7c2225aa9fade846337647b58d5787c07215521"
+    },
+    {
+      "file": "art-source/raw/star-fox-guardian.png",
+      "bytes": 2005304,
+      "sha256": "1ad20c51c387d49bc066e21ef097fa2c94680d5609fd6c1b69f170cb54727f9c"
+    },
+    {
+      "file": "art-source/raw/star-fox-panorama.png",
+      "bytes": 3144725,
+      "sha256": "2c3067297dd379ca784b81d457739d972baea66f344f21be282ae2efe8a1a4b1"
+    },
+    {
+      "file": "art-source/raw/symbols-cloud-elephant.png",
+      "bytes": 2328172,
+      "sha256": "237137f0b8ee8694034ad6fda1c214d09cc09e9640b4c5f78f1f30a670b4ffa5"
+    },
+    {
+      "file": "art-source/raw/symbols-golden-otter.png",
+      "bytes": 2242494,
+      "sha256": "c9290479406da2734196aa77babfbe52424dc968a08f7dfb5c241394462324d9"
+    },
+    {
+      "file": "art-source/raw/symbols-moon-rabbit.png",
+      "bytes": 2289443,
+      "sha256": "3109bb330ac54cde6829a73e490a5bf7bc4f450d0f2b68f73a3289d6edc9fa5e"
+    },
+    {
+      "file": "art-source/raw/symbols-star-fox.png",
+      "bytes": 2196147,
+      "sha256": "23d1eca5e420089c177ff1cff14d2724bf504037511d0afe6a5701c43352dfaa"
+    },
+    {
+      "file": "art-source/raw/win-frames.png",
+      "bytes": 1439966,
+      "sha256": "031fb7a419a2376d537b7f3d1e0cd3cbd01b5509fe8eb82fac61e08ea12cae34"
+    }
+  ],
+  "runtimeFiles": [
+    {
+      "file": "assets/resources/art/apple-mark.png",
+      "bytes": 95812,
+      "sha256": "273b7487ce88ea23ddfc1097320734c3a1b452575d856f8507ee59111286b73b"
+    },
+    {
+      "file": "assets/resources/art/arrival-cloud-elephant.png",
+      "bytes": 2493953,
+      "sha256": "6ae04b84ef7011f55f86c6f6a4e151b676c07f3fc981355774b7ced314fa9007"
+    },
+    {
+      "file": "assets/resources/art/arrival-golden-otter.png",
+      "bytes": 2701750,
+      "sha256": "d5f1c4cf518340df6c414b961452848db58e1c974be14bb0c63ca3032daed659"
+    },
+    {
+      "file": "assets/resources/art/arrival-moon-rabbit.png",
+      "bytes": 2718938,
+      "sha256": "6a4703aa55b73e0ceec131a9a4e7867680583294c4321cda7b83674f6007fa01"
+    },
+    {
+      "file": "assets/resources/art/arrival-star-fox.png",
+      "bytes": 2770781,
+      "sha256": "863fb25c05b1999f0c62b154973db7df88316b7b35186793a4f8387d5cd9ab50"
+    },
+    {
+      "file": "assets/resources/art/award-coin-flight.png",
+      "bytes": 1173891,
+      "sha256": "3bb93dadc0b2c7775c405750ee26c1635563e46d3b52edd5d8d4fa0f727ec2f9"
+    },
+    {
+      "file": "assets/resources/art/award-title-big.png",
+      "bytes": 589168,
+      "sha256": "017f93eba84908b4912e4e290b5f2671bea82568b5e9e1caea88a2602360846a"
+    },
+    {
+      "file": "assets/resources/art/award-title-epic.png",
+      "bytes": 619529,
+      "sha256": "0b76df49462c01e7442de8480d31d0f835a84bd2a6b8de8c1d0f9a7d568d32fd"
+    },
+    {
+      "file": "assets/resources/art/award-title-mega.png",
+      "bytes": 628332,
+      "sha256": "00fc84b316d56d62f76037ce0584e9853058b6570c82580dfe1e7ca93d9e2a05"
+    },
+    {
+      "file": "assets/resources/art/award-title-super.png",
+      "bytes": 593100,
+      "sha256": "d8c481c9c8960ec01131f68d087736723f4486355d1eca29aa475a417c05d783"
+    },
+    {
+      "file": "assets/resources/art/award-titles.png",
+      "bytes": 1079673,
+      "sha256": "15c89166374e3d71d2c6aa07c1f339b075d56b819d411e9003931b06d7b93e01"
+    },
+    {
+      "file": "assets/resources/art/canopy-brand.png",
+      "bytes": 850791,
+      "sha256": "9384bfc8615f91950ac723111023c39aa512b9bf21ca9d9efcb783af5ff0854d"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-0.png",
+      "bytes": 725980,
+      "sha256": "ff7b9b65552867f3bf00ee604762df73060615799818a25aad7735139f287fad"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-1.png",
+      "bytes": 363421,
+      "sha256": "b494cc141a39704264e2575b2b5bfc0d8127314904feff761601799c1549307b"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-10.png",
+      "bytes": 321649,
+      "sha256": "64e4e475ad71bbfc25457bb61e9e8ec10eb6f9f15678f9f169ee60ae41dcece4"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-11.png",
+      "bytes": 510500,
+      "sha256": "f6663046c0fe983358fd49ea60e1a211e467aea90a0209b6a34dd9bceab85df5"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-12.png",
+      "bytes": 676343,
+      "sha256": "83685f93dd8d955be6f12143793b800a39f1ff6e8acc8ad6a0ac3939954af9d7"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-13.png",
+      "bytes": 340689,
+      "sha256": "ea8658db82d469f343587daa8ec0d234fc9ac34359569dce2ebf9ea604f651e9"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-14.png",
+      "bytes": 342554,
+      "sha256": "49cd7fb5a2a709768ec33f6a02a10d8b4ffe7c194d45dd546812f6373fa5ce36"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-15.png",
+      "bytes": 470772,
+      "sha256": "52fc757f582ae429975a9f35959cd6dc88e2b063064bf8520f48156d5dbdf190"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-2.png",
+      "bytes": 359896,
+      "sha256": "449eb78b63160543d33c528d1904bb40c055c04cc2b66722e910813f716a0a8b"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-3.png",
+      "bytes": 446600,
+      "sha256": "0320497eeca12cc70e992df58f21f8df1bdd1d5500b9c107f53d9e59a18ad66f"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-4.png",
+      "bytes": 630569,
+      "sha256": "6f6b41d26798f7b6932c35f87a6b09f6d30f97a21647dba308d89cb9db522e7a"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-5.png",
+      "bytes": 375072,
+      "sha256": "bb879af0d07c2488d5a2edfdb2233e39e1b27f5bd5edd2cc0ea48272fe955aee"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-6.png",
+      "bytes": 348730,
+      "sha256": "79284dffa7c79a55fa9365a784749fa04c82df395904bf56d0b9d0942427e7e1"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-7.png",
+      "bytes": 483316,
+      "sha256": "fff16ce88b8750e6aa6fc2c9b0c83aab5af2043cde1b1659f7c7ce4367109a99"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-8.png",
+      "bytes": 914699,
+      "sha256": "ec09f688ead4b890d4a2ce115371bb0b3c917df84fd8436548f7fae6be50e308"
+    },
+    {
+      "file": "assets/resources/art/canopy-button-9.png",
+      "bytes": 328360,
+      "sha256": "9a8a05d0b01dc9c64a1614471021f975e9f003d6ffb0bf05b0b63a37d9bdd734"
+    },
+    {
+      "file": "assets/resources/art/canopy-destinations.png",
+      "bytes": 1796886,
+      "sha256": "be7e09086e629494e8e78d74195376013991c1e3c5545b1a3c592a28fa6ef783"
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-0.png",
+      "bytes": 335587,
+      "sha256": "1d94f0ef1443e3bebe6f41cd4569c050338f3d6bc9762e4582f970dda81ba492"
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-1.png",
+      "bytes": 347924,
+      "sha256": "24a284a5d2686f844e9244f24b41d0f23525ffae773ef8f1ceef7c6861f0999d"
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-2.png",
+      "bytes": 344013,
+      "sha256": "3ee68e12cf15ea4c8dd376668c960eab83f953fa526bddeec525d683152bf69d"
+    },
+    {
+      "file": "assets/resources/art/canopy-frame-3.png",
+      "bytes": 346632,
+      "sha256": "a656994bb40e65a82253108fc8a245f3dcd92665abaa8b03ff313a77493fcbf1"
+    },
+    {
+      "file": "assets/resources/art/canopy-hall-soft.png",
+      "bytes": 3608535,
+      "sha256": "eb082e7e5fd65f33ac28370d1658aa86e69cd0dc32c5461afd0647cbc0ec5288"
+    },
+    {
+      "file": "assets/resources/art/canopy-services.png",
+      "bytes": 2748993,
+      "sha256": "e4a6335121bdd2aff6dd096f01fdd93912cba1b9f02f76196b44bbbdf11caa96"
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-0.png",
+      "bytes": 384447,
+      "sha256": "e7e8ee8f7ec8dbdb678c9a36200b8d484c21aa4618a28144827fadc4692c1ec5"
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-1.png",
+      "bytes": 400862,
+      "sha256": "e374670e3bc8a5811b191c78d88df81c2a0e74090dc93a5a20593e0abd61c925"
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-2.png",
+      "bytes": 470739,
+      "sha256": "c710d322c6a56ba463f698f65702debd030d614a4d314a40f1f53fcbed7468e1"
+    },
+    {
+      "file": "assets/resources/art/canopy-soft-plate-3.png",
+      "bytes": 437515,
+      "sha256": "d1b076753c93f1a76df60f5fd20ae6fdb1a292ff3948177711a12777546805f2"
+    },
+    {
+      "file": "assets/resources/art/canopy-title-0.png",
+      "bytes": 410644,
+      "sha256": "e7578c1dcab241371cbfd80f4c1300f9f7c377097c5f34f41f490a157e838cf8"
+    },
+    {
+      "file": "assets/resources/art/canopy-title-1.png",
+      "bytes": 414336,
+      "sha256": "bb5690eeaf90a3a80dd1b90224e17a98d959d8e4ee6ac1729b9361f1f36314ef"
+    },
+    {
+      "file": "assets/resources/art/canopy-title-2.png",
+      "bytes": 317396,
+      "sha256": "822f9db3759bd6265372553dbc1c1bee033e3f4120bc412a328f0bfb7cd290d5"
+    },
+    {
+      "file": "assets/resources/art/canopy-title-3.png",
+      "bytes": 469800,
+      "sha256": "2fa41db3f408bbb10d24b9ec305099860527c567737d626ffafdf4c5eff71c19"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-guardian-base.png",
+      "bytes": 273641,
+      "sha256": "c5f22f4309d8c9c791a2807e9216f2e12f5639d33dacc6be594493a798b508e2"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-guardian-eyelids.png",
+      "bytes": 1197043,
+      "sha256": "dd9b10da90261563dcc10bce42d5392f7b5794f3237b3fe3df2d26790a071c07"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-guardian-skin.png",
+      "bytes": 961473,
+      "sha256": "631f21d1a9400f5f84d98aa4a7c36d617170f7942c37e1f036597b485c44cbe2"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-guardian.png",
+      "bytes": 1227505,
+      "sha256": "728d953e5a135e262d45328af15bbb5789ff522ae0bea92c07abb13c2cb755b1"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-panorama.png",
+      "bytes": 5205162,
+      "sha256": "ae5178d4b09bc93b4e7bec1df3b524c3aede1444a42b30463bee8410d7dbb4b6"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-room-center.png",
+      "bytes": 4387072,
+      "sha256": "94ee87affde8084b8179aa0f024f5ba5a718e28168c1894ff108faaa7fee1505"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-room-left.png",
+      "bytes": 2905173,
+      "sha256": "94b037bb7bb51b53f6848283a712459565fc7ff09746704ce5116e6dee908b44"
+    },
+    {
+      "file": "assets/resources/art/cloud-elephant-room-right.png",
+      "bytes": 2795632,
+      "sha256": "197d4a1f71d1abe1ca2aee6cf3717e286a8bf8368f383750deb83bce30dc1b81"
+    },
+    {
+      "file": "assets/resources/art/controls-0.png",
+      "bytes": 1228886,
+      "sha256": "cacfd50c8fc655c7c64b9c2d0371fc5787adcb5e215f48a10461874bf63adf1c"
+    },
+    {
+      "file": "assets/resources/art/controls-1.png",
+      "bytes": 1186148,
+      "sha256": "8d9a39d44e02fbe215199639371a570cbeb59714504998f85e9d8658bc36d987"
+    },
+    {
+      "file": "assets/resources/art/controls-2.png",
+      "bytes": 1130549,
+      "sha256": "014b4cc5e46bbad8b609d0237620828c3e658896da9abae946ec4b3368f67f8b"
+    },
+    {
+      "file": "assets/resources/art/controls-3.png",
+      "bytes": 1181136,
+      "sha256": "3a916e7b58b17879a4fb89026adf1fecf681aed238759908c896f7586b80ce73"
+    },
+    {
+      "file": "assets/resources/art/festival-firework-v1.png",
+      "bytes": 1693664,
+      "sha256": "d0e32a85c6599f3b361fd5ffa36a961dfa6113f210ef5b090b7595488110b192"
+    },
+    {
+      "file": "assets/resources/art/festival-gold-digits-v2.png",
+      "bytes": 805442,
+      "sha256": "af722a2fb32e121cd4815c43bd58d4cf53711c82240618761f40f93d4ea4c585"
+    },
+    {
+      "file": "assets/resources/art/festival-gold-rays-v2.png",
+      "bytes": 1272351,
+      "sha256": "5b9b18180c19680026672c77af31fd7fc59ea6525f00784f2ab440338574dc35"
+    },
+    {
+      "file": "assets/resources/art/festival-spark-plume-v2.png",
+      "bytes": 651006,
+      "sha256": "354ebf3c3b612b2be41bfc93a4851dad662df55a061baffc7c166ed751e81923"
+    },
+    {
+      "file": "assets/resources/art/frames.png",
+      "bytes": 631629,
+      "sha256": "4a00f8b3f6f5047eb7ad56b7bf8b30927d09f94cc19fc13e7b44d1aace8c1b6b"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-guardian-base.png",
+      "bytes": 232234,
+      "sha256": "b3b657c68c1bef0ec2f1f79622c8df98f7f81c827c82557fa763cc464db916f8"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-guardian-eyelids.png",
+      "bytes": 1029955,
+      "sha256": "9a2d70f98ce48af836f1832015920cb8373e82f53faf39bbc057c08c0f69ba10"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-guardian-skin.png",
+      "bytes": 789332,
+      "sha256": "e10d08a9f8612f7effcb9380da2927d08aefe0358cf2541398d52ae65ddcbaa7"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-guardian.png",
+      "bytes": 1012554,
+      "sha256": "af6ac7190996e9289119a963b7cc5ada0dd70688dbbd3c26c67a9520fe8004e5"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-panorama.png",
+      "bytes": 5545079,
+      "sha256": "196a6adb845bf5a903f942872c4b1a395fc40151a31253e63f531ab12764f733"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-room-center.png",
+      "bytes": 4529719,
+      "sha256": "cb1d67e9a72d54b4ea10639dcb459bde9f334d662fff228617e50d1834e5ae9a"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-room-left.png",
+      "bytes": 3140482,
+      "sha256": "1bc549d0aa8b94713a46822dc1055bdeee168f349d45832fc5b7408f49ec7322"
+    },
+    {
+      "file": "assets/resources/art/golden-otter-room-right.png",
+      "bytes": 2985172,
+      "sha256": "805fead40b7ea2f1d31bf12be6aa3cae8ea3375d1071cd68f594770c5ba0f855"
+    },
+    {
+      "file": "assets/resources/art/interface-0.png",
+      "bytes": 171948,
+      "sha256": "8a50b036851cc96d4c04dc25180f3ce56c1ff62e1bb47afc0b8ddb12c36af58d"
+    },
+    {
+      "file": "assets/resources/art/interface-1.png",
+      "bytes": 154568,
+      "sha256": "a820c599f6d13e0208ce154a3029f7004361db2f11318a577e67647d99c57225"
+    },
+    {
+      "file": "assets/resources/art/interface-10.png",
+      "bytes": 110131,
+      "sha256": "1cd2ffa87221a51ca084c9dd981d6d1031afbd49818fac070d4b5e24d9fbdbad"
+    },
+    {
+      "file": "assets/resources/art/interface-11.png",
+      "bytes": 113817,
+      "sha256": "1560c0004ef8087282ce642107b8ff1ddd8f196703d4eeff1ad51431dcfa9003"
+    },
+    {
+      "file": "assets/resources/art/interface-12.png",
+      "bytes": 191468,
+      "sha256": "8d60ab6fc0e7a21ca850e6860c6e54b3021d06652d902b60fac974018cfdd07c"
+    },
+    {
+      "file": "assets/resources/art/interface-13.png",
+      "bytes": 131834,
+      "sha256": "9a809a3d4609bacf9bd7ab4ada1aacd0b2368fc85bbbc2204152438b5ea85094"
+    },
+    {
+      "file": "assets/resources/art/interface-14.png",
+      "bytes": 136716,
+      "sha256": "28640e63cf3a91f9f62e75f7c50fe8f97430ac0ad535556dea2a6af214f8df7a"
+    },
+    {
+      "file": "assets/resources/art/interface-15.png",
+      "bytes": 136620,
+      "sha256": "bec45c7038a0339df6597909296e7ab9927eeb3fd4d2011865da2791e4307880"
+    },
+    {
+      "file": "assets/resources/art/interface-2.png",
+      "bytes": 171802,
+      "sha256": "03dafe2ce110d9cf24633c375f52c65593cd99039febc7be20d2af549a23885e"
+    },
+    {
+      "file": "assets/resources/art/interface-3.png",
+      "bytes": 185482,
+      "sha256": "03b9143fadc37235488f216c139c4baa58bea5368d420d7c915042de8c08cb2d"
+    },
+    {
+      "file": "assets/resources/art/interface-4.png",
+      "bytes": 152057,
+      "sha256": "64a00e91f380641d8246444a5e611d6c177139cf4dafb56c375f82549bb31ecb"
+    },
+    {
+      "file": "assets/resources/art/interface-5.png",
+      "bytes": 145085,
+      "sha256": "c473655beb63d76efc0e4a9cbf9a674b035045bbc8a8f762980039602920a135"
+    },
+    {
+      "file": "assets/resources/art/interface-6.png",
+      "bytes": 175706,
+      "sha256": "05d60797d8183c3bcf72af683abcb0a8ca22b5bc7fadb5e2648ed59c37f1669f"
+    },
+    {
+      "file": "assets/resources/art/interface-7.png",
+      "bytes": 142665,
+      "sha256": "016923fa641de60d00e64acec1513d948667138c13b9a6670d31853e590285ab"
+    },
+    {
+      "file": "assets/resources/art/interface-8.png",
+      "bytes": 140786,
+      "sha256": "ea895ba0b40df71ec18c94721d6fd4777a2a882cd86eb1396bcd1f6b57b465d5"
+    },
+    {
+      "file": "assets/resources/art/interface-9.png",
+      "bytes": 82738,
+      "sha256": "50b3bfcf81223115b7630cc31fb1ef524b33b8b8a1f7a6d57389cf3ee211762e"
+    },
+    {
+      "file": "assets/resources/art/interface-close.png",
+      "bytes": 1794434,
+      "sha256": "eb2e5fd6c5b91312f11322890c720d1056d5f5de9e2b291b345c9faf921e14dd"
+    },
+    {
+      "file": "assets/resources/art/interfaces.png",
+      "bytes": 1504464,
+      "sha256": "bedd8f940d1b027aa21c07421526669067b0801db6051b59505d4c7015f2a3b6"
+    },
+    {
+      "file": "assets/resources/art/ledger-frame-room.png",
+      "bytes": 1769739,
+      "sha256": "3277d6e07425eaabcafc11db8a21ef69810dd71cbb40ad8a58c858cc6719e93c"
+    },
+    {
+      "file": "assets/resources/art/ledger-paper-room.png",
+      "bytes": 973685,
+      "sha256": "0be8b8bba518caa2ec357fe76fe827fb0d50d5c90cae6b709c410067a0dcd24b"
+    },
+    {
+      "file": "assets/resources/art/mascot-coin.png",
+      "bytes": 2845383,
+      "sha256": "76b33b585c5ebce8ca99238a1d4bf59e4119681a3572759ef6ae996dcddf22f9"
+    },
+    {
+      "file": "assets/resources/art/mascot-pearl.png",
+      "bytes": 3047739,
+      "sha256": "fe6dd47586922ef23fdd7e9472a19a53d5d7f5d2f8605d549a4fa70ee548bfb6"
+    },
+    {
+      "file": "assets/resources/art/mascot-ruby.png",
+      "bytes": 2875897,
+      "sha256": "30447e083a6ea889415d2ecedfa3567f69c4cbce87d55b36cb7e25a635ed46f0"
+    },
+    {
+      "file": "assets/resources/art/mascot-sapphire.png",
+      "bytes": 3119992,
+      "sha256": "136c81c6adbc51cba85857a82f71a66b7941c7e8d013dc2af3f40e2cd363d66a"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-guardian-base.png",
+      "bytes": 263418,
+      "sha256": "4178cf0f23ba7f4232e606101db9b4cc964214308394a1d86e9222565bf2065c"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-guardian-eyelids.png",
+      "bytes": 1017789,
+      "sha256": "d06570d55922dc88e40915c1ec3806ec7b5cf11bb2264a729197dc863b0d53bf"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-guardian-skin.png",
+      "bytes": 721142,
+      "sha256": "be4ef50c27099aba861c8a9aa332592ae801f732eaf19bed5403d4eee30a0b63"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-guardian.png",
+      "bytes": 976918,
+      "sha256": "247a03193206951a7880fbc0174137b46546dfd372182994a9241407e924eabb"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-panorama.png",
+      "bytes": 5208637,
+      "sha256": "a5befdc2114728f6bde1d61c63f3f895614a9b4dcdf2e77d26620e4c8f313d50"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-room-center.png",
+      "bytes": 4590312,
+      "sha256": "6e56f4aac7411c5c7ca90b4c3216cb7e1416a7a38f85a5a2a608800aec9f329f"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-room-left.png",
+      "bytes": 2877181,
+      "sha256": "4455a11cf8a966e308e465b09fed44dc4c0a1110bf1b0ed2d541b67431a5db33"
+    },
+    {
+      "file": "assets/resources/art/moon-rabbit-room-right.png",
+      "bytes": 2795384,
+      "sha256": "1b5a0deb128fd11556c2ff60cb27db55e146e6f184aa6307f89c7ae02000c6aa"
+    },
+    {
+      "file": "assets/resources/art/optics.png",
+      "bytes": 333603,
+      "sha256": "ff956826ea63198bb03874c65316a3f8808b21ccc66d563deae36cb448d9dd6a"
+    },
+    {
+      "file": "assets/resources/art/plates.png",
+      "bytes": 580184,
+      "sha256": "e780cd2c9769ba0ec89166014394deefd392159ee69b0882df1d2f990c61eb20"
+    },
+    {
+      "file": "assets/resources/art/portraits.png",
+      "bytes": 1707083,
+      "sha256": "7705d25e432fc391992a8d3a91905274374e81d5f6ec37bfe3eafb27ed6a0233"
+    },
+    {
+      "file": "assets/resources/art/prize-cloud-elephant.png",
+      "bytes": 1157209,
+      "sha256": "c0e9d0bdd7de5226c8e3805b439836cf9a0ba5166a7bbbfe6087baba1ce80d49"
+    },
+    {
+      "file": "assets/resources/art/prize-golden-otter.png",
+      "bytes": 1167845,
+      "sha256": "df1651077fc800975605f99401757b44282847df7cbab3a7e84a7653fa5b9ab9"
+    },
+    {
+      "file": "assets/resources/art/prize-moon-rabbit.png",
+      "bytes": 1279394,
+      "sha256": "34b36081541f8c1d7a48e43edd9e1324c4612a76e3610286b0c86c02b64b722b"
+    },
+    {
+      "file": "assets/resources/art/prize-star-fox.png",
+      "bytes": 1257989,
+      "sha256": "013d32b9487b1d59b62a5aa250f96b3468b1e9256cddfec5ff33126226145d8b"
+    },
+    {
+      "file": "assets/resources/art/salon-hall.png",
+      "bytes": 3608535,
+      "sha256": "eb082e7e5fd65f33ac28370d1658aa86e69cd0dc32c5461afd0647cbc0ec5288"
+    },
+    {
+      "file": "assets/resources/art/salon.png",
+      "bytes": 3192406,
+      "sha256": "9562022187ffde639ebf6c4859adc604dd4244848345556f2b05e1689b9b5251"
+    },
+    {
+      "file": "assets/resources/art/star-fox-guardian-base.png",
+      "bytes": 198425,
+      "sha256": "dc2b0ecea980b51007cd7ab52c402dc8ac44f356697384fe6666883fa92ec75b"
+    },
+    {
+      "file": "assets/resources/art/star-fox-guardian-eyelids.png",
+      "bytes": 993632,
+      "sha256": "ffa982a78c62c796b99d1c66ae56bdf963137aaceb7c4af7f4b513c7936ef795"
+    },
+    {
+      "file": "assets/resources/art/star-fox-guardian-skin.png",
+      "bytes": 836080,
+      "sha256": "faa88465a8bc082d7ee85268c88ff39b1cc9d0b7189f94055c023253ed90bc6d"
+    },
+    {
+      "file": "assets/resources/art/star-fox-guardian.png",
+      "bytes": 1027116,
+      "sha256": "427fbb4c775baee879bb38b2254bde2f45e63189d7896311e325b5c5ff2b3ed5"
+    },
+    {
+      "file": "assets/resources/art/star-fox-panorama.png",
+      "bytes": 5091856,
+      "sha256": "6cc34f08f44ecf4ad405d01d7e48cba28c0841a897b79b159bf5a149e2b83d00"
+    },
+    {
+      "file": "assets/resources/art/star-fox-room-center.png",
+      "bytes": 4364495,
+      "sha256": "12d5c9fb026c40c21facd9d67fa5b316331a5f0c3faad027474fed99665fc34a"
+    },
+    {
+      "file": "assets/resources/art/star-fox-room-left.png",
+      "bytes": 2629361,
+      "sha256": "602ecccc3bcf4bdd5967b31360566ec09628a3ea397c7ddb3c4692e847664d7e"
+    },
+    {
+      "file": "assets/resources/art/star-fox-room-right.png",
+      "bytes": 2514471,
+      "sha256": "1fa20624e912aaedf2a34bb1cd290dc6552dde9fa41cc31fd5e95c5f1b717113"
+    },
+    {
+      "file": "assets/resources/art/symbols-blur.png",
+      "bytes": 931272,
+      "sha256": "bd342e3055c2399089a4cde154b1d81cb945b1c68c5342bef67da350b57167ea"
+    },
+    {
+      "file": "assets/resources/art/symbols-cloud-elephant-blur.png",
+      "bytes": 935162,
+      "sha256": "facc40784c1723ceb04f32778083864ae78a040bc55d746d5ca4b86303b894f2"
+    },
+    {
+      "file": "assets/resources/art/symbols-cloud-elephant.png",
+      "bytes": 1441569,
+      "sha256": "10c205702d98237a42440832888cafd6b62e5c84e8e3b1bebae39cc2efebfc83"
+    },
+    {
+      "file": "assets/resources/art/symbols-golden-otter-blur.png",
+      "bytes": 931272,
+      "sha256": "bd342e3055c2399089a4cde154b1d81cb945b1c68c5342bef67da350b57167ea"
+    },
+    {
+      "file": "assets/resources/art/symbols-golden-otter.png",
+      "bytes": 1485611,
+      "sha256": "a9ce2f87dd860d94e662ca78a6d9d184bf22917de6d622233d5023f77519a0fb"
+    },
+    {
+      "file": "assets/resources/art/symbols-moon-rabbit-blur.png",
+      "bytes": 937966,
+      "sha256": "782d8f99c9881759ca579516fa8e8130440cb19ce6ee580b1a7eb42b5cfe8454"
+    },
+    {
+      "file": "assets/resources/art/symbols-moon-rabbit.png",
+      "bytes": 1491538,
+      "sha256": "5d21d47380d4c54acbf9c5915a474a2ba9bc5a2764670c3db80fbb5e0389f9f7"
+    },
+    {
+      "file": "assets/resources/art/symbols-star-fox-blur.png",
+      "bytes": 934870,
+      "sha256": "3badfe04dd1b286a8327e2df463b3ef682063219cd52f60434063b607428b447"
+    },
+    {
+      "file": "assets/resources/art/symbols-star-fox.png",
+      "bytes": 1472480,
+      "sha256": "0ea2d02416ec6679423fbfb78252c5205e123638dd1ce07d8521fbb72339e9fe"
+    },
+    {
+      "file": "assets/resources/art/symbols.png",
+      "bytes": 1485611,
+      "sha256": "a9ce2f87dd860d94e662ca78a6d9d184bf22917de6d622233d5023f77519a0fb"
+    },
+    {
+      "file": "assets/resources/art/win-frame-0.png",
+      "bytes": 333984,
+      "sha256": "839b7bcbb2648a1e795d99922ce5bdd0b66b2da546a3472c842460ff3eb73171"
+    },
+    {
+      "file": "assets/resources/art/win-frame-1.png",
+      "bytes": 335882,
+      "sha256": "ea40e3ee30910ead697d2fef922bbdcc229e16eb88b86470cd24aaba50f01534"
+    },
+    {
+      "file": "assets/resources/art/win-frame-2.png",
+      "bytes": 332829,
+      "sha256": "c7c62cddf0da93501f1d8298eed2706007f60984f4d56a65ec61e01881c8ec47"
+    },
+    {
+      "file": "assets/resources/art/win-frame-3.png",
+      "bytes": 336990,
+      "sha256": "7167a5c242e0115e2bf614185baa401eb4238402f82108def155e1e5683b78f7"
+    },
+    {
+      "file": "assets/resources/art/win-frames.png",
+      "bytes": 945982,
+      "sha256": "5d4ec1e433b6c5638dd646dd69d158934d2778dab89d8087e6e06b0c57a5e31f"
+    }
+  ],
+  "serviceFrameProcessing": "The original F44 ledger frame is extracted with transparent outside corners and preserved ivory centre by art-source/prepare_ledger.py, invoked by prepare_art.py. No painted external room is stretched as a panel."
+}

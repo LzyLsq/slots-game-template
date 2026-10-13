@@ -1,0 +1,19 @@
+{
+  "project": "F44 Fortune Skyways",
+  "date": "2026-10-13",
+  "readyForSubmission": false,
+  "localTemplateComplete": true,
+  "requiresImplementation": [
+    "Executable iOS StoreKit and Apple authorization bridge integration, signed native export and device verification",
+    "Publisher production identity, domains, deployment, privacy/support/terms and operational account/wallet services",
+    "Production voyage milestone endpoint parity; local scoped voyage implementation is not a deployed authoritative server feature"
+  ],
+  "requiresVerification": [
+    "Real device rendering, memory/performance, touch and subjective speaker/headphone audio",
+    "StoreKit Sandbox/TestFlight purchases, restore, revocation and Apple login",
+    "Third-party instrument sample provenance clearance and platform mark usage",
+    "App Store product differentiation, metadata, age rating, privacy disclosures and actual external review"
+  ],
+  "preview": "Cocos Creator web-mobile export only; not evidence of a tested iOS binary",
+  "buildExitNote": "Creator reports Build Task Finished; CLI exits 36 on macOS worker shutdown. Running artifacts are separately exercised in browser QA."
+}
