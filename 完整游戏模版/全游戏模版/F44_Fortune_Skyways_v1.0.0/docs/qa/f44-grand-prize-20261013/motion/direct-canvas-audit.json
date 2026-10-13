@@ -1,0 +1,4768 @@
+{
+  "method": "GameCanvas.captureStream(30) + MediaRecorder; decoded WebM frames inspected separately",
+  "results": [
+    {
+      "mode": "golden-otter",
+      "spin": {
+        "video": "direct-canvas/golden-otter-spin-award.webm",
+        "bytes": 5670947,
+        "frames": [
+          {
+            "file": "golden-otter-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-otter-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-otter-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-otter-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-otter-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "golden-otter-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "timing": {
+          "recordSeconds": 12.624699999809264,
+          "frames": 749,
+          "maxFrameMs": 50,
+          "p95FrameMs": 16.700000000000728,
+          "gapsOver100ms": [],
+          "longTasks": [
+            {
+              "start": 18260.199999809265,
+              "duration": 50
+            }
+          ],
+          "tierPath": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "stage": [
+            {
+              "at": 3.54989999961853,
+              "elapsed": 0.04759999990463257,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 3.628,
+              "elapsed": 0.16109999990463256,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 3.7033999996185303,
+              "elapsed": 0.2322999997138977,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 3.803199999809265,
+              "elapsed": 0.33290000009536747,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 3.904299999713898,
+              "elapsed": 0.4322999997138977,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.002699999809265,
+              "elapsed": 0.5325999999046327,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.102299999713898,
+              "elapsed": 0.6326999998092653,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.20189999961853,
+              "elapsed": 0.7326999998092653,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.302799999713898,
+              "elapsed": 0.8322999997138978,
+              "tier": 0,
+              "display": "33",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 2,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.402299999713898,
+              "elapsed": 0.9337999997138978,
+              "tier": 0,
+              "display": "116",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.50289999961853,
+              "elapsed": 1.032299999713898,
+              "tier": 0,
+              "display": "208",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.602299999713898,
+              "elapsed": 1.1324000000953678,
+              "tier": 0,
+              "display": "353",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.703099999904633,
+              "elapsed": 1.2330000000000005,
+              "tier": 0,
+              "display": "532",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.805199999809265,
+              "elapsed": 1.3332999997138983,
+              "tier": 0,
+              "display": "742",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.90289999961853,
+              "elapsed": 1.432900000095368,
+              "tier": 1,
+              "display": "979",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.00439999961853,
+              "elapsed": 1.5322999997138984,
+              "tier": 1,
+              "display": "1,205",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.10289999961853,
+              "elapsed": 1.6330999999046334,
+              "tier": 1,
+              "display": "1,530",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.202699999809266,
+              "elapsed": 1.7322999997138986,
+              "tier": 1,
+              "display": "1,832",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.303599999904632,
+              "elapsed": 1.8325000000000007,
+              "tier": 1,
+              "display": "2,156",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.402799999713897,
+              "elapsed": 1.9325999999046333,
+              "tier": 1,
+              "display": "2,437",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.504,
+              "elapsed": 2.0324000000953686,
+              "tier": 1,
+              "display": "2,784",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.60389999961853,
+              "elapsed": 2.1335000000000006,
+              "tier": 1,
+              "display": "3,262",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.704099999904632,
+              "elapsed": 2.2329000000953676,
+              "tier": 1,
+              "display": "3,565",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.803,
+              "elapsed": 2.333299999713898,
+              "tier": 1,
+              "display": "3,930",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.902299999713898,
+              "elapsed": 2.433299999713898,
+              "tier": 2,
+              "display": "4,306",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.00339999961853,
+              "elapsed": 2.5330999999046324,
+              "tier": 2,
+              "display": "4,669",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.104099999904633,
+              "elapsed": 2.633299999713897,
+              "tier": 2,
+              "display": "5,033",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.203,
+              "elapsed": 2.7331999998092646,
+              "tier": 2,
+              "display": "5,391",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.303299999713897,
+              "elapsed": 2.832900000095367,
+              "tier": 2,
+              "display": "5,682",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.402699999809265,
+              "elapsed": 2.9331999998092644,
+              "tier": 2,
+              "display": "6,069",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.505,
+              "elapsed": 3.033599999904632,
+              "tier": 2,
+              "display": "6,444",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.6025999999046325,
+              "elapsed": 3.1326999998092653,
+              "tier": 2,
+              "display": "6,694",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.70239999961853,
+              "elapsed": 3.2327999997138974,
+              "tier": 2,
+              "display": "6,973",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.84439999961853,
+              "elapsed": 3.3649999999999993,
+              "tier": 2,
+              "display": "7,276",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.903099999904633,
+              "elapsed": 3.430999999999999,
+              "tier": 2,
+              "display": "7,494",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.003299999713898,
+              "elapsed": 3.5322999997138966,
+              "tier": 2,
+              "display": "7,666",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.102,
+              "elapsed": 3.6321999998092647,
+              "tier": 2,
+              "display": "7,816",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.20339999961853,
+              "elapsed": 3.7334000000953678,
+              "tier": 2,
+              "display": "7,996",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.3025,
+              "elapsed": 3.832699999809266,
+              "tier": 3,
+              "display": "8,077",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.402599999904632,
+              "elapsed": 3.9330999999046337,
+              "tier": 3,
+              "display": "8,140",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.503299999713898,
+              "elapsed": 4.032799999713898,
+              "tier": 3,
+              "display": "8,160",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.603399999618531,
+              "elapsed": 4.133199999809265,
+              "tier": 3,
+              "display": "8,231",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.71139999961853,
+              "elapsed": 4.246799999713898,
+              "tier": 3,
+              "display": "8,496",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.804299999713898,
+              "elapsed": 4.332099999904632,
+              "tier": 3,
+              "display": "8,699",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.903299999713898,
+              "elapsed": 4.432099999904632,
+              "tier": 3,
+              "display": "9,058",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.004299999713897,
+              "elapsed": 4.533400000095367,
+              "tier": 3,
+              "display": "9,538",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.10389999961853,
+              "elapsed": 4.633199999809264,
+              "tier": 3,
+              "display": "9,900",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.20389999961853,
+              "elapsed": 4.733199999809265,
+              "tier": 3,
+              "display": "10,347",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.303199999809266,
+              "elapsed": 4.833,
+              "tier": 3,
+              "display": "10,782",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.403,
+              "elapsed": 4.933199999809266,
+              "tier": 3,
+              "display": "11,118",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.5045,
+              "elapsed": 5.032099999904633,
+              "tier": 3,
+              "display": "11,523",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.603599999904633,
+              "elapsed": 5.1355,
+              "tier": 3,
+              "display": "11,828",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.703299999713897,
+              "elapsed": 5.233699999809264,
+              "tier": 3,
+              "display": "11,970",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.803799999713897,
+              "elapsed": 5.332199999809266,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.904599999904633,
+              "elapsed": 5.432599999904633,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.004,
+              "elapsed": 5.532099999904633,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.104,
+              "elapsed": 5.632099999904633,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.203099999904632,
+              "elapsed": 5.733099999904632,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.3185,
+              "elapsed": 5.8495,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.4025,
+              "elapsed": 5.932999999999999,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.504,
+              "elapsed": 6.032299999713896,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.602899999618531,
+              "elapsed": 6.132999999999998,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.705599999904633,
+              "elapsed": 6.2319999999999975,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.804299999713898,
+              "elapsed": 6.33259999990463,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.903,
+              "elapsed": 6.433199999809263,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.003599999904633,
+              "elapsed": 6.532999999999999,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.103699999809265,
+              "elapsed": 6.632999999999998,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.203,
+              "elapsed": 6.732699999809263,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.30389999961853,
+              "elapsed": 6.832099999904631,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.4035,
+              "elapsed": 6.933299999713895,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.503599999904633,
+              "elapsed": 7.032699999809263,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 10,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.602099999904633,
+              "elapsed": 7.136699999809263,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.704,
+              "elapsed": 7.232099999904629,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.82889999961853,
+              "elapsed": 7.364699999809262,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.903299999713898,
+              "elapsed": 7.432299999713894,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.002299999713898,
+              "elapsed": 7.533999999999996,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.104199999809266,
+              "elapsed": 7.6329999999999965,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.20339999961853,
+              "elapsed": 7.732099999904628,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.303,
+              "elapsed": 7.832400000095363,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.402199999809266,
+              "elapsed": 7.933099999904628,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.50239999961853,
+              "elapsed": 8.031999999999995,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.602799999713898,
+              "elapsed": 8.132999999999992,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.703,
+              "elapsed": 8.23269999980926,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.8025,
+              "elapsed": 8.332999999999995,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.903299999713898,
+              "elapsed": 8.432900000095362,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            }
+          ]
+        },
+        "guardian": {
+          "sampleCount": 126,
+          "distinctGestures": 123,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "reelAlpha": 255,
+        "modal": false,
+        "celebrating": false,
+        "balance": 38920,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-5122308244a889e239fb2c387e2c453a",
+            "at": "2026-10-13T04:48:45.534Z",
+            "type": "spin-win",
+            "amount": 12000,
+            "balance": 38920,
+            "reference": "salon-spin-e2d1cef5deb00888a934e156ecfd91c4"
+          },
+          {
+            "id": "tx-62e7a68ec592cc9b8b21f092ad222888",
+            "at": "2026-10-13T04:48:45.527Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-e2d1cef5deb00888a934e156ecfd91c4"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "38,920",
+          "WIN",
+          "12,000",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 12,000 · 150.00× BET"
+        ]
+      },
+      "fixture": "debug epic result; charged and settled real local round; production RNG unaffected"
+    },
+    {
+      "mode": "moon-rabbit",
+      "spin": {
+        "video": "direct-canvas/moon-rabbit-spin-award.webm",
+        "bytes": 7317842,
+        "frames": [
+          {
+            "file": "moon-rabbit-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "moon-rabbit-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "moon-rabbit-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "moon-rabbit-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "moon-rabbit-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "moon-rabbit-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "timing": {
+          "recordSeconds": 15.994299999713897,
+          "frames": 947,
+          "maxFrameMs": 66.70000000000073,
+          "p95FrameMs": 16.799999999999272,
+          "gapsOver100ms": [],
+          "longTasks": [
+            {
+              "start": 9799.89999961853,
+              "duration": 68
+            },
+            {
+              "start": 16772.599999904633,
+              "duration": 64
+            },
+            {
+              "start": 19743.199999809265,
+              "duration": 60
+            }
+          ],
+          "tierPath": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "stage": [
+            {
+              "at": 7.051599999904632,
+              "elapsed": 0.11090000009536743,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.101199999809265,
+              "elapsed": 0.16669999980926514,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.201599999904633,
+              "elapsed": 0.2666999998092652,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.305299999713898,
+              "elapsed": 0.3665999999046326,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.403299999713898,
+              "elapsed": 0.46649999999999997,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.502,
+              "elapsed": 0.5658000001907347,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.6010999999046325,
+              "elapsed": 0.6674999999999999,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.703900000095367,
+              "elapsed": 0.7669000000953674,
+              "tier": 0,
+              "display": "9",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.801799999713897,
+              "elapsed": 0.8663000001907349,
+              "tier": 0,
+              "display": "48",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 2,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.9105,
+              "elapsed": 0.9704999999999999,
+              "tier": 0,
+              "display": "156",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.0065,
+              "elapsed": 1.0679999999999998,
+              "tier": 0,
+              "display": "282",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.101599999904632,
+              "elapsed": 1.1665999999046324,
+              "tier": 0,
+              "display": "413",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.223299999713898,
+              "elapsed": 1.2845999999046323,
+              "tier": 0,
+              "display": "680",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.302699999809265,
+              "elapsed": 1.3664999999999996,
+              "tier": 1,
+              "display": "825",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.403099999904633,
+              "elapsed": 1.4666999998092647,
+              "tier": 1,
+              "display": "1,121",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.500900000095367,
+              "elapsed": 1.5658000001907344,
+              "tier": 1,
+              "display": "1,347",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.602400000095367,
+              "elapsed": 1.6658000001907347,
+              "tier": 1,
+              "display": "1,643",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.702,
+              "elapsed": 1.7663000001907347,
+              "tier": 1,
+              "display": "1,960",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.803,
+              "elapsed": 1.8658000001907347,
+              "tier": 1,
+              "display": "2,292",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.903,
+              "elapsed": 1.9658000001907345,
+              "tier": 1,
+              "display": "2,665",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.003299999713898,
+              "elapsed": 2.0669000000953672,
+              "tier": 1,
+              "display": "3,054",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.105299999713898,
+              "elapsed": 2.167400000095367,
+              "tier": 1,
+              "display": "3,421",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.201099999904633,
+              "elapsed": 2.266400000095367,
+              "tier": 1,
+              "display": "3,726",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.302299999713897,
+              "elapsed": 2.3496999998092645,
+              "tier": 2,
+              "display": "4,099",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.403599999904632,
+              "elapsed": 2.4660999999046322,
+              "tier": 2,
+              "display": "4,469",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.504299999713897,
+              "elapsed": 2.5666999998092654,
+              "tier": 2,
+              "display": "4,905",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.602699999809266,
+              "elapsed": 2.666400000095368,
+              "tier": 2,
+              "display": "5,152",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.702299999713897,
+              "elapsed": 2.7665000000000006,
+              "tier": 2,
+              "display": "5,508",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.800799999713897,
+              "elapsed": 2.866599999904633,
+              "tier": 2,
+              "display": "5,911",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.901900000095367,
+              "elapsed": 2.9663000001907363,
+              "tier": 2,
+              "display": "6,245",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.009299999713898,
+              "elapsed": 3.076400000095369,
+              "tier": 2,
+              "display": "6,643",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.101900000095368,
+              "elapsed": 3.1664000000953694,
+              "tier": 2,
+              "display": "6,860",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.203799999713898,
+              "elapsed": 3.265699999809267,
+              "tier": 2,
+              "display": "7,134",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.303099999904633,
+              "elapsed": 3.366000000000002,
+              "tier": 2,
+              "display": "7,386",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.401400000095368,
+              "elapsed": 3.466500000000002,
+              "tier": 2,
+              "display": "7,611",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.501299999713897,
+              "elapsed": 3.5655999999046344,
+              "tier": 2,
+              "display": "7,836",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.605599999904632,
+              "elapsed": 3.665699999809267,
+              "tier": 2,
+              "display": "7,970",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.701799999713897,
+              "elapsed": 3.766400000095369,
+              "tier": 3,
+              "display": "8,098",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.801699999809266,
+              "elapsed": 3.8670999999046343,
+              "tier": 3,
+              "display": "8,199",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.901900000095367,
+              "elapsed": 3.9669000000953694,
+              "tier": 3,
+              "display": "8,241",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.001900000095368,
+              "elapsed": 4.066500000000001,
+              "tier": 3,
+              "display": "8,255",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.102,
+              "elapsed": 4.1665999999046335,
+              "tier": 3,
+              "display": "8,362",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.202299999713897,
+              "elapsed": 4.2665000000000015,
+              "tier": 3,
+              "display": "8,593",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.3015,
+              "elapsed": 4.366099999904634,
+              "tier": 3,
+              "display": "8,905",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.403099999904633,
+              "elapsed": 4.466300000190736,
+              "tier": 3,
+              "display": "9,282",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.502199999809266,
+              "elapsed": 4.549500000000001,
+              "tier": 3,
+              "display": "9,708",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.602,
+              "elapsed": 4.666300000190737,
+              "tier": 3,
+              "display": "10,155",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.702299999713897,
+              "elapsed": 4.766400000095369,
+              "tier": 3,
+              "display": "10,604",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.801299999713898,
+              "elapsed": 4.866300000190736,
+              "tier": 3,
+              "display": "11,102",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.901599999904633,
+              "elapsed": 4.966199999809266,
+              "tier": 3,
+              "display": "11,421",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.002400000095367,
+              "elapsed": 5.065800000190737,
+              "tier": 3,
+              "display": "11,743",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.101199999809266,
+              "elapsed": 5.166400000095369,
+              "tier": 3,
+              "display": "11,978",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.201400000095367,
+              "elapsed": 5.266400000095369,
+              "tier": 3,
+              "display": "12,108",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.303799999713897,
+              "elapsed": 5.36640000009537,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.401599999904633,
+              "elapsed": 5.46640000009537,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.502099999904633,
+              "elapsed": 5.5498000001907375,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.601699999809265,
+              "elapsed": 5.665800000190738,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.702400000095368,
+              "elapsed": 5.766099999904636,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.812199999809264,
+              "elapsed": 5.866300000190739,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.902900000095368,
+              "elapsed": 5.965699999809269,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.001799999713898,
+              "elapsed": 6.066300000190739,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.102099999904633,
+              "elapsed": 6.149099999904636,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.202900000095367,
+              "elapsed": 6.266900000095371,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.301299999713898,
+              "elapsed": 6.365599999904636,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.402599999904632,
+              "elapsed": 6.465699999809269,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.504799999713898,
+              "elapsed": 6.566000000000004,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.602599999904633,
+              "elapsed": 6.665900000095371,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.703199999809264,
+              "elapsed": 6.767300000190739,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.802400000095368,
+              "elapsed": 6.866099999904636,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.902799999713897,
+              "elapsed": 6.966199999809268,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 10,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.001699999809265,
+              "elapsed": 7.065599999904635,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.1025,
+              "elapsed": 7.1659000000953705,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.2035,
+              "elapsed": 7.266000000000004,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.306400000095367,
+              "elapsed": 7.372199999809269,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.403400000095367,
+              "elapsed": 7.466000000000004,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.503199999809265,
+              "elapsed": 7.566500000000004,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.602400000095367,
+              "elapsed": 7.665900000095371,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.701900000095367,
+              "elapsed": 7.766000000000005,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.800900000095368,
+              "elapsed": 7.849599999904639,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.902900000095368,
+              "elapsed": 7.965400000095372,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.002,
+              "elapsed": 8.065900000095372,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.102599999904633,
+              "elapsed": 8.168000000000005,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.202599999904633,
+              "elapsed": 8.265800000190739,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.302,
+              "elapsed": 8.365599999904637,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.402099999904632,
+              "elapsed": 8.465699999809269,
+              "tier": 3,
+              "display": "12,126",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            }
+          ]
+        },
+        "guardian": {
+          "sampleCount": 159,
+          "distinctGestures": 144,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            0.986538727818787
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "reelAlpha": 255,
+        "modal": false,
+        "celebrating": false,
+        "balance": 39046,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-685507035835efc195ee74ab291f3315",
+            "at": "2026-10-13T04:49:26.397Z",
+            "type": "spin-win",
+            "amount": 12126,
+            "balance": 39046,
+            "reference": "salon-spin-5aab8c54be3de6664161364503452da1"
+          },
+          {
+            "id": "tx-72b448379ba861856930b9b648a84028",
+            "at": "2026-10-13T04:49:26.393Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-5aab8c54be3de6664161364503452da1"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "39,046",
+          "WIN",
+          "12,126",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 12,126 · 151.57× BET"
+        ]
+      },
+      "fixture": "debug epic result; charged and settled real local round; production RNG unaffected"
+    },
+    {
+      "mode": "star-fox",
+      "spin": {
+        "video": "direct-canvas/star-fox-spin-award.webm",
+        "bytes": 8040342,
+        "frames": [
+          {
+            "file": "star-fox-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "star-fox-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "star-fox-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "star-fox-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "star-fox-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "star-fox-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "timing": {
+          "recordSeconds": 17.465900000095367,
+          "frames": 1035,
+          "maxFrameMs": 83.29999999999927,
+          "p95FrameMs": 16.700000000000728,
+          "gapsOver100ms": [],
+          "longTasks": [
+            {
+              "start": 19902.400000095367,
+              "duration": 86
+            },
+            {
+              "start": 20117,
+              "duration": 60
+            },
+            {
+              "start": 21264.099999904633,
+              "duration": 90
+            }
+          ],
+          "tierPath": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "stage": [
+            {
+              "at": 8.241599999904633,
+              "elapsed": 0.0445,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.334299999713897,
+              "elapsed": 0.16949999999999998,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.401299999713897,
+              "elapsed": 0.23349999999999999,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.500799999713898,
+              "elapsed": 0.33449999999999996,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.601099999904633,
+              "elapsed": 0.4331999998092651,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.700900000095368,
+              "elapsed": 0.5331999998092651,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.801099999904633,
+              "elapsed": 0.6332999997138977,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.901400000095368,
+              "elapsed": 0.7333999996185303,
+              "tier": 0,
+              "display": "2",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.002699999809264,
+              "elapsed": 0.8331999998092652,
+              "tier": 0,
+              "display": "22",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 2,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.101199999809266,
+              "elapsed": 0.9330999999046325,
+              "tier": 0,
+              "display": "87",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 2,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.201299999713898,
+              "elapsed": 1.0333999996185301,
+              "tier": 0,
+              "display": "235",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.301,
+              "elapsed": 1.13589999961853,
+              "tier": 0,
+              "display": "393",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.401199999809265,
+              "elapsed": 1.2334999999999996,
+              "tier": 0,
+              "display": "577",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.5015,
+              "elapsed": 1.3346999998092648,
+              "tier": 0,
+              "display": "798",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.600699999809265,
+              "elapsed": 1.4333999996185296,
+              "tier": 1,
+              "display": "1,041",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.701,
+              "elapsed": 1.5333999996185295,
+              "tier": 1,
+              "display": "1,313",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.800599999904632,
+              "elapsed": 1.6351999998092643,
+              "tier": 1,
+              "display": "1,612",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.906799999713897,
+              "elapsed": 1.7333999996185294,
+              "tier": 1,
+              "display": "1,921",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.000799999713898,
+              "elapsed": 1.833699999809264,
+              "tier": 1,
+              "display": "2,253",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.101099999904633,
+              "elapsed": 1.9333999996185292,
+              "tier": 1,
+              "display": "2,597",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.201199999809266,
+              "elapsed": 2.0337999997138962,
+              "tier": 1,
+              "display": "2,956",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.3005,
+              "elapsed": 2.133199999809264,
+              "tier": 1,
+              "display": "3,284",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.401,
+              "elapsed": 2.2330999999046317,
+              "tier": 1,
+              "display": "3,629",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.508599999904632,
+              "elapsed": 2.3449999999999993,
+              "tier": 2,
+              "display": "4,074",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.600699999809265,
+              "elapsed": 2.433499999999999,
+              "tier": 2,
+              "display": "4,444",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.702299999713897,
+              "elapsed": 2.533299999713897,
+              "tier": 2,
+              "display": "4,696",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.800599999904632,
+              "elapsed": 2.6334999999999997,
+              "tier": 2,
+              "display": "5,187",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.900799999713898,
+              "elapsed": 2.7335,
+              "tier": 2,
+              "display": "5,548",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.000900000095367,
+              "elapsed": 2.8331999998092647,
+              "tier": 2,
+              "display": "5,784",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.100699999809265,
+              "elapsed": 2.9332999997138973,
+              "tier": 2,
+              "display": "6,126",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.201400000095367,
+              "elapsed": 3.0334999999999996,
+              "tier": 2,
+              "display": "6,559",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.3015,
+              "elapsed": 3.1330999999046325,
+              "tier": 2,
+              "display": "6,812",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.401299999713897,
+              "elapsed": 3.2335000000000003,
+              "tier": 2,
+              "display": "7,145",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.500900000095367,
+              "elapsed": 3.333699999809266,
+              "tier": 2,
+              "display": "7,403",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.601799999713897,
+              "elapsed": 3.433199999809266,
+              "tier": 2,
+              "display": "7,600",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.701400000095367,
+              "elapsed": 3.533099999904634,
+              "tier": 2,
+              "display": "7,803",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.800699999809265,
+              "elapsed": 3.633199999809267,
+              "tier": 2,
+              "display": "7,979",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.902299999713899,
+              "elapsed": 3.7350999999046337,
+              "tier": 3,
+              "display": "8,141",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.0005,
+              "elapsed": 3.833299999713899,
+              "tier": 3,
+              "display": "8,222",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.100799999713898,
+              "elapsed": 3.9335999999046343,
+              "tier": 3,
+              "display": "8,292",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.200900000095368,
+              "elapsed": 4.033099999904634,
+              "tier": 3,
+              "display": "8,306",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.301400000095368,
+              "elapsed": 4.133099999904632,
+              "tier": 3,
+              "display": "8,358",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.400599999904632,
+              "elapsed": 4.233399999618529,
+              "tier": 3,
+              "display": "8,612",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.501599999904633,
+              "elapsed": 4.333199999809263,
+              "tier": 3,
+              "display": "8,858",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.6005,
+              "elapsed": 4.433399999618528,
+              "tier": 3,
+              "display": "9,287",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.701,
+              "elapsed": 4.533099999904629,
+              "tier": 3,
+              "display": "9,648",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.801400000095368,
+              "elapsed": 4.63509999990463,
+              "tier": 3,
+              "display": "10,165",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.900900000095367,
+              "elapsed": 4.733799999713895,
+              "tier": 3,
+              "display": "10,613",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.001099999904632,
+              "elapsed": 4.83359999990463,
+              "tier": 3,
+              "display": "11,048",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.100799999713898,
+              "elapsed": 4.93359999990463,
+              "tier": 3,
+              "display": "11,446",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.203,
+              "elapsed": 5.034699999809263,
+              "tier": 3,
+              "display": "11,785",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.301,
+              "elapsed": 5.133699999809262,
+              "tier": 3,
+              "display": "12,036",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.401400000095368,
+              "elapsed": 5.233299999713894,
+              "tier": 3,
+              "display": "12,158",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.500599999904633,
+              "elapsed": 5.3336999998092605,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.601400000095367,
+              "elapsed": 5.433299999713893,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.701,
+              "elapsed": 5.533099999904627,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.801699999809266,
+              "elapsed": 5.633799999713892,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 13.901,
+              "elapsed": 5.733399999618525,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.000799999713898,
+              "elapsed": 5.833599999904629,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.116900000095367,
+              "elapsed": 5.946299999713894,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.200599999904632,
+              "elapsed": 6.033099999904628,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.3005,
+              "elapsed": 6.133199999809261,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.400799999713898,
+              "elapsed": 6.234799999713893,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.501599999904633,
+              "elapsed": 6.334499999999995,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.600699999809265,
+              "elapsed": 6.43319999980926,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.701099999904633,
+              "elapsed": 6.533399999618524,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.802099999904632,
+              "elapsed": 6.634899999618525,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 14.925900000095368,
+              "elapsed": 6.758299999713892,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.001199999809264,
+              "elapsed": 6.832999999999993,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.101099999904633,
+              "elapsed": 6.932599999904625,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 10,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.207099999904633,
+              "elapsed": 7.0333999996185215,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.301699999809266,
+              "elapsed": 7.132399999618521,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.463699999809265,
+              "elapsed": 7.298599999904623,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.501699999809265,
+              "elapsed": 7.332999999999991,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.600900000095367,
+              "elapsed": 7.431399999618522,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.701199999809266,
+              "elapsed": 7.532899999618523,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.814699999809266,
+              "elapsed": 7.6507999997138905,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 15.900799999713898,
+              "elapsed": 7.732599999904625,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 16.000900000095367,
+              "elapsed": 7.8328999996185225,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 16.102,
+              "elapsed": 7.933399999618523,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 16.20109999990463,
+              "elapsed": 8.032799999713891,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 16.301,
+              "elapsed": 8.13219999980926,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 16.401,
+              "elapsed": 8.232299999713891,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 16.501599999904634,
+              "elapsed": 8.33269999980926,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 16.601099999904633,
+              "elapsed": 8.43359999990463,
+              "tier": 3,
+              "display": "12,215",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            }
+          ]
+        },
+        "guardian": {
+          "sampleCount": 174,
+          "distinctGestures": 140,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "reelAlpha": 255,
+        "modal": false,
+        "celebrating": false,
+        "balance": 39135,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-3dab6af86e93c9606ab2d963d64fa526",
+            "at": "2026-10-13T04:50:02.781Z",
+            "type": "spin-win",
+            "amount": 12215,
+            "balance": 39135,
+            "reference": "salon-spin-9a510ac9fd14b7a86b4d4c90630ca3df"
+          },
+          {
+            "id": "tx-4fa29b48f1e4d4b25979fd319b40ddc0",
+            "at": "2026-10-13T04:50:02.776Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-9a510ac9fd14b7a86b4d4c90630ca3df"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "39,135",
+          "WIN",
+          "12,215",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 12,215 · 152.69× BET"
+        ]
+      },
+      "fixture": "debug epic result; charged and settled real local round; production RNG unaffected"
+    },
+    {
+      "mode": "cloud-elephant",
+      "spin": {
+        "video": "direct-canvas/cloud-elephant-spin-award.webm",
+        "bytes": 5961425,
+        "frames": [
+          {
+            "file": "cloud-elephant-spin-award-t0.4.png",
+            "time": 0.4,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "cloud-elephant-spin-award-t1.png",
+            "time": 1,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "cloud-elephant-spin-award-t1.8.png",
+            "time": 1.8,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "cloud-elephant-spin-award-t3.2.png",
+            "time": 3.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "cloud-elephant-spin-award-t5.2.png",
+            "time": 5.2,
+            "width": 780,
+            "height": 1688
+          },
+          {
+            "file": "cloud-elephant-spin-award-t7.5.png",
+            "time": 7.5,
+            "width": 780,
+            "height": 1688
+          }
+        ],
+        "timing": {
+          "recordSeconds": 13.211599999904633,
+          "frames": 784,
+          "maxFrameMs": 66.70000000000073,
+          "p95FrameMs": 16.799999999999272,
+          "gapsOver100ms": [],
+          "longTasks": [
+            {
+              "start": 13178.5,
+              "duration": 71
+            },
+            {
+              "start": 13602.5,
+              "duration": 66
+            }
+          ],
+          "tierPath": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "stage": [
+            {
+              "at": 3.815299999713898,
+              "elapsed": 0.08059999990463257,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 3.9050999999046327,
+              "elapsed": 0.1700999999046326,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.0035,
+              "elapsed": 0.2678999996185303,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.103599999904633,
+              "elapsed": 0.3666999998092651,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.2020999999046325,
+              "elapsed": 0.4659999999999999,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 0,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.303400000095367,
+              "elapsed": 0.566199999809265,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.4025,
+              "elapsed": 0.6667999997138976,
+              "tier": 0,
+              "display": "0",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.502199999809265,
+              "elapsed": 0.7656999998092651,
+              "tier": 0,
+              "display": "2",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 1,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.603299999713898,
+              "elapsed": 0.8680999999046325,
+              "tier": 0,
+              "display": "60",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 2,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.702699999809266,
+              "elapsed": 0.9675999999046325,
+              "tier": 0,
+              "display": "151",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.801699999809265,
+              "elapsed": 1.0672999997138977,
+              "tier": 0,
+              "display": "278",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 4.903,
+              "elapsed": 1.167,
+              "tier": 0,
+              "display": "440",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.002,
+              "elapsed": 1.2665,
+              "tier": 0,
+              "display": "600",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.103699999809265,
+              "elapsed": 1.3682999997138976,
+              "tier": 1,
+              "display": "862",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 3,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.2015,
+              "elapsed": 1.4682999997138975,
+              "tier": 1,
+              "display": "1,113",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.301299999713898,
+              "elapsed": 1.5674999999999997,
+              "tier": 1,
+              "display": "1,386",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.4025,
+              "elapsed": 1.666199999809265,
+              "tier": 1,
+              "display": "1,581",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.502299999713897,
+              "elapsed": 1.76639999961853,
+              "tier": 1,
+              "display": "1,887",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.603099999904632,
+              "elapsed": 1.8664999999999998,
+              "tier": 1,
+              "display": "2,271",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.703199999809265,
+              "elapsed": 1.9660999999046322,
+              "tier": 1,
+              "display": "2,614",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.801400000095367,
+              "elapsed": 2.0669999999999993,
+              "tier": 1,
+              "display": "3,022",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 5.902400000095367,
+              "elapsed": 2.16589999961853,
+              "tier": 1,
+              "display": "3,323",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.002199999809265,
+              "elapsed": 2.2676999998092646,
+              "tier": 1,
+              "display": "3,753",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.102099999904633,
+              "elapsed": 2.366999999999999,
+              "tier": 2,
+              "display": "4,120",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.2020999999046325,
+              "elapsed": 2.4665999999046315,
+              "tier": 2,
+              "display": "4,424",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.301799999713897,
+              "elapsed": 2.5673999996185293,
+              "tier": 2,
+              "display": "4,857",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.401699999809265,
+              "elapsed": 2.6660999999046315,
+              "tier": 2,
+              "display": "5,152",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.502799999713898,
+              "elapsed": 2.7665999999046313,
+              "tier": 2,
+              "display": "5,511",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.603400000095368,
+              "elapsed": 2.8658999996185286,
+              "tier": 2,
+              "display": "5,850",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.7019000000953675,
+              "elapsed": 2.9663999996185284,
+              "tier": 2,
+              "display": "6,132",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.801799999713897,
+              "elapsed": 3.065999999999998,
+              "tier": 2,
+              "display": "6,443",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 6.902199999809265,
+              "elapsed": 3.1681999998092634,
+              "tier": 2,
+              "display": "6,840",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.003400000095367,
+              "elapsed": 3.2659999999999982,
+              "tier": 2,
+              "display": "7,064",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.102299999713898,
+              "elapsed": 3.3695999999046307,
+              "tier": 2,
+              "display": "7,358",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.202599999904632,
+              "elapsed": 3.4661999998092634,
+              "tier": 2,
+              "display": "7,534",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.303299999713897,
+              "elapsed": 3.5665999999046307,
+              "tier": 2,
+              "display": "7,726",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.402400000095367,
+              "elapsed": 3.6673999996185285,
+              "tier": 2,
+              "display": "7,913",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.504,
+              "elapsed": 3.769199999809263,
+              "tier": 3,
+              "display": "8,034",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.601900000095368,
+              "elapsed": 3.866199999809263,
+              "tier": 3,
+              "display": "8,091",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.716299999713898,
+              "elapsed": 3.9847999997138954,
+              "tier": 3,
+              "display": "8,158",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.801900000095367,
+              "elapsed": 4.066499999999999,
+              "tier": 3,
+              "display": "8,163",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 7.902299999713898,
+              "elapsed": 4.1652999997138975,
+              "tier": 3,
+              "display": "8,261",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.002099999904633,
+              "elapsed": 4.268000000000002,
+              "tier": 3,
+              "display": "8,554",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.102599999904633,
+              "elapsed": 4.365699999809267,
+              "tier": 3,
+              "display": "8,813",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.2025,
+              "elapsed": 4.466699999809267,
+              "tier": 3,
+              "display": "9,257",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.302900000095367,
+              "elapsed": 4.566099999904635,
+              "tier": 3,
+              "display": "9,611",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 5,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.4035,
+              "elapsed": 4.668500000000003,
+              "tier": 3,
+              "display": "10,135",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.502299999713898,
+              "elapsed": 4.768099999904636,
+              "tier": 3,
+              "display": "10,576",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.601599999904632,
+              "elapsed": 4.8673999996185335,
+              "tier": 3,
+              "display": "10,991",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.703199999809264,
+              "elapsed": 4.966199999809268,
+              "tier": 3,
+              "display": "11,247",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.803099999904633,
+              "elapsed": 5.0660000000000025,
+              "tier": 3,
+              "display": "11,622",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 8.9035,
+              "elapsed": 5.167099999904634,
+              "tier": 3,
+              "display": "11,885",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.002400000095367,
+              "elapsed": 5.266399999618533,
+              "tier": 3,
+              "display": "11,971",
+              "revealed": false,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.1055,
+              "elapsed": 5.3712999997139,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 1,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.202199999809265,
+              "elapsed": 5.466699999809268,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.302099999904632,
+              "elapsed": 5.566099999904635,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.402199999809266,
+              "elapsed": 5.668000000000002,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.503699999809266,
+              "elapsed": 5.766199999809267,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.602299999713898,
+              "elapsed": 5.866199999809267,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.703400000095368,
+              "elapsed": 5.966699999809267,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.801199999809265,
+              "elapsed": 6.0663999996185325,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 9.903799999713899,
+              "elapsed": 6.166199999809267,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.003699999809266,
+              "elapsed": 6.2655999999046355,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.102099999904633,
+              "elapsed": 6.365699999809268,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.202599999904633,
+              "elapsed": 6.465899999618533,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.3025,
+              "elapsed": 6.565500000000002,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.402699999809265,
+              "elapsed": 6.665599999904634,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.503199999809265,
+              "elapsed": 6.766099999904633,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.603299999713897,
+              "elapsed": 6.8663999996185305,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.702699999809266,
+              "elapsed": 6.966500000000001,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 10,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.802199999809265,
+              "elapsed": 7.067199999809266,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 9,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 10.902099999904632,
+              "elapsed": 7.166500000000002,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.002099999904633,
+              "elapsed": 7.266099999904634,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 8,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.102299999713898,
+              "elapsed": 7.366399999618532,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.2025,
+              "elapsed": 7.466000000000002,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 7,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.3025,
+              "elapsed": 7.567699999809267,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 6,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.402099999904632,
+              "elapsed": 7.668500000000002,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.5025,
+              "elapsed": 7.766199999809265,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": false,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.602199999809265,
+              "elapsed": 7.86639999961853,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 5,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.702400000095368,
+              "elapsed": 7.96539999961853,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 4,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.8025,
+              "elapsed": 8.065799999713898,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 3,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 11.903599999904632,
+              "elapsed": 8.165499999999998,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.002400000095367,
+              "elapsed": 8.268199999809264,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.102699999809266,
+              "elapsed": 8.365799999713897,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            },
+            {
+              "at": 12.202900000095367,
+              "elapsed": 8.46659999990463,
+              "tier": 3,
+              "display": "12,000",
+              "revealed": true,
+              "finished": true,
+              "activeFireworks": 2,
+              "artDigitsActive": true,
+              "artDigitCount": 6,
+              "counterLabelAlpha": 0
+            }
+          ]
+        },
+        "guardian": {
+          "sampleCount": 132,
+          "distinctGestures": 99,
+          "singleSource": true,
+          "fixedTransform": true,
+          "blinkRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "state": {
+        "busy": false,
+        "reelAlpha": 255,
+        "modal": false,
+        "celebrating": false,
+        "balance": 38920,
+        "played": 1,
+        "transactions": [
+          {
+            "id": "tx-32c2204f767245e3850fa481f8de4e60",
+            "at": "2026-10-13T04:51:02.268Z",
+            "type": "spin-win",
+            "amount": 12000,
+            "balance": 38920,
+            "reference": "salon-spin-4288f409278a51feb726fae8adb945f5"
+          },
+          {
+            "id": "tx-38ba8d86366a596dabf2697374f24d57",
+            "at": "2026-10-13T04:51:02.264Z",
+            "type": "spin-bet",
+            "amount": -80,
+            "balance": 26920,
+            "reference": "salon-spin-4288f409278a51feb726fae8adb945f5"
+          }
+        ],
+        "labels": [
+          "COINS",
+          "38,920",
+          "WIN",
+          "12,000",
+          "BET",
+          "80",
+          "SPIN",
+          "BACK",
+          "RULES",
+          "SOUND ON",
+          "AUTO OFF",
+          "WELCOME 2/10\nWIN 12,000 · 150.00× BET"
+        ]
+      },
+      "fixture": "debug epic result; charged and settled real local round; production RNG unaffected"
+    }
+  ],
+  "errors": [],
+  "captureCleanupAborts": [
+    {
+      "mode": "golden-otter",
+      "request": "blob:http://127.0.0.1:6045/dbfa8698-00d6-41cb-8ba4-035971aa2cad",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-otter",
+      "request": "blob:http://127.0.0.1:6045/990dbcc8-d88d-4a58-9746-6ebdc07b073b",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-otter",
+      "request": "blob:http://127.0.0.1:6045/b2b2240e-ed6d-48a8-ae81-b807f4047746",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-otter",
+      "request": "blob:http://127.0.0.1:6045/8ec3d82a-ca74-4c8d-baeb-4382e546d053",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-otter",
+      "request": "blob:http://127.0.0.1:6045/af64851f-7ca2-4847-a01c-1c610f87569d",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "golden-otter",
+      "request": "blob:http://127.0.0.1:6045/5b55e7f4-593e-4e28-9452-49a28c08db58",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "moon-rabbit",
+      "request": "blob:http://127.0.0.1:6045/7f23d63a-5e50-4ee0-8852-09a54343dcad",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "moon-rabbit",
+      "request": "blob:http://127.0.0.1:6045/d85796db-8cc6-494d-a215-2d6e950f063c",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "moon-rabbit",
+      "request": "blob:http://127.0.0.1:6045/cada10d3-eae5-4e27-ba76-361e87be9fe7",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "moon-rabbit",
+      "request": "blob:http://127.0.0.1:6045/228f94ad-8118-4d6e-b683-c145cae97952",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "moon-rabbit",
+      "request": "blob:http://127.0.0.1:6045/4b51609b-aa67-4d03-9331-f75d1d54a891",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "moon-rabbit",
+      "request": "blob:http://127.0.0.1:6045/27572920-bc68-4d0e-b01b-8a09a46916db",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "star-fox",
+      "request": "blob:http://127.0.0.1:6045/2ed9e2fa-e68c-4a49-8c3b-c331d6fbb9e3",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "star-fox",
+      "request": "blob:http://127.0.0.1:6045/7a413609-a8b0-4741-aef5-253b48873ffb",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "star-fox",
+      "request": "blob:http://127.0.0.1:6045/61daf2bb-9219-4d8d-8a6f-6dbe70f100b1",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "star-fox",
+      "request": "blob:http://127.0.0.1:6045/54a90880-9639-46ae-b16d-ec2235c42a6b",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "star-fox",
+      "request": "blob:http://127.0.0.1:6045/fa726023-afac-44bf-a56f-196bf0251702",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "star-fox",
+      "request": "blob:http://127.0.0.1:6045/bb31dfe2-2b3d-40cf-9cab-641781a4cbb2",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "cloud-elephant",
+      "request": "blob:http://127.0.0.1:6045/80d2aaa4-3506-4b0f-bd2e-f9389fa36f7e",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "cloud-elephant",
+      "request": "blob:http://127.0.0.1:6045/51e42599-5da7-47bd-8b50-d69d09144a22",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "cloud-elephant",
+      "request": "blob:http://127.0.0.1:6045/b1ff5fc3-6e85-4c4e-a4f9-32a4af5b700a",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "cloud-elephant",
+      "request": "blob:http://127.0.0.1:6045/2d6b43f3-f78b-48f6-a7e4-7b63aa3809ef",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "cloud-elephant",
+      "request": "blob:http://127.0.0.1:6045/2ee4c140-a4c7-4989-bcbf-062361616626",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    },
+    {
+      "mode": "cloud-elephant",
+      "request": "blob:http://127.0.0.1:6045/b2dbaa0e-6c43-4740-b27d-5eddd9b5a43f",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "reason": "Owned QA video decoder was cleared after frame capture"
+    }
+  ]
+}

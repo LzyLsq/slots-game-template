@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-13",
+  "version": "f44-award-gilded-20261013",
+  "exportDirectory": "build/web-award-gilded-20261013",
+  "productChange": [
+    "assets/scripts/vfx/SalonWinStage.ts"
+  ],
+  "stageSourceSha256": "2cff310c1835ca9da463642d16f855676b7fb254b06d2f4832ab1b7d3b82f969",
+  "exportMainSha256": "a4bd8a8f53e08e3081b6fa2b7c038ebb691b78654cfbffa05183da77eac3f940",
+  "sourceChecks": {
+    "typecheck": 0,
+    "test:win-presentation": 0,
+    "fullSuiteRerun": false
+  },
+  "build": {
+    "creator": "3.8.8",
+    "taskFinished": true,
+    "seconds": 22,
+    "cliExit": 36,
+    "runtimeVerified": true
+  },
+  "runtimeChecks": {
+    "awardFixtures": 32,
+    "fixtureErrors": 0,
+    "interactionGroups": 3,
+    "paidModes": 4,
+    "awardCounterSamples": 1181,
+    "browserErrors": 0
+  },
+  "ornaments": [
+    {
+      "mode": "golden-otter",
+      "fittings": 6,
+      "glints": 24,
+      "protectedRegionIntersections": 0
+    },
+    {
+      "mode": "moon-rabbit",
+      "fittings": 6,
+      "glints": 24,
+      "protectedRegionIntersections": 0
+    },
+    {
+      "mode": "star-fox",
+      "fittings": 6,
+      "glints": 24,
+      "protectedRegionIntersections": 0
+    },
+    {
+      "mode": "cloud-elephant",
+      "fittings": 6,
+      "glints": 24,
+      "protectedRegionIntersections": 0
+    }
+  ],
+  "visualReview": {
+    "paidAwardScreenshots": 4,
+    "smallScreenTierCaptures": 16,
+    "recordedSequences": 4,
+    "decodedVideoFrames": 3207,
+    "reviewSheetFrames": 36
+  },
+  "scope": "Desktop Chromium Cocos engine export only. Forced outcomes verify paid settlement and presentation, not natural RNG. Native devices and platform purchases not verified."
+}

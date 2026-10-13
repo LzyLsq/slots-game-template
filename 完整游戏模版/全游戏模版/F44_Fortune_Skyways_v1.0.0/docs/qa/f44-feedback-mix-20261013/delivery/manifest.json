@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-13",
+  "productChange": "Feedback priority: separate duration-aware envelopes per managed source; 18 ms music/rolling attenuation and 360 ms recovery. Existing cue levels and WAV assets preserved.",
+  "export": "build/web-feedback-mix-20261013",
+  "previewPort": 6044,
+  "creatorBuild": {
+    "finished": true,
+    "seconds": 9,
+    "cliExitCode": 36,
+    "exitNote": "macOS CLI exit phase returned 36 after Finished; exported runtime passed the tests below."
+  },
+  "checks": {
+    "typecheck": "npm run typecheck returned 0 before export",
+    "mixFixtures": 20,
+    "mixLifecycleScenes": 5,
+    "actualPaidRoundModes": 4,
+    "audioLifecycleChecks": 31,
+    "browserErrors": 0,
+    "capturedMixedClippedSamples": 0
+  },
+  "hashes": {
+    "assets/scripts/audio/AudioManager.ts": "e81305117a784517c567c8b9fae1399e1beaa3906df0d5e92bc61ce6c3f4d464",
+    "assets/scripts/vfx/SalonWinStage.ts": "2cff310c1835ca9da463642d16f855676b7fb254b06d2f4832ab1b7d3b82f969",
+    "tools/qa/audio-feedback.cjs": "09c2fd9ffed3c511a1701b66a77bd3d4c0d4ac00507c2cb161b5a116b84f35de",
+    "tools/qa/audio.cjs": "dad87373ba16a537c1fe807897806518f901d864980a2d8c574014d05366a29d",
+    "build/web-feedback-mix-20261013/index.html": "0f8142aa5de582d0377e5bd815b66832d83990b0ed215f9fe679c51d3533bf21",
+    "build/web-feedback-mix-20261013/assets/main/index.js": "7902b010c732205b860ff2becf16d8a6808980ed343dddff4e806a8fc1f80bf4"
+  },
+  "unchangedAwardSource": true,
+  "limits": "Desktop Chrome with mobile viewport and engine hide/show fixtures. No phone-speaker listening, headphones listening, native audio interruption, StoreKit or App Store validation. No full 13-group rerun in this audio-only round."
+}

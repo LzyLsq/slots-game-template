@@ -1,0 +1,330 @@
+{
+  "checks": [
+    "Initial progress cannot show 100% before sound preparation completes",
+    "Hall cold start prepares 14 clips instead of all 90",
+    "golden-otter: dedicated loading waits for sound; repeated entry is ignored",
+    "golden-otter: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "moon-rabbit: dedicated loading waits for sound; repeated entry is ignored",
+    "moon-rabbit: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "star-fox: dedicated loading waits for sound; repeated entry is ignored",
+    "star-fox: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "cloud-elephant: dedicated loading waits for sound; repeated entry is ignored",
+    "cloud-elephant: cached re-entry makes no WAV requests and BACK retains one hall loop",
+    "All stalled optional sounds release loading within one scene preparation budget",
+    "Return to hall works after optional sound timeouts"
+  ],
+  "records": [
+    {
+      "stage": "boot gated",
+      "requests": 2,
+      "page": "home",
+      "config": "golden-otter",
+      "busy": false,
+      "bootLoading": true,
+      "modeLoading": false,
+      "blockingInput": true,
+      "labels": [
+        "Preparing your treasures  66%"
+      ],
+      "progress": 0.6699029126213593,
+      "decodedAudio": 0,
+      "decodedSeconds": 0,
+      "music": [
+        {
+          "playing": false
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "hall ready",
+      "requests": 14,
+      "page": "home",
+      "config": "golden-otter",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 14,
+      "decodedSeconds": 57.99631299999999,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "golden-otter gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "golden-otter",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "CENTRE LINE\nGOLDEN NUDGE",
+        "Preparing your game… 32%"
+      ],
+      "progress": 1,
+      "decodedAudio": 14,
+      "decodedSeconds": 57.99631299999999,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "golden-otter ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "golden-otter",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 33,
+      "decodedSeconds": 143.979876,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-golden-otter"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "moon-rabbit gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "golden-otter",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "243 WAYS\nMOONLIGHT VOYAGE",
+        "Preparing your game… 32%"
+      ],
+      "progress": 1,
+      "decodedAudio": 33,
+      "decodedSeconds": 143.979876,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false,
+          "clip": "music-golden-otter"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "moon-rabbit ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "moon-rabbit",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 52,
+      "decodedSeconds": 236.53450100000006,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-moon-rabbit"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "star-fox gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "moon-rabbit",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "5+ ADJACENT\nCONSTELLATION CASCADE",
+        "Preparing your game… 32%"
+      ],
+      "progress": 1,
+      "decodedAudio": 52,
+      "decodedSeconds": 236.53450100000006,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false,
+          "clip": "music-moon-rabbit"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "star-fox ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "star-fox",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 71,
+      "decodedSeconds": 326.06812600000023,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-star-fox"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "cloud-elephant gated",
+      "newRequests": 2,
+      "page": "home",
+      "config": "star-fox",
+      "busy": true,
+      "bootLoading": false,
+      "modeLoading": true,
+      "blockingInput": true,
+      "labels": [
+        "20 PAYLINES\nCLOUD CARGO HOLD",
+        "Preparing your game… 32%"
+      ],
+      "progress": 1,
+      "decodedAudio": 71,
+      "decodedSeconds": 326.06812600000023,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": false,
+          "clip": "music-star-fox"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "cloud-elephant ready",
+      "newRequests": 19,
+      "page": "game",
+      "config": "cloud-elephant",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 90,
+      "decodedSeconds": 414.6666890000004,
+      "music": [
+        {
+          "playing": true,
+          "clip": "music-salon"
+        },
+        {
+          "playing": true,
+          "clip": "music-cloud-elephant"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    {
+      "stage": "all sounds stalled; accelerated optional timeout",
+      "elapsedMs": 5987,
+      "page": "game",
+      "config": "golden-otter",
+      "busy": false,
+      "bootLoading": false,
+      "modeLoading": false,
+      "blockingInput": false,
+      "progress": 1,
+      "decodedAudio": 0,
+      "decodedSeconds": 0,
+      "music": [
+        {
+          "playing": false
+        },
+        {
+          "playing": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated desktop Chromium; real resource gating. All-sound timeout uses an accelerated clock/timer fixture, not native device/network timing."
+}
